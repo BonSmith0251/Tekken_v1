@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Versus.Remaster
+{
+    public interface IFighterPresentation
+    { void Render(FighterState fighter, MatchRules rules, float clock, bool moving); }
+
+    /// <summary>New procedural motion on Jin's extracted bind skeleton and skin weights.</summary>
+    public class JinRig : MonoBehaviour, IFighterPresentation
+    {
+        public JinRetargetMotion retarget;
+        public FighterActionMotion actionMotion;
+        public MoveSpec[] fighterMoves;
+        Transform[] bones;
+        Vector3[] positions;
+        Quaternion[] rotations;
+        readonly Dictionary<string, Transform> byName = new Dictionary<string, Transform>();
+        Transform pelvis;
+        Material[] materials;
+        Color[] baseColors;
+        void Awake() => Initialize();
+        public void Initialize()
+        {
+            if (bones != null) return;
+            var skeleton = transform.Find("Skeleton");
+            if (!skeleton) throw new InvalidOperationException("Jin prefab has no skeleton");
+            bones = skeleton.GetComponentsInChildren<Transform>();
+            positions = new Vector3[bones.Length]; rotations = new Quaternion[bones.Length];
+            for (int i = 0; i < bones.Length; i++)
+            {
+                byName[bones[i].name] = bones[i]; positions[i] = bones[i].localPosition; rotations[i] = bones[i].localRotation;
+            }
+            pelvis = byName["BASE"];
+            var allMaterials = new List<Material>();
+            foreach (var skin in GetComponentsInChildren<SkinnedMeshRenderer>()) allMaterials.AddRange(skin.materials);
+            materials = allMaterials.ToArray(); baseColors = new Color[materials.Length];
+            for (int i = 0; i < materials.Length; i++) baseColors[i] = materials[i].color;
+        }
+        public void Render(FighterState f, MatchRules rules, float clock, bool moving)
+        {
+            Initialize();
+            for (int i = 0; i < bones.Length; i++) { bones[i].localPosition = positions[i]; bones[i].localRotation = rotations[i]; }
+            transform.position = new Vector3(f.x, 0, f.z);
+            transform.rotation = Quaternion.Euler(0, f.facing > 0 ? 90 : -90, 0);
+            float action = 0;
+            if (f.attack >= 0)
+            {
+                var move = fighterMoves != null ? fighterMoves[f.attack] : rules.moves[f.attack];
+                float wind = Mathf.Clamp01((float)f.attackFrame / move.startup);
+                float recover = Mathf.Clamp01((float)(f.attackFrame - move.startup - move.active) / move.recovery);
+                action = Mathf.SmoothStep(0, 1, wind) * (1 - Mathf.SmoothStep(0, 1, recover));
+            }
+            float crouch = f.crouch ? .33f : .1f;
+            pelvis.position += transform.up * (-crouch + Mathf.Sin(clock * 5) * .012f);
+            pelvis.position += transform.forward * (f.attack == 1 ? action * .22f : f.attack == 0 ? action * .15f : 0);
+            var spine = byName["Spine1"];
+            spine.rotation = Quaternion.AngleAxis(f.stun > 0 ? -14 : f.crouch ? 13 : 4, transform.right) * spine.rotation;
+            float gait = moving && f.attack < 0 && f.stun == 0 ? Mathf.Sin(clock * 10) : 0;
+            Vector3 leftHand = new Vector3(-.25f, 1.5f - crouch, .35f);
+            Vector3 rightHand = new Vector3(.25f, 1.55f - crouch, .23f);
+            if (f.guard) { leftHand = new Vector3(-.19f, 1.68f - crouch, .22f); rightHand = new Vector3(.19f, 1.68f - crouch, .25f); }
+            if (f.attack == 0) leftHand = Vector3.Lerp(leftHand, new Vector3(-.1f, 1.5f, 1.05f), action);
+            if (f.attack == 1) rightHand = Vector3.Lerp(rightHand, new Vector3(.05f, 1.38f, 1.1f), action);
+            Solve("L_Arm", "L_ForeArm", "L_Hand", leftHand, new Vector3(-.7f, 1.15f - crouch, .05f));
+            Solve("R_Arm", "R_ForeArm", "R_Hand", rightHand, new Vector3(.7f, 1.15f - crouch, -.1f));
+            Vector3 leftFoot = new Vector3(-.23f, .14f + Mathf.Max(0, gait) * .09f, .18f + gait * .2f);
+            Vector3 rightFoot = new Vector3(.24f, .14f + Mathf.Max(0, -gait) * .09f, -.24f - gait * .2f);
+            if (f.attack == 2) leftFoot = Vector3.Lerp(leftFoot, new Vector3(-.25f, .35f, 1.05f), action);
+            if (f.attack == 3) rightFoot = Vector3.Lerp(rightFoot, new Vector3(.12f, 1.1f, 1.15f), action);
+            Solve("L_UpLeg", "L_Leg", "L_Foot", leftFoot, new Vector3(-.3f, .6f, 1));
+            Solve("R_UpLeg", "R_Leg", "R_Foot", rightFoot, new Vector3(.3f, .6f, 1));
+            // Close the hands without changing the imported bind hierarchy.
+            foreach (var bone in bones)
+                if ((bone.name.Contains("Index") || bone.name.Contains("Middle") || bone.name.Contains("Ring") || bone.name.Contains("Pinky")) &&
+                    (bone.name.EndsWith("1") || bone.name.EndsWith("2") || bone.name.EndsWith("3")))
+                    bone.localRotation *= Quaternion.Euler(0, 0, 65);
+            if (f.health == 0)
+            { transform.position += Vector3.up * .18f; transform.rotation *= Quaternion.Euler(-83, 0, 0); }
+            for (int i = 0; i < materials.Length; i++) materials[i].color = f.flash > 0 ? Color.Lerp(baseColors[i], Color.white, .75f) : baseColors[i];
+            if(actionMotion)actionMotion.Apply(f, f.attack >= 0 ? fighterMoves[f.attack] : null, clock, moving);
+            else if(retarget)retarget.Apply(f,rules,clock,moving);
+        }
+        void Solve(string upperName, string middleName, string endName, Vector3 localTarget, Vector3 localPole)
+        {
+            Transform upper = byName[upperName], middle = byName[middleName], end = byName[endName];
+            Quaternion restEnd = end.rotation;
+            Vector3 a = upper.position, b = middle.position, c = end.position;
+            float ab = Vector3.Distance(a,b), bc = Vector3.Distance(b,c);
+            Vector3 target = transform.TransformPoint(localTarget);
+            Vector3 direction = (target - a).normalized;
+            float distance = Mathf.Clamp(Vector3.Distance(a,target), Mathf.Abs(ab-bc)+.001f, ab+bc-.001f);
+            target = a + direction * distance;
+            Vector3 pole = transform.TransformPoint(localPole)-a;
+            Vector3 bend = (pole - Vector3.Dot(pole,direction)*direction).normalized;
+            float along = (ab*ab + distance*distance - bc*bc)/(2*distance);
+            Vector3 elbow = a + direction*along + bend*Mathf.Sqrt(Mathf.Max(0,ab*ab-along*along));
+            upper.rotation = Quaternion.FromToRotation(b-a,elbow-a)*upper.rotation;
+            middle.rotation = Quaternion.FromToRotation(end.position-middle.position,target-middle.position)*middle.rotation;
+            if(endName.EndsWith("Foot")) end.rotation=restEnd;
+        }
+    }
+}
