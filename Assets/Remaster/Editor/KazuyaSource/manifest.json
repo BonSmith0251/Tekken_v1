@@ -1,0 +1,4296 @@
+{
+  "schema": "kazuya/2",
+  "costumes": [
+    {
+      "name": "Karate Gi",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_dougi_org",
+        "kaz_bdl_dougi_org"
+      ]
+    },
+    {
+      "name": "Default 1P Silver Coat",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_1p",
+        "kaz_bdl_1p"
+      ]
+    },
+    {
+      "name": "Battle Damaged Gi",
+      "pieces": [
+        "kaz_fac_damage",
+        "kaz_har_1p",
+        "kaz_bdu_dougi_damage",
+        "kaz_bdu_dougi_damage_glove",
+        "kaz_bdl_dougi_damage"
+      ]
+    },
+    {
+      "name": "Tekken 4 Gi",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_dougi_org",
+        "kaz_bdl_dougi_tk4"
+      ]
+    },
+    {
+      "name": "Gilet",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_gilet_bv",
+        "kaz_bdl_gilet_bv"
+      ]
+    },
+    {
+      "name": "Kamikaze",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_kamikaze",
+        "kaz_bdl_kamikaze"
+      ]
+    },
+    {
+      "name": "Tattoo Shirt",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_tattoo",
+        "kaz_bdl_tattoo"
+      ]
+    },
+    {
+      "name": "Wagara",
+      "pieces": [
+        "kaz_fac",
+        "kaz_har_1p",
+        "kaz_bdu_wagara",
+        "kaz_bdl_wagara"
+      ]
+    }
+  ],
+  "pieces": {
+    "kaz_fac": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_fac.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_normal/Meshes/SK_CH_kaz_fac.uasset",
+      "materials": [
+        "MI_CH_kaz_Eye_ADD",
+        "MI_CH_kaz_Eyes",
+        "MI_CH_kaz_Eyes_L",
+        "MI_CH_kaz_eye_shadow",
+        "MI_CH_kaz_eyebrow",
+        "MI_CH_kaz_eyelash",
+        "MI_CH_kaz_skin_normal_face",
+        "MI_CH_kaz_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    "kaz_fac_damage": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_fac_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_dougi_damage/Meshes/SK_CH_kaz_fac_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_Eye_ADD",
+        "MI_CH_kaz_Eyes",
+        "MI_CH_kaz_Eyes_L",
+        "MI_CH_kaz_eye_shadow",
+        "MI_CH_kaz_eyebrow",
+        "MI_CH_kaz_eyelash",
+        "MI_CH_kaz_fac_dougi_damage",
+        "MI_CH_kaz_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    "kaz_har_1p": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Meshes/SK_CH_kaz_har_1p.uasset",
+      "materials": [
+        "MI_kaz_har_1p",
+        "MI_kaz_har_1p2"
+      ]
+    },
+    "kaz_bdu_1p": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Meshes/SK_CH_kaz_bdu_1P.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_1p_coat",
+        "MI_CH_kaz_bdu_1p_coat_cloth",
+        "MI_CH_kaz_bdu_1p_jacket",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_hand"
+      ]
+    },
+    "kaz_bdl_1p": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Meshes/SK_CH_kaz_bdl_1P.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_1p_shoes",
+        "MI_CH_kaz_bdl_1p_trousers"
+      ]
+    },
+    "kaz_bdu_dougi_org": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_org.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Meshes/SK_CH_kaz_bdu_dougi_org.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_def_glove",
+        "MI_CH_kaz_bdu_def_kinzoku",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    "kaz_bdl_dougi_org": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_org.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Meshes/SK_CH_kaz_bdl_dougi_org.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_def_obi",
+        "MI_CH_kaz_bdl_def_pants",
+        "MI_CH_kaz_bdl_def_supporter",
+        "MI_CH_kaz_skin_foot"
+      ]
+    },
+    "kaz_bdu_dougi_damage": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Meshes/SK_CH_kaz_bdu_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_dougi_damage_arm",
+        "MI_CH_kaz_bdu_dougi_damage_body",
+        "MI_CH_kaz_bdu_dougi_damage_hand",
+        "MI_CH_kaz_bdu_dougi_damage_neck"
+      ]
+    },
+    "kaz_bdu_dougi_damage_glove": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_damage_glove.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Meshes/SK_CH_kaz_bdu_dougi_damage_glove.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_dougi_damage_arm",
+        "MI_CH_kaz_bdu_dougi_damage_body",
+        "MI_CH_kaz_bdu_dougi_damage_glove",
+        "MI_CH_kaz_bdu_dougi_damage_hand",
+        "MI_CH_kaz_bdu_dougi_damage_kinzoku",
+        "MI_CH_kaz_bdu_dougi_damage_neck"
+      ]
+    },
+    "kaz_bdl_dougi_damage": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Meshes/SK_CH_kaz_bdl_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_dougi_damage_foot",
+        "MI_CH_kaz_bdl_dougi_damage_obi",
+        "MI_CH_kaz_bdl_dougi_damage_pants",
+        "MI_CH_kaz_bdl_dougi_damage_sup",
+        "MI_CH_kaz_skin_leg"
+      ]
+    },
+    "kaz_bdl_dougi_tk4": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_tk4.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_tk4/Meshes/SK_CH_kaz_bdl_dougi_tk4.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_def_obi",
+        "MI_CH_kaz_bdl_def_supporter",
+        "MI_CH_kaz_bdl_dougi_tk4",
+        "MI_CH_kaz_skin_foot"
+      ]
+    },
+    "kaz_bdu_gilet_bv": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_gilet_bv.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_gilet_bv/Meshes/SK_CH_kaz_bdu_gilet_bv.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_gilet_bv",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    "kaz_bdl_gilet_bv": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_gilet_bv.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Meshes/SK_CH_kaz_bdl_gilet_bv.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_gilet_bv_01",
+        "MI_CH_kaz_bdl_gilet_bv_02"
+      ]
+    },
+    "kaz_bdu_kamikaze": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_kamikaze.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Meshes/SK_CH_kaz_bdu_kamikaze.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_kamikaze_akse",
+        "MI_CH_kaz_bdu_kamikaze_glove",
+        "MI_CH_kaz_bdu_kamikaze_goldwatch_glass",
+        "MI_CH_kaz_bdu_kamikaze_kinzoku",
+        "MI_CH_kaz_bdu_kamikaze_yankeeT",
+        "MI_CH_kaz_bdu_kamikaze_yankeejackt",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    "kaz_bdl_kamikaze": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_kamikaze.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Meshes/SK_CH_kaz_bdl_kamikaze.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_kamikaze_dokabelt",
+        "MI_CH_kaz_bdl_kamikaze_kodabelt_backle",
+        "MI_CH_kaz_bdl_kamikaze_yankeepant",
+        "MI_CH_kaz_bdl_kamikaze_zikatabi"
+      ]
+    },
+    "kaz_bdu_tattoo": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_tattoo.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_tatoo_shirt/Meshes/SK_CH_kaz_bdu_tatoo_shirt.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_tatto_shirt_shirt",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck",
+        "MI_CH_kaz_tatoo_shirt_skin"
+      ]
+    },
+    "kaz_bdl_tattoo": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_tattoo.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Meshes/SK_CH_kaz_bdl_tatoo_shirt.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_tatto_shirt_shirt",
+        "MI_CH_kaz_bdu_tatto_shirt_shirt2"
+      ]
+    },
+    "kaz_bdu_wagara": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_wagara.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_wagara/Meshes/SK_CH_kaz_bdu_wagara.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_wagara_jacket",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    "kaz_bdl_wagara": {
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_wagara.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Meshes/SK_CH_kaz_bdl_wagara.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_wgara_boot",
+        "MI_CH_kaz_bdl_wgara_trouses"
+      ]
+    }
+  },
+  "materials": {
+    "MI_CH_kaz_Eye_ADD": {
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.10000000149011612,
+        "REF_Tex_Scale": 1.1003069877624512,
+        "Ref_TexU": -0.23893800377845764,
+        "Ref_TexV": 0.0,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_Eyes": {
+      "diffuse": "T_CH_eye_D",
+      "normal": "T_CH_eye_N_2",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.05000000074505806,
+        "RefractionDepthBias": 0.0,
+        "Color01": [
+          0.14000000059604645,
+          0.08132600039243698,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.9150000214576721,
+          0.7582970261573792,
+          0.6408050060272217,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_Eyes_L": {
+      "diffuse": "T_CH_kaz_eyeL_D",
+      "normal": "T_CH_eye_N_2",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.05000000074505806,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyeL_D",
+        "Color01": [
+          0.5,
+          0.0,
+          0.004546999931335449,
+          1.0
+        ],
+        "Color02": [
+          0.9150000214576721,
+          0.7582970261573792,
+          0.6408050060272217,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eyes_L.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_1p_shoes": {
+      "diffuse": "T_CH_kaz_bdl_1P_shoes_D",
+      "normal": "T_CH_kaz_bdl_1P_shoes_N",
+      "mask": "T_CH_kaz_bdl_1P_shoes_M",
+      "specular": "T_CH_kaz_bdl_1P_shoes_D",
+      "params": {
+        "Metallic": 0.7482720017433167,
+        "RoughnessMax": 0.13684199750423431,
+        "RoughnessMin": 0.5377579927444458,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_1P_shoes_D",
+        "MaskMap": "T_CH_kaz_bdl_1P_shoes_M",
+        "Normal": "T_CH_kaz_bdl_1P_shoes_N",
+        "specluar": "T_CH_kaz_bdl_1P_shoes_D",
+        "color01": [
+          0.08500000089406967,
+          0.07870999723672867,
+          0.07870999723672867,
+          1.0
+        ],
+        "color03": [
+          0.05999999865889549,
+          0.041443999856710434,
+          0.03108000010251999,
+          1.0
+        ],
+        "color04": [
+          0.05886999890208244,
+          0.059328000992536545,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Material/MI_CH_kaz_bdl_1p_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_1p_trousers": {
+      "diffuse": "T_CH_kaz_bdl_1P_trousers_D",
+      "normal": "T_CH_kaz_bdl_1P_trousers_N",
+      "mask": "T_CH_kaz_bdl_1P_trousers_M",
+      "specular": "T_CH_kaz_bdl_1P_trousers_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_1P_trousers_M",
+        "Normal": "T_CH_kaz_bdl_1P_trousers_N",
+        "specluar": "T_CH_kaz_bdl_1P_trousers_D",
+        "color01": [
+          0.12945599853992462,
+          0.1319040060043335,
+          0.14399999380111694,
+          1.0
+        ],
+        "color02": [
+          0.05000000074505806,
+          0.03074200078845024,
+          0.02500000037252903,
+          1.0
+        ],
+        "color03": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Material/MI_CH_kaz_bdl_1p_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_def_obi": {
+      "diffuse": "T_CH_kaz_bdl_def_obi_D",
+      "normal": "T_CH_kaz_bdl_def_obi_N",
+      "mask": "T_CH_kaz_bdl_def_obi_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_obi_D",
+        "MaskMap": "T_CH_kaz_bdl_def_obi_M",
+        "Normal": "T_CH_kaz_bdl_def_obi_N",
+        "Color02": [
+          0.1556140035390854,
+          0.014624999836087227,
+          0.19499999284744263,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_obi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_def_pants": {
+      "diffuse": "T_CH_kaz_bdl_def_pants_D",
+      "normal": "T_CH_kaz_bdl_def_pants_N",
+      "mask": "T_CH_kaz_bdl_def_pants_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_pants_D",
+        "MaskMap": "T_CH_kaz_bdl_def_pants_M",
+        "Normal": "T_CH_kaz_bdl_def_pants_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_pants.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_def_supporter": {
+      "diffuse": "T_CH_kaz_bdl_def_supporter_D",
+      "normal": "T_CH_kaz_bdl_def_supporter_N",
+      "mask": "T_CH_kaz_bdl_def_supporter_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_supporter_D",
+        "MaskMap": "T_CH_kaz_bdl_def_supporter_M",
+        "Normal": "T_CH_kaz_bdl_def_supporter_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_supporter.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_dougi_damage_foot": {
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_foot_D",
+      "normal": "T_CH_male_foot_n",
+      "mask": "",
+      "specular": "T_CH_male_foot_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_kaz_bdl_dougi_damage_foot_D",
+        "Normal": "T_CH_male_foot_n",
+        "Specular": "T_CH_male_foot_S",
+        "WetDiffuse": "T_CH_male_foot_wet_D",
+        "WetNormal": "T_CH_male_foot_wet_N",
+        "wetSpec": "T_CH_male_foot_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_foot.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_dougi_damage_obi": {
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_obi_D",
+      "normal": "T_CH_kaz_bdl_def_obi_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_obi_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_obi_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_obi_M",
+        "Normal": "T_CH_kaz_bdl_def_obi_N",
+        "Color02": [
+          0.1556140035390854,
+          0.014624999836087227,
+          0.19499999284744263,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_obi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_dougi_damage_pants": {
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_D",
+      "normal": "T_CH_kaz_bdl_dougi_damage_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_M",
+        "Normal": "T_CH_kaz_bdl_dougi_damage_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_pants.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_dougi_damage_sup": {
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_sup_D",
+      "normal": "T_CH_kaz_bdl_dougi_damage_sup_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_sup_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_sup_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_sup_M",
+        "Normal": "T_CH_kaz_bdl_dougi_damage_sup_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_sup.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_dougi_tk4": {
+      "diffuse": "T_CH_kaz_bdl_dougi_tk4_pants_D",
+      "normal": "T_CH_kaz_bdl_def_pants_N",
+      "mask": "T_CH_kaz_bdl_def_pants_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_tk4_pants_D",
+        "MaskMap": "T_CH_kaz_bdl_def_pants_M",
+        "Normal": "T_CH_kaz_bdl_def_pants_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_tk4/Material/MI_CH_kaz_bdl_dougi_tk4.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_gilet_bv_01": {
+      "diffuse": "T_CH_kaz_bdl_gilet_bv_01_D",
+      "normal": "T_CH_kaz_bdl_gilet_bv_01_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_kaz_bdl_gilet_bv_01_D",
+      "params": {
+        "Metallic": 0.30000001192092896,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_gilet_bv_01_D",
+        "MaskMap": "T_CH_MIBase_M",
+        "Normal": "T_CH_kaz_bdl_gilet_bv_01_N",
+        "specluar": "T_CH_kaz_bdl_gilet_bv_01_D",
+        "Color01": [
+          0.05293000116944313,
+          0.07144100219011307,
+          0.07999999821186066,
+          1.0
+        ],
+        "Color02": [
+          0.05293000116944313,
+          0.07144100219011307,
+          0.07999999821186066,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Material/MI_CH_kaz_bdl_gilet_bv_01.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_gilet_bv_02": {
+      "diffuse": "T_CH_kaz_bdl_gilet_bv_02_D",
+      "normal": "T_CH_kaz_bdl_gilet_bv_02_N",
+      "mask": "T_CH_kaz_bdl_gilet_bv_02_M",
+      "specular": "T_CH_glay",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_gilet_bv_02_D",
+        "MaskMap": "T_CH_kaz_bdl_gilet_bv_02_M",
+        "Normal": "T_CH_kaz_bdl_gilet_bv_02_N",
+        "specluar": "T_CH_glay",
+        "Color01": [
+          0.1620970070362091,
+          0.2187879979610443,
+          0.24500000476837158,
+          1.0
+        ],
+        "Color02": [
+          0.8092169761657715,
+          0.8306970000267029,
+          0.9200000166893005,
+          1.0
+        ],
+        "Color03": [
+          0.3733679950237274,
+          0.3840149939060211,
+          0.4050000011920929,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Material/MI_CH_kaz_bdl_gilet_bv_02.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_kamikaze_dokabelt": {
+      "diffuse": "T_CH_kaz_bdl_kamikaze_dokabelt_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_dokabelt_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_dokabelt_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_dokabelt_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_dokabelt_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_dokabelt_N",
+        "Color01": [
+          0.824999988079071,
+          0.824999988079071,
+          0.824999988079071,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_dokabelt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_kamikaze_kodabelt_backle": {
+      "diffuse": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_kodabelt_backle.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_kamikaze_yankeepant": {
+      "diffuse": "T_CH_kaz_bdl_kamikaze_yankeepant_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_yankeepant_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_yankeepant_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.25,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.949999988079071,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_yankeepant_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_yankeepant_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_yankeepant_N",
+        "Color01": [
+          0.44999998807907104,
+          0.15000000596046448,
+          0.6000000238418579,
+          1.0
+        ],
+        "Color02": [
+          0.0733330026268959,
+          0.019999999552965164,
+          0.10000000149011612,
+          1.0
+        ],
+        "Color03": [
+          0.5649999976158142,
+          0.05367499962449074,
+          0.12964899837970734,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_yankeepant.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_kamikaze_zikatabi": {
+      "diffuse": "T_CH_kaz_bdl_kamikaze_zikatabi_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_zikatabi_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_zikatabi_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_zikatabi_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_zikatabi_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_zikatabi_N",
+        "Color01": [
+          0.185806006193161,
+          0.15930500626564026,
+          0.1899999976158142,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          0.6527940034866333,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_zikatabi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_wgara_boot": {
+      "diffuse": "T_CH_kaz_bdl_wagara_shoes_D",
+      "normal": "T_CH_kaz_bdl_wagara_shoes_N",
+      "mask": "T_CH_kaz_bdl_wagara_shoes_M",
+      "specular": "",
+      "params": {
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_wagara_shoes_D",
+        "MaskMap": "T_CH_kaz_bdl_wagara_shoes_M",
+        "Normal": "T_CH_kaz_bdl_wagara_shoes_N",
+        "Color01": [
+          0.05387699976563454,
+          0.05999999865889549,
+          0.05220000073313713,
+          1.0
+        ],
+        "Color02": [
+          0.5400000214576721,
+          0.5400000214576721,
+          0.5400000214576721,
+          1.0
+        ],
+        "Color03": [
+          0.5400000214576721,
+          0.5400000214576721,
+          0.5400000214576721,
+          1.0
+        ],
+        "Color04": [
+          0.3149999976158142,
+          0.3079119920730591,
+          0.28665000200271606,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Material/MI_CH_kaz_bdl_wgara_boot.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdl_wgara_trouses": {
+      "diffuse": "T_CH_kaz_bdl_wagara_trousers_D",
+      "normal": "T_CH_kaz_bdl_wagara_trousers_N",
+      "mask": "T_CH_kaz_bdl_wagara_trousers_M",
+      "specular": "T_CH_kaz_bdl_wagara_trousers_D",
+      "params": {
+        "detail_diffuse_pow": 1.181509017944336,
+        "detail_normal_pow": 0.5602819919586182,
+        "Detail_Normal_Scale": 3.0565640926361084,
+        "specluar": "T_CH_kaz_bdl_wagara_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_wagara_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_wagara_trousers_M",
+        "Normal": "T_CH_kaz_bdl_wagara_trousers_N",
+        "Color01": [
+          0.10000000149011612,
+          0.09774100035429001,
+          0.09749999642372131,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Material/MI_CH_kaz_bdl_wgara_trouses.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_1p_coat": {
+      "diffuse": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+      "mask": "T_CH_kaz_bdu_1P_wind_coat_M",
+      "specular": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_wind_coat_M",
+        "Normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+        "specluar": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "Color01": [
+          0.10338500142097473,
+          0.10533999651670456,
+          0.11500000208616257,
+          1.0
+        ],
+        "Color02": [
+          0.05594500154256821,
+          0.06700000166893005,
+          0.06612200289964676,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_coat.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_1p_coat_cloth": {
+      "diffuse": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+      "mask": "T_CH_kaz_bdu_1P_wind_coat_M",
+      "specular": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_wind_coat_M",
+        "Normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+        "specluar": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "Color01": [
+          0.10338500142097473,
+          0.10533999651670456,
+          0.11500000208616257,
+          1.0
+        ],
+        "Color02": [
+          0.05594500154256821,
+          0.06700000166893005,
+          0.06612200289964676,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_coat_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_1p_jacket": {
+      "diffuse": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+      "normal": "T_CH_kaz_bdu_1P_upper_outer_garment_N",
+      "mask": "T_CH_kaz_bdu_1P_upper_outer_garment_M",
+      "specular": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+      "params": {
+        "Metallic": 0.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_upper_outer_garment_M",
+        "Normal": "T_CH_kaz_bdu_1P_upper_outer_garment_N",
+        "specluar": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+        "Color01": [
+          0.12945599853992462,
+          0.1319040060043335,
+          0.14399999380111694,
+          1.0
+        ],
+        "Color02": [
+          0.06262499839067459,
+          0.07500000298023224,
+          0.0740170031785965,
+          1.0
+        ],
+        "Color03": [
+          0.12169499695301056,
+          0.12216100096702576,
+          0.13300000131130219,
+          1.0
+        ],
+        "Color04": [
+          0.2199999988079071,
+          0.018699999898672104,
+          0.018699999898672104,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_def_glove": {
+      "diffuse": "T_CH_kaz_bdu_def_glove_D",
+      "normal": "T_CH_kaz_bdu_def_glove_N",
+      "mask": "T_CH_kaz_bdu_def_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_def_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_def_glove_M",
+        "Normal": "T_CH_kaz_bdu_def_glove_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Material/MI_CH_kaz_bdu_def_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_def_kinzoku": {
+      "diffuse": "T_CH_kaz_bdu_def_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_def_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_def_kinzoku_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_def_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_def_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_def_kinzoku_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Material/MI_CH_kaz_bdu_def_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_arm": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_arm_D",
+      "normal": "T_CH_kaz_arm_N",
+      "mask": "",
+      "specular": "T_CH_kaz_arm_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_arm_D",
+        "Normal": "T_CH_kaz_arm_N",
+        "Specular": "T_CH_kaz_arm_S",
+        "WetDiffuse": "T_CH_male_arm_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_arm.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_body": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_body_D",
+      "normal": "T_CH_kaz_body_N",
+      "mask": "",
+      "specular": "T_CH_kaz_body_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_body_D",
+        "Normal": "T_CH_kaz_body_N",
+        "Specular": "T_CH_kaz_body_S",
+        "WetDiffuse": "T_CH_male_body_wet_D",
+        "WetNormal": "T_CH_male_body_wet_N",
+        "wetSpec": "T_CH_male_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_body.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_glove": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_glove_D",
+      "normal": "T_CH_kaz_bdu_def_glove_N",
+      "mask": "T_CH_kaz_bdu_dougi_damage_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_dougi_damage_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_dougi_damage_glove_M",
+        "Normal": "T_CH_kaz_bdu_def_glove_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Material/MI_CH_kaz_bdu_dougi_damage_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_hand": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "",
+      "specular": "T_CH_male_hand_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_hand_D",
+        "Normal": "T_CH_male_hand_N",
+        "Specular": "T_CH_male_hand_S",
+        "WetDiffuse": "T_CH_male_hand_wet_D",
+        "WetNormal": "T_CH_male_hand_wet_N",
+        "wetSpec": "T_CH_male_hand_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_hand.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_kinzoku": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_dougi_damage_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_def_kinzoku_M",
+      "specular": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_def_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_dougi_damage_kinzoku_N",
+        "specluar": "T_CH_kaz_bdu_dougi_damage_kinzoku_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Material/MI_CH_kaz_bdu_dougi_damage_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_dougi_damage_neck": {
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_neck_D",
+      "normal": "T_CH_male_neck_n",
+      "mask": "",
+      "specular": "T_CH_male_neck_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_neck_D",
+        "Normal": "T_CH_male_neck_n",
+        "Specular": "T_CH_male_neck_S",
+        "WetDiffuse": "T_CH_male_neck_wet_D",
+        "WetNormal": "T_CH_male_neck_wet_N",
+        "wetSpec": "T_CH_male_neck_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_neck.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_gilet_bv": {
+      "diffuse": "T_CH_kaz_bdu_gilet_bv_D",
+      "normal": "T_CH_kaz_bdu_gilet_bv_N",
+      "mask": "T_CH_kaz_bdu_gilet_bv_M",
+      "specular": "T_CH_kaz_bdu_gilet_bv_D",
+      "params": {
+        "Anisotropic": 0.15000000596046448,
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_gilet_bv_D",
+        "MaskMap": "T_CH_kaz_bdu_gilet_bv_M",
+        "Normal": "T_CH_kaz_bdu_gilet_bv_N",
+        "specluar": "T_CH_kaz_bdu_gilet_bv_D",
+        "Color01": [
+          0.09924399852752686,
+          0.13395200669765472,
+          0.15000000596046448,
+          1.0
+        ],
+        "Color02": [
+          0.27516698837280273,
+          0.12352500110864639,
+          0.3050000071525574,
+          1.0
+        ],
+        "Color03": [
+          0.27516698837280273,
+          0.12352500110864639,
+          0.3050000071525574,
+          1.0
+        ],
+        "Color04": [
+          0.1720229983329773,
+          0.23218299448490143,
+          0.25999999046325684,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_gilet_bv/Material/MI_CH_kaz_bdu_gilet_bv.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_akse": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_akse_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_akse_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_akse_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 1.0,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_akse_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_akse_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_akse_N",
+        "Color01": [
+          0.9829999804496765,
+          0.30472999811172485,
+          0.09830000251531601,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_akse.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_glove": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_glove_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_glove_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_glove_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_glove_N",
+        "Color02": [
+          0.5070000290870667,
+          0.025856999680399895,
+          0.025856999680399895,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_goldwatch_glass": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_goldwatch_glass.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_kinzoku": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_kinzoku_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_kinzoku_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_yankeeT": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_yankeeT_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_yankeeT_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_yankeeT_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.6000000238418579,
+        "detail_normal_pow": 0.800000011920929,
+        "Detail_Normal_Scale": 8.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_knit01_D",
+        "DetalNormal": "T_CH_knit01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_yankeeT_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_yankeeT_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_yankeeT_N",
+        "Color01": [
+          0.699999988079071,
+          0.04899999871850014,
+          0.12494999915361404,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_yankeeT.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_kamikaze_yankeejackt": {
+      "diffuse": "T_CH_kaz_bdu_kamikaze_yankeejackt_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_yankeejackt_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_yankeejackt_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.25,
+        "detail_diffuse_pow": 0.8999999761581421,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_yankeejackt_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_yankeejackt_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_yankeejackt_N",
+        "Color01": [
+          0.3677619993686676,
+          0.125,
+          0.5,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_yankeejackt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_tatto_shirt_shirt": {
+      "diffuse": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+      "normal": "T_CH_kaz_bdl_tatoo_shirt_trousers_N",
+      "mask": "T_CH_kaz_bdl_tatoo_shirt_trousers_M",
+      "specular": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+      "params": {
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_tatoo_shirt_trousers_M",
+        "Normal": "T_CH_kaz_bdl_tatoo_shirt_trousers_N",
+        "Color01": [
+          0.08969999849796295,
+          0.10601700097322464,
+          0.12999999523162842,
+          1.0
+        ],
+        "Color02": [
+          0.125,
+          0.051065001636743546,
+          0.018272999674081802,
+          1.0
+        ],
+        "Color03": [
+          0.29499998688697815,
+          0.29499998688697815,
+          0.29499998688697815,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Material/MI_CH_kaz_bdu_tatto_shirt_shirt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_tatto_shirt_shirt2": {
+      "diffuse": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+      "normal": "T_CH_kaz_bdl_tatoo_shirt_boot_N",
+      "mask": "T_CH_kaz_bdl_tatoo_shirt_boot_M",
+      "specular": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+        "MaskMap": "T_CH_kaz_bdl_tatoo_shirt_boot_M",
+        "Normal": "T_CH_kaz_bdl_tatoo_shirt_boot_N",
+        "Color01": [
+          0.07000000029802322,
+          0.05361799895763397,
+          0.04619999974966049,
+          1.0
+        ],
+        "Color02": [
+          0.04500000178813934,
+          0.03446900099515915,
+          0.02969999983906746,
+          1.0
+        ],
+        "Color03": [
+          0.19499999284744263,
+          0.16097499430179596,
+          0.10334999859333038,
+          1.0
+        ],
+        "Color04": [
+          0.19499999284744263,
+          0.18185900151729584,
+          0.14820000529289246,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Material/MI_CH_kaz_bdu_tatto_shirt_shirt2.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_bdu_wagara_jacket": {
+      "diffuse": "T_CH_kaz_bdu_wagara_jacket_D",
+      "normal": "T_CH_kaz_bdu_wagara_jacket_N",
+      "mask": "T_CH_kaz_bdu_wagara_jacket_M",
+      "specular": "T_CH_kaz_bdu_wagara_jacket_D",
+      "params": {
+        "detail_diffuse_pow": 0.5,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 7.0,
+        "detail_roughness_pow": 0.30000001192092896,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_wagara_jacket_D",
+        "MaskMap": "T_CH_kaz_bdu_wagara_jacket_M",
+        "Normal": "T_CH_kaz_bdu_wagara_jacket_N",
+        "specluar": "T_CH_kaz_bdu_wagara_jacket_D",
+        "Color01": [
+          0.10000000149011612,
+          0.09186899662017822,
+          0.08387500047683716,
+          1.0
+        ],
+        "Color02": [
+          0.23250000178813934,
+          0.2986460030078888,
+          0.4650000035762787,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_wagara/Material/MI_CH_kaz_bdu_wagara_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_eye_shadow": {
+      "diffuse": "T_CH_kaz_eye_shadow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eye_shadow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eye_shadow.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eye_shadow_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_eyebrow": {
+      "diffuse": "T_CH_kaz_eyebrow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyebrow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eyebrow.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eyebrow_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    "MI_CH_kaz_eyelash": {
+      "diffuse": "T_CH_kaz_eyelash_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyelash_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eyelash.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eyelash_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    "MI_CH_kaz_fac_dougi_damage": {
+      "diffuse": "T_CH_kaz_fac_dougi_damage_D",
+      "normal": "T_CH_kaz_face_normal_N",
+      "mask": "",
+      "specular": "T_CH_kaz_face_normal_S",
+      "params": {
+        "Devil Desaturation": 0.5,
+        "Devil Hue": 0.7300000190734863,
+        "Devil Metallic": 0.15000000596046448,
+        "Devil Multiply": 0.20000000298023224,
+        "After Desaturation": -0.6000000238418579,
+        "After Hue": 0.9900000095367432,
+        "After Multiply": 0.25,
+        "Desaturation": -0.20000000298023224,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.004999999888241291,
+        "Metallic": 0.30000001192092896,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_fac_dougi_damage_D",
+        "Normal": "T_CH_kaz_face_normal_N",
+        "Specular": "T_CH_kaz_face_normal_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_head_wet_N",
+        "wetSpec": "T_CH_male_head_wet_S",
+        "Devil SSS_Color_01": [
+          0.3316519856452942,
+          0.15074999630451202,
+          0.44999998807907104,
+          1.0
+        ],
+        "Devil SSS_Color_02": [
+          1.0,
+          0.4099150002002716,
+          0.41946500539779663,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_dougi_damage/Material/MI_CH_kaz_fac_dougi_damage.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_arm": {
+      "diffuse": "T_CH_male_arm_D",
+      "normal": "T_CH_male_arm_N",
+      "mask": "",
+      "specular": "T_CH_male_arm_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_body": {
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_foot": {
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_hand": {
+      "diffuse": "T_CH_male_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "",
+      "specular": "T_CH_male_hand_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_leg": {
+      "diffuse": "T_CH_male_leg_D",
+      "normal": "T_CH_male_leg_n",
+      "mask": "",
+      "specular": "T_CH_male_leg_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_male_leg_D",
+        "Normal": "T_CH_male_leg_n",
+        "Specular": "T_CH_male_leg_S",
+        "WetDiffuse": "T_CH_male_leg_wet_D",
+        "WetMask": "T_CH_male_leg_wet_D",
+        "WetNormal": "T_CH_male_leg_wet_N",
+        "wetSpec": "T_CH_male_leg_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_neck": {
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_skin_normal_face": {
+      "diffuse": "T_CH_kaz_face_D",
+      "normal": "T_CH_kaz_face_N",
+      "mask": "",
+      "specular": "T_CH_kaz_face_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_tatoo_shirt_skin": {
+      "diffuse": "T_CH_male_arm_D",
+      "normal": "T_CH_kaz_arm_N",
+      "mask": "",
+      "specular": "T_CH_kaz_arm_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_male_arm_D",
+        "Normal": "T_CH_kaz_arm_N",
+        "Specular": "T_CH_kaz_arm_S",
+        "WetDiffuse": "T_CH_male_arm_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_tatoo_shirt/Material/MI_CH_kaz_tatoo_shirt_skin.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_kaz_teeth": {
+      "diffuse": "T_CH_kaz_teeth_D",
+      "normal": "T_CH_lar_teeth_N",
+      "mask": "",
+      "specular": "T_CH_lar_teeth_R",
+      "params": {
+        "DiffuseValue": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_teeth_D",
+        "Normal": "T_CH_lar_teeth_N",
+        "Roughness": "T_CH_lar_teeth_R",
+        "SubSurfaceScatterColor": [
+          0.0949999988079071,
+          0.01425000000745058,
+          0.01425000000745058,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_mouth": {
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_tear": {
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameterCube_0": "eye_cubemap"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/mry/Face/mry_fac/Material/MI_CH_tear.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_kaz_har_1p": {
+      "diffuse": "T_CH_kaz_har_1p_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": 0.0,
+        "BaseUpperContrast": 0.10000000149011612,
+        "Anisotropic": 0.4000000059604645,
+        "Metallic": 0.6000000238418579,
+        "Roughness": 0.5,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_kaz_har_1p_D",
+        "SpecularTexture": "T_CH_kaz_har_1p_D",
+        "Color01": [
+          0.02500000037252903,
+          0.017114000394940376,
+          0.010499999858438969,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Material/MI_kaz_har_1p.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_kaz_har_1p_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    "MI_kaz_har_1p2": {
+      "diffuse": "T_CH_kaz_har_1p_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": 0.0,
+        "BaseUpperContrast": 0.10000000149011612,
+        "Anisotropic": 0.0,
+        "Metallic": 0.6000000238418579,
+        "Normalize": 1.0,
+        "Roughness": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_kaz_har_1p_D",
+        "SpecularTexture": "T_CH_kaz_har_1p_D",
+        "Color01": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Material/MI_kaz_har_1p2.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_kaz_har_1p2_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    }
+  },
+  "pieceEntries": [
+    {
+      "name": "kaz_fac",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_fac.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_normal/Meshes/SK_CH_kaz_fac.uasset",
+      "materials": [
+        "MI_CH_kaz_Eye_ADD",
+        "MI_CH_kaz_Eyes",
+        "MI_CH_kaz_Eyes_L",
+        "MI_CH_kaz_eye_shadow",
+        "MI_CH_kaz_eyebrow",
+        "MI_CH_kaz_eyelash",
+        "MI_CH_kaz_skin_normal_face",
+        "MI_CH_kaz_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    {
+      "name": "kaz_fac_damage",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_fac_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_dougi_damage/Meshes/SK_CH_kaz_fac_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_Eye_ADD",
+        "MI_CH_kaz_Eyes",
+        "MI_CH_kaz_Eyes_L",
+        "MI_CH_kaz_eye_shadow",
+        "MI_CH_kaz_eyebrow",
+        "MI_CH_kaz_eyelash",
+        "MI_CH_kaz_fac_dougi_damage",
+        "MI_CH_kaz_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    {
+      "name": "kaz_har_1p",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Meshes/SK_CH_kaz_har_1p.uasset",
+      "materials": [
+        "MI_kaz_har_1p",
+        "MI_kaz_har_1p2"
+      ]
+    },
+    {
+      "name": "kaz_bdu_1p",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Meshes/SK_CH_kaz_bdu_1P.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_1p_coat",
+        "MI_CH_kaz_bdu_1p_coat_cloth",
+        "MI_CH_kaz_bdu_1p_jacket",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_hand"
+      ]
+    },
+    {
+      "name": "kaz_bdl_1p",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Meshes/SK_CH_kaz_bdl_1P.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_1p_shoes",
+        "MI_CH_kaz_bdl_1p_trousers"
+      ]
+    },
+    {
+      "name": "kaz_bdu_dougi_org",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_org.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Meshes/SK_CH_kaz_bdu_dougi_org.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_def_glove",
+        "MI_CH_kaz_bdu_def_kinzoku",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdl_dougi_org",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_org.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Meshes/SK_CH_kaz_bdl_dougi_org.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_def_obi",
+        "MI_CH_kaz_bdl_def_pants",
+        "MI_CH_kaz_bdl_def_supporter",
+        "MI_CH_kaz_skin_foot"
+      ]
+    },
+    {
+      "name": "kaz_bdu_dougi_damage",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Meshes/SK_CH_kaz_bdu_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_dougi_damage_arm",
+        "MI_CH_kaz_bdu_dougi_damage_body",
+        "MI_CH_kaz_bdu_dougi_damage_hand",
+        "MI_CH_kaz_bdu_dougi_damage_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdu_dougi_damage_glove",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_dougi_damage_glove.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Meshes/SK_CH_kaz_bdu_dougi_damage_glove.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_dougi_damage_arm",
+        "MI_CH_kaz_bdu_dougi_damage_body",
+        "MI_CH_kaz_bdu_dougi_damage_glove",
+        "MI_CH_kaz_bdu_dougi_damage_hand",
+        "MI_CH_kaz_bdu_dougi_damage_kinzoku",
+        "MI_CH_kaz_bdu_dougi_damage_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdl_dougi_damage",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_damage.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Meshes/SK_CH_kaz_bdl_dougi_damage.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_dougi_damage_foot",
+        "MI_CH_kaz_bdl_dougi_damage_obi",
+        "MI_CH_kaz_bdl_dougi_damage_pants",
+        "MI_CH_kaz_bdl_dougi_damage_sup",
+        "MI_CH_kaz_skin_leg"
+      ]
+    },
+    {
+      "name": "kaz_bdl_dougi_tk4",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_dougi_tk4.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_tk4/Meshes/SK_CH_kaz_bdl_dougi_tk4.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_def_obi",
+        "MI_CH_kaz_bdl_def_supporter",
+        "MI_CH_kaz_bdl_dougi_tk4",
+        "MI_CH_kaz_skin_foot"
+      ]
+    },
+    {
+      "name": "kaz_bdu_gilet_bv",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_gilet_bv.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_gilet_bv/Meshes/SK_CH_kaz_bdu_gilet_bv.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_gilet_bv",
+        "MI_CH_kaz_skin_arm",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdl_gilet_bv",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_gilet_bv.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Meshes/SK_CH_kaz_bdl_gilet_bv.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_gilet_bv_01",
+        "MI_CH_kaz_bdl_gilet_bv_02"
+      ]
+    },
+    {
+      "name": "kaz_bdu_kamikaze",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_kamikaze.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Meshes/SK_CH_kaz_bdu_kamikaze.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_kamikaze_akse",
+        "MI_CH_kaz_bdu_kamikaze_glove",
+        "MI_CH_kaz_bdu_kamikaze_goldwatch_glass",
+        "MI_CH_kaz_bdu_kamikaze_kinzoku",
+        "MI_CH_kaz_bdu_kamikaze_yankeeT",
+        "MI_CH_kaz_bdu_kamikaze_yankeejackt",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdl_kamikaze",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_kamikaze.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Meshes/SK_CH_kaz_bdl_kamikaze.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_kamikaze_dokabelt",
+        "MI_CH_kaz_bdl_kamikaze_kodabelt_backle",
+        "MI_CH_kaz_bdl_kamikaze_yankeepant",
+        "MI_CH_kaz_bdl_kamikaze_zikatabi"
+      ]
+    },
+    {
+      "name": "kaz_bdu_tattoo",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_tattoo.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_tatoo_shirt/Meshes/SK_CH_kaz_bdu_tatoo_shirt.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_tatto_shirt_shirt",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck",
+        "MI_CH_kaz_tatoo_shirt_skin"
+      ]
+    },
+    {
+      "name": "kaz_bdl_tattoo",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_tattoo.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Meshes/SK_CH_kaz_bdl_tatoo_shirt.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_tatto_shirt_shirt",
+        "MI_CH_kaz_bdu_tatto_shirt_shirt2"
+      ]
+    },
+    {
+      "name": "kaz_bdu_wagara",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdu_wagara.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_wagara/Meshes/SK_CH_kaz_bdu_wagara.uasset",
+      "materials": [
+        "MI_CH_kaz_bdu_wagara_jacket",
+        "MI_CH_kaz_skin_body",
+        "MI_CH_kaz_skin_hand",
+        "MI_CH_kaz_skin_neck"
+      ]
+    },
+    {
+      "name": "kaz_bdl_wagara",
+      "path": "Assets/Remaster/Editor/KazuyaSource/kaz_bdl_wagara.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Meshes/SK_CH_kaz_bdl_wagara.uasset",
+      "materials": [
+        "MI_CH_kaz_bdl_wgara_boot",
+        "MI_CH_kaz_bdl_wgara_trouses"
+      ]
+    }
+  ],
+  "materialEntries": [
+    {
+      "name": "MI_CH_kaz_Eye_ADD",
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.10000000149011612,
+        "REF_Tex_Scale": 1.1003069877624512,
+        "Ref_TexU": -0.23893800377845764,
+        "Ref_TexV": 0.0,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_Eyes",
+      "diffuse": "T_CH_eye_D",
+      "normal": "T_CH_eye_N_2",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.05000000074505806,
+        "RefractionDepthBias": 0.0,
+        "Color01": [
+          0.14000000059604645,
+          0.08132600039243698,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.9150000214576721,
+          0.7582970261573792,
+          0.6408050060272217,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_Eyes_L",
+      "diffuse": "T_CH_kaz_eyeL_D",
+      "normal": "T_CH_eye_N_2",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.05000000074505806,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyeL_D",
+        "Color01": [
+          0.5,
+          0.0,
+          0.004546999931335449,
+          1.0
+        ],
+        "Color02": [
+          0.9150000214576721,
+          0.7582970261573792,
+          0.6408050060272217,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_Eyes_L.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_Eyes_L_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_1p_shoes",
+      "diffuse": "T_CH_kaz_bdl_1P_shoes_D",
+      "normal": "T_CH_kaz_bdl_1P_shoes_N",
+      "mask": "T_CH_kaz_bdl_1P_shoes_M",
+      "specular": "T_CH_kaz_bdl_1P_shoes_D",
+      "params": {
+        "Metallic": 0.7482720017433167,
+        "RoughnessMax": 0.13684199750423431,
+        "RoughnessMin": 0.5377579927444458,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_1P_shoes_D",
+        "MaskMap": "T_CH_kaz_bdl_1P_shoes_M",
+        "Normal": "T_CH_kaz_bdl_1P_shoes_N",
+        "specluar": "T_CH_kaz_bdl_1P_shoes_D",
+        "color01": [
+          0.08500000089406967,
+          0.07870999723672867,
+          0.07870999723672867,
+          1.0
+        ],
+        "color03": [
+          0.05999999865889549,
+          0.041443999856710434,
+          0.03108000010251999,
+          1.0
+        ],
+        "color04": [
+          0.05886999890208244,
+          0.059328000992536545,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Material/MI_CH_kaz_bdl_1p_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_1p_trousers",
+      "diffuse": "T_CH_kaz_bdl_1P_trousers_D",
+      "normal": "T_CH_kaz_bdl_1P_trousers_N",
+      "mask": "T_CH_kaz_bdl_1P_trousers_M",
+      "specular": "T_CH_kaz_bdl_1P_trousers_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_1P_trousers_M",
+        "Normal": "T_CH_kaz_bdl_1P_trousers_N",
+        "specluar": "T_CH_kaz_bdl_1P_trousers_D",
+        "color01": [
+          0.12945599853992462,
+          0.1319040060043335,
+          0.14399999380111694,
+          1.0
+        ],
+        "color02": [
+          0.05000000074505806,
+          0.03074200078845024,
+          0.02500000037252903,
+          1.0
+        ],
+        "color03": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_1p/Material/MI_CH_kaz_bdl_1p_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_1p_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_def_obi",
+      "diffuse": "T_CH_kaz_bdl_def_obi_D",
+      "normal": "T_CH_kaz_bdl_def_obi_N",
+      "mask": "T_CH_kaz_bdl_def_obi_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_obi_D",
+        "MaskMap": "T_CH_kaz_bdl_def_obi_M",
+        "Normal": "T_CH_kaz_bdl_def_obi_N",
+        "Color02": [
+          0.1556140035390854,
+          0.014624999836087227,
+          0.19499999284744263,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_obi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_obi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_def_pants",
+      "diffuse": "T_CH_kaz_bdl_def_pants_D",
+      "normal": "T_CH_kaz_bdl_def_pants_N",
+      "mask": "T_CH_kaz_bdl_def_pants_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_pants_D",
+        "MaskMap": "T_CH_kaz_bdl_def_pants_M",
+        "Normal": "T_CH_kaz_bdl_def_pants_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_pants.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_def_supporter",
+      "diffuse": "T_CH_kaz_bdl_def_supporter_D",
+      "normal": "T_CH_kaz_bdl_def_supporter_N",
+      "mask": "T_CH_kaz_bdl_def_supporter_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_def_supporter_D",
+        "MaskMap": "T_CH_kaz_bdl_def_supporter_M",
+        "Normal": "T_CH_kaz_bdl_def_supporter_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_org/Material/MI_CH_kaz_bdl_def_supporter.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_def_supporter_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_dougi_damage_foot",
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_foot_D",
+      "normal": "T_CH_male_foot_n",
+      "mask": "",
+      "specular": "T_CH_male_foot_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_kaz_bdl_dougi_damage_foot_D",
+        "Normal": "T_CH_male_foot_n",
+        "Specular": "T_CH_male_foot_S",
+        "WetDiffuse": "T_CH_male_foot_wet_D",
+        "WetNormal": "T_CH_male_foot_wet_N",
+        "wetSpec": "T_CH_male_foot_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_foot.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_foot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_dougi_damage_obi",
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_obi_D",
+      "normal": "T_CH_kaz_bdl_def_obi_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_obi_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_obi_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_obi_M",
+        "Normal": "T_CH_kaz_bdl_def_obi_N",
+        "Color02": [
+          0.1556140035390854,
+          0.014624999836087227,
+          0.19499999284744263,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_obi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_obi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_dougi_damage_pants",
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_D",
+      "normal": "T_CH_kaz_bdl_dougi_damage_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_M",
+        "Normal": "T_CH_kaz_bdl_dougi_damage_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_pants.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_dougi_damage_sup",
+      "diffuse": "T_CH_kaz_bdl_dougi_damage_sup_D",
+      "normal": "T_CH_kaz_bdl_dougi_damage_sup_N",
+      "mask": "T_CH_kaz_bdl_dougi_damage_sup_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_damage_sup_D",
+        "MaskMap": "T_CH_kaz_bdl_dougi_damage_sup_M",
+        "Normal": "T_CH_kaz_bdl_dougi_damage_sup_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_bdl_dougi_damage_sup.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_damage_sup_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_dougi_tk4",
+      "diffuse": "T_CH_kaz_bdl_dougi_tk4_pants_D",
+      "normal": "T_CH_kaz_bdl_def_pants_N",
+      "mask": "T_CH_kaz_bdl_def_pants_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.30000001192092896,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_dougi_tk4_pants_D",
+        "MaskMap": "T_CH_kaz_bdl_def_pants_M",
+        "Normal": "T_CH_kaz_bdl_def_pants_N",
+        "Color02": [
+          0.7799999713897705,
+          0.6516600251197815,
+          0.5148000121116638,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_tk4/Material/MI_CH_kaz_bdl_dougi_tk4.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_dougi_tk4_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_gilet_bv_01",
+      "diffuse": "T_CH_kaz_bdl_gilet_bv_01_D",
+      "normal": "T_CH_kaz_bdl_gilet_bv_01_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_kaz_bdl_gilet_bv_01_D",
+      "params": {
+        "Metallic": 0.30000001192092896,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_gilet_bv_01_D",
+        "MaskMap": "T_CH_MIBase_M",
+        "Normal": "T_CH_kaz_bdl_gilet_bv_01_N",
+        "specluar": "T_CH_kaz_bdl_gilet_bv_01_D",
+        "Color01": [
+          0.05293000116944313,
+          0.07144100219011307,
+          0.07999999821186066,
+          1.0
+        ],
+        "Color02": [
+          0.05293000116944313,
+          0.07144100219011307,
+          0.07999999821186066,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Material/MI_CH_kaz_bdl_gilet_bv_01.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_01_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_gilet_bv_02",
+      "diffuse": "T_CH_kaz_bdl_gilet_bv_02_D",
+      "normal": "T_CH_kaz_bdl_gilet_bv_02_N",
+      "mask": "T_CH_kaz_bdl_gilet_bv_02_M",
+      "specular": "T_CH_glay",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_gilet_bv_02_D",
+        "MaskMap": "T_CH_kaz_bdl_gilet_bv_02_M",
+        "Normal": "T_CH_kaz_bdl_gilet_bv_02_N",
+        "specluar": "T_CH_glay",
+        "Color01": [
+          0.1620970070362091,
+          0.2187879979610443,
+          0.24500000476837158,
+          1.0
+        ],
+        "Color02": [
+          0.8092169761657715,
+          0.8306970000267029,
+          0.9200000166893005,
+          1.0
+        ],
+        "Color03": [
+          0.3733679950237274,
+          0.3840149939060211,
+          0.4050000011920929,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_gilet_bv/Material/MI_CH_kaz_bdl_gilet_bv_02.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_gilet_bv_02_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_kamikaze_dokabelt",
+      "diffuse": "T_CH_kaz_bdl_kamikaze_dokabelt_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_dokabelt_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_dokabelt_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_dokabelt_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_dokabelt_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_dokabelt_N",
+        "Color01": [
+          0.824999988079071,
+          0.824999988079071,
+          0.824999988079071,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_dokabelt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_dokabelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_kamikaze_kodabelt_backle",
+      "diffuse": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_kodabelt_backle_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_kodabelt_backle.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_kodabelt_backle_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_kamikaze_yankeepant",
+      "diffuse": "T_CH_kaz_bdl_kamikaze_yankeepant_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_yankeepant_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_yankeepant_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.25,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.949999988079071,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_yankeepant_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_yankeepant_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_yankeepant_N",
+        "Color01": [
+          0.44999998807907104,
+          0.15000000596046448,
+          0.6000000238418579,
+          1.0
+        ],
+        "Color02": [
+          0.0733330026268959,
+          0.019999999552965164,
+          0.10000000149011612,
+          1.0
+        ],
+        "Color03": [
+          0.5649999976158142,
+          0.05367499962449074,
+          0.12964899837970734,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_yankeepant.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_yankeepant_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_kamikaze_zikatabi",
+      "diffuse": "T_CH_kaz_bdl_kamikaze_zikatabi_D",
+      "normal": "T_CH_kaz_bdl_kamikaze_zikatabi_N",
+      "mask": "T_CH_kaz_bdl_kamikaze_zikatabi_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_kamikaze_zikatabi_D",
+        "MaskMap": "T_CH_kaz_bdl_kamikaze_zikatabi_M",
+        "Normal": "T_CH_kaz_bdl_kamikaze_zikatabi_N",
+        "Color01": [
+          0.185806006193161,
+          0.15930500626564026,
+          0.1899999976158142,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          0.6527940034866333,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_kamikaze/Material/MI_CH_kaz_bdl_kamikaze_zikatabi.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_kamikaze_zikatabi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_wgara_boot",
+      "diffuse": "T_CH_kaz_bdl_wagara_shoes_D",
+      "normal": "T_CH_kaz_bdl_wagara_shoes_N",
+      "mask": "T_CH_kaz_bdl_wagara_shoes_M",
+      "specular": "",
+      "params": {
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_wagara_shoes_D",
+        "MaskMap": "T_CH_kaz_bdl_wagara_shoes_M",
+        "Normal": "T_CH_kaz_bdl_wagara_shoes_N",
+        "Color01": [
+          0.05387699976563454,
+          0.05999999865889549,
+          0.05220000073313713,
+          1.0
+        ],
+        "Color02": [
+          0.5400000214576721,
+          0.5400000214576721,
+          0.5400000214576721,
+          1.0
+        ],
+        "Color03": [
+          0.5400000214576721,
+          0.5400000214576721,
+          0.5400000214576721,
+          1.0
+        ],
+        "Color04": [
+          0.3149999976158142,
+          0.3079119920730591,
+          0.28665000200271606,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Material/MI_CH_kaz_bdl_wgara_boot.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_boot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdl_wgara_trouses",
+      "diffuse": "T_CH_kaz_bdl_wagara_trousers_D",
+      "normal": "T_CH_kaz_bdl_wagara_trousers_N",
+      "mask": "T_CH_kaz_bdl_wagara_trousers_M",
+      "specular": "T_CH_kaz_bdl_wagara_trousers_D",
+      "params": {
+        "detail_diffuse_pow": 1.181509017944336,
+        "detail_normal_pow": 0.5602819919586182,
+        "Detail_Normal_Scale": 3.0565640926361084,
+        "specluar": "T_CH_kaz_bdl_wagara_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdl_wagara_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_wagara_trousers_M",
+        "Normal": "T_CH_kaz_bdl_wagara_trousers_N",
+        "Color01": [
+          0.10000000149011612,
+          0.09774100035429001,
+          0.09749999642372131,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_wagara/Material/MI_CH_kaz_bdl_wgara_trouses.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdl_wgara_trouses_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_1p_coat",
+      "diffuse": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+      "mask": "T_CH_kaz_bdu_1P_wind_coat_M",
+      "specular": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_wind_coat_M",
+        "Normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+        "specluar": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "Color01": [
+          0.10338500142097473,
+          0.10533999651670456,
+          0.11500000208616257,
+          1.0
+        ],
+        "Color02": [
+          0.05594500154256821,
+          0.06700000166893005,
+          0.06612200289964676,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_coat.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_1p_coat_cloth",
+      "diffuse": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+      "mask": "T_CH_kaz_bdu_1P_wind_coat_M",
+      "specular": "T_CH_kaz_bdu_1P_wind_coat_D",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_wind_coat_M",
+        "Normal": "T_CH_kaz_bdu_1P_wind_coat_N",
+        "specluar": "T_CH_kaz_bdu_1P_wind_coat_D",
+        "Color01": [
+          0.10338500142097473,
+          0.10533999651670456,
+          0.11500000208616257,
+          1.0
+        ],
+        "Color02": [
+          0.05594500154256821,
+          0.06700000166893005,
+          0.06612200289964676,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_coat_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_coat_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_1p_jacket",
+      "diffuse": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+      "normal": "T_CH_kaz_bdu_1P_upper_outer_garment_N",
+      "mask": "T_CH_kaz_bdu_1P_upper_outer_garment_M",
+      "specular": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+      "params": {
+        "Metallic": 0.0,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+        "MaskMap": "T_CH_kaz_bdu_1P_upper_outer_garment_M",
+        "Normal": "T_CH_kaz_bdu_1P_upper_outer_garment_N",
+        "specluar": "T_CH_kaz_bdu_1P_upper_outer_garment_D",
+        "Color01": [
+          0.12945599853992462,
+          0.1319040060043335,
+          0.14399999380111694,
+          1.0
+        ],
+        "Color02": [
+          0.06262499839067459,
+          0.07500000298023224,
+          0.0740170031785965,
+          1.0
+        ],
+        "Color03": [
+          0.12169499695301056,
+          0.12216100096702576,
+          0.13300000131130219,
+          1.0
+        ],
+        "Color04": [
+          0.2199999988079071,
+          0.018699999898672104,
+          0.018699999898672104,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_1p/Material/MI_CH_kaz_bdu_1p_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_1p_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_def_glove",
+      "diffuse": "T_CH_kaz_bdu_def_glove_D",
+      "normal": "T_CH_kaz_bdu_def_glove_N",
+      "mask": "T_CH_kaz_bdu_def_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_def_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_def_glove_M",
+        "Normal": "T_CH_kaz_bdu_def_glove_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Material/MI_CH_kaz_bdu_def_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_def_kinzoku",
+      "diffuse": "T_CH_kaz_bdu_def_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_def_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_def_kinzoku_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_def_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_def_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_def_kinzoku_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_org/Material/MI_CH_kaz_bdu_def_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_def_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_arm",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_arm_D",
+      "normal": "T_CH_kaz_arm_N",
+      "mask": "",
+      "specular": "T_CH_kaz_arm_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_arm_D",
+        "Normal": "T_CH_kaz_arm_N",
+        "Specular": "T_CH_kaz_arm_S",
+        "WetDiffuse": "T_CH_male_arm_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_arm.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_arm_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_body",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_body_D",
+      "normal": "T_CH_kaz_body_N",
+      "mask": "",
+      "specular": "T_CH_kaz_body_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_body_D",
+        "Normal": "T_CH_kaz_body_N",
+        "Specular": "T_CH_kaz_body_S",
+        "WetDiffuse": "T_CH_male_body_wet_D",
+        "WetNormal": "T_CH_male_body_wet_N",
+        "wetSpec": "T_CH_male_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_body.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_body_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_glove",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_glove_D",
+      "normal": "T_CH_kaz_bdu_def_glove_N",
+      "mask": "T_CH_kaz_bdu_dougi_damage_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_dougi_damage_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_dougi_damage_glove_M",
+        "Normal": "T_CH_kaz_bdu_def_glove_N",
+        "Color02": [
+          0.9150000214576721,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Material/MI_CH_kaz_bdu_dougi_damage_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_hand",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "",
+      "specular": "T_CH_male_hand_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_hand_D",
+        "Normal": "T_CH_male_hand_N",
+        "Specular": "T_CH_male_hand_S",
+        "WetDiffuse": "T_CH_male_hand_wet_D",
+        "WetNormal": "T_CH_male_hand_wet_N",
+        "wetSpec": "T_CH_male_hand_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_hand.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_hand_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_kinzoku",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_dougi_damage_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_def_kinzoku_M",
+      "specular": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_dougi_damage_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_def_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_dougi_damage_kinzoku_N",
+        "specluar": "T_CH_kaz_bdu_dougi_damage_kinzoku_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage_glove/Material/MI_CH_kaz_bdu_dougi_damage_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_dougi_damage_neck",
+      "diffuse": "T_CH_kaz_bdu_dougi_damage_neck_D",
+      "normal": "T_CH_male_neck_n",
+      "mask": "",
+      "specular": "T_CH_male_neck_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_kaz_bdu_dougi_damage_neck_D",
+        "Normal": "T_CH_male_neck_n",
+        "Specular": "T_CH_male_neck_S",
+        "WetDiffuse": "T_CH_male_neck_wet_D",
+        "WetNormal": "T_CH_male_neck_wet_N",
+        "wetSpec": "T_CH_male_neck_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_dougi_damage/Material/MI_CH_kaz_bdu_dougi_damage_neck.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_dougi_damage_neck_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_gilet_bv",
+      "diffuse": "T_CH_kaz_bdu_gilet_bv_D",
+      "normal": "T_CH_kaz_bdu_gilet_bv_N",
+      "mask": "T_CH_kaz_bdu_gilet_bv_M",
+      "specular": "T_CH_kaz_bdu_gilet_bv_D",
+      "params": {
+        "Anisotropic": 0.15000000596046448,
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_gilet_bv_D",
+        "MaskMap": "T_CH_kaz_bdu_gilet_bv_M",
+        "Normal": "T_CH_kaz_bdu_gilet_bv_N",
+        "specluar": "T_CH_kaz_bdu_gilet_bv_D",
+        "Color01": [
+          0.09924399852752686,
+          0.13395200669765472,
+          0.15000000596046448,
+          1.0
+        ],
+        "Color02": [
+          0.27516698837280273,
+          0.12352500110864639,
+          0.3050000071525574,
+          1.0
+        ],
+        "Color03": [
+          0.27516698837280273,
+          0.12352500110864639,
+          0.3050000071525574,
+          1.0
+        ],
+        "Color04": [
+          0.1720229983329773,
+          0.23218299448490143,
+          0.25999999046325684,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_gilet_bv/Material/MI_CH_kaz_bdu_gilet_bv.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_gilet_bv_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_akse",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_akse_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_akse_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_akse_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 1.0,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_akse_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_akse_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_akse_N",
+        "Color01": [
+          0.9829999804496765,
+          0.30472999811172485,
+          0.09830000251531601,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_akse.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_akse_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_glove",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_glove_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_glove_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_glove_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 5.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather02_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_glove_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_glove_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_glove_N",
+        "Color02": [
+          0.5070000290870667,
+          0.025856999680399895,
+          0.025856999680399895,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_glove.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_goldwatch_glass",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_goldwatch_glass_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_goldwatch_glass.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_goldwatch_glass_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_kinzoku",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_kinzoku_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_kinzoku_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_kinzoku_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.20000000298023224,
+        "detail_normal_pow": 1.0,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_metal01_D",
+        "DetalNormal": "T_CH_metal01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_kinzoku_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_kinzoku_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_kinzoku_N"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_kinzoku.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_kinzoku_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_yankeeT",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_yankeeT_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_yankeeT_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_yankeeT_M",
+      "specular": "",
+      "params": {
+        "detail_diffuse_pow": 0.6000000238418579,
+        "detail_normal_pow": 0.800000011920929,
+        "Detail_Normal_Scale": 8.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.20000000298023224,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_knit01_D",
+        "DetalNormal": "T_CH_knit01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_yankeeT_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_yankeeT_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_yankeeT_N",
+        "Color01": [
+          0.699999988079071,
+          0.04899999871850014,
+          0.12494999915361404,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_yankeeT.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeeT_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_kamikaze_yankeejackt",
+      "diffuse": "T_CH_kaz_bdu_kamikaze_yankeejackt_D",
+      "normal": "T_CH_kaz_bdu_kamikaze_yankeejackt_N",
+      "mask": "T_CH_kaz_bdu_kamikaze_yankeejackt_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.25,
+        "detail_diffuse_pow": 0.8999999761581421,
+        "detail_normal_pow": 0.20000000298023224,
+        "Detail_Normal_Scale": 3.0,
+        "detail_roughness_pow": 1.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_cloth01_D",
+        "DetalNormal": "T_CH_cloth01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_kamikaze_yankeejackt_D",
+        "MaskMap": "T_CH_kaz_bdu_kamikaze_yankeejackt_M",
+        "Normal": "T_CH_kaz_bdu_kamikaze_yankeejackt_N",
+        "Color01": [
+          0.3677619993686676,
+          0.125,
+          0.5,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_kamikaze/Material/MI_CH_kaz_bdu_kamikaze_yankeejackt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_kamikaze_yankeejackt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_tatto_shirt_shirt",
+      "diffuse": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+      "normal": "T_CH_kaz_bdl_tatoo_shirt_trousers_N",
+      "mask": "T_CH_kaz_bdl_tatoo_shirt_trousers_M",
+      "specular": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+      "params": {
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_tatoo_shirt_trousers_D",
+        "MaskMap": "T_CH_kaz_bdl_tatoo_shirt_trousers_M",
+        "Normal": "T_CH_kaz_bdl_tatoo_shirt_trousers_N",
+        "Color01": [
+          0.08969999849796295,
+          0.10601700097322464,
+          0.12999999523162842,
+          1.0
+        ],
+        "Color02": [
+          0.125,
+          0.051065001636743546,
+          0.018272999674081802,
+          1.0
+        ],
+        "Color03": [
+          0.29499998688697815,
+          0.29499998688697815,
+          0.29499998688697815,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Material/MI_CH_kaz_bdu_tatto_shirt_shirt.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_tatto_shirt_shirt2",
+      "diffuse": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+      "normal": "T_CH_kaz_bdl_tatoo_shirt_boot_N",
+      "mask": "T_CH_kaz_bdl_tatoo_shirt_boot_M",
+      "specular": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_kaz_bdl_tatoo_shirt_boot_D",
+        "MaskMap": "T_CH_kaz_bdl_tatoo_shirt_boot_M",
+        "Normal": "T_CH_kaz_bdl_tatoo_shirt_boot_N",
+        "Color01": [
+          0.07000000029802322,
+          0.05361799895763397,
+          0.04619999974966049,
+          1.0
+        ],
+        "Color02": [
+          0.04500000178813934,
+          0.03446900099515915,
+          0.02969999983906746,
+          1.0
+        ],
+        "Color03": [
+          0.19499999284744263,
+          0.16097499430179596,
+          0.10334999859333038,
+          1.0
+        ],
+        "Color04": [
+          0.19499999284744263,
+          0.18185900151729584,
+          0.14820000529289246,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_tatoo_shirt/Material/MI_CH_kaz_bdu_tatto_shirt_shirt2.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_tatto_shirt_shirt2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_bdu_wagara_jacket",
+      "diffuse": "T_CH_kaz_bdu_wagara_jacket_D",
+      "normal": "T_CH_kaz_bdu_wagara_jacket_N",
+      "mask": "T_CH_kaz_bdu_wagara_jacket_M",
+      "specular": "T_CH_kaz_bdu_wagara_jacket_D",
+      "params": {
+        "detail_diffuse_pow": 0.5,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 7.0,
+        "detail_roughness_pow": 0.30000001192092896,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_kaz_bdu_wagara_jacket_D",
+        "MaskMap": "T_CH_kaz_bdu_wagara_jacket_M",
+        "Normal": "T_CH_kaz_bdu_wagara_jacket_N",
+        "specluar": "T_CH_kaz_bdu_wagara_jacket_D",
+        "Color01": [
+          0.10000000149011612,
+          0.09186899662017822,
+          0.08387500047683716,
+          1.0
+        ],
+        "Color02": [
+          0.23250000178813934,
+          0.2986460030078888,
+          0.4650000035762787,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_wagara/Material/MI_CH_kaz_bdu_wagara_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_bdu_wagara_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_eye_shadow",
+      "diffuse": "T_CH_kaz_eye_shadow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eye_shadow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eye_shadow.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eye_shadow_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_eyebrow",
+      "diffuse": "T_CH_kaz_eyebrow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyebrow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eyebrow.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eyebrow_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    {
+      "name": "MI_CH_kaz_eyelash",
+      "diffuse": "T_CH_kaz_eyelash_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_eyelash_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_eyelash.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_eyelash_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    {
+      "name": "MI_CH_kaz_fac_dougi_damage",
+      "diffuse": "T_CH_kaz_fac_dougi_damage_D",
+      "normal": "T_CH_kaz_face_normal_N",
+      "mask": "",
+      "specular": "T_CH_kaz_face_normal_S",
+      "params": {
+        "Devil Desaturation": 0.5,
+        "Devil Hue": 0.7300000190734863,
+        "Devil Metallic": 0.15000000596046448,
+        "Devil Multiply": 0.20000000298023224,
+        "After Desaturation": -0.6000000238418579,
+        "After Hue": 0.9900000095367432,
+        "After Multiply": 0.25,
+        "Desaturation": -0.20000000298023224,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.004999999888241291,
+        "Metallic": 0.30000001192092896,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_fac_dougi_damage_D",
+        "Normal": "T_CH_kaz_face_normal_N",
+        "Specular": "T_CH_kaz_face_normal_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_head_wet_N",
+        "wetSpec": "T_CH_male_head_wet_S",
+        "Devil SSS_Color_01": [
+          0.3316519856452942,
+          0.15074999630451202,
+          0.44999998807907104,
+          1.0
+        ],
+        "Devil SSS_Color_02": [
+          1.0,
+          0.4099150002002716,
+          0.41946500539779663,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac_dougi_damage/Material/MI_CH_kaz_fac_dougi_damage.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_fac_dougi_damage_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_arm",
+      "diffuse": "T_CH_male_arm_D",
+      "normal": "T_CH_male_arm_N",
+      "mask": "",
+      "specular": "T_CH_male_arm_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_arm_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_body",
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_foot",
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_hand",
+      "diffuse": "T_CH_male_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "",
+      "specular": "T_CH_male_hand_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_hand_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_leg",
+      "diffuse": "T_CH_male_leg_D",
+      "normal": "T_CH_male_leg_n",
+      "mask": "",
+      "specular": "T_CH_male_leg_S",
+      "params": {
+        "RefractionDepthBias": 0.10000000149011612,
+        "Diffuse": "T_CH_male_leg_D",
+        "Normal": "T_CH_male_leg_n",
+        "Specular": "T_CH_male_leg_S",
+        "WetDiffuse": "T_CH_male_leg_wet_D",
+        "WetMask": "T_CH_male_leg_wet_D",
+        "WetNormal": "T_CH_male_leg_wet_N",
+        "wetSpec": "T_CH_male_leg_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Lower/kaz_bdl_dougi_damage/Material/MI_CH_kaz_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_leg_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_neck",
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_skin_normal_face",
+      "diffuse": "T_CH_kaz_face_D",
+      "normal": "T_CH_kaz_face_N",
+      "mask": "",
+      "specular": "T_CH_kaz_face_S",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_skin_normal_face_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_tatoo_shirt_skin",
+      "diffuse": "T_CH_male_arm_D",
+      "normal": "T_CH_kaz_arm_N",
+      "mask": "",
+      "specular": "T_CH_kaz_arm_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_male_arm_D",
+        "Normal": "T_CH_kaz_arm_N",
+        "Specular": "T_CH_kaz_arm_S",
+        "WetDiffuse": "T_CH_male_arm_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Upper/kaz_bdu_tatoo_shirt/Material/MI_CH_kaz_tatoo_shirt_skin.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_tatoo_shirt_skin_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_kaz_teeth",
+      "diffuse": "T_CH_kaz_teeth_D",
+      "normal": "T_CH_lar_teeth_N",
+      "mask": "",
+      "specular": "T_CH_lar_teeth_R",
+      "params": {
+        "DiffuseValue": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_kaz_teeth_D",
+        "Normal": "T_CH_lar_teeth_N",
+        "Roughness": "T_CH_lar_teeth_R",
+        "SubSurfaceScatterColor": [
+          0.0949999988079071,
+          0.01425000000745058,
+          0.01425000000745058,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Face/kaz_fac/Material/MI_CH_kaz_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_kaz_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_mouth",
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {},
+      "source": "shared defaults",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Albedo.png",
+        "normal": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Normal.png",
+        "surface": "Assets/Remaster/Kazuya/Textures/MI_CH_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_tear",
+      "diffuse": "",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameterCube_0": "eye_cubemap"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/mry/Face/mry_fac/Material/MI_CH_tear.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_kaz_har_1p",
+      "diffuse": "T_CH_kaz_har_1p_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": 0.0,
+        "BaseUpperContrast": 0.10000000149011612,
+        "Anisotropic": 0.4000000059604645,
+        "Metallic": 0.6000000238418579,
+        "Roughness": 0.5,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_kaz_har_1p_D",
+        "SpecularTexture": "T_CH_kaz_har_1p_D",
+        "Color01": [
+          0.02500000037252903,
+          0.017114000394940376,
+          0.010499999858438969,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Material/MI_kaz_har_1p.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_kaz_har_1p_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    {
+      "name": "MI_kaz_har_1p2",
+      "diffuse": "T_CH_kaz_har_1p_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": 0.0,
+        "BaseUpperContrast": 0.10000000149011612,
+        "Anisotropic": 0.0,
+        "Metallic": 0.6000000238418579,
+        "Normalize": 1.0,
+        "Roughness": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_kaz_har_1p_D",
+        "SpecularTexture": "T_CH_kaz_har_1p_D",
+        "Color01": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/kaz/Hair/kaz_har_1p/Material/MI_kaz_har_1p2.uasset",
+      "unity": {
+        "albedo": "Assets/Remaster/Kazuya/Textures/MI_kaz_har_1p2_Albedo.png",
+        "normal": "",
+        "surface": "",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    }
+  ]
+}
