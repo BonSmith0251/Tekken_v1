@@ -1,3 +1,20 @@
+ENTRANCE VISIBILITY FIX
+The reported clipping was during entrances, not combat. Gameplay camera values
+are unchanged by this fix. Entrance camera local axes are (-native.z, native.y,
+-native.x), with the native roll sign reversed. The camera is translated to frame
+a posed head volume (rather than just its neck-level pivot), and includes full
+body landmarks during Kazuya's wide aerial/landing segment. Native shot cuts,
+FOV samples and action frames remain the sources; position corrections adapt
+those tracks to the imported rig and are not a claim of exact original framing.
+An above-floor fallback prevents a close-up dolly from entering the Unity stage.
+Only the featured fighter is rendered during each solo entrance; both renderer
+states are restored for the round reveal and skip. The first loading delta is
+ignored, and large hitches are capped so the opening shot is not fast-forwarded.
+13 live Unity captures were checked for a visible featured head. Evidence:
+Validation/EntranceFraming/entrance-contact-sheet.png and capture-check.json.
+Close-ups intentionally crop legs/arms; exact reference pose/camera fidelity
+remains a separate limitation.
+
 LIVE-VERIFIED GAMEPLAY FRAMING CORRECTION
 The reference-calibrated starting camera is (0, 1.08, -3.45), with zero pitch,
 yaw and roll, and 65 degrees horizontal FOV. Live Play capture:

@@ -15,6 +15,10 @@ namespace Versus.Remaster
         const int CameraSettleFrames = 24;
 
         readonly Transform playerOne, playerTwo;
+        readonly Transform jinHead, kazuyaHead;
+        readonly Transform[] kazuyaShotBones;
+        readonly Renderer[] jinRenderers, kazuyaRenderers;
+        readonly bool[] jinRendererEnabled, kazuyaRendererEnabled;
         readonly Camera cameraRig;
         readonly BattleModel battle;
         readonly FighterActionMotion jinMotion, kazuyaMotion;
@@ -26,6 +30,7 @@ namespace Versus.Remaster
         static readonly Vector3 P1Ready = new Vector3(-BattleModel.StartingHalfSeparation, 0, 0);
         static readonly Vector3 P2Ready = new Vector3(BattleModel.StartingHalfSeparation, 0, 0);
         float frameRemainder;
+        bool clockStarted;
         GUIStyle heading, caption;
 
         public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model,
@@ -33,6 +38,14 @@ namespace Versus.Remaster
             FighterActionMotion kazuya, MuseumCharacter kazuyaCharacter, EntranceCameraLens sharedLens)
         {
             playerOne = p1; playerTwo = p2; cameraRig = camera; battle = model;
+            jinHead = System.Array.Find(p2.GetComponentsInChildren<Transform>(), t => t.name == "Head");
+            kazuyaHead = System.Array.Find(p1.GetComponentsInChildren<Transform>(), t => t.name == "Head");
+            if (!jinHead || !kazuyaHead) throw new System.InvalidOperationException("Entrance cameras require both head bones.");
+            kazuyaShotBones = System.Array.FindAll(p1.GetComponentsInChildren<Transform>(),
+                t => t.name == "Head" || t.name == "L_Foot" || t.name == "R_Foot" || t.name == "L_Hand" || t.name == "R_Hand");
+            jinRenderers = p2.GetComponentsInChildren<Renderer>(); kazuyaRenderers = p1.GetComponentsInChildren<Renderer>();
+            jinRendererEnabled = System.Array.ConvertAll(jinRenderers, r => r.enabled);
+            kazuyaRendererEnabled = System.Array.ConvertAll(kazuyaRenderers, r => r.enabled);
             jinMotion = jin;
             jinIntro = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 2220 && a.motion);
             if (jinIntro < 0)
@@ -66,7 +79,11 @@ namespace Versus.Remaster
         {
             if (!Active) return;
             if (skip) { Finish(); return; }
-            frameRemainder += Mathf.Max(0, deltaTime) * 60;
+            // The first unscaled delta can include scene/catalog loading time.
+            // Present frame zero before starting the cinematic clock.
+            if (!clockStarted) { clockStarted = true; return; }
+            // Do not fast-forward through shots after an import/render hitch.
+            frameRemainder += Mathf.Clamp(deltaTime, 0, 1f / 15f) * 60;
             while (frameRemainder >= 1 && Active)
             {
                 frameRemainder -= 1;
@@ -85,6 +102,7 @@ namespace Versus.Remaster
         void Finish()
         {
             Current = Shot.Complete; Frame = 0;
+            SetVisibility(true, true);
             if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
             if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
             playerOne.position = P1Ready; playerTwo.position = P2Ready;
@@ -95,18 +113,34 @@ namespace Versus.Remaster
         public void Present()
         {
             if (!Active) return;
+            SetVisibility(Current != Shot.PlayerOne, Current != Shot.PlayerTwo);
             // Original clips supply their own motion relative to these camera/actor anchors.
             playerOne.position = P1Ready;
             playerTwo.position = P2Ready;
             playerOne.rotation = Quaternion.Euler(0, 90, 0);
             playerTwo.rotation = Quaternion.Euler(0, -90, 0);
             if (Current == Shot.PlayerOne)
-                kazuyaCamera.Apply(cameraRig, playerOne, Frame, lens);
+                kazuyaCamera.Apply(cameraRig, playerOne, Frame, lens, SubjectBounds(kazuyaHead, Frame >= 47 && Frame < 130 ? kazuyaShotBones : null));
             else if (Current == Shot.PlayerTwo)
-                jinCamera.Apply(cameraRig, playerTwo, Frame, lens);
+                jinCamera.Apply(cameraRig, playerTwo, Frame, lens, SubjectBounds(jinHead, null));
             else
                 SetGameplayCamera(Current == Shot.RoundStart
                     ? Mathf.SmoothStep(0, 1, Frame / (float)(CameraSettleFrames - 1)) : 1);
+        }
+
+        static Bounds SubjectBounds(Transform head, Transform[] landmarks)
+        {
+            // Head transform is near the base of the skull, not the hair silhouette.
+            var bounds = new Bounds(head.position + Vector3.up * .10f, Vector3.one * .44f);
+            if (landmarks != null) foreach (var bone in landmarks)
+                bounds.Encapsulate(new Bounds(bone.position, Vector3.one * .20f));
+            return bounds;
+        }
+
+        void SetVisibility(bool jinVisible, bool kazuyaVisible)
+        {
+            for (int i = 0; i < jinRenderers.Length; i++) jinRenderers[i].enabled = jinVisible && jinRendererEnabled[i];
+            for (int i = 0; i < kazuyaRenderers.Length; i++) kazuyaRenderers[i].enabled = kazuyaVisible && kazuyaRendererEnabled[i];
         }
 
         void SetGameplayCamera(float blend)

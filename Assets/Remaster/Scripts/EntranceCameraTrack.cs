@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace Versus.Remaster
 {
-    // Native MOTA camera samples. This basis matches combat_basis.py's heading @ align.
+    // Native MOTA camera samples converted into the imported actor's local space.
+    // Camera axis/roll conversion and retargeted framing verified with Unity captures.
     public sealed class EntranceCameraTrack
     {
         readonly Vector3[] positions, forwards, ups;
@@ -29,7 +30,7 @@ namespace Versus.Remaster
                 positions[f] = RigBasis(ReadVector(data, p)) * .001f;
                 Vector3 euler = ReadVector(data, p + 12) * Mathf.Rad2Deg;
                 // Native camera uses XYZ Euler rotations and looks along negative Z.
-                Quaternion rotation = Quaternion.AngleAxis(euler.z, Vector3.forward) *
+                Quaternion rotation = Quaternion.AngleAxis(-euler.z, Vector3.forward) *
                     Quaternion.AngleAxis(euler.y, Vector3.up) * Quaternion.AngleAxis(euler.x, Vector3.right);
                 forwards[f] = RigBasis(rotation * Vector3.back);
                 ups[f] = RigBasis(rotation * Vector3.up);
@@ -42,15 +43,43 @@ namespace Versus.Remaster
         static Vector3 ReadVector(byte[] data, int p) => new Vector3(
             BitConverter.ToSingle(data, p), BitConverter.ToSingle(data, p + 4), BitConverter.ToSingle(data, p + 8));
 
-        static Vector3 RigBasis(Vector3 native) => new Vector3(native.z, native.y, native.x);
+        static Vector3 RigBasis(Vector3 native) => new Vector3(-native.z, native.y, -native.x);
 
-        public void Apply(Camera camera, Transform actor, int frame, EntranceCameraLens lens)
+        public void Apply(Camera camera, Transform actor, int frame, EntranceCameraLens lens, Bounds focus)
         {
             // Frame sampling preserves original cuts; smoothing would sweep through them.
             int f = Mathf.Clamp(frame, 0, Frames - 1);
             camera.transform.SetPositionAndRotation(actor.TransformPoint(positions[f]),
                 Quaternion.LookRotation(actor.TransformDirection(forwards[f]), actor.TransformDirection(ups[f])));
             lens.SetHorizontalFov(horizontalFov[f]);
+            // Frame the retargeted subject, including head volume rather than only
+            // its neck-level pivot. Native travel, cuts, roll and FOV remain intact.
+            float tanY = Mathf.Tan(camera.fieldOfView * .5f * Mathf.Deg2Rad);
+            float tanX = tanY * camera.aspect;
+            Vector3 center = camera.transform.InverseTransformPoint(focus.center);
+            camera.transform.position += camera.transform.right * center.x + camera.transform.up * center.y;
+            float retreat = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                Vector3 corner = focus.center + Vector3.Scale(focus.extents,
+                    new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
+                Vector3 local = camera.transform.InverseTransformPoint(corner);
+                float required = Mathf.Max(camera.nearClipPlane + .1f,
+                    Mathf.Abs(local.x) / (tanX * .76f), Mathf.Abs(local.y) / (tanY * .64f));
+                retreat = Mathf.Max(retreat, required - local.z);
+            }
+            if (retreat > 0) camera.transform.position -= camera.transform.forward * (retreat + .02f);
+            if (camera.transform.position.y < .35f)
+            {
+                // A low, upward-looking source shot cannot dolly through the Unity stage.
+                // Keep the corrected close-up above the floor and level with its subject.
+                Vector3 position = camera.transform.position;
+                position.y = Mathf.Max(.35f, focus.center.y);
+                camera.transform.position = position;
+                Vector3 direction = focus.center - position;
+                if (direction.sqrMagnitude > .0001f)
+                    camera.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+            }
         }
     }
 
