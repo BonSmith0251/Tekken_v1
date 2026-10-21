@@ -10,13 +10,13 @@ namespace Versus.Remaster
         public Shot Current { get; private set; }
         public bool Active => Current != Shot.Complete;
         public int Frame { get; private set; }
-        public float DurationSeconds => (60 + jinIntroFrames + 60 + kazuyaIntroFrames + 45 + 60 + 35) / 60f;
+        public float DurationSeconds => (jinIntroFrames + kazuyaIntroFrames + 45 + 60 + 35) / 60f;
 
         readonly Transform playerOne, playerTwo;
         readonly Camera cameraRig;
         readonly BattleModel battle;
         readonly FighterActionMotion jinMotion, kazuyaMotion;
-        readonly int jinWalk, jinIntro, kazuyaWalk, kazuyaIntro;
+        readonly int jinIntro, kazuyaIntro;
         readonly int jinIntroFrames, kazuyaIntroFrames;
         readonly EntranceCameraTrack jinCamera, kazuyaCamera;
         readonly float gameplayFov;
@@ -24,8 +24,6 @@ namespace Versus.Remaster
         Quaternion faceOffRotation;
         float faceOffFov;
         Shot lastPresented = Shot.Complete;
-        readonly Vector3 p1Start = new Vector3(-4.4f, 0, 0);
-        readonly Vector3 p2Start = new Vector3(4.4f, 0, 0);
         static readonly Vector3 P1Ready = new Vector3(-2, 0, 0);
         static readonly Vector3 P2Ready = new Vector3(2, 0, 0);
         float frameRemainder;
@@ -37,13 +35,11 @@ namespace Versus.Remaster
         {
             playerOne = p1; playerTwo = p2; cameraRig = camera; battle = model;
             jinMotion = jin;
-            jinWalk = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1444 && a.motion);
             jinIntro = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 2218 && a.motion);
             if (jinIntro < 0)
                 throw new System.InvalidOperationException("Jin entrance requires jz_s00 (move 2218).");
             jinIntroFrames = System.BitConverter.ToInt32(jinCharacter.actions[jinIntro].motion.bytes, 4);
             kazuyaMotion = kazuya;
-            kazuyaWalk = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 1436 && a.motion);
             kazuyaIntro = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 2247 && a.motion);
             if (kazuyaIntro < 0)
                 throw new System.InvalidOperationException("Kazuya entrance requires kz_s06_7CS (move 2247).");
@@ -57,16 +53,12 @@ namespace Versus.Remaster
 
         public void PrepareMotion()
         {
-            if (jinMotion && Current == Shot.PlayerOne && Frame < 60 && jinWalk >= 0)
-                jinMotion.SetPresentation(jinWalk, Frame, true);
-            else if (jinMotion && Current == Shot.PlayerOne)
-                jinMotion.SetPresentation(jinIntro, Frame - 60, false, true);
+            if (jinMotion && Current == Shot.PlayerOne)
+                jinMotion.SetPresentation(jinIntro, Frame, false, true);
             else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
 
-            if (kazuyaMotion && Current == Shot.PlayerTwo && Frame < 60 && kazuyaWalk >= 0)
-                kazuyaMotion.SetPresentation(kazuyaWalk, Frame, true);
-            else if (kazuyaMotion && Current == Shot.PlayerTwo)
-                kazuyaMotion.SetPresentation(kazuyaIntro, Frame - 60, false, true);
+            if (kazuyaMotion && Current == Shot.PlayerTwo)
+                kazuyaMotion.SetPresentation(kazuyaIntro, Frame, false, true);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
@@ -79,8 +71,8 @@ namespace Versus.Remaster
             {
                 frameRemainder -= 1;
                 Frame++;
-                int duration = Current == Shot.PlayerOne ? 60 + jinIntroFrames :
-                    Current == Shot.PlayerTwo ? 60 + kazuyaIntroFrames :
+                int duration = Current == Shot.PlayerOne ? jinIntroFrames :
+                    Current == Shot.PlayerTwo ? kazuyaIntroFrames :
                     Current == Shot.FaceOff ? 45 : Current == Shot.Ready ? 60 : 35;
                 if (Frame < duration) continue;
                 Frame = 0;
@@ -102,17 +94,15 @@ namespace Versus.Remaster
         public void Present()
         {
             if (!Active) return;
-            float p1 = Current == Shot.PlayerOne ? Mathf.SmoothStep(0, 1, Frame / 60f) : 1;
-            float p2 = Current < Shot.PlayerTwo ? 0 : Current == Shot.PlayerTwo ?
-                Mathf.SmoothStep(0, 1, Frame / 60f) : 1;
-            playerOne.position = Vector3.Lerp(p1Start, P1Ready, p1);
-            playerTwo.position = Vector3.Lerp(p2Start, P2Ready, p2);
+            // Original clips supply their own motion relative to these camera/actor anchors.
+            playerOne.position = P1Ready;
+            playerTwo.position = P2Ready;
             playerOne.rotation = Quaternion.Euler(0, 90, 0);
             playerTwo.rotation = Quaternion.Euler(0, -90, 0);
             if (Current == Shot.PlayerOne)
-                jinCamera.Apply(cameraRig, playerOne, Mathf.Max(0, Frame - 60));
+                jinCamera.Apply(cameraRig, playerOne, Frame);
             else if (Current == Shot.PlayerTwo)
-                kazuyaCamera.Apply(cameraRig, playerTwo, Mathf.Max(0, Frame - 60));
+                kazuyaCamera.Apply(cameraRig, playerTwo, Frame);
             else
             {
                 if (Current == Shot.FaceOff && lastPresented != Current)
