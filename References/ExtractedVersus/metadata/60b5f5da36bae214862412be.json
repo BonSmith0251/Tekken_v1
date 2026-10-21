@@ -1,0 +1,656 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_mrz_opu_taiko_tetsu.uasset",
+  "id": "60b5f5da36bae214862412be",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 7870,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_mrz_opu_taiko_tetsu.uasset",
+  "metadata_file": "metadata/60b5f5da36bae214862412be.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5567,
+    "package_flags": 2147483648,
+    "name_count": 88,
+    "name_offset": 189,
+    "export_count": 12,
+    "export_offset": 4203,
+    "import_count": 38,
+    "import_offset": 3139,
+    "bulk_data_start_offset": 7866,
+    "guid": "3448a801a20dfa4f89b621346f8b7c21"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko/Material/MI_CH_mrz_line_Inst",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko/Material/MI_CH_mrz_opu_taiko_bachi",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_cmn_opu_taiko_tetsu",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_mrz_opu_taiko_tetsu",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu_face",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu_hair",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ActorCollision_GEN_VARIABLE",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "Bachi_L",
+    "Bachi_L_GEN_VARIABLE",
+    "Bachi_R",
+    "Bachi_R_GEN_VARIABLE",
+    "BackMoji_GEN_VARIABLE",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BoxComponent",
+    "BP_CH_cmn_opu_taiko_tetsu_C",
+    "BP_CH_mrz_opu_taiko_tetsu",
+    "BP_CH_mrz_opu_taiko_tetsu_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_opu_taiko_tetsu_C",
+    "Default__BP_CH_mrz_opu_taiko_tetsu_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRoot_REMOVED_C8FB89044DAF64FEDB3716B6FC706B9C",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "MaterialInstanceConstant",
+    "MI_CH_mrz_line_Inst",
+    "MI_CH_mrz_opu_taiko_bachi",
+    "MI_CH_mrz_opu_taiko_tetsu",
+    "MI_CH_mrz_opu_taiko_tetsu_face",
+    "MI_CH_mrz_opu_taiko_tetsu_hair",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "ParticleSystemComponent",
+    "Records",
+    "Scene_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SkeletalMeshComponent",
+    "StructProperty",
+    "Taiko Mesh",
+    "Taiko Mesh_GEN_VARIABLE",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -29,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -24,
+      "object_name": "BP_CH_cmn_opu_taiko_tetsu_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -29,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BoxComponent",
+      "outer_index": -2,
+      "object_name": "ActorCollision_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_cmn_opu_taiko_tetsu",
+      "class_name": "BP_CH_cmn_opu_taiko_tetsu_C",
+      "outer_index": -24,
+      "object_name": "Default__BP_CH_cmn_opu_taiko_tetsu_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -29,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -29,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -22,
+      "object_name": "MI_CH_mrz_line_Inst"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -23,
+      "object_name": "MI_CH_mrz_opu_taiko_bachi"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -25,
+      "object_name": "MI_CH_mrz_opu_taiko_tetsu"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -26,
+      "object_name": "MI_CH_mrz_opu_taiko_tetsu_face"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -27,
+      "object_name": "MI_CH_mrz_opu_taiko_tetsu_hair"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko/Material/MI_CH_mrz_line_Inst"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko/Material/MI_CH_mrz_opu_taiko_bachi"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/BP_CH_cmn_opu_taiko_tetsu"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu_face"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_taiko_tetsu/Material/MI_CH_mrz_opu_taiko_tetsu_hair"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -2,
+      "object_name": "BackMoji_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_REMOVED_C8FB89044DAF64FEDB3716B6FC706B9C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -29,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -29,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -29,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "Bachi_L_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "Bachi_R_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "Taiko Mesh_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 5567,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_mrz_opu_taiko_tetsu_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5705,
+      "class_name": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_opu_taiko_tetsu",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 5713,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "3d b7 33 2b cb 1e fd 44 bf 22 ee f9 00 7d b3 b8",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 124,
+      "serial_offset": 5991,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 6115,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 1268,
+      "serial_offset": 6227,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 1223,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "03 00 00 00 4a 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 92 04 00 00 00 00 00 00 23 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0c 00 00 00 22 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 4f 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 53 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b4 ef d9 36 24 9c bc 44 97 20 ca a8 f4 0f",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7495,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 9,
+      "object_name": "SCS_Node_18",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 7507,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_17",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "87 a0 21 11 d8 a0 ba 46 89 c0 3f af e3 de 40 01",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_17",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 7646,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 1,
+      "object_name": "Bachi_L_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7687,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 ee ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 1,
+      "object_name": "Bachi_R_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7744,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 ee ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 1,
+      "object_name": "Taiko Mesh_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 65,
+      "serial_offset": 7801,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_opu_taiko_tetsu_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "04 00 00 00 ed ff ff ff ec ff ff ff eb ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "cf2e27c488a42454e1abba2c0b8ec7c1db24508130dd91f65e3b2ffbfbdbb2fc",
+  "selection_reason": "local-versus shared-content candidate"
+}

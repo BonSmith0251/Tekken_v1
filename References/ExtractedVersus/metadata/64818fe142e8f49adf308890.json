@@ -1,0 +1,1218 @@
+{
+  "path": "TekkenGame/Content/Stage/Common/BP_EmitterWithAkEvent.uasset",
+  "id": "64818fe142e8f49adf308890",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 12281,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/Common/BP_EmitterWithAkEvent.uasset",
+  "metadata_file": "metadata/64818fe142e8f49adf308890.json",
+  "function_count": 4,
+  "summary": {
+    "total_header_size": 9589,
+    "package_flags": 2147483648,
+    "name_count": 122,
+    "name_offset": 189,
+    "export_count": 37,
+    "export_offset": 5477,
+    "import_count": 64,
+    "import_offset": 3685,
+    "bulk_data_start_offset": 12277,
+    "guid": "8fb9cca4c9b02d45a4af05418b80016c"
+  },
+  "names": [
+    "/Game/Stage/Common/BP_EmitterWithAkEvent",
+    "/Game/Stage/Common/BPS_EmitterEvent",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "Add_IntInt",
+    "AkEvent_5_6E77724D41E8FC1BE1323FA7C2C48271",
+    "AkGameplayStatics",
+    "Array_Get",
+    "Array_Length",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BooleanAND",
+    "BooleanOR",
+    "BoolProperty",
+    "BP_EmitterWithAkEvent",
+    "BP_EmitterWithAkEvent_C",
+    "BPS_EmitterEvent",
+    "CallFunc_Add_IntInt_ReturnValue",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_Array_Length_ReturnValue",
+    "CallFunc_BooleanAND_ReturnValue",
+    "CallFunc_BooleanOR_ReturnValue",
+    "CallFunc_EqualEqual_NameName_ReturnValue",
+    "CallFunc_EqualEqual_NameName_ReturnValue2",
+    "CallFunc_IsParticleSoundDisabled_ReturnValue",
+    "CallFunc_Less_IntInt_ReturnValue",
+    "CallFunc_Not_PreBool_ReturnValue",
+    "Class",
+    "ComponentTemplate",
+    "Default__AkGameplayStatics",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_EmitterWithAkEvent_C",
+    "Default__DelegateProperty",
+    "Default__EdGraph",
+    "Default__Emitter",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetArrayLibrary",
+    "Default__NameProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DelegateFunction",
+    "DelegateProperty",
+    "EdGraph",
+    "Emitter",
+    "EmitterTime",
+    "Engine",
+    "EntryPoint",
+    "EqualEqual_NameName",
+    "EventGraph",
+    "EventName",
+    "EventName_6_B7FD63A744CD1A869B8A8D8CB7A36194",
+    "Events",
+    "ExecuteUbergraph_BP_EmitterWithAkEvent",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "IsParticleSoundDisabled",
+    "K2Node_CreateDelegate_OutputDelegate",
+    "K2Node_CustomEvent_EmitterTime",
+    "K2Node_CustomEvent_EventName",
+    "K2Node_CustomEvent_ParticleCount",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "Less_IntInt",
+    "MulticastDelegateProperty",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Not_PreBool",
+    "Object",
+    "ObjectProperty",
+    "OnParticleBurst",
+    "Package",
+    "ParentClass",
+    "ParticleBurstSignature__DelegateSignature",
+    "ParticleCount",
+    "ParticleSystemComponent",
+    "ParticleSystemComponent0",
+    "PlayOnBurst",
+    "PointerToUberGraphFrame",
+    "PostEvent",
+    "ReceiveBeginPlay",
+    "RootComponent",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenBlueprintLibrary",
+    "Temp_bool_True_if_break_was_hit_Variable",
+    "Temp_int_Array_Index_Variable",
+    "Temp_int_Loop_Counter_Variable",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "UserDefinedStruct",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkGameplayStatics",
+      "outer_index": -53,
+      "object_name": "Default__AkGameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -54,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -55,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -55,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -54,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "AkGameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "DelegateProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "NameProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "Emitter"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -56,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "DelegateFunction",
+      "outer_index": -55,
+      "object_name": "ParticleBurstSignature__DelegateSignature"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "DelegateProperty",
+      "outer_index": -54,
+      "object_name": "Default__DelegateProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -55,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Emitter",
+      "outer_index": -55,
+      "object_name": "Default__Emitter"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -54,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -6,
+      "object_name": "PostEvent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -54,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "Array_Get"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "Array_Length"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "Add_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "BooleanAND"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "BooleanOR"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "EqualEqual_NameName"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "Less_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "Not_PreBool"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -27,
+      "object_name": "IsParticleSoundDisabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -54,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetArrayLibrary",
+      "outer_index": -55,
+      "object_name": "Default__KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "MulticastDelegateProperty",
+      "outer_index": -20,
+      "object_name": "OnParticleBurst"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "NameProperty",
+      "outer_index": -64,
+      "object_name": "EventName_6_B7FD63A744CD1A869B8A8D8CB7A36194"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "NameProperty",
+      "outer_index": -54,
+      "object_name": "Default__NameProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -64,
+      "object_name": "AkEvent_5_6E77724D41E8FC1BE1323FA7C2C48271"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/BPS_EmitterEvent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -31,
+      "object_name": "ParticleSystemComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -55,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -55,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -55,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -55,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -54,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -56,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "UserDefinedStruct",
+      "outer_index": -52,
+      "object_name": "BPS_EmitterEvent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 2,
+      "object_name": "Events",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9589,
+      "class_name": "StructProperty",
+      "owner": "Events",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 29,
+      "object_name": "Events",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9629,
+      "class_name": "ArrayProperty",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_BooleanOR_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9669,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_EqualEqual_NameName_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9707,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_EqualEqual_NameName_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9745,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_BooleanAND_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9783,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_Less_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9821,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "CallFunc_Array_Length_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9859,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 21,
+      "object_name": "CallFunc_Array_Get_Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9895,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "K2Node_CustomEvent_ParticleCount",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9935,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 21,
+      "object_name": "K2Node_CustomEvent_EmitterTime",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9971,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 21,
+      "object_name": "K2Node_CustomEvent_EventName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10007,
+      "class_name": "NameProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "CallFunc_Add_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10043,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "Temp_int_Loop_Counter_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10079,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "Temp_int_Array_Index_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10115,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_Not_PreBool_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 10151,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 21,
+      "object_name": "K2Node_CreateDelegate_OutputDelegate",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10189,
+      "class_name": "DelegateProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "Temp_bool_True_if_break_was_hit_Variable",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 10229,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_IsParticleSoundDisabled_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 10267,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 21,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10305,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 29,
+      "object_name": "ExecuteUbergraph_BP_EmitterWithAkEvent",
+      "object_flags": 1,
+      "serial_size": 528,
+      "serial_offset": 10341,
+      "class_name": "Function",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": 0,
+        "first_child": 20,
+        "flags_hex": "0x00800000",
+        "native": false,
+        "script_memory_size": 784,
+        "script_storage_size": 484,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 10373,
+        "bytecode_sha256": "561ca44942c4987b3b4975a43451fd01456273da1e9ffcf0926e5c17f1c6a32e",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/64818fe142e8f49adf308890/000020.bytecode.bin"
+      },
+      "raw_export_file": "functions/64818fe142e8f49adf308890/000020.export.bin"
+    },
+    {
+      "index": 21,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 25,
+      "object_name": "ParticleCount",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10869,
+      "class_name": "IntProperty",
+      "owner": "PlayOnBurst",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 25,
+      "object_name": "EmitterTime",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10905,
+      "class_name": "FloatProperty",
+      "owner": "PlayOnBurst",
+      "tagged_properties": {}
+    },
+    {
+      "index": 23,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 25,
+      "object_name": "EventName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10941,
+      "class_name": "NameProperty",
+      "owner": "PlayOnBurst",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 29,
+      "object_name": "PlayOnBurst",
+      "object_flags": 1,
+      "serial_size": 92,
+      "serial_offset": 10977,
+      "class_name": "Function",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 21,
+        "super_struct": 0,
+        "first_child": 24,
+        "flags_hex": "0x0C000000",
+        "native": false,
+        "script_memory_size": 76,
+        "script_storage_size": 48,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11009,
+        "bytecode_sha256": "9741274c4f8555b1b2e56d5f3455479c6ba2b3a8b1a1f862c6d7b867273f4c97",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/64818fe142e8f49adf308890/000024.bytecode.bin"
+      },
+      "raw_export_file": "functions/64818fe142e8f49adf308890/000024.export.bin"
+    },
+    {
+      "index": 25,
+      "class_index": -11,
+      "super_index": -35,
+      "template_index": -34,
+      "outer_index": 29,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 11069,
+      "class_name": "Function",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 25,
+        "super_struct": -35,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11101,
+        "bytecode_sha256": "f016c42da2d4269c63b4c844ee67ba87845a5a281c1f73e36279f75e8d535af6",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/64818fe142e8f49adf308890/000025.bytecode.bin"
+      },
+      "raw_export_file": "functions/64818fe142e8f49adf308890/000025.export.bin"
+    },
+    {
+      "index": 26,
+      "class_index": -11,
+      "super_index": -36,
+      "template_index": -34,
+      "outer_index": 29,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 11131,
+      "class_name": "Function",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 26,
+        "super_struct": -36,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11163,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/64818fe142e8f49adf308890/000026.bytecode.bin"
+      },
+      "raw_export_file": "functions/64818fe142e8f49adf308890/000026.export.bin"
+    },
+    {
+      "index": 27,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 29,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 11178,
+      "class_name": "StructProperty",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 28,
+      "class_index": -18,
+      "super_index": -20,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_EmitterWithAkEvent_C",
+      "object_flags": 9,
+      "serial_size": 215,
+      "serial_offset": 11218,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 37,
+        "UberGraphFramePointerProperty": 28,
+        "UberGraphFunction": 21
+      }
+    },
+    {
+      "index": 29,
+      "class_index": 29,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 0,
+      "object_name": "Default__BP_EmitterWithAkEvent_C",
+      "object_flags": 49,
+      "serial_size": 123,
+      "serial_offset": 11433,
+      "class_name": "BP_EmitterWithAkEvent_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "59 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "ParticleSystemComponent": 34,
+        "RootComponent": 34
+      }
+    },
+    {
+      "index": 30,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_EmitterWithAkEvent",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 11556,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -20,
+        "SimpleConstructionScript": 37,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 29,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "88 bf b9 fd 30 9c 21 4d a7 73 02 b9 fa b7 9b 33",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 31,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 31,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 160,
+      "serial_offset": 11805,
+      "class_name": "EdGraph",
+      "owner": "BP_EmitterWithAkEvent",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 60,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 32,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 31,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 11965,
+      "class_name": "EdGraph",
+      "owner": "BP_EmitterWithAkEvent",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 33,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -57,
+      "outer_index": 30,
+      "object_name": "ParticleSystemComponent0",
+      "object_flags": 262185,
+      "serial_size": 12,
+      "serial_offset": 12073,
+      "class_name": "ParticleSystemComponent",
+      "owner": "Default__BP_EmitterWithAkEvent_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 34,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -58,
+      "outer_index": 29,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 12085,
+      "class_name": "SceneComponent",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 35,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -60,
+      "outer_index": 37,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 12097,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 35,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "38 bc 16 91 1d cb 03 40 8d a5 57 5a 1a b9 29 6c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 36,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -61,
+      "outer_index": 29,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 12236,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_EmitterWithAkEvent_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 36
+      }
+    }
+  ],
+  "sha256": "8a0fb9543ad488148e23890576d3be6e900f9790ab5910080db0625f5bcbc0f8",
+  "selection_reason": "local-versus shared-content candidate"
+}

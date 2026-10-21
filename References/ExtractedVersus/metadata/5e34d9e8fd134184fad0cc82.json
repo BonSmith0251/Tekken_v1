@@ -1,0 +1,476 @@
+{
+  "path": "TekkenGame/Content/Character/Missiles/BP_ParticleMissile_MRY_Dubble.uasset",
+  "id": "5e34d9e8fd134184fad0cc82",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 5686,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Missiles/BP_ParticleMissile_MRY_Dubble.uasset",
+  "metadata_file": "metadata/5e34d9e8fd134184fad0cc82.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4520,
+    "package_flags": 2147483648,
+    "name_count": 79,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 3712,
+    "import_count": 34,
+    "import_offset": 2760,
+    "bulk_data_start_offset": 5682,
+    "guid": "8cfb4dc1ac64ed4ab4c52db501d12201"
+  },
+  "names": [
+    "/Game/Character/Missiles/BP_CharacterMissileBase",
+    "/Game/Character/Missiles/BP_MissileHit_MRY_Dubble",
+    "/Game/Character/Missiles/BP_ParticleMissile_MRY_Dubble",
+    "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_DubbleBullet_01p",
+    "/Game/Sound/Battle/Guard01",
+    "/Game/Sound/Battle/mrx/mrx_hadou01_hit_ground",
+    "/Game/Sound/Battle/mrx/mrx_hadou01_offset",
+    "/Game/Sound/Voice/mry/SE/se_mry_rep_hit",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioEvent",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CharacterMissileBase_C",
+    "BP_MissileHit_MRY_Dubble_C",
+    "BP_ParticleMissile_MRY_Dubble",
+    "BP_ParticleMissile_MRY_Dubble_C",
+    "ByteProperty",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CharacterMissileBase_C",
+    "Default__BP_MissileHit_MRY_Dubble_C",
+    "Default__BP_ParticleMissile_MRY_Dubble_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot08358ADD4932D873DABBF9B33AC298AF",
+    "DefaultSceneRootA3E70F5A4990C6C128C6919C9A849AEF",
+    "DefaultSceneRootADE22BD2493DF2884DD68AB4FBA70199",
+    "DefaultSceneRootNode",
+    "EMissileSoundEventType",
+    "EMissileSoundEventType::MissileSoundEventType_FloorHit",
+    "EMissileSoundEventType::MissileSoundEventType_Guard",
+    "EMissileSoundEventType::MissileSoundEventType_MissileClash",
+    "EMissileSoundEventType::MissileSoundEventType_RegularHit",
+    "EMissileSoundEventType::MissileSoundEventType_WallHit",
+    "Engine",
+    "EventSound",
+    "EventType",
+    "GeneratedClass",
+    "Guard01",
+    "Guid",
+    "HitLight",
+    "IntProperty",
+    "MissileHitEffectTemplate",
+    "MissileSound",
+    "mrx_hadou01_hit_ground",
+    "mrx_hadou01_offset",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleComp",
+    "ParticleSystem",
+    "ParticleSystemComponent",
+    "PointLightComponent",
+    "PS_EF_CHR_MRY_DubbleBullet_01p",
+    "RootComponent",
+    "SceneComponent",
+    "SCS_Node",
+    "se_mry_rep_hit",
+    "SimpleConstructionScript",
+    "Sounds",
+    "StructProperty",
+    "Template",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -21,
+      "object_name": "Guard01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -22,
+      "object_name": "mrx_hadou01_hit_ground"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -23,
+      "object_name": "mrx_hadou01_offset"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -24,
+      "object_name": "se_mry_rep_hit"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -26,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "BP_CharacterMissileBase_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -19,
+      "object_name": "BP_MissileHit_MRY_Dubble_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -26,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Missiles/BP_CharacterMissileBase",
+      "class_name": "BP_CharacterMissileBase_C",
+      "outer_index": -18,
+      "object_name": "Default__BP_CharacterMissileBase_C"
+    },
+    {
+      "class_package": "/Game/Character/Missiles/BP_MissileHit_MRY_Dubble",
+      "class_name": "BP_MissileHit_MRY_Dubble_C",
+      "outer_index": -19,
+      "object_name": "Default__BP_MissileHit_MRY_Dubble_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Missiles/BP_CharacterMissileBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Missiles/BP_MissileHit_MRY_Dubble"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_DubbleBullet_01p"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/Guard01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/mrx/mrx_hadou01_hit_ground"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/mrx/mrx_hadou01_offset"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/SE/se_mry_rep_hit"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -20,
+      "object_name": "PS_EF_CHR_MRY_DubbleBullet_01p"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -9,
+      "object_name": "ParticleComp"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLightComponent",
+      "outer_index": -10,
+      "object_name": "HitLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -6,
+      "object_name": "DefaultSceneRootA3E70F5A4990C6C128C6919C9A849AEF"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -7,
+      "object_name": "DefaultSceneRoot08358ADD4932D873DABBF9B33AC298AF"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -26,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -26,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -26,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -13,
+      "super_index": -6,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "BP_ParticleMissile_MRY_Dubble_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 4520,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 7
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "Default__BP_ParticleMissile_MRY_Dubble_C",
+      "object_flags": 57,
+      "serial_size": 571,
+      "serial_offset": 4629,
+      "class_name": "BP_ParticleMissile_MRY_Dubble_C",
+      "owner": null,
+      "tagged_properties": {
+        "ParticleComp": 4,
+        "MissileHitEffectTemplate": -7,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 443,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "05 00 00 00 4a 00 00 00 00 00 00 00 4b 00 00 00 00 00 00 00 86 01 00 00 00 00 00 00 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fc ff ff ff 3b 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 3b 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 2f 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "RootComponent": 4
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "BP_ParticleMissile_MRY_Dubble",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5200,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "SimpleConstructionScript": 7,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "65 a4 49 cc a7 e7 55 4a 99 76 e8 98 26 f0 cb 06",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 2,
+      "object_name": "ParticleComp",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5449,
+      "class_name": "ParticleSystemComponent",
+      "owner": "Default__BP_ParticleMissile_MRY_Dubble_C",
+      "tagged_properties": {
+        "Template": -27
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRootADE22BD2493DF2884DD68AB4FBA70199",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5490,
+      "class_name": "SceneComponent",
+      "owner": "BP_ParticleMissile_MRY_Dubble_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 7,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5502,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 5,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "80 36 e9 9f 8b f8 f8 4b a5 0f fa 68 25 cb 7b 5e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5641,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ParticleMissile_MRY_Dubble_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 6
+      }
+    }
+  ],
+  "sha256": "3da52107e87f0084a616f5cca9b163e15508908e933484c0260df46ba2d406b2",
+  "selection_reason": "local-versus shared-content candidate"
+}
