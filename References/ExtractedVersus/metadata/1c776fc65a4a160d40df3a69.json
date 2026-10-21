@@ -1,0 +1,495 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/xia/Head/xia_hed_panda/BP_CH_xia_hed_panda.uasset",
+  "id": "1c776fc65a4a160d40df3a69",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 4335,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/xia/Head/xia_hed_panda/BP_CH_xia_hed_panda.uasset",
+  "metadata_file": "metadata/1c776fc65a4a160d40df3a69.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 3368,
+    "package_flags": 2147483648,
+    "name_count": 56,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 2296,
+    "import_count": 24,
+    "import_offset": 1624,
+    "bulk_data_start_offset": 4331,
+    "guid": "49735b0073be4f47845286857434ca8a"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/xia/Head/xia_hed_panda/BP_CH_xia_hed_panda",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_xia_hed_panda",
+    "BP_CH_xia_hed_panda_C",
+    "CharacterItemBlueprint",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_xia_hed_panda_C",
+    "Default__CharacterItemBlueprint",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -20,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemBlueprint",
+      "outer_index": -21,
+      "object_name": "Default__CharacterItemBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "CharacterItemBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -20,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -7,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -19,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -20,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -20,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -20,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 3,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3368,
+      "class_name": "ObjectProperty",
+      "owner": "BP_CH_xia_hed_panda_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -4,
+      "super_index": -17,
+      "template_index": -16,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3408,
+      "class_name": "Function",
+      "owner": "BP_CH_xia_hed_panda_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": -17,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3440,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1c776fc65a4a160d40df3a69/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/1c776fc65a4a160d40df3a69/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": -14,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_CH_xia_hed_panda_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 3455,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 10
+      }
+    },
+    {
+      "index": 3,
+      "class_index": 3,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_xia_hed_panda_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3576,
+      "class_name": "BP_CH_xia_hed_panda_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_xia_hed_panda",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 3584,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -14,
+        "SimpleConstructionScript": 10,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 3,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "a2 03 d8 37 bc 14 26 48 89 08 50 3d 38 ef de 15",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 5,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 3833,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_xia_hed_panda",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 5,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 3949,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_xia_hed_panda",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 3,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 4057,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_xia_hed_panda_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "SCS_Node_30",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4069,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_30",
+      "tagged_properties": {
+        "ComponentTemplate": 8,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "d8 8a 42 48 33 88 ad 43 9a 65 ee 3d e8 cf 75 d4",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 3,
+      "object_name": "SimpleConstructionScript_30",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 4208,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_xia_hed_panda_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 9
+      }
+    }
+  ],
+  "sha256": "aa26ceb5fe819d6959742f18f92a54238b245adc1b4068dd9c19ac5959f61308",
+  "selection_reason": "local-versus shared-content candidate"
+}

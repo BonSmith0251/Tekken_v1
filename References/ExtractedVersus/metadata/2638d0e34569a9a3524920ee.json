@@ -1,0 +1,416 @@
+{
+  "path": "TekkenGame/Content/System/WindActor/MF_KiteDemoGrassWind.uasset",
+  "id": "2638d0e34569a9a3524920ee",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 7796,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/WindActor/MF_KiteDemoGrassWind.uasset",
+  "metadata_file": "metadata/2638d0e34569a9a3524920ee.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2799,
+    "package_flags": 2147483648,
+    "name_count": 56,
+    "name_offset": 189,
+    "export_count": 5,
+    "export_offset": 2231,
+    "import_count": 15,
+    "import_offset": 1811,
+    "bulk_data_start_offset": 7792,
+    "guid": "143873142a77874fb5dfbf24b71e58bb"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions01/Coordinates/WorldPosition-XY",
+    "/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3",
+    "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorToRadialValue",
+    "/Game/Stage/Common/MasterShader/Texture/T_MasterTexture_watersurface_N",
+    "/Game/System/WindActor/MF_KiteDemoGrassWind",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "ByteProperty",
+    "Class",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialExpressionTextureObject",
+    "Default__MaterialFunction",
+    "EMaterialSamplerType",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "MakeFloat3",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionConstant",
+    "MaterialExpressionFunctionInput",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialExpressionNormalize",
+    "MaterialExpressionTextureObject",
+    "MaterialFunction",
+    "MF_KiteDemoGrassWind",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "SamplerType",
+    "SAMPLERTYPE_Normal",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "T_MasterTexture_watersurface_N",
+    "Texture",
+    "Texture2D",
+    "VectorToRadialValue",
+    "WorldPosition-XY"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -14,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureObject",
+      "outer_index": -14,
+      "object_name": "Default__MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -10,
+      "object_name": "WorldPosition-XY"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -11,
+      "object_name": "MakeFloat3"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -12,
+      "object_name": "VectorToRadialValue"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -14,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions01/Coordinates/WorldPosition-XY"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorToRadialValue"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/MasterShader/Texture/T_MasterTexture_watersurface_N"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -13,
+      "object_name": "T_MasterTexture_watersurface_N"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 5,
+      "object_name": "MaterialExpressionMaterialFunctionCall_0",
+      "object_flags": 8,
+      "serial_size": 992,
+      "serial_offset": 2799,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_KiteDemoGrassWind",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 217,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 16 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 a4 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 35 3f 33 47 ad 31 8e 40 b4 f3 bd 1e cc aa f2 50 19 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 53 63 61 6c 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 07 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 364,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 312,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 37 01 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 29 8d b6 6b e8 2e 1a 48 93 84 d8 5a 1b ee 2e 25 2a 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 5,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 242,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 738,
+          "value_prefix_hex": "01 00 00 00 2c 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 5,
+      "object_name": "MaterialExpressionMaterialFunctionCall_5",
+      "object_flags": 8,
+      "serial_size": 1308,
+      "serial_offset": 3791,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_KiteDemoGrassWind",
+      "tagged_properties": {
+        "MaterialFunction": -7,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 533,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 16 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 e0 01 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 96 1d 9c 52 eb 07 1e 44 9b e5 a9 03 b6 67 7f 8a 19 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 26 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 58 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 03 00 00 00 28 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 364,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 628,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 37 01 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 95 f9 d6 0d 3e 7c 06 4c a0 bb db 5d d2 0d 91 d6 2a 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 5,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 242,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1054,
+          "value_prefix_hex": "01 00 00 00 2c 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 5,
+      "object_name": "MaterialExpressionMaterialFunctionCall_9",
+      "object_flags": 8,
+      "serial_size": 2264,
+      "serial_offset": 5099,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_KiteDemoGrassWind",
+      "tagged_properties": {
+        "MaterialFunction": -8,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 409,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 16 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 64 01 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 86 36 6c f7 6d 99 01 41 9d f1 30 4d 7b e1 3a e3 19 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 00 00 56 65 63 74 6f 72 20 6f 72 20 55 56 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 02 00 00 00 28 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 1026,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 504,
+          "value_prefix_hex": "03 00 00 00 17 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 cd 03 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 71 66 b5 34 f3 fb 67 4f b5 eb 16 d9 0d f5 5b ce 2a 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 c9 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 13 00 00 00 52 61 64 69 61 6c 20 43 6f 6f 72 64 69 6e 61 74 65 73 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 5,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 660,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1592,
+          "value_prefix_hex": "03 00 00 00 2c 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 5f 02 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 13 00 00 00 52 61 64 69 61 6c 20 43 6f 6f 72 64 69 6e 61 74 65 73 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 2b 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 5,
+      "object_name": "MaterialExpressionTextureObject_3",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 7363,
+      "class_name": "MaterialExpressionTextureObject",
+      "owner": "MF_KiteDemoGrassWind",
+      "tagged_properties": {
+        "Texture": -15,
+        "SamplerType": "SAMPLERTYPE_Normal",
+        "Function": 5
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "MF_KiteDemoGrassWind",
+      "object_flags": 3,
+      "serial_size": 318,
+      "serial_offset": 7474,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "19 35 41 a1 ac 3c c0 46 ba b5 08 06 2f 6a 93 c7",
+          "value_prefix_truncated": false
+        },
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 208,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 98,
+          "value_prefix_hex": "33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "f014b884d891b7f4daabf7e0a685fde49357519fd5045c97e42850815c5791cf",
+  "selection_reason": "local-versus shared-content candidate"
+}

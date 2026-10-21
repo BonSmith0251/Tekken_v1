@@ -1,0 +1,340 @@
+{
+  "path": "TekkenGame/Content/System/BPI_CriticalHit.uasset",
+  "id": "1ba1c84ed3242b052b506996",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 3086,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BPI_CriticalHit.uasset",
+  "metadata_file": "metadata/1ba1c84ed3242b052b506996.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 2516,
+    "package_flags": 2147483648,
+    "name_count": 46,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 1768,
+    "import_count": 18,
+    "import_offset": 1264,
+    "bulk_data_start_offset": 3082,
+    "guid": "25d8bbdbeb107a40a801557c63230f52"
+  },
+  "names": [
+    "/Game/System/BPI_CriticalHit",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_CriticalHit",
+    "BPI_CriticalHit_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "CauserPlayerNum",
+    "Class",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_CriticalHit_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "Default__IntProperty",
+    "Default__StructProperty",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "HitDirection",
+    "Interface",
+    "IntProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OnCriticalHit",
+    "Package",
+    "ParentClass",
+    "Schema",
+    "ScriptStruct",
+    "StructProperty",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -16,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -16,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -16,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -15,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -15,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -15,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -15,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 3,
+      "object_name": "HitDirection",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2516,
+      "class_name": "StructProperty",
+      "owner": "OnCriticalHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "CauserPlayerNum",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 2556,
+      "class_name": "IntProperty",
+      "owner": "OnCriticalHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 4,
+      "object_name": "OnCriticalHit",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2592,
+      "class_name": "Function",
+      "owner": "BPI_CriticalHit_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 2,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2624,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1ba1c84ed3242b052b506996/000002.bytecode.bin"
+      },
+      "raw_export_file": "functions/1ba1c84ed3242b052b506996/000002.export.bin"
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": -4,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_CriticalHit_C",
+      "object_flags": 9,
+      "serial_size": 92,
+      "serial_offset": 2639,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": 4,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 0,
+      "object_name": "Default__BPI_CriticalHit_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 2731,
+      "class_name": "BPI_CriticalHit_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPI_CriticalHit",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 2739,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -4,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 4,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "f7 17 39 b5 5c 03 c1 4e 96 8a 9c 63 64 30 29 cd",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 6,
+      "object_name": "OnCriticalHit",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 3000,
+      "class_name": "EdGraph",
+      "owner": "BPI_CriticalHit",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "cbae63246e9420c40feabdfe162ca2f34b38ae770e1aba12cad3378173efea2d",
+  "selection_reason": "local-versus shared-content candidate"
+}

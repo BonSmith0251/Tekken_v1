@@ -1,0 +1,806 @@
+{
+  "path": "TekkenGame/Content/Character/CharacterBlueprints/BP_Character_BS7.uasset",
+  "id": "1aadc1bbbddf15389eed46a7",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 7584,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/CharacterBlueprints/BP_Character_BS7.uasset",
+  "metadata_file": "metadata/1aadc1bbbddf15389eed46a7.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 5815,
+    "package_flags": 2147483648,
+    "name_count": 81,
+    "name_offset": 189,
+    "export_count": 20,
+    "export_offset": 3495,
+    "import_count": 42,
+    "import_offset": 2319,
+    "bulk_data_start_offset": 7580,
+    "guid": "30928cfdddb0ce46a379a935bfd893df"
+  },
+  "names": [
+    "/Game/Character/CharacterBlueprints/BP_Character_BS7",
+    "/Game/Character/CharacterBlueprints/BP_Character_KZM",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AllyTiger",
+    "ArrayProperty",
+    "AttachParent",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_Character_BS7",
+    "BP_Character_BS7_C",
+    "BP_Character_KZM_C",
+    "CallFunc_IsValid_ReturnValue",
+    "CapsuleComponent",
+    "Class",
+    "CollisionCylinder",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_Character_BS7_C",
+    "Default__BP_Character_KZM_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot9C313E474E92834D9483AC8F5DA75365",
+    "DefaultSceneRootF07CBA8747F66C3176F240B261D79B18",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_Character_BS7",
+    "FaceHairMesh",
+    "FaceMesh",
+    "Function",
+    "Game",
+    "GeneratedClass",
+    "Guid",
+    "HairMesh",
+    "IntProperty",
+    "IsValid",
+    "KismetSystemLibrary",
+    "LowerMesh",
+    "MutateTiger",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "RootComponent",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SkeletalMeshComponent",
+    "SpawnAlly",
+    "SpawnKzmTiger",
+    "StructProperty",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpperMesh",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -31,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -29,
+      "object_name": "BP_Character_KZM_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -31,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -30,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/Character/CharacterBlueprints/BP_Character_KZM",
+      "class_name": "BP_Character_KZM_C",
+      "outer_index": -29,
+      "object_name": "Default__BP_Character_KZM_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CapsuleComponent",
+      "outer_index": -5,
+      "object_name": "CollisionCylinder"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "CapsuleComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -31,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -2,
+      "object_name": "SpawnAlly"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -2,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -30,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "IsValid"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -30,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -31,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -2,
+      "object_name": "AllyTiger"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/CharacterBlueprints/BP_Character_KZM"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot9C313E474E92834D9483AC8F5DA75365"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -31,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -31,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -31,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -31,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -5,
+      "object_name": "FaceHairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -5,
+      "object_name": "FaceMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -5,
+      "object_name": "HairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -5,
+      "object_name": "LowerMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -5,
+      "object_name": "UpperMesh"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -30,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 3,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 5815,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Character_BS7",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 3,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5853,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Character_BS7",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "ExecuteUbergraph_BP_Character_BS7",
+      "object_flags": 1,
+      "serial_size": 143,
+      "serial_offset": 5889,
+      "class_name": "Function",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 2,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 143,
+        "script_storage_size": 99,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5921,
+        "bytecode_sha256": "9bda3e01506a3e8510d45cb38f1d00b2d26552b7e3e100268ac9cef84919220d",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1aadc1bbbddf15389eed46a7/000002.bytecode.bin"
+      },
+      "raw_export_file": "functions/1aadc1bbbddf15389eed46a7/000002.export.bin"
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": -22,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "SpawnAlly",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 6032,
+      "class_name": "Function",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": -22,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6064,
+        "bytecode_sha256": "de03a917799ef0cb6acd11e3644f18eb09c19049c03e015d522693451ffe8efd",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1aadc1bbbddf15389eed46a7/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/1aadc1bbbddf15389eed46a7/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": -23,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 53,
+      "serial_offset": 6094,
+      "class_name": "Function",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": -23,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 13,
+        "script_storage_size": 9,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6126,
+        "bytecode_sha256": "8d88f3580fc109afa83e38b84ce9ff2a8a7f6466c649b2f759a21af354428194",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1aadc1bbbddf15389eed46a7/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/1aadc1bbbddf15389eed46a7/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 7,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6147,
+      "class_name": "StructProperty",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -13,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Character_BS7_C",
+      "object_flags": 9,
+      "serial_size": 203,
+      "serial_offset": 6187,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 15,
+        "UberGraphFramePointerProperty": 6,
+        "UberGraphFunction": 3
+      }
+    },
+    {
+      "index": 7,
+      "class_index": 7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "Default__BP_Character_BS7_C",
+      "object_flags": 49,
+      "serial_size": 268,
+      "serial_offset": 6390,
+      "class_name": "BP_Character_BS7_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "3a 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "CapsuleComponent": 10,
+        "FaceMesh": 17,
+        "HairMesh": 18,
+        "FaceHairMesh": 16,
+        "UpperMesh": 20,
+        "LowerMesh": 19,
+        "RootComponent": 10
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_Character_BS7",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 6658,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 15,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 7,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "ae 2e 01 14 4b 50 a9 43 b4 ca e4 6d f4 44 27 b6",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -6,
+      "outer_index": 8,
+      "object_name": "CollisionCylinder",
+      "object_flags": 262185,
+      "serial_size": 12,
+      "serial_offset": 6907,
+      "class_name": "CapsuleComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 9,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 152,
+      "serial_offset": 6919,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_BS7",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 52,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 9,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 7071,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_BS7",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 7,
+      "object_name": "DefaultSceneRootF07CBA8747F66C3176F240B261D79B18",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7183,
+      "class_name": "SceneComponent",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 15,
+      "object_name": "SCS_Node_28",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 7195,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_27",
+      "tagged_properties": {
+        "ComponentTemplate": 13,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "c1 37 b6 d9 8b 5e 5e 4f a4 a9 f0 eb 7f 71 20 f6",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 7,
+      "object_name": "SimpleConstructionScript_27",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 7334,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Character_BS7_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 14
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 8,
+      "object_name": "FaceHairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 7375,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {
+        "AttachParent": 10
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 8,
+      "object_name": "FaceMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 7416,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {
+        "AttachParent": 10
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 8,
+      "object_name": "HairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 7457,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {
+        "AttachParent": 10
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 8,
+      "object_name": "LowerMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 7498,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {
+        "AttachParent": 10
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 8,
+      "object_name": "UpperMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 7539,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BS7_C",
+      "tagged_properties": {
+        "AttachParent": 10
+      }
+    }
+  ],
+  "sha256": "952a230cde5c8eb5680de7271989446c504130eece67198c5ceb8de1fe17ac01",
+  "selection_reason": "local-versus shared-content candidate"
+}

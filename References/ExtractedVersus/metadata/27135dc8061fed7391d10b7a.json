@@ -1,0 +1,558 @@
+{
+  "path": "TekkenGame/Content/Character/Missiles/BP_ParticleMissileHadou.uasset",
+  "id": "27135dc8061fed7391d10b7a",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 6271,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Missiles/BP_ParticleMissileHadou.uasset",
+  "metadata_file": "metadata/27135dc8061fed7391d10b7a.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4877,
+    "package_flags": 2147483648,
+    "name_count": 86,
+    "name_offset": 189,
+    "export_count": 9,
+    "export_offset": 3861,
+    "import_count": 36,
+    "import_offset": 2853,
+    "bulk_data_start_offset": 6267,
+    "guid": "956569ea9830ef44b9c1e4f06ed6821c"
+  },
+  "names": [
+    "/Game/Character/Missiles/BP_CharacterMissileBase",
+    "/Game/Character/Missiles/BP_MissileHitHadou",
+    "/Game/Character/Missiles/BP_ParticleMissileHadou",
+    "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_bullet",
+    "/Game/Sound/Battle/Guard01",
+    "/Game/Sound/Battle/mrx/mrx_hadou01_hit",
+    "/Game/Sound/Battle/mrx/mrx_hadou01_hit_ground",
+    "/Game/Sound/Battle/mrx/mrx_hadou01_offset",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioEvent",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CharacterMissileBase_C",
+    "BP_MissileHitHadou_C",
+    "BP_ParticleMissileHadou",
+    "BP_ParticleMissileHadou_C",
+    "ByteProperty",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CharacterMissileBase_C",
+    "Default__BP_MissileHitHadou_C",
+    "Default__BP_ParticleMissileHadou_C",
+    "Default__EdGraph",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootA3E70F5A4990C6C128C6919C9A849AEF",
+    "DefaultSceneRootADE22BD2493DF2884DD68AB4FBA70199",
+    "DefaultSceneRootF7AB185E4E0EB580EFC4D6882E95B266",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "EMissileSoundEventType",
+    "EMissileSoundEventType::MissileSoundEventType_FloorHit",
+    "EMissileSoundEventType::MissileSoundEventType_Guard",
+    "EMissileSoundEventType::MissileSoundEventType_MissileClash",
+    "EMissileSoundEventType::MissileSoundEventType_RegularHit",
+    "EMissileSoundEventType::MissileSoundEventType_WallHit",
+    "Engine",
+    "EventGraph",
+    "EventSound",
+    "EventType",
+    "GeneratedClass",
+    "Guard01",
+    "Guid",
+    "HitLight",
+    "IntProperty",
+    "MissileHitEffectTemplate",
+    "MissileSound",
+    "mrx_hadou01_hit",
+    "mrx_hadou01_hit_ground",
+    "mrx_hadou01_offset",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleComp",
+    "ParticleSystem",
+    "ParticleSystemComponent",
+    "PointLightComponent",
+    "PS_EF_CHR_MRX_hadou_bullet",
+    "RootComponent",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "Sounds",
+    "StructProperty",
+    "Template",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -23,
+      "object_name": "Guard01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -24,
+      "object_name": "mrx_hadou01_hit"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -25,
+      "object_name": "mrx_hadou01_hit_ground"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -26,
+      "object_name": "mrx_hadou01_offset"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -28,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "BP_CharacterMissileBase_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -21,
+      "object_name": "BP_MissileHitHadou_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -28,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Missiles/BP_CharacterMissileBase",
+      "class_name": "BP_CharacterMissileBase_C",
+      "outer_index": -20,
+      "object_name": "Default__BP_CharacterMissileBase_C"
+    },
+    {
+      "class_package": "/Game/Character/Missiles/BP_MissileHitHadou",
+      "class_name": "BP_MissileHitHadou_C",
+      "outer_index": -21,
+      "object_name": "Default__BP_MissileHitHadou_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -27,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -28,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Missiles/BP_CharacterMissileBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Missiles/BP_MissileHitHadou"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_bullet"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/Guard01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/mrx/mrx_hadou01_hit"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/mrx/mrx_hadou01_hit_ground"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Battle/mrx/mrx_hadou01_offset"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -22,
+      "object_name": "PS_EF_CHR_MRX_hadou_bullet"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -9,
+      "object_name": "ParticleComp"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLightComponent",
+      "outer_index": -10,
+      "object_name": "HitLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -6,
+      "object_name": "DefaultSceneRootA3E70F5A4990C6C128C6919C9A849AEF"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -7,
+      "object_name": "DefaultSceneRootF7AB185E4E0EB580EFC4D6882E95B266"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -28,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -28,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -28,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -13,
+      "super_index": -6,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "BP_ParticleMissileHadou_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 4877,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "Default__BP_ParticleMissileHadou_C",
+      "object_flags": 49,
+      "serial_size": 571,
+      "serial_offset": 4986,
+      "class_name": "BP_ParticleMissileHadou_C",
+      "owner": null,
+      "tagged_properties": {
+        "ParticleComp": 6,
+        "MissileHitEffectTemplate": -7,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 443,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "05 00 00 00 50 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 86 01 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 41 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fd ff ff ff 41 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 33 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "RootComponent": 6
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "BP_ParticleMissileHadou",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5557,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "SimpleConstructionScript": 9,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "ad 90 38 14 53 12 8e 48 ae 05 c3 25 f3 03 fa 6a",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 5806,
+      "class_name": "EdGraph",
+      "owner": "BP_ParticleMissileHadou",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5922,
+      "class_name": "EdGraph",
+      "owner": "BP_ParticleMissileHadou",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 2,
+      "object_name": "ParticleComp",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 6034,
+      "class_name": "ParticleSystemComponent",
+      "owner": "Default__BP_ParticleMissileHadou_C",
+      "tagged_properties": {
+        "Template": -29
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRootADE22BD2493DF2884DD68AB4FBA70199",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6075,
+      "class_name": "SceneComponent",
+      "owner": "BP_ParticleMissileHadou_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 9,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6087,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "80 36 e9 9f 8b f8 f8 4b a5 0f fa 68 25 cb 7b 5e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 6226,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ParticleMissileHadou_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    }
+  ],
+  "sha256": "4b3a75767db9c3392a8e0b59f741c72f962037f144b6a91bdf9b9eb0faea56b8",
+  "selection_reason": "local-versus shared-content candidate"
+}

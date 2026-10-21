@@ -1,0 +1,526 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/ykz/BP_ykzCharacterSoundManager.uasset",
+  "id": "279916b56b3fa8ac12b6e8ff",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 5817,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/ykz/BP_ykzCharacterSoundManager.uasset",
+  "metadata_file": "metadata/279916b56b3fa8ac12b6e8ff.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4303,
+    "package_flags": 2147483648,
+    "name_count": 79,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 3591,
+    "import_count": 43,
+    "import_offset": 2387,
+    "bulk_data_start_offset": 5813,
+    "guid": "44b6110b87e10a439ec37a4725ec2694"
+  },
+  "names": [
+    "/Game/Sound/Character/ykz/BP_ykzCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/ykz/AkBankVoiceYKZ",
+    "/Game/Sound/Voice/ykz/ykz_atk_01",
+    "/Game/Sound/Voice/ykz/ykz_atk_02",
+    "/Game/Sound/Voice/ykz/ykz_atk_03",
+    "/Game/Sound/Voice/ykz/ykz_atk_04",
+    "/Game/Sound/Voice/ykz/ykz_atk_05",
+    "/Game/Sound/Voice/ykz/ykz_atk_06",
+    "/Game/Sound/Voice/ykz/ykz_dmg_01",
+    "/Game/Sound/Voice/ykz/ykz_dmg_02",
+    "/Game/Sound/Voice/ykz/ykz_dmg_03",
+    "/Game/Sound/Voice/ykz/ykz_dmg_04",
+    "/Game/Sound/Voice/ykz/ykz_dmg_05",
+    "/Game/Sound/Voice/ykz/ykz_dmg_ko_01",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceYKZ",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_TekkenCharacterSoundManager_C",
+    "BP_ykzCharacterSoundManager",
+    "BP_ykzCharacterSoundManager_C",
+    "CharacterSound",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__BP_ykzCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "pau",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "Sounds",
+    "StructProperty",
+    "Tags",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank",
+    "ykz_atk_01",
+    "ykz_atk_02",
+    "ykz_atk_03",
+    "ykz_atk_04",
+    "ykz_atk_05",
+    "ykz_atk_06",
+    "ykz_dmg_01",
+    "ykz_dmg_02",
+    "ykz_dmg_03",
+    "ykz_dmg_04",
+    "ykz_dmg_05",
+    "ykz_dmg_ko_01"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -25,
+      "object_name": "AkBankVoiceYKZ"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -26,
+      "object_name": "ykz_atk_01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -27,
+      "object_name": "ykz_atk_02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -28,
+      "object_name": "ykz_atk_03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -29,
+      "object_name": "ykz_atk_04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -30,
+      "object_name": "ykz_atk_05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -31,
+      "object_name": "ykz_atk_06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -32,
+      "object_name": "ykz_dmg_01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -33,
+      "object_name": "ykz_dmg_02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -34,
+      "object_name": "ykz_dmg_03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -35,
+      "object_name": "ykz_dmg_04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -36,
+      "object_name": "ykz_dmg_05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -37,
+      "object_name": "ykz_dmg_ko_01"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -39,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -24,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -39,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -24,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -38,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -39,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -39,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -39,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -39,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -39,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/AkBankVoiceYKZ"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_atk_06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/ykz/ykz_dmg_ko_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -15,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -39,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -39,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -39,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -20,
+      "super_index": -15,
+      "template_index": -16,
+      "outer_index": 0,
+      "object_name": "BP_ykzCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 4303,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 0,
+      "object_name": "Default__BP_ykzCharacterSoundManager_C",
+      "object_flags": 49,
+      "serial_size": 960,
+      "serial_offset": 4412,
+      "class_name": "BP_ykzCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 845,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0c 00 00 00 3d 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 18 03 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 54 05 00 00 3b 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 31 00 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 55 05 00 00 3b 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fd ff ff ff 31 00 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 56 05 00 00 3b 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fc ff ff ff 31 00 00 00 00 00 00 00 3c 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 940,
+          "value_prefix_hex": "01 00 00 00 36 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 0,
+      "object_name": "BP_ykzCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5372,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -15,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "44 62 4f 28 68 fb f6 4a 8d 2d a3 d7 81 8c 88 6b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 1,
+      "object_name": "SceneComponent_1",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5621,
+      "class_name": "SceneComponent",
+      "owner": "BP_ykzCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 6,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5633,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5772,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ykzCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "76bd4f09ea85455516937160c8ac59b913f85c2198761aa56eb4ae58ee4fb773",
+  "selection_reason": "local-versus shared-content candidate"
+}

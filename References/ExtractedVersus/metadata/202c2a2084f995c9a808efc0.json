@@ -1,0 +1,2080 @@
+{
+  "path": "TekkenGame/Content/Maps/stg27_mob.umap",
+  "id": "202c2a2084f995c9a808efc0",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "Function",
+    "LevelScriptBlueprint"
+  ],
+  "size": 40468,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg27_mob.umap",
+  "metadata_file": "metadata/202c2a2084f995c9a808efc0.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 14510,
+    "package_flags": 2147614720,
+    "name_count": 232,
+    "name_offset": 189,
+    "export_count": 48,
+    "export_offset": 9142,
+    "import_count": 88,
+    "import_offset": 6678,
+    "bulk_data_start_offset": 40464,
+    "guid": "0dab476be0b75d4ab0fcfd88fe608fe5"
+  },
+  "names": [
+    "/Game/Maps/stg27_mob",
+    "/Game/PostProcess/PostProcessControl/BP_PostProcessControl",
+    "/Game/Sound/Stage/Stg04/BP_TekkenEnvSoundStg04",
+    "/Game/Stage/Common/BP_LevelSettings",
+    "/Game/Stage/T7_S4_ENV_Fighter/Mesh/T7_SM_ENV_s4Fighter_fa44",
+    "/Game/Stage/T7_S4_ENV_Fighter/Shader/Material_Instance/T7_MI_ENV_s4Fighter_fa44p2",
+    "/Game/Stage/T7_S4_ENV_Helicopter/Mesh/T7_SK_ENV_s4HelicopterMod",
+    "/Game/Stage/T7_S4_ENV_Helicopter/Mesh/T7_SK_ENV_s4HelicopterMod_Anim",
+    "/Game/System/BP_DramaQualityController",
+    "/Game/System/BP_QualityControl_SSS",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/Foliage",
+    "Actor",
+    "ActorComponentTickFunction",
+    "Actors",
+    "AkAudioComponent0",
+    "AkComponent",
+    "AnimationMode",
+    "AnimControlTrackKey",
+    "AnimEndOffset",
+    "AnimPlayRate",
+    "AnimSeq",
+    "AnimSeqs",
+    "AnimSequence",
+    "AnimStartOffset",
+    "ArrayProperty",
+    "ArriveTangent",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "bLooping",
+    "BlueprintCreatedComponents",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "bNetAddressable",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_DramaQualityController",
+    "BP_DramaQualityController_C",
+    "BP_LevelSettings",
+    "BP_LevelSettings_C",
+    "BP_PostProcessControl",
+    "BP_PostProcessControl_C",
+    "BP_QualityControl_SSS",
+    "BP_QualityControl_SSS_C",
+    "BP_TekkenEnvSoundStg04_C",
+    "BP_TekkenEnvSoundStg04_C_1_ExecuteUbergraph_stg27_mob_RefProperty",
+    "BPTYPE_LevelScript",
+    "bReverse",
+    "Brush",
+    "bShowRotationOnCurveEd",
+    "bShowTranslationOnCurveEd",
+    "bUseDefaultCollision",
+    "ByteProperty",
+    "Camera",
+    "CanCharacterStepUpOn",
+    "CastShadow",
+    "Channel",
+    "CIM_CurveAutoClamped",
+    "CIM_CurveUser",
+    "Class",
+    "CollisionEnabled",
+    "CollisionProfileName",
+    "CollisionResponse",
+    "CollisionResponses",
+    "Color",
+    "CreationMethod",
+    "CurveEdSetup",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_DramaQualityController_C",
+    "Default__BP_LevelSettings_C",
+    "Default__BP_PostProcessControl_C",
+    "Default__BP_QualityControl_SSS_C",
+    "Default__BP_TekkenEnvSoundStg04_C",
+    "Default__Function",
+    "Default__InstancedFoliageActor",
+    "Default__InterpData",
+    "Default__InterpGroup",
+    "Default__InterpTrackAnimControl",
+    "Default__InterpTrackMove",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__MatineeActor",
+    "Default__Model",
+    "Default__ObjectProperty",
+    "Default__SkeletalMeshActor",
+    "Default__StaticMeshActor",
+    "Default__StaticMeshComponent",
+    "Default__stg27_mob_C",
+    "Default__StructProperty",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "Delay",
+    "DrawNoLightMapLater",
+    "EAnimationMode",
+    "EAnimationMode::AnimationSingleNode",
+    "EBlueprintType",
+    "ECanBeCharacterBase",
+    "ECB_Yes",
+    "ECC_WorldStatic",
+    "ECollisionChannel",
+    "ECollisionEnabled",
+    "ECollisionEnabled::NoCollision",
+    "ECollisionResponse",
+    "EComponentCreationMethod",
+    "EComponentCreationMethod::SimpleConstructionScript",
+    "EComponentMobility",
+    "EComponentMobility::Movable",
+    "ECR_Ignore",
+    "EdSectionEnd",
+    "EInterpCurveMode",
+    "ELightingBuildQuality",
+    "EndTickGroup",
+    "Engine",
+    "EntryPoint",
+    "ETickingGroup",
+    "EulerTrack",
+    "ExecuteUbergraph_stg27_mob",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GroupActorInfos",
+    "GroupColor",
+    "GroupName",
+    "Guid",
+    "InstancedFoliageActor",
+    "InterpCurvePointVector",
+    "InterpCurveVector",
+    "InterpData",
+    "InterpGroup",
+    "InterpGroupActorInfo",
+    "InterpGroups",
+    "InterpLength",
+    "InterpLookupPoint",
+    "InterpLookupTrack",
+    "InterpMode",
+    "InterpPosition",
+    "InterpTrackAnimControl",
+    "InterpTrackMove",
+    "InterpTracks",
+    "IntProperty",
+    "InVal",
+    "K2Node_MatineeController",
+    "K2Node_MatineeController_4_Finished",
+    "KismetSystemLibrary",
+    "LatentActionInfo",
+    "LeaveTangent",
+    "Level",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "LightmassSettings",
+    "LightmassWorldInfoSettings",
+    "LookupTrack",
+    "MassInKgOverride",
+    "MaterialInstanceConstant",
+    "MatineeActor",
+    "MatineeActor_0_ExecuteUbergraph_stg27_mob_RefProperty",
+    "MatineeControllerName",
+    "MatineeData",
+    "Mobility",
+    "Model",
+    "NameProperty",
+    "NoCollision",
+    "None",
+    "Object",
+    "ObjectName",
+    "ObjectProperty",
+    "ObjectType",
+    "OcclusionExponent",
+    "OutVal",
+    "OverrideMaterials",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "Play",
+    "PointerToUberGraphFrame",
+    "Points",
+    "PosTrack",
+    "PrimaryComponentTick",
+    "Quality_Production",
+    "QualityControlActors",
+    "ReceiveBeginPlay",
+    "RelativeLocation",
+    "Response",
+    "ResponseArray",
+    "ResponseChannel",
+    "RootComponent",
+    "RootComponent0",
+    "SceneComp",
+    "SceneComponent",
+    "ScriptStruct",
+    "SetRefs",
+    "SkeletalMesh",
+    "SkeletalMeshActor",
+    "SkeletalMeshComponent",
+    "SkeletalMeshComponent0",
+    "StartTime",
+    "StaticMesh",
+    "StaticMeshActor",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg27_mob",
+    "stg27_mob_C",
+    "StructProperty",
+    "T7_MI_ENV_s4Fighter_fa44p2",
+    "T7_SK_ENV_s4HelicopterMod",
+    "T7_SK_ENV_s4HelicopterMod_Anim",
+    "T7_SK_ENV_s4HelicopterMod_ExecuteUbergraph_stg27_mob_RefProperty",
+    "T7_SM_ENV_s4Fighter_fa44",
+    "T7_SM_ENV_s4Fighter_fa44_2_ExecuteUbergraph_stg27_mob_RefProperty",
+    "T7_SM_ENV_s4Fighter_fa44_4_ExecuteUbergraph_stg27_mob_RefProperty",
+    "T7_SM_s4Fighter_fa44",
+    "TG_PostUpdateWork",
+    "Time",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "Vector",
+    "Visibility",
+    "World",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkComponent",
+      "outer_index": -13,
+      "object_name": "AkAudioComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimSequence",
+      "outer_index": -63,
+      "object_name": "T7_SK_ENV_s4HelicopterMod_Anim"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -57,
+      "object_name": "BP_PostProcessControl_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -58,
+      "object_name": "BP_TekkenEnvSoundStg04_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -59,
+      "object_name": "BP_LevelSettings_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -64,
+      "object_name": "BP_DramaQualityController_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -65,
+      "object_name": "BP_QualityControl_SSS_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -68,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/System/BP_DramaQualityController",
+      "class_name": "BP_DramaQualityController_C",
+      "outer_index": -64,
+      "object_name": "Default__BP_DramaQualityController_C"
+    },
+    {
+      "class_package": "/Game/Stage/Common/BP_LevelSettings",
+      "class_name": "BP_LevelSettings_C",
+      "outer_index": -59,
+      "object_name": "Default__BP_LevelSettings_C"
+    },
+    {
+      "class_package": "/Game/PostProcess/PostProcessControl/BP_PostProcessControl",
+      "class_name": "BP_PostProcessControl_C",
+      "outer_index": -57,
+      "object_name": "Default__BP_PostProcessControl_C"
+    },
+    {
+      "class_package": "/Game/System/BP_QualityControl_SSS",
+      "class_name": "BP_QualityControl_SSS_C",
+      "outer_index": -65,
+      "object_name": "Default__BP_QualityControl_SSS_C"
+    },
+    {
+      "class_package": "/Game/Sound/Stage/Stg04/BP_TekkenEnvSoundStg04",
+      "class_name": "BP_TekkenEnvSoundStg04_C",
+      "outer_index": -58,
+      "object_name": "Default__BP_TekkenEnvSoundStg04_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -66,
+      "object_name": "AkComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -67,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -67,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -67,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -67,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -67,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "InterpData"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "InterpGroup"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "InterpTrackAnimControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "InterpTrackMove"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "MatineeActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "SkeletalMeshActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "StaticMeshActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -68,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -69,
+      "object_name": "InstancedFoliageActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -67,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -26,
+      "object_name": "Delay"
+    },
+    {
+      "class_package": "/Script/Foliage",
+      "class_name": "InstancedFoliageActor",
+      "outer_index": -69,
+      "object_name": "Default__InstancedFoliageActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InterpData",
+      "outer_index": -68,
+      "object_name": "Default__InterpData"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InterpGroup",
+      "outer_index": -68,
+      "object_name": "Default__InterpGroup"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InterpTrackAnimControl",
+      "outer_index": -68,
+      "object_name": "Default__InterpTrackAnimControl"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InterpTrackMove",
+      "outer_index": -68,
+      "object_name": "Default__InterpTrackMove"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -67,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -68,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -68,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -68,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -68,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -61,
+      "object_name": "T7_MI_ENV_s4Fighter_fa44p2"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MatineeActor",
+      "outer_index": -68,
+      "object_name": "Default__MatineeActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -68,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -67,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/PostProcess/PostProcessControl/BP_PostProcessControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Stage/Stg04/BP_TekkenEnvSoundStg04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/BP_LevelSettings"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/T7_S4_ENV_Fighter/Mesh/T7_SM_ENV_s4Fighter_fa44"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/T7_S4_ENV_Fighter/Shader/Material_Instance/T7_MI_ENV_s4Fighter_fa44p2"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/T7_S4_ENV_Helicopter/Mesh/T7_SK_ENV_s4HelicopterMod"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/T7_S4_ENV_Helicopter/Mesh/T7_SK_ENV_s4HelicopterMod_Anim"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BP_DramaQualityController"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BP_QualityControl_SSS"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Foliage"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -3,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -4,
+      "object_name": "SceneComponent_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -5,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -6,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -7,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -54,
+      "object_name": "SceneComp"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -43,
+      "object_name": "RootComponent0"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -68,
+      "object_name": "LatentActionInfo"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -68,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -62,
+      "object_name": "T7_SK_ENV_s4HelicopterMod"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshActor",
+      "outer_index": -68,
+      "object_name": "Default__SkeletalMeshActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -80,
+      "object_name": "SkeletalMeshComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer_index": -60,
+      "object_name": "T7_SM_ENV_s4Fighter_fa44"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshActor",
+      "outer_index": -68,
+      "object_name": "Default__StaticMeshActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -83,
+      "object_name": "StaticMeshComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -68,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -67,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -68,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -68,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -56,
+      "outer_index": 11,
+      "object_name": "T7_SM_ENV_s4Fighter_fa44_2_ExecuteUbergraph_stg27_mob_RefProperty",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 14510,
+      "class_name": "ObjectProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -56,
+      "outer_index": 11,
+      "object_name": "BP_TekkenEnvSoundStg04_C_1_ExecuteUbergraph_stg27_mob_RefProperty",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 14550,
+      "class_name": "ObjectProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -56,
+      "outer_index": 11,
+      "object_name": "T7_SM_ENV_s4Fighter_fa44_4_ExecuteUbergraph_stg27_mob_RefProperty",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 14590,
+      "class_name": "ObjectProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -56,
+      "outer_index": 11,
+      "object_name": "MatineeActor_0_ExecuteUbergraph_stg27_mob_RefProperty",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 14630,
+      "class_name": "ObjectProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -56,
+      "outer_index": 11,
+      "object_name": "T7_SK_ENV_s4HelicopterMod_ExecuteUbergraph_stg27_mob_RefProperty",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 14670,
+      "class_name": "ObjectProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 7,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 14710,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_stg27_mob",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 11,
+      "object_name": "ExecuteUbergraph_stg27_mob",
+      "object_flags": 1,
+      "serial_size": 189,
+      "serial_offset": 14746,
+      "class_name": "Function",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 6,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 205,
+        "script_storage_size": 145,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 14778,
+        "bytecode_sha256": "d5dd50808929ffb7e2c19318c8bef558d46d3a0f02ccbee481ded0c0336b2677",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/202c2a2084f995c9a808efc0/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/202c2a2084f995c9a808efc0/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -15,
+      "super_index": -41,
+      "template_index": -40,
+      "outer_index": 11,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 14935,
+      "class_name": "Function",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": -41,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 14967,
+        "bytecode_sha256": "8f0e43eae29dd6f64c2ccdf1be2dd4878a0cbb821038e2e07fcdf92dba37b84e",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/202c2a2084f995c9a808efc0/000007.bytecode.bin"
+      },
+      "raw_export_file": "functions/202c2a2084f995c9a808efc0/000007.export.bin"
+    },
+    {
+      "index": 8,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 11,
+      "object_name": "K2Node_MatineeController_4_Finished",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 14997,
+      "class_name": "Function",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 8,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 15029,
+        "bytecode_sha256": "d195a84eb5bc59ed77c9c67ade8f9aefa7a4db238a7f8456a9c792d514c75643",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/202c2a2084f995c9a808efc0/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/202c2a2084f995c9a808efc0/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 11,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15059,
+      "class_name": "StructProperty",
+      "owner": "stg27_mob_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -21,
+      "super_index": -28,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "stg27_mob_C",
+      "object_flags": 9,
+      "serial_size": 174,
+      "serial_offset": 15099,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFramePointerProperty": 10,
+        "UberGraphFunction": 7
+      }
+    },
+    {
+      "index": 11,
+      "class_index": 11,
+      "super_index": 0,
+      "template_index": -51,
+      "outer_index": 0,
+      "object_name": "Default__stg27_mob_C",
+      "object_flags": 49,
+      "serial_size": 210,
+      "serial_offset": 15273,
+      "class_name": "stg27_mob_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "ae 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "T7_SK_ENV_s4HelicopterMod_ExecuteUbergraph_stg27_mob_RefProperty": 39,
+        "MatineeActor_0_ExecuteUbergraph_stg27_mob_RefProperty": 30,
+        "T7_SM_ENV_s4Fighter_fa44_4_ExecuteUbergraph_stg27_mob_RefProperty": 42,
+        "BP_TekkenEnvSoundStg04_C_1_ExecuteUbergraph_stg27_mob_RefProperty": 18,
+        "T7_SM_ENV_s4Fighter_fa44_2_ExecuteUbergraph_stg27_mob_RefProperty": 41
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 18,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 73,
+      "serial_offset": 15483,
+      "class_name": "AkComponent",
+      "owner": "BP_TekkenEnvSoundStg04_C_1",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 80 27 c4 00 80 89 c4 00 60 24 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 28,
+      "object_name": "BP_DramaQualityController_249",
+      "object_flags": 8,
+      "serial_size": 152,
+      "serial_offset": 15556,
+      "class_name": "BP_DramaQualityController_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 33,
+        "QualityControlActors": {
+          "name": "QualityControlActors",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 11 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "RootComponent": 33,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 132,
+          "value_prefix_hex": "01 00 00 00 21 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 28,
+      "object_name": "BP_LevelSettings_428",
+      "object_flags": 8,
+      "serial_size": 137,
+      "serial_offset": 15708,
+      "class_name": "BP_LevelSettings_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 34,
+        "DrawNoLightMapLater": true,
+        "RootComponent": 34,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 117,
+          "value_prefix_hex": "01 00 00 00 22 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 28,
+      "object_name": "BP_PostProcessControl_336",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 15845,
+      "class_name": "BP_PostProcessControl_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 35,
+        "RootComponent": 35,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 23 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 28,
+      "object_name": "BP_QualityControl_SSS_237",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 15956,
+      "class_name": "BP_QualityControl_SSS_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 36,
+        "RootComponent": 36,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 24 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 28,
+      "object_name": "BP_TekkenEnvSoundStg04_C_1",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 16067,
+      "class_name": "BP_TekkenEnvSoundStg04_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 13,
+        "RootComponent": 13
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 28,
+      "object_name": "InstancedFoliageActor_0",
+      "object_flags": 8,
+      "serial_size": 45,
+      "serial_offset": 16137,
+      "class_name": "InstancedFoliageActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "RootComponent": 37
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 30,
+      "object_name": "InterpData_0",
+      "object_flags": 8,
+      "serial_size": 148,
+      "serial_offset": 16182,
+      "class_name": "InterpData",
+      "owner": "MatineeActor_0",
+      "tagged_properties": {
+        "InterpLength": 20.0,
+        "InterpGroups": {
+          "name": "InterpGroups",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 15 00 00 00 17 00 00 00 16 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "CurveEdSetup": 0,
+        "EdSectionEnd": 20.0
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 20,
+      "object_name": "InterpGroup_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 16330,
+      "class_name": "InterpGroup",
+      "owner": "InterpData_0",
+      "tagged_properties": {
+        "InterpTracks": {
+          "name": "InterpTracks",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "GroupName": "T7_SM_s4Fighter_fa44",
+        "GroupColor": {
+          "name": "GroupColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 123,
+          "value_prefix_hex": "46 00 e1 ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 20,
+      "object_name": "InterpGroup_2",
+      "object_flags": 8,
+      "serial_size": 143,
+      "serial_offset": 16469,
+      "class_name": "InterpGroup",
+      "owner": "InterpData_0",
+      "tagged_properties": {
+        "InterpTracks": {
+          "name": "InterpTracks",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 1a 00 00 00 18 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "GroupName": "T7_SK_ENV_s4HelicopterMod",
+        "GroupColor": {
+          "name": "GroupColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 127,
+          "value_prefix_hex": "00 2f e7 ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 20,
+      "object_name": "InterpGroup_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 16612,
+      "class_name": "InterpGroup",
+      "owner": "InterpData_0",
+      "tagged_properties": {
+        "InterpTracks": {
+          "name": "InterpTracks",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 1b 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "GroupName": "T7_SM_ENV_s4Fighter_fa44_2",
+        "GroupColor": {
+          "name": "GroupColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 123,
+          "value_prefix_hex": "d2 00 77 ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 22,
+      "object_name": "InterpTrackAnimControl_0",
+      "object_flags": 8,
+      "serial_size": 303,
+      "serial_offset": 16751,
+      "class_name": "InterpTrackAnimControl",
+      "owner": "InterpGroup_2",
+      "tagged_properties": {
+        "AnimSeqs": {
+          "name": "AnimSeqs",
+          "type": "ArrayProperty",
+          "size": 258,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 18 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 cd 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 cf 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 b1 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 1a 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 80 3f 20 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 34 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ae 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 21,
+      "object_name": "InterpTrackMove_0",
+      "object_flags": 8,
+      "serial_size": 5821,
+      "serial_offset": 17054,
+      "class_name": "InterpTrackMove",
+      "owner": "InterpGroup_1",
+      "tagged_properties": {
+        "PosTrack": {
+          "name": "PosTrack",
+          "type": "StructProperty",
+          "size": 2443,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 62 09 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 2d 09 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1d 7c 8e 46 40 7a c3 c6 fe ff 65 c4 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e6 94 37 46 00 00 00 00 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "EulerTrack": {
+          "name": "EulerTrack",
+          "type": "StructProperty",
+          "size": 2443,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2541,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 62 09 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 2d 09 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 eb fa c0 00 28 08 c2 da b0 8a 42 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "LookupTrack": {
+          "name": "LookupTrack",
+          "type": "StructProperty",
+          "size": 724,
+          "array_index": 0,
+          "struct_name": "InterpLookupTrack",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 5033,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 ab 02 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 76 02 00 00 00 00 00 00 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 80 3f ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "bShowTranslationOnCurveEd": false,
+        "bShowRotationOnCurveEd": true
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 22,
+      "object_name": "InterpTrackMove_0",
+      "object_flags": 8,
+      "serial_size": 5769,
+      "serial_offset": 22875,
+      "class_name": "InterpTrackMove",
+      "owner": "InterpGroup_2",
+      "tagged_properties": {
+        "PosTrack": {
+          "name": "PosTrack",
+          "type": "StructProperty",
+          "size": 2443,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 62 09 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 2d 09 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 b4 c5 00 00 7a c4 00 00 c8 c3 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f9 db f6 c0 3c 46 6c 44 b5 06 44 41 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "EulerTrack": {
+          "name": "EulerTrack",
+          "type": "StructProperty",
+          "size": 2443,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2541,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 62 09 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 2d 09 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "LookupTrack": {
+          "name": "LookupTrack",
+          "type": "StructProperty",
+          "size": 724,
+          "array_index": 0,
+          "struct_name": "InterpLookupTrack",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 5033,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 ab 02 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 09 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 76 02 00 00 00 00 00 00 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 20 40 ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 26,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 23,
+      "object_name": "InterpTrackMove_1",
+      "object_flags": 8,
+      "serial_size": 7597,
+      "serial_offset": 28644,
+      "class_name": "InterpTrackMove",
+      "owner": "InterpGroup_3",
+      "tagged_properties": {
+        "PosTrack": {
+          "name": "PosTrack",
+          "type": "StructProperty",
+          "size": 3226,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 71 0c 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 0c 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 3c 0c 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 28 8c 45 00 78 11 47 00 80 a7 44 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 28 b7 34 42 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "EulerTrack": {
+          "name": "EulerTrack",
+          "type": "StructProperty",
+          "size": 3226,
+          "array_index": 0,
+          "struct_name": "InterpCurveVector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 3324,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 71 0c 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 0c 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 3c 0c 00 00 00 00 00 00 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 b4 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 00 00 ff ff d1 42 1c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 e4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 0c 00 00",
+          "value_prefix_truncated": true
+        },
+        "LookupTrack": {
+          "name": "LookupTrack",
+          "type": "StructProperty",
+          "size": 934,
+          "array_index": 0,
+          "struct_name": "InterpLookupTrack",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 6599,
+          "value_prefix_hex": "bb 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 7d 03 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 0c 00 00 00 bb 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 48 03 00 00 00 00 00 00 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 e0 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 20 41 ae 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ae 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "bShowTranslationOnCurveEd": false,
+        "bShowRotationOnCurveEd": true
+      }
+    },
+    {
+      "index": 27,
+      "class_index": -27,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 47,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 310,
+      "serial_offset": 36241,
+      "class_name": "Level",
+      "owner": "stg27_mob",
+      "tagged_properties": {
+        "Model": 32,
+        "LevelScriptActor": 46,
+        "WorldSettings": 48
+      }
+    },
+    {
+      "index": 28,
+      "class_index": -29,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 28,
+      "object_name": "stg27_mob",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 36551,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -28,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 11,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "fb 78 f3 2c 68 71 d1 44 89 aa 8c 71 a5 20 d4 1b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 29,
+      "class_index": -30,
+      "super_index": 0,
+      "template_index": -54,
+      "outer_index": 28,
+      "object_name": "MatineeActor_0",
+      "object_flags": 8,
+      "serial_size": 490,
+      "serial_offset": 36812,
+      "class_name": "MatineeActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "MatineeData": 20,
+        "MatineeControllerName": "K2Node_MatineeController_4",
+        "bLooping": true,
+        "GroupActorInfos": {
+          "name": "GroupActorInfos",
+          "type": "ArrayProperty",
+          "size": 299,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 121,
+          "value_prefix_hex": "03 00 00 00 83 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 f6 00 00 00 00 00 00 00 8c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 8b 00 00 00 02 00 00 00 10 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 b1 00 00 00 00 00 00 00 00 01 00 00 00 2a 00 00 00 ae 00 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 8b 00 00 00 04 00 00 00 10 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 b1 00 00 00 00 00 00 00 00 01 00 00 00 29 00 00 00 ae 00 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 8b 00 00 00 03 00 00 00 10 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "InterpPosition": 0.0,
+        "RootComponent": 38
+      }
+    },
+    {
+      "index": 30,
+      "class_index": -31,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 28,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 37302,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 31,
+      "class_index": -31,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 28,
+      "object_name": "Model_3",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 37424,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 32,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -73,
+      "outer_index": 14,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 37546,
+      "class_name": "SceneComponent",
+      "owner": "BP_DramaQualityController_249",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 33,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -72,
+      "outer_index": 15,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 37625,
+      "class_name": "SceneComponent",
+      "owner": "BP_LevelSettings_428",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 34,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -70,
+      "outer_index": 16,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 37704,
+      "class_name": "SceneComponent",
+      "owner": "BP_PostProcessControl_336",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 35,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -74,
+      "outer_index": 17,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 37783,
+      "class_name": "SceneComponent",
+      "owner": "BP_QualityControl_SSS_237",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 36,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 19,
+      "object_name": "RootComponent0",
+      "object_flags": 262152,
+      "serial_size": 12,
+      "serial_offset": 37862,
+      "class_name": "SceneComponent",
+      "owner": "InstancedFoliageActor_0",
+      "tagged_properties": {}
+    },
+    {
+      "index": 37,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -75,
+      "outer_index": 30,
+      "object_name": "SceneComp",
+      "object_flags": 262152,
+      "serial_size": 12,
+      "serial_offset": 37874,
+      "class_name": "SceneComponent",
+      "owner": "MatineeActor_0",
+      "tagged_properties": {}
+    },
+    {
+      "index": 38,
+      "class_index": -33,
+      "super_index": 0,
+      "template_index": -80,
+      "outer_index": 28,
+      "object_name": "T7_SK_ENV_s4HelicopterMod",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 37886,
+      "class_name": "SkeletalMeshActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "SkeletalMeshComponent": 40,
+        "RootComponent": 40
+      }
+    },
+    {
+      "index": 39,
+      "class_index": -34,
+      "super_index": 0,
+      "template_index": -81,
+      "outer_index": 39,
+      "object_name": "SkeletalMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 729,
+      "serial_offset": 37956,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "T7_SK_ENV_s4HelicopterMod",
+      "tagged_properties": {
+        "AnimationMode": "EAnimationMode::AnimationSingleNode",
+        "SkeletalMesh": -79,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 459,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 119,
+          "value_prefix_hex": "42 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ad 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 02 01 00 00 00 00 00 00 43 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c3 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 d9 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 02 00 00 00 c3 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 a4 00 00 00 00 00 00 00 c4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 e5 00 00 00 00 00 00 00 c2 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 76 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 3d 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "CanCharacterStepUpOn": "ECB_Yes",
+        "PrimaryComponentTick": {
+          "name": "PrimaryComponentTick",
+          "type": "StructProperty",
+          "size": 49,
+          "array_index": 0,
+          "struct_name": "ActorComponentTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 668,
+          "value_prefix_hex": "7a 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 7d 00 00 00 00 00 00 00 00 df 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 40,
+      "class_index": -35,
+      "super_index": 0,
+      "template_index": -83,
+      "outer_index": 28,
+      "object_name": "T7_SM_ENV_s4Fighter_fa44_2",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 38685,
+      "class_name": "StaticMeshActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "StaticMeshComponent": 43,
+        "RootComponent": 43
+      }
+    },
+    {
+      "index": 41,
+      "class_index": -35,
+      "super_index": 0,
+      "template_index": -83,
+      "outer_index": 28,
+      "object_name": "T7_SM_ENV_s4Fighter_fa44_4",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 38755,
+      "class_name": "StaticMeshActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "StaticMeshComponent": 44,
+        "RootComponent": 44
+      }
+    },
+    {
+      "index": 42,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -84,
+      "outer_index": 41,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 676,
+      "serial_offset": 38825,
+      "class_name": "StaticMeshComponent",
+      "owner": "T7_SM_ENV_s4Fighter_fa44_2",
+      "tagged_properties": {
+        "StaticMesh": -82,
+        "bUseDefaultCollision": false,
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 88,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 cb ff ff ff",
+          "value_prefix_truncated": false
+        },
+        "CastShadow": false,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 444,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 175,
+          "value_prefix_hex": "42 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ad 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 02 01 00 00 00 00 00 00 43 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c3 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 d9 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 02 00 00 00 c3 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 a4 00 00 00 00 00 00 00 c4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 e5 00 00 00 00 00 00 00 c2 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 76 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 3d 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Mobility": "EComponentMobility::Movable"
+      }
+    },
+    {
+      "index": 43,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -84,
+      "outer_index": 42,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 631,
+      "serial_offset": 39501,
+      "class_name": "StaticMeshComponent",
+      "owner": "T7_SM_ENV_s4Fighter_fa44_4",
+      "tagged_properties": {
+        "StaticMesh": -82,
+        "bUseDefaultCollision": false,
+        "CastShadow": false,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 444,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 130,
+          "value_prefix_hex": "42 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 ad 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 02 01 00 00 00 00 00 00 43 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c3 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 d9 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 00 02 00 00 00 c3 00 00 00 00 00 00 00 d6 00 00 00 00 00 00 00 a4 00 00 00 00 00 00 00 c4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 ac 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 e5 00 00 00 00 00 00 00 c2 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 76 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 3d 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Mobility": "EComponentMobility::Movable"
+      }
+    },
+    {
+      "index": 44,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -85,
+      "outer_index": 48,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 40132,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings_1",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "1d 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ae 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 45,
+      "class_index": 11,
+      "super_index": 0,
+      "template_index": 12,
+      "outer_index": 28,
+      "object_name": "stg27_mob_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 40231,
+      "class_name": "stg27_mob_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 46,
+      "class_index": -37,
+      "super_index": 0,
+      "template_index": -87,
+      "outer_index": 0,
+      "object_name": "stg27_mob",
+      "object_flags": 11,
+      "serial_size": 53,
+      "serial_offset": 40243,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 47,
+      "class_index": -38,
+      "super_index": 0,
+      "template_index": -88,
+      "outer_index": 28,
+      "object_name": "WorldSettings_1",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 40296,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LightmassSettings": {
+          "name": "LightmassSettings",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "LightmassWorldInfoSettings",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "b3 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 67 f2 65 3f ae 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 45
+      }
+    }
+  ],
+  "sha256": "4e9085f9df6d3b3cefee2b119a29c359ef38725a6139a9a2a3fa76f763e70230",
+  "selection_reason": "local-versus shared-content candidate"
+}

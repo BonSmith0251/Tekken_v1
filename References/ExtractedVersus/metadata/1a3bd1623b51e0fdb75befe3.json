@@ -1,0 +1,465 @@
+{
+  "path": "TekkenGame/Content/Sound/Common/BP_TekkenCharacterSoundManager.uasset",
+  "id": "1a3bd1623b51e0fdb75befe3",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 4265,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Common/BP_TekkenCharacterSoundManager.uasset",
+  "metadata_file": "metadata/1a3bd1623b51e0fdb75befe3.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 3442,
+    "package_flags": 2147483648,
+    "name_count": 55,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 2354,
+    "import_count": 25,
+    "import_offset": 1654,
+    "bulk_data_start_offset": 4261,
+    "guid": "4ed5aa2393942f4c9825ac8995e8621e"
+  },
+  "names": [
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AkAudioBank",
+    "AllNodes",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_TekkenCharacterSoundManager",
+    "BP_TekkenCharacterSoundManager_C",
+    "CharacterManager",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__TekkenCharacterSoundManager",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootNodes",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SimpleConstructionScript_0_",
+    "StructProperty",
+    "TekkenCharacterSoundManager",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -20,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "AkAudioBank"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "CharacterManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -7,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -19,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -20,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -20,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -20,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenCharacterSoundManager",
+      "outer_index": -21,
+      "object_name": "Default__TekkenCharacterSoundManager"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 5,
+      "object_name": "VoiceBank",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3442,
+      "class_name": "ObjectProperty",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 5,
+      "object_name": "CharacterManager",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3482,
+      "class_name": "ObjectProperty",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3522,
+      "class_name": "ObjectProperty",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -4,
+      "super_index": -16,
+      "template_index": -15,
+      "outer_index": 5,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3562,
+      "class_name": "Function",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": -16,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3594,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/1a3bd1623b51e0fdb75befe3/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/1a3bd1623b51e0fdb75befe3/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -9,
+      "super_index": -14,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_TekkenCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 3609,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 10
+      }
+    },
+    {
+      "index": 5,
+      "class_index": 5,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 0,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3730,
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_TekkenCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 3738,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -14,
+        "SimpleConstructionScript": 10,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 5,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "94 c2 36 2d 0a 62 66 c4 63 55 f2 be 29 63 e3 57",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 5,
+      "object_name": "SceneComponent_1__4AE00C91",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 3987,
+      "class_name": "SceneComponent",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 3999,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0__57659476",
+      "tagged_properties": {
+        "ComponentTemplate": 8,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 5,
+      "object_name": "SimpleConstructionScript_0__57659476",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 4138,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_TekkenCharacterSoundManager_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 9
+      }
+    }
+  ],
+  "sha256": "fbc5a417a3c6e048172157b42eac91288c4f916eb5f8879809ab8098a9f07196",
+  "selection_reason": "local-versus shared-content candidate"
+}
