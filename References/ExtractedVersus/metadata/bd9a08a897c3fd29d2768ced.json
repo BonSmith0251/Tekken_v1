@@ -1,0 +1,319 @@
+{
+  "path": "TekkenGame/Content/Character/Common/BPI_LevelCharacterManager.uasset",
+  "id": "bd9a08a897c3fd29d2768ced",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 2942,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Common/BPI_LevelCharacterManager.uasset",
+  "metadata_file": "metadata/bd9a08a897c3fd29d2768ced.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 2404,
+    "package_flags": 2147483648,
+    "name_count": 45,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 1768,
+    "import_count": 17,
+    "import_offset": 1292,
+    "bulk_data_start_offset": 2938,
+    "guid": "4b1a51e779bd7c47aceb830956425975"
+  },
+  "names": [
+    "/Game/Character/Common/BPI_LevelCharacterManager",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_LevelCharacterManager",
+    "BPI_LevelCharacterManager_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "Class",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_LevelCharacterManager_C",
+    "Default__ByteProperty",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Enum",
+    "ETekkenNeoFurOption",
+    "Function",
+    "FurSpec",
+    "GeneratedClass",
+    "GetEditorNeoFurSpec",
+    "Guid",
+    "Interface",
+    "IntProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "Schema",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -16,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -16,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -15,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -16,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -17,
+      "object_name": "ETekkenNeoFurOption"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -15,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 2,
+      "object_name": "FurSpec",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2404,
+      "class_name": "ByteProperty",
+      "owner": "GetEditorNeoFurSpec",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 3,
+      "object_name": "GetEditorNeoFurSpec",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2444,
+      "class_name": "Function",
+      "owner": "BPI_LevelCharacterManager_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 1,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2476,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/bd9a08a897c3fd29d2768ced/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/bd9a08a897c3fd29d2768ced/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": -6,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_LevelCharacterManager_C",
+      "object_flags": 9,
+      "serial_size": 92,
+      "serial_offset": 2491,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": 3,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 0,
+      "object_name": "Default__BPI_LevelCharacterManager_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 2583,
+      "class_name": "BPI_LevelCharacterManager_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPI_LevelCharacterManager",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 2591,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 3,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "ed fa d8 b1 39 f5 17 4c bb 1c c1 cd 5d 04 9a 9b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 5,
+      "object_name": "GetEditorNeoFurSpec",
+      "object_flags": 8,
+      "serial_size": 86,
+      "serial_offset": 2852,
+      "class_name": "EdGraph",
+      "owner": "BPI_LevelCharacterManager",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "9fd8d35bb691bb2c073253f9606f927ed3cda4a488dc84decf21df592d991fc2",
+  "selection_reason": "local-versus shared-content candidate"
+}

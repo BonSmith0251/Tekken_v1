@@ -1,0 +1,684 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/kaz/BP_kazCharacterSoundManager.uasset",
+  "id": "b83c89e8245d4f160d272d7b",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 7878,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/kaz/BP_kazCharacterSoundManager.uasset",
+  "metadata_file": "metadata/b83c89e8245d4f160d272d7b.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5555,
+    "package_flags": 2147483648,
+    "name_count": 103,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 4803,
+    "import_count": 63,
+    "import_offset": 3039,
+    "bulk_data_start_offset": 7874,
+    "guid": "a313e867fcebe142a062c02fd4e9b783"
+  },
+  "names": [
+    "/Game/Sound/Character/kaz/BP_kazCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk01",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk02",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk03",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk04",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk05",
+    "/Game/Sound/Voice/kaz/_s_kaz_atk06",
+    "/Game/Sound/Voice/kaz/_s_kaz_die01",
+    "/Game/Sound/Voice/kaz/_s_kaz_die02",
+    "/Game/Sound/Voice/kaz/_s_kaz_dmg01",
+    "/Game/Sound/Voice/kaz/_s_kaz_dmg02",
+    "/Game/Sound/Voice/kaz/_s_kaz_dmg03",
+    "/Game/Sound/Voice/kaz/_s_kaz_dmg04",
+    "/Game/Sound/Voice/kaz/_s_kaz_dmg05",
+    "/Game/Sound/Voice/kaz/AkBankVoiceKAZ",
+    "/Game/Sound/Voice/kaz/kz_s00",
+    "/Game/Sound/Voice/kaz/kz_s01",
+    "/Game/Sound/Voice/kaz/kz_s02",
+    "/Game/Sound/Voice/kaz/kz_s03",
+    "/Game/Sound/Voice/kaz/kz_s04",
+    "/Game/Sound/Voice/kaz/kz_s05",
+    "/Game/Sound/Voice/kaz/kz_s06",
+    "/Game/Sound/Voice/kaz/kz_w00",
+    "/Game/Sound/Voice/kaz/kz_w01",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "_s_kaz_atk01",
+    "_s_kaz_atk02",
+    "_s_kaz_atk03",
+    "_s_kaz_atk04",
+    "_s_kaz_atk05",
+    "_s_kaz_atk06",
+    "_s_kaz_die01",
+    "_s_kaz_die02",
+    "_s_kaz_dmg01",
+    "_s_kaz_dmg02",
+    "_s_kaz_dmg03",
+    "_s_kaz_dmg04",
+    "_s_kaz_dmg05",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceKAZ",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_kazCharacterSoundManager",
+    "BP_kazCharacterSoundManager_C",
+    "BP_TekkenCharacterSoundManager_C",
+    "CharacterSound",
+    "CharacterStream",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_kazCharacterSoundManager_C",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "kaz",
+    "kz_s00",
+    "kz_s01",
+    "kz_s02",
+    "kz_s03",
+    "kz_s04",
+    "kz_s05",
+    "kz_s06",
+    "kz_w00",
+    "kz_w01",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "SoundName",
+    "Sounds",
+    "Streams",
+    "StrProperty",
+    "StructProperty",
+    "Tags",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -48,
+      "object_name": "AkBankVoiceKAZ"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -35,
+      "object_name": "_s_kaz_atk01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -36,
+      "object_name": "_s_kaz_atk02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -37,
+      "object_name": "_s_kaz_atk03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -38,
+      "object_name": "_s_kaz_atk04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -39,
+      "object_name": "_s_kaz_atk05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -40,
+      "object_name": "_s_kaz_atk06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -41,
+      "object_name": "_s_kaz_die01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -42,
+      "object_name": "_s_kaz_die02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -43,
+      "object_name": "_s_kaz_dmg01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -44,
+      "object_name": "_s_kaz_dmg02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -45,
+      "object_name": "_s_kaz_dmg03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -46,
+      "object_name": "_s_kaz_dmg04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -47,
+      "object_name": "_s_kaz_dmg05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -49,
+      "object_name": "kz_s00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -50,
+      "object_name": "kz_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -51,
+      "object_name": "kz_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -52,
+      "object_name": "kz_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -53,
+      "object_name": "kz_s04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -54,
+      "object_name": "kz_s05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -55,
+      "object_name": "kz_s06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -56,
+      "object_name": "kz_w00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -57,
+      "object_name": "kz_w01"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -59,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -34,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -59,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -34,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -58,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -59,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -59,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -59,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -59,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -59,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_atk06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_die01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_die02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_dmg01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_dmg02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_dmg03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_dmg04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/_s_kaz_dmg05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/AkBankVoiceKAZ"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_s06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_w00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/kaz/kz_w01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -25,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -59,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -59,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -59,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -30,
+      "super_index": -25,
+      "template_index": -26,
+      "outer_index": 0,
+      "object_name": "BP_kazCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 5555,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 0,
+      "object_name": "Default__BP_kazCharacterSoundManager_C",
+      "object_flags": 57,
+      "serial_size": 1769,
+      "serial_offset": 5664,
+      "class_name": "BP_kazCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 911,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0d 00 00 00 5f 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 5a 03 00 00 00 00 00 00 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 2c 01 00 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 53 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 2d 01 00 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fd ff ff ff 53 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 2e 01 00 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fc ff ff ff 53 00 00 00 00 00 00 00 5d 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Streams": {
+          "name": "Streams",
+          "type": "ArrayProperty",
+          "size": 710,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1006,
+          "value_prefix_hex": "09 00 00 00 60 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 91 02 00 00 00 00 00 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5e 00 00 00 00 00 00 00 61 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6b 7a 5f 73 30 30 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f1 ff ff ff 53 00 00 00 00 00 00 00 5e 00 00 00 00 00 00 00 61 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6b 7a 5f 73 30 31 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f0 ff ff ff 53 00 00 00 00 00 00 00 5e 00 00 00 00 00 00 00 61 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6b 7a 5f 77 30 30 00 5c 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 04 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1749,
+          "value_prefix_hex": "01 00 00 00 48 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -29,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 0,
+      "object_name": "BP_kazCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 7433,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -25,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "cf 9a d0 96 8b 80 f0 ef c8 c2 7b 33 3b 18 76 f5",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -31,
+      "super_index": 0,
+      "template_index": -61,
+      "outer_index": 3,
+      "object_name": "SceneComponent_1",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7682,
+      "class_name": "SceneComponent",
+      "owner": "BP_kazCharacterSoundManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 6,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 7694,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -33,
+      "super_index": 0,
+      "template_index": -63,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 7833,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_kazCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "6958df52d51bba76829edb3c997956f9115d3931b908c8f8e5be4a32c152ba70",
+  "selection_reason": "local-versus shared-content candidate"
+}

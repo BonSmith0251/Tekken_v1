@@ -1,0 +1,738 @@
+{
+  "path": "TekkenGame/Content/System/BP_QualityControl_SSS.uasset",
+  "id": "abd9516d7aee202356c8fd4b",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 6636,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BP_QualityControl_SSS.uasset",
+  "metadata_file": "metadata/abd9516d7aee202356c8fd4b.json",
+  "function_count": 4,
+  "summary": {
+    "total_header_size": 5127,
+    "package_flags": 2147483648,
+    "name_count": 77,
+    "name_offset": 189,
+    "export_count": 16,
+    "export_offset": 3375,
+    "import_count": 39,
+    "import_offset": 2283,
+    "bulk_data_start_offset": 6632,
+    "guid": "1997be620ceb8b43b6827f0fcca2620c"
+  },
+  "names": [
+    "/Game/System/BP_QualityControl_SSS",
+    "/Game/System/BPI_QualityControl",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_QualityControl_SSS",
+    "BP_QualityControl_SSS_C",
+    "BPI_QualityControl_C",
+    "CallFunc_IsQualityControlSSSEnabled_ReturnValue",
+    "CallFunc_IsQualityControlSSSEnabled_ReturnValue2",
+    "Class",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_QualityControl_SSS_C",
+    "Default__BPI_QualityControl_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DownQuality",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "ExecuteConsoleCommand",
+    "ExecuteUbergraph_BP_QualityControl_SSS",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "IsQualityControlSSSEnabled",
+    "KismetSystemLibrary",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenBlueprintLibrary",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpQuality",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -32,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -32,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -30,
+      "object_name": "BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -32,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -31,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/System/BPI_QualityControl",
+      "class_name": "BPI_QualityControl_C",
+      "outer_index": -30,
+      "object_name": "Default__BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -32,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -31,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "ExecuteConsoleCommand"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "IsQualityControlSSSEnabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -31,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -32,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -31,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BPI_QualityControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -32,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -32,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -32,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -32,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -31,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -33,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 10,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5127,
+      "class_name": "ObjectProperty",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 5,
+      "object_name": "CallFunc_IsQualityControlSSSEnabled_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 5167,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_SSS",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 5,
+      "object_name": "CallFunc_IsQualityControlSSSEnabled_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 5205,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_SSS",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 5,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5243,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_SSS",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "ExecuteUbergraph_BP_QualityControl_SSS",
+      "object_flags": 1,
+      "serial_size": 219,
+      "serial_offset": 5279,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 243,
+        "script_storage_size": 175,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5311,
+        "bytecode_sha256": "75ee7cc38ae9adba48c84606123cdcee32544f4d9391fa53b505b50fd191332e",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/abd9516d7aee202356c8fd4b/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/abd9516d7aee202356c8fd4b/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "UpQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 5498,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5530,
+        "bytecode_sha256": "587848193428efd8a2049bb7f29b5e0ddc1717751e963a17b8d04f45016ddc91",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/abd9516d7aee202356c8fd4b/000005.bytecode.bin"
+      },
+      "raw_export_file": "functions/abd9516d7aee202356c8fd4b/000005.export.bin"
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "DownQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 5560,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 6,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5592,
+        "bytecode_sha256": "b2436bf33eda5af8b5b7ddebdce258804d425fe96952d042fdffae89038a94ca",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/abd9516d7aee202356c8fd4b/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/abd9516d7aee202356c8fd4b/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -8,
+      "super_index": -24,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 5622,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": -24,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5654,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/abd9516d7aee202356c8fd4b/000007.bytecode.bin"
+      },
+      "raw_export_file": "functions/abd9516d7aee202356c8fd4b/000007.export.bin"
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 10,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5669,
+      "class_name": "StructProperty",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -15,
+      "super_index": -13,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_SSS_C",
+      "object_flags": 9,
+      "serial_size": 227,
+      "serial_offset": 5709,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 16,
+        "UberGraphFramePointerProperty": 9,
+        "UberGraphFunction": 5
+      }
+    },
+    {
+      "index": 10,
+      "class_index": 10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_QualityControl_SSS_C",
+      "object_flags": 49,
+      "serial_size": 65,
+      "serial_offset": 5936,
+      "class_name": "BP_QualityControl_SSS_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "38 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_SSS",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 6001,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -13,
+        "SimpleConstructionScript": 16,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 10,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "c8 31 b9 66 7c d7 3d 4c 87 23 51 0c 91 4e c2 3e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 12,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 6250,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_SSS",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 10,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6358,
+      "class_name": "SceneComponent",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 16,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6370,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 14,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "fa bd 30 60 81 f4 8c 44 b9 04 0b 48 34 b4 3b 44",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 10,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 6509,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_QualityControl_SSS_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 0f 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 0f 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 15
+      }
+    }
+  ],
+  "sha256": "5dac64b3ef15477898c79b0ef6feaef00e0d022056aa21820744d0b8074d428b",
+  "selection_reason": "local-versus shared-content candidate"
+}

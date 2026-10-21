@@ -1,0 +1,1042 @@
+{
+  "path": "TekkenGame/Content/System/WindActor/BP_WindActor.uasset",
+  "id": "c02e018b17cbe8510105fa80",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 9773,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/WindActor/BP_WindActor.uasset",
+  "metadata_file": "metadata/c02e018b17cbe8510105fa80.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 7422,
+    "package_flags": 2147483648,
+    "name_count": 100,
+    "name_offset": 189,
+    "export_count": 27,
+    "export_offset": 4426,
+    "import_count": 55,
+    "import_offset": 2886,
+    "bulk_data_start_offset": 9769,
+    "guid": "4eee6bda5c77b44383db65997fdd49c0"
+  },
+  "names": [
+    "/Game/System/WindActor/BP_WindActor",
+    "/Game/System/WindActor/MPC_WindActor",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "ApplyParameter",
+    "ArrayProperty",
+    "Arrow1",
+    "ArrowComponent",
+    "bCanEverTick",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_WindActor",
+    "BP_WindActor_C",
+    "CallFunc_Conv_RotatorToVector_ReturnValue",
+    "CallFunc_Conv_VectorToLinearColor_ReturnValue",
+    "CallFunc_IsValid_ReturnValue",
+    "CallFunc_K2_GetActorRotation_ReturnValue",
+    "CallFunc_K2_GetActorRotation_ReturnValue2",
+    "CallFunc_K2_SetActorRotation_ReturnValue",
+    "Class",
+    "Component",
+    "ComponentTemplate",
+    "Conv_RotatorToVector",
+    "Conv_VectorToLinearColor",
+    "Default__Actor",
+    "Default__ArrowComponent",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_WindActor_C",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetMaterialLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "DeltaSeconds",
+    "Direction",
+    "Engine",
+    "EntryPoint",
+    "ExecuteUbergraph_BP_WindActor",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "IsValid",
+    "K2_GetActorRotation",
+    "K2_SetActorRotation",
+    "K2Node_Event_DeltaSeconds",
+    "KismetMaterialLibrary",
+    "KismetMathLibrary",
+    "KismetSystemLibrary",
+    "LinearColor",
+    "MaterialParameterCollection",
+    "MPC_WindActor",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "PrimaryActorTick",
+    "ReceiveBeginPlay",
+    "ReceiveTick",
+    "RootNodes",
+    "Rotator",
+    "SceneComponent",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetScalarParameterValue",
+    "SetVectorParameterValue",
+    "SimpleConstructionScript",
+    "Speed",
+    "Strength",
+    "StructProperty",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector",
+    "WindDirectionalSource",
+    "WindDirectionalSourceComponent"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -47,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ArrowComponent",
+      "outer_index": -47,
+      "object_name": "Default__ArrowComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -47,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -47,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -46,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "ArrowComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "KismetMaterialLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "WindDirectionalSource"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -47,
+      "object_name": "WindDirectionalSourceComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -46,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -24,
+      "object_name": "Speed"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -24,
+      "object_name": "Strength"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -46,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "K2_GetActorRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "K2_SetActorRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "ReceiveTick"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "SetScalarParameterValue"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "SetVectorParameterValue"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Conv_RotatorToVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Conv_VectorToLinearColor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "IsValid"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -46,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetMaterialLibrary",
+      "outer_index": -47,
+      "object_name": "Default__KismetMaterialLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -47,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialParameterCollection",
+      "outer_index": -45,
+      "object_name": "MPC_WindActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -46,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -23,
+      "object_name": "Component"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/WindActor/MPC_WindActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -47,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -46,
+      "object_name": "LinearColor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -46,
+      "object_name": "Rotator"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -46,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -47,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -47,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -47,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -46,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 20,
+      "object_name": "WindDirectionalSource",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7422,
+      "class_name": "ObjectProperty",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 20,
+      "object_name": "Speed",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7462,
+      "class_name": "FloatProperty",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 20,
+      "object_name": "Strength",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7498,
+      "class_name": "FloatProperty",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 20,
+      "object_name": "Arrow1",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7534,
+      "class_name": "ObjectProperty",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 13,
+      "object_name": "K2Node_Event_DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7574,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 13,
+      "object_name": "CallFunc_K2_SetActorRotation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 7610,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 13,
+      "object_name": "CallFunc_K2_GetActorRotation_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7648,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 13,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 7688,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 13,
+      "object_name": "CallFunc_Conv_VectorToLinearColor_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7726,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 13,
+      "object_name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7766,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 13,
+      "object_name": "CallFunc_K2_GetActorRotation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7806,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 13,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7846,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_WindActor",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "ExecuteUbergraph_BP_WindActor",
+      "object_flags": 1,
+      "serial_size": 451,
+      "serial_offset": 7882,
+      "class_name": "Function",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": 0,
+        "first_child": 12,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 647,
+        "script_storage_size": 407,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7914,
+        "bytecode_sha256": "3c1d117f82794805d6b46ffd61dede49fefbc1c9b38538bdd967ba44b21469df",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/c02e018b17cbe8510105fa80/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/c02e018b17cbe8510105fa80/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 15,
+      "object_name": "DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8333,
+      "class_name": "FloatProperty",
+      "owner": "ReceiveTick",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -8,
+      "super_index": -32,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "ReceiveTick",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 8369,
+      "class_name": "Function",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 13,
+        "super_struct": -32,
+        "first_child": 14,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8401,
+        "bytecode_sha256": "1378a9815bcd300df30e3ad93078d57716f398b1e16a3373278d1030ee00eb9a",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/c02e018b17cbe8510105fa80/000014.bytecode.bin"
+      },
+      "raw_export_file": "functions/c02e018b17cbe8510105fa80/000014.export.bin"
+    },
+    {
+      "index": 15,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "ApplyParameter",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 8441,
+      "class_name": "Function",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 15,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8473,
+        "bytecode_sha256": "7c8769f8b0d3996c680ca94781bd3f293ca4645441c62388c93bd3fe40b16383",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/c02e018b17cbe8510105fa80/000015.bytecode.bin"
+      },
+      "raw_export_file": "functions/c02e018b17cbe8510105fa80/000015.export.bin"
+    },
+    {
+      "index": 16,
+      "class_index": -8,
+      "super_index": -31,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 8503,
+      "class_name": "Function",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 16,
+        "super_struct": -31,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8535,
+        "bytecode_sha256": "b7b4e087df00bad3722b999ae1773613acd29cb5cfd7a44cb7a0c86ff0200ae3",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/c02e018b17cbe8510105fa80/000016.bytecode.bin"
+      },
+      "raw_export_file": "functions/c02e018b17cbe8510105fa80/000016.export.bin"
+    },
+    {
+      "index": 17,
+      "class_index": -8,
+      "super_index": -33,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 57,
+      "serial_offset": 8565,
+      "class_name": "Function",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 17,
+        "super_struct": -33,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 17,
+        "script_storage_size": 13,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8597,
+        "bytecode_sha256": "3dea9fe4c3e1d2960421df524b50b95c43adc06407ae06a49fbb30d2e5de609c",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/c02e018b17cbe8510105fa80/000017.bytecode.bin"
+      },
+      "raw_export_file": "functions/c02e018b17cbe8510105fa80/000017.export.bin"
+    },
+    {
+      "index": 18,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 20,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8622,
+      "class_name": "StructProperty",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -16,
+      "super_index": -13,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_WindActor_C",
+      "object_flags": 9,
+      "serial_size": 227,
+      "serial_offset": 8662,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 27,
+        "UberGraphFramePointerProperty": 19,
+        "UberGraphFunction": 13
+      }
+    },
+    {
+      "index": 20,
+      "class_index": 20,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_WindActor_C",
+      "object_flags": 49,
+      "serial_size": 206,
+      "serial_offset": 8889,
+      "class_name": "BP_WindActor_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "47 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "Strength": 1.0,
+        "Speed": 1.0,
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 164,
+          "value_prefix_hex": "0b 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 47 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 20,
+      "object_name": "ArrowComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 9095,
+      "class_name": "ArrowComponent",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_WindActor",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 9107,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -13,
+        "SimpleConstructionScript": 27,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 20,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "b0 4a fe 3d 87 ac ea 4b c2 86 c4 dc ae f6 a8 57",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 20,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 9356,
+      "class_name": "SceneComponent",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -53,
+      "outer_index": 27,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9368,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_6",
+      "tagged_properties": {
+        "ComponentTemplate": 24,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -53,
+      "outer_index": 27,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9507,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_6",
+      "tagged_properties": {
+        "ComponentTemplate": 22,
+        "VariableName": "Arrow1",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "d6 91 6b f8 cf a5 16 90 00 91 4b f7 0e c8 3b ef",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 26,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -54,
+      "outer_index": 20,
+      "object_name": "SimpleConstructionScript_6",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 9646,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_WindActor_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 1a 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 1a 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 25
+      }
+    }
+  ],
+  "sha256": "3743fc97e25c4631a16916aeda53aed6a38811ebf9e67c6bdee6ea55d34d4282",
+  "selection_reason": "local-versus shared-content candidate"
+}

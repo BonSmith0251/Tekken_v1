@@ -1,0 +1,347 @@
+{
+  "path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.uasset",
+  "id": "b1ef24b62614e902a603c129",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 5005,
+  "encrypted_source": false,
+  "package_file": "packages/Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.uasset",
+  "metadata_file": "metadata/b1ef24b62614e902a603c129.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2421,
+    "package_flags": 2147483648,
+    "name_count": 54,
+    "name_offset": 189,
+    "export_count": 4,
+    "export_offset": 1969,
+    "import_count": 11,
+    "import_offset": 1661,
+    "bulk_data_start_offset": 5001,
+    "guid": "71c4e0bbe3b61a43813e0420802010df"
+  },
+  "names": [
+    "/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq",
+    "/Engine/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs",
+    "/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "ByteProperty",
+    "Class",
+    "Coordinates",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialExpressionTextureSample",
+    "Default__MaterialFunction",
+    "Description",
+    "DitherTemporalAA",
+    "EMaterialSamplerType",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Good64x64TilingNoiseHighFreq",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionConstant2Vector",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialExpressionTextureSample",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "SamplerType",
+    "SAMPLERTYPE_LinearGrayscale",
+    "ScreenAlignedPixelToPixelUVs",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "Texture",
+    "Texture2D"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialExpressionTextureSample"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -10,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureSample",
+      "outer_index": -10,
+      "object_name": "Default__MaterialExpressionTextureSample"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -9,
+      "object_name": "ScreenAlignedPixelToPixelUVs"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -10,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -8,
+      "object_name": "Good64x64TilingNoiseHighFreq"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionMaterialFunctionCall_23",
+      "object_flags": 8,
+      "serial_size": 1004,
+      "serial_offset": 2421,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "DitherTemporalAA",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 229,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ca 43 3f fe 99 40 ab 4b 8e a4 1d 6d 03 c4 76 48 1d 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 54 65 78 74 75 72 65 52 65 73 6f 6c 75 74 69 6f 6e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 03 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 364,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 324,
+          "value_prefix_hex": "01 00 00 00 1a 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 37 01 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a f8 62 0b 8f 23 07 44 86 fe a4 0b 50 8b 5d 80 2a 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1f 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 4,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 242,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 750,
+          "value_prefix_hex": "01 00 00 00 2c 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1f 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionMaterialFunctionCall_24",
+      "object_flags": 8,
+      "serial_size": 1004,
+      "serial_offset": 3425,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "DitherTemporalAA",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 229,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ca 43 3f fe 99 40 ab 4b 8e a4 1d 6d 03 c4 76 48 1d 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 54 65 78 74 75 72 65 52 65 73 6f 6c 75 74 69 6f 6e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 04 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 364,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 324,
+          "value_prefix_hex": "01 00 00 00 1a 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 37 01 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a f8 62 0b 8f 23 07 44 86 fe a4 0b 50 8b 5d 80 2a 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1f 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 4,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 242,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 750,
+          "value_prefix_hex": "01 00 00 00 2c 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1f 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionTextureSample_1",
+      "object_flags": 8,
+      "serial_size": 196,
+      "serial_offset": 4429,
+      "class_name": "MaterialExpressionTextureSample",
+      "owner": "DitherTemporalAA",
+      "tagged_properties": {
+        "Coordinates": {
+          "name": "Coordinates",
+          "type": "StructProperty",
+          "size": 36,
+          "array_index": 0,
+          "struct_name": "ExpressionInput",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 25 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "Texture": -11,
+        "SamplerType": "SAMPLERTYPE_LinearGrayscale",
+        "Function": 4
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 0,
+      "object_name": "DitherTemporalAA",
+      "object_flags": 3,
+      "serial_size": 376,
+      "serial_offset": 4625,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "8c 7f f9 51 07 39 1c 4f 98 a1 b8 bf a3 05 ad e3",
+          "value_prefix_truncated": false
+        },
+        "Description": "Stipple pattern/Dither  in screen space and time to work well with TemporalAA for things like masked translucency or anisotropic materials",
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 72,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 292,
+          "value_prefix_hex": "11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "f2149acbae9435c209d156063d8c98add0e282a792eca174a7b1896fae72ff12",
+  "selection_reason": "dependency of TekkenGame/Content/Character/AlisaRecover/MF_AlisaRecover.uasset"
+}

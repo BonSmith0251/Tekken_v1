@@ -1,0 +1,833 @@
+{
+  "path": "TekkenGame/Content/Maps/stg06_mob.umap",
+  "id": "c27a64850b545b4777676532",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "LevelScriptBlueprint"
+  ],
+  "size": 8580,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg06_mob.umap",
+  "metadata_file": "metadata/c27a64850b545b4777676532.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 6261,
+    "package_flags": 2147614720,
+    "name_count": 88,
+    "name_offset": 189,
+    "export_count": 21,
+    "export_offset": 3905,
+    "import_count": 42,
+    "import_offset": 2729,
+    "bulk_data_start_offset": 8576,
+    "guid": "6e31a0c25bcde24193f98e627c15c0bb"
+  },
+  "names": [
+    "/Game/Demo/StoryMode/Blueprints/BP_StoryRagdollPlacementInfo",
+    "/Game/Maps/stg06_mob",
+    "/Game/PostProcess/PostProcessControl/BP_PostProcessControl",
+    "/Game/Stage/Common/BP_LevelSettings",
+    "/Game/System/BP_DramaQualityController",
+    "/Game/System/BP_QualityControl_SSS",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AttachParent",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintCreatedComponents",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "bNetAddressable",
+    "BodyInstance",
+    "BoolProperty",
+    "BoxComponent",
+    "BP_DramaQualityController",
+    "BP_DramaQualityController_C",
+    "BP_LevelSettings",
+    "BP_LevelSettings_C",
+    "BP_PostProcessControl",
+    "BP_PostProcessControl_C",
+    "BP_QualityControl_SSS",
+    "BP_QualityControl_SSS_C",
+    "BP_StoryRagdollPlacementInfo",
+    "BP_StoryRagdollPlacementInfo_C",
+    "BPTYPE_LevelScript",
+    "Brush",
+    "ByteProperty",
+    "Class",
+    "CreationMethod",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_DramaQualityController_C",
+    "Default__BP_LevelSettings_C",
+    "Default__BP_PostProcessControl_C",
+    "Default__BP_QualityControl_SSS_C",
+    "Default__BP_StoryRagdollPlacementInfo_C",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__Model",
+    "Default__StaticMeshComponent",
+    "Default__stg06_mob_C",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DrawNoLightMapLater",
+    "EBlueprintType",
+    "EComponentCreationMethod",
+    "EComponentCreationMethod::SimpleConstructionScript",
+    "ELightingBuildQuality",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "Level",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "Model",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OcclusionQueryBeforeBasePass",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "Quality_Production",
+    "QualityControlActors",
+    "RagdollBarrier",
+    "RagdollBarrier_GEN_VARIABLE",
+    "RootComponent",
+    "SceneComponent",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg06_mob",
+    "stg06_mob_C",
+    "StructProperty",
+    "World",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -28,
+      "object_name": "BP_StoryRagdollPlacementInfo_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -29,
+      "object_name": "BP_PostProcessControl_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -30,
+      "object_name": "BP_LevelSettings_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -31,
+      "object_name": "BP_DramaQualityController_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -32,
+      "object_name": "BP_QualityControl_SSS_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -34,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BoxComponent",
+      "outer_index": -1,
+      "object_name": "RagdollBarrier_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Game/System/BP_DramaQualityController",
+      "class_name": "BP_DramaQualityController_C",
+      "outer_index": -31,
+      "object_name": "Default__BP_DramaQualityController_C"
+    },
+    {
+      "class_package": "/Game/Stage/Common/BP_LevelSettings",
+      "class_name": "BP_LevelSettings_C",
+      "outer_index": -30,
+      "object_name": "Default__BP_LevelSettings_C"
+    },
+    {
+      "class_package": "/Game/PostProcess/PostProcessControl/BP_PostProcessControl",
+      "class_name": "BP_PostProcessControl_C",
+      "outer_index": -29,
+      "object_name": "Default__BP_PostProcessControl_C"
+    },
+    {
+      "class_package": "/Game/System/BP_QualityControl_SSS",
+      "class_name": "BP_QualityControl_SSS_C",
+      "outer_index": -32,
+      "object_name": "Default__BP_QualityControl_SSS_C"
+    },
+    {
+      "class_package": "/Game/Demo/StoryMode/Blueprints/BP_StoryRagdollPlacementInfo",
+      "class_name": "BP_StoryRagdollPlacementInfo_C",
+      "outer_index": -28,
+      "object_name": "Default__BP_StoryRagdollPlacementInfo_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "BoxComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -34,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -34,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -34,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -34,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Demo/StoryMode/Blueprints/BP_StoryRagdollPlacementInfo"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/PostProcess/PostProcessControl/BP_PostProcessControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/BP_LevelSettings"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BP_DramaQualityController"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BP_QualityControl_SSS"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -3,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -4,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -5,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -34,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -34,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -34,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -14,
+      "super_index": -17,
+      "template_index": -6,
+      "outer_index": 0,
+      "object_name": "stg06_mob_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 6261,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 0,
+      "object_name": "Default__stg06_mob_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 6341,
+      "class_name": "stg06_mob_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 8,
+      "object_name": "RagdollBarrier",
+      "object_flags": 0,
+      "serial_size": 108,
+      "serial_offset": 6349,
+      "class_name": "BoxComponent",
+      "owner": "BP_StoryRagdollPlacementInfo_59",
+      "tagged_properties": {
+        "AttachParent": 17,
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 9,
+      "object_name": "BP_DramaQualityController_349",
+      "object_flags": 8,
+      "serial_size": 152,
+      "serial_offset": 6457,
+      "class_name": "BP_DramaQualityController_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 13,
+        "QualityControlActors": {
+          "name": "QualityControlActors",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 07 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "RootComponent": 13,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 132,
+          "value_prefix_hex": "01 00 00 00 0d 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 9,
+      "object_name": "BP_LevelSettings_709",
+      "object_flags": 8,
+      "serial_size": 163,
+      "serial_offset": 6609,
+      "class_name": "BP_LevelSettings_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 14,
+        "DrawNoLightMapLater": true,
+        "OcclusionQueryBeforeBasePass": true,
+        "RootComponent": 14,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 143,
+          "value_prefix_hex": "01 00 00 00 0e 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 9,
+      "object_name": "BP_PostProcessControl_500",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 6772,
+      "class_name": "BP_PostProcessControl_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 15,
+        "RootComponent": 15,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 0f 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 9,
+      "object_name": "BP_QualityControl_SSS_353",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 6883,
+      "class_name": "BP_QualityControl_SSS_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 16,
+        "RootComponent": 16,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 10 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 9,
+      "object_name": "BP_StoryRagdollPlacementInfo_59",
+      "object_flags": 8,
+      "serial_size": 144,
+      "serial_offset": 6994,
+      "class_name": "BP_StoryRagdollPlacementInfo_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "RagdollBarrier": 3,
+        "DefaultSceneRoot": 17,
+        "RootComponent": 17,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 120,
+          "value_prefix_hex": "02 00 00 00 11 00 00 00 03 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 20,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 292,
+      "serial_offset": 7138,
+      "class_name": "Level",
+      "owner": "stg06_mob",
+      "tagged_properties": {
+        "Model": 12,
+        "LevelScriptActor": 19,
+        "WorldSettings": 21
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 9,
+      "object_name": "stg06_mob",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 7430,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -17,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "cf 51 58 d0 89 96 44 12 6d 98 1e 64 b4 68 d5 7a",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 9,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 7691,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 9,
+      "object_name": "Model_3",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 7813,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 4,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 7935,
+      "class_name": "SceneComponent",
+      "owner": "BP_DramaQualityController_349",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 8014,
+      "class_name": "SceneComponent",
+      "owner": "BP_LevelSettings_709",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 6,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 8093,
+      "class_name": "SceneComponent",
+      "owner": "BP_PostProcessControl_500",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 7,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 8172,
+      "class_name": "SceneComponent",
+      "owner": "BP_QualityControl_SSS_353",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 8,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 8251,
+      "class_name": "SceneComponent",
+      "owner": "BP_StoryRagdollPlacementInfo_59",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 21,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 8330,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "0a 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": 2,
+      "outer_index": 9,
+      "object_name": "stg06_mob_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 8429,
+      "class_name": "stg06_mob_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 0,
+      "object_name": "stg06_mob",
+      "object_flags": 11,
+      "serial_size": 53,
+      "serial_offset": 8441,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 9,
+      "object_name": "WorldSettings",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 8494,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 18
+      }
+    }
+  ],
+  "sha256": "144ed13bd57d2055847a3cd3dee4187f3099bebe65d9b93b17155abe6e775cc1",
+  "selection_reason": "local-versus shared-content candidate"
+}

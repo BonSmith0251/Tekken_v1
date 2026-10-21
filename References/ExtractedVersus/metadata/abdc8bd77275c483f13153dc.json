@@ -1,0 +1,470 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/zak/BP_zakCharacterSoundManager.uasset",
+  "id": "abdc8bd77275c483f13153dc",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 5073,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/zak/BP_zakCharacterSoundManager.uasset",
+  "metadata_file": "metadata/abdc8bd77275c483f13153dc.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 3823,
+    "package_flags": 2147483648,
+    "name_count": 71,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 3127,
+    "import_count": 35,
+    "import_offset": 2147,
+    "bulk_data_start_offset": 5069,
+    "guid": "25866b93bdf92d4c82f4f0a8958da475"
+  },
+  "names": [
+    "/Game/Sound/Character/zak/BP_zakCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/zak/AkBankVoiceZAK",
+    "/Game/Sound/Voice/zak/tkf_atk_01",
+    "/Game/Sound/Voice/zak/tkf_atk_02",
+    "/Game/Sound/Voice/zak/tkf_atk_03",
+    "/Game/Sound/Voice/zak/tkf_atk_04",
+    "/Game/Sound/Voice/zak/tkf_dmg_01",
+    "/Game/Sound/Voice/zak/tkf_dmg_02",
+    "/Game/Sound/Voice/zak/tkf_dmg_03",
+    "/Game/Sound/Voice/zak/tkf_dmg_ko_01",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceZAK",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_TekkenCharacterSoundManager_C",
+    "BP_zakCharacterSoundManager",
+    "BP_zakCharacterSoundManager_C",
+    "CharacterSound",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__BP_zakCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "pau",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "Sounds",
+    "StructProperty",
+    "Tags",
+    "tkf_atk_01",
+    "tkf_atk_02",
+    "tkf_atk_03",
+    "tkf_atk_04",
+    "tkf_dmg_01",
+    "tkf_dmg_02",
+    "tkf_dmg_03",
+    "tkf_dmg_ko_01",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -21,
+      "object_name": "AkBankVoiceZAK"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -22,
+      "object_name": "tkf_atk_01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -23,
+      "object_name": "tkf_atk_02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -24,
+      "object_name": "tkf_atk_03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -25,
+      "object_name": "tkf_atk_04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -26,
+      "object_name": "tkf_dmg_01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -27,
+      "object_name": "tkf_dmg_02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -28,
+      "object_name": "tkf_dmg_03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -29,
+      "object_name": "tkf_dmg_ko_01"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -31,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -31,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -20,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/AkBankVoiceZAK"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_atk_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_atk_02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_atk_03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_atk_04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_dmg_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_dmg_02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_dmg_03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/zak/tkf_dmg_ko_01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -11,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -31,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -31,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -31,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -16,
+      "super_index": -11,
+      "template_index": -12,
+      "outer_index": 0,
+      "object_name": "BP_zakCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 3823,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 0,
+      "object_name": "Default__BP_zakCharacterSoundManager_C",
+      "object_flags": 49,
+      "serial_size": 696,
+      "serial_offset": 3932,
+      "class_name": "BP_zakCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 581,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "08 00 00 00 39 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 10 02 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 60 05 00 00 37 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 2d 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 61 05 00 00 37 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fd ff ff ff 2d 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 62 05 00 00 37 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fc ff ff ff 2d 00 00 00 00 00 00 00 38 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 676,
+          "value_prefix_hex": "01 00 00 00 32 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 0,
+      "object_name": "BP_zakCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 4628,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -11,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "89 2e e0 4b 6a 54 55 40 81 a7 63 98 e6 ef 1d b4",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 1,
+      "object_name": "SceneComponent_1",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 4877,
+      "class_name": "SceneComponent",
+      "owner": "BP_zakCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 6,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4889,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5028,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_zakCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "8e4d40bf28b27754640103b1a886b625f12b3a06b8462a44e2f0401c0b517c82",
+  "selection_reason": "local-versus shared-content candidate"
+}

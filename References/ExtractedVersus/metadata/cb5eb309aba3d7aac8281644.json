@@ -1,0 +1,111 @@
+{
+  "path": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uasset",
+  "id": "cb5eb309aba3d7aac8281644",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 1008,
+  "encrypted_source": false,
+  "package_file": "packages/Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel.uasset",
+  "metadata_file": "metadata/cb5eb309aba3d7aac8281644.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 804,
+    "package_flags": 2147483648,
+    "name_count": 17,
+    "name_offset": 189,
+    "export_count": 1,
+    "export_offset": 700,
+    "import_count": 3,
+    "import_offset": 616,
+    "bulk_data_start_offset": 1004,
+    "guid": "4c392d76713b5448b3a98fe91a6ba607"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions01/Texturing/ComputeMipLevel",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "Class",
+    "ComputeMipLevel",
+    "Default__MaterialFunction",
+    "FunctionExpressions",
+    "Guid",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Package",
+    "StateId",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -3,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -3,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "ComputeMipLevel",
+      "object_flags": 3,
+      "serial_size": 200,
+      "serial_offset": 804,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "6b 7d 7e e4 3c 91 6f 46 84 75 49 c1 d6 db b1 ed",
+          "value_prefix_truncated": false
+        },
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 64,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 124,
+          "value_prefix_hex": "0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "c7086add48e4f835117301a24b8a3fb7336326ab2e2d34f4eeced98049a10d45",
+  "selection_reason": "dependency of Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DebugScalarValues.uasset"
+}

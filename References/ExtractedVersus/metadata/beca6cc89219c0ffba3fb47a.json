@@ -1,0 +1,1117 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/frv/Upper_Acc/frv_opu_scarecrow/BP_ItemDrop_Scarecrow.uasset",
+  "id": "beca6cc89219c0ffba3fb47a",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 11797,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/frv/Upper_Acc/frv_opu_scarecrow/BP_ItemDrop_Scarecrow.uasset",
+  "metadata_file": "metadata/beca6cc89219c0ffba3fb47a.json",
+  "function_count": 4,
+  "summary": {
+    "total_header_size": 8340,
+    "package_flags": 2147483648,
+    "name_count": 130,
+    "name_offset": 189,
+    "export_count": 29,
+    "export_offset": 5156,
+    "import_count": 52,
+    "import_offset": 3700,
+    "bulk_data_start_offset": 11793,
+    "guid": "d679af2fe1610b43a6d9a18d3d321ff4"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/frv/Upper_Acc/frv_opu_scarecrow/BP_ItemDrop_Scarecrow",
+    "/Game/Character/Item/Meshes/frv/Upper_Acc/frv_opu_scarecrow/Meshes/SM_CH_frv_opu_scarecrow",
+    "/Game/Effect/TK75/Common/Particle/PS_EF_cmnsmoke00",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "Add_IntInt",
+    "AllNodes",
+    "ApplySM",
+    "Array_Get",
+    "Array_Length",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_ItemDrop_Scarecrow",
+    "BP_ItemDrop_Scarecrow_C",
+    "ByteProperty",
+    "CallFunc_Add_IntInt_ReturnValue",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_Array_Length_ReturnValue",
+    "CallFunc_GetMaterials_ReturnValue",
+    "CallFunc_K2_GetComponentLocation_ReturnValue",
+    "CallFunc_Less_IntInt_ReturnValue",
+    "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+    "Camera",
+    "Channel",
+    "Class",
+    "CollisionProfileName",
+    "CollisionResponse",
+    "CollisionResponses",
+    "ComponentTemplate",
+    "Custom",
+    "Default__Actor",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_ItemDrop_Scarecrow_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__GameplayStatics",
+    "Default__IntProperty",
+    "Default__KismetArrayLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StaticMeshComponent",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_REMOVED_30602F69450919582C7A998267BE1E9A",
+    "DefaultSceneRootNode",
+    "Destructible",
+    "ECC_GameTraceChannel5",
+    "ECollisionChannel",
+    "ECollisionResponse",
+    "ECR_Block",
+    "ECR_Ignore",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_ItemDrop_Scarecrow",
+    "FloatProperty",
+    "Function",
+    "GameplayStatics",
+    "GeneratedClass",
+    "GetMaterials",
+    "Guid",
+    "IntProperty",
+    "K2_GetComponentLocation",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "Less_IntInt",
+    "MassInKgOverride",
+    "MaterialInterface",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "ObjectType",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "ParticleSystemComponent",
+    "Pawn",
+    "PhysicsBody",
+    "PointerToUberGraphFrame",
+    "PS_EF_cmnsmoke00",
+    "ReceiveBeginPlay",
+    "Response",
+    "ResponseArray",
+    "ResponseChannel",
+    "RootNodes",
+    "ScarecrowSM",
+    "ScarecrowSM_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetMaterial",
+    "SetSimulatePhysics",
+    "SimpleConstructionScript",
+    "SM",
+    "SM_CH_frv_opu_scarecrow",
+    "SpawnEmitterAtLocation",
+    "StaticMesh",
+    "StaticMeshComponent",
+    "StructProperty",
+    "Temp_int_Array_Index_Variable",
+    "Temp_int_Loop_Counter_Variable",
+    "TKWall",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector",
+    "Vehicle",
+    "Visibility",
+    "WorldDynamic"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -43,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -42,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -43,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -43,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -42,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "GameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "MaterialInterface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -43,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -43,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -42,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "SpawnEmitterAtLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Array_Get"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Array_Length"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Add_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Less_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "K2_GetComponentLocation"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "GameplayStatics",
+      "outer_index": -43,
+      "object_name": "Default__GameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -42,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetArrayLibrary",
+      "outer_index": -43,
+      "object_name": "Default__KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -42,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/frv/Upper_Acc/frv_opu_scarecrow/Meshes/SM_CH_frv_opu_scarecrow"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Common/Particle/PS_EF_cmnsmoke00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -41,
+      "object_name": "PS_EF_cmnsmoke00"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -43,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -42,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -43,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -43,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -43,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer_index": -40,
+      "object_name": "SM_CH_frv_opu_scarecrow"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -43,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -42,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 19,
+      "object_name": "ScarecrowSM",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8340,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 5,
+      "object_name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8380,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Scarecrow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 5,
+      "object_name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8420,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Scarecrow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 5,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8460,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Scarecrow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 19,
+      "object_name": "ExecuteUbergraph_BP_ItemDrop_Scarecrow",
+      "object_flags": 1,
+      "serial_size": 169,
+      "serial_offset": 8496,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 185,
+        "script_storage_size": 125,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8528,
+        "bytecode_sha256": "5e2677b30c0e7bf1b01de6ec62be6bb4ac3a2ded0370f374058e44a331134b3d",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/beca6cc89219c0ffba3fb47a/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/beca6cc89219c0ffba3fb47a/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": -28,
+      "template_index": -27,
+      "outer_index": 19,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 8665,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": -28,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8697,
+        "bytecode_sha256": "ba5321f223d638abdd0aa560bb45a8d7e4adc08a99a9ee0c54f677db11f21fa1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/beca6cc89219c0ffba3fb47a/000005.bytecode.bin"
+      },
+      "raw_export_file": "functions/beca6cc89219c0ffba3fb47a/000005.export.bin"
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": -29,
+      "template_index": -27,
+      "outer_index": 19,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 8727,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 6,
+        "super_struct": -29,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8759,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/beca6cc89219c0ffba3fb47a/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/beca6cc89219c0ffba3fb47a/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 15,
+      "object_name": "CallFunc_GetMaterials_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8774,
+      "class_name": "ObjectProperty",
+      "owner": "CallFunc_GetMaterials_ReturnValue",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 17,
+      "object_name": "CallFunc_Add_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8814,
+      "class_name": "IntProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 17,
+      "object_name": "CallFunc_Less_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 8850,
+      "class_name": "BoolProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 17,
+      "object_name": "Temp_int_Loop_Counter_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8888,
+      "class_name": "IntProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 17,
+      "object_name": "CallFunc_Array_Get_Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8924,
+      "class_name": "ObjectProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 17,
+      "object_name": "CallFunc_Array_Length_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8964,
+      "class_name": "IntProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 17,
+      "object_name": "Temp_int_Array_Index_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9000,
+      "class_name": "IntProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 17,
+      "object_name": "CallFunc_GetMaterials_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9036,
+      "class_name": "ArrayProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 17,
+      "object_name": "SM",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9076,
+      "class_name": "ObjectProperty",
+      "owner": "ApplySM",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 19,
+      "object_name": "ApplySM",
+      "object_flags": 1,
+      "serial_size": 349,
+      "serial_offset": 9116,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": 0,
+        "first_child": 16,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 489,
+        "script_storage_size": 305,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 9148,
+        "bytecode_sha256": "b28573e605d401ae18f3685c8fd741a9f53a416a768a95120ed585b76d56d68d",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/beca6cc89219c0ffba3fb47a/000016.bytecode.bin"
+      },
+      "raw_export_file": "functions/beca6cc89219c0ffba3fb47a/000016.export.bin"
+    },
+    {
+      "index": 17,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 19,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9465,
+      "class_name": "StructProperty",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -15,
+      "super_index": -13,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Scarecrow_C",
+      "object_flags": 9,
+      "serial_size": 215,
+      "serial_offset": 9505,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 28,
+        "UberGraphFramePointerProperty": 18,
+        "UberGraphFunction": 5
+      }
+    },
+    {
+      "index": 19,
+      "class_index": 19,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_ItemDrop_Scarecrow_C",
+      "object_flags": 49,
+      "serial_size": 65,
+      "serial_offset": 9720,
+      "class_name": "BP_ItemDrop_Scarecrow_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "55 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Scarecrow",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 9785,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -13,
+        "SimpleConstructionScript": 28,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 19,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "4b 52 d0 12 58 91 5a 4d b4 2c 60 17 2f ea 8d bd",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 21,
+      "object_name": "ApplySM",
+      "object_flags": 8,
+      "serial_size": 98,
+      "serial_offset": 10034,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Scarecrow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 21,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 136,
+      "serial_offset": 10132,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Scarecrow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 36,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 21,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 10268,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Scarecrow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 19,
+      "object_name": "DefaultSceneRoot_REMOVED_30602F69450919582C7A998267BE1E9A",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 10376,
+      "class_name": "SceneComponent",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 25,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 28,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 10388,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 25,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "9b 0e 2a 63 f7 8a b5 41 8a b1 04 2d 8f 04 0c e1",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 26,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 28,
+      "object_name": "SCS_Node_4",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 10527,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 29,
+        "VariableName": "ScarecrowSM",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "87 89 7e 48 ed 37 09 48 83 eb 13 06 b7 74 4b 28",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 27,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 19,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 10666,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 1b 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 1b 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 26
+      }
+    },
+    {
+      "index": 28,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -51,
+      "outer_index": 19,
+      "object_name": "ScarecrowSM_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 1004,
+      "serial_offset": 10789,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_ItemDrop_Scarecrow_C",
+      "tagged_properties": {
+        "StaticMesh": -50,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 910,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "22 00 00 00 00 00 00 00 53 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 26 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 ee 02 00 00 00 00 00 00 23 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 c5 02 00 00 00 00 00 00 74 00 00 00 00 00 00 00 00 08 00 00 00 63 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 90 02 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 53 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 20 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    }
+  ],
+  "sha256": "7844b19fb502698356b55d95077da68a7672ba896b253c059d2ede3b55c06fef",
+  "selection_reason": "local-versus shared-content candidate"
+}

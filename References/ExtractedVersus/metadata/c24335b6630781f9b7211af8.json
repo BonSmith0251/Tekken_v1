@@ -1,0 +1,221 @@
+{
+  "path": "Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uasset",
+  "id": "c24335b6630781f9b7211af8",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 3943,
+  "encrypted_source": false,
+  "package_file": "packages/Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uasset",
+  "metadata_file": "metadata/c24335b6630781f9b7211af8.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1719,
+    "package_flags": 2147483648,
+    "name_count": 43,
+    "name_offset": 189,
+    "export_count": 2,
+    "export_offset": 1499,
+    "import_count": 7,
+    "import_offset": 1303,
+    "bulk_data_start_offset": 3939,
+    "guid": "b8c0781cda5aaa4d82274783cc02c3a4"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix",
+    "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "BreakOutFloat3Components",
+    "Class",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialFunction",
+    "Description",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionFunctionInput",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "Transform3x3Matrix"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -7,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -6,
+      "object_name": "BreakOutFloat3Components"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -7,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 2,
+      "object_name": "MaterialExpressionMaterialFunctionCall_28",
+      "object_flags": 8,
+      "serial_size": 1963,
+      "serial_offset": 1719,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "Transform3x3Matrix",
+      "tagged_properties": {
+        "MaterialFunction": -4,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 218,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 14 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 a5 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6b c5 c5 0f 8f 79 35 43 8c 92 cb 20 21 74 c8 f1 17 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 00 00 46 6c 6f 61 74 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 0b 00 00 00 21 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 971,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 313,
+          "value_prefix_hex": "03 00 00 00 15 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 96 03 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c2 93 c8 6b 56 fc fc 47 94 ce 78 71 85 33 21 4e 23 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 b8 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 02 00 00 00 52 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 2,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 605,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1346,
+          "value_prefix_hex": "03 00 00 00 25 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 28 02 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 02 00 00 00 52 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 06 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "Transform3x3Matrix",
+      "object_flags": 3,
+      "serial_size": 257,
+      "serial_offset": 3682,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "33 de 30 c3 b2 fa 86 4a ac b1 55 72 b4 c1 6a 3a",
+          "value_prefix_truncated": false
+        },
+        "Description": "Transform a vector into a new basis",
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 56,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 189,
+          "value_prefix_hex": "0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "5ecf91e2aa548595827ce15a7280c6e20338e01b0c377a59278629ab59a854e7",
+  "selection_reason": "dependency of Engine/Content/Functions/Engine_MaterialFunctions02/WorldAlignedNormals_HighQuality.uasset"
+}

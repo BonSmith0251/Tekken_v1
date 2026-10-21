@@ -1,0 +1,2011 @@
+{
+  "path": "TekkenGame/Content/Character/DramaData/DramaItem/BRY/BP_Drama_bx.uasset",
+  "id": "ac7a756920d7660e7e90d1d7",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 20698,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/DramaData/DramaItem/BRY/BP_Drama_bx.uasset",
+  "metadata_file": "metadata/ac7a756920d7660e7e90d1d7.json",
+  "function_count": 7,
+  "summary": {
+    "total_header_size": 15118,
+    "package_flags": 2147483648,
+    "name_count": 190,
+    "name_offset": 189,
+    "export_count": 58,
+    "export_offset": 8582,
+    "import_count": 101,
+    "import_offset": 5754,
+    "bulk_data_start_offset": 20694,
+    "guid": "8fdac95240c7fc41a04af726294cc811"
+  },
+  "names": [
+    "/Game/Character/Common/BP_CharacterManager",
+    "/Game/Character/DramaData/BP_DramaItemBase",
+    "/Game/Character/DramaData/DramaItem/BRY/AM_Drama_bx",
+    "/Game/Character/DramaData/DramaItem/BRY/BP_Drama_bx",
+    "/Game/Character/DramaData/ItemMesh/BRY/bx_s03",
+    "/Game/Character/DramaData/ItemMesh/BRY/T7_SM_demo_BreakGlass/Mesh/T7_SM_demo_BreakGlass",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "ActorTickFunction",
+    "Add_VectorVector",
+    "AllNodes",
+    "AM_bx",
+    "AM_Drama_bx",
+    "AnimationData",
+    "AnimationMode",
+    "AnimMontage",
+    "Array_Get",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bCanEverTick",
+    "bEnableGravity",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BooleanAND",
+    "BoolProperty",
+    "BP_CharacterManager_C",
+    "BP_Drama_bx",
+    "BP_Drama_bx_C",
+    "BP_DramaItemBase_C",
+    "BreakGlass",
+    "BreakGlassFrame",
+    "bSavedLooping",
+    "bSavedPlaying",
+    "bx_s03",
+    "ByteProperty",
+    "CallFunc_Add_VectorVector_ReturnValue",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_BooleanAND_ReturnValue",
+    "CallFunc_Divide_FloatFloat_ReturnValue",
+    "CallFunc_EqualEqual_StrStr_ReturnValue",
+    "CallFunc_GetActorForwardVector_ReturnValue",
+    "CallFunc_GetAllActorsOfClass_OutActors",
+    "CallFunc_GetCameraPawn_ReturnValue",
+    "CallFunc_GetFOVAngle_ReturnValue",
+    "CallFunc_GetTekkenPlayerController_ReturnValue",
+    "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+    "CallFunc_IsValid_ReturnValue",
+    "CallFunc_IsValid_ReturnValue2",
+    "CallFunc_K2_AddLocalRotation_SweepHitResult",
+    "CallFunc_K2_GetActorLocation_ReturnValue",
+    "CallFunc_K2_GetActorRotation_ReturnValue",
+    "CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult",
+    "CallFunc_MakeVector_ReturnValue",
+    "CallFunc_Multiply_VectorFloat_ReturnValue",
+    "CallFunc_Not_PreBool_ReturnValue",
+    "CamPawn",
+    "CharacterManager",
+    "Class",
+    "ComponentTemplate",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_CharacterManager_C",
+    "Default__BP_Drama_bx_C",
+    "Default__BP_DramaItemBase_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__GameplayStatics",
+    "Default__InheritableComponentHandler",
+    "Default__IntProperty",
+    "Default__KismetArrayLibrary",
+    "Default__KismetStringLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "Default__StaticMeshComponent",
+    "Default__StrProperty",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot1545C0D443E6F4AF53B265B6610C9BD2",
+    "DefaultSceneRootEFC690F74DA1893F90ED9DB07D283D1B",
+    "DefaultSceneRootNode",
+    "DeltaSeconds",
+    "Divide_FloatFloat",
+    "DramaMontage",
+    "DramaName",
+    "EAnimationMode",
+    "EAnimationMode::AnimationSingleNode",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EqualEqual_StrStr",
+    "EventGraph",
+    "ExecuteUbergraph_BP_Drama_bx",
+    "FloatProperty",
+    "Function",
+    "GameplayStatics",
+    "GeneratedClass",
+    "GetActorForwardVector",
+    "GetAllActorsOfClass",
+    "GetCameraPawn",
+    "GetCharacterManager",
+    "GetFOVAngle",
+    "GetTekkenPlayerController",
+    "GreaterEqual_FloatFloat",
+    "Guid",
+    "HitResult",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "IsValid",
+    "K2_AddLocalRotation",
+    "K2_GetActorLocation",
+    "K2_GetActorRotation",
+    "K2_SetWorldLocationAndRotation",
+    "K2Node_Event_DeltaSeconds",
+    "K2Node_Event_DramaName",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "KismetStringLibrary",
+    "KismetSystemLibrary",
+    "MakeVector",
+    "Manager",
+    "MassInKgOverride",
+    "Multiply_VectorFloat",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Not_PreBool",
+    "Object",
+    "ObjectProperty",
+    "OldAnimFrame",
+    "Package",
+    "ParentClass",
+    "ParentComponentOrVariableName",
+    "ParentComponentOwnerClassName",
+    "Pawn",
+    "PlayAnimation",
+    "PlayerCameraManager",
+    "PlayerController",
+    "PointerToUberGraphFrame",
+    "PrimaryActorTick",
+    "ReceiveTick",
+    "RootNodes",
+    "Rotator",
+    "SceneComponent",
+    "SceneComponent_0__F25C6BF4",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetPlayRate",
+    "SetVisibility",
+    "SetWorldScale3D",
+    "SimpleConstructionScript",
+    "SingleAnimationPlayData",
+    "SkeletalMesh",
+    "SkeletalMeshCDB1F2074BDB7E79816CDDBEA736B2F8",
+    "SkeletalMeshComponent",
+    "Start",
+    "Started",
+    "StaticMesh",
+    "StaticMeshCDC3DB384BF418A0D0E434895222E0E8",
+    "StaticMeshComponent",
+    "Stop",
+    "StrProperty",
+    "StructProperty",
+    "T7_SM_demo_BreakGlass",
+    "TekkenBlueprintLibrary",
+    "TekkenPlayerController",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpdateMontageFrame",
+    "UpdateStaticMeshPosition",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimMontage",
+      "outer_index": -80,
+      "object_name": "AM_Drama_bx"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -83,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -84,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -78,
+      "object_name": "BP_CharacterManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -79,
+      "object_name": "BP_DramaItemBase_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -84,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -5,
+      "object_name": "Started"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -83,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/Character/Common/BP_CharacterManager",
+      "class_name": "BP_CharacterManager_C",
+      "outer_index": -78,
+      "object_name": "Default__BP_CharacterManager_C"
+    },
+    {
+      "class_package": "/Game/Character/DramaData/BP_DramaItemBase",
+      "class_name": "BP_DramaItemBase_C",
+      "outer_index": -79,
+      "object_name": "Default__BP_DramaItemBase_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -83,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "AnimMontage"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "GameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "Pawn"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "PlayerController"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -84,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -85,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -85,
+      "object_name": "TekkenPlayerController"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -84,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -5,
+      "object_name": "OldAnimFrame"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -83,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -5,
+      "object_name": "Start"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -5,
+      "object_name": "Stop"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -5,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -83,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "GetActorForwardVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "K2_GetActorLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "K2_GetActorRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "ReceiveTick"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -25,
+      "object_name": "GetAllActorsOfClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -27,
+      "object_name": "Array_Get"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "Add_VectorVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "BooleanAND"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "Divide_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "GreaterEqual_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "MakeVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "Multiply_VectorFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "Not_PreBool"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -29,
+      "object_name": "EqualEqual_StrStr"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -30,
+      "object_name": "IsValid"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -33,
+      "object_name": "K2_AddLocalRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -33,
+      "object_name": "K2_SetWorldLocationAndRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -33,
+      "object_name": "SetWorldScale3D"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -36,
+      "object_name": "PlayAnimation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -36,
+      "object_name": "SetPlayRate"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -38,
+      "object_name": "GetCameraPawn"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -38,
+      "object_name": "GetTekkenPlayerController"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "GameplayStatics",
+      "outer_index": -84,
+      "object_name": "Default__GameplayStatics"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -84,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -83,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetArrayLibrary",
+      "outer_index": -84,
+      "object_name": "Default__KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetStringLibrary",
+      "outer_index": -84,
+      "object_name": "Default__KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -84,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -5,
+      "object_name": "DramaMontage"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -83,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -32,
+      "object_name": "PlayerCameraManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/BP_CharacterManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/BP_DramaItemBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/DramaItem/BRY/AM_Drama_bx"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/ItemMesh/BRY/bx_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/ItemMesh/BRY/T7_SM_demo_BreakGlass/Mesh/T7_SM_demo_BreakGlass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -4,
+      "object_name": "SceneComponent_0__F25C6BF4"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -5,
+      "object_name": "DefaultSceneRootEFC690F74DA1893F90ED9DB07D283D1B"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -84,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -83,
+      "object_name": "Rotator"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -83,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -84,
+      "object_name": "HitResult"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -84,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -84,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -84,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -81,
+      "object_name": "bx_s03"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -84,
+      "object_name": "Default__SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer_index": -82,
+      "object_name": "T7_SM_demo_BreakGlass"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -84,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -83,
+      "object_name": "Default__StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -83,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -85,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 44,
+      "object_name": "BreakGlassFrame",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 15118,
+      "class_name": "FloatProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 44,
+      "object_name": "CamPawn",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15154,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 44,
+      "object_name": "BreakGlass",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 15194,
+      "class_name": "BoolProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 44,
+      "object_name": "CharacterManager",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15232,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 44,
+      "object_name": "AM_bx",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15272,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 44,
+      "object_name": "SkeletalMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15312,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 44,
+      "object_name": "StaticMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15352,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 13,
+      "object_name": "CallFunc_GetCameraPawn_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 15392,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_bx",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 13,
+      "object_name": "CallFunc_EqualEqual_StrStr_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 15432,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_bx",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -99,
+      "outer_index": 13,
+      "object_name": "K2Node_Event_DramaName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 15470,
+      "class_name": "StrProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_bx",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 13,
+      "object_name": "K2Node_Event_DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 15506,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_bx",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 13,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 15542,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_bx",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "ExecuteUbergraph_BP_Drama_bx",
+      "object_flags": 1,
+      "serial_size": 470,
+      "serial_offset": 15578,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": 0,
+        "first_child": 12,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 602,
+        "script_storage_size": 426,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 15610,
+        "bytecode_sha256": "0c274a590dcefa29c160a40ec85a380ce2e0127edc86744f47f02dc8862e91bd",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -14,
+      "super_index": -44,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "Stop",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 16048,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 13,
+        "super_struct": -44,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 16080,
+        "bytecode_sha256": "80c6737bf274328c427879c4d918cd7ce383c5e0f9ca2974f0f3e2b06ad02881",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -99,
+      "outer_index": 16,
+      "object_name": "DramaName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 16110,
+      "class_name": "StrProperty",
+      "owner": "Start",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -14,
+      "super_index": -43,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "Start",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 16146,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 14,
+        "super_struct": -43,
+        "first_child": 15,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 16178,
+        "bytecode_sha256": "0f112f7ce3e5812b49a5f49121732e42cc31c8afcff8c8b08c276e395f3b5eb7",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000015.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000015.export.bin"
+    },
+    {
+      "index": 16,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 18,
+      "object_name": "DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 16218,
+      "class_name": "FloatProperty",
+      "owner": "ReceiveTick",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -14,
+      "super_index": -50,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "ReceiveTick",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 16254,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 16,
+        "super_struct": -50,
+        "first_child": 17,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 16286,
+        "bytecode_sha256": "b8bc9357db44198cce419c0ac417cd7218eac7f9da528676409f5690789b03ef",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000017.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000017.export.bin"
+    },
+    {
+      "index": 18,
+      "class_index": -14,
+      "super_index": -45,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 90,
+      "serial_offset": 16326,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 18,
+        "super_struct": -45,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 70,
+        "script_storage_size": 46,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 16358,
+        "bytecode_sha256": "0895cf3116872f2882ece148f93382b649567ad45bbb64fe5fc15cdfb47ab214",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000018.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000018.export.bin"
+    },
+    {
+      "index": 19,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 24,
+      "object_name": "CallFunc_GetAllActorsOfClass_OutActors",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 16416,
+      "class_name": "ObjectProperty",
+      "owner": "CallFunc_GetAllActorsOfClass_OutActors",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 26,
+      "object_name": "CallFunc_IsValid_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 16456,
+      "class_name": "BoolProperty",
+      "owner": "GetCharacterManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 21,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 26,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 16494,
+      "class_name": "BoolProperty",
+      "owner": "GetCharacterManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 26,
+      "object_name": "CallFunc_Array_Get_Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 16532,
+      "class_name": "ObjectProperty",
+      "owner": "GetCharacterManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 23,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 26,
+      "object_name": "CallFunc_GetAllActorsOfClass_OutActors",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 16572,
+      "class_name": "ArrayProperty",
+      "owner": "GetCharacterManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 26,
+      "object_name": "Manager",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 16612,
+      "class_name": "ObjectProperty",
+      "owner": "GetCharacterManager",
+      "tagged_properties": {}
+    },
+    {
+      "index": 25,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "GetCharacterManager",
+      "object_flags": 1,
+      "serial_size": 269,
+      "serial_offset": 16652,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 19,
+        "super_struct": 0,
+        "first_child": 25,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 353,
+        "script_storage_size": 225,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 16684,
+        "bytecode_sha256": "d3198e1ba778b3c7562110ab145f0d6a302691345c52cbdbe34d00690207ce5d",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000025.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000025.export.bin"
+    },
+    {
+      "index": 26,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 42,
+      "object_name": "CallFunc_BooleanAND_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 16921,
+      "class_name": "BoolProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 27,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 42,
+      "object_name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 16959,
+      "class_name": "BoolProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 28,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 42,
+      "object_name": "CallFunc_Not_PreBool_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 16997,
+      "class_name": "BoolProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 29,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17035,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 30,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_Add_VectorVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17075,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 31,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_K2_GetActorLocation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17115,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 32,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17155,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 33,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_GetActorForwardVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17195,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 34,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 42,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 17235,
+      "class_name": "BoolProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 35,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_K2_AddLocalRotation_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17273,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 36,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_MakeVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17313,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 37,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 42,
+      "object_name": "CallFunc_Divide_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 17353,
+      "class_name": "FloatProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 38,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 42,
+      "object_name": "CallFunc_K2_GetActorRotation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17389,
+      "class_name": "StructProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 39,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 42,
+      "object_name": "CallFunc_GetFOVAngle_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 17429,
+      "class_name": "FloatProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 40,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 42,
+      "object_name": "CallFunc_GetTekkenPlayerController_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 17465,
+      "class_name": "ObjectProperty",
+      "owner": "UpdateStaticMeshPosition",
+      "tagged_properties": {}
+    },
+    {
+      "index": 41,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 44,
+      "object_name": "UpdateStaticMeshPosition",
+      "object_flags": 1,
+      "serial_size": 571,
+      "serial_offset": 17505,
+      "class_name": "Function",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 26,
+        "super_struct": 0,
+        "first_child": 41,
+        "flags_hex": "0x0C820000",
+        "native": false,
+        "script_memory_size": 847,
+        "script_storage_size": 527,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 17537,
+        "bytecode_sha256": "512d7dc32e9a963272839cf1757b08bb6ca53e7245223bb5680c70fb7b36e54c",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ac7a756920d7660e7e90d1d7/000041.bytecode.bin"
+      },
+      "raw_export_file": "functions/ac7a756920d7660e7e90d1d7/000041.export.bin"
+    },
+    {
+      "index": 42,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -100,
+      "outer_index": 44,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 18076,
+      "class_name": "StructProperty",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 43,
+      "class_index": -23,
+      "super_index": -5,
+      "template_index": -6,
+      "outer_index": 0,
+      "object_name": "BP_Drama_bx_C",
+      "object_flags": 9,
+      "serial_size": 280,
+      "serial_offset": 18116,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 56,
+        "InheritableComponentHandler": 51,
+        "UberGraphFramePointerProperty": 43,
+        "UberGraphFunction": 13
+      }
+    },
+    {
+      "index": 44,
+      "class_index": 44,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 0,
+      "object_name": "Default__BP_Drama_bx_C",
+      "object_flags": 49,
+      "serial_size": 206,
+      "serial_offset": 18396,
+      "class_name": "BP_Drama_bx_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "8b 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AM_bx": -1,
+        "BreakGlassFrame": 263.0,
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 164,
+          "value_prefix_hex": "15 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 8b 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 45,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Drama_bx",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 18602,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -5,
+        "SimpleConstructionScript": 56,
+        "InheritableComponentHandler": 51,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 44,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "4c 1e 69 92 72 cf 48 46 9e 0f 64 36 6d ab 24 91",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 46,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 46,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 236,
+      "serial_offset": 18880,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_bx",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 136,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "21 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 47,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 46,
+      "object_name": "GetCharacterManager",
+      "object_flags": 8,
+      "serial_size": 106,
+      "serial_offset": 19116,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_bx",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 32,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 48,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 46,
+      "object_name": "UpdateStaticMeshPosition",
+      "object_flags": 8,
+      "serial_size": 206,
+      "serial_offset": 19222,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_bx",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 132,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 49,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 46,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 128,
+      "serial_offset": 19428,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_bx",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 28,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 50,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -70,
+      "outer_index": 44,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 19556,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 51,
+      "class_index": -33,
+      "super_index": 0,
+      "template_index": -88,
+      "outer_index": 44,
+      "object_name": "DefaultSceneRoot1545C0D443E6F4AF53B265B6610C9BD2",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 19568,
+      "class_name": "SceneComponent",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 52,
+      "class_index": -34,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 56,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 19580,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 52,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "08 34 f5 76 0c 94 72 42 8a f9 1e 65 dc 13 02 ad",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 53,
+      "class_index": -34,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 56,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 205,
+      "serial_offset": 19719,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 57,
+        "VariableName": "SkeletalMesh",
+        "ParentComponentOrVariableName": "DefaultSceneRoot",
+        "ParentComponentOwnerClassName": "BP_DramaItemBase_C",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 177,
+          "value_prefix_hex": "4b f5 7f a5 bd 00 13 4e b3 81 24 b6 22 3c b0 d7",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 54,
+      "class_index": -34,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 56,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 205,
+      "serial_offset": 19924,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 58,
+        "VariableName": "StaticMesh",
+        "ParentComponentOrVariableName": "DefaultSceneRoot",
+        "ParentComponentOwnerClassName": "BP_DramaItemBase_C",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 177,
+          "value_prefix_hex": "43 2f 3e e5 14 47 e3 43 91 bf de f9 55 18 1a 9b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 55,
+      "class_index": -35,
+      "super_index": 0,
+      "template_index": -94,
+      "outer_index": 44,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 131,
+      "serial_offset": 20129,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 36 00 00 00 37 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "02 00 00 00 36 00 00 00 37 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 53
+      }
+    },
+    {
+      "index": 56,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -96,
+      "outer_index": 44,
+      "object_name": "SkeletalMeshCDB1F2074BDB7E79816CDDBEA736B2F8",
+      "object_flags": 41,
+      "serial_size": 303,
+      "serial_offset": 20260,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {
+        "AnimationMode": "EAnimationMode::AnimationSingleNode",
+        "AnimationData": {
+          "name": "AnimationData",
+          "type": "StructProperty",
+          "size": 60,
+          "array_index": 0,
+          "struct_name": "SingleAnimationPlayData",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 90,
+          "value_prefix_hex": "26 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8b 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "SkeletalMesh": -95,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 63,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 228,
+          "value_prefix_hex": "16 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 06 01 ad 3d 8b 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 57,
+      "class_index": -37,
+      "super_index": 0,
+      "template_index": -98,
+      "outer_index": 44,
+      "object_name": "StaticMeshCDC3DB384BF418A0D0E434895222E0E8",
+      "object_flags": 41,
+      "serial_size": 131,
+      "serial_offset": 20563,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_Drama_bx_C",
+      "tagged_properties": {
+        "StaticMesh": -97,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "87 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 8b 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "e2a3a4d89115ee29bc6fdee334603ab81560a0d2986244c77ddafdeb0c4deda5",
+  "selection_reason": "local-versus shared-content candidate"
+}
