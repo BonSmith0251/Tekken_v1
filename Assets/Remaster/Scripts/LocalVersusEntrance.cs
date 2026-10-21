@@ -32,7 +32,7 @@ namespace Versus.Remaster
 
         public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model,
             FighterActionMotion jin, MuseumCharacter jinCharacter,
-            FighterActionMotion kazuya, MuseumCharacter kazuyaCharacter)
+            FighterActionMotion kazuya, MuseumCharacter kazuyaCharacter, EntranceCameraLens sharedLens)
         {
             playerOne = p1; playerTwo = p2; cameraRig = camera; battle = model;
             jinMotion = jin;
@@ -49,7 +49,7 @@ namespace Versus.Remaster
             jinCamera = new EntranceCameraTrack("Jin_s00", 2218, jinIntroFrames);
             kazuyaCamera = new EntranceCameraTrack("Kazuya_s06", 2247, kazuyaIntroFrames);
             gameplayFov = camera.fieldOfView;
-            lens = new EntranceCameraLens(camera);
+            lens = sharedLens;
             Current = Shot.PlayerOne;
         }
 
@@ -90,7 +90,6 @@ namespace Versus.Remaster
             if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
             playerOne.position = P1Ready; playerTwo.position = P2Ready;
             SetGameplayCamera(1);
-            lens.Restore();
             battle.BeginFight();
         }
 

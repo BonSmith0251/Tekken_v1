@@ -23,6 +23,9 @@ namespace Versus.Remaster
         readonly float[] pendingAt = { 0, 0 };
         IFighterPresentation[] views;
         Camera cameraRig;
+        EntranceCameraLens gameplayLens;
+        // Retain the prototype framing until a native gameplay FOV is recovered.
+        const float GameplayVerticalFov = 38;
         LocalVersusEntrance entrance;
         bool menu, help, diagnostic;
         readonly int[] aiCooldown = new int[2];
@@ -82,7 +85,7 @@ namespace Versus.Remaster
             views = new IFighterPresentation[] { jin, kazuya };
             if (playEntrance)
                 entrance = new LocalVersusEntrance(jinObject.transform, kazuyaObject.transform,
-                    cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions);
+                    cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions, gameplayLens);
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
@@ -165,7 +168,9 @@ namespace Versus.Remaster
             cameraRig = sceneCamera ? sceneCamera : new GameObject("Versus camera").AddComponent<Camera>();
             if (!sceneCamera) cameraRig.transform.SetParent(transform);
             cameraRig.tag = "MainCamera"; cameraRig.backgroundColor = new Color(.025f, .04f, .07f);
-            cameraRig.clearFlags = CameraClearFlags.SolidColor; cameraRig.fieldOfView = 38;
+            cameraRig.clearFlags = CameraClearFlags.SolidColor;
+            gameplayLens = new EntranceCameraLens(cameraRig);
+            gameplayLens.SetVerticalFov(GameplayVerticalFov);
             cameraRig.nearClipPlane = .1f; cameraRig.farClipPlane = 100;
             if (!cameraRig.GetComponent<AudioListener>()) cameraRig.gameObject.AddComponent<AudioListener>();
         }
@@ -246,6 +251,7 @@ namespace Versus.Remaster
             for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
                 !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
             if (entrance != null && entrance.Active) { entrance.Present(); return; }
+            gameplayLens.SetVerticalFov(GameplayVerticalFov);
             var a = battle.fighters[0]; var b = battle.fighters[1];
             float distance = Mathf.Clamp(9 + Mathf.Abs(a.x - b.x) * .6f, 11, 17);
             Vector3 target = new Vector3((a.x + b.x) / 2, 1, (a.z + b.z) / 2);
@@ -304,8 +310,24 @@ namespace Versus.Remaster
         { var old = GUI.color; GUI.color = color ?? Color.white; GUI.Label(rect, value, style); GUI.color = old; }
         void OnGUI()
         {
-            Styles(); GUI.matrix = Matrix4x4.Scale(new Vector3(Screen.width / 1280f, Screen.height / 720f, 1));
+            Styles();
             if (entrance != null && entrance.Active) { entrance.Draw(); return; }
+            if (!cameraRig) return;
+            var previousMatrix = GUI.matrix;
+            GUI.matrix = Matrix4x4.identity;
+            Rect viewport = cameraRig.pixelRect;
+            float top = Screen.height - viewport.yMax;
+            Panel(new Rect(0, 0, Screen.width, top), Color.black);
+            Panel(new Rect(0, top + viewport.height, Screen.width, viewport.y), Color.black);
+            Panel(new Rect(0, top, viewport.x, viewport.height), Color.black);
+            Panel(new Rect(viewport.xMax, top, Screen.width - viewport.xMax, viewport.height), Color.black);
+            GUI.matrix = Matrix4x4.TRS(new Vector3(viewport.x, top, 0), Quaternion.identity,
+                new Vector3(viewport.width / 1280f, viewport.height / 720f, 1));
+            try { DrawGameplayGUI(); }
+            finally { GUI.matrix = previousMatrix; }
+        }
+        void DrawGameplayGUI()
+        {
             if (menu) { DrawMenu(); return; }
             Panel(new Rect(0, 0, 1280, 115), Ink);
             for (int i = 0; i < 2; i++)
