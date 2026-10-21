@@ -44,13 +44,84 @@ namespace Versus.Remaster
 
         static Vector3 RigBasis(Vector3 native) => new Vector3(native.z, native.y, native.x);
 
-        public void Apply(Camera camera, Transform actor, int frame)
+        public void Apply(Camera camera, Transform actor, int frame, EntranceCameraLens lens)
         {
             // Frame sampling preserves original cuts; smoothing would sweep through them.
             int f = Mathf.Clamp(frame, 0, Frames - 1);
             camera.transform.SetPositionAndRotation(actor.TransformPoint(positions[f]),
                 Quaternion.LookRotation(actor.TransformDirection(forwards[f]), actor.TransformDirection(ups[f])));
-            camera.fieldOfView = Camera.HorizontalToVerticalFieldOfView(horizontalFov[f], camera.aspect);
+            lens.SetHorizontalFov(horizontalFov[f]);
+        }
+    }
+
+    // Source tracks store angular FOV, not filmback dimensions. 36 mm is an
+    // equivalent-lens convention; the reference composition uses a 16:9 gate.
+    public sealed class EntranceCameraLens
+    {
+        public const float ReferenceAspect = 16f / 9f;
+        public static readonly Vector2 Sensor = new Vector2(36, 36 / ReferenceAspect);
+        readonly Camera camera;
+        readonly Rect originalRect;
+        readonly bool originalPhysical;
+        readonly Vector2 originalSensor, originalShift;
+        readonly Camera.GateFitMode originalGateFit;
+        readonly float originalFov, originalFocalLength;
+
+        public EntranceCameraLens(Camera camera)
+        {
+            this.camera = camera;
+            originalRect = camera.rect;
+            originalPhysical = camera.usePhysicalProperties;
+            originalSensor = camera.sensorSize; originalShift = camera.lensShift;
+            originalGateFit = camera.gateFit;
+            originalFov = camera.fieldOfView; originalFocalLength = camera.focalLength;
+        }
+
+        void Configure()
+        {
+            float width = camera.targetTexture ? camera.targetTexture.width : Screen.width;
+            float height = camera.targetTexture ? camera.targetTexture.height : Screen.height;
+            float aspect = width * originalRect.width / Mathf.Max(1, height * originalRect.height);
+            Rect rect = originalRect;
+            if (aspect > ReferenceAspect)
+            {
+                rect.width *= ReferenceAspect / aspect;
+                rect.x += (originalRect.width - rect.width) * .5f;
+            }
+            else
+            {
+                rect.height *= aspect / ReferenceAspect;
+                rect.y += (originalRect.height - rect.height) * .5f;
+            }
+            camera.rect = rect;
+            camera.ResetAspect();
+            camera.usePhysicalProperties = true;
+            camera.sensorSize = Sensor;
+            camera.lensShift = Vector2.zero;
+            camera.gateFit = Camera.GateFitMode.None;
+        }
+
+        public void SetHorizontalFov(float degrees)
+        {
+            Configure();
+            camera.focalLength = Camera.FieldOfViewToFocalLength(degrees, Sensor.x);
+        }
+
+        public void SetVerticalFov(float degrees)
+        {
+            Configure();
+            camera.focalLength = Camera.FieldOfViewToFocalLength(degrees, Sensor.y);
+        }
+
+        public void Restore()
+        {
+            camera.rect = originalRect;
+            camera.ResetAspect();
+            camera.sensorSize = originalSensor; camera.lensShift = originalShift;
+            camera.gateFit = originalGateFit;
+            camera.usePhysicalProperties = originalPhysical;
+            if (originalPhysical) camera.focalLength = originalFocalLength;
+            else camera.fieldOfView = originalFov;
         }
     }
 }

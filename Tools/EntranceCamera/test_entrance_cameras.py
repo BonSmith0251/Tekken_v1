@@ -9,6 +9,24 @@ WORKSPACE = PROJECT.parents[1]
 
 
 class EntranceCameraTests(unittest.TestCase):
+    def test_physical_lens_preserves_source_projection(self):
+        # Independent pinhole projection check for every animated lens sample.
+        # 36 x 20.25 mm is an equivalent 16:9 gate, not a recovered filmback.
+        for resource in ['Jin_s00', 'Kazuya_s06']:
+            camera = (PROJECT / f'Assets/Remaster/Resources/EntranceCameras/{resource}.bytes').read_bytes()
+            frames = struct.unpack_from('<I', camera, 4)[0]
+            for frame in range(frames):
+                horizontal = struct.unpack_from('<f', camera, 20 + frame * 48 + 24)[0]
+                focal = 36 / (2 * math.tan(horizontal / 2))
+                vertical = 2 * math.atan(20.25 / (2 * focal))
+                self.assertAlmostEqual(2 * focal / 36, 1 / math.tan(horizontal / 2), places=10)
+                self.assertAlmostEqual(2 * focal / 20.25, 1 / math.tan(vertical / 2), places=10)
+                for width, height in [(1280, 720), (1024, 768), (1920, 1200), (3440, 1440)]:
+                    scale = min(width / 16, height / 9)
+                    self.assertAlmostEqual((16 * scale) / (9 * scale), 16 / 9)
+                    self.assertLessEqual(16 * scale, width + 1e-6)
+                    self.assertLessEqual(9 * scale, height + 1e-6)
+
     def test_tracks_match_body_duration_and_have_valid_lenses(self):
         for character, motion, resource, move, track in [
             ('Jin', 661, 'Jin_s00', 2218, 104),

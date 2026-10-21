@@ -19,6 +19,7 @@ namespace Versus.Remaster
         readonly int jinIntro, kazuyaIntro;
         readonly int jinIntroFrames, kazuyaIntroFrames;
         readonly EntranceCameraTrack jinCamera, kazuyaCamera;
+        readonly EntranceCameraLens lens;
         readonly float gameplayFov;
         Vector3 faceOffPosition;
         Quaternion faceOffRotation;
@@ -48,6 +49,7 @@ namespace Versus.Remaster
             jinCamera = new EntranceCameraTrack("Jin_s00", 2218, jinIntroFrames);
             kazuyaCamera = new EntranceCameraTrack("Kazuya_s06", 2247, kazuyaIntroFrames);
             gameplayFov = camera.fieldOfView;
+            lens = new EntranceCameraLens(camera);
             Current = Shot.PlayerOne;
         }
 
@@ -88,6 +90,7 @@ namespace Versus.Remaster
             if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
             playerOne.position = P1Ready; playerTwo.position = P2Ready;
             SetGameplayCamera(1);
+            lens.Restore();
             battle.BeginFight();
         }
 
@@ -100,9 +103,9 @@ namespace Versus.Remaster
             playerOne.rotation = Quaternion.Euler(0, 90, 0);
             playerTwo.rotation = Quaternion.Euler(0, -90, 0);
             if (Current == Shot.PlayerOne)
-                jinCamera.Apply(cameraRig, playerOne, Frame);
+                jinCamera.Apply(cameraRig, playerOne, Frame, lens);
             else if (Current == Shot.PlayerTwo)
-                kazuyaCamera.Apply(cameraRig, playerTwo, Frame);
+                kazuyaCamera.Apply(cameraRig, playerTwo, Frame, lens);
             else
             {
                 if (Current == Shot.FaceOff && lastPresented != Current)
@@ -125,10 +128,30 @@ namespace Versus.Remaster
             Quaternion rotation = Quaternion.LookRotation(target - position);
             cameraRig.transform.SetPositionAndRotation(Vector3.Lerp(faceOffPosition, position, blend),
                 blend >= 1 ? rotation : Quaternion.Slerp(faceOffRotation, rotation, blend));
-            cameraRig.fieldOfView = Mathf.Lerp(faceOffFov, gameplayFov, blend);
+            lens.SetVerticalFov(Mathf.Lerp(faceOffFov, gameplayFov, blend));
         }
 
         public void Draw()
+        {
+            if (!Active) return;
+            var previousMatrix = GUI.matrix;
+            var previousColor = GUI.color;
+            GUI.matrix = Matrix4x4.identity;
+            Rect viewport = cameraRig.pixelRect;
+            float top = Screen.height - viewport.yMax;
+            GUI.color = Color.black;
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, top), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(0, top + viewport.height, Screen.width, viewport.y), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(0, top, viewport.x, viewport.height), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(viewport.xMax, top, Screen.width - viewport.xMax, viewport.height), Texture2D.whiteTexture);
+            GUI.color = previousColor;
+            GUI.matrix = Matrix4x4.TRS(new Vector3(viewport.x, top, 0), Quaternion.identity,
+                new Vector3(viewport.width / 1280f, viewport.height / 720f, 1));
+            try { DrawContent(); }
+            finally { GUI.matrix = previousMatrix; }
+        }
+
+        void DrawContent()
         {
             if (!Active) return;
             if (heading == null)

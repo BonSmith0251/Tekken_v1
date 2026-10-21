@@ -1,0 +1,52 @@
+{
+  "referenceAspect": 1.7777777777777777,
+  "aspectEvidence": "Installed GameUserSettings.ini DesiredScreenWidth=1280, DesiredScreenHeight=720; live original projection not captured.",
+  "lensEvidence": "MOTA descriptor 15 first component is interpreted as horizontal FOV radians; Unreal FMinimalViewInfo documents horizontal FOV; local Direct_TekkenDirect.py maps camera angle radians to game FOV degrees.",
+  "equivalentSensorMm": [
+    36,
+    20.25
+  ],
+  "originalSensorRecovered": false,
+  "originalFocalLengthRecovered": false,
+  "physicalMode": true,
+  "gateFit": "None",
+  "sources": [
+    "https://dev.epicgames.com/documentation/unreal-engine/API/Runtime/Engine/FMinimalViewInfo",
+    "https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Camera-focalLength.html",
+    "https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Camera.FieldOfViewToFocalLength.html"
+  ],
+  "tracks": [
+    {
+      "resource": "Jin_s00",
+      "frames": 255,
+      "horizontalFovDegreesRange": [
+        39.597745090487535,
+        48.45549982128067
+      ],
+      "verticalFovDegreesRange": [
+        22.895187877221968,
+        28.409278165195147
+      ],
+      "equivalentFocalLengthMmRange": [
+        39.99999143205594,
+        50.00001043068101
+      ]
+    },
+    {
+      "resource": "Kazuya_s06",
+      "frames": 316,
+      "horizontalFovDegreesRange": [
+        15.799827522052569,
+        41.114706199485276
+      ],
+      "verticalFovDegreesRange": [
+        8.926056276516563,
+        23.82403765565223
+      ],
+      "equivalentFocalLengthMmRange": [
+        47.99666748786459,
+        129.72044342489494
+      ]
+    }
+  ]
+}
