@@ -14,16 +14,18 @@ namespace Versus.Remaster
         int presentationAction = -1;
         float presentationFrame;
         bool presentationLoops;
+        bool presentationRootMotion;
         float stateStart;
         public int PlayedActions { get; private set; }
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
 
-        public void SetPresentation(int action, float frame, bool loop)
+        public void SetPresentation(int action, float frame, bool loop, bool rootMotion = false)
         {
             presentationAction = action;
             presentationFrame = frame;
             presentationLoops = loop;
+            presentationRootMotion = rootMotion;
         }
 
         public void Initialize(FighterActionCatalog source)
@@ -83,9 +85,9 @@ namespace Versus.Remaster
                 : Mathf.Repeat((clock - stateStart) * 60, frames);
             int a = Mathf.Clamp((int)frame, 0, frames - 1), b = Mathf.Min(a + 1, frames - 1);
             float t = frame - a;
-            // In-place pose: battle rules own world movement and facing.
+            // Combat stays in place. Original entrance tracks retain root motion to match their cameras.
             Vector3 root = Vector3.Lerp(positions[a], positions[b], t);
-            root.x = 0; root.y = 0;
+            if (presentationAction < 0 || !presentationRootMotion) { root.x = 0; root.y = 0; }
             bones[0].localPosition = root;
             for (int i = 0; i < bones.Length; i++)
                 bones[i].localRotation = Quaternion.Slerp(rotations[a, i], rotations[b, i], t);

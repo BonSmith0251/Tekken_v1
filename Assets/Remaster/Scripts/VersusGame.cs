@@ -88,7 +88,8 @@ namespace Versus.Remaster
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
             blockMaterial = FighterView.Surface(Color.cyan);
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0)
-            { menu = false; Invoke(nameof(SmokeCapture), playEntrance ? 12 : 8); Invoke(nameof(SmokeExit), playEntrance ? 14 : 10); }
+            { menu = false; float introTime = entrance != null ? entrance.DurationSeconds : 0;
+                Invoke(nameof(SmokeCapture), introTime + 8); Invoke(nameof(SmokeExit), introTime + 10); }
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
         }
@@ -244,6 +245,7 @@ namespace Versus.Remaster
             if (entrance != null && entrance.Active) entrance.PrepareMotion();
             for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
                 !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
+            if (entrance != null && entrance.Active) { entrance.Present(); return; }
             var a = battle.fighters[0]; var b = battle.fighters[1];
             float distance = Mathf.Clamp(9 + Mathf.Abs(a.x - b.x) * .6f, 11, 17);
             Vector3 target = new Vector3((a.x + b.x) / 2, 1, (a.z + b.z) / 2);
@@ -252,7 +254,6 @@ namespace Versus.Remaster
             cameraRig.transform.position = Vector3.Lerp(cameraRig.transform.position == Vector3.zero ? position : cameraRig.transform.position,
                 position, 1 - Mathf.Exp(-Time.unscaledDeltaTime * 7));
             cameraRig.transform.LookAt(target);
-            if (entrance != null && entrance.Active) entrance.Present();
         }
         PlayerCommand ReadInput(int player)
         {
