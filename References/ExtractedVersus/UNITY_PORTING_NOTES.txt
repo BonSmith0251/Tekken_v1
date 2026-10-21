@@ -1,0 +1,40 @@
+TEKKEN SCRIPT AND LOGIC REFERENCE BUNDLE
+
+This is an extraction from cooked game files, NOT an original source tree or a
+Unity project. No C# conversion or complete native-game decompilation is claimed.
+
+START HERE
+  function-index.csv: searchable package/function names and bytecode locations.
+  index.jsonl: one record per extracted package or supporting text file.
+  metadata/: readable names, imports, exports, tagged defaults and function info.
+  functions/: original function export bytes and validated serialized bytecode.
+  packages/: original cooked packages, decrypted when necessary (up to 64 MiB).
+  text/: packaged configuration, project/plugin descriptors and any source files.
+  loose-text/: matching text/source files found outside the archives, if any.
+  scan-report.json: scan coverage, totals, omissions and failures.
+
+The 24-character directory/file IDs are hashes of virtual paths. Use the indices
+to map each ID back to its original asset path. Function filenames use the
+zero-based export index, so duplicate function names cannot overwrite each other.
+Property descriptor offsets refer to that export's bytes. Prefix hex is bounded;
+the preserved package/export is the authority for the complete value.
+
+FOR A UNITY REMASTER
+  1. Use the exported functions, defaults and dependencies as a behavioral map.
+  2. Reimplement character loading, state changes and UI behavior as Unity C#.
+     Unreal Actor/UObject references and Kismet bytecode do not execute in Unity.
+  3. Recreate native Tekken/Engine calls separately. Blueprint imports name these
+     calls but do not contain their C++ implementation. Native executable/DLL
+     logic is not recovered by this exporter.
+  4. Convert geometry, skeletons, animations, textures and materials separately;
+     these cooked .uasset/.umap packages are not Unity-ready assets.
+  5. The previously decoded ../tkdata folder holds game-specific binary tables
+     and motion metadata. Those still need schema-aware conversion and new code.
+
+Bytecode is retained as binary with SHA256 and exact offsets, not mislabeled as
+readable source. A function whose layout could not be validated retains its raw
+export and an explicit error. Editor graph exports, when present, are retained;
+their presence does not establish recovery of complete original Blueprint graphs.
+Packages over 64 MiB are not copied whole; bounded script exports and metadata
+are still extracted. Header/export read limits and every failure are reported.
+Original archives, decrypted assets and the suspended game process are unchanged.

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4e944c7c0fe584a8641ffe56ca3be2, type: 3}
+  m_Name: LocalVersus
+  m_EditorClassIdentifier: 
+  rules:
+    health: 100
+    seconds: 60
+    roundsToWin: 2
+    walkSpeed: 2.8
+    arenaHalfWidth: 6
+    arenaHalfDepth: 2.8
+    moves:
+    - name: Jab
+      height: 0
+      damage: 7
+      startup: 10
+      active: 3
+      recovery: 16
+      stun: 18
+      reach: 1.65
+    - name: Cross
+      height: 1
+      damage: 14
+      startup: 18
+      active: 3
+      recovery: 23
+      stun: 25
+      reach: 1.8
+    - name: Sweep
+      height: 2
+      damage: 11
+      startup: 22
+      active: 4
+      recovery: 26
+      stun: 24
+      reach: 1.9
+    - name: Drive kick
+      height: 1
+      damage: 20
+      startup: 28
+      active: 4
+      recovery: 32
+      stun: 33
+      reach: 2.1
+  playerOne: JIN KAZAMA
+  playerTwo: KAZUYA MISHIMA
+  colorOne: {r: 0.95, g: 0.15, b: 0.22, a: 1}
+  colorTwo: {r: 0.1, g: 0.6, b: 1, a: 1}
+  notes: Original prototype rules. Replace with independently rebuilt move data and
+    retargeted animation.

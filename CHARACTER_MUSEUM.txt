@@ -1,0 +1,46 @@
+CHARACTER MUSEUM - JIN FULL MOVE RECORDS
+
+The character list now includes Jin Kazama and Kazuya Mishima. Kazuya includes
+eight complete installed outfits, with Karate Gi first for a clear body preview:
+Karate Gi, Default 1P Silver Coat, Battle Damaged Gi, Tekken 4 Gi, Gilet,
+Kamikaze, Tattoo Shirt, and Wagara. His silver coat intentionally hangs from
+his shoulders with empty sleeves behind his fighting arms. He has 2,333
+extracted move records, covering
+1,378 distinct body clips and 9,683 cancel/transition entries. Select Kazuya in
+the CHARACTERS list, then use the same search, playback, scrub and branch tools.
+
+Launch Open Character Museum.cmd or open CharacterMuseum.unity and press Play.
+Jin now has all 2,227 extracted move records, including transitions, variants,
+shared reactions, item actions, throws, intros and outros. These reference
+1,361 distinct body animations; shared animations remain separate move records.
+
+Use the COSTUMES list to switch among Jin's seven complete installed outfit sets:
+Default 1P, Karate Gi, Emperor, School Uniform, Long Coat, Regulus, and
+Tattered / Devil. Costume changes keep the selected action and timeline frame,
+so the same pose can be compared across every outfit. These are Jin-specific
+full-body sets; the game's separate generic customization accessories are not
+treated as complete costumes in this selector.
+
+Search by original internal move name, animation name or numeric move ID.
+Use the page arrows to browse all results, 100 records per page.
+Space plays/pauses. Arrow keys step. Drag the timeline to scrub.
+Right-drag orbits; mouse wheel zooms. Speed and looping are adjustable.
+Source travel restores the clip's horizontal movement and makes the camera follow.
+
+Transitions / original record opens the selected move's default transition,
+all cancel branches, their input/window labels, and the full source record.
+Click a branch to inspect its target. Branches are manual previews: the museum
+does not evaluate original-game conditions or recreate its combat engine.
+
+All 8,553 cancel entries and the source conditions/properties are preserved.
+The 124 player-facing movelist entries and input demos are available separately
+in References/OriginalJinMotion/movelist.json; they do not supply direct animation IDs.
+
+Coverage: all referenced body motions converted with mapping v3. Clips with
+additional attachment channels display their body motion only. Object animation,
+finger/facial animation, effects, and synchronized second-character throw playback
+are not reconstructed here. Numerical/frame validation is not a visual comparison
+of every move against the original game.
+
+Each MuseumCharacter asset owns its model, bone mapping and actions. Add other
+characters after importing their models and converting their own motion libraries.

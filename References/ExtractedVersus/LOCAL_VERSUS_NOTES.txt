@@ -1,0 +1,34 @@
+LOCAL TWO-PLAYER VERSUS: PORTING SCOPE
+
+Selected 933 script/logic packages with 8,094 functions.
+Start with function-index.csv. Useful entry points include BP_BattleEvent,
+BP_TekkenPlayer_Modular, BP_CharacterManager and the System/BPI_* interfaces.
+Battle handlers include OnHit, OnKO, OnDoubleKO, OnTimeUp, OnRoundSettled,
+OnBattleEnd and OnStageBreakEvent. These are event responses, not proof that
+the actual damage, timing, collision, or match rules were implemented in them.
+
+Explicit scope: local two-player matches. Separate story, bowling, practice,
+CPU/AI, online, replay and tutorial packages are filtered by their identifiers.
+Shared character, combat, stage, camera, sound and presentation code is retained.
+Shared packages may still contain branches or events used by other modes.
+
+Selection uses paths plus serialized package references, not a runtime trace.
+It is a conservative reference set, not a proven minimal playable dependency set.
+dependencies.csv records included scripts, other asset references and
+27 references to excluded mode-specific packages.
+Those excluded references must be removed or replaced in the Unity rewrite.
+
+native-call-index.csv lists 6,696 native function import references.
+The native executable's implementations are not part of this export. In
+particular, complete fighting/moveset rules, versus match state, player input,
+character/stage selection and HUD behavior must not be assumed recovered.
+
+Suggested Unity work order:
+  1. Local player/device assignment, two fighters and a fixed arena/camera.
+  2. Match/round state, health, timer, KO/draw/time-up, wins and rematch.
+  3. Input buffering, movement, movesets, collisions, hit/block/stun and throws.
+  4. Character/stage selection, HUD, pause and audio/presentation.
+  5. Retarget imported animation and verify gameplay frame timing independently.
+
+The existing ../tkdata directory remains a separate binary-data reference.
+No C# game implementation or complete source recovery is included here.
