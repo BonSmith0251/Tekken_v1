@@ -1,0 +1,382 @@
+{
+  "path": "TekkenGame/Content/Character/Item/MF_ItemRecover.uasset",
+  "id": "88883df17801c2a00cb83093",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 4707,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/MF_ItemRecover.uasset",
+  "metadata_file": "metadata/88883df17801c2a00cb83093.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2562,
+    "package_flags": 2147483648,
+    "name_count": 54,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 1878,
+    "import_count": 11,
+    "import_offset": 1570,
+    "bulk_data_start_offset": 4703,
+    "guid": "a52870fe1f69874ebbdb358e946179ab"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA",
+    "/Game/Character/Item/MF_ItemRecover",
+    "/Game/Character/Item/MPC_ItemRecover",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "Center1P",
+    "Center2P",
+    "Class",
+    "Collection",
+    "Default__MaterialExpressionCollectionParameter",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialFunction",
+    "DitherTemporalAA",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionCollectionParameter",
+    "MaterialExpressionConstant",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialExpressionMultiply",
+    "MaterialFunction",
+    "MaterialParameterCollection",
+    "MF_ItemRecover",
+    "MPC_ItemRecover",
+    "NameProperty",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "ParameterId",
+    "ParameterName",
+    "Radius1P",
+    "Radius2P",
+    "StateId",
+    "StrProperty",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -11,
+      "object_name": "MaterialExpressionCollectionParameter"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -11,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -11,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionCollectionParameter",
+      "outer_index": -11,
+      "object_name": "Default__MaterialExpressionCollectionParameter"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -11,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -9,
+      "object_name": "DitherTemporalAA"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -11,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialParameterCollection",
+      "outer_index": -10,
+      "object_name": "MPC_ItemRecover"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/MPC_ItemRecover"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 6,
+      "object_name": "MaterialExpressionCollectionParameter_3",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 2562,
+      "class_name": "MaterialExpressionCollectionParameter",
+      "owner": "MF_ItemRecover",
+      "tagged_properties": {
+        "Collection": -8,
+        "ParameterName": "Center2P",
+        "ParameterId": {
+          "name": "ParameterId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "62 39 e4 ee dc 2a 2c 43 b6 17 c5 19 84 c7 63 71",
+          "value_prefix_truncated": false
+        },
+        "Function": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 6,
+      "object_name": "MaterialExpressionCollectionParameter_5",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 2730,
+      "class_name": "MaterialExpressionCollectionParameter",
+      "owner": "MF_ItemRecover",
+      "tagged_properties": {
+        "Collection": -8,
+        "ParameterName": "Center1P",
+        "ParameterId": {
+          "name": "ParameterId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "68 fd fc 58 a2 36 71 46 82 61 70 63 6e 70 20 28",
+          "value_prefix_truncated": false
+        },
+        "Function": 6
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 6,
+      "object_name": "MaterialExpressionCollectionParameter_8",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 2898,
+      "class_name": "MaterialExpressionCollectionParameter",
+      "owner": "MF_ItemRecover",
+      "tagged_properties": {
+        "Collection": -8,
+        "ParameterName": "Radius1P",
+        "ParameterId": {
+          "name": "ParameterId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "41 22 04 2f 6e 0c dd 42 a6 5c 8f 4e 3d f5 73 df",
+          "value_prefix_truncated": false
+        },
+        "Function": 6
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 6,
+      "object_name": "MaterialExpressionCollectionParameter_9",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 3066,
+      "class_name": "MaterialExpressionCollectionParameter",
+      "owner": "MF_ItemRecover",
+      "tagged_properties": {
+        "Collection": -8,
+        "ParameterName": "Radius2P",
+        "ParameterId": {
+          "name": "ParameterId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "b1 29 51 a1 c8 bb 28 49 a1 98 c4 04 c8 cd f2 34",
+          "value_prefix_truncated": false
+        },
+        "Function": 6
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 6,
+      "object_name": "MaterialExpressionMaterialFunctionCall_7",
+      "object_flags": 8,
+      "serial_size": 1167,
+      "serial_offset": 3234,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_ItemRecover",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 392,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 16 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 53 01 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e7 ca 2b 98 4c 81 1f 40 95 e2 0a dc f3 46 ee 5d 19 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 41 6c 70 68 61 20 54 68 72 65 73 68 6f 6c 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 09 00 00 00 29 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 364,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 487,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 37 01 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 2b c3 9b d2 f3 65 46 aa 90 9a d5 9f 8a ca 45 2b 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1b 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 6,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 242,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 913,
+          "value_prefix_hex": "01 00 00 00 2d 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 bd 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 52 65 73 75 6c 74 00 1b 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 0,
+      "object_name": "MF_ItemRecover",
+      "object_flags": 3,
+      "serial_size": 302,
+      "serial_offset": 4401,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "d1 80 a6 43 bb cd 69 43 b1 d3 0d 5a e6 c6 6e 07",
+          "value_prefix_truncated": false
+        },
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 192,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 98,
+          "value_prefix_hex": "2f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 03 00 00 00 04 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "96f3f5a4f06b08c84b0980bdc1a28d6579cced7914c10da05b24c623364456d5",
+  "selection_reason": "local-versus shared-content candidate"
+}

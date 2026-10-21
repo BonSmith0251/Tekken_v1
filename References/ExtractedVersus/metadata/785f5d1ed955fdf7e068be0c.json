@@ -1,0 +1,649 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA_a.uasset",
+  "id": "785f5d1ed955fdf7e068be0c",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 7712,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA_a.uasset",
+  "metadata_file": "metadata/785f5d1ed955fdf7e068be0c.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5392,
+    "package_flags": 2147483648,
+    "name_count": 86,
+    "name_offset": 189,
+    "export_count": 12,
+    "export_offset": 4036,
+    "import_count": 37,
+    "import_offset": 3000,
+    "bulk_data_start_offset": 7708,
+    "guid": "2f8727b22a538745b77c2cd8789547ab"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA",
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA_a",
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_01_a",
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_02_a",
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_03_a",
+    "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Meshes/SK_CH_bob_hed_drinkhat_IA_a",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_bob_hed_drinkhat_IA_a",
+    "BP_CH_bob_hed_drinkhat_IA_a_C",
+    "BP_CH_bob_hed_drinkhat_IA_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_bob_hed_drinkhat_IA_a_C",
+    "Default__BP_CH_bob_hed_drinkhat_IA_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRoot_REMOVED_85DE387F4077A86BF219AD9A8CBBAE0D",
+    "DefaultSceneRootNode",
+    "DrinkhatSK",
+    "DrinkhatSK_GEN_VARIABLE",
+    "DrinkL",
+    "DrinkL_GEN_VARIABLE",
+    "DrinkR",
+    "DrinkR_GEN_VARIABLE",
+    "DrinkScene_GEN_VARIABLE",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "HairSK_GEN_VARIABLE",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "MaterialInstanceConstant",
+    "MI_CH_bob_hed_drinkhat_IA_01_a",
+    "MI_CH_bob_hed_drinkhat_IA_02_a",
+    "MI_CH_bob_hed_drinkhat_IA_03_a",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "Records",
+    "Scene_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SK_CH_bob_hed_drinkhat_IA_a",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -26,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "BP_CH_bob_hed_drinkhat_IA_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -26,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA",
+      "class_name": "BP_CH_bob_hed_drinkhat_IA_C",
+      "outer_index": -20,
+      "object_name": "Default__BP_CH_bob_hed_drinkhat_IA_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -26,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -26,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -26,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -21,
+      "object_name": "MI_CH_bob_hed_drinkhat_IA_01_a"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -22,
+      "object_name": "MI_CH_bob_hed_drinkhat_IA_02_a"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -23,
+      "object_name": "MI_CH_bob_hed_drinkhat_IA_03_a"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/BP_CH_bob_hed_drinkhat_IA"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_01_a"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_02_a"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Material/MI_CH_bob_hed_drinkhat_IA_03_a"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/bob/Head/bob_hed_drinkhat_IA/Meshes/SK_CH_bob_hed_drinkhat_IA_a"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_REMOVED_85DE387F4077A86BF219AD9A8CBBAE0D"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DrinkScene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -26,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -26,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -26,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -24,
+      "object_name": "SK_CH_bob_hed_drinkhat_IA_a"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "DrinkhatSK_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "HairSK_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "DrinkL_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "DrinkR_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 5392,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_bob_hed_drinkhat_IA_a_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5530,
+      "class_name": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_bob_hed_drinkhat_IA_a",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 5538,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "39 d4 68 77 c8 c4 94 47 8a bf 7b cb 22 ab 7c 9c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 5816,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5932,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 1268,
+      "serial_offset": 6044,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 1223,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "03 00 00 00 47 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 92 04 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 00 00 00 1a 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 4c 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b5 e4 47 2c a4 37 2d 44 a0 d7 a9 8a 16 c8",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7312,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 9,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 7324,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "16 19 af 41 57 34 7f 48 8b bc d8 68 b4 dd d4 b0",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 7463,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 1,
+      "object_name": "DrinkhatSK_GEN_VARIABLE",
+      "object_flags": 4194345,
+      "serial_size": 90,
+      "serial_offset": 7504,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {
+        "SkeletalMesh": -33,
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 ef ff ff ff ee ff ff ff ed ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 1,
+      "object_name": "DrinkL_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7594,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 ed ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 1,
+      "object_name": "DrinkR_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7651,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_bob_hed_drinkhat_IA_a_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 ed ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "68d9b201c09e138ad5f9061fa983283ec7042bb6b77ccc9f6f6442c4dca31e6b",
+  "selection_reason": "local-versus shared-content candidate"
+}

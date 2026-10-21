@@ -1,0 +1,509 @@
+{
+  "path": "TekkenGame/Content/Stage/T7_S16_ENV_ReactorB/Mesh/AB_T7_Sk_ENV_s16ReactorB_CoverB.uasset",
+  "id": "678e565779c64f9461f697c4",
+  "classes": [
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 5860,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/T7_S16_ENV_ReactorB/Mesh/AB_T7_Sk_ENV_s16ReactorB_CoverB.uasset",
+  "metadata_file": "metadata/678e565779c64f9461f697c4.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 4028,
+    "package_flags": 2147483648,
+    "name_count": 74,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 2936,
+    "import_count": 24,
+    "import_offset": 2264,
+    "bulk_data_start_offset": 5856,
+    "guid": "dc807e9ae81cff46945706130ab245e9"
+  },
+  "names": [
+    "/Game/Stage/T7_S16_ENV_ReactorB/Mesh/AB_T7_Sk_ENV_s16ReactorB_CoverB",
+    "/Game/Stage/T7_S16_ENV_ReactorB/Mesh/T7_SK_ENV_s16ReactorB_CoverB_Skeleton",
+    "/Script/AnimGraphRuntime",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AB_T7_Sk_ENV_s16ReactorB_CoverB",
+    "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "AnimGraphNode_LocalRefPose_EAC76077474E0703D68B90A10A3FB0B3",
+    "AnimGraphNode_Root_4B0ECFED43A10C388ED98A8064B55939",
+    "AnimGraphNode_Slot_1CDD0886451379E1617157BDFAA805EE",
+    "AnimInstance",
+    "AnimNode_RefPose",
+    "AnimNode_Root",
+    "AnimNode_Slot",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BoundFunction",
+    "ByteProperty",
+    "Class",
+    "CopyRecords",
+    "Default__AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+    "Default__AnimBlueprint",
+    "Default__AnimBlueprintGeneratedClass",
+    "Default__AnimInstance",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__StructProperty",
+    "DefaultSlot",
+    "EdGraph",
+    "EIT_LocalSpace",
+    "Engine",
+    "EntryPoint",
+    "ERefPoseType",
+    "EvaluateGraphExposedInputs",
+    "EventGraph",
+    "ExecuteUbergraph_AB_T7_Sk_ENV_s16ReactorB_CoverB",
+    "ExposedValueCopyRecord",
+    "ExposedValueHandler",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "LinkID",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "PoseLink",
+    "RefPoseType",
+    "Result",
+    "RootAnimNodeIndex",
+    "Schema",
+    "ScriptStruct",
+    "Skeleton",
+    "SlotName",
+    "Source",
+    "StructProperty",
+    "T7_SK_ENV_s16ReactorB_CoverB_Skeleton",
+    "TargetSkeleton",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -18,
+      "object_name": "Default__AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "Default__AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimInstance",
+      "outer_index": -18,
+      "object_name": "Default__AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -18,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -17,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/T7_S16_ENV_ReactorB/Mesh/T7_SK_ENV_s16ReactorB_CoverB_Skeleton"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AnimGraphRuntime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -16,
+      "object_name": "AnimNode_RefPose"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -16,
+      "object_name": "AnimNode_Root"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -16,
+      "object_name": "AnimNode_Slot"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -18,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Skeleton",
+      "outer_index": -15,
+      "object_name": "T7_SK_ENV_s16ReactorB_CoverB_Skeleton"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -17,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "AnimGraphNode_LocalRefPose_EAC76077474E0703D68B90A10A3FB0B3",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4028,
+      "class_name": "StructProperty",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "AnimGraphNode_Slot_1CDD0886451379E1617157BDFAA805EE",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4068,
+      "class_name": "StructProperty",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "AnimGraphNode_Root_4B0ECFED43A10C388ED98A8064B55939",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4108,
+      "class_name": "StructProperty",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 5,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 4148,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_AB_T7_Sk_ENV_s16ReactorB_CoverB",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 7,
+      "object_name": "ExecuteUbergraph_AB_T7_Sk_ENV_s16ReactorB_CoverB",
+      "object_flags": 1,
+      "serial_size": 53,
+      "serial_offset": 4184,
+      "class_name": "Function",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 13,
+        "script_storage_size": 9,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 4216,
+        "bytecode_sha256": "d83b685249581429cf78ecd3cbcae286d093b1aaf744bf69a35d0c86cd53c0dd",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/678e565779c64f9461f697c4/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/678e565779c64f9461f697c4/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 7,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4237,
+      "class_name": "StructProperty",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": -10,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "object_flags": 9,
+      "serial_size": 208,
+      "serial_offset": 4277,
+      "class_name": "AnimBlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -23,
+        "RootAnimNodeIndex": 2,
+        "UberGraphFramePointerProperty": 6,
+        "UberGraphFunction": 5
+      }
+    },
+    {
+      "index": 7,
+      "class_index": 7,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "Default__AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "object_flags": 49,
+      "serial_size": 1010,
+      "serial_offset": 4485,
+      "class_name": "AB_T7_Sk_ENV_s16ReactorB_CoverB_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "35 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AnimGraphNode_Root_4B0ECFED43A10C388ED98A8064B55939": {
+          "name": "AnimGraphNode_Root_4B0ECFED43A10C388ED98A8064B55939",
+          "type": "StructProperty",
+          "size": 270,
+          "array_index": 0,
+          "struct_name": "AnimNode_Root",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 106,
+          "value_prefix_hex": "3d 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 01 00 00 00 35 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 35 00",
+          "value_prefix_truncated": true
+        },
+        "AnimGraphNode_Slot_1CDD0886451379E1617157BDFAA805EE": {
+          "name": "AnimGraphNode_Slot_1CDD0886451379E1617157BDFAA805EE",
+          "type": "StructProperty",
+          "size": 303,
+          "array_index": 0,
+          "struct_name": "AnimNode_Slot",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 425,
+          "value_prefix_hex": "43 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 02 00 00 00 35 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "AnimGraphNode_LocalRefPose_EAC76077474E0703D68B90A10A3FB0B3": {
+          "name": "AnimGraphNode_LocalRefPose_EAC76077474E0703D68B90A10A3FB0B3",
+          "type": "StructProperty",
+          "size": 225,
+          "array_index": 0,
+          "struct_name": "AnimNode_RefPose",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 777,
+          "value_prefix_hex": "3c 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "AB_T7_Sk_ENV_s16ReactorB_CoverB",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5495,
+      "class_name": "AnimBlueprint",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -23,
+        "ParentClass": -10,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 7,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "8e 4e 89 f5 db 59 88 47 bd 9c 9c 0f 61 d5 f0 4c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 9,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5744,
+      "class_name": "EdGraph",
+      "owner": "AB_T7_Sk_ENV_s16ReactorB_CoverB",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    }
+  ],
+  "sha256": "9194c48af4918323b5866ad668bbf9fe869da091ba0905053236b060fe0a900e",
+  "selection_reason": "local-versus shared-content candidate"
+}

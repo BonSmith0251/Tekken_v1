@@ -1,0 +1,920 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/dnc/BP_dncCharacterSoundManager.uasset",
+  "id": "787d3c3799970c6c1888cd77",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 11089,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/dnc/BP_dncCharacterSoundManager.uasset",
+  "metadata_file": "metadata/787d3c3799970c6c1888cd77.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 7644,
+    "package_flags": 2147483648,
+    "name_count": 137,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 6820,
+    "import_count": 99,
+    "import_offset": 4048,
+    "bulk_data_start_offset": 11085,
+    "guid": "b76e8322058564429f6ade1e3d92593d"
+  },
+  "names": [
+    "/Game/Sound/Character/dnc/BP_dncCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/dnc/AkBankVoiceDNC",
+    "/Game/Sound/Voice/dnc/dc_s00",
+    "/Game/Sound/Voice/dnc/dc_s01",
+    "/Game/Sound/Voice/dnc/dc_s02",
+    "/Game/Sound/Voice/dnc/dc_w00",
+    "/Game/Sound/Voice/dnc/dc_w01",
+    "/Game/Sound/Voice/dnc/dc_w02",
+    "/Game/Sound/Voice/dnc/dnc_atk_l01",
+    "/Game/Sound/Voice/dnc/dnc_atk_m01",
+    "/Game/Sound/Voice/dnc/dnc_atk_m02",
+    "/Game/Sound/Voice/dnc/dnc_atk_m03",
+    "/Game/Sound/Voice/dnc/dnc_atk_s01",
+    "/Game/Sound/Voice/dnc/dnc_atk_s02",
+    "/Game/Sound/Voice/dnc/dnc_atk_s03",
+    "/Game/Sound/Voice/dnc/dnc_dmg_m01",
+    "/Game/Sound/Voice/dnc/dnc_dmg_m02",
+    "/Game/Sound/Voice/dnc/dnc_dmg_m03",
+    "/Game/Sound/Voice/dnc/dnc_dmg_s01",
+    "/Game/Sound/Voice/dnc/dnc_dmg_s02",
+    "/Game/Sound/Voice/dnc/dnc_dmg_s03",
+    "/Game/Sound/Voice/dnc/dnc_ko01",
+    "/Game/Sound/Voice/dnc/dnc_org01",
+    "/Game/Sound/Voice/dnc/dnc_org02",
+    "/Game/Sound/Voice/dnc/dnc_org03",
+    "/Game/Sound/Voice/dnc/dnc_org04",
+    "/Game/Sound/Voice/dnc/dnc_org05",
+    "/Game/Sound/Voice/dnc/dnc_org06",
+    "/Game/Sound/Voice/dnc/dnc_org07",
+    "/Game/Sound/Voice/dnc/dnc_org08",
+    "/Game/Sound/Voice/dnc/dnc_org09",
+    "/Game/Sound/Voice/dnc/dnc_org10",
+    "/Game/Sound/Voice/dnc/dnc_org11",
+    "/Game/Sound/Voice/dnc/dnc_org12",
+    "/Game/Sound/Voice/dnc/dnc_org13",
+    "/Game/Sound/Voice/dnc/dnc_org14",
+    "/Game/Sound/Voice/dnc/dnc_org15",
+    "/Game/Sound/Voice/dnc/dnc_org16",
+    "/Game/Sound/Voice/dnc/dnc_org17",
+    "/Game/Sound/Voice/dnc/dnc_org18",
+    "/Game/Sound/Voice/dnc/dnc_org19",
+    "/Game/Sound/Voice/dnc/dnc_org20",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceDNC",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_dncCharacterSoundManager",
+    "BP_dncCharacterSoundManager_C",
+    "BP_TekkenCharacterSoundManager_C",
+    "CharacterSound",
+    "CharacterStream",
+    "Class",
+    "ComponentTemplate",
+    "dc_s00",
+    "dc_s01",
+    "dc_s02",
+    "dc_w00",
+    "dc_w01",
+    "dc_w02",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_dncCharacterSoundManager_C",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "dnc_atk_l01",
+    "dnc_atk_m01",
+    "dnc_atk_m02",
+    "dnc_atk_m03",
+    "dnc_atk_s01",
+    "dnc_atk_s02",
+    "dnc_atk_s03",
+    "dnc_dmg_m01",
+    "dnc_dmg_m02",
+    "dnc_dmg_m03",
+    "dnc_dmg_s01",
+    "dnc_dmg_s02",
+    "dnc_dmg_s03",
+    "dnc_ko01",
+    "dnc_org01",
+    "dnc_org02",
+    "dnc_org03",
+    "dnc_org04",
+    "dnc_org05",
+    "dnc_org06",
+    "dnc_org07",
+    "dnc_org08",
+    "dnc_org09",
+    "dnc_org10",
+    "dnc_org11",
+    "dnc_org12",
+    "dnc_org13",
+    "dnc_org14",
+    "dnc_org15",
+    "dnc_org16",
+    "dnc_org17",
+    "dnc_org18",
+    "dnc_org19",
+    "dnc_org20",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "SoundName",
+    "Sounds",
+    "Streams",
+    "StrProperty",
+    "StructProperty",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -53,
+      "object_name": "AkBankVoiceDNC"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -54,
+      "object_name": "dc_s00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -55,
+      "object_name": "dc_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -56,
+      "object_name": "dc_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -57,
+      "object_name": "dc_w00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -58,
+      "object_name": "dc_w01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -59,
+      "object_name": "dc_w02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -60,
+      "object_name": "dnc_atk_l01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -61,
+      "object_name": "dnc_atk_m01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -62,
+      "object_name": "dnc_atk_m02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -63,
+      "object_name": "dnc_atk_m03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -64,
+      "object_name": "dnc_atk_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -65,
+      "object_name": "dnc_atk_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -66,
+      "object_name": "dnc_atk_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -67,
+      "object_name": "dnc_dmg_m01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -68,
+      "object_name": "dnc_dmg_m02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -69,
+      "object_name": "dnc_dmg_m03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -70,
+      "object_name": "dnc_dmg_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -71,
+      "object_name": "dnc_dmg_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -72,
+      "object_name": "dnc_dmg_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -73,
+      "object_name": "dnc_ko01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -74,
+      "object_name": "dnc_org01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -75,
+      "object_name": "dnc_org02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -76,
+      "object_name": "dnc_org03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -77,
+      "object_name": "dnc_org04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -78,
+      "object_name": "dnc_org05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -79,
+      "object_name": "dnc_org06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -80,
+      "object_name": "dnc_org07"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -81,
+      "object_name": "dnc_org08"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -82,
+      "object_name": "dnc_org09"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -83,
+      "object_name": "dnc_org10"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -84,
+      "object_name": "dnc_org11"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -85,
+      "object_name": "dnc_org12"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -86,
+      "object_name": "dnc_org13"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -87,
+      "object_name": "dnc_org14"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -88,
+      "object_name": "dnc_org15"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -89,
+      "object_name": "dnc_org16"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -90,
+      "object_name": "dnc_org17"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -91,
+      "object_name": "dnc_org18"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -92,
+      "object_name": "dnc_org19"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -93,
+      "object_name": "dnc_org20"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -95,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -52,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -95,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -52,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -94,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -95,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -95,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -95,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -95,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -95,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/AkBankVoiceDNC"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_s00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_w00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_w01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dc_w02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_l01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_m01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_m02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_m03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_atk_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_m01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_m02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_m03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_dmg_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_ko01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org07"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org08"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org09"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org10"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org11"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org12"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org13"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org14"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org15"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org16"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org17"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org18"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org19"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/dnc/dnc_org20"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -43,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -95,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -95,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -95,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -48,
+      "super_index": -43,
+      "template_index": -44,
+      "outer_index": 0,
+      "object_name": "BP_dncCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 7644,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 0,
+      "object_name": "Default__BP_dncCharacterSoundManager_C",
+      "object_flags": 49,
+      "serial_size": 2891,
+      "serial_offset": 7753,
+      "class_name": "BP_dncCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 2297,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "22 00 00 00 82 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 c4 08 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 8d 04 00 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f4 ff ff ff 76 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 8e 04 00 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f3 ff ff ff 76 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 8f 04 00 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f2 ff ff ff 76 00 00 00 00 00 00 00 80 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Streams": {
+          "name": "Streams",
+          "type": "ArrayProperty",
+          "size": 491,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2392,
+          "value_prefix_hex": "06 00 00 00 83 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 b6 01 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 64 63 5f 73 30 30 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 76 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 64 63 5f 73 30 31 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fd ff ff ff 76 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 64 63 5f 73 30 32 00 7f 00 00 00 00 00 00 00 78 00 00 00 00 00 00 00 04 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -47,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 0,
+      "object_name": "BP_dncCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 10644,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -43,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "9b 68 ab 9a ba 0d 5a 9b fb 3a 96 6c 60 9e 49 55",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -49,
+      "super_index": 0,
+      "template_index": -97,
+      "outer_index": 1,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 10893,
+      "class_name": "SceneComponent",
+      "owner": "BP_dncCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -50,
+      "super_index": 0,
+      "template_index": -98,
+      "outer_index": 6,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 10905,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -51,
+      "super_index": 0,
+      "template_index": -99,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 11044,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_dncCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "2d3c1f579334d19bae6639eb0d7d929e59074c6b8dc805a7ebe3069ba15b9a9a",
+  "selection_reason": "local-versus shared-content candidate"
+}

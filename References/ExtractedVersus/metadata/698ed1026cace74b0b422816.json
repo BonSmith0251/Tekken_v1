@@ -1,0 +1,684 @@
+{
+  "path": "TekkenGame/Content/Character/Common/Skeleton/AB_CH_base_Skeleton.uasset",
+  "id": "698ed1026cace74b0b422816",
+  "classes": [
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 9178,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Common/Skeleton/AB_CH_base_Skeleton.uasset",
+  "metadata_file": "metadata/698ed1026cace74b0b422816.json",
+  "function_count": 2,
+  "summary": {
+    "total_header_size": 5884,
+    "package_flags": 2147483648,
+    "name_count": 111,
+    "name_offset": 189,
+    "export_count": 13,
+    "export_offset": 4444,
+    "import_count": 38,
+    "import_offset": 3380,
+    "bulk_data_start_offset": 9174,
+    "guid": "25467ed9544c7c4c90da08cb868f4ed6"
+  },
+  "names": [
+    "/Game/Character/Common/Skeleton/AB_CH_base_Skeleton",
+    "/Game/Character/Common/Skeleton/SKT_CH_base_Skeleton",
+    "/Script/AnimGraphRuntime",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/MotHeadAnimationRuntime",
+    "/Script/TekkenGame",
+    "AB_CH_base_Skeleton",
+    "AB_CH_base_Skeleton_C",
+    "ActualAlpha",
+    "Alpha",
+    "AlphaScaleBias",
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "AnimGraphNode_ComponentToLocalSpace_C5AD88CA494096226B08AAABBDB7D711",
+    "AnimGraphNode_MeshRefPose_97503E72407A4C45FBFDAFB8A980CA6D",
+    "AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A",
+    "AnimGraphNode_Root_6B5F3177483F564219C43CA27D236241",
+    "AnimInstance",
+    "AnimNode_ConvertComponentToLocalSpace",
+    "AnimNode_MeshSpaceRefPose",
+    "AnimNode_MotHead",
+    "AnimNode_Root",
+    "ArrayProperty",
+    "BCS_ComponentSpace",
+    "Bias",
+    "bInstanceIsTarget",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BoundFunction",
+    "ByteProperty",
+    "CachedBoolDestProperty",
+    "CachedBoolSourceProperty",
+    "CallFunc_GetObjectName_ReturnValue",
+    "CallFunc_GetOwningComponent_ReturnValue",
+    "Class",
+    "ComponentPose",
+    "ComponentSpacePoseLink",
+    "ControlLocation",
+    "ControlSpace",
+    "CopyRecords",
+    "Default__AB_CH_base_Skeleton_C",
+    "Default__AnimBlueprint",
+    "Default__AnimBlueprintGeneratedClass",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__StrProperty",
+    "Default__StructProperty",
+    "Default__TekkenAnimInstance",
+    "DestArrayIndex",
+    "DestProperty",
+    "EBoneControlSpace",
+    "EMotHeadMatrixSpace",
+    "Engine",
+    "EntryPoint",
+    "EPostCopyOperation",
+    "EPostCopyOperation::None",
+    "EvaluateGraphExposedInputs",
+    "EvaluateGraphExposedInputs_ExecuteUbergraph_AB_CH_base_Skeleton_AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A",
+    "ExecuteUbergraph_AB_CH_base_Skeleton",
+    "ExposedValueCopyRecord",
+    "ExposedValueHandler",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GetObjectName",
+    "GetOwningComponent",
+    "Guid",
+    "InputScaleBias",
+    "IntProperty",
+    "KismetSystemLibrary",
+    "LinkID",
+    "LODThreshold",
+    "MeshName",
+    "MHM_WorldSpace",
+    "MotHeadMatrixSpace",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PlayerNumber",
+    "PointerToUberGraphFrame",
+    "PoseLink",
+    "PostCopyOperation",
+    "Result",
+    "RootAnimNodeIndex",
+    "Scale",
+    "ScriptStruct",
+    "Size",
+    "SkeletalMeshComponent",
+    "Skeleton",
+    "SKT_CH_base_Skeleton",
+    "SourceArrayIndex",
+    "SourcePropertyName",
+    "SourceSubPropertyName",
+    "SpaceScaling",
+    "StrProperty",
+    "StructProperty",
+    "TargetSkeleton",
+    "TekkenAnimInstance",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -25,
+      "object_name": "Default__AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprintGeneratedClass",
+      "outer_index": -25,
+      "object_name": "Default__AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -27,
+      "object_name": "TekkenAnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -24,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -11,
+      "object_name": "GetOwningComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -12,
+      "object_name": "GetObjectName"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -24,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -32,
+      "object_name": "PlayerNumber"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -25,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -24,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/Skeleton/SKT_CH_base_Skeleton"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AnimGraphRuntime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/MotHeadAnimationRuntime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -23,
+      "object_name": "AnimNode_MeshSpaceRefPose"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -23,
+      "object_name": "AnimNode_Root"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -25,
+      "object_name": "AnimNode_ConvertComponentToLocalSpace"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -25,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -26,
+      "object_name": "AnimNode_MotHead"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Skeleton",
+      "outer_index": -22,
+      "object_name": "SKT_CH_base_Skeleton"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -24,
+      "object_name": "Default__StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -32,
+      "object_name": "MeshName"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -24,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -32,
+      "object_name": "ControlLocation"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenAnimInstance",
+      "outer_index": -27,
+      "object_name": "Default__TekkenAnimInstance"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 11,
+      "object_name": "AnimGraphNode_ComponentToLocalSpace_C5AD88CA494096226B08AAABBDB7D711",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5884,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 11,
+      "object_name": "AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5924,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 11,
+      "object_name": "AnimGraphNode_MeshRefPose_97503E72407A4C45FBFDAFB8A980CA6D",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5964,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 11,
+      "object_name": "AnimGraphNode_Root_6B5F3177483F564219C43CA27D236241",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6004,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 8,
+      "object_name": "CallFunc_GetObjectName_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6044,
+      "class_name": "StrProperty",
+      "owner": "ExecuteUbergraph_AB_CH_base_Skeleton",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 8,
+      "object_name": "CallFunc_GetOwningComponent_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6080,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_AB_CH_base_Skeleton",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 8,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6120,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_AB_CH_base_Skeleton",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 11,
+      "object_name": "ExecuteUbergraph_AB_CH_base_Skeleton",
+      "object_flags": 1,
+      "serial_size": 130,
+      "serial_offset": 6156,
+      "class_name": "Function",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": 0,
+        "first_child": 7,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 138,
+        "script_storage_size": 86,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6188,
+        "bytecode_sha256": "2dfbb4b1380047eff231f05c8ffcd04c6e6152d0995f8c94bce06600de75d5df",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/698ed1026cace74b0b422816/000007.bytecode.bin"
+      },
+      "raw_export_file": "functions/698ed1026cace74b0b422816/000007.export.bin"
+    },
+    {
+      "index": 8,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 11,
+      "object_name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AB_CH_base_Skeleton_AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 6286,
+      "class_name": "Function",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 8,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6318,
+        "bytecode_sha256": "2a2b7be6c692715ba4c7a7fe38ed1f88d135c362b489055618a107314ddb5946",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/698ed1026cace74b0b422816/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/698ed1026cace74b0b422816/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 11,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6348,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_base_Skeleton_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -10,
+      "super_index": -14,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "AB_CH_base_Skeleton_C",
+      "object_flags": 9,
+      "serial_size": 220,
+      "serial_offset": 6388,
+      "class_name": "AnimBlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -33,
+        "RootAnimNodeIndex": 3,
+        "UberGraphFramePointerProperty": 10,
+        "UberGraphFunction": 8
+      }
+    },
+    {
+      "index": 11,
+      "class_index": 11,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 0,
+      "object_name": "Default__AB_CH_base_Skeleton_C",
+      "object_flags": 49,
+      "serial_size": 2317,
+      "serial_offset": 6608,
+      "class_name": "AB_CH_base_Skeleton_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "52 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AnimGraphNode_Root_6B5F3177483F564219C43CA27D236241": {
+          "name": "AnimGraphNode_Root_6B5F3177483F564219C43CA27D236241",
+          "type": "StructProperty",
+          "size": 270,
+          "array_index": 0,
+          "struct_name": "AnimNode_Root",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 106,
+          "value_prefix_hex": "5b 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 59 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 03 00 00 00 52 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 52 00",
+          "value_prefix_truncated": true
+        },
+        "AnimGraphNode_MeshRefPose_97503E72407A4C45FBFDAFB8A980CA6D": {
+          "name": "AnimGraphNode_MeshRefPose_97503E72407A4C45FBFDAFB8A980CA6D",
+          "type": "StructProperty",
+          "size": 184,
+          "array_index": 0,
+          "struct_name": "AnimNode_MeshSpaceRefPose",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 425,
+          "value_prefix_hex": "3e 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A": {
+          "name": "AnimGraphNode_MotHead_0E2B203248DFF1BC8233009B83B1A95A",
+          "type": "StructProperty",
+          "size": 1332,
+          "array_index": 0,
+          "struct_name": "AnimNode_MotHead",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 658,
+          "value_prefix_hex": "50 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 00 4f 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 66 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 cd cc cc 3d 57 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 6e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4e 00 00 00 00 00 00 00 67 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 28 00",
+          "value_prefix_truncated": true
+        },
+        "AnimGraphNode_ComponentToLocalSpace_C5AD88CA494096226B08AAABBDB7D711": {
+          "name": "AnimGraphNode_ComponentToLocalSpace_C5AD88CA494096226B08AAABBDB7D711",
+          "type": "StructProperty",
+          "size": 270,
+          "array_index": 0,
+          "struct_name": "AnimNode_ConvertComponentToLocalSpace",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2039,
+          "value_prefix_hex": "27 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 02 00 00 00 52 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 52 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "AB_CH_base_Skeleton",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 8925,
+      "class_name": "AnimBlueprint",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -33,
+        "ParentClass": -14,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 11,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "0b 36 37 bd 23 4e 17 83 8a 7c d3 93 aa 19 2d 87",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "aa90a960a8d989656ad451882b0c9977339bf10ced2d2a04f4169fc118d22378",
+  "selection_reason": "local-versus shared-content candidate"
+}

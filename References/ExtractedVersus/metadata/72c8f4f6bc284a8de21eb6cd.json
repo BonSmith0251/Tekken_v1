@@ -1,0 +1,533 @@
+{
+  "path": "TekkenGame/Content/Character/Wet/BP_SkinWet.uasset",
+  "id": "72c8f4f6bc284a8de21eb6cd",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 4684,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Wet/BP_SkinWet.uasset",
+  "metadata_file": "metadata/72c8f4f6bc284a8de21eb6cd.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 3607,
+    "package_flags": 2147483648,
+    "name_count": 62,
+    "name_offset": 189,
+    "export_count": 11,
+    "export_offset": 2411,
+    "import_count": 25,
+    "import_offset": 1711,
+    "bulk_data_start_offset": 4680,
+    "guid": "82276d55bed17f48b1f6553c35e91790"
+  },
+  "names": [
+    "/Game/Character/Common/MPC_Character",
+    "/Game/Character/Wet/BP_SkinWet",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_SkinWet",
+    "BP_SkinWet_C",
+    "Class",
+    "ClothingWet1P",
+    "ClothingWet2P",
+    "ClothingWetNames",
+    "Collection",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_SkinWet_C",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkinWetComponent",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "MaterialParameterCollection",
+    "MPC_Character",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootNodes",
+    "SceneComponent",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SkinWet",
+    "SkinWet1P",
+    "SkinWet2P",
+    "SkinWet_GEN_VARIABLE",
+    "SkinWetComponent",
+    "SkinWetNames",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -20,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -20,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "SkinWetComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -7,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialParameterCollection",
+      "outer_index": -18,
+      "object_name": "MPC_Character"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -19,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/MPC_Character"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -20,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -20,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -20,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "SkinWetComponent",
+      "outer_index": -21,
+      "object_name": "Default__SkinWetComponent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 4,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3607,
+      "class_name": "ObjectProperty",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 4,
+      "object_name": "SkinWet",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3647,
+      "class_name": "ObjectProperty",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": -15,
+      "template_index": -14,
+      "outer_index": 4,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3687,
+      "class_name": "Function",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": -15,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3719,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/72c8f4f6bc284a8de21eb6cd/000002.bytecode.bin"
+      },
+      "raw_export_file": "functions/72c8f4f6bc284a8de21eb6cd/000002.export.bin"
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": -7,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_SkinWet_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 3734,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 10
+      }
+    },
+    {
+      "index": 4,
+      "class_index": 4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_SkinWet_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3855,
+      "class_name": "BP_SkinWet_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_SkinWet",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 3863,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -7,
+        "SimpleConstructionScript": 10,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 4,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "6b 98 ed dd 4f d2 c8 db 93 a9 ee 4c 39 1d a1 bd",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 4,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 4112,
+      "class_name": "SceneComponent",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4124,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 10,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4263,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 11,
+        "VariableName": "SkinWet",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "95 82 12 87 31 a3 77 42 ab b7 cf 55 92 c3 2f cb",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 4,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 131,
+      "serial_offset": 4402,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 08 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "02 00 00 00 08 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 4,
+      "object_name": "SkinWet_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 147,
+      "serial_offset": 4533,
+      "class_name": "SkinWetComponent",
+      "owner": "BP_SkinWet_C",
+      "tagged_properties": {
+        "Collection": -16,
+        "SkinWetNames": {
+          "name": "SkinWetNames",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 35 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "ClothingWetNames": {
+          "name": "ClothingWetNames",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 115,
+          "value_prefix_hex": "02 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "fa1f3dfc3ba18f0d06b14b58fffd5732759f1fd7fd2b71bcb1b33fcd89652a13",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,624 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_mrz_oph_rotary_light.uasset",
+  "id": "6986f6083709d3cd6c6087df",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 7321,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_mrz_oph_rotary_light.uasset",
+  "metadata_file": "metadata/6986f6083709d3cd6c6087df.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5034,
+    "package_flags": 2147483648,
+    "name_count": 80,
+    "name_offset": 189,
+    "export_count": 12,
+    "export_offset": 3686,
+    "import_count": 34,
+    "import_offset": 2734,
+    "bulk_data_start_offset": 7317,
+    "guid": "d1cfce2ca8987f408b17f506e835b882"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_cmn_oph_rotary_light",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_mrz_oph_rotary_light",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Material/MI_CH_mrz_oph_rotary_light",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Material/MI_EV_Lightbeam_rotary_light_mrz",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_cmn_oph_rotary_light_C",
+    "BP_CH_mrz_oph_rotary_light",
+    "BP_CH_mrz_oph_rotary_light_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_oph_rotary_light_C",
+    "Default__BP_CH_mrz_oph_rotary_light_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "LightBeamMesh",
+    "LightBeamMesh_GEN_VARIABLE",
+    "LightBeamRageArtsMesh",
+    "LightBeamRageArtsMesh_GEN_VARIABLE",
+    "MaterialInstanceConstant",
+    "MI_CH_mrz_oph_rotary_light",
+    "MI_EV_Lightbeam_rotary_light_mrz",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "Records",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SK_CH_cmn_oph_rotary_light",
+    "SK_CH_cmn_oph_rotary_light_GEN_VARIABLE",
+    "SkeletalMeshComponent",
+    "SpotLight_GEN_VARIABLE",
+    "SpotLightComponent",
+    "SpotLightRageArts_GEN_VARIABLE",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -25,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "BP_CH_cmn_oph_rotary_light_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -25,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_cmn_oph_rotary_light",
+      "class_name": "BP_CH_cmn_oph_rotary_light_C",
+      "outer_index": -20,
+      "object_name": "Default__BP_CH_cmn_oph_rotary_light_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -25,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -25,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -25,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -21,
+      "object_name": "MI_CH_mrz_oph_rotary_light_1"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -22,
+      "object_name": "MI_CH_mrz_oph_rotary_light_2"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -23,
+      "object_name": "MI_EV_Lightbeam_rotary_light_mrz"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/BP_CH_cmn_oph_rotary_light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Material/MI_CH_mrz_oph_rotary_light_1"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Material/MI_CH_mrz_oph_rotary_light_2"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Material/MI_EV_Lightbeam_rotary_light_mrz"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -25,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -25,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -25,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_rotary_light_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SpotLightComponent",
+      "outer_index": -2,
+      "object_name": "SpotLight_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SpotLightComponent",
+      "outer_index": -2,
+      "object_name": "SpotLightRageArts_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "LightBeamMesh_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "LightBeamRageArtsMesh_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_rotary_light_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 5034,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_mrz_oph_rotary_light_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5172,
+      "class_name": "BP_CH_mrz_oph_rotary_light_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_rotary_light",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 5180,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "6a 34 43 35 20 e5 a9 43 be cd 86 3e 04 12 4f c1",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 5458,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_rotary_light",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5574,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_rotary_light",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 1268,
+      "serial_offset": 5686,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 1223,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "03 00 00 00 3f 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 92 04 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 00 00 00 18 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 43 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 45 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7a 29 7a 23 65 6e e8 46 9f fa 8a d0 60 28",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6954,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 9,
+      "object_name": "SCS_Node_10",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6966,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_9",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "24 56 70 ce 51 15 1e 45 98 d6 c9 d9 6d 8f 26 ea",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_9",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 7105,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_rotary_light_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7146,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 ee ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 1,
+      "object_name": "LightBeamMesh_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7203,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 ed ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 1,
+      "object_name": "LightBeamRageArtsMesh_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 7260,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_mrz_oph_rotary_light_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 ed ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "5cd9fc4b4b3ea9182e483bc508931b038a91494c2689e8d44a0b22e1ee036f97",
+  "selection_reason": "local-versus shared-content candidate"
+}

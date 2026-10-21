@@ -1,0 +1,319 @@
+{
+  "path": "TekkenGame/Content/Stage/Common/WeatherChange/Shader/Material/MF_WaveBlend.uasset",
+  "id": "71cec4b4dc42d7e51c14d584",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 5917,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/Common/WeatherChange/Shader/Material/MF_WaveBlend.uasset",
+  "metadata_file": "metadata/71cec4b4dc42d7e51c14d584.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2360,
+    "package_flags": 2147483648,
+    "name_count": 54,
+    "name_offset": 189,
+    "export_count": 4,
+    "export_offset": 1908,
+    "import_count": 11,
+    "import_offset": 1600,
+    "bulk_data_start_offset": 5913,
+    "guid": "75fc37d24476f64cba055912affc0538"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions02/PassThrough",
+    "/Game/Stage/Common/WeatherChange/Shader/Material/MF_WaveBlend",
+    "/Game/Stage/stg14/Shader/Texture/T7_T_ENV_s14WaveNoise",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "ByteProperty",
+    "Class",
+    "Coordinates",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialExpressionTextureSample",
+    "Default__MaterialFunction",
+    "EMaterialSamplerType",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialExpressionMultiply",
+    "MaterialExpressionPanner",
+    "MaterialExpressionTextureSample",
+    "MaterialFunction",
+    "MF_WaveBlend",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "PassThrough",
+    "SamplerType",
+    "SAMPLERTYPE_Grayscale",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "T7_T_ENV_s14WaveNoise",
+    "Texture",
+    "Texture2D"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialExpressionTextureSample"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -10,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureSample",
+      "outer_index": -10,
+      "object_name": "Default__MaterialExpressionTextureSample"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -8,
+      "object_name": "PassThrough"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -10,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/PassThrough"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg14/Shader/Texture/T7_T_ENV_s14WaveNoise"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -9,
+      "object_name": "T7_T_ENV_s14WaveNoise"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionMaterialFunctionCall_21",
+      "object_flags": 8,
+      "serial_size": 2937,
+      "serial_offset": 2360,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_WaveBlend",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 696,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 17 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 83 02 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3e 98 ec 0e 1d 51 6e 42 87 ac 4d 39 9c 95 88 5e 1a 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 26 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 15 00 00 00 27 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 1280,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 791,
+          "value_prefix_hex": "04 00 00 00 18 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 cb 04 00 00 00 00 00 00 15 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 83 72 3b 90 3b 70 dd 48 a7 6a f8 9e dc 6d 2a e3 29 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 b8 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 02 00 00 00 53 00 1c 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 4,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 792,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2133,
+          "value_prefix_hex": "04 00 00 00 2b 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 e3 02 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 02 00 00 00 53 00 1c 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 07 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionTextureSample_5",
+      "object_flags": 8,
+      "serial_size": 196,
+      "serial_offset": 5297,
+      "class_name": "MaterialExpressionTextureSample",
+      "owner": "MF_WaveBlend",
+      "tagged_properties": {
+        "Coordinates": {
+          "name": "Coordinates",
+          "type": "StructProperty",
+          "size": 36,
+          "array_index": 0,
+          "struct_name": "ExpressionInput",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 03 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "Texture": -11,
+        "SamplerType": "SAMPLERTYPE_Grayscale",
+        "Function": 4
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionTextureSample_6",
+      "object_flags": 8,
+      "serial_size": 196,
+      "serial_offset": 5493,
+      "class_name": "MaterialExpressionTextureSample",
+      "owner": "MF_WaveBlend",
+      "tagged_properties": {
+        "Coordinates": {
+          "name": "Coordinates",
+          "type": "StructProperty",
+          "size": 36,
+          "array_index": 0,
+          "struct_name": "ExpressionInput",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 04 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "Texture": -11,
+        "SamplerType": "SAMPLERTYPE_Grayscale",
+        "Function": 4
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 0,
+      "object_name": "MF_WaveBlend",
+      "object_flags": 11,
+      "serial_size": 224,
+      "serial_offset": 5689,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "f6 02 00 a2 87 c9 da 4b 8b e1 c2 c2 14 7c 51 89",
+          "value_prefix_truncated": false
+        },
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 88,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 124,
+          "value_prefix_hex": "15 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "e0c746aae1e8103f32ceacba84b9ceace520edab7b61b24578df6a5a47fac602",
+  "selection_reason": "local-versus shared-content candidate"
+}
