@@ -1,0 +1,882 @@
+{
+  "path": "TekkenGame/Content/Maps/stg90_sound.umap",
+  "id": "0ea0e685875b7079fdaefd11",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "LevelScriptBlueprint"
+  ],
+  "size": 8351,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg90_sound.umap",
+  "metadata_file": "metadata/0ea0e685875b7079fdaefd11.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5814,
+    "package_flags": 2147614720,
+    "name_count": 82,
+    "name_offset": 189,
+    "export_count": 22,
+    "export_offset": 3422,
+    "import_count": 36,
+    "import_offset": 2414,
+    "bulk_data_start_offset": 8347,
+    "guid": "4030625268f3a24fb0d2ac3c0803a547"
+  },
+  "names": [
+    "/Game/Maps/stg90_sound",
+    "/Game/Sound/TekkenBowl/SE/SE_Amb_Fireworks_Play",
+    "/Game/Sound/TekkenBowl/SE/SE_Amb_RoomTone_Play",
+    "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_L_Play",
+    "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_Ls_Play",
+    "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_R_Play",
+    "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_Rs_Play",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAmbientFireworks",
+    "AkAmbientGayaNormal_L",
+    "AkAmbientGayaNormal_Ls",
+    "AkAmbientGayaNormal_R",
+    "AkAmbientGayaNormal_Rs",
+    "AkAmbientRoomTone",
+    "AkAmbientSound",
+    "AkAudioComponent0",
+    "AkAudioEvent",
+    "AkComponent",
+    "ArrayProperty",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BodyInstance",
+    "BoolProperty",
+    "BPTYPE_LevelScript",
+    "Brush",
+    "ByteProperty",
+    "Class",
+    "Default__AkAmbientSound",
+    "Default__BlueprintGeneratedClass",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__Model",
+    "Default__StaticMeshComponent",
+    "Default__stg90_sound_C",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "EBlueprintType",
+    "ELightingBuildQuality",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "Level",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "Model",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "Quality_Production",
+    "RelativeLocation",
+    "RootComponent",
+    "SE_Amb_Fireworks_Play",
+    "SE_Amb_RoomTone_Play",
+    "SE_Gaya_Normal_L_Play",
+    "SE_Gaya_Normal_Ls_Play",
+    "SE_Gaya_Normal_R_Play",
+    "SE_Gaya_Normal_Rs_Play",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg90_sound",
+    "stg90_sound_C",
+    "StructProperty",
+    "Tags",
+    "TkBowlAmbient",
+    "Vector",
+    "World",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAmbientSound",
+      "outer_index": -31,
+      "object_name": "Default__AkAmbientSound"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -25,
+      "object_name": "SE_Amb_Fireworks_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -26,
+      "object_name": "SE_Amb_RoomTone_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -27,
+      "object_name": "SE_Gaya_Normal_L_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -28,
+      "object_name": "SE_Gaya_Normal_Ls_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -29,
+      "object_name": "SE_Gaya_Normal_R_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -30,
+      "object_name": "SE_Gaya_Normal_Rs_Play"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkComponent",
+      "outer_index": -1,
+      "object_name": "AkAudioComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -33,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "AkAmbientSound"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -31,
+      "object_name": "AkComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -33,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -33,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -33,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -33,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Amb_Fireworks_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Amb_RoomTone_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_L_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_Ls_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_R_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/TekkenBowl/SE/SE_Gaya_Normal_Rs_Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -33,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -33,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -33,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -13,
+      "super_index": -15,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "stg90_sound_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 5814,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 0,
+      "object_name": "Default__stg90_sound_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5894,
+      "class_name": "stg90_sound_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientFireworks",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 5902,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 9,
+        "RootComponent": 9,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientGayaNormal_L",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 6017,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 10,
+        "RootComponent": 10,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientGayaNormal_Ls",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 6132,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 11,
+        "RootComponent": 11,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientGayaNormal_R",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 6247,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 12,
+        "RootComponent": 12,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientGayaNormal_Rs",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 6362,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 13,
+        "RootComponent": 13,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 15,
+      "object_name": "AkAmbientRoomTone",
+      "object_flags": 8,
+      "serial_size": 115,
+      "serial_offset": 6477,
+      "class_name": "AkAmbientSound",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 14,
+        "RootComponent": 14,
+        "Tags": {
+          "name": "Tags",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "NameProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 4e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 3,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 6592,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientFireworks",
+      "tagged_properties": {
+        "AkAudioEvent": -2,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 00 00 00 00 00 96 44 00 00 fa 43",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 4,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 6710,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientGayaNormal_L",
+      "tagged_properties": {
+        "AkAudioEvent": -4,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 80 bb 44 00 00 2f 45 00 00 a0 42",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 5,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 6828,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientGayaNormal_Ls",
+      "tagged_properties": {
+        "AkAudioEvent": -5,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 80 bb 44 00 00 25 c4 00 00 a0 42",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 6,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 6946,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientGayaNormal_R",
+      "tagged_properties": {
+        "AkAudioEvent": -6,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 40 dd c4 00 00 2f 45 00 00 a0 42",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 7,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 7064,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientGayaNormal_Rs",
+      "tagged_properties": {
+        "AkAudioEvent": -7,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 40 dd c4 00 00 25 c4 00 00 a0 42",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 8,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 118,
+      "serial_offset": 7182,
+      "class_name": "AkComponent",
+      "owner": "AkAmbientRoomTone",
+      "tagged_properties": {
+        "AkAudioEvent": -3,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 00 00 00 00 00 7a 44 00 00 fa 43",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 21,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 296,
+      "serial_offset": 7300,
+      "class_name": "Level",
+      "owner": "stg90_sound",
+      "tagged_properties": {
+        "Model": 18,
+        "LevelScriptActor": 20,
+        "WorldSettings": 22
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 15,
+      "object_name": "stg90_sound",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 7596,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -15,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "1a 60 b3 f1 5e 60 7c 4c 85 62 f6 ed 01 a8 88 33",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 15,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 7857,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 15,
+      "object_name": "Model_3",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 7979,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 22,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 8101,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "15 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": 2,
+      "outer_index": 15,
+      "object_name": "stg90_sound_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 8200,
+      "class_name": "stg90_sound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 0,
+      "object_name": "stg90_sound",
+      "object_flags": 11,
+      "serial_size": 53,
+      "serial_offset": 8212,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 15,
+      "object_name": "WorldSettings",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 8265,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 19
+      }
+    }
+  ],
+  "sha256": "328a0c849263ab784afa14aded3ad0a0362216f131cd8026d505cf408784ab7d",
+  "selection_reason": "local-versus shared-content candidate"
+}

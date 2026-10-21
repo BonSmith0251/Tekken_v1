@@ -1,0 +1,867 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Common/BP_ItemList_2PCostume.uasset",
+  "id": "0796cb49cd019f540f226732",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 11585,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Common/BP_ItemList_2PCostume.uasset",
+  "metadata_file": "metadata/0796cb49cd019f540f226732.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 7374,
+    "package_flags": 2147483648,
+    "name_count": 112,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 6182,
+    "import_count": 80,
+    "import_offset": 3942,
+    "bulk_data_start_offset": 11581,
+    "guid": "cc922eedc5ad9b499a3e8174ecfe5a02"
+  },
+  "names": [
+    "/Game/Character/Common/Skeleton/AB_CH_base_Skeleton",
+    "/Game/Character/Common/Skeleton/AB_CH_kaz",
+    "/Game/Character/Item/Common/BP_ItemList_2PCostume",
+    "/Game/Character/Item/Meshes/asa/Base/asa_base/Meshes/AB_CH_asa",
+    "/Game/Character/Item/Meshes/jac/AB_CH_jac",
+    "/Game/Character/Item/Sets/ASA/CS_ASA_DefaultCos2P",
+    "/Game/Character/Item/Sets/ASK/CS_ASK_DefaultCos2P",
+    "/Game/Character/Item/Sets/BRY/CS_BRY_DefaultCos2P",
+    "/Game/Character/Item/Sets/DNC/CS_DNC_DefaultCos1P",
+    "/Game/Character/Item/Sets/DRA/CS_DRA_DefaultCos2P",
+    "/Game/Character/Item/Sets/DVJ/CS_DVJ_DefaultCos1P",
+    "/Game/Character/Item/Sets/FEN/CS_FEN_DefaultCos2P",
+    "/Game/Character/Item/Sets/HEI/CS_HEI_DefaultCos2P",
+    "/Game/Character/Item/Sets/HWO/CS_HWO_DefaultCos2P",
+    "/Game/Character/Item/Sets/ITA/CS_ITA_DefaultCos1P",
+    "/Game/Character/Item/Sets/KAZ/CS_KAZ_DefaultCos1P",
+    "/Game/Character/Item/Sets/KAZ/CS_KAZ_DefaultCos2P",
+    "/Game/Character/Item/Sets/KIN/CS_KIN_DefaultCos2P",
+    "/Game/Character/Item/Sets/LAR/CS_LAR_DefaultCos2P",
+    "/Game/Character/Item/Sets/LAW/CS_LAW_DefaultCos2P",
+    "/Game/Character/Item/Sets/LEO/CS_LEO_DefaultCos2P",
+    "/Game/Character/Item/Sets/LIL/CS_LIL_DefaultCos2P",
+    "/Game/Character/Item/Sets/LTN/CS_LTN_DefaultCos1P",
+    "/Game/Character/Item/Sets/PAU/CS_PAU_DefaultCos2P",
+    "/Game/Character/Item/Sets/STE/CS_STE_DefaultCos2P",
+    "/Game/Character/Item/Sets/XIA/CS_XIA_DefaultCos2P",
+    "/Game/Character/Testing/Sets/JAC/CS_JAC_nude",
+    "/Game/Developers/aaron/Character/Base/BaseSkeleton_AnimBlueprint",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "2PCostumeData",
+    "AB_CH_asa",
+    "AB_CH_base_Skeleton",
+    "AB_CH_jac",
+    "AB_CH_kaz",
+    "Actor",
+    "AllNodes",
+    "AnimBlueprint",
+    "ArrayProperty",
+    "BaseSkeleton_AnimBlueprint",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_ItemList_2PCostume",
+    "BP_ItemList_2PCostume_C",
+    "CharacterItems",
+    "CharacterItemSet",
+    "CharacterLoadInfo",
+    "Class",
+    "ComponentTemplate",
+    "CS_ASA_DefaultCos2P",
+    "CS_ASK_DefaultCos2P",
+    "CS_BRY_DefaultCos2P",
+    "CS_DNC_DefaultCos1P",
+    "CS_DRA_DefaultCos2P",
+    "CS_DVJ_DefaultCos1P",
+    "CS_FEN_DefaultCos2P",
+    "CS_HEI_DefaultCos2P",
+    "CS_HWO_DefaultCos2P",
+    "CS_ITA_DefaultCos1P",
+    "CS_JAC_nude",
+    "CS_KAZ_DefaultCos1P",
+    "CS_KAZ_DefaultCos2P",
+    "CS_KIN_DefaultCos2P",
+    "CS_LAR_DefaultCos2P",
+    "CS_LAW_DefaultCos2P",
+    "CS_LEO_DefaultCos2P",
+    "CS_LIL_DefaultCos2P",
+    "CS_LTN_DefaultCos1P",
+    "CS_PAU_DefaultCos2P",
+    "CS_STE_DefaultCos2P",
+    "CS_XIA_DefaultCos2P",
+    "Default__Actor",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_ItemList_2PCostume_C",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootNodes",
+    "Scale",
+    "SceneComponent",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -74,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -46,
+      "object_name": "AB_CH_base_Skeleton"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -47,
+      "object_name": "AB_CH_kaz"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -48,
+      "object_name": "AB_CH_asa"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -49,
+      "object_name": "AB_CH_jac"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -72,
+      "object_name": "BaseSkeleton_AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -73,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -74,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -74,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -50,
+      "object_name": "CS_ASA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -51,
+      "object_name": "CS_ASK_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -52,
+      "object_name": "CS_BRY_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -53,
+      "object_name": "CS_DNC_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -54,
+      "object_name": "CS_DRA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -55,
+      "object_name": "CS_DVJ_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -56,
+      "object_name": "CS_FEN_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -57,
+      "object_name": "CS_HEI_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -58,
+      "object_name": "CS_HWO_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -59,
+      "object_name": "CS_ITA_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -60,
+      "object_name": "CS_KAZ_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -61,
+      "object_name": "CS_KAZ_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -62,
+      "object_name": "CS_KIN_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -63,
+      "object_name": "CS_LAR_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -64,
+      "object_name": "CS_LAW_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -65,
+      "object_name": "CS_LEO_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -66,
+      "object_name": "CS_LIL_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -67,
+      "object_name": "CS_LTN_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -68,
+      "object_name": "CS_PAU_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -69,
+      "object_name": "CS_STE_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -70,
+      "object_name": "CS_XIA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "CharacterItemSet",
+      "outer_index": -71,
+      "object_name": "CS_JAC_nude"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -73,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -73,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -73,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -73,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -73,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -74,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -73,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -37,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -73,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/Skeleton/AB_CH_base_Skeleton"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/Skeleton/AB_CH_kaz"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/asa/Base/asa_base/Meshes/AB_CH_asa"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/jac/AB_CH_jac"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/ASA/CS_ASA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/ASK/CS_ASK_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/BRY/CS_BRY_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/DNC/CS_DNC_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/DRA/CS_DRA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/DVJ/CS_DVJ_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/FEN/CS_FEN_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/HEI/CS_HEI_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/HWO/CS_HWO_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/ITA/CS_ITA_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/KAZ/CS_KAZ_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/KAZ/CS_KAZ_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/KIN/CS_KIN_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/LAR/CS_LAR_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/LAW/CS_LAW_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/LEO/CS_LEO_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/LIL/CS_LIL_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/LTN/CS_LTN_DefaultCos1P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/PAU/CS_PAU_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/STE/CS_STE_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Sets/XIA/CS_XIA_DefaultCos2P"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Testing/Sets/JAC/CS_JAC_nude"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Developers/aaron/Character/Base/BaseSkeleton_AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -74,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -75,
+      "object_name": "CharacterLoadInfo"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -74,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -74,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -73,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -80,
+      "outer_index": 2,
+      "object_name": "2PCostumeData",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7374,
+      "class_name": "StructProperty",
+      "owner": "2PCostumeData",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -32,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 5,
+      "object_name": "2PCostumeData",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7414,
+      "class_name": "ArrayProperty",
+      "owner": "BP_ItemList_2PCostume_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -35,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7454,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemList_2PCostume_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -33,
+      "super_index": -44,
+      "template_index": -43,
+      "outer_index": 5,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 7494,
+      "class_name": "Function",
+      "owner": "BP_ItemList_2PCostume_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": -44,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7526,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0796cb49cd019f540f226732/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/0796cb49cd019f540f226732/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -39,
+      "super_index": -37,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "BP_ItemList_2PCostume_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 7541,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 10
+      }
+    },
+    {
+      "index": 5,
+      "class_index": 5,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_ItemList_2PCostume_C",
+      "object_flags": 49,
+      "serial_size": 3396,
+      "serial_offset": 7662,
+      "class_name": "BP_ItemList_2PCostume_C",
+      "owner": null,
+      "tagged_properties": {
+        "2PCostumeData": {
+          "name": "2PCostumeData",
+          "type": "ArrayProperty",
+          "size": 3355,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "1a 00 00 00 1f 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 e6 0c 00 00 00 00 00 00 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e4 ff ff ff 26 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 66 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 6f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3f 00 00 80 3f 00 00 80 3f 60 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e8 ff ff ff 26 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 66 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 0c 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -38,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "BP_ItemList_2PCostume",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 11058,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -37,
+        "SimpleConstructionScript": 10,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 5,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "e3 bc 00 c5 f9 d1 2d e4 5c 60 39 d5 f9 70 0a db",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -40,
+      "super_index": 0,
+      "template_index": -76,
+      "outer_index": 5,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 11307,
+      "class_name": "SceneComponent",
+      "owner": "BP_ItemList_2PCostume_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -41,
+      "super_index": 0,
+      "template_index": -78,
+      "outer_index": 10,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 11319,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_4",
+      "tagged_properties": {
+        "ComponentTemplate": 8,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -42,
+      "super_index": 0,
+      "template_index": -79,
+      "outer_index": 5,
+      "object_name": "SimpleConstructionScript_4",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 11458,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ItemList_2PCostume_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 9
+      }
+    }
+  ],
+  "sha256": "1fadcbf30c9ab088825d671ed6a70b8d91f890b2e1adc9f14fc4497090699e48",
+  "selection_reason": "local-versus shared-content candidate"
+}

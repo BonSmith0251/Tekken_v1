@@ -1,0 +1,638 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_newballoon_IA/BP_ItemDrop_FallingNewyearBalloon.uasset",
+  "id": "14beaafa1abe401bd1794609",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 7211,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_newballoon_IA/BP_ItemDrop_FallingNewyearBalloon.uasset",
+  "metadata_file": "metadata/14beaafa1abe401bd1794609.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 4973,
+    "package_flags": 2147483648,
+    "name_count": 98,
+    "name_offset": 189,
+    "export_count": 12,
+    "export_offset": 3677,
+    "import_count": 28,
+    "import_offset": 2893,
+    "bulk_data_start_offset": 7207,
+    "guid": "575f6dd302f47849b48b39d8941c8c2b"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_balloons/Meshes/PA_CH_cmn_opu_balloon_heavygravity",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_newballoon_IA/BP_ItemDrop_FallingNewyearBalloon",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_newballoon_IA/Meshes/SK_CH_cmn_opu_newballoon_IA_A",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "ArrayProperty",
+    "BalloonMesh",
+    "BalloonMesh_GEN_VARIABLE",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "bLightAttachmentsAsGroup",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_ItemDrop_FallingNewyearBalloon",
+    "BP_ItemDrop_FallingNewyearBalloon_C",
+    "bSimulatePhysics",
+    "bStartWithTickEnabled",
+    "ByteProperty",
+    "Camera",
+    "Channel",
+    "Class",
+    "CollisionEnabled",
+    "CollisionProfileName",
+    "CollisionResponse",
+    "CollisionResponses",
+    "ComponentTemplate",
+    "Custom",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_ItemDrop_FallingNewyearBalloon_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_REMOVED_FD682F844DC7314CFCB8D1833EF990AE",
+    "DefaultSceneRootNode",
+    "Destructible",
+    "ECC_PhysicsBody",
+    "ECollisionChannel",
+    "ECollisionEnabled",
+    "ECollisionEnabled::QueryAndPhysics",
+    "ECollisionResponse",
+    "ECR_Block",
+    "ECR_Ignore",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "MassInKgOverride",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "ObjectType",
+    "PA_CH_cmn_opu_balloon_heavygravity",
+    "Package",
+    "ParentClass",
+    "Pawn",
+    "PhysicsAsset",
+    "PrimaryActorTick",
+    "Response",
+    "ResponseArray",
+    "ResponseChannel",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SetPhysicsAsset",
+    "SimpleConstructionScript",
+    "SK_CH_cmn_opu_newballoon_IA_A",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "StructProperty",
+    "TKPlayerCapsule",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vehicle",
+    "Visibility",
+    "WorldDynamic"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -22,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -22,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -22,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -22,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -7,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -21,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_balloons/Meshes/PA_CH_cmn_opu_balloon_heavygravity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_newballoon_IA/Meshes/SK_CH_cmn_opu_newballoon_IA_A"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PhysicsAsset",
+      "outer_index": -19,
+      "object_name": "PA_CH_cmn_opu_balloon_heavygravity"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -22,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -22,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -22,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -20,
+      "object_name": "SK_CH_cmn_opu_newballoon_IA_A"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -22,
+      "object_name": "Default__SkeletalMeshComponent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 3,
+      "object_name": "BalloonMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4973,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -4,
+      "super_index": -17,
+      "template_index": -16,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 77,
+      "serial_offset": 5013,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": -17,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 49,
+        "script_storage_size": 33,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5045,
+        "bytecode_sha256": "704841621ac3a75a6cb089503612c39896733802398bb7347199c274fa5d7fe6",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/14beaafa1abe401bd1794609/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/14beaafa1abe401bd1794609/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": -7,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 5090,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 11
+      }
+    },
+    {
+      "index": 3,
+      "class_index": 3,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_ItemDrop_FallingNewyearBalloon_C",
+      "object_flags": 49,
+      "serial_size": 91,
+      "serial_offset": 5211,
+      "class_name": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "owner": null,
+      "tagged_properties": {
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "18 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_FallingNewyearBalloon",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5302,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -7,
+        "SimpleConstructionScript": 11,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 3,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "d6 c7 2c 4f 29 87 fd 4b 9d 5d b9 52 a1 4c 7e 39",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 5,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 5551,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 5,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 5667,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 3,
+      "object_name": "DefaultSceneRoot_REMOVED_FD682F844DC7314CFCB8D1833EF990AE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5783,
+      "class_name": "SceneComponent",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5795,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 8,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "30 18 f0 0c 56 b8 23 4c 9d fa 90 9f c5 04 14 5a",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5934,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 12,
+        "VariableName": "BalloonMesh",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 b5 b7 e3 44 7a b0 40 a3 2a 7d b1 51 a4 3b bf",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 3,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 6073,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 0a 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 0a 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 9
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 3,
+      "object_name": "BalloonMesh_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 1011,
+      "serial_offset": 6196,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_ItemDrop_FallingNewyearBalloon_C",
+      "tagged_properties": {
+        "SkeletalMesh": -27,
+        "bLightAttachmentsAsGroup": true,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 895,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 104,
+          "value_prefix_hex": "1e 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 9c 02 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4f 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 73 02 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 00 07 00 00 00 4f 00 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 3e 02 00 00 00 00 00 00 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 60 00 00 00 00 00 00 00 4e 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 1b 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    }
+  ],
+  "sha256": "d2f196762c80f9178f2eced65372d6f4dbc98165d4db9072850064f21dd52333",
+  "selection_reason": "local-versus shared-content candidate"
+}

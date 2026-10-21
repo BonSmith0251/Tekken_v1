@@ -1,0 +1,405 @@
+{
+  "path": "TekkenGame/Content/Character/Missiles/BP_MissileHit_MRZ_01.uasset",
+  "id": "0dd730fa0cfd1b4179b6936e",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 4273,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Missiles/BP_MissileHit_MRZ_01.uasset",
+  "metadata_file": "metadata/0dd730fa0cfd1b4179b6936e.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 3150,
+    "package_flags": 2147483648,
+    "name_count": 62,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 2394,
+    "import_count": 20,
+    "import_offset": 1834,
+    "bulk_data_start_offset": 4269,
+    "guid": "9f869d49b8cb47479b5127eb2a261ac1"
+  },
+  "names": [
+    "/Game/Character/Missiles/BP_MissileHit_MRZ_01",
+    "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_draw",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "AdditionalClashFX",
+    "ArrayProperty",
+    "AttenuationRadius",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_MissileHit_MRZ_01",
+    "BP_MissileHit_MRZ_01_C",
+    "bPrecomputedLightingIsValid",
+    "ClashFX",
+    "Class",
+    "Color",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_MissileHit_MRZ_01_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__TekkenCharacterMissileHitEffect",
+    "DefaultMissileHitFX",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot08358ADD4932D873DABBF9B33AC298AF",
+    "DefaultSceneRootNode",
+    "Engine",
+    "FloatProperty",
+    "FX",
+    "FXScale",
+    "GeneratedClass",
+    "Guid",
+    "HitLight",
+    "Intensity",
+    "IntProperty",
+    "LightColor",
+    "LightGuid",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "PointLightComponent",
+    "PS_EF_CHR_MRX_hadou_draw",
+    "RootComponent",
+    "SceneComponent",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenCharacterMissileHitEffect",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -13,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -13,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -12,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "PointLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "TekkenCharacterMissileHitEffect"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_draw"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -11,
+      "object_name": "PS_EF_CHR_MRX_hadou_draw"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLightComponent",
+      "outer_index": -20,
+      "object_name": "HitLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -13,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -13,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -13,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenCharacterMissileHitEffect",
+      "outer_index": -14,
+      "object_name": "Default__TekkenCharacterMissileHitEffect"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": -10,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_MissileHit_MRZ_01_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 3150,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 7
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 0,
+      "object_name": "Default__BP_MissileHit_MRZ_01_C",
+      "object_flags": 49,
+      "serial_size": 279,
+      "serial_offset": 3259,
+      "class_name": "BP_MissileHit_MRZ_01_C",
+      "owner": null,
+      "tagged_properties": {
+        "ClashFX": -15,
+        "HitLight": 4,
+        "AdditionalClashFX": {
+          "name": "AdditionalClashFX",
+          "type": "ArrayProperty",
+          "size": 151,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 05 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3f 00 00 80 3f 00 00 80 3f 2d 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "RootComponent": 4
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_MissileHit_MRZ_01",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 3538,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -10,
+        "SimpleConstructionScript": 7,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "a5 fe bf 37 a9 f9 24 42 bf 5b 84 08 5a 66 e6 f8",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 2,
+      "object_name": "HitLight",
+      "object_flags": 262185,
+      "serial_size": 290,
+      "serial_offset": 3787,
+      "class_name": "PointLightComponent",
+      "owner": "Default__BP_MissileHit_MRZ_01_C",
+      "tagged_properties": {
+        "AttenuationRadius": 1024.0,
+        "LightGuid": {
+          "name": "LightGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "fa 95 7f b5 61 12 f3 4f 8b 06 36 ca 0c 73 5d 04",
+          "value_prefix_truncated": false
+        },
+        "Intensity": 0.0,
+        "LightColor": {
+          "name": "LightColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 172,
+          "value_prefix_hex": "00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bPrecomputedLightingIsValid": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot08358ADD4932D873DABBF9B33AC298AF",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 4077,
+      "class_name": "SceneComponent",
+      "owner": "BP_MissileHit_MRZ_01_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 7,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4089,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 5,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "40 2a fe 61 fd 92 2e 43 8a 87 fa aa cf 5f f8 bd",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 4228,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_MissileHit_MRZ_01_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 6
+      }
+    }
+  ],
+  "sha256": "713c99a6c665919401ed0838e60c069f879dcb49833a067818c176ee3ee9ef33",
+  "selection_reason": "local-versus shared-content candidate"
+}

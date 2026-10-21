@@ -1,0 +1,684 @@
+{
+  "path": "TekkenGame/Content/Maps/stg01_sound.umap",
+  "id": "124a9ecb817618d075f4c820",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "LevelScriptBlueprint"
+  ],
+  "size": 7102,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg01_sound.umap",
+  "metadata_file": "metadata/124a9ecb817618d075f4c820.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5283,
+    "package_flags": 2147614720,
+    "name_count": 74,
+    "name_offset": 189,
+    "export_count": 18,
+    "export_offset": 3251,
+    "import_count": 34,
+    "import_offset": 2299,
+    "bulk_data_start_offset": 7098,
+    "guid": "452595df059b1d4d96cdbf6d46405021"
+  },
+  "names": [
+    "/Game/Maps/stg01_sound",
+    "/Game/Sound/Common/BP_TekkenEnvironmentSound",
+    "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_L_48k",
+    "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_Ls_48k",
+    "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_R_48k",
+    "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_Rs_48k",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioComponent0",
+    "AkAudioEvent",
+    "AkComponent",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_TekkenEnvironmentSound_AMB_1_3f_L",
+    "BP_TekkenEnvironmentSound_AMB_1_3f_Ls",
+    "BP_TekkenEnvironmentSound_AMB_1_3f_R",
+    "BP_TekkenEnvironmentSound_AMB_1_3f_Rs",
+    "BP_TekkenEnvironmentSound_C",
+    "BPTYPE_LevelScript",
+    "Brush",
+    "ByteProperty",
+    "Class",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_TekkenEnvironmentSound_C",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__Model",
+    "Default__StaticMeshComponent",
+    "Default__stg01_sound_C",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "EBlueprintType",
+    "ELightingBuildQuality",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "Level",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "Model",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "Quality_Production",
+    "RelativeLocation",
+    "RootComponent",
+    "SceneComponent",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg01_sound",
+    "stg01_sound_C",
+    "stg01_stg_amb1_3f_L_48k",
+    "stg01_stg_amb1_3f_Ls_48k",
+    "stg01_stg_amb1_3f_R_48k",
+    "stg01_stg_amb1_3f_Rs_48k",
+    "StructProperty",
+    "Vector",
+    "World",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -24,
+      "object_name": "stg01_stg_amb1_3f_L_48k"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -25,
+      "object_name": "stg01_stg_amb1_3f_Ls_48k"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -26,
+      "object_name": "stg01_stg_amb1_3f_R_48k"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -27,
+      "object_name": "stg01_stg_amb1_3f_Rs_48k"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkComponent",
+      "outer_index": -8,
+      "object_name": "AkAudioComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -23,
+      "object_name": "BP_TekkenEnvironmentSound_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -30,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenEnvironmentSound",
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "outer_index": -23,
+      "object_name": "Default__BP_TekkenEnvironmentSound_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -28,
+      "object_name": "AkComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -30,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -30,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -30,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -30,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenEnvironmentSound"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_L_48k"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_Ls_48k"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_R_48k"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Stage/Stg01/AMB/stg01_stg_amb1_3f_Rs_48k"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -6,
+      "object_name": "SceneComponent_1"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -30,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -30,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -30,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -11,
+      "super_index": -13,
+      "template_index": -7,
+      "outer_index": 0,
+      "object_name": "stg01_sound_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 5283,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 0,
+      "object_name": "Default__stg01_sound_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5363,
+      "class_name": "stg01_sound_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 7,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 102,
+      "serial_offset": 5371,
+      "class_name": "AkComponent",
+      "owner": "BP_TekkenEnvironmentSound_AMB_1_3f_L",
+      "tagged_properties": {
+        "AkAudioEvent": -1,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 80 6d 44 00 40 9c 44 00 a0 3e 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 8,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 102,
+      "serial_offset": 5473,
+      "class_name": "AkComponent",
+      "owner": "BP_TekkenEnvironmentSound_AMB_1_3f_Ls",
+      "tagged_properties": {
+        "AkAudioEvent": -2,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 00 70 44 00 80 a2 c4 00 a0 3e 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 9,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 102,
+      "serial_offset": 5575,
+      "class_name": "AkComponent",
+      "owner": "BP_TekkenEnvironmentSound_AMB_1_3f_R",
+      "tagged_properties": {
+        "AkAudioEvent": -3,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 00 75 c4 00 80 9d 44 00 a0 3e 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 10,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262152,
+      "serial_size": 102,
+      "serial_offset": 5677,
+      "class_name": "AkComponent",
+      "owner": "BP_TekkenEnvironmentSound_AMB_1_3f_Rs",
+      "tagged_properties": {
+        "AkAudioEvent": -4,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 80 72 c4 00 80 a2 c4 00 a0 3e 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 11,
+      "object_name": "BP_TekkenEnvironmentSound_AMB_1_3f_L",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 5779,
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 3,
+        "RootComponent": 3
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 11,
+      "object_name": "BP_TekkenEnvironmentSound_AMB_1_3f_Ls",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 5849,
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 4,
+        "RootComponent": 4
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 11,
+      "object_name": "BP_TekkenEnvironmentSound_AMB_1_3f_R",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 5919,
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 5,
+        "RootComponent": 5
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 11,
+      "object_name": "BP_TekkenEnvironmentSound_AMB_1_3f_Rs",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 5989,
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "AkComponent": 6,
+        "RootComponent": 6
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 17,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 288,
+      "serial_offset": 6059,
+      "class_name": "Level",
+      "owner": "stg01_sound",
+      "tagged_properties": {
+        "Model": 14,
+        "LevelScriptActor": 16,
+        "WorldSettings": 18
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 11,
+      "object_name": "stg01_sound",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 6347,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -13,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "6e ff 2e ff 50 27 03 3b a5 e1 dd 27 07 5d c0 66",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 11,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 6608,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 11,
+      "object_name": "Model_3",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 6730,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 18,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 6852,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "0c 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": 2,
+      "outer_index": 11,
+      "object_name": "stg01_sound_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 6951,
+      "class_name": "stg01_sound_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 0,
+      "object_name": "stg01_sound",
+      "object_flags": 11,
+      "serial_size": 53,
+      "serial_offset": 6963,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 11,
+      "object_name": "WorldSettings",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 7016,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 15
+      }
+    }
+  ],
+  "sha256": "a032673ed6fb3c0543cecb431a98f5d901dfd28a850e81d4a9801230085a80da",
+  "selection_reason": "local-versus shared-content candidate"
+}

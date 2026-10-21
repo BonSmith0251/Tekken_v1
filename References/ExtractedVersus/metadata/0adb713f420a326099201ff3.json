@@ -1,0 +1,345 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Blueprint/Interfaces/BPI_FurCharacter.uasset",
+  "id": "0adb713f420a326099201ff3",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 3144,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Blueprint/Interfaces/BPI_FurCharacter.uasset",
+  "metadata_file": "metadata/0adb713f420a326099201ff3.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 2566,
+    "package_flags": 2147483648,
+    "name_count": 45,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 1822,
+    "import_count": 19,
+    "import_offset": 1290,
+    "bulk_data_start_offset": 3140,
+    "guid": "fce65900ae406448a17572179d1847de"
+  },
+  "names": [
+    "/Game/Character/Item/Blueprint/Interfaces/BPI_FurCharacter",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/NeoFur",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_FurCharacter",
+    "BPI_FurCharacter_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "Class",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_FurCharacter_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "Default__ObjectProperty",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Function",
+    "FurComponents",
+    "GeneratedClass",
+    "GetFurComponents",
+    "Guid",
+    "Interface",
+    "IntProperty",
+    "NeoFurComponent",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "Schema",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -17,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -18,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "NeoFurComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -18,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -17,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -17,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/NeoFur"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 2,
+      "object_name": "FurComponents",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2566,
+      "class_name": "ObjectProperty",
+      "owner": "FurComponents",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 3,
+      "object_name": "FurComponents",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2606,
+      "class_name": "ArrayProperty",
+      "owner": "GetFurComponents",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 4,
+      "object_name": "GetFurComponents",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2646,
+      "class_name": "Function",
+      "owner": "BPI_FurCharacter_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 2,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2678,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0adb713f420a326099201ff3/000002.bytecode.bin"
+      },
+      "raw_export_file": "functions/0adb713f420a326099201ff3/000002.export.bin"
+    },
+    {
+      "index": 3,
+      "class_index": -10,
+      "super_index": -6,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BPI_FurCharacter_C",
+      "object_flags": 9,
+      "serial_size": 92,
+      "serial_offset": 2693,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": 4,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 0,
+      "object_name": "Default__BPI_FurCharacter_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 2785,
+      "class_name": "BPI_FurCharacter_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_FurCharacter",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 2793,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 4,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "0f cf 59 5f 5e 58 73 43 82 aa fb cb c7 c3 fa fb",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 6,
+      "object_name": "GetFurComponents",
+      "object_flags": 8,
+      "serial_size": 86,
+      "serial_offset": 3054,
+      "class_name": "EdGraph",
+      "owner": "BPI_FurCharacter",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "2d22da640261eecb4928090f3a8c3cf8bd1a3413929eaef8dbd13d357d32e419",
+  "selection_reason": "local-versus shared-content candidate"
+}

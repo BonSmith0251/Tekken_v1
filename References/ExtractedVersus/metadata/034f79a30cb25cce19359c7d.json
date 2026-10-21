@@ -1,0 +1,114 @@
+{
+  "path": "TekkenGame/Content/Developers/s4shimizu/KiteDemo/Material/WorldCoords-XY.uasset",
+  "id": "034f79a30cb25cce19359c7d",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 1074,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Developers/s4shimizu/KiteDemo/Material/WorldCoords-XY.uasset",
+  "metadata_file": "metadata/034f79a30cb25cce19359c7d.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 832,
+    "package_flags": 2147483648,
+    "name_count": 19,
+    "name_offset": 189,
+    "export_count": 1,
+    "export_offset": 728,
+    "import_count": 3,
+    "import_offset": 644,
+    "bulk_data_start_offset": 1070,
+    "guid": "ddcd3c612d46b4439d4441f489c44e93"
+  },
+  "names": [
+    "/Game/Developers/s4shimizu/KiteDemo/Material/WorldCoords-XY",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "Class",
+    "Default__MaterialFunction",
+    "Description",
+    "FunctionExpressions",
+    "Guid",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Package",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "WorldCoords-XY"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -3,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -3,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "WorldCoords-XY",
+      "object_flags": 3,
+      "serial_size": 238,
+      "serial_offset": 832,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "3f d7 63 a0 85 48 cd 4f b5 0c a8 7e 86 1f 7e 06",
+          "value_prefix_truncated": false
+        },
+        "Description": "Simple WorldPosition XY tiling, aka Z projection",
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 202,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "2abbf1390acef92d6a217f52d61287327deb4b166019c6741a1289f4cd492b56",
+  "selection_reason": "dependency of TekkenGame/Content/Stage/Common/WeatherChange/Shader/Material/MF_RainRipple.uasset"
+}

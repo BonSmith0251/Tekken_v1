@@ -1,0 +1,370 @@
+{
+  "path": "TekkenGame/Content/Character/Item/AbilityItem/BPI_AbilityItem.uasset",
+  "id": "0d402234ef741be942c9791b",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 3337,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/AbilityItem/BPI_AbilityItem.uasset",
+  "metadata_file": "metadata/0d402234ef741be942c9791b.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 2687,
+    "package_flags": 2147483648,
+    "name_count": 45,
+    "name_offset": 189,
+    "export_count": 9,
+    "export_offset": 1715,
+    "import_count": 16,
+    "import_offset": 1267,
+    "bulk_data_start_offset": 3333,
+    "guid": "5bc2b02a5671494298045b6cda215812"
+  },
+  "names": [
+    "/Game/Character/Item/AbilityItem/BPI_AbilityItem",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Ability ID",
+    "AbilityID",
+    "AbilityItemBPType",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_AbilityItem",
+    "BPI_AbilityItem_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "Class",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_AbilityItem_C",
+    "Default__ByteProperty",
+    "Default__Function",
+    "Default__Interface",
+    "EBlueprintType",
+    "Engine",
+    "Enum",
+    "Function",
+    "GeneratedClass",
+    "GetAbilityID",
+    "GetAbilityType",
+    "Guid",
+    "Interface",
+    "IntProperty",
+    "NewParam",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "SetAbilityID",
+    "StructProperty",
+    "TKAbilityItemId"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -15,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -15,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -14,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -16,
+      "object_name": "AbilityItemBPType"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -16,
+      "object_name": "TKAbilityItemId"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -14,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -14,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 2,
+      "object_name": "Ability ID",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2687,
+      "class_name": "ByteProperty",
+      "owner": "GetAbilityID",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 7,
+      "object_name": "GetAbilityID",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2727,
+      "class_name": "Function",
+      "owner": "BPI_AbilityItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 1,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2759,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0d402234ef741be942c9791b/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/0d402234ef741be942c9791b/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 4,
+      "object_name": "NewParam",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2774,
+      "class_name": "ByteProperty",
+      "owner": "GetAbilityType",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 7,
+      "object_name": "GetAbilityType",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2814,
+      "class_name": "Function",
+      "owner": "BPI_AbilityItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": 0,
+        "first_child": 3,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2846,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0d402234ef741be942c9791b/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/0d402234ef741be942c9791b/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 6,
+      "object_name": "AbilityID",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 2861,
+      "class_name": "ByteProperty",
+      "owner": "SetAbilityID",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 7,
+      "object_name": "SetAbilityID",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 2901,
+      "class_name": "Function",
+      "owner": "BPI_AbilityItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": 0,
+        "first_child": 5,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 2933,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0d402234ef741be942c9791b/000005.bytecode.bin"
+      },
+      "raw_export_file": "functions/0d402234ef741be942c9791b/000005.export.bin"
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": -6,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_AbilityItem_C",
+      "object_flags": 9,
+      "serial_size": 116,
+      "serial_offset": 2948,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": 7,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 0,
+      "object_name": "Default__BPI_AbilityItem_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3064,
+      "class_name": "BPI_AbilityItem_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPI_AbilityItem",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 3072,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 7,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "bd 49 cf e7 0f 6c 79 48 aa 6b 97 4c 4f 2c 26 fa",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "3bb2a6ac5e2108a56147ddf4baa543f1b4f7dc488531c26c3e9f0e35d294dda4",
+  "selection_reason": "local-versus shared-content candidate"
+}

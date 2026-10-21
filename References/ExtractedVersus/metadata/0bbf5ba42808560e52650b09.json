@@ -1,0 +1,572 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/AB_CH_cmn_oph_rotary_light.uasset",
+  "id": "0bbf5ba42808560e52650b09",
+  "classes": [
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 7160,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/AB_CH_cmn_oph_rotary_light.uasset",
+  "metadata_file": "metadata/0bbf5ba42808560e52650b09.json",
+  "function_count": 2,
+  "summary": {
+    "total_header_size": 5030,
+    "package_flags": 2147483648,
+    "name_count": 96,
+    "name_offset": 189,
+    "export_count": 11,
+    "export_offset": 3822,
+    "import_count": 28,
+    "import_offset": 3038,
+    "bulk_data_start_offset": 7156,
+    "guid": "638d218623d7124791e605d831378f58"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/AB_CH_cmn_oph_rotary_light",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Meshes/AS_CH_cmn_oph_rotary_light",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Meshes/SKT_CH_cmn_oph_rotary_light",
+    "/Script/AnimGraphRuntime",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AB_CH_cmn_oph_rotary_light",
+    "AB_CH_cmn_oph_rotary_light_C",
+    "AnimBlueprint",
+    "AnimBlueprintGeneratedClass",
+    "AnimGraphNode_Root_0A73245A48424374AECED7998662687E",
+    "AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5",
+    "AnimInstance",
+    "AnimNode_Root",
+    "AnimNode_SequencePlayer",
+    "AnimSequence",
+    "ArrayProperty",
+    "AS_CH_cmn_oph_rotary_light",
+    "bAllowDeletion",
+    "bIgnoreForRelevancyTest",
+    "bInstanceIsTarget",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlendWeight",
+    "bLoopAnimation",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BoundFunction",
+    "ByteProperty",
+    "CachedBoolDestProperty",
+    "CachedBoolSourceProperty",
+    "Class",
+    "CopyRecords",
+    "Default__AB_CH_cmn_oph_rotary_light_C",
+    "Default__AnimBlueprint",
+    "Default__AnimBlueprintGeneratedClass",
+    "Default__AnimInstance",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__StructProperty",
+    "DestArrayIndex",
+    "DestProperty",
+    "EAnimGroupRole",
+    "EAnimGroupRole::CanBeLeader",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EPostCopyOperation",
+    "EPostCopyOperation::None",
+    "EvaluateGraphExposedInputs",
+    "EvaluateGraphExposedInputs_ExecuteUbergraph_AB_CH_cmn_oph_rotary_light_AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5",
+    "EventGraph",
+    "ExecuteUbergraph_AB_CH_cmn_oph_rotary_light",
+    "ExposedValueCopyRecord",
+    "ExposedValueHandler",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GroupIndex",
+    "GroupRole",
+    "Guid",
+    "InternalTimeAccumulator",
+    "IntProperty",
+    "LinkID",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PlayRate",
+    "PointerToUberGraphFrame",
+    "PoseLink",
+    "PostCopyOperation",
+    "Result",
+    "RootAnimNodeIndex",
+    "RotatePlayrate",
+    "Schema",
+    "ScriptStruct",
+    "Sequence",
+    "Size",
+    "Skeleton",
+    "SKT_CH_cmn_oph_rotary_light",
+    "SourceArrayIndex",
+    "SourcePropertyName",
+    "SourceSubPropertyName",
+    "StartPosition",
+    "StructProperty",
+    "TargetSkeleton",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprint",
+      "outer_index": -23,
+      "object_name": "Default__AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprintGeneratedClass",
+      "outer_index": -23,
+      "object_name": "Default__AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimInstance",
+      "outer_index": -23,
+      "object_name": "Default__AnimInstance"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimSequence",
+      "outer_index": -19,
+      "object_name": "AS_CH_cmn_oph_rotary_light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "AnimBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "AnimBlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -23,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -22,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -25,
+      "object_name": "PlayRate"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -22,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -22,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Meshes/AS_CH_cmn_oph_rotary_light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_rotary_light/Meshes/SKT_CH_cmn_oph_rotary_light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AnimGraphRuntime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -21,
+      "object_name": "AnimNode_Root"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -23,
+      "object_name": "AnimNode_SequencePlayer"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -23,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Skeleton",
+      "outer_index": -20,
+      "object_name": "SKT_CH_cmn_oph_rotary_light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -22,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 8,
+      "object_name": "RotatePlayrate",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5030,
+      "class_name": "FloatProperty",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 8,
+      "object_name": "AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5066,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 8,
+      "object_name": "AnimGraphNode_Root_0A73245A48424374AECED7998662687E",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5106,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 5,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5146,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_AB_CH_cmn_oph_rotary_light",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 8,
+      "object_name": "ExecuteUbergraph_AB_CH_cmn_oph_rotary_light",
+      "object_flags": 1,
+      "serial_size": 63,
+      "serial_offset": 5182,
+      "class_name": "Function",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 23,
+        "script_storage_size": 19,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5214,
+        "bytecode_sha256": "17495cfcbe29d0c002b9b76bfdb6eee4492de7f8d1ed64b5b245adba380b7cad",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0bbf5ba42808560e52650b09/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/0bbf5ba42808560e52650b09/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 8,
+      "object_name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AB_CH_cmn_oph_rotary_light_AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 5245,
+      "class_name": "Function",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5277,
+        "bytecode_sha256": "522ca0cae093b082fed9d6491ac57bf308bf9602ef26cd2696b35922b6d5d789",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/0bbf5ba42808560e52650b09/000005.bytecode.bin"
+      },
+      "raw_export_file": "functions/0bbf5ba42808560e52650b09/000005.export.bin"
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 8,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5307,
+      "class_name": "StructProperty",
+      "owner": "AB_CH_cmn_oph_rotary_light_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": -12,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "AB_CH_cmn_oph_rotary_light_C",
+      "object_flags": 9,
+      "serial_size": 220,
+      "serial_offset": 5347,
+      "class_name": "AnimBlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -27,
+        "RootAnimNodeIndex": 1,
+        "UberGraphFramePointerProperty": 7,
+        "UberGraphFunction": 5
+      }
+    },
+    {
+      "index": 8,
+      "class_index": 8,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "Default__AB_CH_cmn_oph_rotary_light_C",
+      "object_flags": 49,
+      "serial_size": 1228,
+      "serial_offset": 5567,
+      "class_name": "AB_CH_cmn_oph_rotary_light_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "45 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AnimGraphNode_Root_0A73245A48424374AECED7998662687E": {
+          "name": "AnimGraphNode_Root_0A73245A48424374AECED7998662687E",
+          "type": "StructProperty",
+          "size": 270,
+          "array_index": 0,
+          "struct_name": "AnimNode_Root",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 106,
+          "value_prefix_hex": "4e 00 00 00 00 00 00 00 5b 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 01 00 00 00 45 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 5b 00 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 45 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 5b 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 5b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 45 00",
+          "value_prefix_truncated": true
+        },
+        "AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5": {
+          "name": "AnimGraphNode_SequencePlayer_A93E86D946AB45D3B5ABAB835F4487E5",
+          "type": "StructProperty",
+          "size": 766,
+          "array_index": 0,
+          "struct_name": "AnimNode_SequencePlayer",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 425,
+          "value_prefix_hex": "53 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fc ff ff ff 18 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 4a 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 80 3f 5a 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 ff ff ff ff 3e 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 2e 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 04 00",
+          "value_prefix_truncated": true
+        },
+        "RotatePlayrate": 1.0
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "AB_CH_cmn_oph_rotary_light",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 6795,
+      "class_name": "AnimBlueprint",
+      "owner": null,
+      "tagged_properties": {
+        "TargetSkeleton": -27,
+        "ParentClass": -12,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 8,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "6d f2 23 e4 ea fa 87 4c bf 52 8d ac 34 fa 3b e3",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 10,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 7044,
+      "class_name": "EdGraph",
+      "owner": "AB_CH_cmn_oph_rotary_light",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    }
+  ],
+  "sha256": "70e2b0627cf9e57e8159c94d04cb286de5cc9f94e13ef9829f056891588bbed2",
+  "selection_reason": "local-versus shared-content candidate"
+}

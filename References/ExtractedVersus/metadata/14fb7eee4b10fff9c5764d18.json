@@ -1,0 +1,220 @@
+{
+  "path": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.uasset",
+  "id": "14fb7eee4b10fff9c5764d18",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 3467,
+  "encrypted_source": false,
+  "package_file": "packages/Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.uasset",
+  "metadata_file": "metadata/14fb7eee4b10fff9c5764d18.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1661,
+    "package_flags": 2684354560,
+    "name_count": 42,
+    "name_offset": 189,
+    "export_count": 2,
+    "export_offset": 1441,
+    "import_count": 7,
+    "import_offset": 1245,
+    "bulk_data_start_offset": 3463,
+    "guid": "44e836b7e0b38747879d31cd4946a99a"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient",
+    "/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "CheapContrast",
+    "Class",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialFunction",
+    "Description",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "LinearGradient",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "StateId",
+    "StrProperty",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -7,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -6,
+      "object_name": "LinearGradient"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -7,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 2,
+      "object_name": "MaterialExpressionMaterialFunctionCall_15",
+      "object_flags": 8,
+      "serial_size": 1509,
+      "serial_offset": 1661,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "CheapContrast",
+      "tagged_properties": {
+        "MaterialFunction": -4,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 222,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 14 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 a9 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 35 46 68 95 e6 49 25 4d 85 c6 da 65 ec 21 ec 33 17 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 0b 00 00 00 55 56 20 43 68 61 6e 6e 65 6c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 681,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 317,
+          "value_prefix_hex": "02 00 00 00 15 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 74 02 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4b 15 11 0f 37 11 3b 44 99 14 99 cc 5e 1f c0 8f 23 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 c0 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 0a 00 00 00 55 47 72 61 64 69 65 6e 74 00 1a 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 2,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 437,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1060,
+          "value_prefix_hex": "02 00 00 00 25 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 80 01 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 0a 00 00 00 55 47 72 61 64 69 65 6e 74 00 1a 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 28 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "CheapContrast",
+      "object_flags": 3,
+      "serial_size": 293,
+      "serial_offset": 3170,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "f2 4b a4 3f 4c 62 2d 46 87 29 22 fa 68 f9 e1 6f",
+          "value_prefix_truncated": false
+        },
+        "Description": "Cheaply adds contrast similar to pulling in edges in Photoshops Levels tool",
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 52,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "cc565d2279af92a72f1e271458054c2285789decb3b0e01028c60c7a5910d0d2",
+  "selection_reason": "dependency of TekkenGame/Content/System/MF_WorldAlignedNormal_UVScroll.uasset"
+}
