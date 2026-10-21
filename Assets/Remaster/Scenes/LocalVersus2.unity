@@ -187,7 +187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4577100449249308805, guid: edabf696baa617d45a7c036af240bf99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4577100449249308805, guid: edabf696baa617d45a7c036af240bf99, type: 3}
       propertyPath: m_LocalRotation.y
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3741498994287223021, guid: 9012a08bac5c81a41b5f177de17a74af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3741498994287223021, guid: 9012a08bac5c81a41b5f177de17a74af, type: 3}
       propertyPath: m_LocalRotation.y
@@ -276,13 +276,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000000020}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1221833, y: 0, z: 0, w: 0.9925075}
-  m_LocalPosition: {x: 0, y: 4, z: -12}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.08, z: -3.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 14, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1000000022
 Camera:
   m_ObjectHideFlags: 0
@@ -294,19 +294,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.025, g: 0.04, b: 0.07, a: 1}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
+  m_projectionMatrixMode: 2
+  m_GateFitMode: 0
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 28.25434
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 36, y: 20.25}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -316,7 +316,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 100
-  field of view: 38
+  field of view: 39.43049
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

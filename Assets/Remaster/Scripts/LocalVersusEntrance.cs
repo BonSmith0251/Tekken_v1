@@ -23,8 +23,8 @@ namespace Versus.Remaster
         readonly EntranceCameraTrack jinCamera, kazuyaCamera;
         readonly EntranceCameraLens lens;
         readonly float gameplayFov;
-        static readonly Vector3 P1Ready = new Vector3(-2, 0, 0);
-        static readonly Vector3 P2Ready = new Vector3(2, 0, 0);
+        static readonly Vector3 P1Ready = new Vector3(-BattleModel.StartingHalfSeparation, 0, 0);
+        static readonly Vector3 P2Ready = new Vector3(BattleModel.StartingHalfSeparation, 0, 0);
         float frameRemainder;
         GUIStyle heading, caption;
 
@@ -116,7 +116,9 @@ namespace Versus.Remaster
                 out Vector3 position, out Vector3 target);
             // Cut to a separate, elevated two-shot, then settle to the combat camera.
             // Do not interpolate across the arena from Jin's last close-up.
-            Vector3 overhead = position + Vector3.up * 3f;
+            // Use a fixed reveal angle so a closer fight camera does not create a steeper tilt.
+            float revealHeight = Vector3.Distance(position, target) * Mathf.Tan(25f * Mathf.Deg2Rad);
+            Vector3 overhead = position + Vector3.up * revealHeight;
             cameraRig.transform.position = Vector3.Lerp(overhead, position, blend);
             cameraRig.transform.rotation = Quaternion.LookRotation(target - cameraRig.transform.position);
             lens.SetVerticalFov(gameplayFov);

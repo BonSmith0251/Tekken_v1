@@ -1,3 +1,19 @@
+LIVE-VERIFIED GAMEPLAY FRAMING CORRECTION
+The reference-calibrated starting camera is (0, 1.08, -3.45), with zero pitch,
+yaw and roll, and 65 degrees horizontal FOV. Live Play capture:
+Validation/CameraFraming/reference-calibrated.png (camera-only, without GUI).
+Both fighters remain fully visible and occupy approximately 75% of image height.
+The old four-unit starting separation forced a 4.89-unit camera distance even
+with a 3.25-unit minimum. Starting separation is now 2.2 units (+/-1.1), shared
+by round resets, entrance anchors and the serialized scene. This changes the
+initial combat spacing; attack ranges and movement speeds are unchanged.
+The camera pulls back at wider spacing, allowing 10% horizontal screen margin.
+Follow interpolation preserves the level angle rather than aiming from a lagging
+camera position. Round reveal uses a fixed 25-degree downward angle and settles
+to level in the existing 24 frames; this replaces a fixed three-unit lift.
+The gameplay result was rendered in Unity; the revised reveal angle was compiled
+but not separately captured. Earlier calibration values below are superseded.
+
 CURRENT REFERENCE SEQUENCE (supersedes earlier clip/timing notes below)
 Reference: TEKKEN 7  2026-10-21 08-43-06.mp4.
 Kazuya P1: kz_s03, move 2326, body 714, camera track 124, 217 frames.

@@ -260,7 +260,8 @@ namespace Versus.Remaster
             position += new Vector3(Mathf.Sin(visualTime * 95) * shake * .15f, 0, 0);
             cameraRig.transform.position = Vector3.Lerp(cameraRig.transform.position == Vector3.zero ? position : cameraRig.transform.position,
                 position, 1 - Mathf.Exp(-Time.unscaledDeltaTime * 7));
-            cameraRig.transform.LookAt(target);
+            // Keep the calibrated level angle while the follow position catches up.
+            cameraRig.transform.rotation = Quaternion.LookRotation(target - position);
         }
         PlayerCommand ReadInput(int player)
         {

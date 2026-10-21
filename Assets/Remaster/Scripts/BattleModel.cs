@@ -64,6 +64,7 @@ namespace Versus.Remaster
     /// <summary>60 Hz rules independent of rendering and input devices. Local play only.</summary>
     public class BattleModel
     {
+        public const float StartingHalfSeparation = 1.1f;
         public readonly MatchRules rules;
         public readonly MoveSpec[][] moves;
         public readonly FighterState[] fighters = { new FighterState(), new FighterState() };
@@ -97,7 +98,7 @@ namespace Versus.Remaster
             for (int i = 0; i < 2; i++)
             {
                 var f = fighters[i];
-                f.x = i == 0 ? -2 : 2; f.z = 0; f.facing = i == 0 ? 1 : -1;
+                f.x = i == 0 ? -StartingHalfSeparation : StartingHalfSeparation; f.z = 0; f.facing = i == 0 ? 1 : -1;
                 f.health = rules.health; f.attack = -1; f.attackFrame = f.stun = f.flash = f.bufferTicks = 0;
                 f.buffer = -1; f.guard = f.crouch = f.connected = false;
             }
