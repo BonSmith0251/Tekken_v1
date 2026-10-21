@@ -24,8 +24,8 @@ namespace Versus.Remaster
         IFighterPresentation[] views;
         Camera cameraRig;
         EntranceCameraLens gameplayLens;
-        // Retain the prototype framing until a native gameplay FOV is recovered.
-        const float GameplayVerticalFov = 38;
+        // Read from the original game camera +0x39C during a user-confirmed normal fight.
+        const float GameplayHorizontalFov = 65;
         LocalVersusEntrance entrance;
         bool menu, help, diagnostic;
         readonly int[] aiCooldown = new int[2];
@@ -170,7 +170,7 @@ namespace Versus.Remaster
             cameraRig.tag = "MainCamera"; cameraRig.backgroundColor = new Color(.025f, .04f, .07f);
             cameraRig.clearFlags = CameraClearFlags.SolidColor;
             gameplayLens = new EntranceCameraLens(cameraRig);
-            gameplayLens.SetVerticalFov(GameplayVerticalFov);
+            gameplayLens.SetHorizontalFov(GameplayHorizontalFov);
             cameraRig.nearClipPlane = .1f; cameraRig.farClipPlane = 100;
             if (!cameraRig.GetComponent<AudioListener>()) cameraRig.gameObject.AddComponent<AudioListener>();
         }
@@ -251,7 +251,7 @@ namespace Versus.Remaster
             for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
                 !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
             if (entrance != null && entrance.Active) { entrance.Present(); return; }
-            gameplayLens.SetVerticalFov(GameplayVerticalFov);
+            gameplayLens.SetHorizontalFov(GameplayHorizontalFov);
             var a = battle.fighters[0]; var b = battle.fighters[1];
             float distance = Mathf.Clamp(9 + Mathf.Abs(a.x - b.x) * .6f, 11, 17);
             Vector3 target = new Vector3((a.x + b.x) / 2, 1, (a.z + b.z) / 2);

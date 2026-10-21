@@ -17,11 +17,14 @@ Lens and aspect audit: entrance rendering now uses a centered 16:9 viewport, inc
 Verification: runtime scripts compile against the installed Unity assemblies. Camera tests verify body/track durations, finite samples, valid lens values, and exact equality of all exported samples with the original archives. A numerical rig projection check places each character's head inside the camera frame at the first, middle, and last samples. The integrated scene has not been visually verified in Play mode; check the original game's framing, cuts, zoom, and the skip-to-fight transition before claiming an exact reproduction.
 
 GAMEPLAY LENS
-Gameplay now shares the entrance physical lens controller and its fixed 16:9
-viewport, with a 36 x 20.25 mm equivalent sensor and no gate-fit crop.
-The existing 38-degree vertical FOV is preserved (approximately 62.94 degrees
-horizontal and 29.41 mm equivalent focal length); it is a prototype setting,
-not a recovered native gameplay lens. The existing tracking/distance is retained.
-Ready/fight and skip keep this lens; every gameplay frame recalculates the
-viewport for resizing. Gameplay HUD, menus and pause controls use that viewport.
-Original gameplay projection and visual comparison remain unverified.
+The original running game was sampled read-only for 120 camera snapshots.
+The user confirmed normal gameplay. See Tools/EntranceCamera/gameplay-camera-capture.json.
+The live horizontal FOV is 65 degrees, with camera aspect fields reporting
+1.777778 (16:9). The clone now uses this recovered horizontal FOV, replacing
+its 38-degree vertical prototype setting. At 16:9 the vertical FOV is
+39.43049 degrees and equivalent focal length is 28.25434 mm on a 36 mm gate.
+The filmback/focal length are equivalences, not recovered native settings.
+Gameplay shares the entrance lens controller; Ready/fight and skipping preserve
+this projection. HUD and menus fit the viewport, including after resizing.
+Native position and rotation samples are recorded as evidence, but the tracking
+algorithm, distance rules and exceptional cinematic lenses are not reconstructed.

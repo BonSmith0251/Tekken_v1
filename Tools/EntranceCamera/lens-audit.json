@@ -1,6 +1,6 @@
 {
   "referenceAspect": 1.7777777777777777,
-  "aspectEvidence": "Installed GameUserSettings.ini DesiredScreenWidth=1280, DesiredScreenHeight=720; live original projection not captured.",
+  "aspectEvidence": "Live original camera fields +0x3A8 and +0x420 report 1.777778 (16:9); see gameplay-camera-capture.json.",
   "lensEvidence": "MOTA descriptor 15 first component is interpreted as horizontal FOV radians; Unreal FMinimalViewInfo documents horizontal FOV; local Direct_TekkenDirect.py maps camera angle radians to game FOV degrees.",
   "equivalentSensorMm": [
     36,
@@ -48,5 +48,12 @@
         129.72044342489494
       ]
     }
-  ]
+  ],
+  "gameplay": {
+    "horizontalFovDegrees": 65,
+    "verticalFovDegrees": 39.43048686077504,
+    "equivalentFocalLengthMm": 28.254340388114827,
+    "evidence": "Read-only original-game camera samples, normal fight confirmed by user. See gameplay-camera-capture.json.",
+    "trackingAlgorithmRecovered": false
+  }
 }
