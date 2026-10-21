@@ -17,6 +17,8 @@ def export(workspace, project):
     for character, folder, move_id, resource in [
         ('jin', 'jin_motion', 2218, 'Jin_s00'),
         ('kaz', 'kazuya_motion', 2247, 'Kazuya_s06'),
+        ('jin', 'jin_motion', 2220, 'Jin_s02'),
+        ('kaz', 'kazuya_motion', 2326, 'Kazuya_s03'),
     ]:
         moves = json.loads((workspace / f'decrypted/{folder}/{character}/moveset.json').read_text())['moves']
         move = next(m for m in moves if m['id'] == move_id)

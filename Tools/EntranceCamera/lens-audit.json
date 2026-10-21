@@ -47,6 +47,38 @@
         47.99666748786459,
         129.72044342489494
       ]
+    },
+    {
+      "resource": "Jin_s02",
+      "frames": 301,
+      "horizontalFovDegreesRange": [
+        29.898483733192155,
+        63.09537509961019
+      ],
+      "verticalFovDegreesRange": [
+        17.082538497534774,
+        38.10416876301796
+      ],
+      "equivalentFocalLengthMmRange": [
+        29.31852850559355,
+        67.41575143120102
+      ]
+    },
+    {
+      "resource": "Kazuya_s03",
+      "frames": 217,
+      "horizontalFovDegreesRange": [
+        12.82892575198151,
+        62.79130190795039
+      ],
+      "verticalFovDegreesRange": [
+        7.236934480607355,
+        37.89396088404303
+      ],
+      "equivalentFocalLengthMmRange": [
+        29.493767740751657,
+        160.10876003695188
+      ]
     }
   ],
   "gameplay": {
@@ -55,5 +87,9 @@
     "equivalentFocalLengthMm": 28.254340388114827,
     "evidence": "Read-only original-game camera samples, normal fight confirmed by user. See gameplay-camera-capture.json.",
     "trackingAlgorithmRecovered": false
-  }
+  },
+  "activeEntranceResources": [
+    "Kazuya_s03",
+    "Jin_s02"
+  ]
 }

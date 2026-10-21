@@ -312,7 +312,7 @@ namespace Versus.Remaster
         void OnGUI()
         {
             Styles();
-            if (entrance != null && entrance.Active) { entrance.Draw(); return; }
+            if (entrance != null && entrance.Active && !entrance.ShowsBattleHud) { entrance.Draw(); return; }
             if (!cameraRig) return;
             var previousMatrix = GUI.matrix;
             GUI.matrix = Matrix4x4.identity;
@@ -324,7 +324,7 @@ namespace Versus.Remaster
             Panel(new Rect(viewport.xMax, top, Screen.width - viewport.xMax, viewport.height), Color.black);
             GUI.matrix = Matrix4x4.TRS(new Vector3(viewport.x, top, 0), Quaternion.identity,
                 new Vector3(viewport.width / 1280f, viewport.height / 720f, 1));
-            try { DrawGameplayGUI(); }
+            try { DrawGameplayGUI(); if (entrance != null && entrance.Active) entrance.Draw(); }
             finally { GUI.matrix = previousMatrix; }
         }
         void DrawGameplayGUI()
@@ -344,7 +344,7 @@ namespace Versus.Remaster
             Label(new Rect(581, 78, 150, 25), "FIRST TO " + config.rules.roundsToWin, small);
             Label(new Rect(40, 128, 650, 25), (automaticFight ? "AUTO FIGHT" : "LOCAL VERSUS") + "   /   ROUND " + battle.round + "   /   NEON DECK", small);
             if (hitLabelTime > 0) Label(new Rect(440, 150, 400, 40), hitLabel, new GUIStyle(text) { alignment = TextAnchor.MiddleCenter }, Accent);
-            if (battle.phase == MatchPhase.Intro)
+            if (battle.phase == MatchPhase.Intro && (entrance == null || !entrance.Active))
                 Label(new Rect(250, 240, 780, 90), battle.phaseTicks > 45 ? "ROUND " + battle.round : "FIGHT", title);
             if (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver)
             {

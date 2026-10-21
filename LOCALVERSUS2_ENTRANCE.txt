@@ -1,3 +1,19 @@
+CURRENT REFERENCE SEQUENCE (supersedes earlier clip/timing notes below)
+Reference: TEKKEN 7  2026-10-21 08-43-06.mp4.
+Kazuya P1: kz_s03, move 2326, body 714, camera track 124, 217 frames.
+Jin P2: jz_s02, move 2220, body 663, camera track 106, 301 frames.
+Both body/camera tracks run together at native 60 fps, without speed changes.
+There is a two-frame black cut between entrances and before the round reveal.
+Round reveal: 90 frames, camera settles from an elevated two-shot to the level
+combat camera in 24 frames. ROUND 1 appears on frames 15 through 65.
+READY: 45 frames. FIGHT: 45 frames. Combat starts after FIGHT; total 11.7 sec.
+The health HUD is visible during the round reveal, READY and FIGHT.
+This replaces the old sweep from the final face close-up across the arena.
+The round camera and overlay timings are video-calibrated approximations;
+only entrance body/camera tracks are recovered native data. Live verification
+is pending. Evidence: Tools/EntranceCamera/reference-timeline.json.
+
+EARLIER IMPLEMENTATION NOTES
 LocalVersus2 entrance implementation
 
 Open Assets/Remaster/Scenes/LocalVersus2.unity, or use Remaster > Open LocalVersus2 entrance scene, then press Play. The scene starts with manual Jin (P1) versus Kazuya (P2). It shows Jin's entrance shot, Kazuya's entrance shot, a face-off, READY, then FIGHT. Enter skips the sequence. The existing controls apply after FIGHT. The match timer and combat simulation remain stopped through the entrance.

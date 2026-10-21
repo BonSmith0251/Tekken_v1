@@ -12,7 +12,7 @@ class EntranceCameraTests(unittest.TestCase):
     def test_physical_lens_preserves_source_projection(self):
         # Independent pinhole projection check for every animated lens sample.
         # 36 x 20.25 mm is an equivalent 16:9 gate, not a recovered filmback.
-        for resource in ['Jin_s00', 'Kazuya_s06']:
+        for resource in ['Jin_s00', 'Kazuya_s06', 'Jin_s02', 'Kazuya_s03']:
             camera = (PROJECT / f'Assets/Remaster/Resources/EntranceCameras/{resource}.bytes').read_bytes()
             frames = struct.unpack_from('<I', camera, 4)[0]
             for frame in range(frames):
@@ -31,6 +31,8 @@ class EntranceCameraTests(unittest.TestCase):
         for character, motion, resource, move, track in [
             ('Jin', 661, 'Jin_s00', 2218, 104),
             ('Kazuya', 700, 'Kazuya_s06', 2247, 120),
+            ('Jin', 663, 'Jin_s02', 2220, 106),
+            ('Kazuya', 714, 'Kazuya_s03', 2326, 124),
         ]:
             with self.subTest(character=character):
                 body = (PROJECT / f'Assets/Remaster/Museum/{character}Full/character_{motion:04}.bytes').read_bytes()

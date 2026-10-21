@@ -1,0 +1,53 @@
+{
+  "referenceVideo": "TEKKEN 7  2026-10-21 08-43-06.mp4",
+  "referenceVideoSize": [
+    1920,
+    1080
+  ],
+  "referenceCutSeconds": {
+    "kazuyaFirstVisible": 4.487767,
+    "kazuyaToJinBlack": 8.087767,
+    "jinToRoundBlack": 13.0878
+  },
+  "timingBasis": "Native body/camera frame counts; brief black cuts and round-start beats calibrated from approximately 30 fps reference recording. Round-start camera motion is authored, not a recovered track.",
+  "fps": 60,
+  "sequence": [
+    {
+      "shot": "Kazuya",
+      "frames": 217,
+      "move": 2326,
+      "camera": "Kazuya_s03"
+    },
+    {
+      "shot": "PlayerCut",
+      "frames": 2
+    },
+    {
+      "shot": "Jin",
+      "frames": 301,
+      "move": 2220,
+      "camera": "Jin_s02"
+    },
+    {
+      "shot": "RoundCut",
+      "frames": 2
+    },
+    {
+      "shot": "RoundStart",
+      "frames": 90,
+      "cameraSettleFrames": 24,
+      "roundLabelStartFrame": 15,
+      "roundLabelEndExclusive": 66
+    },
+    {
+      "shot": "Ready",
+      "frames": 45
+    },
+    {
+      "shot": "Fight",
+      "frames": 45
+    }
+  ],
+  "durationSeconds": 11.7,
+  "liveUnityPlaybackVerified": false
+}
