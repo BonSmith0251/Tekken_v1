@@ -14,6 +14,8 @@ namespace Versus.Remaster
         readonly Transform playerOne, playerTwo;
         readonly Camera cameraRig;
         readonly BattleModel battle;
+        readonly FighterActionMotion jinMotion;
+        readonly int jinWalk, jinStance;
         readonly Vector3 p1Start = new Vector3(-4.4f, 0, 0);
         readonly Vector3 p2Start = new Vector3(4.4f, 0, 0);
         static readonly Vector3 P1Ready = new Vector3(-2, 0, 0);
@@ -21,10 +23,24 @@ namespace Versus.Remaster
         float frameRemainder;
         GUIStyle heading, caption;
 
-        public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model)
+        public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model,
+            FighterActionMotion jin, MuseumCharacter jinCharacter)
         {
             playerOne = p1; playerTwo = p2; cameraRig = camera; battle = model;
+            jinMotion = jin;
+            jinWalk = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1444 && a.motion);
+            jinStance = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1581 && a.motion);
             Current = Shot.PlayerOne;
+        }
+
+        public void PrepareMotion()
+        {
+            if (!jinMotion) return;
+            if (Current == Shot.PlayerOne && Frame < 60 && jinWalk >= 0)
+                jinMotion.SetPresentation(jinWalk, Frame, true);
+            else if (Current == Shot.PlayerOne && jinStance >= 0)
+                jinMotion.SetPresentation(jinStance, Frame - 60, false);
+            else jinMotion.SetPresentation(-1, 0, false);
         }
 
         public void Advance(float deltaTime, bool skip)
@@ -48,6 +64,7 @@ namespace Versus.Remaster
         void Finish()
         {
             Current = Shot.Complete; Frame = 0;
+            if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
             playerOne.position = P1Ready; playerTwo.position = P2Ready;
             battle.BeginFight();
         }
@@ -55,7 +72,7 @@ namespace Versus.Remaster
         public void Present()
         {
             if (!Active) return;
-            float p1 = Current == Shot.PlayerOne ? Mathf.SmoothStep(0, 1, Frame / 120f) : 1;
+            float p1 = Current == Shot.PlayerOne ? Mathf.SmoothStep(0, 1, Frame / 60f) : 1;
             float p2 = Current < Shot.PlayerTwo ? 0 : Current == Shot.PlayerTwo ?
                 Mathf.SmoothStep(0, 1, Frame / 120f) : 1;
             playerOne.position = Vector3.Lerp(p1Start, P1Ready, p1);

@@ -81,7 +81,8 @@ namespace Versus.Remaster
             config.playerTwo = "KAZUYA MISHIMA";
             views = new IFighterPresentation[] { jin, kazuya };
             if (playEntrance)
-                entrance = new LocalVersusEntrance(jinObject.transform, kazuyaObject.transform, cameraRig, battle);
+                entrance = new LocalVersusEntrance(jinObject.transform, kazuyaObject.transform,
+                    cameraRig, battle, jin.actionMotion, jinActions);
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
@@ -240,6 +241,7 @@ namespace Versus.Remaster
         void LateUpdate()
         {
             if (views == null) return;
+            if (entrance != null && entrance.Active) entrance.PrepareMotion();
             for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
                 !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
             var a = battle.fighters[0]; var b = battle.fighters[1];

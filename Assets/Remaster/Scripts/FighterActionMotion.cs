@@ -11,10 +11,20 @@ namespace Versus.Remaster
         Vector3[] positions;
         Quaternion[,] rotations;
         int frames, current = -1, lastAttackFrame = -1;
+        int presentationAction = -1;
+        float presentationFrame;
+        bool presentationLoops;
         float stateStart;
         public int PlayedActions { get; private set; }
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
+
+        public void SetPresentation(int action, float frame, bool loop)
+        {
+            presentationAction = action;
+            presentationFrame = frame;
+            presentationLoops = loop;
+        }
 
         public void Initialize(FighterActionCatalog source)
         {
@@ -58,14 +68,17 @@ namespace Versus.Remaster
         public void Apply(FighterState fighter, MoveSpec move, float clock, bool moving)
         {
             if (!Ready) return;
-            int target = fighter.attack >= 0 ? fighter.attack : catalog.idle;
+            int target = presentationAction >= 0 ? presentationAction :
+                fighter.attack >= 0 ? fighter.attack : catalog.idle;
             if (target != current || (fighter.attack >= 0 && fighter.attackFrame < lastAttackFrame))
             {
                 Load(target); stateStart = clock;
                 if (fighter.attack >= 0) PlayedActions++;
             }
             lastAttackFrame = fighter.attackFrame;
-            float frame = fighter.attack >= 0 && move != null
+            float frame = presentationAction >= 0 ?
+                (presentationLoops ? Mathf.Repeat(presentationFrame, frames) : Mathf.Clamp(presentationFrame, 0, frames - 1)) :
+                fighter.attack >= 0 && move != null
                 ? Mathf.Clamp01((float)fighter.attackFrame / (move.startup + move.active + move.recovery)) * (frames - 1)
                 : Mathf.Repeat((clock - stateStart) * 60, frames);
             int a = Mathf.Clamp((int)frame, 0, frames - 1), b = Mathf.Min(a + 1, frames - 1);
