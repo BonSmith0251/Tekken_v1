@@ -15,7 +15,8 @@ namespace Versus.Remaster
         readonly Camera cameraRig;
         readonly BattleModel battle;
         readonly FighterActionMotion jinMotion, kazuyaMotion;
-        readonly int jinWalk, jinStance, kazuyaWalk, kazuyaStance;
+        readonly int jinWalk, jinStance, kazuyaWalk, kazuyaIntro;
+        readonly int kazuyaIntroFrames;
         readonly Vector3 p1Start = new Vector3(-4.4f, 0, 0);
         readonly Vector3 p2Start = new Vector3(4.4f, 0, 0);
         static readonly Vector3 P1Ready = new Vector3(-2, 0, 0);
@@ -33,7 +34,11 @@ namespace Versus.Remaster
             jinStance = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1581 && a.motion);
             kazuyaMotion = kazuya;
             kazuyaWalk = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 1436 && a.motion);
-            kazuyaStance = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 1435 && a.motion);
+            kazuyaIntro = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 2247 && a.motion);
+            if (kazuyaIntro < 0)
+                throw new System.InvalidOperationException("Kazuya entrance requires kz_s06_7CS (move 2247).");
+            // Use the complete imported sequence at its native 60 fps, not a fixed idle beat.
+            kazuyaIntroFrames = System.BitConverter.ToInt32(kazuyaCharacter.actions[kazuyaIntro].motion.bytes, 4);
             Current = Shot.PlayerOne;
         }
 
@@ -47,8 +52,8 @@ namespace Versus.Remaster
 
             if (kazuyaMotion && Current == Shot.PlayerTwo && Frame < 60 && kazuyaWalk >= 0)
                 kazuyaMotion.SetPresentation(kazuyaWalk, Frame, true);
-            else if (kazuyaMotion && Current == Shot.PlayerTwo && kazuyaStance >= 0)
-                kazuyaMotion.SetPresentation(kazuyaStance, Frame - 60, false);
+            else if (kazuyaMotion && Current == Shot.PlayerTwo)
+                kazuyaMotion.SetPresentation(kazuyaIntro, Frame - 60, false);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
@@ -61,7 +66,8 @@ namespace Versus.Remaster
             {
                 frameRemainder -= 1;
                 Frame++;
-                int duration = Current == Shot.PlayerOne || Current == Shot.PlayerTwo ? 120 :
+                int duration = Current == Shot.PlayerOne ? 120 :
+                    Current == Shot.PlayerTwo ? 60 + kazuyaIntroFrames :
                     Current == Shot.FaceOff ? 45 : Current == Shot.Ready ? 60 : 35;
                 if (Frame < duration) continue;
                 Frame = 0;
