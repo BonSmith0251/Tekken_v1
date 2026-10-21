@@ -1,0 +1,748 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_bouquet_darts_IA/BP_Item_Missile_FlowerDart.uasset",
+  "id": "95dd93d7eedc270292db6a77",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 8092,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_bouquet_darts_IA/BP_Item_Missile_FlowerDart.uasset",
+  "metadata_file": "metadata/95dd93d7eedc270292db6a77.json",
+  "function_count": 1,
+  "summary": {
+    "total_header_size": 5520,
+    "package_flags": 2147483648,
+    "name_count": 102,
+    "name_offset": 189,
+    "export_count": 16,
+    "export_offset": 3776,
+    "import_count": 31,
+    "import_offset": 2908,
+    "bulk_data_start_offset": 8088,
+    "guid": "e2e43f0101f0494584734a5432a61222"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_bouquet_darts_IA/BP_Item_Missile_FlowerDart",
+    "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_bouquet_darts_IA/Meshes/SK_CH_cmn_opl_bouquet_darts_IA_A",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_bouquet_trail",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "ArrayProperty",
+    "bAbsoluteRotation",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_Item_Missile_FlowerDart",
+    "BP_Item_Missile_FlowerDart_C",
+    "bStartWithTickEnabled",
+    "ByteProperty",
+    "Camera",
+    "Channel",
+    "ChildNodes",
+    "Class",
+    "CollisionEnabled",
+    "CollisionProfileName",
+    "CollisionResponse",
+    "CollisionResponses",
+    "ComponentTemplate",
+    "Custom",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_Item_Missile_FlowerDart_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__ParticleSystemComponent",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "Destructible",
+    "ECC_GameTraceChannel5",
+    "ECollisionChannel",
+    "ECollisionEnabled",
+    "ECollisionEnabled::PhysicsOnly",
+    "ECollisionResponse",
+    "ECR_Ignore",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "FloatProperty",
+    "FlowerMesh",
+    "FlowerMesh_GEN_VARIABLE",
+    "FlowerTrail",
+    "FlowerTrail_GEN_VARIABLE",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "MassInKgOverride",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "ObjectType",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "ParticleSystemComponent",
+    "Pawn",
+    "PhysicsBody",
+    "PrimaryActorTick",
+    "PS_EF_ITM_bouquet_trail",
+    "Response",
+    "ResponseArray",
+    "ResponseChannel",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SK_CH_cmn_opl_bouquet_darts_IA_A",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "StructProperty",
+    "Template",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vehicle",
+    "Visibility",
+    "WorldDynamic",
+    "WorldStatic"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -24,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -24,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -24,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -13,
+      "object_name": "bAbsoluteRotation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -24,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -8,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -23,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_bouquet_darts_IA/Meshes/SK_CH_cmn_opl_bouquet_darts_IA_A"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_bouquet_trail"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -22,
+      "object_name": "PS_EF_ITM_bouquet_trail"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -24,
+      "object_name": "Default__ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -24,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -24,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -24,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -21,
+      "object_name": "SK_CH_cmn_opl_bouquet_darts_IA_A"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -24,
+      "object_name": "Default__SkeletalMeshComponent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5520,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 5,
+      "object_name": "FlowerMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5560,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 5,
+      "object_name": "FlowerTrail",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5600,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -5,
+      "super_index": -19,
+      "template_index": -18,
+      "outer_index": 5,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 68,
+      "serial_offset": 5640,
+      "class_name": "Function",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": -19,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 36,
+        "script_storage_size": 24,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5672,
+        "bytecode_sha256": "03c3ceae175a8fe3886ad718e127b5304d7874a62ce1a7877db4b6ec99577774",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/95dd93d7eedc270292db6a77/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/95dd93d7eedc270292db6a77/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -10,
+      "super_index": -8,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Item_Missile_FlowerDart_C",
+      "object_flags": 9,
+      "serial_size": 121,
+      "serial_offset": 5708,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 15
+      }
+    },
+    {
+      "index": 5,
+      "class_index": 5,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_Item_Missile_FlowerDart_C",
+      "object_flags": 49,
+      "serial_size": 91,
+      "serial_offset": 5829,
+      "class_name": "BP_Item_Missile_FlowerDart_C",
+      "owner": null,
+      "tagged_properties": {
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "15 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_Item_Missile_FlowerDart",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 5920,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -8,
+        "SimpleConstructionScript": 15,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 5,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "8f a7 d9 d8 cb 38 c0 4a b8 f2 76 b5 c1 2a f6 cc",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 7,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 6169,
+      "class_name": "EdGraph",
+      "owner": "BP_Item_Missile_FlowerDart",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 7,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 6285,
+      "class_name": "EdGraph",
+      "owner": "BP_Item_Missile_FlowerDart",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 5,
+      "object_name": "FlowerTrail_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 41,
+      "serial_offset": 6401,
+      "class_name": "ParticleSystemComponent",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {
+        "Template": -25
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6442,
+      "class_name": "SceneComponent",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 15,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 184,
+      "serial_offset": 6454,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 11,
+        "VariableName": "DefaultSceneRoot",
+        "ChildNodes": {
+          "name": "ChildNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 95,
+          "value_prefix_hex": "02 00 00 00 0d 00 00 00 0e 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 156,
+          "value_prefix_hex": "e3 1a 8d e5 60 cb 50 45 af ea 3b 8b 95 74 e7 01",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 15,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6638,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 16,
+        "VariableName": "FlowerMesh",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "d1 df 20 a9 81 9d 71 4b 90 5c 7a 8e ba 94 e1 85",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 15,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6777,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 10,
+        "VariableName": "FlowerTrail",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "04 54 fb 00 e4 59 ea 46 97 9c 3e 3c 4d 37 b5 fc",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 5,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 131,
+      "serial_offset": 6916,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 0c 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "03 00 00 00 0c 00 00 00 0d 00 00 00 0e 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 12
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 5,
+      "object_name": "FlowerMesh_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 1041,
+      "serial_offset": 7047,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_Item_Missile_FlowerDart_C",
+      "tagged_properties": {
+        "SkeletalMesh": -30,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 951,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "1c 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 ee 02 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 53 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 c5 02 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 00 08 00 00 00 53 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 90 02 00 00 00 00 00 00 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 44 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 63 00 00 00 00 00 00 00 52 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 18 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    }
+  ],
+  "sha256": "99b91fb1acb03c71f16ba64419c30986400fa63ea263c4b72381736f35c34b02",
+  "selection_reason": "local-versus shared-content candidate"
+}

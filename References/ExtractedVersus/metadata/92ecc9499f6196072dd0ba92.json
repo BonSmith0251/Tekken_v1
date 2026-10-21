@@ -1,0 +1,525 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_mrz_oph_nimbus.uasset",
+  "id": "92ecc9499f6196072dd0ba92",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 5777,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_mrz_oph_nimbus.uasset",
+  "metadata_file": "metadata/92ecc9499f6196072dd0ba92.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4380,
+    "package_flags": 2147483648,
+    "name_count": 75,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 3276,
+    "import_count": 28,
+    "import_offset": 2492,
+    "bulk_data_start_offset": 5773,
+    "guid": "34c9f29d4bf69c46bee8ca8f01ec34bb"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_cmn_oph_nimbus",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_mrz_oph_nimbus",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/Material/MI_CH_mrz_oph_nimbus",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_cmn_oph_nimbus_C",
+    "BP_CH_mrz_oph_nimbus",
+    "BP_CH_mrz_oph_nimbus_C",
+    "ChangedPropertyList",
+    "Class",
+    "Cloud",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_oph_nimbus_C",
+    "Default__BP_CH_mrz_oph_nimbus_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootD180181943EE788C52AE7AAEB26B79B5",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "MaterialInstanceConstant",
+    "MI_CH_mrz_oph_nimbus",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "P_GPU_particles_collision_edit23763BEA4DF695E8585502BE70091842",
+    "Package",
+    "ParentClass",
+    "ParticleSystemComponent",
+    "Records",
+    "Scene30C5F94E4056AFA05021C0BAB95411D7",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "StaticMesh091302F14EEDE1C29B2E7A8983AF9E22",
+    "StaticMesh1D0F0229B4300893D9A5ADB8607B6B0A0",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -20,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -17,
+      "object_name": "BP_CH_cmn_oph_nimbus_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -20,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_cmn_oph_nimbus",
+      "class_name": "BP_CH_cmn_oph_nimbus_C",
+      "outer_index": -17,
+      "object_name": "Default__BP_CH_cmn_oph_nimbus_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -20,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -20,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -20,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -18,
+      "object_name": "MI_CH_mrz_oph_nimbus"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/BP_CH_cmn_oph_nimbus"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_nimbus/Material/MI_CH_mrz_oph_nimbus"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -2,
+      "object_name": "P_GPU_particles_collision_edit23763BEA4DF695E8585502BE70091842"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRootD180181943EE788C52AE7AAEB26B79B5"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene30C5F94E4056AFA05021C0BAB95411D7"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -20,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -20,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -20,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "StaticMesh091302F14EEDE1C29B2E7A8983AF9E22"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "StaticMesh1D0F0229B4300893D9A5ADB8607B6B0A0"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_nimbus_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 4380,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_mrz_oph_nimbus_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 4518,
+      "class_name": "BP_CH_mrz_oph_nimbus_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_nimbus",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 4526,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "ad 1c 6f e0 41 4c 25 44 b9 87 9f e4 6d 6b 1e 34",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 120,
+      "serial_offset": 4804,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_nimbus",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 4924,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_nimbus",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 488,
+      "serial_offset": 5036,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_mrz_oph_nimbus_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 443,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 3d 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 86 01 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 00 00 00 18 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 42 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9a 78 19 38 81 c0 3c 47 86 ac a6 d5 7c ec",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5524,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_mrz_oph_nimbus_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 9,
+      "object_name": "SCS_Node_9",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5536,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_8",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "3a 07 ac 06 0e dc b2 4f be dd bd 0d fb 0b 7f e6",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_8",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5675,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_mrz_oph_nimbus_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 1,
+      "object_name": "StaticMesh091302F14EEDE1C29B2E7A8983AF9E22",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 5716,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_mrz_oph_nimbus_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 f0 ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "6bca0bd5c3da22892bac9f4584fcb5773f92a5660c2c4055c8a72bc938346a35",
+  "selection_reason": "local-versus shared-content candidate"
+}

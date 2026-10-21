@@ -1,0 +1,493 @@
+{
+  "path": "TekkenGame/Content/System/BPI_Aiuchi.uasset",
+  "id": "9230f0f0d6dd7964ace12bb7",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 4375,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BPI_Aiuchi.uasset",
+  "metadata_file": "metadata/9230f0f0d6dd7964ace12bb7.json",
+  "function_count": 2,
+  "summary": {
+    "total_header_size": 3462,
+    "package_flags": 2147483648,
+    "name_count": 51,
+    "name_offset": 189,
+    "export_count": 14,
+    "export_offset": 1950,
+    "import_count": 21,
+    "import_offset": 1362,
+    "bulk_data_start_offset": 4371,
+    "guid": "ad1dae758035314e9c5f4e8e0f9b21b7"
+  },
+  "names": [
+    "/Game/System/BPI_Aiuchi",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_Aiuchi",
+    "BPI_Aiuchi_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "CallAiuchiPostProcessEffect",
+    "Class",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BPI_Aiuchi_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "Default__StructProperty",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "HitPositions",
+    "HitRotators",
+    "HitVectors",
+    "Interface",
+    "IntProperty",
+    "IsSpecialAiuchi",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OnAiuchi",
+    "Package",
+    "ParentClass",
+    "Rotator",
+    "Schema",
+    "ScriptStruct",
+    "StructProperty",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -17,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -18,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -17,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -18,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -17,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -17,
+      "object_name": "Rotator"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -17,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -17,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 7,
+      "object_name": "HitPositions",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3462,
+      "class_name": "StructProperty",
+      "owner": "HitPositions",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 6,
+      "object_name": "HitVectors",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3502,
+      "class_name": "StructProperty",
+      "owner": "HitVectors",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 5,
+      "object_name": "HitRotators",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3542,
+      "class_name": "StructProperty",
+      "owner": "HitRotators",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 8,
+      "object_name": "IsSpecialAiuchi",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 3582,
+      "class_name": "BoolProperty",
+      "owner": "OnAiuchi",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 8,
+      "object_name": "HitRotators",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3620,
+      "class_name": "ArrayProperty",
+      "owner": "OnAiuchi",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 8,
+      "object_name": "HitVectors",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3660,
+      "class_name": "ArrayProperty",
+      "owner": "OnAiuchi",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 8,
+      "object_name": "HitPositions",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3700,
+      "class_name": "ArrayProperty",
+      "owner": "OnAiuchi",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 10,
+      "object_name": "OnAiuchi",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3740,
+      "class_name": "Function",
+      "owner": "BPI_Aiuchi_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 7,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3772,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9230f0f0d6dd7964ace12bb7/000007.bytecode.bin"
+      },
+      "raw_export_file": "functions/9230f0f0d6dd7964ace12bb7/000007.export.bin"
+    },
+    {
+      "index": 8,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 10,
+      "object_name": "CallAiuchiPostProcessEffect",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3787,
+      "class_name": "Function",
+      "owner": "BPI_Aiuchi_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 8,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3819,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9230f0f0d6dd7964ace12bb7/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/9230f0f0d6dd7964ace12bb7/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": -8,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BPI_Aiuchi_C",
+      "object_flags": 9,
+      "serial_size": 104,
+      "serial_offset": 3834,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": 10,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 0,
+      "object_name": "Default__BPI_Aiuchi_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3938,
+      "class_name": "BPI_Aiuchi_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_Aiuchi",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 3946,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -8,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 10,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "72 87 f3 f7 59 8f 64 49 8d 0c 1d 1e 70 72 de 74",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 12,
+      "object_name": "CallAiuchiPostProcessEffect",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 4207,
+      "class_name": "EdGraph",
+      "owner": "BPI_Aiuchi",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 12,
+      "object_name": "OnAiuchi",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 4289,
+      "class_name": "EdGraph",
+      "owner": "BPI_Aiuchi",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "8c8c9dfe16361388709ba32ab9be1f635c731201848270d1b7e67399f3946215",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,950 @@
+{
+  "path": "TekkenGame/Content/System/BP_QualityControl_Shadow.uasset",
+  "id": "936b98212af177874641972b",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 8695,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BP_QualityControl_Shadow.uasset",
+  "metadata_file": "metadata/936b98212af177874641972b.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 6567,
+    "package_flags": 2147483648,
+    "name_count": 90,
+    "name_offset": 189,
+    "export_count": 24,
+    "export_offset": 3931,
+    "import_count": 45,
+    "import_offset": 2671,
+    "bulk_data_start_offset": 8691,
+    "guid": "69537d696248134e804e584a2901c9ee"
+  },
+  "names": [
+    "/Game/System/BP_QualityControl_Shadow",
+    "/Game/System/BPI_QualityControl",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_QualityControl_Shadow",
+    "BP_QualityControl_Shadow_C",
+    "BPI_QualityControl_C",
+    "CallFunc_Concat_StrStr_ReturnValue",
+    "CallFunc_Conv_IntToString_ReturnValue",
+    "CallFunc_IsQualityControlShadowEnabled_ReturnValue",
+    "CallFunc_IsQualityControlShadowEnabled_ReturnValue2",
+    "ChangeShadowQuality",
+    "Class",
+    "ComponentTemplate",
+    "Concat_StrStr",
+    "Conv_IntToString",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_QualityControl_Shadow_C",
+    "Default__BPI_QualityControl_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetStringLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StrProperty",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DownQuality",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteConsoleCommand",
+    "ExecuteUbergraph_BP_QualityControl_Shadow",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "HighShadowQuality",
+    "IntProperty",
+    "IsQualityControlShadowEnabled",
+    "KismetStringLibrary",
+    "KismetSystemLibrary",
+    "LowShadowQuality",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "Quality",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StrProperty",
+    "StructProperty",
+    "TekkenBlueprintLibrary",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpQuality",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -37,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -37,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -35,
+      "object_name": "BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -37,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -36,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/System/BPI_QualityControl",
+      "class_name": "BPI_QualityControl_C",
+      "outer_index": -35,
+      "object_name": "Default__BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -38,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -37,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -36,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -14,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Concat_StrStr"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Conv_IntToString"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "ExecuteConsoleCommand"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "IsQualityControlShadowEnabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -36,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetStringLibrary",
+      "outer_index": -37,
+      "object_name": "Default__KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -37,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -36,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BPI_QualityControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -37,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -37,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -37,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -37,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -36,
+      "object_name": "Default__StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -36,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -38,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 16,
+      "object_name": "HighShadowQuality",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6567,
+      "class_name": "IntProperty",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 16,
+      "object_name": "LowShadowQuality",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6603,
+      "class_name": "IntProperty",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 16,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6639,
+      "class_name": "ObjectProperty",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 7,
+      "object_name": "CallFunc_IsQualityControlShadowEnabled_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 6679,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Shadow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 7,
+      "object_name": "CallFunc_IsQualityControlShadowEnabled_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 6717,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Shadow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 7,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6755,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Shadow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "ExecuteUbergraph_BP_QualityControl_Shadow",
+      "object_flags": 1,
+      "serial_size": 175,
+      "serial_offset": 6791,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 6,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 191,
+        "script_storage_size": 131,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6823,
+        "bytecode_sha256": "b7bdd8eba09e82dfb7cf606eae1d35bfe98642eddf091a4c94a72d1da2077783",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/936b98212af177874641972b/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/936b98212af177874641972b/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "UpQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 6966,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6998,
+        "bytecode_sha256": "59bbee784c2b39be1429dc7f64a8b92f6451762db91b3c2ec7ec1e438ec069f4",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/936b98212af177874641972b/000007.bytecode.bin"
+      },
+      "raw_export_file": "functions/936b98212af177874641972b/000007.export.bin"
+    },
+    {
+      "index": 8,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "DownQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7028,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 8,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7060,
+        "bytecode_sha256": "011ce641de3079917f1f89c62bc3f6e6bff200472b401fc23799b2a48f3e1151",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/936b98212af177874641972b/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/936b98212af177874641972b/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -8,
+      "super_index": -26,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 7090,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 9,
+        "super_struct": -26,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7122,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/936b98212af177874641972b/000009.bytecode.bin"
+      },
+      "raw_export_file": "functions/936b98212af177874641972b/000009.export.bin"
+    },
+    {
+      "index": 10,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 14,
+      "object_name": "CallFunc_Concat_StrStr_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7137,
+      "class_name": "StrProperty",
+      "owner": "ChangeShadowQuality",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 14,
+      "object_name": "CallFunc_Conv_IntToString_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7173,
+      "class_name": "StrProperty",
+      "owner": "ChangeShadowQuality",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 14,
+      "object_name": "Quality",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7209,
+      "class_name": "IntProperty",
+      "owner": "ChangeShadowQuality",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "ChangeShadowQuality",
+      "object_flags": 1,
+      "serial_size": 163,
+      "serial_offset": 7245,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 10,
+        "super_struct": 0,
+        "first_child": 13,
+        "flags_hex": "0x0C040000",
+        "native": false,
+        "script_memory_size": 183,
+        "script_storage_size": 119,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7277,
+        "bytecode_sha256": "c5462bed3c0744c22f385d146d88edf599089fa6e35031be45aac4a9ef6c4472",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/936b98212af177874641972b/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/936b98212af177874641972b/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 16,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7408,
+      "class_name": "StructProperty",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -16,
+      "super_index": -14,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_Shadow_C",
+      "object_flags": 9,
+      "serial_size": 239,
+      "serial_offset": 7448,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 24,
+        "UberGraphFramePointerProperty": 15,
+        "UberGraphFunction": 7
+      }
+    },
+    {
+      "index": 16,
+      "class_index": 16,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_QualityControl_Shadow_C",
+      "object_flags": 49,
+      "serial_size": 123,
+      "serial_offset": 7687,
+      "class_name": "BP_QualityControl_Shadow_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "43 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "LowShadowQuality": 1,
+        "HighShadowQuality": 2
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_Shadow",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 7810,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -14,
+        "SimpleConstructionScript": 24,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 16,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "6b 41 76 cc 84 95 ac 4e ab b4 b3 d0 ff 98 65 18",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 18,
+      "object_name": "ChangeShadowQuality",
+      "object_flags": 8,
+      "serial_size": 94,
+      "serial_offset": 8059,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Shadow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 18,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 156,
+      "serial_offset": 8153,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Shadow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 56,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 18,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 8309,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Shadow",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 16,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 8417,
+      "class_name": "SceneComponent",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 24,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 8429,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 22,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "88 ef 9f 93 f9 57 9a 46 9f 8c 8a 5a a6 39 03 28",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 16,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 8568,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_QualityControl_Shadow_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 23
+      }
+    }
+  ],
+  "sha256": "0eb2500a1ed92e6f1b25948c8687dcf3b414fdc007fa765d93cf8dddceae8715",
+  "selection_reason": "local-versus shared-content candidate"
+}

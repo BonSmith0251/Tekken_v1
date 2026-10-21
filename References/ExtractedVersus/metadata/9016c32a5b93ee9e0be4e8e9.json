@@ -1,0 +1,1300 @@
+{
+  "path": "TekkenGame/Content/Character/DramaData/DramaItem/HWO/BP_Drama_hw.uasset",
+  "id": "9016c32a5b93ee9e0be4e8e9",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 12778,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/DramaData/DramaItem/HWO/BP_Drama_hw.uasset",
+  "metadata_file": "metadata/9016c32a5b93ee9e0be4e8e9.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 9156,
+    "package_flags": 2147483648,
+    "name_count": 129,
+    "name_offset": 189,
+    "export_count": 32,
+    "export_offset": 5556,
+    "import_count": 64,
+    "import_offset": 3764,
+    "bulk_data_start_offset": 12774,
+    "guid": "dd77815abbf8014ca4f601b8b58904dc"
+  },
+  "names": [
+    "/Game/Character/DramaData/BP_DramaItemBase",
+    "/Game/Character/DramaData/DramaItem/HWO/AM_Drama_hw",
+    "/Game/Character/DramaData/DramaItem/HWO/BP_Drama_hw",
+    "/Game/Character/DramaData/ItemMesh/HWO/hw_s03",
+    "/Game/Character/DramaData/ItemMesh/HWO/hw_s03_Anim",
+    "/Game/Character/DramaData/ItemMesh/HWO/hw_w02",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "AM_Drama_hw",
+    "AnimationData",
+    "AnimationMode",
+    "AnimMontage",
+    "AnimSequence",
+    "AnimToPlay",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bCanEverTick",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BooleanOR",
+    "BoolProperty",
+    "BP_Drama_hw",
+    "BP_Drama_hw_C",
+    "BP_DramaItemBase_C",
+    "ByteProperty",
+    "CallFunc_BooleanOR_ReturnValue",
+    "CallFunc_EqualEqual_StrStr_ReturnValue",
+    "CallFunc_EqualEqual_StrStr_ReturnValue2",
+    "CallFunc_EqualEqual_StrStr_ReturnValue3",
+    "CallFunc_K2_AddLocalOffset_SweepHitResult",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_Drama_hw_C",
+    "Default__BP_DramaItemBase_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__InheritableComponentHandler",
+    "Default__IntProperty",
+    "Default__KismetStringLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "Default__StrProperty",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot322CC4E1431E4DF842F81FA8D70B6455",
+    "DefaultSceneRootEFC690F74DA1893F90ED9DB07D283D1B",
+    "DefaultSceneRootNode",
+    "DeltaSeconds",
+    "DramaMontage",
+    "DramaName",
+    "EAnimationMode",
+    "EAnimationMode::AnimationSingleNode",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EqualEqual_StrStr",
+    "EventGraph",
+    "ExecuteUbergraph_BP_Drama_hw",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "HitResult",
+    "hw_s03",
+    "hw_s031B9ACB52447C3161F1A4ABB42B252986",
+    "hw_s03_Anim",
+    "hw_w02",
+    "hw_w02_GEN_VARIABLE",
+    "hw_w02_Montage",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "K2_AddLocalOffset",
+    "K2Node_Event_DeltaSeconds",
+    "K2Node_Event_DramaName",
+    "KismetMathLibrary",
+    "KismetStringLibrary",
+    "MassInKgOverride",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParentComponentOrVariableName",
+    "ParentComponentOwnerClassName",
+    "PlayAnimation",
+    "PointerToUberGraphFrame",
+    "PrimaryActorTick",
+    "ReceiveTick",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetActorTickEnabled",
+    "SetPlayRate",
+    "SetVisibility",
+    "SimpleConstructionScript",
+    "SingleAnimationPlayData",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "Start",
+    "Started",
+    "Stop",
+    "StrProperty",
+    "StructProperty",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpdateMontageFrame",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimMontage",
+      "outer_index": -48,
+      "object_name": "AM_Drama_hw"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimSequence",
+      "outer_index": -50,
+      "object_name": "hw_s03_Anim"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -53,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -47,
+      "object_name": "BP_DramaItemBase_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -53,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -4,
+      "object_name": "Started"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -52,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/Character/DramaData/BP_DramaItemBase",
+      "class_name": "BP_DramaItemBase_C",
+      "outer_index": -47,
+      "object_name": "Default__BP_DramaItemBase_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -52,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "AnimMontage"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -53,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -53,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -52,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -4,
+      "object_name": "Start"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -4,
+      "object_name": "Stop"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -4,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -52,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "ReceiveTick"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "SetActorTickEnabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "BooleanOR"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -24,
+      "object_name": "EqualEqual_StrStr"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -25,
+      "object_name": "K2_AddLocalOffset"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "PlayAnimation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "SetPlayRate"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -53,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -52,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetStringLibrary",
+      "outer_index": -53,
+      "object_name": "Default__KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -4,
+      "object_name": "DramaMontage"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -52,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/BP_DramaItemBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/DramaItem/HWO/AM_Drama_hw"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/ItemMesh/HWO/hw_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/ItemMesh/HWO/hw_s03_Anim"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/DramaData/ItemMesh/HWO/hw_w02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -4,
+      "object_name": "DefaultSceneRootEFC690F74DA1893F90ED9DB07D283D1B"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -53,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -53,
+      "object_name": "HitResult"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -53,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -53,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -53,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -49,
+      "object_name": "hw_s03"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -51,
+      "object_name": "hw_w02"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -53,
+      "object_name": "Default__SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -52,
+      "object_name": "Default__StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -52,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 20,
+      "object_name": "hw_w02_Montage",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9156,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 20,
+      "object_name": "hw_s03",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9196,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 20,
+      "object_name": "hw_w02",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 9236,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_BooleanOR_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9276,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_EqualEqual_StrStr_ReturnValue3",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9314,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_EqualEqual_StrStr_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9352,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_EqualEqual_StrStr_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9390,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -63,
+      "outer_index": 11,
+      "object_name": "K2Node_Event_DramaName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9428,
+      "class_name": "StrProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 11,
+      "object_name": "K2Node_Event_DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9464,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 11,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 9500,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Drama_hw",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "ExecuteUbergraph_BP_Drama_hw",
+      "object_flags": 1,
+      "serial_size": 517,
+      "serial_offset": 9536,
+      "class_name": "Function",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 10,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 669,
+        "script_storage_size": 473,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 9568,
+        "bytecode_sha256": "a5d8b1249a9c2ad80c55957b8b4e5f3834f913400721710fb4fd5183775dba07",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9016c32a5b93ee9e0be4e8e9/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/9016c32a5b93ee9e0be4e8e9/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -11,
+      "super_index": -32,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "Stop",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 10053,
+      "class_name": "Function",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": -32,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 10085,
+        "bytecode_sha256": "92151c55eedecd1fac9e08db05b678540a9d386caad5e9381e560f00e8f38686",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9016c32a5b93ee9e0be4e8e9/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/9016c32a5b93ee9e0be4e8e9/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -63,
+      "outer_index": 14,
+      "object_name": "DramaName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10115,
+      "class_name": "StrProperty",
+      "owner": "Start",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -11,
+      "super_index": -31,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "Start",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 10151,
+      "class_name": "Function",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 12,
+        "super_struct": -31,
+        "first_child": 13,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 10183,
+        "bytecode_sha256": "82145b85e831d19c6a4b857c3165971f9e16a13f00a696cb1067ce66456525d2",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9016c32a5b93ee9e0be4e8e9/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/9016c32a5b93ee9e0be4e8e9/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 16,
+      "object_name": "DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 10223,
+      "class_name": "FloatProperty",
+      "owner": "ReceiveTick",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -11,
+      "super_index": -35,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "ReceiveTick",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 10259,
+      "class_name": "Function",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 14,
+        "super_struct": -35,
+        "first_child": 15,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 10291,
+        "bytecode_sha256": "55cc8f4933c81e67dc237cb2efa41144acd906a1112a87e0a1fe412b4b8bc41b",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9016c32a5b93ee9e0be4e8e9/000015.bytecode.bin"
+      },
+      "raw_export_file": "functions/9016c32a5b93ee9e0be4e8e9/000015.export.bin"
+    },
+    {
+      "index": 16,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -64,
+      "outer_index": 18,
+      "object_name": "CallFunc_K2_AddLocalOffset_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10331,
+      "class_name": "StructProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -11,
+      "super_index": -33,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 150,
+      "serial_offset": 10371,
+      "class_name": "Function",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 16,
+        "super_struct": -33,
+        "first_child": 17,
+        "flags_hex": "0x0C820800",
+        "native": false,
+        "script_memory_size": 154,
+        "script_storage_size": 106,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 10403,
+        "bytecode_sha256": "f91a8b12500485970275ec0a5996859555e81f679fc8c9ba19d9dee28395b567",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9016c32a5b93ee9e0be4e8e9/000017.bytecode.bin"
+      },
+      "raw_export_file": "functions/9016c32a5b93ee9e0be4e8e9/000017.export.bin"
+    },
+    {
+      "index": 18,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -64,
+      "outer_index": 20,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10521,
+      "class_name": "StructProperty",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -20,
+      "super_index": -4,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "BP_Drama_hw_C",
+      "object_flags": 9,
+      "serial_size": 256,
+      "serial_offset": 10561,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 30,
+        "InheritableComponentHandler": 25,
+        "UberGraphFramePointerProperty": 19,
+        "UberGraphFunction": 11
+      }
+    },
+    {
+      "index": 20,
+      "class_index": 20,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "Default__BP_Drama_hw_C",
+      "object_flags": 49,
+      "serial_size": 177,
+      "serial_offset": 10817,
+      "class_name": "BP_Drama_hw_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "5e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "hw_w02_Montage": -1,
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 135,
+          "value_prefix_hex": "13 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 5e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Drama_hw",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 10994,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -4,
+        "SimpleConstructionScript": 30,
+        "InheritableComponentHandler": 25,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 20,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "82 25 c3 eb 18 4a 1b 4f b3 e2 4d b1 58 f8 00 21",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 22,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 236,
+      "serial_offset": 11272,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_hw",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 136,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "21 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 22,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 140,
+      "serial_offset": 11508,
+      "class_name": "EdGraph",
+      "owner": "BP_Drama_hw",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 40,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 20,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 11648,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 25,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 20,
+      "object_name": "DefaultSceneRoot322CC4E1431E4DF842F81FA8D70B6455",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 11660,
+      "class_name": "SceneComponent",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 26,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -58,
+      "outer_index": 30,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 205,
+      "serial_offset": 11672,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_3",
+      "tagged_properties": {
+        "ComponentTemplate": 32,
+        "VariableName": "hw_w02",
+        "ParentComponentOrVariableName": "DefaultSceneRoot",
+        "ParentComponentOwnerClassName": "BP_DramaItemBase_C",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 177,
+          "value_prefix_hex": "24 5a 72 1e 36 27 af 48 82 98 09 fb da 58 bf 4a",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 27,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -58,
+      "outer_index": 30,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 205,
+      "serial_offset": 11877,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_3",
+      "tagged_properties": {
+        "ComponentTemplate": 31,
+        "VariableName": "hw_s03",
+        "ParentComponentOrVariableName": "DefaultSceneRoot",
+        "ParentComponentOwnerClassName": "BP_DramaItemBase_C",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 177,
+          "value_prefix_hex": "6a 37 9a 32 5f 37 ef 4c 83 5d d5 08 21 89 53 75",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 28,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -58,
+      "outer_index": 30,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 12082,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_3",
+      "tagged_properties": {
+        "ComponentTemplate": 26,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "5f 31 a3 71 0b 1c 85 45 91 98 27 a2 67 56 31 b0",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 29,
+      "class_index": -27,
+      "super_index": 0,
+      "template_index": -59,
+      "outer_index": 20,
+      "object_name": "SimpleConstructionScript_3",
+      "object_flags": 8,
+      "serial_size": 131,
+      "serial_offset": 12221,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 1c 00 00 00 1b 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "02 00 00 00 1c 00 00 00 1b 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 29
+      }
+    },
+    {
+      "index": 30,
+      "class_index": -28,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 20,
+      "object_name": "hw_s031B9ACB52447C3161F1A4ABB42B252986",
+      "object_flags": 41,
+      "serial_size": 254,
+      "serial_offset": 12352,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {
+        "AnimationMode": "EAnimationMode::AnimationSingleNode",
+        "AnimationData": {
+          "name": "AnimationData",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "SingleAnimationPlayData",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 90,
+          "value_prefix_hex": "10 00 00 00 00 00 00 00 60 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 5e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "SkeletalMesh": -60,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 205,
+          "value_prefix_hex": "5b 00 00 00 00 00 00 00 49 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 5e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 31,
+      "class_index": -28,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 20,
+      "object_name": "hw_w02_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 168,
+      "serial_offset": 12606,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_Drama_hw_C",
+      "tagged_properties": {
+        "AnimationMode": "EAnimationMode::AnimationSingleNode",
+        "SkeletalMesh": -61,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 119,
+          "value_prefix_hex": "5b 00 00 00 00 00 00 00 49 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 74 27 07 40 5e 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "905e9bced7f4268466e270f8a958523bcd531b43a84a35a24a44df9b7cad6652",
+  "selection_reason": "local-versus shared-content candidate"
+}

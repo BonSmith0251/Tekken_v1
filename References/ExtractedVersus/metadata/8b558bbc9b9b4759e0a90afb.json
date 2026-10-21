@@ -1,0 +1,473 @@
+{
+  "path": "TekkenGame/Content/System/BPI_WallHitBreak.uasset",
+  "id": "8b558bbc9b9b4759e0a90afb",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 4230,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BPI_WallHitBreak.uasset",
+  "metadata_file": "metadata/8b558bbc9b9b4759e0a90afb.json",
+  "function_count": 2,
+  "summary": {
+    "total_header_size": 3327,
+    "package_flags": 2147483648,
+    "name_count": 49,
+    "name_offset": 189,
+    "export_count": 14,
+    "export_offset": 1807,
+    "import_count": 18,
+    "import_offset": 1303,
+    "bulk_data_start_offset": 4226,
+    "guid": "02358474d50aa14aaa6db84046ccbf29"
+  },
+  "names": [
+    "/Game/System/BPI_WallHitBreak",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_WallHitBreak",
+    "BPI_WallHitBreak_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "Class",
+    "Damage",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_WallHitBreak_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "Default__IntProperty",
+    "Default__StructProperty",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "Interface",
+    "IntProperty",
+    "Nodes",
+    "None",
+    "Normal",
+    "Object",
+    "ObjectProperty",
+    "OnWallBreak",
+    "OnWallHit",
+    "Package",
+    "ParentClass",
+    "PlayerID",
+    "Position",
+    "Schema",
+    "ScriptStruct",
+    "StructProperty",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -16,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -16,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -16,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -15,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -15,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -15,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -15,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 5,
+      "object_name": "Damage",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 3327,
+      "class_name": "IntProperty",
+      "owner": "OnWallHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 5,
+      "object_name": "Normal",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3363,
+      "class_name": "StructProperty",
+      "owner": "OnWallHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 5,
+      "object_name": "Position",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3403,
+      "class_name": "StructProperty",
+      "owner": "OnWallHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 5,
+      "object_name": "PlayerID",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 3443,
+      "class_name": "IntProperty",
+      "owner": "OnWallHit",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 10,
+      "object_name": "OnWallHit",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3479,
+      "class_name": "Function",
+      "owner": "BPI_WallHitBreak_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3511,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/8b558bbc9b9b4759e0a90afb/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/8b558bbc9b9b4759e0a90afb/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 9,
+      "object_name": "PlayerID",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 3526,
+      "class_name": "IntProperty",
+      "owner": "OnWallBreak",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 9,
+      "object_name": "Normal",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3562,
+      "class_name": "StructProperty",
+      "owner": "OnWallBreak",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 9,
+      "object_name": "Position",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3602,
+      "class_name": "StructProperty",
+      "owner": "OnWallBreak",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 10,
+      "object_name": "OnWallBreak",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3642,
+      "class_name": "Function",
+      "owner": "BPI_WallHitBreak_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 8,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3674,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/8b558bbc9b9b4759e0a90afb/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/8b558bbc9b9b4759e0a90afb/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -9,
+      "super_index": -4,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_WallHitBreak_C",
+      "object_flags": 9,
+      "serial_size": 104,
+      "serial_offset": 3689,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": 10,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 0,
+      "object_name": "Default__BPI_WallHitBreak_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3793,
+      "class_name": "BPI_WallHitBreak_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPI_WallHitBreak",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 3801,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -4,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 10,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "63 85 c0 50 7a df 94 43 82 9b 99 74 bb da 90 95",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 12,
+      "object_name": "OnWallBreak",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 4062,
+      "class_name": "EdGraph",
+      "owner": "BPI_WallHitBreak",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -11,
+      "outer_index": 12,
+      "object_name": "OnWallHit",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 4144,
+      "class_name": "EdGraph",
+      "owner": "BPI_WallHitBreak",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "01eea7d45056b437d3573c12ba6ff4baa1f4dd98f91cddcdda03920d9fa94fc9",
+  "selection_reason": "local-versus shared-content candidate"
+}

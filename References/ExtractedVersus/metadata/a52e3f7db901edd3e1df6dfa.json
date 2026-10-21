@@ -1,0 +1,1242 @@
+{
+  "path": "TekkenGame/Content/Maps/stg14_demo.umap",
+  "id": "a52e3f7db901edd3e1df6dfa",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "LevelScriptBlueprint"
+  ],
+  "size": 174936,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg14_demo.umap",
+  "metadata_file": "metadata/a52e3f7db901edd3e1df6dfa.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 7931,
+    "package_flags": 2147614720,
+    "name_count": 141,
+    "name_offset": 189,
+    "export_count": 26,
+    "export_offset": 5059,
+    "import_count": 45,
+    "import_offset": 3799,
+    "bulk_data_start_offset": 174932,
+    "guid": "054ead8e95dac940a144a2a556c49541"
+  },
+  "names": [
+    "/Game/Demo/t7t/fade",
+    "/Game/Maps/stg14_demo",
+    "/Game/Stage/Common/BP_HiddenActorList",
+    "/Game/Stage/stg07/BP_StageProc07",
+    "/Game/Stage/stg07/BP_Stg07DemoEffect",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ActorList_DramaEnd",
+    "ActorList_DramaStart",
+    "ActorList_SequenceProceeded",
+    "ArrayProperty",
+    "AttachParent",
+    "bAffectTranslucentLighting",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintCreatedComponents",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "bNetAddressable",
+    "BodyInstance",
+    "BoolProperty",
+    "bOverride_ColorGradingIntensity",
+    "bOverride_ColorGradingLUT",
+    "BP_HiddenActorList",
+    "BP_HiddenActorList_C",
+    "BP_StageProc07",
+    "BP_StageProc07_C",
+    "BP_Stg07DemoEffect",
+    "BP_Stg07DemoEffect_C",
+    "BPTYPE_LevelScript",
+    "Brush",
+    "BS7Lose",
+    "BS7Start",
+    "bUsePawnControlRotation",
+    "ByteProperty",
+    "CameraActor",
+    "CameraComponent",
+    "CastDynamicShadows",
+    "CastShadows",
+    "Character_DirectionalLight2",
+    "Class",
+    "CollisionFlag",
+    "Color",
+    "CreationMethod",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_HiddenActorList_C",
+    "Default__BP_StageProc07_C",
+    "Default__BP_Stg07DemoEffect_C",
+    "Default__CameraActor",
+    "Default__DirectionalLight",
+    "Default__fade_C",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__Model",
+    "Default__StaticMeshComponent",
+    "Default__stg14_demo_C",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "DefaultSceneRoot",
+    "Demo_BS7",
+    "DemoFloor",
+    "DemoFloorBase",
+    "DestroyFlag",
+    "DirectionalLight",
+    "DirectionalLightComponent",
+    "DramaTag",
+    "EBlueprintType",
+    "EComponentCreationMethod",
+    "EComponentCreationMethod::SimpleConstructionScript",
+    "EffectsToDeactivate",
+    "ELightChannel",
+    "ELightingBuildQuality",
+    "Engine",
+    "ESpawnActorCollisionHandlingMethod",
+    "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+    "ExplosionPosition",
+    "fade_C",
+    "FloatProperty",
+    "GeneratedClass",
+    "Guid",
+    "HiddenActors",
+    "HiddenActorsTag",
+    "HiddenFlag",
+    "HiddenParamsDrama",
+    "HiddenParamsSequenceProceeded",
+    "Hotaru",
+    "ImpulseStrength",
+    "IntProperty",
+    "Kazandan",
+    "KazandanScale",
+    "KazumiLose",
+    "KazumiStart",
+    "LC_CHARA_BOTH",
+    "Level",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "LightChannel",
+    "LightColor",
+    "LightComponent",
+    "LightComponent0",
+    "LightGuid",
+    "MemberGuid",
+    "MemberName",
+    "MemberParent",
+    "MeteorHit",
+    "MinRoughness",
+    "Model",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "PostProcessSettings",
+    "Quality_Production",
+    "Radius",
+    "RelatedStageSequenceId",
+    "RelativeLocation",
+    "RelativeRotation",
+    "RootComponent",
+    "Rotator",
+    "SceneComponent",
+    "SimpleMemberReference",
+    "SpawnCollisionHandlingMethod",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg14_demo",
+    "stg14_demo_C",
+    "StructProperty",
+    "UCSModifiedProperties",
+    "Vector",
+    "VolcanoRoundAction",
+    "World",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -32,
+      "object_name": "fade_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -33,
+      "object_name": "BP_HiddenActorList_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -34,
+      "object_name": "BP_StageProc07_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -35,
+      "object_name": "BP_Stg07DemoEffect_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -37,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Stage/Common/BP_HiddenActorList",
+      "class_name": "BP_HiddenActorList_C",
+      "outer_index": -33,
+      "object_name": "Default__BP_HiddenActorList_C"
+    },
+    {
+      "class_package": "/Game/Stage/stg07/BP_StageProc07",
+      "class_name": "BP_StageProc07_C",
+      "outer_index": -34,
+      "object_name": "Default__BP_StageProc07_C"
+    },
+    {
+      "class_package": "/Game/Stage/stg07/BP_Stg07DemoEffect",
+      "class_name": "BP_Stg07DemoEffect_C",
+      "outer_index": -35,
+      "object_name": "Default__BP_Stg07DemoEffect_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CameraActor",
+      "outer_index": -37,
+      "object_name": "Default__CameraActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CameraComponent",
+      "outer_index": -9,
+      "object_name": "CameraComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "CameraActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "CameraComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "DirectionalLight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "DirectionalLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "DirectionalLight",
+      "outer_index": -37,
+      "object_name": "Default__DirectionalLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "DirectionalLightComponent",
+      "outer_index": -25,
+      "object_name": "LightComponent0"
+    },
+    {
+      "class_package": "/Game/Demo/t7t/fade",
+      "class_name": "fade_C",
+      "outer_index": -32,
+      "object_name": "Default__fade_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -37,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -37,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -37,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -37,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Demo/t7t/fade"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/BP_HiddenActorList"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg07/BP_StageProc07"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg07/BP_Stg07DemoEffect"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -1,
+      "object_name": "SceneComponent_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "SceneComponent_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -3,
+      "object_name": "SceneComponent_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -4,
+      "object_name": "SceneComponent_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -9,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -37,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -37,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -37,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -12,
+      "super_index": -18,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "stg14_demo_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 7931,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 0,
+      "object_name": "Default__stg14_demo_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 8011,
+      "class_name": "stg14_demo_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -6,
+      "outer_index": 13,
+      "object_name": "BP_HiddenActorList_4",
+      "object_flags": 8,
+      "serial_size": 2310,
+      "serial_offset": 8019,
+      "class_name": "BP_HiddenActorList_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 17,
+        "ActorList_SequenceProceeded": {
+          "name": "ActorList_SequenceProceeded",
+          "type": "ArrayProperty",
+          "size": 250,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 c5 00 00 00 00 00 00 00 59 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7b 00 00 00 00 00 00 00 5c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 56 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 01 00 00 00 40 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 00 00 00 00 00 57 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "ActorList_DramaStart": {
+          "name": "ActorList_DramaStart",
+          "type": "ArrayProperty",
+          "size": 1138,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 345,
+          "value_prefix_hex": "05 00 00 00 08 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 3d 04 00 00 00 00 00 00 58 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 56 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 03 00 00 00 41 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 00 00 00 00 00 57 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "ActorList_DramaEnd": {
+          "name": "ActorList_DramaEnd",
+          "type": "ArrayProperty",
+          "size": 712,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1516,
+          "value_prefix_hex": "03 00 00 00 07 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 93 02 00 00 00 00 00 00 58 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 56 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 00 04 00 00 00 41 00 00 00 00 00 00 00 5d 00 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 6e 00 00 00 00 00 00 00 55 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 00 00 00 00 00 57 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 2c 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 17 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "RootComponent": 17,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2290,
+          "value_prefix_hex": "01 00 00 00 11 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 13,
+      "object_name": "BP_StageProc07",
+      "object_flags": 8,
+      "serial_size": 259,
+      "serial_offset": 10329,
+      "class_name": "BP_StageProc07_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 18,
+        "ExplosionPosition": {
+          "name": "ExplosionPosition",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 30 a7 45 00 00 00 00 00 40 9c 45",
+          "value_prefix_truncated": false
+        },
+        "Radius": 2000.0,
+        "ImpulseStrength": 0.0,
+        "KazandanScale": 3.0,
+        "RootComponent": 18,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 239,
+          "value_prefix_hex": "01 00 00 00 12 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 13,
+      "object_name": "BP_Stg07DemoEffect_4",
+      "object_flags": 8,
+      "serial_size": 152,
+      "serial_offset": 10588,
+      "class_name": "BP_Stg07DemoEffect_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 19,
+        "EffectsToDeactivate": {
+          "name": "EffectsToDeactivate",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "RootComponent": 19,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 132,
+          "value_prefix_hex": "01 00 00 00 13 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 13,
+      "object_name": "CameraActor_0",
+      "object_flags": 8,
+      "serial_size": 99,
+      "serial_offset": 10740,
+      "class_name": "CameraActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "CameraComponent": 8,
+        "SceneComponent": 20,
+        "RootComponent": 20
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 13,
+      "object_name": "CameraActor_1",
+      "object_flags": 8,
+      "serial_size": 99,
+      "serial_offset": 10839,
+      "class_name": "CameraActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "CameraComponent": 9,
+        "SceneComponent": 21,
+        "RootComponent": 21
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 6,
+      "object_name": "CameraComponent",
+      "object_flags": 262152,
+      "serial_size": 67,
+      "serial_offset": 10938,
+      "class_name": "CameraComponent",
+      "owner": "CameraActor_0",
+      "tagged_properties": {
+        "bUsePawnControlRotation": true,
+        "AttachParent": 20
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -10,
+      "outer_index": 7,
+      "object_name": "CameraComponent",
+      "object_flags": 262152,
+      "serial_size": 176,
+      "serial_offset": 11005,
+      "class_name": "CameraComponent",
+      "owner": "CameraActor_1",
+      "tagged_properties": {
+        "bUsePawnControlRotation": true,
+        "PostProcessSettings": {
+          "name": "PostProcessSettings",
+          "type": "StructProperty",
+          "size": 60,
+          "array_index": 0,
+          "struct_name": "PostProcessSettings",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 75,
+          "value_prefix_hex": "18 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 19 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AttachParent": 21
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 13,
+      "object_name": "Character_DirectionalLight2",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 11181,
+      "class_name": "DirectionalLight",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LightComponent": 11,
+        "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+        "RootComponent": 11
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 10,
+      "object_name": "LightComponent0",
+      "object_flags": 262152,
+      "serial_size": 161048,
+      "serial_offset": 11292,
+      "class_name": "DirectionalLightComponent",
+      "owner": "Character_DirectionalLight2",
+      "tagged_properties": {
+        "MinRoughness": 0.4000000059604645,
+        "LightChannel": "LC_CHARA_BOTH",
+        "LightGuid": {
+          "name": "LightGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 119,
+          "value_prefix_hex": "af 6a c2 c2 0c b1 b4 49 a3 12 d3 46 28 0f 9f c3",
+          "value_prefix_truncated": false
+        },
+        "LightColor": {
+          "name": "LightColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 184,
+          "value_prefix_hex": "82 a5 ff 00",
+          "value_prefix_truncated": false
+        },
+        "CastShadows": false,
+        "CastDynamicShadows": false,
+        "bAffectTranslucentLighting": false,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 315,
+          "value_prefix_hex": "88 c9 a7 c3 3c 0b db c2 38 46 7b 43",
+          "value_prefix_truncated": false
+        },
+        "RelativeRotation": {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Rotator",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 376,
+          "value_prefix_hex": "a0 ff 1f c1 d8 6b 09 43 92 a0 73 38",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 13,
+      "object_name": "fade_C_1",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 172340,
+      "class_name": "fade_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "DefaultSceneRoot": 22,
+        "RootComponent": 22,
+        "BlueprintCreatedComponents": {
+          "name": "BlueprintCreatedComponents",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 16 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 25,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 300,
+      "serial_offset": 172451,
+      "class_name": "Level",
+      "owner": "stg14_demo",
+      "tagged_properties": {
+        "Model": 16,
+        "LevelScriptActor": 24,
+        "WorldSettings": 26
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 13,
+      "object_name": "stg14_demo",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 172751,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -18,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "da c7 f9 c6 24 27 42 f4 0f 88 66 56 79 1b f0 b1",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 13,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 173012,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 13,
+      "object_name": "Model_6",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 173134,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 3,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 79,
+      "serial_offset": 173256,
+      "class_name": "SceneComponent",
+      "owner": "BP_HiddenActorList_4",
+      "tagged_properties": {
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 4,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 361,
+      "serial_offset": 173335,
+      "class_name": "SceneComponent",
+      "owner": "BP_StageProc07",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 30 f2 45 00 00 2a 43 00 f0 aa 45",
+          "value_prefix_truncated": false
+        },
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+        "UCSModifiedProperties": {
+          "name": "UCSModifiedProperties",
+          "type": "ArrayProperty",
+          "size": 188,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 161,
+          "value_prefix_hex": "01 00 00 00 88 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6d 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 eb ff ff ff 6c 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 5,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 361,
+      "serial_offset": 173696,
+      "class_name": "SceneComponent",
+      "owner": "BP_Stg07DemoEffect_4",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 40 9c 45 00 00 00 00 00 40 9c 45",
+          "value_prefix_truncated": false
+        },
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+        "UCSModifiedProperties": {
+          "name": "UCSModifiedProperties",
+          "type": "ArrayProperty",
+          "size": 188,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 161,
+          "value_prefix_hex": "01 00 00 00 88 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6d 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 eb ff ff ff 6c 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 6,
+      "object_name": "SceneComponent",
+      "object_flags": 262152,
+      "serial_size": 134,
+      "serial_offset": 174057,
+      "class_name": "SceneComponent",
+      "owner": "CameraActor_0",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "8d 29 d3 45 e0 b7 41 c4 9f 11 ac 45",
+          "value_prefix_truncated": false
+        },
+        "RelativeRotation": {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Rotator",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 110,
+          "value_prefix_hex": "cf fe af c1 12 84 b0 41 e1 2e 65 b5",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 7,
+      "object_name": "SceneComponent",
+      "object_flags": 262152,
+      "serial_size": 134,
+      "serial_offset": 174191,
+      "class_name": "SceneComponent",
+      "owner": "CameraActor_1",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "59 10 9c c5 a9 7e c1 47 9a 5a ec 46",
+          "value_prefix_truncated": false
+        },
+        "RelativeRotation": {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Rotator",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 110,
+          "value_prefix_hex": "9f cc 2c c1 0b 25 bc c2 29 e3 ab 34",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 12,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 0,
+      "serial_size": 361,
+      "serial_offset": 174325,
+      "class_name": "SceneComponent",
+      "owner": "fade_C_1",
+      "tagged_properties": {
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "00 30 98 c5 00 3a c0 47 00 5c e9 46",
+          "value_prefix_truncated": false
+        },
+        "bNetAddressable": true,
+        "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+        "UCSModifiedProperties": {
+          "name": "UCSModifiedProperties",
+          "type": "ArrayProperty",
+          "size": 188,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 161,
+          "value_prefix_hex": "01 00 00 00 88 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6d 00 00 00 00 00 00 00 74 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 eb ff ff ff 6c 00 00 00 00 00 00 00 71 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 26,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 174686,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "0d 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": 2,
+      "outer_index": 13,
+      "object_name": "stg14_demo_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 174785,
+      "class_name": "stg14_demo_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 0,
+      "object_name": "stg14_demo",
+      "object_flags": 11,
+      "serial_size": 53,
+      "serial_offset": 174797,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 13,
+      "object_name": "WorldSettings",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 174850,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 23
+      }
+    }
+  ],
+  "sha256": "2bcfb4f073642dde1fe66fd2b0a6615e53ff4198310d7948cff5bb172e874eb7",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,1430 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/BP_ItemDrop_Firework.uasset",
+  "id": "9f59ed3d1b2fe4c54ccb2641",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 15211,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/BP_ItemDrop_Firework.uasset",
+  "metadata_file": "metadata/9f59ed3d1b2fe4c54ccb2641.json",
+  "function_count": 4,
+  "summary": {
+    "total_header_size": 10815,
+    "package_flags": 2147483648,
+    "name_count": 161,
+    "name_offset": 189,
+    "export_count": 35,
+    "export_offset": 6935,
+    "import_count": 72,
+    "import_offset": 4919,
+    "bulk_data_start_offset": 15207,
+    "guid": "765103be9709ff4aa70cf62fbb6fa0e1"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/BP_ItemDrop_Firework",
+    "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/Material/MI_cmn_opl_fireworks_IA_fresnel_dis",
+    "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/Meshes/SM_CH_cmn_opl_fireworks_IA",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_BlueLine",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_GreenLine",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_RedLine",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_RedSpark",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Activate",
+    "Actor",
+    "AllNodes",
+    "Array_Get",
+    "Array_Length",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bAutoActivate",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "bLightAttachmentsAsGroup",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_ItemDrop_Firework",
+    "BP_ItemDrop_Firework_C",
+    "BreakVector",
+    "ByteProperty",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_Array_Length_ReturnValue",
+    "CallFunc_BreakVector_X",
+    "CallFunc_BreakVector_Y",
+    "CallFunc_BreakVector_Z",
+    "CallFunc_GetFloorHeight_ReturnValue",
+    "CallFunc_K2_AddActorWorldOffset_SweepHitResult",
+    "CallFunc_K2_GetComponentLocation_ReturnValue",
+    "CallFunc_K2_SetWorldLocation_SweepHitResult",
+    "CallFunc_MakeVector_ReturnValue",
+    "CallFunc_RandomIntegerInRange_ReturnValue",
+    "CallFunc_Subtract_IntInt_ReturnValue",
+    "Camera",
+    "Channel",
+    "ChildNodes",
+    "Class",
+    "CollisionProfileName",
+    "CollisionResponse",
+    "CollisionResponses",
+    "ComponentTemplate",
+    "Custom",
+    "Default__Actor",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_ItemDrop_Firework_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetArrayLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__ParticleSystemComponent",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StaticMeshComponent",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_REMOVED_0EDD5910486A06DB2D056F8FB7E56820",
+    "DefaultSceneRootNode",
+    "Delay",
+    "Destructible",
+    "ECC_GameTraceChannel5",
+    "ECollisionChannel",
+    "ECollisionResponse",
+    "ECR_Block",
+    "ECR_Ignore",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_ItemDrop_Firework",
+    "FireworkEffects",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GetFloorHeight",
+    "Guid",
+    "HitResult",
+    "IntProperty",
+    "K2_AddActorWorldOffset",
+    "K2_GetComponentLocation",
+    "K2_SetWorldLocation",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "KismetSystemLibrary",
+    "LatentActionInfo",
+    "LightTheFirework",
+    "MakeVector",
+    "MassInKgOverride",
+    "MaterialInstanceConstant",
+    "MI_cmn_opl_fireworks_IA_fresnel_dis",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "ObjectType",
+    "OverrideMaterials",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "ParticleSystem_GEN_VARIABLE",
+    "ParticleSystemComponent",
+    "Pawn",
+    "PhysicsBody",
+    "PointerToUberGraphFrame",
+    "PS_EF_ITM_fireworks_BlueLine",
+    "PS_EF_ITM_fireworks_GreenLine",
+    "PS_EF_ITM_fireworks_RedLine",
+    "PS_EF_ITM_fireworks_RedSpark",
+    "RandomIntegerInRange",
+    "ReceiveBeginPlay",
+    "RelativeLocation",
+    "Response",
+    "ResponseArray",
+    "ResponseChannel",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetSimulatePhysics",
+    "SetTemplate",
+    "SimpleConstructionScript",
+    "SM_CH_cmn_opl_fireworks_IA",
+    "StaticMesh",
+    "StaticMesh_GEN_VARIABLE",
+    "StaticMeshComponent",
+    "StructProperty",
+    "Subtract_IntInt",
+    "TekkenBlueprintLibrary",
+    "Template",
+    "TKItem5",
+    "TKPlayerCapsule",
+    "TKWall",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector",
+    "Vehicle",
+    "Visibility",
+    "WorldDynamic"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -55,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -54,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -55,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -55,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -54,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "ParticleSystem"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -55,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -56,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -55,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -54,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -54,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -12,
+      "object_name": "K2_AddActorWorldOffset"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -12,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -12,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "Array_Get"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "Array_Length"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "BreakVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "MakeVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "RandomIntegerInRange"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -17,
+      "object_name": "Subtract_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Delay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "SetTemplate"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "K2_GetComponentLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "K2_SetWorldLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -25,
+      "object_name": "GetFloorHeight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -54,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetArrayLibrary",
+      "outer_index": -55,
+      "object_name": "Default__KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -55,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -48,
+      "object_name": "MI_cmn_opl_fireworks_IA_fresnel_dis"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -54,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/Material/MI_cmn_opl_fireworks_IA_fresnel_dis"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Lower_Acc/cmn_opl_fireworks_IA/Meshes/SM_CH_cmn_opl_fireworks_IA"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_BlueLine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_GreenLine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_RedLine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_fireworks_RedSpark"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -50,
+      "object_name": "PS_EF_ITM_fireworks_BlueLine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -51,
+      "object_name": "PS_EF_ITM_fireworks_GreenLine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -52,
+      "object_name": "PS_EF_ITM_fireworks_RedLine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -53,
+      "object_name": "PS_EF_ITM_fireworks_RedSpark"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -55,
+      "object_name": "Default__ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -55,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -54,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -55,
+      "object_name": "HitResult"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -55,
+      "object_name": "LatentActionInfo"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -55,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -55,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -55,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer_index": -49,
+      "object_name": "SM_CH_cmn_opl_fireworks_IA"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -55,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -54,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -56,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 2,
+      "object_name": "FireworkEffects",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10815,
+      "class_name": "ObjectProperty",
+      "owner": "FireworkEffects",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 23,
+      "object_name": "FireworkEffects",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10855,
+      "class_name": "ArrayProperty",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 23,
+      "object_name": "StaticMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10895,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 23,
+      "object_name": "ParticleSystem",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10935,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 14,
+      "object_name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 10975,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 14,
+      "object_name": "CallFunc_MakeVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 11015,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 14,
+      "object_name": "CallFunc_BreakVector_Z",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11055,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 14,
+      "object_name": "CallFunc_BreakVector_Y",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11091,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 14,
+      "object_name": "CallFunc_BreakVector_X",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11127,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 14,
+      "object_name": "CallFunc_GetFloorHeight_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11163,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 14,
+      "object_name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 11199,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 14,
+      "object_name": "CallFunc_K2_AddActorWorldOffset_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 11239,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 14,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11279,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 23,
+      "object_name": "ExecuteUbergraph_BP_ItemDrop_Firework",
+      "object_flags": 1,
+      "serial_size": 384,
+      "serial_offset": 11315,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": 0,
+        "first_child": 13,
+        "flags_hex": "0x00800000",
+        "native": false,
+        "script_memory_size": 508,
+        "script_storage_size": 340,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11347,
+        "bytecode_sha256": "7b72cf275aabdeab288a6b8d2627b30ae234df6c10214e797ae1b8ec93f9ab74",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9f59ed3d1b2fe4c54ccb2641/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/9f59ed3d1b2fe4c54ccb2641/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -7,
+      "super_index": -30,
+      "template_index": -28,
+      "outer_index": 23,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 11699,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 14,
+        "super_struct": -30,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11731,
+        "bytecode_sha256": "7f0513d59596be8b4e662df7de6a01ee41afe6e3483aa5701d5fccc7ba7810fe",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9f59ed3d1b2fe4c54ccb2641/000014.bytecode.bin"
+      },
+      "raw_export_file": "functions/9f59ed3d1b2fe4c54ccb2641/000014.export.bin"
+    },
+    {
+      "index": 15,
+      "class_index": -7,
+      "super_index": -31,
+      "template_index": -28,
+      "outer_index": 23,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 11761,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 15,
+        "super_struct": -31,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11793,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9f59ed3d1b2fe4c54ccb2641/000015.bytecode.bin"
+      },
+      "raw_export_file": "functions/9f59ed3d1b2fe4c54ccb2641/000015.export.bin"
+    },
+    {
+      "index": 16,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 21,
+      "object_name": "CallFunc_Array_Get_Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 11808,
+      "class_name": "ObjectProperty",
+      "owner": "LightTheFirework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 21,
+      "object_name": "CallFunc_RandomIntegerInRange_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11848,
+      "class_name": "IntProperty",
+      "owner": "LightTheFirework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 21,
+      "object_name": "CallFunc_Subtract_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11884,
+      "class_name": "IntProperty",
+      "owner": "LightTheFirework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 21,
+      "object_name": "CallFunc_Array_Length_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 11920,
+      "class_name": "IntProperty",
+      "owner": "LightTheFirework",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 23,
+      "object_name": "LightTheFirework",
+      "object_flags": 1,
+      "serial_size": 219,
+      "serial_offset": 11956,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 16,
+        "super_struct": 0,
+        "first_child": 20,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 283,
+        "script_storage_size": 175,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 11988,
+        "bytecode_sha256": "2c22bef67fdcdf5d3d3f840ab24f7c70cb07063fbcdd65c4ca847faf76523f8d",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/9f59ed3d1b2fe4c54ccb2641/000020.bytecode.bin"
+      },
+      "raw_export_file": "functions/9f59ed3d1b2fe4c54ccb2641/000020.export.bin"
+    },
+    {
+      "index": 21,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -71,
+      "outer_index": 23,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 12175,
+      "class_name": "StructProperty",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -14,
+      "super_index": -12,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Firework_C",
+      "object_flags": 9,
+      "serial_size": 215,
+      "serial_offset": 12215,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 34,
+        "UberGraphFramePointerProperty": 22,
+        "UberGraphFunction": 14
+      }
+    },
+    {
+      "index": 23,
+      "class_index": 23,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_ItemDrop_Firework_C",
+      "object_flags": 49,
+      "serial_size": 118,
+      "serial_offset": 12430,
+      "class_name": "BP_ItemDrop_Firework_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "6d 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FireworkEffects": {
+          "name": "FireworkEffects",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 90,
+          "value_prefix_hex": "04 00 00 00 c5 ff ff ff c7 ff ff ff c6 ff ff ff c4 ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Firework",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 12548,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -12,
+        "SimpleConstructionScript": 34,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 23,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "df 75 18 fa 92 ba 9b 48 94 f6 32 db 45 7d 1e 2e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 25,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 168,
+      "serial_offset": 12797,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Firework",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 68,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 26,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 25,
+      "object_name": "LightTheFirework",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 12965,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Firework",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 48,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 27,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 25,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 13087,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Firework",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 28,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -61,
+      "outer_index": 23,
+      "object_name": "ParticleSystem_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 154,
+      "serial_offset": 13195,
+      "class_name": "ParticleSystemComponent",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {
+        "Template": -59,
+        "bLightAttachmentsAsGroup": true,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 104,
+          "value_prefix_hex": "00 00 00 00 00 00 00 00 00 00 08 42",
+          "value_prefix_truncated": false
+        },
+        "bAutoActivate": false
+      }
+    },
+    {
+      "index": 29,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -62,
+      "outer_index": 23,
+      "object_name": "DefaultSceneRoot_REMOVED_0EDD5910486A06DB2D056F8FB7E56820",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 13349,
+      "class_name": "SceneComponent",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 30,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -67,
+      "outer_index": 34,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 13361,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 30,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "05 97 83 52 d3 b3 bc 45 a1 04 bc 36 ea b3 fc 7b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 31,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -67,
+      "outer_index": 34,
+      "object_name": "SCS_Node_4",
+      "object_flags": 8,
+      "serial_size": 180,
+      "serial_offset": 13500,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 35,
+        "VariableName": "StaticMesh",
+        "ChildNodes": {
+          "name": "ChildNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 95,
+          "value_prefix_hex": "01 00 00 00 21 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 152,
+          "value_prefix_hex": "ec 7d a8 8a 89 e6 3f 4c 90 b7 ba 03 ac 29 06 33",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 32,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -67,
+      "outer_index": 34,
+      "object_name": "SCS_Node_5",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 13680,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 29,
+        "VariableName": "ParticleSystem",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "80 c7 d0 d0 68 eb 10 46 bf c6 9d 7f 7b 59 81 6e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 33,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -68,
+      "outer_index": 23,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 127,
+      "serial_offset": 13819,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 20 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "02 00 00 00 20 00 00 00 21 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 31
+      }
+    },
+    {
+      "index": 34,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -70,
+      "outer_index": 23,
+      "object_name": "StaticMesh_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 1261,
+      "serial_offset": 13946,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_ItemDrop_Firework_C",
+      "tagged_properties": {
+        "StaticMesh": -69,
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 d2 ff ff ff",
+          "value_prefix_truncated": false
+        },
+        "bLightAttachmentsAsGroup": true,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 1100,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 145,
+          "value_prefix_hex": "30 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 90 00 00 00 00 00 00 00 92 03 00 00 00 00 00 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 69 03 00 00 00 00 00 00 90 00 00 00 00 00 00 00 00 0a 00 00 00 82 00 00 00 00 00 00 00 90 00 00 00 00 00 00 00 34 03 00 00 00 00 00 00 83 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 6b 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 77 00 00 00 00 00 00 00 81 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 4f 00 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 6d 00 00 00 00 00 00 00 2d 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    }
+  ],
+  "sha256": "6b1adccf2597dfeca1132c5a40b50fdd29150a7565bda921785b6044bf8cf87c",
+  "selection_reason": "local-versus shared-content candidate"
+}
