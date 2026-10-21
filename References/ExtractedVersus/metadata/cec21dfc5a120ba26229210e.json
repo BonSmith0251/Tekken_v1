@@ -1,0 +1,1059 @@
+{
+  "path": "TekkenGame/Content/Stage/Common/BP_FlickeringDirectionalLight.uasset",
+  "id": "cec21dfc5a120ba26229210e",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 10097,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/Common/BP_FlickeringDirectionalLight.uasset",
+  "metadata_file": "metadata/cec21dfc5a120ba26229210e.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 7341,
+    "package_flags": 2147483648,
+    "name_count": 112,
+    "name_offset": 189,
+    "export_count": 25,
+    "export_offset": 4593,
+    "import_count": 52,
+    "import_offset": 3137,
+    "bulk_data_start_offset": 10093,
+    "guid": "3cacbc7f222e1141b1acd8eb93079bc2"
+  },
+  "names": [
+    "/Game/Stage/Common/BP_FlickeringDirectionalLight",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bIsExternalCurve",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "bLoop",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_FlickeringDirectionalLight",
+    "BP_FlickeringDirectionalLight_C",
+    "Brightness",
+    "bValidatedAsWired",
+    "ByteProperty",
+    "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "CallFunc_RandomFloatInRange_ReturnValue",
+    "Class",
+    "ComponentTemplate",
+    "CurveFloat",
+    "CurveFloat_0_1__71EEED09__79CD0ECA__8B7ACBAE_1__E4A430BB",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_FlickeringDirectionalLight_C",
+    "Default__ByteProperty",
+    "Default__CurveFloat",
+    "Default__DirectionalLight",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TimelineTemplate",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DirectionalLight",
+    "DirectionalLightComponent",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "Enum",
+    "ETimelineDirection",
+    "EventGraph",
+    "ExecuteUbergraph_BP_FlickeringDirectionalLight",
+    "FloatCurve",
+    "FloatProperty",
+    "FloatTracks",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "Intensity",
+    "IntProperty",
+    "Keys",
+    "KismetMathLibrary",
+    "Light",
+    "LightComponent",
+    "LightComponent0",
+    "LightComponentBase",
+    "Multiply_FloatFloat",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "Play",
+    "PointerToUberGraphFrame",
+    "RandomFloatInRange",
+    "ReceiveBeginPlay",
+    "RichCurve",
+    "RichCurveKey",
+    "RootComponent",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetIntensity",
+    "SetNewTime",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "Time_Max",
+    "TIME_Min",
+    "Timeline",
+    "Timeline_0__Direction_BAA00F144AC2964F9AA825B2911EDF8D",
+    "Timeline_0__FinishedFunc",
+    "Timeline_0__UpdateFunc",
+    "Timeline_0_Brightness_BAA00F144AC2964F9AA825B2911EDF8D",
+    "Timeline_0_Template",
+    "TimelineComponent",
+    "TimelineGuid",
+    "TimelineLength",
+    "Timelines",
+    "TimelineTemplate",
+    "TrackName",
+    "TTFloatTrack",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -46,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -46,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -45,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "CurveFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "DirectionalLight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "DirectionalLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Light"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "LightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "LightComponentBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "TimelineComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "TimelineTemplate"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -46,
+      "object_name": "Default__CurveFloat"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "DirectionalLight",
+      "outer_index": -46,
+      "object_name": "Default__DirectionalLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "DirectionalLightComponent",
+      "outer_index": -28,
+      "object_name": "LightComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -46,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -46,
+      "object_name": "ETimelineDirection"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -45,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -21,
+      "object_name": "Intensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -45,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -11,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -11,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "Multiply_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "RandomFloatInRange"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "SetIntensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -25,
+      "object_name": "Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -25,
+      "object_name": "SetNewTime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -45,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -45,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -19,
+      "object_name": "LightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -46,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -46,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -46,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -46,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -45,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "TimelineTemplate",
+      "outer_index": -46,
+      "object_name": "Default__TimelineTemplate"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 15,
+      "object_name": "TIME_Min",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7341,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 15,
+      "object_name": "Time_Max",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7377,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 15,
+      "object_name": "Timeline_0",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7413,
+      "class_name": "ObjectProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 15,
+      "object_name": "Timeline_0__Direction_BAA00F144AC2964F9AA825B2911EDF8D",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7453,
+      "class_name": "ByteProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 15,
+      "object_name": "Timeline_0_Brightness_BAA00F144AC2964F9AA825B2911EDF8D",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7493,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 9,
+      "object_name": "CallFunc_RandomFloatInRange_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7529,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_FlickeringDirectionalLight",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 9,
+      "object_name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7565,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_FlickeringDirectionalLight",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 9,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7601,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_FlickeringDirectionalLight",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 15,
+      "object_name": "ExecuteUbergraph_BP_FlickeringDirectionalLight",
+      "object_flags": 1,
+      "serial_size": 228,
+      "serial_offset": 7637,
+      "class_name": "Function",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 8,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 280,
+        "script_storage_size": 184,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7669,
+        "bytecode_sha256": "15dae2695571fa803d8a9e6ab34ec8130f237650cdb5a5158d7e93d92472ab86",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/cec21dfc5a120ba26229210e/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/cec21dfc5a120ba26229210e/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -6,
+      "super_index": -35,
+      "template_index": -34,
+      "outer_index": 15,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7865,
+      "class_name": "Function",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 9,
+        "super_struct": -35,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7897,
+        "bytecode_sha256": "f101d529f81305548e1a99aa6e346cbe4ba8dd589115a3b75a5115300231db4c",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/cec21dfc5a120ba26229210e/000009.bytecode.bin"
+      },
+      "raw_export_file": "functions/cec21dfc5a120ba26229210e/000009.export.bin"
+    },
+    {
+      "index": 10,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 15,
+      "object_name": "Timeline_0__UpdateFunc",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7927,
+      "class_name": "Function",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 10,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7959,
+        "bytecode_sha256": "81fedd37ded3d0fc049b767b1d7a5a90e4e0f71cfe706f8922b1f497ff02303b",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/cec21dfc5a120ba26229210e/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/cec21dfc5a120ba26229210e/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 15,
+      "object_name": "Timeline_0__FinishedFunc",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7989,
+      "class_name": "Function",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8021,
+        "bytecode_sha256": "529f718413db177af98f9b21feb48af7f8c7e994274b073a45e60110f72ad080",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/cec21dfc5a120ba26229210e/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/cec21dfc5a120ba26229210e/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -6,
+      "super_index": -36,
+      "template_index": -34,
+      "outer_index": 15,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 8051,
+      "class_name": "Function",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 12,
+        "super_struct": -36,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8083,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/cec21dfc5a120ba26229210e/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/cec21dfc5a120ba26229210e/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -51,
+      "outer_index": 15,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8098,
+      "class_name": "StructProperty",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -13,
+      "super_index": -15,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_FlickeringDirectionalLight_C",
+      "object_flags": 9,
+      "serial_size": 268,
+      "serial_offset": 8138,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "Timelines": {
+          "name": "Timelines",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "SimpleConstructionScript": 24,
+        "UberGraphFramePointerProperty": 14,
+        "UberGraphFunction": 9
+      }
+    },
+    {
+      "index": 15,
+      "class_index": 15,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 0,
+      "object_name": "Default__BP_FlickeringDirectionalLight_C",
+      "object_flags": 49,
+      "serial_size": 123,
+      "serial_offset": 8406,
+      "class_name": "BP_FlickeringDirectionalLight_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "47 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "LightComponent": 19,
+        "RootComponent": 19
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_FlickeringDirectionalLight",
+      "object_flags": 11,
+      "serial_size": 290,
+      "serial_offset": 8529,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -15,
+        "SimpleConstructionScript": 24,
+        "Timelines": {
+          "name": "Timelines",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 15,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 258,
+          "value_prefix_hex": "9b 58 21 fc db 31 1d 48 af 45 9e a8 ce 2c c1 c7",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 15,
+      "object_name": "CurveFloat_0_1__71EEED09__79CD0ECA__8B7ACBAE_1__E4A430BB",
+      "object_flags": 9,
+      "serial_size": 398,
+      "serial_offset": 8819,
+      "class_name": "CurveFloat",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {
+        "FloatCurve": {
+          "name": "FloatCurve",
+          "type": "StructProperty",
+          "size": 337,
+          "array_index": 0,
+          "struct_name": "RichCurve",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "3e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 28 01 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 00 09 00 00 00 3e 00 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 f3 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b4 0e 3b e2 9c 07 3f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 72 50 1e 3f 5a be 05 3f f6 09 ae bd 00 00 00 00 f6 09 ae bd 00 00 00 00 02 00 00 fc a6 93 3f 66 21 dd 3e ca a0 50 be 00 00 00 00 ca a0 50 be 00 00 00 00 02 00 00 3a 91 f5 3f de de 83 3e fb cb af 3c 00 00 00 00 fb cb af 3c 00 00 00 00 00 01 00 c5 df 36 40 f8 d9 ef 3e cf 20 56 3e 00 00 00 00 cf 20 56 3e 00 00 00 00 02 00 00 8a f8 74 40 3a 4f 09 3f 5c 0c 9d bd 00 00 00 00 5c 0c 9d bd 00 00 00 00 00 00 00 ee 8b a8 40 20",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 16,
+      "object_name": "LightComponent0",
+      "object_flags": 262185,
+      "serial_size": 88,
+      "serial_offset": 9217,
+      "class_name": "DirectionalLightComponent",
+      "owner": "Default__BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 17,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 148,
+      "serial_offset": 9305,
+      "class_name": "EdGraph",
+      "owner": "BP_FlickeringDirectionalLight",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 48,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 17,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 9453,
+      "class_name": "EdGraph",
+      "owner": "BP_FlickeringDirectionalLight",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 15,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 9561,
+      "class_name": "SceneComponent",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 24,
+      "object_name": "SCS_Node_7",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9573,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_4",
+      "tagged_properties": {
+        "ComponentTemplate": 22,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "fb 47 e2 81 2e ea 8b 4a 92 d0 10 e3 f9 0b 2a 75",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 15,
+      "object_name": "SimpleConstructionScript_4",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 9712,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 23
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 15,
+      "object_name": "Timeline_0_Template",
+      "object_flags": 8,
+      "serial_size": 340,
+      "serial_offset": 9753,
+      "class_name": "TimelineTemplate",
+      "owner": "BP_FlickeringDirectionalLight_C",
+      "tagged_properties": {
+        "TimelineLength": 7.0,
+        "bLoop": true,
+        "bValidatedAsWired": true,
+        "FloatTracks": {
+          "name": "FloatTracks",
+          "type": "ArrayProperty",
+          "size": 149,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 114,
+          "value_prefix_hex": "01 00 00 00 38 00 00 00 00 00 00 00 5a 00 00 00 00 00 00 00 60 00 00 00 00 00 00 00 69 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 49 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 12 00 00 00 68 00 00 00 00 00 00 00 45 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 47 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "TimelineGuid": {
+          "name": "TimelineGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 312,
+          "value_prefix_hex": "14 0f a0 ba 4f 96 c2 4a b2 25 a8 9a 8d df 1e 91",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "40d2a39fca77247b02e0e51491bfb9d9b72be4cbbe771cc9305db4491cb147d1",
+  "selection_reason": "local-versus shared-content candidate"
+}

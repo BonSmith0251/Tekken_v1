@@ -1,0 +1,497 @@
+{
+  "path": "TekkenGame/Content/Character/Missiles/BP_MissileHit_MRY_AirBullet.uasset",
+  "id": "d81ca740855c6c206fc26122",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 5297,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Missiles/BP_MissileHit_MRY_AirBullet.uasset",
+  "metadata_file": "metadata/d81ca740855c6c206fc26122.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 3965,
+    "package_flags": 2147483648,
+    "name_count": 75,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 3193,
+    "import_count": 28,
+    "import_offset": 2409,
+    "bulk_data_start_offset": 5293,
+    "guid": "25292ea69190524ba83251223f249adf"
+  },
+  "names": [
+    "/Game/Character/Missiles/BP_MissileHit_MRY_AirBullet",
+    "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_draw",
+    "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_crashaura_p",
+    "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_flooraura_p",
+    "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_guardaura_p",
+    "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_hitaura_p",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "AdditionalClashFX",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_MissileHit_MRY_AirBullet",
+    "BP_MissileHit_MRY_AirBullet_C",
+    "bPrecomputedLightingIsValid",
+    "ClashFX",
+    "Class",
+    "Color",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_MissileHit_MRY_AirBullet_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__TekkenCharacterMissileHitEffect",
+    "DefaultMissileHitFX",
+    "DefaultSceneRoot",
+    "DefaultSceneRootF7AB185E4E0EB580EFC4D6882E95B266",
+    "DefaultSceneRootNode",
+    "Engine",
+    "ExpireFX",
+    "FloatProperty",
+    "FloorHitFX",
+    "FloorHitFXScale",
+    "FX",
+    "FXScale",
+    "GeneratedClass",
+    "GuardFX",
+    "Guid",
+    "HitFX",
+    "HitFXScale",
+    "HitLight",
+    "Intensity",
+    "IntProperty",
+    "LightColor",
+    "LightGuid",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "PointLightComponent",
+    "PS_EF_CHR_MRX_hadou_draw",
+    "PS_EF_CHR_MRY_Air_crashaura_p",
+    "PS_EF_CHR_MRY_Air_flooraura_p",
+    "PS_EF_CHR_MRY_Air_guardaura_p",
+    "PS_EF_CHR_MRY_Air_hitaura_p",
+    "RootComponent",
+    "SceneComponent",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenCharacterMissileHitEffect",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -17,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -17,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "PointLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "TekkenCharacterMissileHitEffect"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mrx/Particle/PS_EF_CHR_MRX_hadou_draw"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_crashaura_p"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_flooraura_p"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_guardaura_p"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/mry/Particle/PS_EF_CHR_MRY_Air_hitaura_p"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -11,
+      "object_name": "PS_EF_CHR_MRX_hadou_draw"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -12,
+      "object_name": "PS_EF_CHR_MRY_Air_crashaura_p"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -13,
+      "object_name": "PS_EF_CHR_MRY_Air_flooraura_p"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -14,
+      "object_name": "PS_EF_CHR_MRY_Air_guardaura_p"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -15,
+      "object_name": "PS_EF_CHR_MRY_Air_hitaura_p"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLightComponent",
+      "outer_index": -28,
+      "object_name": "HitLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -17,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -17,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -17,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenCharacterMissileHitEffect",
+      "outer_index": -18,
+      "object_name": "Default__TekkenCharacterMissileHitEffect"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": -10,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_MissileHit_MRY_AirBullet_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 3965,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 7
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 0,
+      "object_name": "Default__BP_MissileHit_MRY_AirBullet_C",
+      "object_flags": 49,
+      "serial_size": 517,
+      "serial_offset": 4074,
+      "class_name": "BP_MissileHit_MRY_AirBullet_C",
+      "owner": null,
+      "tagged_properties": {
+        "HitFX": -23,
+        "GuardFX": -22,
+        "ExpireFX": -21,
+        "ClashFX": -19,
+        "FloorHitFX": -21,
+        "HitLight": 4,
+        "HitFXScale": {
+          "name": "HitFXScale",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 223,
+          "value_prefix_hex": "9a 99 19 3f 9a 99 19 3f 9a 99 19 3f",
+          "value_prefix_truncated": false
+        },
+        "AdditionalClashFX": {
+          "name": "AdditionalClashFX",
+          "type": "ArrayProperty",
+          "size": 151,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 268,
+          "value_prefix_hex": "01 00 00 00 09 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 62 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 ec ff ff ff 2a 00 00 00 00 00 00 00 46 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9a 99 19 3f 9a 99 19 3f 9a 99 19 3f 36 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FloorHitFXScale": {
+          "name": "FloorHitFXScale",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 468,
+          "value_prefix_hex": "9a 99 19 3f 9a 99 19 3f 9a 99 19 3f",
+          "value_prefix_truncated": false
+        },
+        "RootComponent": 4
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_MissileHit_MRY_AirBullet",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 4591,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -10,
+        "SimpleConstructionScript": 7,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "60 3b c0 51 ad 3c c2 4b 9d 26 f8 6b b7 75 ba 18",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 2,
+      "object_name": "HitLight",
+      "object_flags": 262185,
+      "serial_size": 261,
+      "serial_offset": 4840,
+      "class_name": "PointLightComponent",
+      "owner": "Default__BP_MissileHit_MRY_AirBullet_C",
+      "tagged_properties": {
+        "LightGuid": {
+          "name": "LightGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "c6 c0 35 23 aa 1c bc 48 8c 47 49 20 56 30 fa 13",
+          "value_prefix_truncated": false
+        },
+        "Intensity": 0.0,
+        "LightColor": {
+          "name": "LightColor",
+          "type": "StructProperty",
+          "size": 4,
+          "array_index": 0,
+          "struct_name": "Color",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 143,
+          "value_prefix_hex": "00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bPrecomputedLightingIsValid": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRootF7AB185E4E0EB580EFC4D6882E95B266",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5101,
+      "class_name": "SceneComponent",
+      "owner": "BP_MissileHit_MRY_AirBullet_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 7,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5113,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 5,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "a9 be ef 09 32 6d c1 42 ba 0d 7a c4 c8 39 6e ab",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5252,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_MissileHit_MRY_AirBullet_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 6
+      }
+    }
+  ],
+  "sha256": "b4dc076479fbf42ce5dcdcbd149dc8e5f15de40e7b4333bcdd07dee2797430cd",
+  "selection_reason": "local-versus shared-content candidate"
+}

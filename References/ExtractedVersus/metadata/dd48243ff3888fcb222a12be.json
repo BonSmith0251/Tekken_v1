@@ -1,0 +1,968 @@
+{
+  "path": "TekkenGame/Content/System/BP_QualityControl_Resolution.uasset",
+  "id": "dd48243ff3888fcb222a12be",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 9157,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BP_QualityControl_Resolution.uasset",
+  "metadata_file": "metadata/dd48243ff3888fcb222a12be.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 6905,
+    "package_flags": 2147483648,
+    "name_count": 92,
+    "name_offset": 189,
+    "export_count": 26,
+    "export_offset": 4041,
+    "import_count": 43,
+    "import_offset": 2837,
+    "bulk_data_start_offset": 9153,
+    "guid": "62c093896a20e747bc5610ba44756cc5"
+  },
+  "names": [
+    "/Game/System/BP_QualityControl_Resolution",
+    "/Game/System/BPF_CommonFunctions",
+    "/Game/System/BPI_QualityControl",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_QualityControl_Resolution",
+    "BP_QualityControl_Resolution_C",
+    "BPF_CommonFunctions_C",
+    "BPI_QualityControl_C",
+    "CallFunc_GetResolutionScaleSetting_ReturnValue",
+    "CallFunc_GetResolutionScaleSetting_ReturnValue2",
+    "CallFunc_IsQualityControlResolutionEnabled_ReturnValue",
+    "CallFunc_IsQualityControlResolutionEnabled_ReturnValue2",
+    "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "CallFunc_Multiply_FloatFloat_ReturnValue2",
+    "ChangeResolution",
+    "Class",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_QualityControl_Resolution_C",
+    "Default__BPF_CommonFunctions_C",
+    "Default__BPI_QualityControl_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DownQuality",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_QualityControl_Resolution",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GetResolutionScaleSetting",
+    "Guid",
+    "HighScale",
+    "IntProperty",
+    "IsQualityControlResolutionEnabled",
+    "KismetMathLibrary",
+    "LowScale",
+    "Multiply_FloatFloat",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScreenPercentage",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetScreenPercentage",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenBlueprintLibrary",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpQuality",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -36,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -36,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -34,
+      "object_name": "BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -36,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -35,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Game/System/BPF_CommonFunctions",
+      "class_name": "BPF_CommonFunctions_C",
+      "outer_index": -33,
+      "object_name": "Default__BPF_CommonFunctions_C"
+    },
+    {
+      "class_package": "/Game/System/BPI_QualityControl",
+      "class_name": "BPI_QualityControl_C",
+      "outer_index": -34,
+      "object_name": "Default__BPI_QualityControl_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -35,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -36,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -37,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -36,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -35,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -35,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Multiply_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "GetResolutionScaleSetting"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "IsQualityControlResolutionEnabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -35,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -35,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BPF_CommonFunctions"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/System/BPI_QualityControl"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -36,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -36,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -36,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -36,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -35,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -37,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 18,
+      "object_name": "HighScale",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6905,
+      "class_name": "FloatProperty",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 18,
+      "object_name": "LowScale",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6941,
+      "class_name": "FloatProperty",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 18,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6977,
+      "class_name": "ObjectProperty",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "CallFunc_Multiply_FloatFloat_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7017,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7053,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "CallFunc_GetResolutionScaleSetting_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7089,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 11,
+      "object_name": "CallFunc_GetResolutionScaleSetting_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7125,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 11,
+      "object_name": "CallFunc_IsQualityControlResolutionEnabled_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 7161,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 11,
+      "object_name": "CallFunc_IsQualityControlResolutionEnabled_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 7199,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 11,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7237,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 18,
+      "object_name": "ExecuteUbergraph_BP_QualityControl_Resolution",
+      "object_flags": 1,
+      "serial_size": 297,
+      "serial_offset": 7273,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 10,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 393,
+        "script_storage_size": 253,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7305,
+        "bytecode_sha256": "a47434674691aae26dfe7101f4ee403d69e690d2f4698bfb1e91ecad3534b5d1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/dd48243ff3888fcb222a12be/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/dd48243ff3888fcb222a12be/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 18,
+      "object_name": "UpQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7570,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7602,
+        "bytecode_sha256": "c59727fe36aec351f948bc1a516bb161aa78c42500c74275ba26136ed29be730",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/dd48243ff3888fcb222a12be/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/dd48243ff3888fcb222a12be/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 18,
+      "object_name": "DownQuality",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7632,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 12,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7664,
+        "bytecode_sha256": "d8ab4c534952fe42355ca35e46f99b06c845a4ce5f8726a12a8cd280b2412aca",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/dd48243ff3888fcb222a12be/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/dd48243ff3888fcb222a12be/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -10,
+      "super_index": -27,
+      "template_index": -26,
+      "outer_index": 18,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 7694,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 13,
+        "super_struct": -27,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7726,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/dd48243ff3888fcb222a12be/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/dd48243ff3888fcb222a12be/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "ScreenPercentage",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7741,
+      "class_name": "FloatProperty",
+      "owner": "ChangeResolution",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 18,
+      "object_name": "ChangeResolution",
+      "object_flags": 1,
+      "serial_size": 77,
+      "serial_offset": 7777,
+      "class_name": "Function",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 14,
+        "super_struct": 0,
+        "first_child": 15,
+        "flags_hex": "0x0C040000",
+        "native": false,
+        "script_memory_size": 49,
+        "script_storage_size": 33,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7809,
+        "bytecode_sha256": "d4db1567fee2de05bc615099c32f978d14ebe29327af8dc784ca7557d2a53e87",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/dd48243ff3888fcb222a12be/000015.bytecode.bin"
+      },
+      "raw_export_file": "functions/dd48243ff3888fcb222a12be/000015.export.bin"
+    },
+    {
+      "index": 16,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 18,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7854,
+      "class_name": "StructProperty",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -17,
+      "super_index": -15,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_Resolution_C",
+      "object_flags": 9,
+      "serial_size": 239,
+      "serial_offset": 7894,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 26,
+        "UberGraphFramePointerProperty": 17,
+        "UberGraphFunction": 11
+      }
+    },
+    {
+      "index": 18,
+      "class_index": 18,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_QualityControl_Resolution_C",
+      "object_flags": 49,
+      "serial_size": 123,
+      "serial_offset": 8133,
+      "class_name": "BP_QualityControl_Resolution_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "45 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "LowScale": 0.800000011920929,
+        "HighScale": 1.0
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_QualityControl_Resolution",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 8256,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -15,
+        "SimpleConstructionScript": 26,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 18,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "70 51 7f 5b ff 7a 04 46 be 23 ed b1 05 22 61 36",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 20,
+      "object_name": "ChangeResolution",
+      "object_flags": 8,
+      "serial_size": 86,
+      "serial_offset": 8505,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Resolution",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 20,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 180,
+      "serial_offset": 8591,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Resolution",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 80,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "13 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 20,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 8771,
+      "class_name": "EdGraph",
+      "owner": "BP_QualityControl_Resolution",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 18,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 8879,
+      "class_name": "SceneComponent",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -40,
+      "outer_index": 26,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 8891,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 24,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "b5 07 32 48 b3 41 31 40 a2 5a 1c b8 21 88 6c 88",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 18,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 9030,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_QualityControl_Resolution_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 25
+      }
+    }
+  ],
+  "sha256": "4fdafe8ebd3a76d071ae671501fb437a03cf9838f7630911601a87118886ab1d",
+  "selection_reason": "local-versus shared-content candidate"
+}

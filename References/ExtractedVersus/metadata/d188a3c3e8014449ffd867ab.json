@@ -1,0 +1,162 @@
+{
+  "path": "TekkenGame/Content/Character/Common/shader/MaterialFunction/TEKKEN_Stamp_UVCrop.uasset",
+  "id": "d188a3c3e8014449ffd867ab",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 1711,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Common/shader/MaterialFunction/TEKKEN_Stamp_UVCrop.uasset",
+  "metadata_file": "metadata/d188a3c3e8014449ffd867ab.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1282,
+    "package_flags": 2147483648,
+    "name_count": 26,
+    "name_offset": 189,
+    "export_count": 2,
+    "export_offset": 1062,
+    "import_count": 7,
+    "import_offset": 866,
+    "bulk_data_start_offset": 1707,
+    "guid": "a69922a2e20ab94fb3c20f30fb715497"
+  },
+  "names": [
+    "/Engine/EngineMaterials/DefaultDiffuse",
+    "/Game/Character/Common/shader/MaterialFunction/TEKKEN_Stamp_UVCrop",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "Class",
+    "Default__MaterialExpressionTextureObject",
+    "Default__MaterialFunction",
+    "DefaultDiffuse",
+    "Description",
+    "Function",
+    "FunctionExpressions",
+    "Guid",
+    "MaterialExpressionTextureObject",
+    "MaterialFunction",
+    "None",
+    "ObjectProperty",
+    "Package",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "TEKKEN_Stamp_UVCrop",
+    "Texture",
+    "Texture2D"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -6,
+      "object_name": "MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -6,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureObject",
+      "outer_index": -6,
+      "object_name": "Default__MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -6,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/EngineMaterials/DefaultDiffuse"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -5,
+      "object_name": "DefaultDiffuse"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 2,
+      "object_name": "MaterialExpressionTextureObject_1",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 1282,
+      "class_name": "MaterialExpressionTextureObject",
+      "owner": "TEKKEN_Stamp_UVCrop",
+      "tagged_properties": {
+        "Texture": -7,
+        "Function": 2
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "TEKKEN_Stamp_UVCrop",
+      "object_flags": 3,
+      "serial_size": 355,
+      "serial_offset": 1352,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "46 c1 b3 f2 25 32 42 4d a0 c2 bf 74 41 b8 58 23",
+          "value_prefix_truncated": false
+        },
+        "Description": "Crops a stamp. Supply the top left and bottom right corners of the crop in 0-1 range.",
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 104,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 239,
+          "value_prefix_hex": "19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "2736846cc40b83c28fa85deaad75542ba8d211cf9c81832dc22e1ddbedab9267",
+  "selection_reason": "local-versus shared-content candidate"
+}

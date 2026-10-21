@@ -1,0 +1,496 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/Children/BP_CH_lar_hef_daruma.uasset",
+  "id": "d739a8e719c88a603e98b192",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 5504,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/Children/BP_CH_lar_hef_daruma.uasset",
+  "metadata_file": "metadata/d739a8e719c88a603e98b192.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4119,
+    "package_flags": 2147483648,
+    "name_count": 71,
+    "name_offset": 189,
+    "export_count": 10,
+    "export_offset": 3015,
+    "import_count": 26,
+    "import_offset": 2287,
+    "bulk_data_start_offset": 5500,
+    "guid": "c3f5357bdf924649bf3d03586c87aa6f"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/BP_CH_cmn_hef_daruma",
+    "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/Children/BP_CH_lar_hef_daruma",
+    "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/Meshes/SK_CH_lar_hef_daruma",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_cmn_hef_daruma_C",
+    "BP_CH_lar_hef_daruma",
+    "BP_CH_lar_hef_daruma_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "DarumaMesh",
+    "DarumaMesh_GEN_VARIABLE",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_hef_daruma_C",
+    "Default__BP_CH_lar_hef_daruma_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRoot_REMOVED_04FC34234A983DA9411E199EA19262EE",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "Records",
+    "Scene_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SK_CH_lar_hef_daruma",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -19,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -16,
+      "object_name": "BP_CH_cmn_hef_daruma_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -19,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/BP_CH_cmn_hef_daruma",
+      "class_name": "BP_CH_cmn_hef_daruma_C",
+      "outer_index": -16,
+      "object_name": "Default__BP_CH_cmn_hef_daruma_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -19,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -19,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/BP_CH_cmn_hef_daruma"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Full_Head/cmn_hef_daruma/Meshes/SK_CH_lar_hef_daruma"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_REMOVED_04FC34234A983DA9411E199EA19262EE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -19,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -19,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -19,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -17,
+      "object_name": "SK_CH_lar_hef_daruma"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "DarumaMesh_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_lar_hef_daruma_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 4119,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_lar_hef_daruma_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 4257,
+      "class_name": "BP_CH_lar_hef_daruma_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_lar_hef_daruma",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 4265,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "6b 5a a2 cc 37 b4 40 40 89 23 6b 36 27 29 5c c7",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 124,
+      "serial_offset": 4543,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_lar_hef_daruma",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 4667,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_lar_hef_daruma",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 488,
+      "serial_offset": 4779,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_lar_hef_daruma_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 443,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 39 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 86 01 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 00 00 00 17 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 3e 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 2e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 5a b2 fe 46 f7 c1 4b b1 ad 05 d5 03 6a",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5267,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_lar_hef_daruma_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 9,
+      "object_name": "SCS_Node_19",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5279,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_19",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "66 91 15 31 aa ef ae 4f 9c a1 91 71 74 40 4d 6b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_19",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5418,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_lar_hef_daruma_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 1,
+      "object_name": "DarumaMesh_GEN_VARIABLE",
+      "object_flags": 4194345,
+      "serial_size": 41,
+      "serial_offset": 5459,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_lar_hef_daruma_C",
+      "tagged_properties": {
+        "SkeletalMesh": -25
+      }
+    }
+  ],
+  "sha256": "474a1af6da735b2495b363e7289547e12bae77bf659e3152010c9ef0faca4c4e",
+  "selection_reason": "local-versus shared-content candidate"
+}
