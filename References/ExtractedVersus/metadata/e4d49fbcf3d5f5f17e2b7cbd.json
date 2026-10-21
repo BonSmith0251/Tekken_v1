@@ -1,0 +1,920 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_mrz_oph_cake.uasset",
+  "id": "e4d49fbcf3d5f5f17e2b7cbd",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 12825,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_mrz_oph_cake.uasset",
+  "metadata_file": "metadata/e4d49fbcf3d5f5f17e2b7cbd.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 6507,
+    "package_flags": 2147483648,
+    "name_count": 85,
+    "name_offset": 189,
+    "export_count": 21,
+    "export_offset": 4035,
+    "import_count": 39,
+    "import_offset": 2943,
+    "bulk_data_start_offset": 12821,
+    "guid": "f2601e25b20ae8459541543cd0bdc4ef"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_cmn_oph_cake",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_mrz_oph_cake",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/Material/MI_CH_mrz_oph_cake",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/Material/MI_CH_mrz_oph_misc",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_cmn_oph_cake_C",
+    "BP_CH_mrz_oph_cake",
+    "BP_CH_mrz_oph_cake_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_oph_cake_C",
+    "Default__BP_CH_mrz_oph_cake_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRoot_REMOVED_19198043449755DCC20ACEB47D99F9CB",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "MaterialInstanceConstant",
+    "MI_CH_mrz_oph_cake",
+    "MI_CH_mrz_oph_misc",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "Records",
+    "Scene_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SK_CH_cmn_oph_cake_one",
+    "SK_CH_cmn_oph_cake_one_10_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_11_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_12_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_1_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_2_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_3_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_4_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_5_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_6_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_7_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_8_GEN_VARIABLE",
+    "SK_CH_cmn_oph_cake_one_9_GEN_VARIABLE",
+    "SkeletalMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -22,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "BP_CH_cmn_oph_cake_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -22,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_cmn_oph_cake",
+      "class_name": "BP_CH_cmn_oph_cake_C",
+      "outer_index": -18,
+      "object_name": "Default__BP_CH_cmn_oph_cake_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -22,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -22,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -19,
+      "object_name": "MI_CH_mrz_oph_cake"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -20,
+      "object_name": "MI_CH_mrz_oph_misc"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/BP_CH_cmn_oph_cake"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/Material/MI_CH_mrz_oph_cake"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_cake/Material/MI_CH_mrz_oph_misc"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_REMOVED_19198043449755DCC20ACEB47D99F9CB"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -22,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -22,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -22,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_10_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_11_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_12_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_1_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_2_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_3_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_4_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_5_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_6_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_7_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_8_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SK_CH_cmn_oph_cake_one_9_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_cake_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 6507,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_mrz_oph_cake_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 6645,
+      "class_name": "BP_CH_mrz_oph_cake_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_cake",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 6653,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "28 e4 08 85 dd c5 6d 49 b2 7b a8 72 57 e1 95 45",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 124,
+      "serial_offset": 6931,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_cake",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 7055,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_cake",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 4778,
+      "serial_offset": 7167,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 4733,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "0c 00 00 00 3c 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 48 12 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 37 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0d 00 00 00 18 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 37 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 41 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 43 00 00 00 02 00 00 00 07 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7d cf 3a 18 e7 a4 4e 47 a5 81 55 71 b6 ac",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 11945,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 9,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 11957,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_3",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "8a cd 44 5f 3f 63 de 45 bb 31 7d 67 62 d6 c0 0c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_3",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 12096,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_10_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12137,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_11_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12194,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_12_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12251,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_1_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12308,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -32,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_2_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12365,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -33,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_3_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12422,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_4_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12479,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_5_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12536,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_6_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12593,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_7_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12650,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_8_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12707,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 1,
+      "object_name": "SK_CH_cmn_oph_cake_one_9_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 12764,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CH_mrz_oph_cake_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 f0 ff ff ff ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "53e178f043811be01efe82cb3f29b0c9c76260ff72a9b6035e53178cfd1dcbce",
+  "selection_reason": "local-versus shared-content candidate"
+}

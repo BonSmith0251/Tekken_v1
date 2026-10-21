@@ -1,0 +1,948 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/mry/BP_mryCharacterSoundManager.uasset",
+  "id": "f3999282f0c8324e40d231a8",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 11463,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/mry/BP_mryCharacterSoundManager.uasset",
+  "metadata_file": "metadata/f3999282f0c8324e40d231a8.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 7858,
+    "package_flags": 2147483648,
+    "name_count": 141,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 7026,
+    "import_count": 103,
+    "import_offset": 4142,
+    "bulk_data_start_offset": 11459,
+    "guid": "fa7e9122ba8e43419a389d7e8e3fd8f2"
+  },
+  "names": [
+    "/Game/Sound/Character/mry/BP_mryCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/arb/AkBankVoiceARB",
+    "/Game/Sound/Voice/mry/mry_atk_l01",
+    "/Game/Sound/Voice/mry/mry_atk_l02",
+    "/Game/Sound/Voice/mry/mry_atk_l04",
+    "/Game/Sound/Voice/mry/mry_atk_m01",
+    "/Game/Sound/Voice/mry/mry_atk_m02",
+    "/Game/Sound/Voice/mry/mry_atk_s01",
+    "/Game/Sound/Voice/mry/mry_atk_s02",
+    "/Game/Sound/Voice/mry/mry_atk_s03",
+    "/Game/Sound/Voice/mry/mry_dmg_l01",
+    "/Game/Sound/Voice/mry/mry_dmg_m01",
+    "/Game/Sound/Voice/mry/mry_dmg_m02",
+    "/Game/Sound/Voice/mry/mry_dmg_s01",
+    "/Game/Sound/Voice/mry/mry_dmg_s02",
+    "/Game/Sound/Voice/mry/mry_dmg_s03",
+    "/Game/Sound/Voice/mry/mry_ko01",
+    "/Game/Sound/Voice/mry/mry_ko02",
+    "/Game/Sound/Voice/mry/mry_org01",
+    "/Game/Sound/Voice/mry/mry_org02",
+    "/Game/Sound/Voice/mry/mry_org03",
+    "/Game/Sound/Voice/mry/mry_org04",
+    "/Game/Sound/Voice/mry/mry_org05",
+    "/Game/Sound/Voice/mry/mry_org06",
+    "/Game/Sound/Voice/mry/mry_org07",
+    "/Game/Sound/Voice/mry/mry_org08",
+    "/Game/Sound/Voice/mry/mry_org09",
+    "/Game/Sound/Voice/mry/mry_org10",
+    "/Game/Sound/Voice/mry/mry_org11",
+    "/Game/Sound/Voice/mry/mry_org12",
+    "/Game/Sound/Voice/mry/mry_org13",
+    "/Game/Sound/Voice/mry/mry_org14",
+    "/Game/Sound/Voice/mry/mry_org15",
+    "/Game/Sound/Voice/mry/mry_org16",
+    "/Game/Sound/Voice/mry/my_s00",
+    "/Game/Sound/Voice/mry/my_s01",
+    "/Game/Sound/Voice/mry/my_s02",
+    "/Game/Sound/Voice/mry/my_s03",
+    "/Game/Sound/Voice/mry/my_s04",
+    "/Game/Sound/Voice/mry/my_s05",
+    "/Game/Sound/Voice/mry/my_s06",
+    "/Game/Sound/Voice/mry/my_w00",
+    "/Game/Sound/Voice/mry/my_w01",
+    "/Game/Sound/Voice/mry/my_w02",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceARB",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_mryCharacterSoundManager",
+    "BP_mryCharacterSoundManager_C",
+    "BP_TekkenCharacterSoundManager_C",
+    "CharacterSound",
+    "CharacterStream",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_mryCharacterSoundManager_C",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "mry_atk_l01",
+    "mry_atk_l02",
+    "mry_atk_l04",
+    "mry_atk_m01",
+    "mry_atk_m02",
+    "mry_atk_s01",
+    "mry_atk_s02",
+    "mry_atk_s03",
+    "mry_dmg_l01",
+    "mry_dmg_m01",
+    "mry_dmg_m02",
+    "mry_dmg_s01",
+    "mry_dmg_s02",
+    "mry_dmg_s03",
+    "mry_ko01",
+    "mry_ko02",
+    "mry_org01",
+    "mry_org02",
+    "mry_org03",
+    "mry_org04",
+    "mry_org05",
+    "mry_org06",
+    "mry_org07",
+    "mry_org08",
+    "mry_org09",
+    "mry_org10",
+    "mry_org11",
+    "mry_org12",
+    "mry_org13",
+    "mry_org14",
+    "mry_org15",
+    "mry_org16",
+    "my_s00",
+    "my_s01",
+    "my_s02",
+    "my_s03",
+    "my_s04",
+    "my_s05",
+    "my_s06",
+    "my_w00",
+    "my_w01",
+    "my_w02",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "SoundName",
+    "Sounds",
+    "Streams",
+    "StrProperty",
+    "StructProperty",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -55,
+      "object_name": "AkBankVoiceARB"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -56,
+      "object_name": "mry_atk_l01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -57,
+      "object_name": "mry_atk_l02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -58,
+      "object_name": "mry_atk_l04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -59,
+      "object_name": "mry_atk_m01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -60,
+      "object_name": "mry_atk_m02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -61,
+      "object_name": "mry_atk_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -62,
+      "object_name": "mry_atk_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -63,
+      "object_name": "mry_atk_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -64,
+      "object_name": "mry_dmg_l01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -65,
+      "object_name": "mry_dmg_m01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -66,
+      "object_name": "mry_dmg_m02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -67,
+      "object_name": "mry_dmg_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -68,
+      "object_name": "mry_dmg_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -69,
+      "object_name": "mry_dmg_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -70,
+      "object_name": "mry_ko01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -71,
+      "object_name": "mry_ko02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -72,
+      "object_name": "mry_org01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -73,
+      "object_name": "mry_org02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -74,
+      "object_name": "mry_org03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -75,
+      "object_name": "mry_org04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -76,
+      "object_name": "mry_org05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -77,
+      "object_name": "mry_org06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -78,
+      "object_name": "mry_org07"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -79,
+      "object_name": "mry_org08"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -80,
+      "object_name": "mry_org09"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -81,
+      "object_name": "mry_org10"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -82,
+      "object_name": "mry_org11"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -83,
+      "object_name": "mry_org12"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -84,
+      "object_name": "mry_org13"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -85,
+      "object_name": "mry_org14"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -86,
+      "object_name": "mry_org15"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -87,
+      "object_name": "mry_org16"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -88,
+      "object_name": "my_s00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -89,
+      "object_name": "my_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -90,
+      "object_name": "my_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -91,
+      "object_name": "my_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -92,
+      "object_name": "my_s04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -93,
+      "object_name": "my_s05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -94,
+      "object_name": "my_s06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -95,
+      "object_name": "my_w00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -96,
+      "object_name": "my_w01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -97,
+      "object_name": "my_w02"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -99,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -54,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -99,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -54,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -98,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -99,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -99,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -99,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -99,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -99,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/arb/AkBankVoiceARB"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_l01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_l02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_l04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_m01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_m02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_atk_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_l01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_m01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_m02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_dmg_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_ko01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_ko02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org07"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org08"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org09"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org10"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org11"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org12"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org13"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org14"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org15"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/mry_org16"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_s06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_w00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_w01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mry/my_w02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -45,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -99,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -99,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -99,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -50,
+      "super_index": -45,
+      "template_index": -46,
+      "outer_index": 0,
+      "object_name": "BP_mryCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 7858,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 0,
+      "object_name": "Default__BP_mryCharacterSoundManager_C",
+      "object_flags": 49,
+      "serial_size": 3051,
+      "serial_offset": 7967,
+      "class_name": "BP_mryCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 2165,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "20 00 00 00 86 00 00 00 00 00 00 00 89 00 00 00 00 00 00 00 40 08 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 4e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 68 05 00 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f9 ff ff ff 7a 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 4e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 69 05 00 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f8 ff ff ff 7a 00 00 00 00 00 00 00 84 00 00 00 00 00 00 00 4e 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 6a 05 00 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f7 ff ff ff 7a 00 00 00 00 00 00 00 84 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Streams": {
+          "name": "Streams",
+          "type": "ArrayProperty",
+          "size": 783,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2260,
+          "value_prefix_hex": "0a 00 00 00 87 00 00 00 00 00 00 00 89 00 00 00 00 00 00 00 da 02 00 00 00 00 00 00 3f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 88 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6d 79 5f 73 30 30 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 de ff ff ff 7a 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 88 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6d 79 5f 73 30 31 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 dd ff ff ff 7a 00 00 00 00 00 00 00 85 00 00 00 00 00 00 00 88 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6d 79 5f 73 30 32 00 83 00 00 00 00 00 00 00 7c 00 00 00 00 00 00 00 04 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -49,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 0,
+      "object_name": "BP_mryCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 11018,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -45,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "cc ac 87 e1 d6 da 2c 4d a0 db 06 20 a4 3a c5 d3",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -51,
+      "super_index": 0,
+      "template_index": -101,
+      "outer_index": 1,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 11267,
+      "class_name": "SceneComponent",
+      "owner": "BP_mryCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -52,
+      "super_index": 0,
+      "template_index": -102,
+      "outer_index": 6,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 11279,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -53,
+      "super_index": 0,
+      "template_index": -103,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 11418,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_mryCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "1f1418caf27b1c6279b8d4db4cb932cf3ba7b2c33e298216af1c541a771aa5c5",
+  "selection_reason": "local-versus shared-content candidate"
+}

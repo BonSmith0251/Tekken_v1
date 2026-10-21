@@ -1,0 +1,337 @@
+{
+  "path": "TekkenGame/Content/Sound/Common/BP_TekkenEnvironmentSound.uasset",
+  "id": "fce5cbae70026b7077619673",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 3336,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Common/BP_TekkenEnvironmentSound.uasset",
+  "metadata_file": "metadata/fce5cbae70026b7077619673.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2675,
+    "package_flags": 2147483648,
+    "name_count": 46,
+    "name_offset": 189,
+    "export_count": 7,
+    "export_offset": 1923,
+    "import_count": 19,
+    "import_offset": 1391,
+    "bulk_data_start_offset": 3332,
+    "guid": "ea5529f3c64ebe4fb2e8436b00bb79b7"
+  },
+  "names": [
+    "/Game/Sound/Common/BP_TekkenEnvironmentSound",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "AkAudioComponent0",
+    "AkComponent",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_TekkenEnvironmentSound",
+    "BP_TekkenEnvironmentSound_C",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_TekkenEnvironmentSound_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__TekkenAmbientSound",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootComponent",
+    "SceneComponent",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundType",
+    "StructProperty",
+    "TekkenAmbientSound",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkComponent",
+      "outer_index": -19,
+      "object_name": "AkAudioComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -14,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -14,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -12,
+      "object_name": "AkComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -13,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -14,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -15,
+      "object_name": "TekkenAmbientSound"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/AkAudio"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -14,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -14,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -14,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenAmbientSound",
+      "outer_index": -15,
+      "object_name": "Default__TekkenAmbientSound"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -11,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_TekkenEnvironmentSound_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 2675,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 7
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 0,
+      "object_name": "Default__BP_TekkenEnvironmentSound_C",
+      "object_flags": 57,
+      "serial_size": 95,
+      "serial_offset": 2784,
+      "class_name": "BP_TekkenEnvironmentSound_C",
+      "owner": null,
+      "tagged_properties": {
+        "SoundType": 1,
+        "AkComponent": 3,
+        "RootComponent": 3
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 2,
+      "object_name": "AkAudioComponent0",
+      "object_flags": 262185,
+      "serial_size": 12,
+      "serial_offset": 2879,
+      "class_name": "AkComponent",
+      "owner": "Default__BP_TekkenEnvironmentSound_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_TekkenEnvironmentSound",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 2891,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -11,
+        "SimpleConstructionScript": 7,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "cd db a9 4e 31 6e 4c 52 09 c9 28 2a f7 c9 58 98",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 1,
+      "object_name": "SceneComponent_1",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 3140,
+      "class_name": "SceneComponent",
+      "owner": "BP_TekkenEnvironmentSound_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 7,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 3152,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_3",
+      "tagged_properties": {
+        "ComponentTemplate": 5,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_3",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 3291,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_TekkenEnvironmentSound_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 6
+      }
+    }
+  ],
+  "sha256": "3c7e45087a5eef46774fa74f1bcf4ea6f7cb3fb60a0fa86b79b32fba1e4025f6",
+  "selection_reason": "local-versus shared-content candidate"
+}

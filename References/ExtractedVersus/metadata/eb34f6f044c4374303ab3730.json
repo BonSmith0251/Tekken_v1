@@ -1,0 +1,341 @@
+{
+  "path": "TekkenGame/Content/Character/Common/shader/MaterialFunction/MF_PATTERN_UV.uasset",
+  "id": "eb34f6f044c4374303ab3730",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 6545,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Common/shader/MaterialFunction/MF_PATTERN_UV.uasset",
+  "metadata_file": "metadata/eb34f6f044c4374303ab3730.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 2537,
+    "package_flags": 2147483648,
+    "name_count": 53,
+    "name_offset": 189,
+    "export_count": 4,
+    "export_offset": 2085,
+    "import_count": 13,
+    "import_offset": 1721,
+    "bulk_data_start_offset": 6541,
+    "guid": "8cfe7cdcd3f5164ba3d6f84a3f6d0286"
+  },
+  "names": [
+    "/Engine/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator",
+    "/Game/Character/Common/shader/MaterialFunction/MF_PATTERN_UV",
+    "/Game/Character/Common/shader/MaterialFunction/TEKKEN_Pattern_UVCrop",
+    "/Game/Character/Common/shader/Texture/T_CH_NullPattern",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "Class",
+    "CustomRotator",
+    "Default__MaterialExpressionMaterialFunctionCall",
+    "Default__MaterialExpressionTextureObject",
+    "Default__MaterialFunction",
+    "ExpressionInput",
+    "ExpressionInputId",
+    "ExpressionOutput",
+    "ExpressionOutputId",
+    "Function",
+    "FunctionExpressionInput",
+    "FunctionExpressionOutput",
+    "FunctionExpressions",
+    "FunctionInputs",
+    "FunctionOutputs",
+    "Guid",
+    "Input",
+    "IntProperty",
+    "Mask",
+    "MaskA",
+    "MaskB",
+    "MaskG",
+    "MaskR",
+    "MaterialExpressionAppendVector",
+    "MaterialExpressionFunctionInput",
+    "MaterialExpressionLinearInterpolate",
+    "MaterialExpressionMaterialFunctionCall",
+    "MaterialExpressionMultiply",
+    "MaterialExpressionStaticBool",
+    "MaterialExpressionTextureCoordinate",
+    "MaterialExpressionTextureObject",
+    "MaterialFunction",
+    "MF_PATTERN_UV",
+    "None",
+    "ObjectProperty",
+    "Output",
+    "OutputName",
+    "Outputs",
+    "Package",
+    "StateId",
+    "StrProperty",
+    "StructProperty",
+    "T_CH_NullPattern",
+    "TEKKEN_Pattern_UVCrop",
+    "Texture",
+    "Texture2D"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -12,
+      "object_name": "MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -12,
+      "object_name": "MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -12,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "outer_index": -12,
+      "object_name": "Default__MaterialExpressionMaterialFunctionCall"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureObject",
+      "outer_index": -12,
+      "object_name": "Default__MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -9,
+      "object_name": "CustomRotator"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -10,
+      "object_name": "TEKKEN_Pattern_UVCrop"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -12,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Engine/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/shader/MaterialFunction/TEKKEN_Pattern_UVCrop"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/shader/Texture/T_CH_NullPattern"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -11,
+      "object_name": "T_CH_NullPattern"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionMaterialFunctionCall_14",
+      "object_flags": 8,
+      "serial_size": 1359,
+      "serial_offset": 2537,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_PATTERN_UV",
+      "tagged_properties": {
+        "MaterialFunction": -6,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 568,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 14 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 03 02 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c0 7c de 45 5c 97 cc 4b a5 2a 4a 66 ef 4f 13 da 17 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 55 56 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 00 00 00 08 00 00 00 28 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 372,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 663,
+          "value_prefix_hex": "01 00 00 00 15 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 3f 01 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f9 f8 e8 35 3d ce c8 4c a2 14 f1 65 5e bd d0 34 2a 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 c5 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 0f 00 00 00 52 6f 74 61 74 65 64 20 56 61 6c 75 65 73 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 4,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 250,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1097,
+          "value_prefix_hex": "01 00 00 00 2c 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 c5 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 00 0f 00 00 00 52 6f 74 61 74 65 64 20 56 61 6c 75 65 73 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionMaterialFunctionCall_6",
+      "object_flags": 8,
+      "serial_size": 2381,
+      "serial_offset": 3896,
+      "class_name": "MaterialExpressionMaterialFunctionCall",
+      "owner": "MF_PATTERN_UV",
+      "tagged_properties": {
+        "MaterialFunction": -7,
+        "FunctionInputs": {
+          "name": "FunctionInputs",
+          "type": "ArrayProperty",
+          "size": 1078,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "06 00 00 00 14 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 01 04 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 24 d2 06 1b 20 08 47 b4 0c 20 b1 89 3e 14 5b 17 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 00 00 00 62 55 73 65 43 72 6f 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1f 00 00 00 01 00 00 00 28 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "FunctionOutputs": {
+          "name": "FunctionOutputs",
+          "type": "ArrayProperty",
+          "size": 689,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1173,
+          "value_prefix_hex": "02 00 00 00 15 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 7c 02 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b3 c0 ad 6b 93 32 dc 43 a0 81 28 4f 6f 58 cb d6 2a 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 c6 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 10 00 00 00 43 72 6f 70 70 65 64 20 50 61 74 74 65 72 6e 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Function": 4,
+        "Outputs": {
+          "name": "Outputs",
+          "type": "ArrayProperty",
+          "size": 445,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 1924,
+          "value_prefix_hex": "02 00 00 00 2c 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 88 01 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 00 10 00 00 00 43 72 6f 70 70 65 64 20 50 61 74 74 65 72 6e 00 19 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 2b 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 4,
+      "object_name": "MaterialExpressionTextureObject_0",
+      "object_flags": 8,
+      "serial_size": 70,
+      "serial_offset": 6277,
+      "class_name": "MaterialExpressionTextureObject",
+      "owner": "MF_PATTERN_UV",
+      "tagged_properties": {
+        "Texture": -13,
+        "Function": 4
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -3,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "MF_PATTERN_UV",
+      "object_flags": 3,
+      "serial_size": 194,
+      "serial_offset": 6347,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "f4 e9 1f d1 71 36 40 44 b0 79 37 38 24 33 84 1b",
+          "value_prefix_truncated": false
+        },
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 84,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 98,
+          "value_prefix_hex": "14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "27fbeb7d86e729dc88e38aca01cb5677d6f5374ec3f512c193ed380bdda3a3f5",
+  "selection_reason": "local-versus shared-content candidate"
+}

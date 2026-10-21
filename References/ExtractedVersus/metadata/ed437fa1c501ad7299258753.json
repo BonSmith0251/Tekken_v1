@@ -1,0 +1,1114 @@
+{
+  "path": "TekkenGame/Content/Stage/stg21/Mesh/CUBEANIMATOIN3/BP_CUBERT3.uasset",
+  "id": "ed437fa1c501ad7299258753",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 10496,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/stg21/Mesh/CUBEANIMATOIN3/BP_CUBERT3.uasset",
+  "metadata_file": "metadata/ed437fa1c501ad7299258753.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 7742,
+    "package_flags": 2147483648,
+    "name_count": 115,
+    "name_offset": 189,
+    "export_count": 25,
+    "export_offset": 4946,
+    "import_count": 55,
+    "import_offset": 3406,
+    "bulk_data_start_offset": 10492,
+    "guid": "32a201ab13511a4a87e50eab422883c4"
+  },
+  "names": [
+    "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/AB_CUBEBRICK3",
+    "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/BP_CUBERT3",
+    "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/SK_CUBEBRIUCK3",
+    "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/SM_CUBEBRICK3",
+    "/Game/Stage/stg21/Shader/Material_Instance/T7_MI_ENV_s21BlockA_Barrier",
+    "/Game/Stage/stg21/Shader/Material_Instance/T7_MI_ENV_s21BlockC_EDIT2",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AB_CUBEBRICK3_C",
+    "Actor",
+    "AllNodes",
+    "AnimBlueprintGeneratedClass",
+    "ANIMBP",
+    "AnimClass",
+    "AnimInstance",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bCastDynamicShadow",
+    "bCastStaticShadow",
+    "BeginFallingMotion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Block Playrate",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_CUBERT3",
+    "BP_CUBERT3_C",
+    "ByteProperty",
+    "CallFunc_GetAnimInstance_ReturnValue",
+    "ChildNodes",
+    "Class",
+    "ComponentTemplate",
+    "CUBERTMESH3",
+    "CUBERTMESH3_GEN_VARIABLE",
+    "Default__AB_CUBEBRICK3_C",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_CUBERT3_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "Default__StaticMeshComponent",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_REMOVED_6432DE13476F5830ADC381B6C4D22D17",
+    "DefaultSceneRootNode",
+    "Delay",
+    "EdGraph",
+    "EIndirectLightingCacheQuality",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_CUBERT3",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GetAnimInstance",
+    "Guid",
+    "ILCQ_Volume",
+    "IndirectLightingCacheQuality",
+    "IntProperty",
+    "K2Node_DynamicCast_AsAB_CUBEBRICK3",
+    "K2Node_DynamicCast_bSuccess",
+    "KismetSystemLibrary",
+    "LatentActionInfo",
+    "MassInKgOverride",
+    "MaterialInstanceConstant",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "Package",
+    "ParentClass",
+    "PauseDelay",
+    "PauseDuration",
+    "PlayRate",
+    "PointerToUberGraphFrame",
+    "ReceiveBeginPlay",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SK_CUBEBRIUCK3",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "SM_CUBEBRICK3",
+    "SM_CUBEBRICK3_GEN_VARIABLE",
+    "StaticMesh",
+    "StaticMeshComponent",
+    "StructProperty",
+    "T7_MI_ENV_s21BlockA_Barrier",
+    "T7_MI_ENV_s21BlockC_EDIT2",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/AB_CUBEBRICK3",
+      "class_name": "AB_CUBEBRICK3_C",
+      "outer_index": -39,
+      "object_name": "Default__AB_CUBEBRICK3_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -45,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprintGeneratedClass",
+      "outer_index": -39,
+      "object_name": "AB_CUBEBRICK3_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -45,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -45,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -44,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -44,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -45,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -3,
+      "object_name": "Block Playrate"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -3,
+      "object_name": "PauseDuration"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -44,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -44,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -14,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -14,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "Delay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "GetAnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -44,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -45,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -42,
+      "object_name": "T7_MI_ENV_s21BlockA_Barrier"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -43,
+      "object_name": "T7_MI_ENV_s21BlockC_EDIT2"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -44,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/AB_CUBEBRICK3"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/SK_CUBEBRIUCK3"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg21/Mesh/CUBEANIMATOIN3/SM_CUBEBRICK3"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg21/Shader/Material_Instance/T7_MI_ENV_s21BlockA_Barrier"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/stg21/Shader/Material_Instance/T7_MI_ENV_s21BlockC_EDIT2"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -45,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -45,
+      "object_name": "LatentActionInfo"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -45,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -45,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -45,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -40,
+      "object_name": "SK_CUBEBRIUCK3"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -45,
+      "object_name": "Default__SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer_index": -41,
+      "object_name": "SM_CUBEBRICK3"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -45,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -44,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 14,
+      "object_name": "ANIMBP",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7742,
+      "class_name": "ObjectProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 14,
+      "object_name": "PlayRate",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7782,
+      "class_name": "FloatProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 14,
+      "object_name": "PauseDelay",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7818,
+      "class_name": "FloatProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 14,
+      "object_name": "CUBERTMESH3",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7854,
+      "class_name": "ObjectProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 14,
+      "object_name": "SM_CUBEBRICK3",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7894,
+      "class_name": "ObjectProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -6,
+      "outer_index": 10,
+      "object_name": "K2Node_DynamicCast_bSuccess",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 7934,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_CUBERT3",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 10,
+      "object_name": "K2Node_DynamicCast_AsAB_CUBEBRICK3",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7972,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_CUBERT3",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 10,
+      "object_name": "CallFunc_GetAnimInstance_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8012,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_CUBERT3",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 10,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8052,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_CUBERT3",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 14,
+      "object_name": "ExecuteUbergraph_BP_CUBERT3",
+      "object_flags": 1,
+      "serial_size": 303,
+      "serial_offset": 8088,
+      "class_name": "Function",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 9,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 395,
+        "script_storage_size": 259,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8120,
+        "bytecode_sha256": "481a9288d851122f0e39eee7361be02507bda2bd9f6850082d2802ae50eced2f",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ed437fa1c501ad7299258753/000009.bytecode.bin"
+      },
+      "raw_export_file": "functions/ed437fa1c501ad7299258753/000009.export.bin"
+    },
+    {
+      "index": 10,
+      "class_index": -9,
+      "super_index": -30,
+      "template_index": -29,
+      "outer_index": 14,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 8391,
+      "class_name": "Function",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 10,
+        "super_struct": -30,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8423,
+        "bytecode_sha256": "c8a7fe19754590571c45505682d6139435afdd66b0917393be1f929b7d3e67a9",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ed437fa1c501ad7299258753/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/ed437fa1c501ad7299258753/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -9,
+      "super_index": -31,
+      "template_index": -29,
+      "outer_index": 14,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 8453,
+      "class_name": "Function",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": -31,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8485,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ed437fa1c501ad7299258753/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/ed437fa1c501ad7299258753/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 14,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8500,
+      "class_name": "StructProperty",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -17,
+      "super_index": -14,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "BP_CUBERT3_C",
+      "object_flags": 9,
+      "serial_size": 203,
+      "serial_offset": 8540,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 23,
+        "UberGraphFramePointerProperty": 13,
+        "UberGraphFunction": 10
+      }
+    },
+    {
+      "index": 14,
+      "class_index": 14,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "Default__BP_CUBERT3_C",
+      "object_flags": 49,
+      "serial_size": 65,
+      "serial_offset": 8743,
+      "class_name": "BP_CUBERT3_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "52 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_CUBERT3",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 8808,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -14,
+        "SimpleConstructionScript": 23,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 14,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "1f a1 60 f2 e1 f2 c3 42 81 00 f3 88 30 4b ef f5",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 164,
+      "serial_offset": 9057,
+      "class_name": "EdGraph",
+      "owner": "BP_CUBERT3",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 64,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 16,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 9221,
+      "class_name": "EdGraph",
+      "owner": "BP_CUBERT3",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -46,
+      "outer_index": 14,
+      "object_name": "DefaultSceneRoot_REMOVED_6432DE13476F5830ADC381B6C4D22D17",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 9329,
+      "class_name": "SceneComponent",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 23,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9341,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 19,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "b2 13 b3 3b 96 e5 40 40 88 e1 1c 33 7f 1f 34 66",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 23,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9480,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 25,
+        "VariableName": "SM_CUBEBRICK3",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "60 53 16 a5 86 bc 32 4e 8d a5 75 9f f9 7e 7a 05",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 23,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 180,
+      "serial_offset": 9619,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 24,
+        "VariableName": "CUBERTMESH3",
+        "ChildNodes": {
+          "name": "ChildNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 95,
+          "value_prefix_hex": "01 00 00 00 15 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 152,
+          "value_prefix_hex": "31 10 6f fd 42 83 3d 46 91 3d ef 1c e6 84 e5 a2",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 14,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 127,
+      "serial_offset": 9799,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 16 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "02 00 00 00 16 00 00 00 15 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 20
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 14,
+      "object_name": "CUBERTMESH3_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 297,
+      "serial_offset": 9926,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {
+        "AnimBlueprintGeneratedClass": -3,
+        "AnimClass": -3,
+        "SkeletalMesh": -51,
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 120,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 dc ff ff ff",
+          "value_prefix_truncated": false
+        },
+        "bCastDynamicShadow": false,
+        "IndirectLightingCacheQuality": "ILCQ_Volume",
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 248,
+          "value_prefix_hex": "4e 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 9f 27 fa 45 52 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -54,
+      "outer_index": 14,
+      "object_name": "SM_CUBEBRICK3_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 269,
+      "serial_offset": 10223,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CUBERT3_C",
+      "tagged_properties": {
+        "StaticMesh": -53,
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 db ff ff ff dc ff ff ff",
+          "value_prefix_truncated": false
+        },
+        "bCastDynamicShadow": false,
+        "bCastStaticShadow": false,
+        "IndirectLightingCacheQuality": "ILCQ_Volume",
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 216,
+          "value_prefix_hex": "4e 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f9 71 8a 46 52 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "90a821a8def98ba1cc8bf866be2986407f44eccc28a7037f2dbe72758b44e89e",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,825 @@
+{
+  "path": "TekkenGame/Content/System/BP_Battle_Weapon.uasset",
+  "id": "ead47f1af9efcefe74526d33",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 7156,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BP_Battle_Weapon.uasset",
+  "metadata_file": "metadata/ead47f1af9efcefe74526d33.json",
+  "function_count": 5,
+  "summary": {
+    "total_header_size": 5371,
+    "package_flags": 2147483648,
+    "name_count": 79,
+    "name_offset": 189,
+    "export_count": 20,
+    "export_offset": 3183,
+    "import_count": 36,
+    "import_offset": 2175,
+    "bulk_data_start_offset": 7152,
+    "guid": "a4b04cf4653e964f890e7fe039b4895b"
+  },
+  "names": [
+    "/Game/System/BP_Battle_Weapon",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bCanEverTick",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_Battle_Weapon",
+    "BP_Battle_Weapon_C",
+    "Class",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_Battle_Weapon_C",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRootNode",
+    "DeltaSeconds",
+    "EdGraph",
+    "Engine",
+    "EntryPoint",
+    "EventGraph",
+    "ExecuteUbergraph_BP_Battle_Weapon",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "K2Node_Event_DeltaSeconds",
+    "K2Node_Event_OtherActor",
+    "KismetSystemLibrary",
+    "LinearColor",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OtherActor",
+    "Package",
+    "ParentClass",
+    "PointerToUberGraphFrame",
+    "PrimaryActorTick",
+    "PrintString",
+    "ReceiveActorBeginOverlap",
+    "ReceiveBeginPlay",
+    "ReceiveTick",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -30,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -30,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -30,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -29,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -30,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -30,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -29,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -29,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "ReceiveActorBeginOverlap"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "ReceiveTick"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -14,
+      "object_name": "PrintString"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -29,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -30,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -29,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -30,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -29,
+      "object_name": "LinearColor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -30,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -30,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -30,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -29,
+      "object_name": "Default__StructProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 13,
+      "object_name": "DefaultSceneRoot",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5371,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 5,
+      "object_name": "K2Node_Event_DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5411,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_Battle_Weapon",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 5,
+      "object_name": "K2Node_Event_OtherActor",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5447,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_Battle_Weapon",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 5,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5487,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Battle_Weapon",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 13,
+      "object_name": "ExecuteUbergraph_BP_Battle_Weapon",
+      "object_flags": 1,
+      "serial_size": 134,
+      "serial_offset": 5523,
+      "class_name": "Function",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 110,
+        "script_storage_size": 90,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5555,
+        "bytecode_sha256": "89554ab61c7c659f19bfed8e48c384b57a2a09692589e48ad4cb9ad2019bbdf2",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ead47f1af9efcefe74526d33/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/ead47f1af9efcefe74526d33/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 7,
+      "object_name": "DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 5657,
+      "class_name": "FloatProperty",
+      "owner": "ReceiveTick",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": -23,
+      "template_index": -20,
+      "outer_index": 13,
+      "object_name": "ReceiveTick",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 5693,
+      "class_name": "Function",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": -23,
+        "first_child": 6,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5725,
+        "bytecode_sha256": "97ed5401b90cffb41f679a18173f603e8236260af33f2d4463ab93779dd94fd0",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ead47f1af9efcefe74526d33/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/ead47f1af9efcefe74526d33/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 9,
+      "object_name": "OtherActor",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5765,
+      "class_name": "ObjectProperty",
+      "owner": "ReceiveActorBeginOverlap",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -5,
+      "super_index": -21,
+      "template_index": -20,
+      "outer_index": 13,
+      "object_name": "ReceiveActorBeginOverlap",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 5805,
+      "class_name": "Function",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 7,
+        "super_struct": -21,
+        "first_child": 8,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5837,
+        "bytecode_sha256": "64633385d3be969915192ebbac82b4b523a89c27caf3803b3eaea310f684635c",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ead47f1af9efcefe74526d33/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/ead47f1af9efcefe74526d33/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -5,
+      "super_index": -22,
+      "template_index": -20,
+      "outer_index": 13,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 5877,
+      "class_name": "Function",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 9,
+        "super_struct": -22,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5909,
+        "bytecode_sha256": "feee849aff1b9ab0dd581ba93c771325428da534c9a43434c24fcbe8c400b2cb",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ead47f1af9efcefe74526d33/000009.bytecode.bin"
+      },
+      "raw_export_file": "functions/ead47f1af9efcefe74526d33/000009.export.bin"
+    },
+    {
+      "index": 10,
+      "class_index": -5,
+      "super_index": -24,
+      "template_index": -20,
+      "outer_index": 13,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 5939,
+      "class_name": "Function",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 10,
+        "super_struct": -24,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 5971,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/ead47f1af9efcefe74526d33/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/ead47f1af9efcefe74526d33/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 13,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 5986,
+      "class_name": "StructProperty",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -12,
+      "super_index": -10,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Battle_Weapon_C",
+      "object_flags": 9,
+      "serial_size": 227,
+      "serial_offset": 6026,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 20,
+        "UberGraphFramePointerProperty": 12,
+        "UberGraphFunction": 5
+      }
+    },
+    {
+      "index": 13,
+      "class_index": 13,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_Battle_Weapon_C",
+      "object_flags": 49,
+      "serial_size": 148,
+      "serial_offset": 6253,
+      "class_name": "BP_Battle_Weapon_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "36 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 106,
+          "value_prefix_hex": "08 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 36 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_Battle_Weapon",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 6401,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -10,
+        "SimpleConstructionScript": 20,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 13,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "2b aa a6 0f fe e6 60 4a ba 61 cd 36 82 9c 06 16",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 15,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 15,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 120,
+      "serial_offset": 6650,
+      "class_name": "EdGraph",
+      "owner": "BP_Battle_Weapon",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 15,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 108,
+      "serial_offset": 6770,
+      "class_name": "EdGraph",
+      "owner": "BP_Battle_Weapon",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -31,
+      "outer_index": 13,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6878,
+      "class_name": "SceneComponent",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -34,
+      "outer_index": 20,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6890,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 18,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "82 bc 1d 8a ec 69 88 43 a5 a8 76 27 c2 13 bc 9b",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -35,
+      "outer_index": 13,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 7029,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Battle_Weapon_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 13 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 13 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 19
+      }
+    }
+  ],
+  "sha256": "3a4a5dd5fdb61f4cec87e04cdb3528c00e89a160bd4af1bd703bfdc621620f21",
+  "selection_reason": "local-versus shared-content candidate"
+}

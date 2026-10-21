@@ -1,0 +1,1042 @@
+{
+  "path": "TekkenGame/Content/Stage/Common/BP_FlickerPointLight_NOINVESE.uasset",
+  "id": "e28dee0a651212bb304aabbb",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 10171,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Stage/Common/BP_FlickerPointLight_NOINVESE.uasset",
+  "metadata_file": "metadata/e28dee0a651212bb304aabbb.json",
+  "function_count": 7,
+  "summary": {
+    "total_header_size": 7162,
+    "package_flags": 2147483648,
+    "name_count": 107,
+    "name_offset": 189,
+    "export_count": 25,
+    "export_offset": 4398,
+    "import_count": 50,
+    "import_offset": 2998,
+    "bulk_data_start_offset": 10167,
+    "guid": "6554a78fccad7241b4ee38714cc23eb0"
+  },
+  "names": [
+    "/Game/Stage/Common/BP_FlickerPointLight_NOINVESE",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "ArrayProperty",
+    "bIsExternalCurve",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "bLoop",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_FlickerPointLight_NOINVESE",
+    "BP_FlickerPointLight_NOINVESE_C",
+    "Brightness",
+    "bValidatedAsWired",
+    "ByteProperty",
+    "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "CallFunc_RandomFloatInRange_ReturnValue",
+    "Class",
+    "ComponentTemplate",
+    "CurveFloat",
+    "CurveFloat_0_1__71EEED09",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_FlickerPointLight_NOINVESE_C",
+    "Default__ByteProperty",
+    "Default__CurveFloat",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__ObjectProperty",
+    "Default__PointLight",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TimelineTemplate",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "EntryPoint",
+    "Enum",
+    "ETimelineDirection",
+    "ExecuteUbergraph_BP_FlickerPointLight_NOINVESE",
+    "FlickerMultiplier",
+    "FloatCurve",
+    "FloatProperty",
+    "FloatTracks",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "InitialIntensity",
+    "Intensity",
+    "IntProperty",
+    "Keys",
+    "KismetMathLibrary",
+    "LightComponent",
+    "LightComponent0",
+    "LightComponentBase",
+    "Multiply_FloatFloat",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "Play",
+    "PointerToUberGraphFrame",
+    "PointLight",
+    "PointLightComponent",
+    "RandomFloatInRange",
+    "ReceiveBeginPlay",
+    "RestartTimeline",
+    "RichCurve",
+    "RichCurveKey",
+    "RootComponent",
+    "SceneComponent",
+    "ScriptStruct",
+    "SCS_Node",
+    "SetIntensity",
+    "SetNewTime",
+    "SimpleConstructionScript",
+    "Stop",
+    "StopTimeline",
+    "StructProperty",
+    "Timeline",
+    "Timeline_0__Direction_7E2D31034AA28C0634FACE9AF8B5D591",
+    "Timeline_0__FinishedFunc",
+    "Timeline_0__UpdateFunc",
+    "Timeline_0_Brightness_7E2D31034AA28C0634FACE9AF8B5D591",
+    "Timeline_0_Template",
+    "TimelineComponent",
+    "TimelineGuid",
+    "TimelineLength",
+    "Timelines",
+    "TimelineTemplate",
+    "TrackName",
+    "TTFloatTrack",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -42,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -42,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -41,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -41,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "CurveFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "LightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "LightComponentBase"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "PointLight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "PointLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "TimelineComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -42,
+      "object_name": "TimelineTemplate"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -42,
+      "object_name": "Default__CurveFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -42,
+      "object_name": "ETimelineDirection"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -41,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -17,
+      "object_name": "Intensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -41,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -11,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -11,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "Multiply_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -15,
+      "object_name": "RandomFloatInRange"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "SetIntensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "Play"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "SetNewTime"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "Stop"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -41,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -41,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -18,
+      "object_name": "PointLightComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLight",
+      "outer_index": -42,
+      "object_name": "Default__PointLight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PointLightComponent",
+      "outer_index": -43,
+      "object_name": "LightComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -42,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -42,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -42,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -42,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -41,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "TimelineTemplate",
+      "outer_index": -42,
+      "object_name": "Default__TimelineTemplate"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 17,
+      "object_name": "InitialIntensity",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7162,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 17,
+      "object_name": "FlickerMultiplier",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7198,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -39,
+      "outer_index": 17,
+      "object_name": "Timeline_0",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7234,
+      "class_name": "ObjectProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 17,
+      "object_name": "Timeline_0__Direction_7E2D31034AA28C0634FACE9AF8B5D591",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7274,
+      "class_name": "ByteProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 17,
+      "object_name": "Timeline_0_Brightness_7E2D31034AA28C0634FACE9AF8B5D591",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7314,
+      "class_name": "FloatProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 9,
+      "object_name": "CallFunc_RandomFloatInRange_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7350,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_FlickerPointLight_NOINVESE",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 9,
+      "object_name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7386,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_FlickerPointLight_NOINVESE",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 9,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 7422,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_FlickerPointLight_NOINVESE",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "ExecuteUbergraph_BP_FlickerPointLight_NOINVESE",
+      "object_flags": 1,
+      "serial_size": 259,
+      "serial_offset": 7458,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 5,
+        "super_struct": 0,
+        "first_child": 8,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 323,
+        "script_storage_size": 215,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7490,
+        "bytecode_sha256": "bda7f5125dd9d1071a21415a7f86ecfce6028231c4a4615ea8d17e10cc75d407",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000008.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000008.export.bin"
+    },
+    {
+      "index": 9,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "RestartTimeline",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7717,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 9,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7749,
+        "bytecode_sha256": "7dda22b7678b67acc974046d1043b856d3980d20d72197390a9a6e6520062ff6",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000009.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000009.export.bin"
+    },
+    {
+      "index": 10,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "StopTimeline",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7779,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 10,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7811,
+        "bytecode_sha256": "562c395cd2aa967dcf5761cf975eec38b989f0bb99b89e1e715a09628708d478",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -6,
+      "super_index": -30,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7841,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": -30,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7873,
+        "bytecode_sha256": "691317ae20e333d38f5dfe840c677a12dd7343cfbc254ad0e04b26b2bdf33059",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "Timeline_0__UpdateFunc",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7903,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 12,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7935,
+        "bytecode_sha256": "ef692d7ed7af8535057062d39d901451c50795e11b9ef544afe68382c0a51247",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "Timeline_0__FinishedFunc",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7965,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 13,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x08000000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7997,
+        "bytecode_sha256": "19cdf4de60476604f01b27af738e96d72ee33159434ccb2099c3d48d0daedfd5",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000013.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000013.export.bin"
+    },
+    {
+      "index": 14,
+      "class_index": -6,
+      "super_index": -31,
+      "template_index": -29,
+      "outer_index": 17,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 8027,
+      "class_name": "Function",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 14,
+        "super_struct": -31,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8059,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e28dee0a651212bb304aabbb/000014.bytecode.bin"
+      },
+      "raw_export_file": "functions/e28dee0a651212bb304aabbb/000014.export.bin"
+    },
+    {
+      "index": 15,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 17,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8074,
+      "class_name": "StructProperty",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -13,
+      "super_index": -18,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_FlickerPointLight_NOINVESE_C",
+      "object_flags": 9,
+      "serial_size": 292,
+      "serial_offset": 8114,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "Timelines": {
+          "name": "Timelines",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "SimpleConstructionScript": 24,
+        "UberGraphFramePointerProperty": 16,
+        "UberGraphFunction": 9
+      }
+    },
+    {
+      "index": 17,
+      "class_index": 17,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 0,
+      "object_name": "Default__BP_FlickerPointLight_NOINVESE_C",
+      "object_flags": 49,
+      "serial_size": 210,
+      "serial_offset": 8406,
+      "class_name": "BP_FlickerPointLight_NOINVESE_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "40 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "FlickerMultiplier": 0.75,
+        "InitialIntensity": 20.0,
+        "PointLightComponent": 21,
+        "LightComponent": 21,
+        "RootComponent": 21
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_FlickerPointLight_NOINVESE",
+      "object_flags": 11,
+      "serial_size": 290,
+      "serial_offset": 8616,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -18,
+        "SimpleConstructionScript": 24,
+        "Timelines": {
+          "name": "Timelines",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 91,
+          "value_prefix_hex": "01 00 00 00 19 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 17,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 258,
+          "value_prefix_hex": "c6 41 20 bf 51 ca 37 49 89 39 ef 2b 57 fe f2 51",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 17,
+      "object_name": "CurveFloat_0_1__71EEED09",
+      "object_flags": 9,
+      "serial_size": 641,
+      "serial_offset": 8906,
+      "class_name": "CurveFloat",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {
+        "FloatCurve": {
+          "name": "FloatCurve",
+          "type": "StructProperty",
+          "size": 580,
+          "array_index": 0,
+          "struct_name": "RichCurve",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "39 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 1b 02 00 00 00 00 00 00 57 00 00 00 00 00 00 00 00 12 00 00 00 39 00 00 00 00 00 00 00 57 00 00 00 00 00 00 00 e6 01 00 00 00 00 00 00 4d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b4 0e 3b 88 88 7f 3f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 01 00 43 b0 b3 3e 65 81 cc 3e 08 3a fb bc 00 00 00 00 08 3a fb bc 00 00 00 00 02 00 00 0c cc e7 3e 02 91 79 3f 59 cc 1e be 00 00 00 00 59 cc 1e be 00 00 00 00 00 00 00 9a 4b 40 3f de ba ac 3e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 4d bb 84 3f 3a 3d 79 3f e8 1f 8d 3d 00 00 00 00 e8 1f 8d 3d 00 00 00 00 02 00 00 9b ff 9b 3f 13 3a bd 3e 1f 08 ba bf 00 00 00 00 1f 08 ba bf 00 00 00 00 02 00 00 36 30 bb 3f 18",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 18,
+      "object_name": "LightComponent0",
+      "object_flags": 262185,
+      "serial_size": 88,
+      "serial_offset": 9547,
+      "class_name": "PointLightComponent",
+      "owner": "Default__BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 21,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -45,
+      "outer_index": 17,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 9635,
+      "class_name": "SceneComponent",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -21,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 24,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 9647,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_6",
+      "tagged_properties": {
+        "ComponentTemplate": 22,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 17,
+      "object_name": "SimpleConstructionScript_6",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 9786,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 23
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 17,
+      "object_name": "Timeline_0_Template",
+      "object_flags": 8,
+      "serial_size": 340,
+      "serial_offset": 9827,
+      "class_name": "TimelineTemplate",
+      "owner": "BP_FlickerPointLight_NOINVESE_C",
+      "tagged_properties": {
+        "TimelineLength": 3.5,
+        "bLoop": true,
+        "bValidatedAsWired": true,
+        "FloatTracks": {
+          "name": "FloatTracks",
+          "type": "ArrayProperty",
+          "size": 149,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 114,
+          "value_prefix_hex": "01 00 00 00 32 00 00 00 00 00 00 00 57 00 00 00 00 00 00 00 60 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 14 00 00 00 63 00 00 00 00 00 00 00 3f 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "TimelineGuid": {
+          "name": "TimelineGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 312,
+          "value_prefix_hex": "03 31 2d 7e 06 8c a2 4a 9a ce fa 34 91 d5 b5 f8",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "0542cc303c826661e17be65f75e37dd5fba6acc33a54fa1d6ca52a520db916c4",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,470 @@
+{
+  "path": "TekkenGame/Content/Character/DramaData/BPI_DramaItem.uasset",
+  "id": "e53954cb5467fc4ffbb4694b",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 3885,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/DramaData/BPI_DramaItem.uasset",
+  "metadata_file": "metadata/e53954cb5467fc4ffbb4694b.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 3033,
+    "package_flags": 2147483648,
+    "name_count": 50,
+    "name_offset": 189,
+    "export_count": 11,
+    "export_offset": 1857,
+    "import_count": 19,
+    "import_offset": 1325,
+    "bulk_data_start_offset": 3881,
+    "guid": "4a6ba1c61361a14995f4f853aac48cd9"
+  },
+  "names": [
+    "/Game/Character/DramaData/BPI_DramaItem",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPI_DramaItem",
+    "BPI_DramaItem_C",
+    "BPTYPE_Interface",
+    "ByteProperty",
+    "Class",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPI_DramaItem_C",
+    "Default__ByteProperty",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__Interface",
+    "Default__StrProperty",
+    "DramaName",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "Enum",
+    "EventID",
+    "Function",
+    "GeneratedClass",
+    "Guid",
+    "Interface",
+    "IntProperty",
+    "MotheadEvent",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OnMotEvent",
+    "Package",
+    "ParentClass",
+    "Schema",
+    "Start",
+    "Stop",
+    "StrProperty",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -17,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -17,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -16,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -16,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -17,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -17,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -18,
+      "object_name": "MotheadEvent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Interface",
+      "outer_index": -16,
+      "object_name": "Default__Interface"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -16,
+      "object_name": "Default__StrProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 2,
+      "object_name": "DramaName",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 3033,
+      "class_name": "StrProperty",
+      "owner": "Start",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 6,
+      "object_name": "Start",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3069,
+      "class_name": "Function",
+      "owner": "BPI_DramaItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 0,
+        "super_struct": 0,
+        "first_child": 1,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3101,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e53954cb5467fc4ffbb4694b/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/e53954cb5467fc4ffbb4694b/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 6,
+      "object_name": "Stop",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3116,
+      "class_name": "Function",
+      "owner": "BPI_DramaItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": 0,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3148,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e53954cb5467fc4ffbb4694b/000002.bytecode.bin"
+      },
+      "raw_export_file": "functions/e53954cb5467fc4ffbb4694b/000002.export.bin"
+    },
+    {
+      "index": 3,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 5,
+      "object_name": "EventID",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 3163,
+      "class_name": "ByteProperty",
+      "owner": "OnMotEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 6,
+      "object_name": "OnMotEvent",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 3203,
+      "class_name": "Function",
+      "owner": "BPI_DramaItem_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": 0,
+        "first_child": 4,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 3235,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/e53954cb5467fc4ffbb4694b/000004.bytecode.bin"
+      },
+      "raw_export_file": "functions/e53954cb5467fc4ffbb4694b/000004.export.bin"
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": -6,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPI_DramaItem_C",
+      "object_flags": 9,
+      "serial_size": 116,
+      "serial_offset": 3250,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": 6,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 0,
+      "object_name": "Default__BPI_DramaItem_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 3366,
+      "class_name": "BPI_DramaItem_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPI_DramaItem",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 3374,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -6,
+        "BlueprintType": "BPTYPE_Interface",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 6,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "4d a5 b6 e8 26 78 80 45 87 0b 3a f5 53 00 7d 75",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 8,
+      "object_name": "OnMotEvent",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 3635,
+      "class_name": "EdGraph",
+      "owner": "BPI_DramaItem",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 8,
+      "object_name": "Start",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 3717,
+      "class_name": "EdGraph",
+      "owner": "BPI_DramaItem",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 8,
+      "object_name": "Stop",
+      "object_flags": 8,
+      "serial_size": 82,
+      "serial_offset": 3799,
+      "class_name": "EdGraph",
+      "owner": "BPI_DramaItem",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "01 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "da24360c21f08eb082bbc717d7c4df9551baf07b231d765e1d2b8ecb40d9ecfc",
+  "selection_reason": "local-versus shared-content candidate"
+}

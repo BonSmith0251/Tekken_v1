@@ -1,0 +1,161 @@
+{
+  "path": "TekkenGame/Content/Effect/TK75/Stage/Blueprints/BPS_EffectMap.uasset",
+  "id": "f5c30ce614c27a33e71d32af",
+  "classes": [
+    "UserDefinedStruct"
+  ],
+  "size": 1445,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Effect/TK75/Stage/Blueprints/BPS_EffectMap.uasset",
+  "metadata_file": "metadata/f5c30ce614c27a33e71d32af.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1264,
+    "package_flags": 2147483648,
+    "name_count": 18,
+    "name_offset": 189,
+    "export_count": 3,
+    "export_offset": 940,
+    "import_count": 9,
+    "import_offset": 688,
+    "bulk_data_start_offset": 1441,
+    "guid": "5b5279be50ea5941ba84dda2503d10f7"
+  },
+  "names": [
+    "/Game/Effect/TK75/Stage/Blueprints/BPS_EffectMap",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "BPS_EffectMap",
+    "Class",
+    "Default__IntProperty",
+    "Default__ObjectProperty",
+    "Default__UserDefinedStruct",
+    "Effect_5_DC017129418D0E4D74E444840C95E630",
+    "EffectID_2_0DC9B27144135D9AD360C08CD51491DF",
+    "Guid",
+    "IntProperty",
+    "None",
+    "ObjectProperty",
+    "Package",
+    "ParticleSystem",
+    "StructProperty",
+    "UserDefinedStruct"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -8,
+      "object_name": "ParticleSystem"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -8,
+      "object_name": "UserDefinedStruct"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -7,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -7,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "UserDefinedStruct",
+      "outer_index": -8,
+      "object_name": "Default__UserDefinedStruct"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -9,
+      "outer_index": 0,
+      "object_name": "BPS_EffectMap",
+      "object_flags": 3,
+      "serial_size": 101,
+      "serial_offset": 1264,
+      "class_name": "UserDefinedStruct",
+      "owner": null,
+      "tagged_properties": {
+        "Guid": {
+          "name": "Guid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "d5 2b 89 cf c0 30 2c 4a b1 2d ae 47 35 6c e1 85",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -6,
+      "outer_index": 1,
+      "object_name": "Effect_5_DC017129418D0E4D74E444840C95E630",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 1365,
+      "class_name": "ObjectProperty",
+      "owner": "BPS_EffectMap",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 1,
+      "object_name": "EffectID_2_0DC9B27144135D9AD360C08CD51491DF",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 1405,
+      "class_name": "IntProperty",
+      "owner": "BPS_EffectMap",
+      "tagged_properties": {}
+    }
+  ],
+  "sha256": "d676b0f373f6d9f85c7a42a32d7192c8c47634e880c1767a3554d505a20ba37f",
+  "selection_reason": "dependency of TekkenGame/Content/Effect/TK75/Stage/Blueprints/BP_StageEffectVolume.uasset"
+}
