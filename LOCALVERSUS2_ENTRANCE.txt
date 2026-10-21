@@ -1,3 +1,17 @@
+FRONT VIEWS AND SMOOTH ENTRANCE SAMPLING
+Body poses and camera tracks now share fractional 60 Hz sample time. Camera
+position/rotation/FOV interpolate between samples, with hard cuts preserved at
+Kazuya frames 47/88 and Jin frame 123. Kazuya's wide-to-close subject bounds
+blend over frames 110-140 instead of snapping at frame 130. The floor correction
+clamps continuously to 0.35 m instead of jumping to the subject's height.
+Entrance shots use the rig's bind-corrected facial direction. Kazuya's opening
+frontal azimuth is held through the dive and landing so a downward head pitch
+cannot swing the camera behind him. Jin follows his facial direction. Both use
+a slight frontal three-quarter angle. Native FOV and cuts are retained; these
+are deliberately adapted front views, not exact copies of native camera poses.
+Verified 14 live Unity captures and fractional-frame boundary continuity:
+Validation/EntranceFraming/front-entrances.png and front-continuity.txt.
+
 ENTRANCE VISIBILITY FIX
 The reported clipping was during entrances, not combat. Gameplay camera values
 are unchanged by this fix. Entrance camera local axes are (-native.z, native.y,

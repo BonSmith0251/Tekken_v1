@@ -9,6 +9,7 @@ namespace Versus.Remaster
         public Shot Current { get; private set; }
         public bool Active => Current != Shot.Complete;
         public int Frame { get; private set; }
+        public float SampleFrame => Frame + frameRemainder;
         public bool ShowsBattleHud => Current == Shot.RoundStart || Current == Shot.Ready || Current == Shot.Fight;
         public float DurationSeconds => (jinIntroFrames + kazuyaIntroFrames + 2 * CutFrames + RoundFrames + ReadyFrames + FightFrames) / 60f;
         const int CutFrames = 2, RoundFrames = 90, ReadyFrames = 45, FightFrames = 45;
@@ -16,6 +17,7 @@ namespace Versus.Remaster
 
         readonly Transform playerOne, playerTwo;
         readonly Transform jinHead, kazuyaHead;
+        readonly Vector3 jinFaceAxis, kazuyaFaceAxis;
         readonly Transform[] kazuyaShotBones;
         readonly Renderer[] jinRenderers, kazuyaRenderers;
         readonly bool[] jinRendererEnabled, kazuyaRendererEnabled;
@@ -31,6 +33,7 @@ namespace Versus.Remaster
         static readonly Vector3 P2Ready = new Vector3(BattleModel.StartingHalfSeparation, 0, 0);
         float frameRemainder;
         bool clockStarted;
+        Vector3 kazuyaFront;
         GUIStyle heading, caption;
 
         public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model,
@@ -41,6 +44,8 @@ namespace Versus.Remaster
             jinHead = System.Array.Find(p2.GetComponentsInChildren<Transform>(), t => t.name == "Head");
             kazuyaHead = System.Array.Find(p1.GetComponentsInChildren<Transform>(), t => t.name == "Head");
             if (!jinHead || !kazuyaHead) throw new System.InvalidOperationException("Entrance cameras require both head bones.");
+            jinFaceAxis = jinHead.InverseTransformDirection(p2.forward);
+            kazuyaFaceAxis = kazuyaHead.InverseTransformDirection(p1.forward);
             kazuyaShotBones = System.Array.FindAll(p1.GetComponentsInChildren<Transform>(),
                 t => t.name == "Head" || t.name == "L_Foot" || t.name == "R_Foot" || t.name == "L_Hand" || t.name == "R_Hand");
             jinRenderers = p2.GetComponentsInChildren<Renderer>(); kazuyaRenderers = p1.GetComponentsInChildren<Renderer>();
@@ -67,11 +72,11 @@ namespace Versus.Remaster
         public void PrepareMotion()
         {
             if (jinMotion && Current == Shot.PlayerTwo)
-                jinMotion.SetPresentation(jinIntro, Frame, false, true);
+                jinMotion.SetPresentation(jinIntro, SampleFrame, false, true);
             else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
 
             if (kazuyaMotion && Current == Shot.PlayerOne)
-                kazuyaMotion.SetPresentation(kazuyaIntro, Frame, false, true);
+                kazuyaMotion.SetPresentation(kazuyaIntro, SampleFrame, false, true);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
@@ -120,12 +125,29 @@ namespace Versus.Remaster
             playerOne.rotation = Quaternion.Euler(0, 90, 0);
             playerTwo.rotation = Quaternion.Euler(0, -90, 0);
             if (Current == Shot.PlayerOne)
-                kazuyaCamera.Apply(cameraRig, playerOne, Frame, lens, SubjectBounds(kazuyaHead, Frame >= 47 && Frame < 130 ? kazuyaShotBones : null));
+            {
+                // Hold the opening frontal azimuth through the dive. Projecting a
+                // downward-pointing head each frame flips sides as it crosses vertical.
+                if (kazuyaFront.sqrMagnitude < .001f)
+                {
+                    kazuyaFront = Vector3.ProjectOnPlane(kazuyaHead.TransformDirection(kazuyaFaceAxis), Vector3.up).normalized;
+                    if (kazuyaFront.sqrMagnitude < .001f) kazuyaFront = playerOne.forward;
+                }
+                Bounds close = SubjectBounds(kazuyaHead, null);
+                Bounds wide = SubjectBounds(kazuyaHead, kazuyaShotBones);
+                float closeBlend = Mathf.SmoothStep(0, 1, (SampleFrame - 110) / 30f);
+                Bounds focus = Frame < 47 ? close : new Bounds(
+                    Vector3.Lerp(wide.center, close.center, closeBlend),
+                    Vector3.Lerp(wide.size, close.size, closeBlend));
+                kazuyaCamera.Apply(cameraRig, playerOne, SampleFrame, lens, focus,
+                    kazuyaFront);
+            }
             else if (Current == Shot.PlayerTwo)
-                jinCamera.Apply(cameraRig, playerTwo, Frame, lens, SubjectBounds(jinHead, null));
+                jinCamera.Apply(cameraRig, playerTwo, SampleFrame, lens, SubjectBounds(jinHead, null),
+                    jinHead.TransformDirection(jinFaceAxis));
             else
                 SetGameplayCamera(Current == Shot.RoundStart
-                    ? Mathf.SmoothStep(0, 1, Frame / (float)(CameraSettleFrames - 1)) : 1);
+                    ? Mathf.SmoothStep(0, 1, SampleFrame / (float)(CameraSettleFrames - 1)) : 1);
         }
 
         static Bounds SubjectBounds(Transform head, Transform[] landmarks)

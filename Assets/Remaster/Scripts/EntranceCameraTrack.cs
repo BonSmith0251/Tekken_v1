@@ -4,15 +4,18 @@ using UnityEngine;
 namespace Versus.Remaster
 {
     // Native MOTA camera samples converted into the imported actor's local space.
-    // Camera axis/roll conversion and retargeted framing verified with Unity captures.
+    // Native timing and lens samples, composed for the retargeted actors.
     public sealed class EntranceCameraTrack
     {
         readonly Vector3[] positions, forwards, ups;
         readonly float[] horizontalFov;
+        readonly int[] cuts;
         public int Frames => positions.Length;
 
         public EntranceCameraTrack(string resource, int moveId, int bodyFrames)
         {
+            cuts = resource == "Kazuya_s03" ? new[] { 47, 88 } :
+                resource == "Jin_s02" ? new[] { 123 } : new int[0];
             var asset = Resources.Load<TextAsset>("EntranceCameras/" + resource);
             if (!asset) throw new InvalidOperationException("Missing entrance camera: " + resource);
             byte[] data = asset.bytes;
@@ -45,15 +48,31 @@ namespace Versus.Remaster
 
         static Vector3 RigBasis(Vector3 native) => new Vector3(-native.z, native.y, -native.x);
 
-        public void Apply(Camera camera, Transform actor, int frame, EntranceCameraLens lens, Bounds focus)
+        public void Apply(Camera camera, Transform actor, float frame, EntranceCameraLens lens, Bounds focus,
+            Vector3 faceForward)
         {
-            // Frame sampling preserves original cuts; smoothing would sweep through them.
-            int f = Mathf.Clamp(frame, 0, Frames - 1);
-            camera.transform.SetPositionAndRotation(actor.TransformPoint(positions[f]),
-                Quaternion.LookRotation(actor.TransformDirection(forwards[f]), actor.TransformDirection(ups[f])));
-            lens.SetHorizontalFov(horizontalFov[f]);
+            float sample = Mathf.Clamp(frame, 0, Frames - 1);
+            int f = (int)sample, next = Mathf.Min(f + 1, Frames - 1);
+            // Interpolate body and camera on the same clock, holding before an authored cut.
+            float blend = Array.IndexOf(cuts, next) >= 0 ? 0 : sample - f;
+            Vector3 nativePosition = actor.TransformPoint(Vector3.Lerp(positions[f], positions[next], blend));
+            Quaternion rotation = Quaternion.Slerp(Quaternion.LookRotation(forwards[f], ups[f]),
+                Quaternion.LookRotation(forwards[next], ups[next]), blend);
+            lens.SetHorizontalFov(Mathf.Lerp(horizontalFov[f], horizontalFov[next], blend));
+            // Retarget the shot to the anatomical front of the animated head. The
+            // imported rig's bone axes are not Unity's forward axis; the caller
+            // supplies the bind-pose-corrected direction. Keep a slight three-quarter view.
+            Vector3 front = Vector3.ProjectOnPlane(faceForward, Vector3.up);
+            if (front.sqrMagnitude < .001f) front = actor.forward;
+            front = Quaternion.AngleAxis(12, Vector3.up) * front.normalized;
+            Vector3 nativeBack = -(actor.rotation * rotation * Vector3.forward);
+            float elevation = Mathf.Clamp(nativeBack.y, -.25f, .35f);
+            Vector3 offset = (front + Vector3.up * elevation).normalized;
+            float distance = Mathf.Max(.5f, Vector3.Distance(nativePosition, focus.center));
+            camera.transform.SetPositionAndRotation(focus.center + offset * distance,
+                Quaternion.LookRotation(-offset, Vector3.up));
             // Frame the retargeted subject, including head volume rather than only
-            // its neck-level pivot. Native travel, cuts, roll and FOV remain intact.
+            // its neck-level pivot. Native cuts and FOV remain intact.
             float tanY = Mathf.Tan(camera.fieldOfView * .5f * Mathf.Deg2Rad);
             float tanX = tanY * camera.aspect;
             Vector3 center = camera.transform.InverseTransformPoint(focus.center);
@@ -72,9 +91,9 @@ namespace Versus.Remaster
             if (camera.transform.position.y < .35f)
             {
                 // A low, upward-looking source shot cannot dolly through the Unity stage.
-                // Keep the corrected close-up above the floor and level with its subject.
+                // Clamp continuously at the floor; snapping up to subject height causes a jerk.
                 Vector3 position = camera.transform.position;
-                position.y = Mathf.Max(.35f, focus.center.y);
+                position.y = .35f;
                 camera.transform.position = position;
                 Vector3 direction = focus.center - position;
                 if (direction.sqrMagnitude > .0001f)

@@ -1,0 +1,9 @@
+Continuity across integer frame boundaries (+/-0.001 frame), excluding native cuts.
+PlayerOne: max position change 0.001277 m at frame 46; max angle 0.000000 degrees
+PlayerTwo: max position change 0.000132 m at frame 147; max angle 0.000000 degrees
+
+Checked live Unity Play mode using the same LateUpdate render path.
+Body and camera sampled +/-0.001 frame at every integer boundary;
+Kazuya cuts 47/88 and Jin cut 123 intentionally excluded.
+14 live rendered screenshots: front-entrances.png.
+This verifies smooth sampling, not render performance or exact reference fidelity.
