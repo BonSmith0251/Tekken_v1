@@ -55,11 +55,11 @@ namespace Versus.Remaster
 
         public void PrepareMotion()
         {
-            if (jinMotion && Current == Shot.PlayerOne)
+            if (jinMotion && Current == Shot.PlayerTwo)
                 jinMotion.SetPresentation(jinIntro, Frame, false, true);
             else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
 
-            if (kazuyaMotion && Current == Shot.PlayerTwo)
+            if (kazuyaMotion && Current == Shot.PlayerOne)
                 kazuyaMotion.SetPresentation(kazuyaIntro, Frame, false, true);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
@@ -73,8 +73,8 @@ namespace Versus.Remaster
             {
                 frameRemainder -= 1;
                 Frame++;
-                int duration = Current == Shot.PlayerOne ? jinIntroFrames :
-                    Current == Shot.PlayerTwo ? kazuyaIntroFrames :
+                int duration = Current == Shot.PlayerOne ? kazuyaIntroFrames :
+                    Current == Shot.PlayerTwo ? jinIntroFrames :
                     Current == Shot.FaceOff ? 45 : Current == Shot.Ready ? 60 : 35;
                 if (Frame < duration) continue;
                 Frame = 0;
@@ -102,9 +102,9 @@ namespace Versus.Remaster
             playerOne.rotation = Quaternion.Euler(0, 90, 0);
             playerTwo.rotation = Quaternion.Euler(0, -90, 0);
             if (Current == Shot.PlayerOne)
-                jinCamera.Apply(cameraRig, playerOne, Frame, lens);
+                kazuyaCamera.Apply(cameraRig, playerOne, Frame, lens);
             else if (Current == Shot.PlayerTwo)
-                kazuyaCamera.Apply(cameraRig, playerTwo, Frame, lens);
+                jinCamera.Apply(cameraRig, playerTwo, Frame, lens);
             else
             {
                 if (Current == Shot.FaceOff && lastPresented != Current)
@@ -164,9 +164,9 @@ namespace Versus.Remaster
             GUI.DrawTexture(new Rect(0, 0, 1280, 90), Texture2D.whiteTexture);
             GUI.DrawTexture(new Rect(0, 624, 1280, 96), Texture2D.whiteTexture);
             GUI.color = old;
-            string headline = Current == Shot.PlayerOne ? "JIN KAZAMA" :
-                Current == Shot.PlayerTwo ? "KAZUYA MISHIMA" :
-                Current == Shot.FaceOff ? "JIN  VS  KAZUYA" :
+            string headline = Current == Shot.PlayerOne ? "KAZUYA MISHIMA" :
+                Current == Shot.PlayerTwo ? "JIN KAZAMA" :
+                Current == Shot.FaceOff ? "KAZUYA  VS  JIN" :
                 Current == Shot.Ready ? "READY" : "FIGHT";
             GUI.Label(new Rect(90, 10, 1100, 75), headline, heading);
             GUI.Label(new Rect(90, 641, 1100, 55), "LOCAL VERSUS  /  ROUND 1     •     ENTER TO SKIP", caption);

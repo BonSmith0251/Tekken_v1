@@ -55,7 +55,7 @@ namespace Versus.Remaster
             if (!kazuyaActions) kazuyaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Kazuya.asset");
 #endif
             if (!jinActions || !kazuyaActions) throw new InvalidOperationException("Assign both character move catalogs in LocalVersus.");
-            catalogs = new[] { new FighterActionCatalog(jinActions, "Jz_"), new FighterActionCatalog(kazuyaActions, "Kz_") };
+            catalogs = new[] { new FighterActionCatalog(kazuyaActions, "Kz_"), new FighterActionCatalog(jinActions, "Jz_") };
             battle = new BattleModel(config.rules, new[] { catalogs[0].moves, catalogs[1].moves }); battle.Hit += OnHit;
             Time.fixedDeltaTime = 1f / 60;
             Application.targetFrameRate = 120;
@@ -63,9 +63,9 @@ namespace Versus.Remaster
             BuildArena();
             var jinObject = sceneJin ? sceneJin : Instantiate(Resources.Load<GameObject>("JinPlayable"), transform);
             var jin = jinObject.GetComponent<JinRig>();
-            jin.fighterMoves = catalogs[0].moves;
+            jin.fighterMoves = catalogs[1].moves;
             jin.actionMotion = jin.gameObject.AddComponent<FighterActionMotion>();
-            jin.actionMotion.Initialize(catalogs[0]);
+            jin.actionMotion.Initialize(catalogs[1]);
             // An editor session can retain an older in-memory scene after the scene file changes.
             // Resolve the imported prefab for that session as well as for the serialized scene.
 #if UNITY_EDITOR
@@ -77,14 +77,16 @@ namespace Versus.Remaster
             var kazuyaObject = sceneKazuya ? sceneKazuya : Instantiate(kazuyaPrefab, transform);
             var kazuya = kazuyaObject.GetComponent<JinRig>();
             if (!kazuya) kazuya = kazuyaObject.AddComponent<JinRig>();
-            kazuya.fighterMoves = catalogs[1].moves;
+            kazuya.fighterMoves = catalogs[0].moves;
             kazuya.actionMotion = kazuya.gameObject.AddComponent<FighterActionMotion>();
-            kazuya.actionMotion.Initialize(catalogs[1]);
-            config.playerOne = "JIN KAZAMA";
-            config.playerTwo = "KAZUYA MISHIMA";
-            views = new IFighterPresentation[] { jin, kazuya };
+            kazuya.actionMotion.Initialize(catalogs[0]);
+            config.playerOne = "KAZUYA MISHIMA";
+            config.playerTwo = "JIN KAZAMA";
+            views = new IFighterPresentation[] { kazuya, jin };
+            kazuyaObject.name = "Kazuya Mishima - Player 1";
+            jinObject.name = "Jin Kazama - Player 2";
             if (playEntrance)
-                entrance = new LocalVersusEntrance(jinObject.transform, kazuyaObject.transform,
+                entrance = new LocalVersusEntrance(kazuyaObject.transform, jinObject.transform,
                     cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions, gameplayLens);
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
@@ -99,8 +101,8 @@ namespace Versus.Remaster
         void SmokeCapture()
         {
             ScreenCaptureFallback();
-            var jin = views[0] as JinRig;
-            var kazuya = views[1] as JinRig;
+            var jin = views[1] as JinRig;
+            var kazuya = views[0] as JinRig;
             bool retargeted = jin && jin.actionMotion && jin.actionMotion.Ready;
             bool kazuyaReady = kazuya && kazuya.actionMotion && kazuya.actionMotion.Ready;
             System.IO.File.WriteAllText(System.IO.Path.Combine(Application.dataPath, "../runtime-smoke.json"),
@@ -110,11 +112,11 @@ namespace Versus.Remaster
                 ",\"kazuyaActionsReady\":" + (kazuyaReady ? "true" : "false") +
                 ",\"jinActionsPlayed\":" + (jin && jin.actionMotion ? jin.actionMotion.PlayedActions : 0) +
                 ",\"kazuyaActionsPlayed\":" + (kazuyaReady ? kazuya.actionMotion.PlayedActions : 0) +
-                ",\"jinMoveCount\":" + catalogs[0].moves.Length +
-                ",\"kazuyaMoveCount\":" + catalogs[1].moves.Length +
+                ",\"jinMoveCount\":" + catalogs[1].moves.Length +
+                ",\"kazuyaMoveCount\":" + catalogs[0].moves.Length +
                 ",\"hitsResolved\":" + hitsResolved +
-                ",\"jinHealth\":" + battle.fighters[0].health +
-                ",\"kazuyaHealth\":" + battle.fighters[1].health + "}");
+                ",\"jinHealth\":" + battle.fighters[1].health +
+                ",\"kazuyaHealth\":" + battle.fighters[0].health + "}");
         }
         void SmokeExit() => Application.Quit(0);
         void PreviewCapture() => ScreenCaptureFallback();
@@ -371,7 +373,7 @@ namespace Versus.Remaster
             Label(new Rect(80, 100, 700, 35), "TEKKEN   /   UNITY REMASTER WORKSPACE", small, Accent);
             Label(new Rect(70, 150, 720, 100), "VERSUS", new GUIStyle(title) { fontSize = 94, alignment = TextAnchor.MiddleLeft });
             Label(new Rect(80, 270, 700, 60), "TWO PLAYERS. ONE ARENA.", text);
-            Label(new Rect(80, 330, 700, 65), "Play as JIN KAZAMA against Player 2.\nOriginal combat clips / local versus", small);
+            Label(new Rect(80, 330, 700, 65), "Play as KAZUYA MISHIMA against Player 2 (JIN).\nOriginal combat clips / local versus", small);
             if (GUI.Button(new Rect(80, 440, 400, 60), "LOCAL TWO-PLAYER   /   ENTER", button)) StartMatch();
             if (GUI.Button(new Rect(80, 515, 195, 45), "CONTROLS", button)) help = !help;
             if (GUI.Button(new Rect(285, 515, 195, 45), "QUIT", button)) Application.Quit();

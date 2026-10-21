@@ -39,3 +39,10 @@ with 0.65 units of silhouette allowance and 15% horizontal screen margin.
 Depth separation is included to protect the nearer fighter from cropping.
 These are reference-video calibration values, not recovered native constants.
 Live visual verification of this correction remains pending.
+
+REFERENCE PLAYER ORDER
+Player 1 is Kazuya on the left, facing right; Player 2 is Jin on the right,
+facing left. Controls, move catalogs, AI, HUD and smoke diagnostics follow
+this assignment. Kazuya's 316-frame entrance/camera plays first, followed by
+Jin's 255-frame entrance/camera. Skip and combat retain the same player sides.
+The serialized LocalVersus2 scene also uses these positions and rotations.
