@@ -14,8 +14,8 @@ namespace Versus.Remaster
         readonly Transform playerOne, playerTwo;
         readonly Camera cameraRig;
         readonly BattleModel battle;
-        readonly FighterActionMotion jinMotion;
-        readonly int jinWalk, jinStance;
+        readonly FighterActionMotion jinMotion, kazuyaMotion;
+        readonly int jinWalk, jinStance, kazuyaWalk, kazuyaStance;
         readonly Vector3 p1Start = new Vector3(-4.4f, 0, 0);
         readonly Vector3 p2Start = new Vector3(4.4f, 0, 0);
         static readonly Vector3 P1Ready = new Vector3(-2, 0, 0);
@@ -24,23 +24,32 @@ namespace Versus.Remaster
         GUIStyle heading, caption;
 
         public LocalVersusEntrance(Transform p1, Transform p2, Camera camera, BattleModel model,
-            FighterActionMotion jin, MuseumCharacter jinCharacter)
+            FighterActionMotion jin, MuseumCharacter jinCharacter,
+            FighterActionMotion kazuya, MuseumCharacter kazuyaCharacter)
         {
             playerOne = p1; playerTwo = p2; cameraRig = camera; battle = model;
             jinMotion = jin;
             jinWalk = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1444 && a.motion);
             jinStance = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 1581 && a.motion);
+            kazuyaMotion = kazuya;
+            kazuyaWalk = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 1436 && a.motion);
+            kazuyaStance = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 1435 && a.motion);
             Current = Shot.PlayerOne;
         }
 
         public void PrepareMotion()
         {
-            if (!jinMotion) return;
-            if (Current == Shot.PlayerOne && Frame < 60 && jinWalk >= 0)
+            if (jinMotion && Current == Shot.PlayerOne && Frame < 60 && jinWalk >= 0)
                 jinMotion.SetPresentation(jinWalk, Frame, true);
-            else if (Current == Shot.PlayerOne && jinStance >= 0)
+            else if (jinMotion && Current == Shot.PlayerOne && jinStance >= 0)
                 jinMotion.SetPresentation(jinStance, Frame - 60, false);
-            else jinMotion.SetPresentation(-1, 0, false);
+            else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
+
+            if (kazuyaMotion && Current == Shot.PlayerTwo && Frame < 60 && kazuyaWalk >= 0)
+                kazuyaMotion.SetPresentation(kazuyaWalk, Frame, true);
+            else if (kazuyaMotion && Current == Shot.PlayerTwo && kazuyaStance >= 0)
+                kazuyaMotion.SetPresentation(kazuyaStance, Frame - 60, false);
+            else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
         public void Advance(float deltaTime, bool skip)
@@ -65,6 +74,7 @@ namespace Versus.Remaster
         {
             Current = Shot.Complete; Frame = 0;
             if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
+            if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
             playerOne.position = P1Ready; playerTwo.position = P2Ready;
             battle.BeginFight();
         }
@@ -74,7 +84,7 @@ namespace Versus.Remaster
             if (!Active) return;
             float p1 = Current == Shot.PlayerOne ? Mathf.SmoothStep(0, 1, Frame / 60f) : 1;
             float p2 = Current < Shot.PlayerTwo ? 0 : Current == Shot.PlayerTwo ?
-                Mathf.SmoothStep(0, 1, Frame / 120f) : 1;
+                Mathf.SmoothStep(0, 1, Frame / 60f) : 1;
             playerOne.position = Vector3.Lerp(p1Start, P1Ready, p1);
             playerTwo.position = Vector3.Lerp(p2Start, P2Ready, p2);
             playerOne.rotation = Quaternion.Euler(0, 90, 0);

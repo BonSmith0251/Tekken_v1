@@ -82,7 +82,7 @@ namespace Versus.Remaster
             views = new IFighterPresentation[] { jin, kazuya };
             if (playEntrance)
                 entrance = new LocalVersusEntrance(jinObject.transform, kazuyaObject.transform,
-                    cameraRig, battle, jin.actionMotion, jinActions);
+                    cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions);
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));

@@ -4,6 +4,8 @@ Open Assets/Remaster/Scenes/LocalVersus2.unity, or use Remaster > Open LocalVers
 
 Jin now plays his imported `Jz_sWALKF` motion for the first 60 presentation frames while entering, then his imported `Jz_zansin00` stance motion for the next 60 frames. These are original character action clips arranged into a new entrance sequence; the game's original cinematic entrance clip has not been recovered. Skipping or completing the entrance clears the presentation override before Fight begins.
 
+Kazuya plays his imported `Kz_sWALKF` motion while moving into place for the first 60 frames of his shot, then `Kz_sKAM00_` guard stance for the remaining 60 frames. His presentation override is also cleared when the entrance ends or is skipped.
+
 The extracted cooked scripts identify distinct OnCharacterEntrance, OnOpponentEntrance, OnBattleBegin, and OnRoundActionStart events in some original game components (for example the exported functions of BP_mig_exp_apple). They do not provide a readable complete sequence or converted Jin/Kazuya intro cinematics. This scene implements that event order as a new Unity presentation using the current imported fighters and idle motion. Shot length and movement are provisional and should be matched to direct original game capture before describing them as exact Tekken 7 timing.
 
 Build menu: Remaster > Build LocalVersus2 Windows player. Output: Builds/LocalVersus2/LocalVersus2.exe.
