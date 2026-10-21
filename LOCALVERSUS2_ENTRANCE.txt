@@ -28,3 +28,14 @@ Gameplay shares the entrance lens controller; Ready/fight and skipping preserve
 this projection. HUD and menus fit the viewport, including after resizing.
 Native position and rotation samples are recorded as evidence, but the tracking
 algorithm, distance rules and exceptional cinematic lenses are not reconstructed.
+
+REFERENCE VIDEO FRAMING CORRECTION
+GameplayCameraFraming now supplies both gameplay and the entrance handoff.
+Camera/aim height is 0.95 Unity units with a level view, replacing the old
+distance * 0.27 elevation (about 15 degrees downward). Close-range distance
+is 3.25 units, replacing the 11-unit minimum. At wider separations, distance
+is calculated from the recovered 65-degree horizontal lens and fighter spacing,
+with 0.65 units of silhouette allowance and 15% horizontal screen margin.
+Depth separation is included to protect the nearer fighter from cropping.
+These are reference-video calibration values, not recovered native constants.
+Live visual verification of this correction remains pending.

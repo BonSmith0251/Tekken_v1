@@ -121,9 +121,8 @@ namespace Versus.Remaster
         void SetGameplayCamera(float blend)
         {
             var a = battle.fighters[0]; var b = battle.fighters[1];
-            float distance = Mathf.Clamp(9 + Mathf.Abs(a.x - b.x) * .6f, 11, 17);
-            Vector3 target = new Vector3((a.x + b.x) / 2, 1, (a.z + b.z) / 2);
-            Vector3 position = target + new Vector3(0, distance * .27f, -distance);
+            GameplayCameraFraming.Evaluate(new Vector3(a.x, 0, a.z), new Vector3(b.x, 0, b.z),
+                out Vector3 position, out Vector3 target);
             Quaternion rotation = Quaternion.LookRotation(target - position);
             cameraRig.transform.SetPositionAndRotation(Vector3.Lerp(faceOffPosition, position, blend),
                 blend >= 1 ? rotation : Quaternion.Slerp(faceOffRotation, rotation, blend));

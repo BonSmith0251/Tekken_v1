@@ -54,6 +54,23 @@ namespace Versus.Remaster
         }
     }
 
+    // Reference-video framing: a near-level camera, with room for both fighters.
+    // Distances are calibrated to the imported rigs, not recovered engine constants.
+    public static class GameplayCameraFraming
+    {
+        public const float HorizontalFov = 65f;
+        public static void Evaluate(Vector3 one, Vector3 two, out Vector3 position, out Vector3 target)
+        {
+            target = (one + two) * .5f;
+            target.y = .95f;
+            // Keep the outer body/guard silhouette within 85% of the viewport width.
+            float halfWidth = Mathf.Abs(one.x - two.x) * .5f + .65f;
+            float horizontalDistance = halfWidth / (Mathf.Tan(HorizontalFov * .5f * Mathf.Deg2Rad) * .85f);
+            float distance = Mathf.Max(3.25f, horizontalDistance) + Mathf.Abs(one.z - two.z) * .5f;
+            position = target + Vector3.back * distance;
+        }
+    }
+
     // Source tracks store angular FOV, not filmback dimensions. 36 mm is an
     // equivalent-lens convention; the reference composition uses a 16:9 gate.
     public sealed class EntranceCameraLens
