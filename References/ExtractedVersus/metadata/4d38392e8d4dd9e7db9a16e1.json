@@ -1,0 +1,915 @@
+{
+  "path": "TekkenGame/Content/Effect/TK75/Common/BP_EF_DRAW.uasset",
+  "id": "4d38392e8d4dd9e7db9a16e1",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 8457,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Effect/TK75/Common/BP_EF_DRAW.uasset",
+  "metadata_file": "metadata/4d38392e8d4dd9e7db9a16e1.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 6544,
+    "package_flags": 2147483648,
+    "name_count": 90,
+    "name_offset": 189,
+    "export_count": 24,
+    "export_offset": 3900,
+    "import_count": 45,
+    "import_offset": 2640,
+    "bulk_data_start_offset": 8453,
+    "guid": "833e61a8a5529c4b95b9bef99e17bdae"
+  },
+  "names": [
+    "/Game/Effect/TK75/Common/BP_EF_DRAW",
+    "/Game/Effect/TK75/Common/Particle/PS_EF_drawhit",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_EF_DRAW",
+    "BP_EF_DRAW_C",
+    "BreakVector",
+    "CallFunc_BreakVector_X",
+    "CallFunc_BreakVector_Y",
+    "CallFunc_BreakVector_Z",
+    "CallFunc_GetFloorHeight_ReturnValue",
+    "CallFunc_K2_GetComponentLocation_ReturnValue",
+    "CallFunc_K2_SetWorldLocation_SweepHitResult",
+    "CallFunc_MakeVector_ReturnValue",
+    "ChildNodes",
+    "Class",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_EF_DRAW_C",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__IntProperty",
+    "Default__ObjectProperty",
+    "Default__ParticleSystemComponent",
+    "Default__RadialForceComponent",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StructProperty",
+    "Default__TekkenBlueprintLibrary",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "EntryPoint",
+    "ExecuteUbergraph_BP_EF_DRAW",
+    "FloatProperty",
+    "Function",
+    "GeneratedClass",
+    "GetFloorHeight",
+    "Guid",
+    "HitResult",
+    "IntProperty",
+    "K2_GetComponentLocation",
+    "K2_SetWorldLocation",
+    "KismetMathLibrary",
+    "MakeVector",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "ParticleSystem1",
+    "ParticleSystemComponent",
+    "ParticleSystemComponent_10__F1AF344B",
+    "PointerToUberGraphFrame",
+    "PS_EF_drawhit",
+    "RadialForce1",
+    "RadialForceComponent",
+    "RadialForceComponent_1__73F72F54",
+    "ReceiveBeginPlay",
+    "RootNodes",
+    "SceneComponent",
+    "ScriptStruct",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StructProperty",
+    "TekkenBlueprintLibrary",
+    "Template",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -33,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -33,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -33,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -32,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "RadialForceComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -33,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -34,
+      "object_name": "TekkenBlueprintLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -32,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "ReceiveBeginPlay"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -10,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "BreakVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "MakeVector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "K2_GetComponentLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -16,
+      "object_name": "K2_SetWorldLocation"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "GetFloorHeight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -32,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -32,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Common/Particle/PS_EF_drawhit"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -31,
+      "object_name": "PS_EF_drawhit"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -33,
+      "object_name": "Default__ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "RadialForceComponent",
+      "outer_index": -33,
+      "object_name": "Default__RadialForceComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -33,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -32,
+      "object_name": "Vector"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -33,
+      "object_name": "HitResult"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -33,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -33,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -33,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -32,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TekkenBlueprintLibrary",
+      "outer_index": -34,
+      "object_name": "Default__TekkenBlueprintLibrary"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 15,
+      "object_name": "ParticleSystem1",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6544,
+      "class_name": "ObjectProperty",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 15,
+      "object_name": "RadialForce1",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6584,
+      "class_name": "ObjectProperty",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 11,
+      "object_name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6624,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 11,
+      "object_name": "CallFunc_MakeVector_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6664,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 11,
+      "object_name": "CallFunc_BreakVector_Z",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6704,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 11,
+      "object_name": "CallFunc_BreakVector_Y",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6740,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 11,
+      "object_name": "CallFunc_BreakVector_X",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6776,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 11,
+      "object_name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 6812,
+      "class_name": "StructProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 11,
+      "object_name": "CallFunc_GetFloorHeight_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6852,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 11,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 6888,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 15,
+      "object_name": "ExecuteUbergraph_BP_EF_DRAW",
+      "object_flags": 1,
+      "serial_size": 213,
+      "serial_offset": 6924,
+      "class_name": "Function",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": 0,
+        "first_child": 10,
+        "flags_hex": "0x00800000",
+        "native": false,
+        "script_memory_size": 277,
+        "script_storage_size": 169,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 6956,
+        "bytecode_sha256": "7261167661eae5cad55449d2bd657013225f72765dd6ec17bfb2a935d631fc82",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/4d38392e8d4dd9e7db9a16e1/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/4d38392e8d4dd9e7db9a16e1/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -5,
+      "super_index": -22,
+      "template_index": -21,
+      "outer_index": 15,
+      "object_name": "ReceiveBeginPlay",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 7137,
+      "class_name": "Function",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": -22,
+        "first_child": 0,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7169,
+        "bytecode_sha256": "10f4cbcb4a72a7b2df8ac07aa37ee1a9b4eae6a3821520718c6dcc6613a4c06f",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/4d38392e8d4dd9e7db9a16e1/000011.bytecode.bin"
+      },
+      "raw_export_file": "functions/4d38392e8d4dd9e7db9a16e1/000011.export.bin"
+    },
+    {
+      "index": 12,
+      "class_index": -5,
+      "super_index": -23,
+      "template_index": -21,
+      "outer_index": 15,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 7199,
+      "class_name": "Function",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 12,
+        "super_struct": -23,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 7231,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/4d38392e8d4dd9e7db9a16e1/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/4d38392e8d4dd9e7db9a16e1/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -44,
+      "outer_index": 15,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 7246,
+      "class_name": "StructProperty",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -12,
+      "super_index": -10,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_EF_DRAW_C",
+      "object_flags": 9,
+      "serial_size": 203,
+      "serial_offset": 7286,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 24,
+        "UberGraphFramePointerProperty": 14,
+        "UberGraphFunction": 11
+      }
+    },
+    {
+      "index": 15,
+      "class_index": 15,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_EF_DRAW_C",
+      "object_flags": 49,
+      "serial_size": 65,
+      "serial_offset": 7489,
+      "class_name": "BP_EF_DRAW_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "3c 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 16,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_EF_DRAW",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 7554,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -10,
+        "SimpleConstructionScript": 24,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 15,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "c7 50 de c5 ab 58 58 f8 4d 43 c8 06 7e 69 42 52",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 17,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -36,
+      "outer_index": 15,
+      "object_name": "ParticleSystemComponent_10__F1AF344B",
+      "object_flags": 41,
+      "serial_size": 41,
+      "serial_offset": 7803,
+      "class_name": "ParticleSystemComponent",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {
+        "Template": -35
+      }
+    },
+    {
+      "index": 18,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -37,
+      "outer_index": 15,
+      "object_name": "RadialForceComponent_1__73F72F54",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7844,
+      "class_name": "RadialForceComponent",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -38,
+      "outer_index": 17,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 7856,
+      "class_name": "SceneComponent",
+      "owner": "BP_EF_DRAW",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 24,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 7868,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_16",
+      "tagged_properties": {
+        "ComponentTemplate": 20,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 24,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 180,
+      "serial_offset": 8007,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_16",
+      "tagged_properties": {
+        "ComponentTemplate": 18,
+        "VariableName": "ParticleSystem1",
+        "ChildNodes": {
+          "name": "ChildNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 95,
+          "value_prefix_hex": "01 00 00 00 17 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 152,
+          "value_prefix_hex": "fe 89 cd a4 4a ab 54 ef 78 4b 74 fb e4 8a 7b 65",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -42,
+      "outer_index": 24,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 8187,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_16",
+      "tagged_properties": {
+        "ComponentTemplate": 19,
+        "VariableName": "RadialForce1",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "9d 19 9c 81 de 11 79 85 49 f9 36 67 57 1a f0 d2",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -43,
+      "outer_index": 15,
+      "object_name": "SimpleConstructionScript_16",
+      "object_flags": 8,
+      "serial_size": 127,
+      "serial_offset": 8326,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_EF_DRAW_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 16 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "02 00 00 00 16 00 00 00 17 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 21
+      }
+    }
+  ],
+  "sha256": "169aa9ea753ddf73a969bbbaadc031df599508eb888f0d85768d64a592f6b0e2",
+  "selection_reason": "dependency of TekkenGame/Content/Battle/BP_BattleEvent.uasset"
+}

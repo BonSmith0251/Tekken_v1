@@ -1,0 +1,569 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_mrz_oph_headlight.uasset",
+  "id": "3f4e4479591d62c24384f911",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 6504,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_mrz_oph_headlight.uasset",
+  "metadata_file": "metadata/3f4e4479591d62c24384f911.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4660,
+    "package_flags": 2147483648,
+    "name_count": 78,
+    "name_offset": 189,
+    "export_count": 11,
+    "export_offset": 3436,
+    "import_count": 30,
+    "import_offset": 2596,
+    "bulk_data_start_offset": 6500,
+    "guid": "df0db33935afbd4cb86234a594389233"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_cmn_oph_headlight",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_mrz_oph_headlight",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/Material/MI_CH_mrz_oph_headlight",
+    "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/Material/MI_CH_mrz_oph_headlight_beam",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AssociatedGuid",
+    "bAllowDeletion",
+    "bIsValid",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintComponentChangedPropertyInfo",
+    "BlueprintCookedComponentInstancingData",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_CH_cmn_oph_headlight_C",
+    "BP_CH_mrz_oph_headlight",
+    "BP_CH_mrz_oph_headlight_C",
+    "ChangedPropertyList",
+    "Class",
+    "ComponentKey",
+    "ComponentOverrideRecord",
+    "ComponentTemplate",
+    "CookedComponentInstancingData",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_CH_cmn_oph_headlight_C",
+    "Default__BP_CH_mrz_oph_headlight_C",
+    "Default__EdGraph",
+    "Default__InheritableComponentHandler",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "DefaultSceneRoot_REMOVED_51CC27774306FE628510CB9BC6EC52D3",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EventGraph",
+    "GeneratedClass",
+    "Guid",
+    "headlight",
+    "headlight_GEN_VARIABLE",
+    "InheritableComponentHandler",
+    "IntProperty",
+    "lightbeam",
+    "lightbeam_GEN_VARIABLE",
+    "MaterialInstanceConstant",
+    "MI_CH_mrz_oph_headlight",
+    "MI_CH_mrz_oph_headlight_beam",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "OverrideMaterials",
+    "OwnerClass",
+    "Package",
+    "ParentClass",
+    "Records",
+    "Scene_GEN_VARIABLE",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SCSVariableName",
+    "SimpleConstructionScript",
+    "SpotLight_GEN_VARIABLE",
+    "SpotLightComponent",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -22,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -18,
+      "object_name": "BP_CH_cmn_oph_headlight_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -22,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_cmn_oph_headlight",
+      "class_name": "BP_CH_cmn_oph_headlight_C",
+      "outer_index": -18,
+      "object_name": "Default__BP_CH_cmn_oph_headlight_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -22,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -22,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -19,
+      "object_name": "MI_CH_mrz_oph_headlight"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer_index": -20,
+      "object_name": "MI_CH_mrz_oph_headlight_beam"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/BP_CH_cmn_oph_headlight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/Material/MI_CH_mrz_oph_headlight"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Hair_Acc/cmn_oph_headlight/Material/MI_CH_mrz_oph_headlight_beam"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "DefaultSceneRoot_REMOVED_51CC27774306FE628510CB9BC6EC52D3"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -2,
+      "object_name": "Scene_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -22,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -22,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -22,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SpotLightComponent",
+      "outer_index": -2,
+      "object_name": "SpotLight_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "headlight_GEN_VARIABLE"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "lightbeam_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -7,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_headlight_C",
+      "object_flags": 9,
+      "serial_size": 138,
+      "serial_offset": 4660,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_CH_mrz_oph_headlight_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 4798,
+      "class_name": "BP_CH_mrz_oph_headlight_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_CH_mrz_oph_headlight",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 4806,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "InheritableComponentHandler": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "22 6e 51 e9 98 47 95 4d 8b 15 f9 fc 20 56 b8 c9",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 120,
+      "serial_offset": 5084,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_headlight",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5204,
+      "class_name": "EdGraph",
+      "owner": "BP_CH_mrz_oph_headlight",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 1,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 878,
+      "serial_offset": 5316,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_CH_mrz_oph_headlight_C",
+      "tagged_properties": {
+        "Records": {
+          "name": "Records",
+          "type": "ArrayProperty",
+          "size": 833,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 40 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 0c 03 00 00 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 00 00 00 18 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 87 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fe ff ff ff 45 00 00 00 00 00 00 00 37 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 2e 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 4a 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 52 e6 a8 8a d7 d7 02 48 a4 da 4f 63 b2 88",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 6194,
+      "class_name": "SceneComponent",
+      "owner": "BP_CH_mrz_oph_headlight_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 9,
+      "object_name": "SCS_Node_5",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 6206,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_5",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "3b 4f aa fe 14 39 d8 40 a0 41 cb 92 57 15 dd f7",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_5",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 6345,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_CH_mrz_oph_headlight_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 1,
+      "object_name": "headlight_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 6386,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_mrz_oph_headlight_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 f0 ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 1,
+      "object_name": "lightbeam_GEN_VARIABLE",
+      "object_flags": 4194337,
+      "serial_size": 57,
+      "serial_offset": 6443,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_CH_mrz_oph_headlight_C",
+      "tagged_properties": {
+        "OverrideMaterials": {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 ef ff ff ff",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "b88a2359b68bf4a40d984b81340be928388a0778cebfae6cbfa48b7c890e7719",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,585 @@
+{
+  "path": "TekkenGame/Content/Character/CharacterBlueprints/BP_Character_BOB.uasset",
+  "id": "2d5c70b06c22d1c60ff655eb",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 5855,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/CharacterBlueprints/BP_Character_BOB.uasset",
+  "metadata_file": "metadata/2d5c70b06c22d1c60ff655eb.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 4641,
+    "package_flags": 2147483648,
+    "name_count": 69,
+    "name_offset": 189,
+    "export_count": 14,
+    "export_offset": 3009,
+    "import_count": 32,
+    "import_offset": 2113,
+    "bulk_data_start_offset": 5851,
+    "guid": "d51ab3305a13644bb183687237b96631"
+  },
+  "names": [
+    "/Game/Character/CharacterBlueprints/BP_Character_BOB",
+    "/Game/Character/Common/BP_TekkenPlayer_Modular",
+    "/Game/Character/Item/ItemManagerComponent",
+    "/Game/Character/Item/WazaManagerComponent",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "AttachParent",
+    "bAllowDeletion",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_Character_BOB",
+    "BP_Character_BOB_C",
+    "BP_TekkenPlayer_Modular_C",
+    "CapsuleComponent",
+    "Class",
+    "CollisionCylinder",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_Character_BOB_C",
+    "Default__BP_TekkenPlayer_Modular_C",
+    "Default__EdGraph",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot57B58D2C4D6EF878D711E5A2D24D13B7",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "EventGraph",
+    "FaceHairMesh",
+    "FaceMesh",
+    "Game",
+    "GeneratedClass",
+    "Guid",
+    "HairMesh",
+    "IntProperty",
+    "ItemManagerComponent_C",
+    "ItemManagerComponentA8ABB053439170F5003957B6CF01E18A",
+    "LowerMesh",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootComponent",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "Skeletal Mesh Component",
+    "SkeletalMeshComponent",
+    "Static Mesh Component",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UpperMesh",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "WazaManagerComponent1B79286E43B16B064BD336BCD0489530",
+    "WazaManagerComponent_C"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -19,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -17,
+      "object_name": "BP_TekkenPlayer_Modular_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -19,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Character/Common/BP_TekkenPlayer_Modular",
+      "class_name": "BP_TekkenPlayer_Modular_C",
+      "outer_index": -17,
+      "object_name": "Default__BP_TekkenPlayer_Modular_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CapsuleComponent",
+      "outer_index": -4,
+      "object_name": "CollisionCylinder"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -18,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "CapsuleComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -19,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -19,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Game/Character/Item/ItemManagerComponent",
+      "class_name": "ItemManagerComponent_C",
+      "outer_index": -2,
+      "object_name": "ItemManagerComponentA8ABB053439170F5003957B6CF01E18A"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/BP_TekkenPlayer_Modular"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -19,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -19,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -19,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "Skeletal Mesh Component_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SkeletalMeshComponent_188"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -2,
+      "object_name": "SkeletalMeshComponent_500"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -4,
+      "object_name": "FaceHairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -4,
+      "object_name": "FaceMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -4,
+      "object_name": "HairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -4,
+      "object_name": "LowerMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -4,
+      "object_name": "UpperMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -2,
+      "object_name": "Static Mesh Component_4"
+    },
+    {
+      "class_package": "/Game/Character/Item/WazaManagerComponent",
+      "class_name": "WazaManagerComponent_C",
+      "outer_index": -2,
+      "object_name": "WazaManagerComponent1B79286E43B16B064BD336BCD0489530"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": -2,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_Character_BOB_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 4641,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 9
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "Default__BP_Character_BOB_C",
+      "object_flags": 49,
+      "serial_size": 211,
+      "serial_offset": 4750,
+      "class_name": "BP_Character_BOB_C",
+      "owner": null,
+      "tagged_properties": {
+        "CapsuleComponent": 4,
+        "FaceMesh": 11,
+        "HairMesh": 12,
+        "FaceHairMesh": 10,
+        "UpperMesh": 14,
+        "LowerMesh": 13,
+        "RootComponent": 4
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BP_Character_BOB",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 4961,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -2,
+        "SimpleConstructionScript": 9,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "cc cb 77 64 d2 ad ab 44 95 c4 e0 d9 f9 52 42 48",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 2,
+      "object_name": "CollisionCylinder",
+      "object_flags": 262185,
+      "serial_size": 12,
+      "serial_offset": 5210,
+      "class_name": "CapsuleComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 120,
+      "serial_offset": 5222,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_BOB",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -15,
+      "outer_index": 3,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 112,
+      "serial_offset": 5342,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_BOB",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "02 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 1,
+      "object_name": "DefaultSceneRoot57B58D2C4D6EF878D711E5A2D24D13B7",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 5454,
+      "class_name": "SceneComponent",
+      "owner": "BP_Character_BOB_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 9,
+      "object_name": "SCS_Node_33",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5466,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_32",
+      "tagged_properties": {
+        "ComponentTemplate": 7,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "20 52 04 7f 13 01 93 4c a9 2f 3b 54 d9 7e 1a 77",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -22,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_32",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 5605,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Character_BOB_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 8
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 2,
+      "object_name": "FaceHairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5646,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {
+        "AttachParent": 4
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 2,
+      "object_name": "FaceMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5687,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {
+        "AttachParent": 4
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 2,
+      "object_name": "HairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5728,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {
+        "AttachParent": 4
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -29,
+      "outer_index": 2,
+      "object_name": "LowerMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5769,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {
+        "AttachParent": 4
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 2,
+      "object_name": "UpperMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 5810,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_BOB_C",
+      "tagged_properties": {
+        "AttachParent": 4
+      }
+    }
+  ],
+  "sha256": "ebfd3bbe0fe588cdfea9337938b1a8d8adcd7c860af1bc66497ae3411ff4b036",
+  "selection_reason": "local-versus shared-content candidate"
+}

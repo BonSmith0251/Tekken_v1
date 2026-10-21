@@ -1,0 +1,612 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Common/BP_SpawnedCharacterItemStatic.uasset",
+  "id": "3f4d192694d9f92daa63a6f8",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "Function"
+  ],
+  "size": 5437,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Common/BP_SpawnedCharacterItemStatic.uasset",
+  "metadata_file": "metadata/3f4d192694d9f92daa63a6f8.json",
+  "function_count": 3,
+  "summary": {
+    "total_header_size": 4134,
+    "package_flags": 2147483648,
+    "name_count": 61,
+    "name_offset": 189,
+    "export_count": 15,
+    "export_offset": 2494,
+    "import_count": 26,
+    "import_offset": 1766,
+    "bulk_data_start_offset": 5433,
+    "guid": "1301ad04fbae28488ab9478138fa7397"
+  },
+  "names": [
+    "/Game/Character/Item/Common/BP_SpawnedCharacterItemStatic",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "Actor",
+    "AllNodes",
+    "ArrayProperty",
+    "bAutoWeld",
+    "bCastInsetShadow",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BodyInstance",
+    "BoolProperty",
+    "BP_SpawnedCharacterItemStatic",
+    "BP_SpawnedCharacterItemStatic_C",
+    "CallFunc_SetStaticMesh_ReturnValue",
+    "Class",
+    "ComponentTemplate",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_SpawnedCharacterItemStatic_C",
+    "Default__Function",
+    "Default__ObjectProperty",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StaticMeshComponent",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "Function",
+    "GeneratedClass",
+    "Get Static Mesh Item",
+    "Guid",
+    "IntProperty",
+    "Mesh",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "RootNodes",
+    "SceneComponent",
+    "SCS_Node",
+    "Set Static Mesh Item",
+    "SetStaticMesh",
+    "SimpleConstructionScript",
+    "SM Item",
+    "Static Mesh",
+    "StaticMesh",
+    "StaticMeshComponent",
+    "StructProperty",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -22,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -22,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -22,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -21,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -21,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "StaticMesh"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -9,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -21,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -16,
+      "object_name": "StaticMesh"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -22,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -22,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -22,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -22,
+      "object_name": "Default__StaticMeshComponent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 8,
+      "object_name": "Mesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4134,
+      "class_name": "ObjectProperty",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -6,
+      "super_index": -18,
+      "template_index": -17,
+      "outer_index": 8,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 47,
+      "serial_offset": 4174,
+      "class_name": "Function",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 1,
+        "super_struct": -18,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 3,
+        "script_storage_size": 3,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 4206,
+        "bytecode_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/3f4d192694d9f92daa63a6f8/000001.bytecode.bin"
+      },
+      "raw_export_file": "functions/3f4d192694d9f92daa63a6f8/000001.export.bin"
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 4,
+      "object_name": "SM Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4221,
+      "class_name": "ObjectProperty",
+      "owner": "Get Static Mesh Item",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 8,
+      "object_name": "Get Static Mesh Item",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 4261,
+      "class_name": "Function",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 2,
+        "super_struct": 0,
+        "first_child": 3,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 44,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 4293,
+        "bytecode_sha256": "c729803847f45a1dcdbd7d399c34854bcf475bc8bbfcb9dafd38bd7b83426fad",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/3f4d192694d9f92daa63a6f8/000003.bytecode.bin"
+      },
+      "raw_export_file": "functions/3f4d192694d9f92daa63a6f8/000003.export.bin"
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 7,
+      "object_name": "CallFunc_SetStaticMesh_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 4333,
+      "class_name": "BoolProperty",
+      "owner": "Set Static Mesh Item",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 7,
+      "object_name": "Static Mesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 4371,
+      "class_name": "ObjectProperty",
+      "owner": "Set Static Mesh Item",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 8,
+      "object_name": "Set Static Mesh Item",
+      "object_flags": 1,
+      "serial_size": 82,
+      "serial_offset": 4411,
+      "class_name": "Function",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 4,
+        "super_struct": 0,
+        "first_child": 6,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 58,
+        "script_storage_size": 38,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 4443,
+        "bytecode_sha256": "094d34f9123937c4640715ef7214586ed86344187defaf6ef61aa98ffa08dffe",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/3f4d192694d9f92daa63a6f8/000006.bytecode.bin"
+      },
+      "raw_export_file": "functions/3f4d192694d9f92daa63a6f8/000006.export.bin"
+    },
+    {
+      "index": 7,
+      "class_index": -11,
+      "super_index": -9,
+      "template_index": -3,
+      "outer_index": 0,
+      "object_name": "BP_SpawnedCharacterItemStatic_C",
+      "object_flags": 9,
+      "serial_size": 145,
+      "serial_offset": 4493,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 14
+      }
+    },
+    {
+      "index": 8,
+      "class_index": 8,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "Default__BP_SpawnedCharacterItemStatic_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 4638,
+      "class_name": "BP_SpawnedCharacterItemStatic_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_SpawnedCharacterItemStatic",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 4646,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -9,
+        "SimpleConstructionScript": 14,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 8,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "8b 39 18 55 a8 39 5a 08 00 78 cc a4 ca 7b 6a d4",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -23,
+      "outer_index": 8,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 4895,
+      "class_name": "SceneComponent",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 14,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 4907,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_5",
+      "tagged_properties": {
+        "ComponentTemplate": 11,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -24,
+      "outer_index": 14,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 5046,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_5",
+      "tagged_properties": {
+        "ComponentTemplate": 15,
+        "VariableName": "Mesh",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "6a 7c 10 98 9f 9c cb 88 db 70 77 ed 5e ad c8 21",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 8,
+      "object_name": "SimpleConstructionScript_5",
+      "object_flags": 8,
+      "serial_size": 123,
+      "serial_offset": 5185,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 0d 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "01 00 00 00 0d 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 12
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 8,
+      "object_name": "StaticMeshComponent_18",
+      "object_flags": 41,
+      "serial_size": 125,
+      "serial_offset": 5308,
+      "class_name": "StaticMeshComponent",
+      "owner": "BP_SpawnedCharacterItemStatic_C",
+      "tagged_properties": {
+        "bCastInsetShadow": true,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 75,
+          "value_prefix_hex": "06 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "090817d19de68cc68f9b5ab4dede9768fe3d3f6dd277de974ebfcbb6b3d50b25",
+  "selection_reason": "local-versus shared-content candidate"
+}

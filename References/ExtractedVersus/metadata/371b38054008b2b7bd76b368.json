@@ -1,0 +1,2490 @@
+{
+  "path": "TekkenGame/Content/Character/CharacterBlueprints/BP_Character_NSA.uasset",
+  "id": "371b38054008b2b7bd76b368",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 26148,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/CharacterBlueprints/BP_Character_NSA.uasset",
+  "metadata_file": "metadata/371b38054008b2b7bd76b368.json",
+  "function_count": 9,
+  "summary": {
+    "total_header_size": 19277,
+    "package_flags": 2147483648,
+    "name_count": 219,
+    "name_offset": 189,
+    "export_count": 80,
+    "export_offset": 10161,
+    "import_count": 126,
+    "import_offset": 6633,
+    "bulk_data_start_offset": 26144,
+    "guid": "c3dee3c8fe57a842a7bc28791f7af3de"
+  },
+  "names": [
+    "/Game/Character/CharacterBlueprints/BP_Character_NSA",
+    "/Game/Character/Common/BP_TekkenPlayer_Modular",
+    "/Game/Character/Item/ItemManagerComponent",
+    "/Game/Character/Item/WazaManagerComponent",
+    "/Game/Character/NSA/Kiseki/DA_nsaKiseki",
+    "/Game/Character/NSA/RageArts/CF_na_far_blur_size",
+    "/Game/Character/NSA/RageArts/CF_na_focal_distance",
+    "/Game/Character/NSA/RageArts/CF_na_focal_region",
+    "/Game/Character/NSA/RageArts/CF_na_max_bokeh_size",
+    "/Game/Character/NSA/RageArts/CF_na_scale",
+    "/Game/Character/NSA/RageArts/CF_na_vignette_intensity",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/TekkenGame",
+    "Add_FloatFloat",
+    "Add_IntInt",
+    "AllNodes",
+    "Array_Get",
+    "Array_Length",
+    "ArrayProperty",
+    "Attach",
+    "AttachParent",
+    "bEnabled",
+    "bIsParentComponentNative",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BooleanAND",
+    "BoolProperty",
+    "bOverride_DepthOfFieldFocalDistance",
+    "bOverride_DepthOfFieldFocalRegion",
+    "bOverride_DepthOfFieldMaxBokehSize",
+    "bOverride_DepthOfFieldMethod",
+    "bOverride_DepthOfFieldScale",
+    "bOverride_VignetteIntensity",
+    "BP_Character_NSA",
+    "BP_Character_NSA_C",
+    "BP_TekkenPlayer_Modular_C",
+    "ByteProperty",
+    "CallFunc_Add_FloatFloat_ReturnValue",
+    "CallFunc_Add_IntInt_ReturnValue",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_Array_Length_ReturnValue",
+    "CallFunc_BooleanAND_ReturnValue",
+    "CallFunc_EqualEqual_IntInt_ReturnValue",
+    "CallFunc_FindSubstring_ReturnValue",
+    "CallFunc_GetAllEquippedItemObjects_ReturnValue",
+    "CallFunc_GetFloatValue_ReturnValue",
+    "CallFunc_GetFloatValue_ReturnValue2",
+    "CallFunc_GetFloatValue_ReturnValue3",
+    "CallFunc_GetFloatValue_ReturnValue4",
+    "CallFunc_GetFloatValue_ReturnValue5",
+    "CallFunc_GetObjectName_ReturnValue",
+    "CallFunc_GetWeaponMesh_Retrun",
+    "CallFunc_IsValid_ReturnValue",
+    "CallFunc_Less_IntInt_ReturnValue",
+    "CallFunc_Not_PreBool_ReturnValue",
+    "CallFunc_NotEqual_IntInt_ReturnValue",
+    "CapsuleComponent",
+    "CF_na_far_blur_size",
+    "CF_na_focal_distance",
+    "CF_na_focal_region",
+    "CF_na_max_bokeh_size",
+    "CF_na_scale",
+    "CF_na_vignette_intensity",
+    "Class",
+    "CollisionCylinder",
+    "ComponentTemplate",
+    "CurveFloat",
+    "DA_nsaKiseki",
+    "Default__ArrayProperty",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_Character_NSA_C",
+    "Default__BP_TekkenPlayer_Modular_C",
+    "Default__ByteProperty",
+    "Default__EdGraph",
+    "Default__FloatProperty",
+    "Default__Function",
+    "Default__InheritableComponentHandler",
+    "Default__IntProperty",
+    "Default__KismetArrayLibrary",
+    "Default__KismetStringLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__PostProcessComponent",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__StrProperty",
+    "Default__StructProperty",
+    "Default__TkTraceComponent",
+    "DefaultSceneRoot",
+    "DefaultSceneRootB33E44A9473AF1BA428BE088CC12A9AB",
+    "DefaultSceneRootNode",
+    "DeltaSeconds",
+    "DeltaTime",
+    "DepthOfFieldFocalDistance",
+    "DepthOfFieldFocalRegion",
+    "DepthOfFieldMaxBokehSize",
+    "DepthOfFieldScale",
+    "DofScaleCurve",
+    "EdGraph",
+    "EnableUpdatePostProcess",
+    "EntryPoint",
+    "Enum",
+    "EqualEqual_IntInt",
+    "Event ID",
+    "ExecuteUbergraph_BP_Character_NSA",
+    "FaceHairMesh",
+    "FaceMesh",
+    "FarBlurSizeCurve",
+    "FindSubstring",
+    "FloatProperty",
+    "FocalDistanceCurve",
+    "FocalRegionCurve",
+    "Function",
+    "Game",
+    "GeneratedClass",
+    "GetAllEquippedItemObjects",
+    "GetFloatValue",
+    "GetObjectName",
+    "GetTraceComponent",
+    "GetWeaponMesh",
+    "Guid",
+    "HairMesh",
+    "InheritableComponentHandler",
+    "InitBattleMode",
+    "IntProperty",
+    "IsValid",
+    "ItemManagerComponent",
+    "ItemManagerComponent_C",
+    "ItemManagerComponentA8ABB053439170F5003957B6CF01E18A",
+    "K2Node_DynamicCast_As________________",
+    "K2Node_DynamicCast_bSuccess",
+    "K2Node_Event_DeltaSeconds",
+    "K2Node_Event_Event_ID",
+    "K2Node_Event_Mode",
+    "K2Node_Event_PlayerId",
+    "K2Node_SwitchEnum_CmpSuccess",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "KismetStringLibrary",
+    "KismetSystemLibrary",
+    "Less_IntInt",
+    "LowerMesh",
+    "MaxBokehSizeCurve",
+    "Mode",
+    "ModularTekkenPlayer",
+    "MotheadEvent",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Not_PreBool",
+    "NotEqual_ByteByte",
+    "NotEqual_IntInt",
+    "Object",
+    "ObjectProperty",
+    "OnInitBattle",
+    "OnMotEvent",
+    "OnPreInitBattle",
+    "Package",
+    "ParentClass",
+    "ParentComponentOrVariableName",
+    "PlayerId",
+    "PlayerNumber",
+    "PointerToUberGraphFrame",
+    "PostProcess",
+    "PostProcess_GEN_VARIABLE",
+    "PostProcessComponent",
+    "PostProcessSettings",
+    "PPS_UpdateTime",
+    "Priority",
+    "ReceiveTick",
+    "ret",
+    "Retrun",
+    "ReturnValue",
+    "RootComponent",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "ScriptStruct",
+    "SCS_Node",
+    "Settings",
+    "Setup",
+    "SimpleConstructionScript",
+    "Skeletal Mesh Component",
+    "SkeletalMesh",
+    "SkeletalMeshComponent",
+    "SkinnedMeshComponent",
+    "Static Mesh Component",
+    "StaticMeshComponent",
+    "StrProperty",
+    "StructProperty",
+    "TekkenPlayer",
+    "Temp_bool_True_if_break_was_hit_Variable",
+    "Temp_int_Array_Index_Variable",
+    "Temp_int_Loop_Counter_Variable",
+    "TkTrace",
+    "TkTrace_GEN_VARIABLE",
+    "TkTraceComponent",
+    "TkTraceDataAsset",
+    "TraceData",
+    "UberGraphFrame",
+    "UberGraphFramePointerProperty",
+    "UberGraphFunction",
+    "UpdatePostProcessSettings",
+    "UpperMesh",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "VignetteIntensity",
+    "VignetteIntensityCurve",
+    "WazaManagerComponent1B79286E43B16B064BD336BCD0489530",
+    "WazaManagerComponent_C"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ArrayProperty",
+      "outer_index": -103,
+      "object_name": "Default__ArrayProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -104,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -95,
+      "object_name": "BP_TekkenPlayer_Modular_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -104,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -103,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -35,
+      "object_name": "bEnabled"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -109,
+      "object_name": "bOverride_DepthOfFieldFocalDistance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -109,
+      "object_name": "bOverride_DepthOfFieldFocalRegion"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -109,
+      "object_name": "bOverride_DepthOfFieldMaxBokehSize"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -109,
+      "object_name": "bOverride_DepthOfFieldScale"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -109,
+      "object_name": "bOverride_VignetteIntensity"
+    },
+    {
+      "class_package": "/Game/Character/Common/BP_TekkenPlayer_Modular",
+      "class_name": "BP_TekkenPlayer_Modular_C",
+      "outer_index": -95,
+      "object_name": "Default__BP_TekkenPlayer_Modular_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ByteProperty",
+      "outer_index": -103,
+      "object_name": "Default__ByteProperty"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CapsuleComponent",
+      "outer_index": -12,
+      "object_name": "CollisionCylinder"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "ArrayProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "ByteProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -103,
+      "object_name": "StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "CapsuleComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "CurveFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "PostProcessComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "SkinnedMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "ItemManagerComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "ModularTekkenPlayer"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "TekkenPlayer"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "TkTraceComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "TkTraceDataAsset"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -97,
+      "object_name": "CF_na_far_blur_size"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -98,
+      "object_name": "CF_na_focal_distance"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -99,
+      "object_name": "CF_na_focal_region"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -100,
+      "object_name": "CF_na_max_bokeh_size"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -101,
+      "object_name": "CF_na_scale"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "CurveFloat",
+      "outer_index": -102,
+      "object_name": "CF_na_vignette_intensity"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -104,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -105,
+      "object_name": "InitBattleMode"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Enum",
+      "outer_index": -105,
+      "object_name": "MotheadEvent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -103,
+      "object_name": "Default__FloatProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -109,
+      "object_name": "DepthOfFieldFocalDistance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -109,
+      "object_name": "DepthOfFieldFocalRegion"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -109,
+      "object_name": "DepthOfFieldMaxBokehSize"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -109,
+      "object_name": "DepthOfFieldScale"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -109,
+      "object_name": "VignetteIntensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -3,
+      "object_name": "OnInitBattle"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -3,
+      "object_name": "OnMotEvent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -3,
+      "object_name": "OnPreInitBattle"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -3,
+      "object_name": "ReceiveTick"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -3,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -103,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -28,
+      "object_name": "GetFloatValue"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -31,
+      "object_name": "Array_Get"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -31,
+      "object_name": "Array_Length"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "Add_FloatFloat"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "Add_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "BooleanAND"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "EqualEqual_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "Less_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "Not_PreBool"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "NotEqual_ByteByte"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -32,
+      "object_name": "NotEqual_IntInt"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -33,
+      "object_name": "FindSubstring"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -34,
+      "object_name": "GetObjectName"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -34,
+      "object_name": "IsValid"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -41,
+      "object_name": "GetAllEquippedItemObjects"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -42,
+      "object_name": "GetTraceComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -44,
+      "object_name": "Attach"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -44,
+      "object_name": "Setup"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "InheritableComponentHandler",
+      "outer_index": -104,
+      "object_name": "Default__InheritableComponentHandler"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -103,
+      "object_name": "Default__IntProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "IntProperty",
+      "outer_index": -43,
+      "object_name": "PlayerNumber"
+    },
+    {
+      "class_package": "/Game/Character/Item/ItemManagerComponent",
+      "class_name": "ItemManagerComponent_C",
+      "outer_index": -3,
+      "object_name": "ItemManagerComponentA8ABB053439170F5003957B6CF01E18A"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetArrayLibrary",
+      "outer_index": -104,
+      "object_name": "Default__KismetArrayLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetStringLibrary",
+      "outer_index": -104,
+      "object_name": "Default__KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -104,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -3,
+      "object_name": "ItemManagerComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -103,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -40,
+      "object_name": "SkeletalMesh"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Common/BP_TekkenPlayer_Modular"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/Kiseki/DA_nsaKiseki"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_far_blur_size"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_focal_distance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_focal_region"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_max_bokeh_size"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_scale"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/NSA/RageArts/CF_na_vignette_intensity"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/TekkenGame"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "PostProcessComponent",
+      "outer_index": -104,
+      "object_name": "Default__PostProcessComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -104,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -104,
+      "object_name": "PointerToUberGraphFrame"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ScriptStruct",
+      "outer_index": -104,
+      "object_name": "PostProcessSettings"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -104,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -104,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -3,
+      "object_name": "Skeletal Mesh Component_0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -3,
+      "object_name": "SkeletalMeshComponent_188"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -3,
+      "object_name": "SkeletalMeshComponent_500"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -12,
+      "object_name": "FaceHairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -12,
+      "object_name": "FaceMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -12,
+      "object_name": "HairMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -12,
+      "object_name": "LowerMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -12,
+      "object_name": "UpperMesh"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -3,
+      "object_name": "Static Mesh Component_4"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -103,
+      "object_name": "Default__StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -103,
+      "object_name": "Default__StructProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StructProperty",
+      "outer_index": -35,
+      "object_name": "Settings"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TkTraceComponent",
+      "outer_index": -105,
+      "object_name": "Default__TkTraceComponent"
+    },
+    {
+      "class_package": "/Script/TekkenGame",
+      "class_name": "TkTraceDataAsset",
+      "outer_index": -96,
+      "object_name": "DA_nsaKiseki"
+    },
+    {
+      "class_package": "/Game/Character/Item/WazaManagerComponent",
+      "class_name": "WazaManagerComponent_C",
+      "outer_index": -3,
+      "object_name": "WazaManagerComponent1B79286E43B16B064BD336BCD0489530"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "DofScaleCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19277,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "MaxBokehSizeCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19317,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "VignetteIntensityCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19357,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "FarBlurSizeCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19397,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "FocalDistanceCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19437,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "FocalRegionCurve",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19477,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 61,
+      "object_name": "PPS_UpdateTime",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 19517,
+      "class_name": "FloatProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 61,
+      "object_name": "EnableUpdatePostProcess",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 19553,
+      "class_name": "BoolProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "TraceData",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19591,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "TkTrace",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19631,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 61,
+      "object_name": "PostProcess",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19671,
+      "class_name": "ObjectProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 11,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 21,
+      "object_name": "K2Node_Event_Mode",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19711,
+      "class_name": "ByteProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 19751,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 13,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "K2Node_SwitchEnum_CmpSuccess",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 19789,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 21,
+      "object_name": "K2Node_Event_PlayerId",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 19827,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 21,
+      "object_name": "K2Node_Event_Event_ID",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19863,
+      "class_name": "ByteProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 21,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 19903,
+      "class_name": "BoolProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 21,
+      "object_name": "CallFunc_GetWeaponMesh_Retrun",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 19941,
+      "class_name": "ObjectProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 18,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 21,
+      "object_name": "K2Node_Event_DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 19981,
+      "class_name": "FloatProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 21,
+      "object_name": "EntryPoint",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 20017,
+      "class_name": "IntProperty",
+      "owner": "ExecuteUbergraph_BP_Character_NSA",
+      "tagged_properties": {}
+    },
+    {
+      "index": 20,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "ExecuteUbergraph_BP_Character_NSA",
+      "object_flags": 1,
+      "serial_size": 686,
+      "serial_offset": 20053,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": 0,
+        "first_child": 20,
+        "flags_hex": "0x00000000",
+        "native": false,
+        "script_memory_size": 958,
+        "script_storage_size": 642,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 20085,
+        "bytecode_sha256": "068c51e8712cf9e023156d41db8ae4201b8c4ba469040d75988315fbb2d1b92f",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000020.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000020.export.bin"
+    },
+    {
+      "index": 21,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 23,
+      "object_name": "Mode",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 20739,
+      "class_name": "ByteProperty",
+      "owner": "OnInitBattle",
+      "tagged_properties": {}
+    },
+    {
+      "index": 22,
+      "class_index": -19,
+      "super_index": -61,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "OnInitBattle",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 20779,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 21,
+        "super_struct": -61,
+        "first_child": 22,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 20811,
+        "bytecode_sha256": "1be666c14a2673537ea67c0c3731305c10b7e7f83a01dc99a48212716dabb88a",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000022.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000022.export.bin"
+    },
+    {
+      "index": 23,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 26,
+      "object_name": "PlayerId",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 20851,
+      "class_name": "IntProperty",
+      "owner": "OnMotEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 24,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -13,
+      "outer_index": 26,
+      "object_name": "Event ID",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 20887,
+      "class_name": "ByteProperty",
+      "owner": "OnMotEvent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 25,
+      "class_index": -19,
+      "super_index": -62,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "OnMotEvent",
+      "object_flags": 1,
+      "serial_size": 82,
+      "serial_offset": 20927,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 23,
+        "super_struct": -62,
+        "first_child": 25,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 58,
+        "script_storage_size": 38,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 20959,
+        "bytecode_sha256": "f5eb2b0a2f0fc03448778514fbbcb1f6e3ef27dcc7ae1677bc051f0b6a3e2c59",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000025.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000025.export.bin"
+    },
+    {
+      "index": 26,
+      "class_index": -19,
+      "super_index": -63,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "OnPreInitBattle",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 21009,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 26,
+        "super_struct": -63,
+        "first_child": 0,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 22,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 21041,
+        "bytecode_sha256": "d5833c397d97e7c82949b72a7830bcd89bcb215e2c971aebdf46a1b9bdd28901",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000026.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000026.export.bin"
+    },
+    {
+      "index": 27,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 29,
+      "object_name": "DeltaSeconds",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21071,
+      "class_name": "FloatProperty",
+      "owner": "ReceiveTick",
+      "tagged_properties": {}
+    },
+    {
+      "index": 28,
+      "class_index": -19,
+      "super_index": -64,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "ReceiveTick",
+      "object_flags": 1,
+      "serial_size": 72,
+      "serial_offset": 21107,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 27,
+        "super_struct": -64,
+        "first_child": 28,
+        "flags_hex": "0x08020800",
+        "native": false,
+        "script_memory_size": 40,
+        "script_storage_size": 28,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 21139,
+        "bytecode_sha256": "632bc721f11a4820be3f20f55aecad26ecd3149ecd9ce2e429fb85427c6ce70b",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000028.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000028.export.bin"
+    },
+    {
+      "index": 29,
+      "class_index": -19,
+      "super_index": -65,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 53,
+      "serial_offset": 21179,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 29,
+        "super_struct": -65,
+        "first_child": 0,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 13,
+        "script_storage_size": 9,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 21211,
+        "bytecode_sha256": "51340ff4a80b4471de3652359cad444e41bb20494461596998311e42b90d21e6",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000029.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000029.export.bin"
+    },
+    {
+      "index": 30,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 44,
+      "object_name": "CallFunc_GetAllEquippedItemObjects_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21232,
+      "class_name": "ObjectProperty",
+      "owner": "CallFunc_GetAllEquippedItemObjects_ReturnValue",
+      "tagged_properties": {}
+    },
+    {
+      "index": 31,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 49,
+      "object_name": "ret",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21272,
+      "class_name": "ObjectProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 32,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "CallFunc_NotEqual_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21312,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 33,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 49,
+      "object_name": "CallFunc_FindSubstring_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21350,
+      "class_name": "IntProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 34,
+      "class_index": -23,
+      "super_index": 0,
+      "template_index": -121,
+      "outer_index": 49,
+      "object_name": "CallFunc_GetObjectName_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21386,
+      "class_name": "StrProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 35,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "K2Node_DynamicCast_bSuccess",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21422,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 36,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 49,
+      "object_name": "K2Node_DynamicCast_As________________",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21460,
+      "class_name": "ObjectProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 37,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 49,
+      "object_name": "CallFunc_Array_Get_Item",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21500,
+      "class_name": "ObjectProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 38,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "CallFunc_BooleanAND_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21540,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 39,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 49,
+      "object_name": "CallFunc_Add_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21578,
+      "class_name": "IntProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 40,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "CallFunc_Less_IntInt_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21614,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 41,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 49,
+      "object_name": "CallFunc_Array_Length_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21652,
+      "class_name": "IntProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 42,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 49,
+      "object_name": "Temp_int_Loop_Counter_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21688,
+      "class_name": "IntProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 43,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 49,
+      "object_name": "CallFunc_GetAllEquippedItemObjects_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21724,
+      "class_name": "ArrayProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 44,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "CallFunc_Not_PreBool_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21764,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 45,
+      "class_index": -20,
+      "super_index": 0,
+      "template_index": -86,
+      "outer_index": 49,
+      "object_name": "Temp_int_Array_Index_Variable",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 21802,
+      "class_name": "IntProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 46,
+      "class_index": -16,
+      "super_index": 0,
+      "template_index": -5,
+      "outer_index": 49,
+      "object_name": "Temp_bool_True_if_break_was_hit_Variable",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 21838,
+      "class_name": "BoolProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 47,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 49,
+      "object_name": "Retrun",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 21876,
+      "class_name": "ObjectProperty",
+      "owner": "GetWeaponMesh",
+      "tagged_properties": {}
+    },
+    {
+      "index": 48,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "GetWeaponMesh",
+      "object_flags": 1,
+      "serial_size": 541,
+      "serial_offset": 21916,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 30,
+        "super_struct": 0,
+        "first_child": 48,
+        "flags_hex": "0x0C420000",
+        "native": false,
+        "script_memory_size": 797,
+        "script_storage_size": 497,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 21948,
+        "bytecode_sha256": "d2ce438a9661baa3d3f7e2e348409117883bcf3556c81425afa4007627828e51",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000048.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000048.export.bin"
+    },
+    {
+      "index": 49,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -93,
+      "outer_index": 51,
+      "object_name": "ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 22457,
+      "class_name": "ObjectProperty",
+      "owner": "GetTraceComponent",
+      "tagged_properties": {}
+    },
+    {
+      "index": 50,
+      "class_index": -19,
+      "super_index": -82,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "GetTraceComponent",
+      "object_flags": 1,
+      "serial_size": 62,
+      "serial_offset": 22497,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 49,
+        "super_struct": -82,
+        "first_child": 50,
+        "flags_hex": "0x0C420800",
+        "native": false,
+        "script_memory_size": 30,
+        "script_storage_size": 18,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 22529,
+        "bytecode_sha256": "64c1f378d6e5c311f82adc4a750a55509ba3c1b29560f76e82e2b0e78cbd8123",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000050.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000050.export.bin"
+    },
+    {
+      "index": 51,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_Add_FloatFloat_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22559,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 52,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_GetFloatValue_ReturnValue5",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22595,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 53,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_GetFloatValue_ReturnValue4",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22631,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 54,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_GetFloatValue_ReturnValue3",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22667,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 55,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_GetFloatValue_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22703,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 56,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "CallFunc_GetFloatValue_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22739,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 57,
+      "class_index": -18,
+      "super_index": 0,
+      "template_index": -55,
+      "outer_index": 59,
+      "object_name": "DeltaTime",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 22775,
+      "class_name": "FloatProperty",
+      "owner": "UpdatePostProcessSettings",
+      "tagged_properties": {}
+    },
+    {
+      "index": 58,
+      "class_index": -19,
+      "super_index": 0,
+      "template_index": -66,
+      "outer_index": 61,
+      "object_name": "UpdatePostProcessSettings",
+      "object_flags": 1,
+      "serial_size": 573,
+      "serial_offset": 22811,
+      "class_name": "Function",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 51,
+        "super_struct": 0,
+        "first_child": 58,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 881,
+        "script_storage_size": 529,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 22843,
+        "bytecode_sha256": "9ee3d9c2821c9092502182819ea62124ba95effa7f7ac9880e263595d34b9776",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/371b38054008b2b7bd76b368/000058.bytecode.bin"
+      },
+      "raw_export_file": "functions/371b38054008b2b7bd76b368/000058.export.bin"
+    },
+    {
+      "index": 59,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -122,
+      "outer_index": 61,
+      "object_name": "UberGraphFrame",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 23384,
+      "class_name": "StructProperty",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 60,
+      "class_index": -26,
+      "super_index": -3,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_Character_NSA_C",
+      "object_flags": 9,
+      "serial_size": 304,
+      "serial_offset": 23424,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 74,
+        "InheritableComponentHandler": 68,
+        "UberGraphFramePointerProperty": 60,
+        "UberGraphFunction": 21
+      }
+    },
+    {
+      "index": 61,
+      "class_index": 61,
+      "super_index": 0,
+      "template_index": -12,
+      "outer_index": 0,
+      "object_name": "Default__BP_Character_NSA_C",
+      "object_flags": 49,
+      "serial_size": 471,
+      "serial_offset": 23728,
+      "class_name": "BP_Character_NSA_C",
+      "owner": null,
+      "tagged_properties": {
+        "UberGraphFrame": {
+          "name": "UberGraphFrame",
+          "type": "StructProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "PointerToUberGraphFrame",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "9c 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "TraceData": -125,
+        "FocalRegionCurve": -48,
+        "FocalDistanceCurve": -47,
+        "FarBlurSizeCurve": -46,
+        "VignetteIntensityCurve": -51,
+        "MaxBokehSizeCurve": -49,
+        "DofScaleCurve": -50,
+        "CapsuleComponent": 64,
+        "FaceMesh": 76,
+        "HairMesh": 77,
+        "FaceHairMesh": 75,
+        "UpperMesh": 79,
+        "LowerMesh": 78,
+        "RootComponent": 64
+      }
+    },
+    {
+      "index": 62,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BP_Character_NSA",
+      "object_flags": 11,
+      "serial_size": 278,
+      "serial_offset": 24199,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -3,
+        "SimpleConstructionScript": 74,
+        "InheritableComponentHandler": 68,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 61,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 246,
+          "value_prefix_hex": "a9 1a ea 4f d5 b3 c8 43 80 5c dd 06 b8 a0 b9 a6",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 63,
+      "class_index": -27,
+      "super_index": 0,
+      "template_index": -14,
+      "outer_index": 62,
+      "object_name": "CollisionCylinder",
+      "object_flags": 262185,
+      "serial_size": 12,
+      "serial_offset": 24477,
+      "class_name": "CapsuleComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 64,
+      "class_index": -29,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 63,
+      "object_name": "GetTraceComponent",
+      "object_flags": 8,
+      "serial_size": 90,
+      "serial_offset": 24489,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_NSA",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 65,
+      "class_index": -29,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 63,
+      "object_name": "GetWeaponMesh",
+      "object_flags": 8,
+      "serial_size": 130,
+      "serial_offset": 24579,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_NSA",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 56,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 66,
+      "class_index": -29,
+      "super_index": 0,
+      "template_index": -52,
+      "outer_index": 63,
+      "object_name": "UpdatePostProcessSettings",
+      "object_flags": 8,
+      "serial_size": 158,
+      "serial_offset": 24709,
+      "class_name": "EdGraph",
+      "owner": "BP_Character_NSA",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 84,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 67,
+      "class_index": -30,
+      "super_index": 0,
+      "template_index": -85,
+      "outer_index": 61,
+      "object_name": "InheritableComponentHandler",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 24867,
+      "class_name": "InheritableComponentHandler",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 68,
+      "class_index": -35,
+      "super_index": 0,
+      "template_index": -106,
+      "outer_index": 61,
+      "object_name": "PostProcess_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 370,
+      "serial_offset": 24879,
+      "class_name": "PostProcessComponent",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {
+        "Settings": {
+          "name": "Settings",
+          "type": "StructProperty",
+          "size": 254,
+          "array_index": 0,
+          "struct_name": "PostProcessSettings",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "20 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 21 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 24 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 22 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 23 00 00 00 00 00 00 00 1f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 65 00 00 00 00 00 00 00 75 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 20 41 66 00 00 00 00 00 00 00 75 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 80 3f 68 00 00 00 00 00 00 00 75 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 3f 67 00 00 00 00 00 00 00 75 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 3f 9c 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "Priority": 3.0,
+        "bEnabled": false
+      }
+    },
+    {
+      "index": 69,
+      "class_index": -36,
+      "super_index": 0,
+      "template_index": -107,
+      "outer_index": 61,
+      "object_name": "DefaultSceneRootB33E44A9473AF1BA428BE088CC12A9AB",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 25249,
+      "class_name": "SceneComponent",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 70,
+      "class_index": -37,
+      "super_index": 0,
+      "template_index": -110,
+      "outer_index": 74,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 198,
+      "serial_offset": 25261,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 69,
+        "VariableName": "PostProcess",
+        "ParentComponentOrVariableName": "CollisionCylinder",
+        "bIsParentComponentNative": true,
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 170,
+          "value_prefix_hex": "cc 66 87 c9 99 24 17 4e 98 31 88 7c b0 5f 62 d5",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 71,
+      "class_index": -37,
+      "super_index": 0,
+      "template_index": -110,
+      "outer_index": 74,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 198,
+      "serial_offset": 25459,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 80,
+        "VariableName": "TkTrace",
+        "ParentComponentOrVariableName": "CollisionCylinder",
+        "bIsParentComponentNative": true,
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 170,
+          "value_prefix_hex": "30 ad ca 74 3d c7 9e 4b 83 42 03 fb 92 7b 29 b5",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 72,
+      "class_index": -37,
+      "super_index": 0,
+      "template_index": -110,
+      "outer_index": 74,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 25657,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_2",
+      "tagged_properties": {
+        "ComponentTemplate": 70,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "88 c5 61 dc c3 20 1b 4c a5 08 ca 55 47 e2 fd 0e",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 73,
+      "class_index": -38,
+      "super_index": 0,
+      "template_index": -111,
+      "outer_index": 61,
+      "object_name": "SimpleConstructionScript_2",
+      "object_flags": 8,
+      "serial_size": 131,
+      "serial_offset": 25796,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "02 00 00 00 48 00 00 00 47 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "02 00 00 00 48 00 00 00 47 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 73
+      }
+    },
+    {
+      "index": 74,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -115,
+      "outer_index": 62,
+      "object_name": "FaceHairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 25927,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {
+        "AttachParent": 64
+      }
+    },
+    {
+      "index": 75,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -116,
+      "outer_index": 62,
+      "object_name": "FaceMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 25968,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {
+        "AttachParent": 64
+      }
+    },
+    {
+      "index": 76,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -117,
+      "outer_index": 62,
+      "object_name": "HairMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 26009,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {
+        "AttachParent": 64
+      }
+    },
+    {
+      "index": 77,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -118,
+      "outer_index": 62,
+      "object_name": "LowerMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 26050,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {
+        "AttachParent": 64
+      }
+    },
+    {
+      "index": 78,
+      "class_index": -39,
+      "super_index": 0,
+      "template_index": -119,
+      "outer_index": 62,
+      "object_name": "UpperMesh",
+      "object_flags": 262185,
+      "serial_size": 41,
+      "serial_offset": 26091,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "Default__BP_Character_NSA_C",
+      "tagged_properties": {
+        "AttachParent": 64
+      }
+    },
+    {
+      "index": 79,
+      "class_index": -44,
+      "super_index": 0,
+      "template_index": -124,
+      "outer_index": 61,
+      "object_name": "TkTrace_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 26132,
+      "class_name": "TkTraceComponent",
+      "owner": "BP_Character_NSA_C",
+      "tagged_properties": {}
+    }
+  ],
+  "sha256": "acf8c95f9c17243b51344d3a32fded015d50949c35a731263199258dd0b690c6",
+  "selection_reason": "local-versus shared-content candidate"
+}

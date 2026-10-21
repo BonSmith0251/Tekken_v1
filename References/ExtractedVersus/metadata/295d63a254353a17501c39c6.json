@@ -1,0 +1,255 @@
+{
+  "path": "TekkenGame/Content/System/BPM_CommonMacros.uasset",
+  "id": "295d63a254353a17501c39c6",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph"
+  ],
+  "size": 2463,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/BPM_CommonMacros.uasset",
+  "metadata_file": "metadata/295d63a254353a17501c39c6.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1894,
+    "package_flags": 2147483648,
+    "name_count": 38,
+    "name_offset": 189,
+    "export_count": 5,
+    "export_offset": 1370,
+    "import_count": 10,
+    "import_offset": 1090,
+    "bulk_data_start_offset": 2459,
+    "guid": "f4118a8c90545a4f8d523c94b73e0fad"
+  },
+  "names": [
+    "/Game/System/BPM_CommonMacros",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "A += B (float)",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BoolProperty",
+    "BPM_CommonMacros",
+    "BPM_CommonMacros_C",
+    "BPTYPE_MacroLibrary",
+    "ByteProperty",
+    "Class",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BPM_CommonMacros_C",
+    "Default__EdGraph",
+    "Default__Object",
+    "DelayWhenPaused",
+    "EBlueprintType",
+    "EdGraph",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "Schema",
+    "StructProperty"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -10,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -10,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -9,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -10,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -10,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Object",
+      "outer_index": -9,
+      "object_name": "Default__Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": -3,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "BPM_CommonMacros_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 1894,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -8,
+      "outer_index": 0,
+      "object_name": "Default__BPM_CommonMacros_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 1974,
+      "class_name": "BPM_CommonMacros_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 0,
+      "object_name": "BPM_CommonMacros",
+      "object_flags": 11,
+      "serial_size": 261,
+      "serial_offset": 1982,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -3,
+        "BlueprintType": "BPTYPE_MacroLibrary",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "4b 00 ae b6 45 0e 05 4c bc 0e 9c bb 56 eb 03 e8",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 3,
+      "object_name": "A += B (float)",
+      "object_flags": 9,
+      "serial_size": 94,
+      "serial_offset": 2243,
+      "class_name": "EdGraph",
+      "owner": "BPM_CommonMacros",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 20,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 3,
+      "object_name": "DelayWhenPaused",
+      "object_flags": 9,
+      "serial_size": 122,
+      "serial_offset": 2337,
+      "class_name": "EdGraph",
+      "owner": "BPM_CommonMacros",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 48,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "893286ae7fe07b31760590585a02a0d3afd403977c4498a5bc7c20454f8feab5",
+  "selection_reason": "local-versus shared-content candidate"
+}

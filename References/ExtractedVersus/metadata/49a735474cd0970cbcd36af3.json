@@ -1,0 +1,196 @@
+{
+  "path": "TekkenGame/Content/System/MF_BlendNormalUDN.uasset",
+  "id": "49a735474cd0970cbcd36af3",
+  "classes": [
+    "MaterialFunction"
+  ],
+  "size": 2019,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/System/MF_BlendNormalUDN.uasset",
+  "metadata_file": "metadata/49a735474cd0970cbcd36af3.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 1605,
+    "package_flags": 2147483648,
+    "name_count": 30,
+    "name_offset": 189,
+    "export_count": 3,
+    "export_offset": 1269,
+    "import_count": 9,
+    "import_offset": 1017,
+    "bulk_data_start_offset": 2015,
+    "guid": "2e98f7a89269db4299a219f76cce7e3e"
+  },
+  "names": [
+    "/Game/Stage/Common/MasterShader/Texture/T_ENV_MasterTexture_dN",
+    "/Game/Stage/Common/MasterShader/Texture/T_ENV_MasterTexture_N",
+    "/Game/System/MF_BlendNormalUDN",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "ArrayProperty",
+    "bExposeToLibrary",
+    "BoolProperty",
+    "ByteProperty",
+    "Class",
+    "Default__MaterialExpressionTextureObject",
+    "Default__MaterialFunction",
+    "EMaterialSamplerType",
+    "Function",
+    "FunctionExpressions",
+    "Guid",
+    "MaterialExpressionTextureObject",
+    "MaterialFunction",
+    "MF_BlendNormalUDN",
+    "None",
+    "ObjectProperty",
+    "Package",
+    "SamplerType",
+    "SAMPLERTYPE_Normal",
+    "StateId",
+    "StructProperty",
+    "T_ENV_MasterTexture_dN",
+    "T_ENV_MasterTexture_N",
+    "Texture",
+    "Texture2D"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -7,
+      "object_name": "MaterialFunction"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialExpressionTextureObject",
+      "outer_index": -7,
+      "object_name": "Default__MaterialExpressionTextureObject"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialFunction",
+      "outer_index": -7,
+      "object_name": "Default__MaterialFunction"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/MasterShader/Texture/T_ENV_MasterTexture_dN"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Stage/Common/MasterShader/Texture/T_ENV_MasterTexture_N"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -5,
+      "object_name": "T_ENV_MasterTexture_dN"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer_index": -6,
+      "object_name": "T_ENV_MasterTexture_N"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 3,
+      "object_name": "MaterialExpressionTextureObject_8",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 1605,
+      "class_name": "MaterialExpressionTextureObject",
+      "owner": "MF_BlendNormalUDN",
+      "tagged_properties": {
+        "Texture": -9,
+        "SamplerType": "SAMPLERTYPE_Normal",
+        "Function": 3
+      }
+    },
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer_index": 3,
+      "object_name": "MaterialExpressionTextureObject_9",
+      "object_flags": 8,
+      "serial_size": 111,
+      "serial_offset": 1716,
+      "class_name": "MaterialExpressionTextureObject",
+      "owner": "MF_BlendNormalUDN",
+      "tagged_properties": {
+        "Texture": -8,
+        "SamplerType": "SAMPLERTYPE_Normal",
+        "Function": 3
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "MF_BlendNormalUDN",
+      "object_flags": 3,
+      "serial_size": 188,
+      "serial_offset": 1827,
+      "class_name": "MaterialFunction",
+      "owner": null,
+      "tagged_properties": {
+        "StateId": {
+          "name": "StateId",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "35 6b 09 7d 21 b3 58 44 92 2e 9c 83 3b 20 bf 09",
+          "value_prefix_truncated": false
+        },
+        "bExposeToLibrary": true,
+        "FunctionExpressions": {
+          "name": "FunctionExpressions",
+          "type": "ArrayProperty",
+          "size": 52,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 124,
+          "value_prefix_hex": "0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "78a6c1fff3bd3c4877d6d4028b675a5ee5c8122cb4ae6f6984bba150a8ccb63a",
+  "selection_reason": "local-versus shared-content candidate"
+}

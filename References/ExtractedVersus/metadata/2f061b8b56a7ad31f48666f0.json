@@ -1,0 +1,990 @@
+{
+  "path": "TekkenGame/Content/Sound/Character/mrx/BP_mrxCharacterSoundManager.uasset",
+  "id": "2f061b8b56a7ad31f48666f0",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass"
+  ],
+  "size": 12046,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Sound/Character/mrx/BP_mrxCharacterSoundManager.uasset",
+  "metadata_file": "metadata/2f061b8b56a7ad31f48666f0.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 8210,
+    "package_flags": 2147483648,
+    "name_count": 147,
+    "name_offset": 189,
+    "export_count": 6,
+    "export_offset": 7366,
+    "import_count": 109,
+    "import_offset": 4314,
+    "bulk_data_start_offset": 12042,
+    "guid": "08291c7098f88d40bee596b6493d2ff0"
+  },
+  "names": [
+    "/Game/Sound/Character/mrx/BP_mrxCharacterSoundManager",
+    "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+    "/Game/Sound/Voice/mrx/AkBankVoiceMRX",
+    "/Game/Sound/Voice/mrx/mrx_atk_l01",
+    "/Game/Sound/Voice/mrx/mrx_atk_m01",
+    "/Game/Sound/Voice/mrx/mrx_atk_m02",
+    "/Game/Sound/Voice/mrx/mrx_atk_s01",
+    "/Game/Sound/Voice/mrx/mrx_atk_s02",
+    "/Game/Sound/Voice/mrx/mrx_atk_s03",
+    "/Game/Sound/Voice/mrx/mrx_atk_s04",
+    "/Game/Sound/Voice/mrx/mrx_dmg_l01",
+    "/Game/Sound/Voice/mrx/mrx_dmg_l02",
+    "/Game/Sound/Voice/mrx/mrx_dmg_s01",
+    "/Game/Sound/Voice/mrx/mrx_dmg_s02",
+    "/Game/Sound/Voice/mrx/mrx_dmg_s03",
+    "/Game/Sound/Voice/mrx/mrx_ko01",
+    "/Game/Sound/Voice/mrx/mrx_ko02",
+    "/Game/Sound/Voice/mrx/mrx_org01",
+    "/Game/Sound/Voice/mrx/mrx_org02",
+    "/Game/Sound/Voice/mrx/mrx_org03",
+    "/Game/Sound/Voice/mrx/mrx_org04",
+    "/Game/Sound/Voice/mrx/mrx_org05",
+    "/Game/Sound/Voice/mrx/mrx_org06",
+    "/Game/Sound/Voice/mrx/mrx_org07",
+    "/Game/Sound/Voice/mrx/mrx_org08",
+    "/Game/Sound/Voice/mrx/mrx_org09",
+    "/Game/Sound/Voice/mrx/mrx_org10",
+    "/Game/Sound/Voice/mrx/mrx_org11",
+    "/Game/Sound/Voice/mrx/mrx_org12",
+    "/Game/Sound/Voice/mrx/mrx_org13",
+    "/Game/Sound/Voice/mrx/mrx_org14",
+    "/Game/Sound/Voice/mrx/mrx_org15",
+    "/Game/Sound/Voice/mrx/mrx_org16",
+    "/Game/Sound/Voice/mrx/mrx_org17",
+    "/Game/Sound/Voice/mrx/mrx_org18",
+    "/Game/Sound/Voice/mrx/mx_s00",
+    "/Game/Sound/Voice/mrx/mx_s00_jz",
+    "/Game/Sound/Voice/mrx/mx_s00_ka",
+    "/Game/Sound/Voice/mrx/mx_s01",
+    "/Game/Sound/Voice/mrx/mx_s01_he",
+    "/Game/Sound/Voice/mrx/mx_s01_kz",
+    "/Game/Sound/Voice/mrx/mx_s02",
+    "/Game/Sound/Voice/mrx/mx_s03",
+    "/Game/Sound/Voice/mrx/mx_s04",
+    "/Game/Sound/Voice/mrx/mx_s05",
+    "/Game/Sound/Voice/mrx/mx_w00",
+    "/Game/Sound/Voice/mrx/mx_w01",
+    "/Game/Sound/Voice/mrx/mx_w02",
+    "/Script/AkAudio",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AkAudioBank",
+    "AkAudioEvent",
+    "AkBankVoiceMRX",
+    "ArrayProperty",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BoolProperty",
+    "BP_mrxCharacterSoundManager",
+    "BP_mrxCharacterSoundManager_C",
+    "BP_TekkenCharacterSoundManager_C",
+    "CharacterSound",
+    "CharacterStream",
+    "Class",
+    "ComponentTemplate",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_mrxCharacterSoundManager_C",
+    "Default__BP_TekkenCharacterSoundManager_C",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "DefaultSceneRoot",
+    "DefaultSceneRootNode",
+    "Engine",
+    "GeneratedClass",
+    "Guid",
+    "IntProperty",
+    "mrx_atk_l01",
+    "mrx_atk_m01",
+    "mrx_atk_m02",
+    "mrx_atk_s01",
+    "mrx_atk_s02",
+    "mrx_atk_s03",
+    "mrx_atk_s04",
+    "mrx_dmg_l01",
+    "mrx_dmg_l02",
+    "mrx_dmg_s01",
+    "mrx_dmg_s02",
+    "mrx_dmg_s03",
+    "mrx_ko01",
+    "mrx_ko02",
+    "mrx_org01",
+    "mrx_org02",
+    "mrx_org03",
+    "mrx_org04",
+    "mrx_org05",
+    "mrx_org06",
+    "mrx_org07",
+    "mrx_org08",
+    "mrx_org09",
+    "mrx_org10",
+    "mrx_org11",
+    "mrx_org12",
+    "mrx_org13",
+    "mrx_org14",
+    "mrx_org15",
+    "mrx_org16",
+    "mrx_org17",
+    "mrx_org18",
+    "mx_s00",
+    "mx_s00_jz",
+    "mx_s00_ka",
+    "mx_s01",
+    "mx_s01_he",
+    "mx_s01_kz",
+    "mx_s02",
+    "mx_s03",
+    "mx_s04",
+    "mx_s05",
+    "mx_w00",
+    "mx_w01",
+    "mx_w02",
+    "NameProperty",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "SceneComponent",
+    "SceneComponent_1__4AE00C91",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "SoundEvent",
+    "SoundID",
+    "SoundName",
+    "Sounds",
+    "Streams",
+    "StrProperty",
+    "StructProperty",
+    "VariableGuid",
+    "VariableName",
+    "VoiceBank"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioBank",
+      "outer_index": -58,
+      "object_name": "AkBankVoiceMRX"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -59,
+      "object_name": "mrx_atk_l01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -60,
+      "object_name": "mrx_atk_m01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -61,
+      "object_name": "mrx_atk_m02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -62,
+      "object_name": "mrx_atk_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -63,
+      "object_name": "mrx_atk_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -64,
+      "object_name": "mrx_atk_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -65,
+      "object_name": "mrx_atk_s04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -66,
+      "object_name": "mrx_dmg_l01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -67,
+      "object_name": "mrx_dmg_l02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -68,
+      "object_name": "mrx_dmg_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -69,
+      "object_name": "mrx_dmg_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -70,
+      "object_name": "mrx_dmg_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -71,
+      "object_name": "mrx_ko01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -72,
+      "object_name": "mrx_ko02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -73,
+      "object_name": "mrx_org01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -74,
+      "object_name": "mrx_org02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -75,
+      "object_name": "mrx_org03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -76,
+      "object_name": "mrx_org04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -77,
+      "object_name": "mrx_org05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -78,
+      "object_name": "mrx_org06"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -79,
+      "object_name": "mrx_org07"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -80,
+      "object_name": "mrx_org08"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -81,
+      "object_name": "mrx_org09"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -82,
+      "object_name": "mrx_org10"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -83,
+      "object_name": "mrx_org11"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -84,
+      "object_name": "mrx_org12"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -85,
+      "object_name": "mrx_org13"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -86,
+      "object_name": "mrx_org14"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -87,
+      "object_name": "mrx_org15"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -88,
+      "object_name": "mrx_org16"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -89,
+      "object_name": "mrx_org17"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -90,
+      "object_name": "mrx_org18"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -91,
+      "object_name": "mx_s00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -92,
+      "object_name": "mx_s00_jz"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -93,
+      "object_name": "mx_s00_ka"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -94,
+      "object_name": "mx_s01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -95,
+      "object_name": "mx_s01_he"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -96,
+      "object_name": "mx_s01_kz"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -97,
+      "object_name": "mx_s02"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -98,
+      "object_name": "mx_s03"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -99,
+      "object_name": "mx_s04"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -100,
+      "object_name": "mx_s05"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -101,
+      "object_name": "mx_w00"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -102,
+      "object_name": "mx_w01"
+    },
+    {
+      "class_package": "/Script/AkAudio",
+      "class_name": "AkAudioEvent",
+      "outer_index": -103,
+      "object_name": "mx_w02"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -105,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -57,
+      "object_name": "BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -105,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Game/Sound/Common/BP_TekkenCharacterSoundManager",
+      "class_name": "BP_TekkenCharacterSoundManager_C",
+      "outer_index": -57,
+      "object_name": "Default__BP_TekkenCharacterSoundManager_C"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -104,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -105,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Common/BP_TekkenCharacterSoundManager"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/AkBankVoiceMRX"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_l01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_m01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_m02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_atk_s04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_dmg_l01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_dmg_l02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_dmg_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_dmg_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_dmg_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_ko01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_ko02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org06"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org07"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org08"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org09"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org10"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org11"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org12"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org13"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org14"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org15"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org16"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org17"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mrx_org18"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s00_jz"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s00_ka"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s01_he"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s01_kz"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s03"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s04"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_s05"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_w00"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_w01"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Sound/Voice/mrx/mx_w02"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -48,
+      "object_name": "SceneComponent_1__4AE00C91"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -105,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -105,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -105,
+      "object_name": "Default__SimpleConstructionScript"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -53,
+      "super_index": -48,
+      "template_index": -49,
+      "outer_index": 0,
+      "object_name": "BP_mrxCharacterSoundManager_C",
+      "object_flags": 9,
+      "serial_size": 109,
+      "serial_offset": 8210,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 6
+      }
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 0,
+      "object_name": "Default__BP_mrxCharacterSoundManager_C",
+      "object_flags": 57,
+      "serial_size": 3282,
+      "serial_offset": 8319,
+      "class_name": "BP_mrxCharacterSoundManager_C",
+      "owner": null,
+      "tagged_properties": {
+        "VoiceBank": -1,
+        "Sounds": {
+          "name": "Sounds",
+          "type": "ArrayProperty",
+          "size": 2165,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "20 00 00 00 8c 00 00 00 00 00 00 00 8f 00 00 00 00 00 00 00 40 08 00 00 00 00 00 00 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8a 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 02 05 00 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fb ff ff ff 80 00 00 00 00 00 00 00 8a 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 03 05 00 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 fa ff ff ff 80 00 00 00 00 00 00 00 8a 00 00 00 00 00 00 00 51 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 04 05 00 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f9 ff ff ff 80 00 00 00 00 00 00 00 8a 00 00 00 00",
+          "value_prefix_truncated": true
+        },
+        "Streams": {
+          "name": "Streams",
+          "type": "ArrayProperty",
+          "size": 1014,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "StructProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 2260,
+          "value_prefix_hex": "0d 00 00 00 8d 00 00 00 00 00 00 00 8f 00 00 00 00 00 00 00 c1 03 00 00 00 00 00 00 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8b 00 00 00 00 00 00 00 8e 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 07 00 00 00 6d 78 5f 73 30 30 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 de ff ff ff 80 00 00 00 00 00 00 00 8b 00 00 00 00 00 00 00 8e 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 0a 00 00 00 6d 78 5f 73 30 30 5f 6a 7a 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 dd ff ff ff 80 00 00 00 00 00 00 00 8b 00 00 00 00 00 00 00 8e 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 0a 00 00 00 6d 78 5f 73 30 30 5f 6b 61 00 89 00 00 00 00 00 00 00 82 00 00 00 00 00 00",
+          "value_prefix_truncated": true
+        }
+      }
+    },
+    {
+      "index": 2,
+      "class_index": -52,
+      "super_index": 0,
+      "template_index": -47,
+      "outer_index": 0,
+      "object_name": "BP_mrxCharacterSoundManager",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 11601,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -48,
+        "SimpleConstructionScript": 6,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "17 32 5f d8 f5 44 78 4b b5 05 8c a2 89 83 b2 7c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 3,
+      "class_index": -54,
+      "super_index": 0,
+      "template_index": -107,
+      "outer_index": 1,
+      "object_name": "SceneComponent_0",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 11850,
+      "class_name": "SceneComponent",
+      "owner": "BP_mrxCharacterSoundManager_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -55,
+      "super_index": 0,
+      "template_index": -108,
+      "outer_index": 6,
+      "object_name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 11862,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_0",
+      "tagged_properties": {
+        "ComponentTemplate": 4,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "99 97 bc 56 e6 e6 94 c4 95 42 1d 32 16 b3 5e 7d",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -56,
+      "super_index": 0,
+      "template_index": -109,
+      "outer_index": 1,
+      "object_name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_size": 41,
+      "serial_offset": 12001,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_mrxCharacterSoundManager_C",
+      "tagged_properties": {
+        "DefaultSceneRootNode": 5
+      }
+    }
+  ],
+  "sha256": "67e018f4681653bd6dfe23c6495c94ae8b27de1f463c22ddb4564e8b44f3a1da",
+  "selection_reason": "local-versus shared-content candidate"
+}

@@ -1,0 +1,864 @@
+{
+  "path": "TekkenGame/Content/Maps/stg21_edit.umap",
+  "id": "2fb42df39b0bd52326362495",
+  "classes": [
+    "BlueprintGeneratedClass",
+    "LevelScriptBlueprint"
+  ],
+  "size": 891863,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Maps/stg21_edit.umap",
+  "metadata_file": "metadata/2fb42df39b0bd52326362495.json",
+  "function_count": 0,
+  "summary": {
+    "total_header_size": 5609,
+    "package_flags": 2147614720,
+    "name_count": 76,
+    "name_offset": 403,
+    "export_count": 21,
+    "export_offset": 3135,
+    "import_count": 28,
+    "import_offset": 2351,
+    "bulk_data_start_offset": 891859,
+    "guid": "5ae05aa5b94da345b2d49d07a76731c0"
+  },
+  "names": [
+    "/Game/Maps/stg21_edit",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "/Script/Foliage",
+    "AbstractNavData",
+    "AbstractNavData-Default",
+    "AssetObjectProperty",
+    "bAutoWeld",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "BlueprintType",
+    "BodyInstance",
+    "BoolProperty",
+    "BPTYPE_LevelScript",
+    "Brush",
+    "bUseAmbientOcclusion",
+    "ByteProperty",
+    "Class",
+    "Default__AbstractNavData",
+    "Default__BlueprintGeneratedClass",
+    "Default__InstancedFoliageActor",
+    "Default__Level",
+    "Default__LevelScriptActor",
+    "Default__LevelScriptBlueprint",
+    "Default__LevelStreamingAlwaysLoaded",
+    "Default__Model",
+    "Default__StaticMeshComponent",
+    "Default__stg21_edit_C",
+    "Default__World",
+    "Default__WorldSettings",
+    "DefaultPhysicsVolume",
+    "DiffuseBoost",
+    "EBlueprintType",
+    "ELightingBuildQuality",
+    "Engine",
+    "EnvironmentIntensity",
+    "FloatProperty",
+    "GeneratedClass",
+    "Guid",
+    "IndirectLightingQuality",
+    "InstancedFoliageActor",
+    "IntProperty",
+    "Level",
+    "LevelColor",
+    "LevelLightingQuality",
+    "LevelScriptActor",
+    "LevelScriptBlueprint",
+    "LevelStreamingAlwaysLoaded",
+    "LightmassSettings",
+    "LightmassWorldInfoSettings",
+    "LinearColor",
+    "MaxOcclusionDistance",
+    "Model",
+    "None",
+    "NumIndirectLightingBounces",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "PersistentLevel",
+    "Quality_Production",
+    "RootComponent",
+    "RootComponent0",
+    "SceneComponent",
+    "StaticLightingLevelScale",
+    "StaticMeshComponent",
+    "StaticMeshComponent0",
+    "stg21_edit",
+    "stg21_edit_C",
+    "StructProperty",
+    "World",
+    "WorldAsset",
+    "WorldSettings"
+  ],
+  "imports": [
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AbstractNavData",
+      "outer_index": -23,
+      "object_name": "Default__AbstractNavData"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -23,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -22,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "AbstractNavData"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "Level"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "LevelStreamingAlwaysLoaded"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "World"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -23,
+      "object_name": "WorldSettings"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -24,
+      "object_name": "InstancedFoliageActor"
+    },
+    {
+      "class_package": "/Script/Foliage",
+      "class_name": "InstancedFoliageActor",
+      "outer_index": -24,
+      "object_name": "Default__InstancedFoliageActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Level",
+      "outer_index": -23,
+      "object_name": "Default__Level"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptActor",
+      "outer_index": -23,
+      "object_name": "Default__LevelScriptActor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelScriptBlueprint",
+      "outer_index": -23,
+      "object_name": "Default__LevelScriptBlueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "outer_index": -23,
+      "object_name": "Default__LevelStreamingAlwaysLoaded"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Model",
+      "outer_index": -23,
+      "object_name": "Default__Model"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Foliage"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -16,
+      "object_name": "RootComponent0"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer_index": -23,
+      "object_name": "Default__StaticMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "World",
+      "outer_index": -23,
+      "object_name": "Default__World"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "WorldSettings",
+      "outer_index": -23,
+      "object_name": "Default__WorldSettings"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -5,
+      "super_index": -7,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "stg21_edit_C",
+      "object_flags": 9,
+      "serial_size": 80,
+      "serial_offset": 5609,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -18,
+      "outer_index": 0,
+      "object_name": "Default__stg21_edit_C",
+      "object_flags": 49,
+      "serial_size": 8,
+      "serial_offset": 5689,
+      "class_name": "stg21_edit_C",
+      "owner": null,
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -4,
+      "super_index": 0,
+      "template_index": -1,
+      "outer_index": 5,
+      "object_name": "AbstractNavData-Default",
+      "object_flags": 8,
+      "serial_size": 12,
+      "serial_offset": 5697,
+      "class_name": "AbstractNavData",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -16,
+      "outer_index": 5,
+      "object_name": "InstancedFoliageActor_0",
+      "object_flags": 8,
+      "serial_size": 45,
+      "serial_offset": 5709,
+      "class_name": "InstancedFoliageActor",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "RootComponent": 17
+      }
+    },
+    {
+      "index": 4,
+      "class_index": -6,
+      "super_index": 0,
+      "template_index": -17,
+      "outer_index": 20,
+      "object_name": "PersistentLevel",
+      "object_flags": 8,
+      "serial_size": 883929,
+      "serial_offset": 5754,
+      "class_name": "Level",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "Model": 16,
+        "LevelScriptActor": 19,
+        "WorldSettings": 21
+      }
+    },
+    {
+      "index": 5,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -19,
+      "outer_index": 5,
+      "object_name": "stg21_edit",
+      "object_flags": 9,
+      "serial_size": 261,
+      "serial_offset": 889683,
+      "class_name": "LevelScriptBlueprint",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "ParentClass": -7,
+        "BlueprintType": "BPTYPE_LevelScript",
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 1,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 229,
+          "value_prefix_hex": "f4 10 e2 68 5a 73 08 45 9f 28 88 42 58 ee cb 47",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 6,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_0",
+      "object_flags": 8,
+      "serial_size": 141,
+      "serial_offset": 889944,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 39,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "23 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 64 65 62 75 67 2e 73 74 67 32 31 5f 64 65 62 75 67 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 113,
+          "value_prefix_hex": "f7 5b 77 3e 00 00 00 00 b1 2e 16 3f 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 7,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 890085,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "21 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 64 65 6d 6f 2e 73 74 67 32 31 5f 64 65 6d 6f 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "00 00 00 00 b1 f0 c0 3e 0c 92 e3 3e 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 8,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_2",
+      "object_flags": 8,
+      "serial_size": 143,
+      "serial_offset": 890224,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 41,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "25 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 65 66 66 65 63 74 2e 73 74 67 32 31 5f 65 66 66 65 63 74 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 115,
+          "value_prefix_hex": "ee 69 43 3f 01 77 6d 3d 00 00 00 00 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 9,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 890367,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "21 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 67 65 6f 6d 2e 73 74 67 32 31 5f 67 65 6f 6d 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "00 00 00 00 2e 0c 08 3f 61 6a 94 3e 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 10,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_4",
+      "object_flags": 8,
+      "serial_size": 141,
+      "serial_offset": 890506,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 39,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "23 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 6c 69 67 68 74 2e 73 74 67 32 31 5f 6c 69 67 68 74 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 113,
+          "value_prefix_hex": "2e 0c 08 3f 61 6a 94 3e 00 00 00 00 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 11,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_5",
+      "object_flags": 8,
+      "serial_size": 137,
+      "serial_offset": 890647,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 35,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "1f 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 6d 6f 62 2e 73 74 67 32 31 5f 6d 6f 62 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 109,
+          "value_prefix_hex": "00 00 00 00 21 c8 4f 3f 56 4f 1e 3c 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 12,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_6",
+      "object_flags": 8,
+      "serial_size": 143,
+      "serial_offset": 890784,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 41,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "25 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 72 65 6c 6f 61 64 2e 73 74 67 32 31 5f 72 65 6c 6f 61 64 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 115,
+          "value_prefix_hex": "01 77 ed 3c a6 d5 4a 3f 00 00 00 00 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 13,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -20,
+      "outer_index": 20,
+      "object_name": "LevelStreamingAlwaysLoaded_7",
+      "object_flags": 8,
+      "serial_size": 141,
+      "serial_offset": 890927,
+      "class_name": "LevelStreamingAlwaysLoaded",
+      "owner": "stg21_edit",
+      "tagged_properties": {
+        "WorldAsset": {
+          "name": "WorldAsset",
+          "type": "AssetObjectProperty",
+          "size": 39,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 25,
+          "value_prefix_hex": "23 00 00 00 2f 47 61 6d 65 2f 4d 61 70 73 2f 73 74 67 32 31 5f 73 6f 75 6e 64 2e 73 74 67 32 31 5f 73 6f 75 6e 64 00",
+          "value_prefix_truncated": false
+        },
+        "LevelColor": {
+          "name": "LevelColor",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "LinearColor",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 113,
+          "value_prefix_hex": "c6 26 2d 3f 61 6a 14 3e 00 00 00 00 00 00 80 3f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 14,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 5,
+      "object_name": "Brush",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 891068,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 15,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -21,
+      "outer_index": 5,
+      "object_name": "Model_3",
+      "object_flags": 8,
+      "serial_size": 122,
+      "serial_offset": 891190,
+      "class_name": "Model",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -25,
+      "outer_index": 4,
+      "object_name": "RootComponent0",
+      "object_flags": 262152,
+      "serial_size": 12,
+      "serial_offset": 891312,
+      "class_name": "SceneComponent",
+      "owner": "InstancedFoliageActor_0",
+      "tagged_properties": {}
+    },
+    {
+      "index": 17,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -26,
+      "outer_index": 21,
+      "object_name": "StaticMeshComponent0",
+      "object_flags": 262152,
+      "serial_size": 99,
+      "serial_offset": 891324,
+      "class_name": "StaticMeshComponent",
+      "owner": "WorldSettings",
+      "tagged_properties": {
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "07 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 18,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": 2,
+      "outer_index": 5,
+      "object_name": "stg21_edit_C_1",
+      "object_flags": 0,
+      "serial_size": 12,
+      "serial_offset": 891423,
+      "class_name": "stg21_edit_C",
+      "owner": "PersistentLevel",
+      "tagged_properties": {}
+    },
+    {
+      "index": 19,
+      "class_index": -13,
+      "super_index": 0,
+      "template_index": -27,
+      "outer_index": 0,
+      "object_name": "stg21_edit",
+      "object_flags": 11,
+      "serial_size": 85,
+      "serial_offset": 891435,
+      "class_name": "World",
+      "owner": null,
+      "tagged_properties": {
+        "DefaultPhysicsVolume": 0
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -14,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 5,
+      "object_name": "WorldSettings",
+      "object_flags": 8,
+      "serial_size": 339,
+      "serial_offset": 891520,
+      "class_name": "WorldSettings",
+      "owner": "PersistentLevel",
+      "tagged_properties": {
+        "LightmassSettings": {
+          "name": "LightmassSettings",
+          "type": "StructProperty",
+          "size": 208,
+          "array_index": 0,
+          "struct_name": "LightmassWorldInfoSettings",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "43 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 3f 39 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 64 00 00 00 2a 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 c0 40 26 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 40 12 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 36 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 48 44 38 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "LevelLightingQuality": "Quality_Production",
+        "RootComponent": 18
+      }
+    }
+  ],
+  "sha256": "72886d5b0ead929d3cdd8148d29c0ddd60bcd038d0cb2d0de143b8f2a74d8218",
+  "selection_reason": "local-versus shared-content candidate"
+}

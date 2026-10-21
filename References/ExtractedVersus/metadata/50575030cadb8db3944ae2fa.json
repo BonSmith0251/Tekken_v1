@@ -1,0 +1,1237 @@
+{
+  "path": "TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/BP_ItemDrop_Snowman.uasset",
+  "id": "50575030cadb8db3944ae2fa",
+  "classes": [
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "EdGraph",
+    "Function"
+  ],
+  "size": 11683,
+  "encrypted_source": false,
+  "package_file": "packages/TekkenGame/Content/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/BP_ItemDrop_Snowman.uasset",
+  "metadata_file": "metadata/50575030cadb8db3944ae2fa.json",
+  "function_count": 4,
+  "summary": {
+    "total_header_size": 8577,
+    "package_flags": 2147483648,
+    "name_count": 116,
+    "name_offset": 189,
+    "export_count": 32,
+    "export_offset": 5033,
+    "import_count": 54,
+    "import_offset": 3521,
+    "bulk_data_start_offset": 11679,
+    "guid": "3c7cc2b304cd1943bdd119328183e2a2"
+  },
+  "names": [
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/BP_ItemDrop_Snowman",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/Meshes/AB_CH_cmn_opu_snowman",
+    "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/Meshes/SK_CH_cmn_opu_snowman_IA",
+    "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_snowman",
+    "/Script/CoreUObject",
+    "/Script/Engine",
+    "AB_CH_cmn_opu_snowman_C",
+    "Activate",
+    "Actor",
+    "ActorTickFunction",
+    "AllNodes",
+    "AnimBlueprintGeneratedClass",
+    "AnimClass",
+    "AnimInstance",
+    "AnimPlayrate",
+    "ArrayProperty",
+    "bAllowDeletion",
+    "bAutoActivate",
+    "bLegacyGeneratedClassIsAuthoritative",
+    "bLegacyNeedToPurgeSkelRefs",
+    "Blueprint",
+    "BlueprintGeneratedClass",
+    "BlueprintGuid",
+    "BlueprintSystemVersion",
+    "bMelted",
+    "BodyInstance",
+    "BooleanOR",
+    "BoolProperty",
+    "BP_ItemDrop_Snowman",
+    "BP_ItemDrop_Snowman_C",
+    "bStartWithTickEnabled",
+    "CallFunc_BooleanOR_ReturnValue",
+    "CallFunc_EqualEqual_StriStri_ReturnValue",
+    "CallFunc_EqualEqual_StriStri_ReturnValue2",
+    "CallFunc_GetAnimInstance_ReturnValue",
+    "CallFunc_GetPlatformName_ReturnValue",
+    "CallFunc_IsValid_ReturnValue",
+    "ChildNodes",
+    "Class",
+    "ComponentTemplate",
+    "Deactivate",
+    "Default__AB_CH_cmn_opu_snowman_C",
+    "Default__Actor",
+    "Default__Blueprint",
+    "Default__BlueprintGeneratedClass",
+    "Default__BoolProperty",
+    "Default__BP_ItemDrop_Snowman_C",
+    "Default__EdGraph",
+    "Default__Function",
+    "Default__GameplayStatics",
+    "Default__KismetStringLibrary",
+    "Default__KismetSystemLibrary",
+    "Default__ObjectProperty",
+    "Default__ParticleSystemComponent",
+    "Default__SceneComponent",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "Default__SkeletalMeshComponent",
+    "Default__StrProperty",
+    "DefaultSceneRoot",
+    "DefaultSceneRoot_REMOVED_619434B840E9F362917C378EDDAC6E03",
+    "DefaultSceneRootNode",
+    "EdGraph",
+    "Engine",
+    "EqualEqual_StriStri",
+    "EventGraph",
+    "FloatProperty",
+    "Function",
+    "GameplayStatics",
+    "GeneratedClass",
+    "GetAnimInstance",
+    "GetPlatformName",
+    "Guid",
+    "IntProperty",
+    "IsValid",
+    "K2Node_DynamicCast_AsAB_CH_Cmn_Opu_Snowman",
+    "K2Node_DynamicCast_bSuccess",
+    "KismetMathLibrary",
+    "KismetStringLibrary",
+    "KismetSystemLibrary",
+    "MassInKgOverride",
+    "MeltSnowman",
+    "NameProperty",
+    "Nodes",
+    "None",
+    "Object",
+    "ObjectProperty",
+    "Package",
+    "ParentClass",
+    "ParticleSystem",
+    "ParticleSystem_GEN_VARIABLE",
+    "ParticleSystemComponent",
+    "PlayVictoryDance",
+    "PrimaryActorTick",
+    "PrimitiveComponent",
+    "PS_EF_ITM_snowman",
+    "RelativeLocation",
+    "RootNodes",
+    "SceneComponent",
+    "Schema",
+    "SCS_Node",
+    "SetCastShadow",
+    "SimpleConstructionScript",
+    "SK_CH_cmn_opu_snowman_IA",
+    "SkeletalMesh",
+    "SkeletalMesh_GEN_VARIABLE",
+    "SkeletalMeshComponent",
+    "SnowmanAB",
+    "StrProperty",
+    "StructProperty",
+    "Template",
+    "ToggleSnow",
+    "UserConstructionScript",
+    "VariableGuid",
+    "VariableName",
+    "Vector"
+  ],
+  "imports": [
+    {
+      "class_package": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/Meshes/AB_CH_cmn_opu_snowman",
+      "class_name": "AB_CH_cmn_opu_snowman_C",
+      "outer_index": -42,
+      "object_name": "Default__AB_CH_cmn_opu_snowman_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Actor",
+      "outer_index": -46,
+      "object_name": "Default__Actor"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "AnimBlueprintGeneratedClass",
+      "outer_index": -42,
+      "object_name": "AB_CH_cmn_opu_snowman_C"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "Blueprint",
+      "outer_index": -46,
+      "object_name": "Default__Blueprint"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer_index": -46,
+      "object_name": "Default__BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -3,
+      "object_name": "bMelted"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "BoolProperty",
+      "outer_index": -45,
+      "object_name": "Default__BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "BoolProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "Object"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -45,
+      "object_name": "StrProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Actor"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "AnimInstance"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "Blueprint"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "BlueprintGeneratedClass"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "GameplayStatics"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "KismetMathLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "PrimitiveComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SceneComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SCS_Node"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer_index": -46,
+      "object_name": "SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "EdGraph",
+      "outer_index": -46,
+      "object_name": "Default__EdGraph"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "FloatProperty",
+      "outer_index": -3,
+      "object_name": "AnimPlayrate"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -45,
+      "object_name": "Default__Function"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -13,
+      "object_name": "UserConstructionScript"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -18,
+      "object_name": "GetPlatformName"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -19,
+      "object_name": "BooleanOR"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -20,
+      "object_name": "EqualEqual_StriStri"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -21,
+      "object_name": "IsValid"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -23,
+      "object_name": "SetCastShadow"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Function",
+      "outer_index": -27,
+      "object_name": "GetAnimInstance"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "GameplayStatics",
+      "outer_index": -46,
+      "object_name": "Default__GameplayStatics"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetStringLibrary",
+      "outer_index": -46,
+      "object_name": "Default__KismetStringLibrary"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "KismetSystemLibrary",
+      "outer_index": -46,
+      "object_name": "Default__KismetSystemLibrary"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer_index": -45,
+      "object_name": "Default__ObjectProperty"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/Meshes/AB_CH_cmn_opu_snowman"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Character/Item/Meshes/cmn/Upper_Acc/cmn_opu_snowman_IA/Meshes/SK_CH_cmn_opu_snowman_IA"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Game/Effect/TK75/Character/cmn/Particle/PS_EF_ITM_snowman"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/CoreUObject"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer_index": 0,
+      "object_name": "/Script/Engine"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystem",
+      "outer_index": -44,
+      "object_name": "PS_EF_ITM_snowman"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "ParticleSystemComponent",
+      "outer_index": -46,
+      "object_name": "Default__ParticleSystemComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer_index": -46,
+      "object_name": "Default__SceneComponent"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer_index": -46,
+      "object_name": "Default__SCS_Node"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer_index": -46,
+      "object_name": "Default__SimpleConstructionScript"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMesh",
+      "outer_index": -43,
+      "object_name": "SK_CH_cmn_opu_snowman_IA"
+    },
+    {
+      "class_package": "/Script/Engine",
+      "class_name": "SkeletalMeshComponent",
+      "outer_index": -46,
+      "object_name": "Default__SkeletalMeshComponent"
+    },
+    {
+      "class_package": "/Script/CoreUObject",
+      "class_name": "StrProperty",
+      "outer_index": -45,
+      "object_name": "Default__StrProperty"
+    }
+  ],
+  "exports": [
+    {
+      "index": 0,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 18,
+      "object_name": "SnowmanAB",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8577,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 1,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 18,
+      "object_name": "SkeletalMesh",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8617,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 2,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 18,
+      "object_name": "ParticleSystem",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8657,
+      "class_name": "ObjectProperty",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 3,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "K2Node_DynamicCast_bSuccess",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 8697,
+      "class_name": "BoolProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 4,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 11,
+      "object_name": "K2Node_DynamicCast_AsAB_CH_Cmn_Opu_Snowman",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8735,
+      "class_name": "ObjectProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 5,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -41,
+      "outer_index": 11,
+      "object_name": "CallFunc_GetAnimInstance_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 40,
+      "serial_offset": 8775,
+      "class_name": "ObjectProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 6,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_BooleanOR_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 8815,
+      "class_name": "BoolProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 7,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_EqualEqual_StriStri_ReturnValue2",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 8853,
+      "class_name": "BoolProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 8,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 11,
+      "object_name": "CallFunc_EqualEqual_StriStri_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 8891,
+      "class_name": "BoolProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 9,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -54,
+      "outer_index": 11,
+      "object_name": "CallFunc_GetPlatformName_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 36,
+      "serial_offset": 8929,
+      "class_name": "StrProperty",
+      "owner": "UserConstructionScript",
+      "tagged_properties": {}
+    },
+    {
+      "index": 10,
+      "class_index": -9,
+      "super_index": -31,
+      "template_index": -30,
+      "outer_index": 18,
+      "object_name": "UserConstructionScript",
+      "object_flags": 1,
+      "serial_size": 290,
+      "serial_offset": 8965,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 3,
+        "super_struct": -31,
+        "first_child": 10,
+        "flags_hex": "0x0C020800",
+        "native": false,
+        "script_memory_size": 394,
+        "script_storage_size": 246,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 8997,
+        "bytecode_sha256": "75d22888d3dd27138977d186fd22362554ac7e2b708cd91a7a11a70b08f920c4",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/50575030cadb8db3944ae2fa/000010.bytecode.bin"
+      },
+      "raw_export_file": "functions/50575030cadb8db3944ae2fa/000010.export.bin"
+    },
+    {
+      "index": 11,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 13,
+      "object_name": "Activate",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9255,
+      "class_name": "BoolProperty",
+      "owner": "ToggleSnow",
+      "tagged_properties": {}
+    },
+    {
+      "index": 12,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 18,
+      "object_name": "ToggleSnow",
+      "object_flags": 1,
+      "serial_size": 111,
+      "serial_offset": 9293,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 11,
+        "super_struct": 0,
+        "first_child": 12,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 95,
+        "script_storage_size": 67,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 9325,
+        "bytecode_sha256": "e9de8839e103c0322d2673c836a48191a0116e71245f31bfdf0a23f9aecfb5f2",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/50575030cadb8db3944ae2fa/000012.bytecode.bin"
+      },
+      "raw_export_file": "functions/50575030cadb8db3944ae2fa/000012.export.bin"
+    },
+    {
+      "index": 13,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 15,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9404,
+      "class_name": "BoolProperty",
+      "owner": "MeltSnowman",
+      "tagged_properties": {}
+    },
+    {
+      "index": 14,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 18,
+      "object_name": "MeltSnowman",
+      "object_flags": 1,
+      "serial_size": 109,
+      "serial_offset": 9442,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 13,
+        "super_struct": 0,
+        "first_child": 14,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 101,
+        "script_storage_size": 65,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 9474,
+        "bytecode_sha256": "7dbd637c40ecb714e02bcfe8767d70b16d290fc4787ee743b07e5c4971013ad2",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/50575030cadb8db3944ae2fa/000014.bytecode.bin"
+      },
+      "raw_export_file": "functions/50575030cadb8db3944ae2fa/000014.export.bin"
+    },
+    {
+      "index": 15,
+      "class_index": -8,
+      "super_index": 0,
+      "template_index": -7,
+      "outer_index": 17,
+      "object_name": "CallFunc_IsValid_ReturnValue",
+      "object_flags": 1,
+      "serial_size": 38,
+      "serial_offset": 9551,
+      "class_name": "BoolProperty",
+      "owner": "PlayVictoryDance",
+      "tagged_properties": {}
+    },
+    {
+      "index": 16,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -30,
+      "outer_index": 18,
+      "object_name": "PlayVictoryDance",
+      "object_flags": 1,
+      "serial_size": 117,
+      "serial_offset": 9589,
+      "class_name": "Function",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {},
+      "function": {
+        "next_field": 15,
+        "super_struct": 0,
+        "first_child": 16,
+        "flags_hex": "0x0C020000",
+        "native": false,
+        "script_memory_size": 113,
+        "script_storage_size": 73,
+        "bytecode_export_offset": 32,
+        "bytecode_package_offset": 9621,
+        "bytecode_sha256": "60ed09076c5d75a38ae15d58ead63874592c2b509b467e85c1e0db4948516eb4",
+        "trailing_export_bytes": 8,
+        "representation": "Serialized Unreal VM bytecode, not C# or recovered source",
+        "bytecode_file": "functions/50575030cadb8db3944ae2fa/000016.bytecode.bin"
+      },
+      "raw_export_file": "functions/50575030cadb8db3944ae2fa/000016.export.bin"
+    },
+    {
+      "index": 17,
+      "class_index": -16,
+      "super_index": -13,
+      "template_index": -5,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Snowman_C",
+      "object_flags": 9,
+      "serial_size": 157,
+      "serial_offset": 9706,
+      "class_name": "BlueprintGeneratedClass",
+      "owner": null,
+      "tagged_properties": {
+        "SimpleConstructionScript": 31
+      }
+    },
+    {
+      "index": 18,
+      "class_index": 18,
+      "super_index": 0,
+      "template_index": -2,
+      "outer_index": 0,
+      "object_name": "Default__BP_ItemDrop_Snowman_C",
+      "object_flags": 49,
+      "serial_size": 91,
+      "serial_offset": 9863,
+      "class_name": "BP_ItemDrop_Snowman_C",
+      "owner": null,
+      "tagged_properties": {
+        "PrimaryActorTick": {
+          "name": "PrimaryActorTick",
+          "type": "StructProperty",
+          "size": 34,
+          "array_index": 0,
+          "struct_name": "ActorTickFunction",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 49,
+          "value_prefix_hex": "1e 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 54 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 19,
+      "class_index": -15,
+      "super_index": 0,
+      "template_index": -4,
+      "outer_index": 0,
+      "object_name": "BP_ItemDrop_Snowman",
+      "object_flags": 11,
+      "serial_size": 249,
+      "serial_offset": 9954,
+      "class_name": "Blueprint",
+      "owner": null,
+      "tagged_properties": {
+        "ParentClass": -13,
+        "SimpleConstructionScript": 31,
+        "BlueprintSystemVersion": 2,
+        "GeneratedClass": 18,
+        "bLegacyNeedToPurgeSkelRefs": false,
+        "bLegacyGeneratedClassIsAuthoritative": true,
+        "BlueprintGuid": {
+          "name": "BlueprintGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 217,
+          "value_prefix_hex": "33 8f e4 c2 8a 46 12 40 ae 52 77 ad d6 4b e6 4f",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 20,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "EventGraph",
+      "object_flags": 8,
+      "serial_size": 116,
+      "serial_offset": 10203,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Snowman",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 21,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "MeltSnowman",
+      "object_flags": 8,
+      "serial_size": 98,
+      "serial_offset": 10319,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Snowman",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 22,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "PlayVictoryDance",
+      "object_flags": 8,
+      "serial_size": 98,
+      "serial_offset": 10417,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Snowman",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 24,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 23,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "ToggleSnow",
+      "object_flags": 8,
+      "serial_size": 102,
+      "serial_offset": 10515,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Snowman",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 28,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 24,
+      "class_index": -17,
+      "super_index": 0,
+      "template_index": -28,
+      "outer_index": 20,
+      "object_name": "UserConstructionScript",
+      "object_flags": 8,
+      "serial_size": 152,
+      "serial_offset": 10617,
+      "class_name": "EdGraph",
+      "owner": "BP_ItemDrop_Snowman",
+      "tagged_properties": {
+        "Schema": 0,
+        "Nodes": {
+          "name": "Nodes",
+          "type": "ArrayProperty",
+          "size": 52,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 62,
+          "value_prefix_hex": "0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "bAllowDeletion": false
+      }
+    },
+    {
+      "index": 25,
+      "class_index": -22,
+      "super_index": 0,
+      "template_index": -48,
+      "outer_index": 18,
+      "object_name": "ParticleSystem_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 128,
+      "serial_offset": 10769,
+      "class_name": "ParticleSystemComponent",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {
+        "Template": -47,
+        "RelativeLocation": {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "Vector",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 78,
+          "value_prefix_hex": "00 00 00 00 00 00 00 00 00 00 5c 42",
+          "value_prefix_truncated": false
+        },
+        "bAutoActivate": false
+      }
+    },
+    {
+      "index": 26,
+      "class_index": -24,
+      "super_index": 0,
+      "template_index": -49,
+      "outer_index": 18,
+      "object_name": "DefaultSceneRoot_REMOVED_619434B840E9F362917C378EDDAC6E03",
+      "object_flags": 41,
+      "serial_size": 12,
+      "serial_offset": 10897,
+      "class_name": "SceneComponent",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {}
+    },
+    {
+      "index": 27,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 31,
+      "object_name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 10909,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 27,
+        "VariableName": "DefaultSceneRoot",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "73 d5 54 f1 d4 95 f3 43 8d f5 4c f6 13 b5 01 6c",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 28,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 31,
+      "object_name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_size": 180,
+      "serial_offset": 11048,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 32,
+        "VariableName": "SkeletalMesh",
+        "ChildNodes": {
+          "name": "ChildNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 95,
+          "value_prefix_hex": "01 00 00 00 1e 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 152,
+          "value_prefix_hex": "e6 ad 42 d4 be c2 2c 4a a7 55 bd 8f 8a 6b 77 a9",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 29,
+      "class_index": -25,
+      "super_index": 0,
+      "template_index": -50,
+      "outer_index": 31,
+      "object_name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_size": 139,
+      "serial_offset": 11228,
+      "class_name": "SCS_Node",
+      "owner": "SimpleConstructionScript_1",
+      "tagged_properties": {
+        "ComponentTemplate": 26,
+        "VariableName": "ParticleSystem",
+        "VariableGuid": {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "size": 16,
+          "array_index": 0,
+          "struct_name": "Guid",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 111,
+          "value_prefix_hex": "45 64 65 fd 07 b5 57 4d b5 4a 58 02 b6 1a df db",
+          "value_prefix_truncated": false
+        }
+      }
+    },
+    {
+      "index": 30,
+      "class_index": -26,
+      "super_index": 0,
+      "template_index": -51,
+      "outer_index": 18,
+      "object_name": "SimpleConstructionScript_1",
+      "object_flags": 8,
+      "serial_size": 127,
+      "serial_offset": 11367,
+      "class_name": "SimpleConstructionScript",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {
+        "RootNodes": {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "size": 8,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 33,
+          "value_prefix_hex": "01 00 00 00 1d 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "AllNodes": {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "size": 12,
+          "array_index": 0,
+          "struct_name": "",
+          "enum_name": "",
+          "inner_type": "ObjectProperty",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 74,
+          "value_prefix_hex": "02 00 00 00 1d 00 00 00 1e 00 00 00",
+          "value_prefix_truncated": false
+        },
+        "DefaultSceneRootNode": 28
+      }
+    },
+    {
+      "index": 31,
+      "class_index": -27,
+      "super_index": 0,
+      "template_index": -53,
+      "outer_index": 18,
+      "object_name": "SkeletalMesh_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_size": 185,
+      "serial_offset": 11494,
+      "class_name": "SkeletalMeshComponent",
+      "owner": "BP_ItemDrop_Snowman_C",
+      "tagged_properties": {
+        "AnimBlueprintGeneratedClass": -3,
+        "AnimClass": -3,
+        "SkeletalMesh": -52,
+        "BodyInstance": {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "size": 37,
+          "array_index": 0,
+          "struct_name": "BodyInstance",
+          "enum_name": "",
+          "inner_type": "",
+          "value_type": "",
+          "bool_val": false,
+          "value_offset": 136,
+          "value_prefix_hex": "50 00 00 00 00 00 00 00 42 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 54 00 00 00 00 00 00 00",
+          "value_prefix_truncated": false
+        }
+      }
+    }
+  ],
+  "sha256": "acebb08ac5c3b02818e6fa6db4b47cf84b8c04daf1152b7c0185b15a122ec76d",
+  "selection_reason": "local-versus shared-content candidate"
+}
