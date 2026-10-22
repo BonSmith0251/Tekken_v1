@@ -28,6 +28,7 @@ namespace Versus.Remaster.Editor
             {
                 var m=AssetDatabase.LoadAssetAtPath<Material>("Assets/Remaster/Jin/Materials/"+e.name+".mat");
                 if(!m)throw new Exception("Missing material: "+e.name);
+                m.shader=Shader.Find(e.specular?"Standard (Specular setup)":"Standard");
                 if(!string.IsNullOrEmpty(e.normal))
                 {
                     m.shader=Shader.Find(e.specular?"Standard (Specular setup)":"Standard");
@@ -41,14 +42,14 @@ namespace Versus.Remaster.Editor
                 }
                 if(!string.IsNullOrEmpty(e.occlusion)){m.SetTexture("_OcclusionMap",Texture(e.occlusion));m.SetFloat("_OcclusionStrength",1);occlusions++;}
                 if(!string.IsNullOrEmpty(e.albedo)){m.mainTexture=Texture(e.albedo,false,true);m.color=Color.white;albedos++;}
-                EditorUtility.SetDirty(m);
+                HdrpProjectSetup.ConvertMaterial(m);EditorUtility.SetDirty(m);
             }
             AssetDatabase.SaveAssets();
             var prefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Resources/JinPlayable.prefab");
             foreach(var skin in prefab.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 if(skin.sharedMesh.tangents.Length!=skin.sharedMesh.vertexCount)throw new Exception("Missing tangent basis");
-                foreach(var m in skin.sharedMaterials)if(m.GetTexture("_BumpMap") && !m.IsKeywordEnabled("_NORMALMAP"))throw new Exception("Normal shader variant disabled");
+                foreach(var m in skin.sharedMaterials)if(m.GetTexture("_NormalMap") && !m.IsKeywordEnabled("_NORMALMAP_TANGENT_SPACE"))throw new Exception("Normal shader variant disabled");
             }
             File.WriteAllText("Validation/jin-materials.json","{\"passed\":true,\"normalMaterials\":"+normals+",\"surfaceMaterials\":"+surfaces+",\"occlusionMaterials\":"+occlusions+",\"updatedAlbedos\":"+albedos+"}");
         }

@@ -57,7 +57,7 @@ namespace Versus.Remaster.Editor
             var ao=Texture(entry.unity.occlusion);if(ao){mat.SetTexture("_OcclusionMap",ao);mat.SetFloat("_OcclusionStrength",1);}
             if(entry.unity.cutout)
             {mat.SetFloat("_Mode",1);mat.SetFloat("_Cutoff",.25f);mat.EnableKeyword("_ALPHATEST_ON");mat.SetOverrideTag("RenderType","TransparentCutout");mat.renderQueue=(int)RenderQueue.AlphaTest;}
-            EditorUtility.SetDirty(mat);return mat;
+            HdrpProjectSetup.ConvertMaterial(mat);EditorUtility.SetDirty(mat);return mat;
         }
         static void AddPart(GameObject root,Transform skeleton,Dictionary<string,Transform> boneMap,
                             PieceEntry entry,Dictionary<string,Material> materials,string costume)

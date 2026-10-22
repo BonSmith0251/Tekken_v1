@@ -29,7 +29,7 @@ namespace Versus.Remaster.Editor
             const string surfacePath = "Assets/Remaster/Resources/PrototypeSurface.mat";
             if (!AssetDatabase.LoadAssetAtPath<Material>(surfacePath))
             {
-                var surface = new Material(Shader.Find("Standard"));
+                var surface = new Material(Shader.Find("HDRP/Lit"));
                 surface.EnableKeyword("_EMISSION"); surface.SetColor("_EmissionColor", Color.black);
                 AssetDatabase.CreateAsset(surface, surfacePath);
             }
@@ -102,7 +102,7 @@ namespace Versus.Remaster.Editor
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             var root = new GameObject("Jin - static reference pose only");
             string[] names = { "SK_CH_jin_fac", "SK_CH_jin_har_1p", "SK_CH_jin_bdu_1P", "SK_CH_jin_bdl_1P" };
-            var material = new Material(Shader.Find("Standard")); material.color = new Color(.55f, .6f, .68f);
+            var material = new Material(Shader.Find("HDRP/Lit")); material.color = new Color(.55f, .6f, .68f);
             string materialPath = "Assets/Remaster/Settings/ReferenceClay.mat";
             var existing = AssetDatabase.LoadAssetAtPath<Material>(materialPath);
             if (existing) { UnityEngine.Object.DestroyImmediate(material); material = existing; }

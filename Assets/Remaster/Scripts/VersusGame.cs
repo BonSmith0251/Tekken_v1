@@ -139,12 +139,10 @@ namespace Versus.Remaster
         }
         void BuildArena()
         {
-            RenderSettings.ambientLight = new Color(.38f, .43f, .54f);
-            RenderSettings.fog = true; RenderSettings.fogColor = new Color(.025f, .04f, .07f); RenderSettings.fogDensity = .022f;
             var floor = FighterView.Surface(new Color(.09f, .12f, .17f), .55f);
             var edge = FighterView.Surface(new Color(.18f, .28f, .36f), .5f);
             var neon = FighterView.Surface(new Color(.1f, .5f, .65f));
-            neon.EnableKeyword("_EMISSION"); neon.SetColor("_EmissionColor", new Color(.05f, .5f, .7f) * 1.6f);
+            HdrpSceneLighting.Emission(neon, new Color(.05f, .5f, .7f) * 1.6f);
             FighterView.Piece("Arena platform", PrimitiveType.Cube, transform, new Vector3(0, -.3f, 0), new Vector3(15, .6f, 9), floor);
             for (int i = -6; i <= 6; i++)
                 FighterView.Piece("Floor grid", PrimitiveType.Cube, transform, new Vector3(i, .005f, 0), new Vector3(.018f, .012f, 7), edge);

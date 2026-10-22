@@ -36,7 +36,7 @@ namespace Versus.Remaster
         void CreateGallery()
         {
             RenderSettings.ambientLight=new Color(.45f,.48f,.55f);
-            var mat=new Material(Shader.Find("Standard"));mat.color=new Color(.08f,.11f,.16f);
+            var mat=FighterView.Surface(Color.white);mat.color=new Color(.08f,.11f,.16f);
             var platform=GameObject.CreatePrimitive(PrimitiveType.Cylinder);platform.name="Exhibit pedestal";
             platform.transform.SetParent(transform);platform.transform.position=new Vector3(0,-.1f,0);platform.transform.localScale=new Vector3(2.6f,.1f,2.6f);
             platform.GetComponent<Renderer>().material=mat;

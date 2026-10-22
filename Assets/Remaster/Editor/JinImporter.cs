@@ -36,6 +36,7 @@ namespace Versus.Remaster.Editor
                 string path = Output + "/Materials/" + entry.name + ".mat";
                 var mat = AssetDatabase.LoadAssetAtPath<Material>(path);
                 if (!mat) { mat = new Material(Shader.Find("Standard")); AssetDatabase.CreateAsset(mat,path); }
+                mat.shader = Shader.Find("Standard");
                 mat.color = Color.white; mat.SetFloat("_Glossiness",.26f); mat.SetFloat("_Metallic",0);
                 if (!string.IsNullOrEmpty(entry.texture))
                 {

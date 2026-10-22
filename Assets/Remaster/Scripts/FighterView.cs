@@ -14,7 +14,7 @@ namespace Versus.Remaster
             this.color = color;
             root = new GameObject(name).transform; root.SetParent(parent);
             armor = Surface(color, .45f); dark = Surface(new Color(.035f, .045f, .065f), .25f);
-            glow = Surface(color, .1f); glow.EnableKeyword("_EMISSION"); glow.SetColor("_EmissionColor", color * 1.6f);
+            glow = Surface(color, .1f); HdrpSceneLighting.Emission(glow, color * 1.6f);
             torso = Piece("Chest", PrimitiveType.Cube, root, new Vector3(0, 1.3f, 0), new Vector3(.56f, .62f, .3f), armor);
             Piece("Waist", PrimitiveType.Cube, root, new Vector3(0, .92f, 0), new Vector3(.43f, .22f, .3f), dark);
             Piece("Chest stripe", PrimitiveType.Cube, torso, new Vector3(0, .15f, -.52f), new Vector3(.8f, .12f, .08f), glow);
@@ -29,8 +29,8 @@ namespace Versus.Remaster
         {
             // Resource material keeps the shader in standalone builds that create the arena at runtime.
             var template = Resources.Load<Material>("PrototypeSurface");
-            var m = template ? new Material(template) : new Material(Shader.Find("Standard")); m.color = c;
-            m.SetFloat("_Metallic", metallic); m.SetFloat("_Glossiness", .48f); return m;
+            var m = template ? new Material(template) : new Material(Shader.Find("HDRP/Lit")); m.color = c;
+            m.SetFloat("_Metallic", metallic); m.SetFloat("_Smoothness", .48f); return m;
         }
         public static Transform Piece(string name, PrimitiveType type, Transform parent, Vector3 pos, Vector3 scale, Material material)
         {
