@@ -10,6 +10,8 @@ namespace Versus.Remaster.Editor
     public static class StagingValidation
     {
         [Serializable] class Result {public int moveId,frames,headOutsideViewport;public string character,animation;public float maxCameraStep,maxAngleStep,maxFovStep;}
+        // The versus scene only contains Jin and Kazuya; other catalog characters play in staging_test.
+        static StagingAction[] VersusEntries()=>StagingCatalog.Load().entries.Where(e=>e.character=="jin"||e.character=="kaz").ToArray();
         [Serializable] class Report {public bool passed;public int entries;public Result[] actions;}
         static int index,waitFrame;
         static GameObject actor;
@@ -37,11 +39,11 @@ namespace Versus.Remaster.Editor
                     if(Time.frameCount<waitFrame+3)return;
                     var previous=RenderTexture.active;RenderTexture.active=target;
                     var image=new Texture2D(960,540,TextureFormat.RGB24,false);image.ReadPixels(new Rect(0,0,960,540),0,0);image.Apply();
-                    File.WriteAllBytes("Validation/Staging/"+StagingCatalog.Load().entries[index].secondary+".png",image.EncodeToPNG());
+                    File.WriteAllBytes("Validation/Staging/"+VersusEntries()[index].secondary+".png",image.EncodeToPNG());
                     UnityEngine.Object.DestroyImmediate(image);RenderTexture.active=previous;camera.targetTexture=null;
                     target.Release();UnityEngine.Object.DestroyImmediate(target);target=null;UnityEngine.Object.DestroyImmediate(actor);index++;
                 }
-                var entries=StagingCatalog.Load().entries;
+                var entries=VersusEntries();
                 if(index==entries.Length)
                 {
                     File.WriteAllText("Validation/Staging/playback.json",JsonUtility.ToJson(new Report{passed=true,entries=entries.Length,actions=results.ToArray()},true));

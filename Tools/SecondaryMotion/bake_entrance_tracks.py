@@ -19,6 +19,14 @@ face_names=[n.value.slice.value for n in returned('getFaceAnimFrameFromBones')[:
 face_names+=['Bero2_Joint','Bero3_Joint']
 assert len(face_names)==43
 
+def hand_rotation(euler, side):
+ q=R.from_euler('xyz',euler).as_quat()
+ # Both source hands use the same channel order, but their extracted bind
+ # skeletons have opposite palm normals. The compact stance tracks already
+ # establish this mirrored left basis; staging's 19-channel bank needs it too.
+ return R.from_quat([-q[0],q[2],q[1],q[3]] if side=='L'
+                    else [q[0],-q[2],q[1],q[3]])
+
 def bake():
  output=PROJECT/'Assets/Remaster/Resources/SecondaryMotion';output.mkdir(parents=True,exist_ok=True)
  report=[]
@@ -35,8 +43,7 @@ def bake():
     for f in motion.samples:
      euler=f[2*i+1] if side is None else f[i]
      q=R.from_euler('xyz',euler).as_quat()
-     # Native local axes -> extracted Unity skeleton: reflection (-X,+Z,-Y).
-     native=R.from_quat([q[0],-q[2],q[1],q[3]])
+     native=hand_rotation(euler,side) if side else R.from_quat([q[0],-q[2],q[1],q[3]])
      delta=(qrest.inv()*native).as_quat()
      pos=np.array([-f[2*i][0],f[2*i][2],-f[2*i][1]])*.001-prest if side is None else np.zeros(3)
      scale=np.ones(3)

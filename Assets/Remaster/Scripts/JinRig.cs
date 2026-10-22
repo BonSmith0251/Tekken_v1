@@ -36,6 +36,11 @@ namespace Versus.Remaster
             }
             CacheFingerPoses();
             pelvis = byName["BASE"];
+            RefreshMaterials();
+        }
+        // Call after swapping renderers (wardrobe items) so hit and guard tints reach the new pieces.
+        public void RefreshMaterials()
+        {
             var allMaterials = new List<Material>();
             foreach (var skin in GetComponentsInChildren<SkinnedMeshRenderer>()) allMaterials.AddRange(skin.materials);
             materials = allMaterials.ToArray(); baseColors = new Color[materials.Length];

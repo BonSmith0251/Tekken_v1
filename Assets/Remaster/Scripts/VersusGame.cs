@@ -65,6 +65,10 @@ namespace Versus.Remaster
             BuildArena();
             var jinObject = sceneJin ? sceneJin : Instantiate(Resources.Load<GameObject>("JinPlayable"), transform);
             var jin = jinObject.GetComponent<JinRig>();
+            // Both fighters wear random items saved in the wardrobe scene, not their preset costumes.
+            var outfitRandom = new System.Random();
+            Dress(jinObject, jinActions, outfitRandom);
+            jin.RefreshMaterials();
             jin.fighterMoves = catalogs[1].moves;
             jin.actionMotion = jin.gameObject.AddComponent<FighterActionMotion>();
             jin.actionMotion.Initialize(catalogs[1]);
@@ -77,8 +81,10 @@ namespace Versus.Remaster
 #endif
             if (!sceneKazuya && !kazuyaPrefab) throw new InvalidOperationException("Assign the Kazuya Karate Gi prefab in LocalVersus.");
             var kazuyaObject = sceneKazuya ? sceneKazuya : Instantiate(kazuyaPrefab, transform);
+            Dress(kazuyaObject, kazuyaActions, outfitRandom);
             var kazuya = kazuyaObject.GetComponent<JinRig>();
             if (!kazuya) kazuya = kazuyaObject.AddComponent<JinRig>();
+            kazuya.RefreshMaterials();
             kazuya.fighterMoves = catalogs[0].moves;
             kazuya.actionMotion = kazuya.gameObject.AddComponent<FighterActionMotion>();
             kazuya.actionMotion.Initialize(catalogs[0]);
@@ -102,6 +108,11 @@ namespace Versus.Remaster
                 Invoke(nameof(SmokeCapture), introTime + 8); Invoke(nameof(SmokeExit), introTime + 10); }
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
+        }
+        static void Dress(GameObject fighter, MuseumCharacter character, System.Random random)
+        {
+            var outfit = FightWardrobe.DressSaved(fighter, character, random);
+            if (outfit != null) Debug.Log(character.displayName + " fight outfit: " + string.Join(", ", outfit));
         }
         void SmokeCapture()
         {
