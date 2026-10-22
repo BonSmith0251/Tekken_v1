@@ -27,6 +27,8 @@ namespace Versus.Remaster
         // Read from the original game camera +0x39C during a user-confirmed normal fight.
         const float GameplayHorizontalFov = GameplayCameraFraming.HorizontalFov;
         LocalVersusEntrance entrance;
+        VictoryStaging[] victoryStaging;
+        VictoryStaging victory;
         bool menu, help, diagnostic;
         readonly int[] aiCooldown = new int[2];
         FighterActionCatalog[] catalogs;
@@ -88,6 +90,9 @@ namespace Versus.Remaster
             if (playEntrance)
                 entrance = new LocalVersusEntrance(kazuyaObject.transform, jinObject.transform,
                     cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions, gameplayLens);
+            victoryStaging = new[] {
+                new VictoryStaging(kazuyaObject.transform, kazuya.actionMotion, kazuyaActions, "kaz"),
+                new VictoryStaging(jinObject.transform, jin.actionMotion, jinActions, "jin") };
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
@@ -176,6 +181,7 @@ namespace Versus.Remaster
         }
         void Update()
         {
+            if (victory != null && !paused) victory.Advance(Time.unscaledDeltaTime);
             if (entrance != null && entrance.Active)
             {
                 visualTime += Time.unscaledDeltaTime;
@@ -205,7 +211,8 @@ namespace Versus.Remaster
             {
                 if (battle.phase == MatchPhase.MatchOver)
                 {
-                    if (++rematchTicks >= 180) { rematchTicks = 0; battle.Restart(); }
+                    if (battle.winner >= 0 && (victory == null || !victory.Complete)) return;
+                    if (++rematchTicks >= 180) { rematchTicks = 0; ClearVictory(); battle.Restart(); }
                     return;
                 }
                 commands[0] = AutoCommand(0);
@@ -247,10 +254,14 @@ namespace Versus.Remaster
         void LateUpdate()
         {
             if (views == null) return;
+            if (battle.phase == MatchPhase.MatchOver && battle.winner >= 0 && victory == null)
+            { victory = victoryStaging[battle.winner]; victory.Begin(); }
+            if (victory != null) victory.Prepare();
             if (entrance != null && entrance.Active) entrance.PrepareMotion();
             for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
                 !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
             if (entrance != null && entrance.Active) { entrance.Present(); return; }
+            if (victory != null) { victory.Present(cameraRig, gameplayLens); return; }
             gameplayLens.SetHorizontalFov(GameplayHorizontalFov);
             var a = battle.fighters[0]; var b = battle.fighters[1];
             GameplayCameraFraming.Evaluate(new Vector3(a.x, 0, a.z), new Vector3(b.x, 0, b.z),
@@ -283,7 +294,8 @@ namespace Versus.Remaster
         }
         void OnApplicationFocus(bool focus) { if (!focus && !menu && !diagnostic) { paused = true; ClearInputs(); } }
         void ClearInputs() { for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pending[i] = -1; } }
-        void StartMatch() { menu = false; paused = false; ClearInputs(); battle.Restart(); }
+        void ClearVictory() { if (victory != null) victory.Clear(); victory = null; }
+        void StartMatch() { menu = false; paused = false; ClearVictory(); ClearInputs(); battle.Restart(); }
         void OnHit(HitEvent hit)
         {
             hitsResolved++;

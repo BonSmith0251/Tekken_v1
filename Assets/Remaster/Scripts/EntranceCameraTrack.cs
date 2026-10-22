@@ -11,11 +11,14 @@ namespace Versus.Remaster
         readonly float[] horizontalFov;
         readonly int[] cuts;
         public int Frames => positions.Length;
+        float lastFrame = -1, smoothedFov;
+        float smoothedDistance;
+        Vector3 smoothedDirection;
 
         public EntranceCameraTrack(string resource, int moveId, int bodyFrames)
         {
-            cuts = resource == "Kazuya_s03" ? new[] { 47, 88 } :
-                resource == "Jin_s02" ? new[] { 123 } : new int[0];
+            cuts = (resource == "Kazuya_s03" || resource == "kaz_staging_2326") ? new[] { 47, 88 } :
+                (resource == "Jin_s02" || resource == "jin_staging_2220") ? new[] { 123 } : new int[0];
             var asset = Resources.Load<TextAsset>("EntranceCameras/" + resource);
             if (!asset) throw new InvalidOperationException("Missing entrance camera: " + resource);
             byte[] data = asset.bytes;
@@ -41,6 +44,38 @@ namespace Versus.Remaster
                 if (float.IsNaN(horizontalFov[f]) || horizontalFov[f] <= 0 || horizontalFov[f] >= 179)
                     throw new InvalidOperationException("Invalid entrance FOV: " + resource);
             }
+            BlendSourceEdits();
+        }
+
+        void BlendSourceEdits()
+        {
+            // Replace within-action camera cuts with a short, zero-slope blend.
+            // Blend before and after each edit so the camera does not chase a jump.
+            var sourcePositions = (Vector3[])positions.Clone();
+            var sourceForwards = (Vector3[])forwards.Clone();
+            var sourceUps = (Vector3[])ups.Clone();
+            var sourceFov = (float[])horizontalFov.Clone();
+            int lastCut = -20;
+            for (int cut = 1; cut < Frames; cut++)
+            {
+                bool discontinuity = Array.IndexOf(cuts, cut) >= 0 ||
+                    Vector3.Distance(sourcePositions[cut-1], sourcePositions[cut]) > .75f ||
+                    Mathf.Abs(sourceFov[cut]-sourceFov[cut-1]) > 4 ||
+                    Vector3.Angle(sourceForwards[cut-1], sourceForwards[cut]) > 35;
+                if (!discontinuity || cut-lastCut < 12) continue;
+                lastCut = cut;
+                int first = Mathf.Max(0, cut-6), last = Mathf.Min(Frames-1, cut+9);
+                var from = Quaternion.LookRotation(sourceForwards[first], sourceUps[first]);
+                var to = Quaternion.LookRotation(sourceForwards[last], sourceUps[last]);
+                for (int f = first; f <= last; f++)
+                {
+                    float t = Mathf.SmoothStep(0, 1, (f-first)/(float)(last-first));
+                    positions[f] = Vector3.Lerp(sourcePositions[first], sourcePositions[last], t);
+                    var pose = Quaternion.Slerp(from, to, t);
+                    forwards[f] = pose * Vector3.forward; ups[f] = pose * Vector3.up;
+                    horizontalFov[f] = Mathf.Lerp(sourceFov[first], sourceFov[last], t);
+                }
+            }
         }
 
         static Vector3 ReadVector(byte[] data, int p) => new Vector3(
@@ -60,7 +95,7 @@ namespace Versus.Remaster
                 next = Mathf.Clamp(frameMap(next), 0, Frames - 1);
             }
             // A removed overlap is also a camera cut, never a sweep through discarded samples.
-            if (next > f + 1 || Array.IndexOf(cuts, next) >= 0) blend = 0;
+            if (next > f + 1) blend = 0;
             Vector3 nativePosition = actor.TransformPoint(Vector3.Lerp(positions[f], positions[next], blend));
             Quaternion rotation = Quaternion.Slerp(Quaternion.LookRotation(forwards[f], ups[f]),
                 Quaternion.LookRotation(forwards[next], ups[next]), blend);
@@ -75,8 +110,25 @@ namespace Versus.Remaster
             float elevation = Mathf.Clamp(nativeBack.y, -.25f, .35f);
             Vector3 offset = (front + Vector3.up * elevation).normalized;
             float distance = Mathf.Max(.5f, Vector3.Distance(nativePosition, focus.center));
-            camera.transform.SetPositionAndRotation(focus.center + offset * distance,
-                Quaternion.LookRotation(-offset, Vector3.up));
+            float deltaFrames = frame - lastFrame;
+            if (lastFrame < 0 || deltaFrames < 0 || deltaFrames > 30)
+            {
+                smoothedDistance = distance; smoothedDirection = offset;
+                smoothedFov = camera.fieldOfView;
+            }
+            else
+            {
+                float weight = 1 - Mathf.Exp(-Mathf.Max(0, deltaFrames) / 9f);
+                smoothedDistance = Mathf.Lerp(smoothedDistance, distance, weight);
+                smoothedDirection = Vector3.RotateTowards(smoothedDirection,
+                    Vector3.Slerp(smoothedDirection, offset, weight), 2.2f * Mathf.Deg2Rad * deltaFrames, 0).normalized;
+                smoothedFov = Mathf.MoveTowards(smoothedFov,
+                    Mathf.Lerp(smoothedFov, camera.fieldOfView, weight), .8f * deltaFrames);
+            }
+            lastFrame = frame;
+            lens.SetVerticalFov(smoothedFov);
+            camera.transform.SetPositionAndRotation(focus.center + smoothedDirection * smoothedDistance,
+                Quaternion.LookRotation(-smoothedDirection, Vector3.up));
             // Frame the retargeted subject, including head volume rather than only
             // its neck-level pivot. Native cuts and FOV remain intact.
             float tanY = Mathf.Tan(camera.fieldOfView * .5f * Mathf.Deg2Rad);

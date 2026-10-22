@@ -86,8 +86,8 @@ namespace Versus.Remaster.Editor
                 var game = UnityEngine.Object.FindFirstObjectByType<VersusGame>();
                 var entrance = (LocalVersusEntrance)typeof(VersusGame).GetField("entrance", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(game);
                 if (entrance == null) throw new InvalidOperationException("Enable entrances for this validation.");
-                if (sample == 0 && (entrance.Current != LocalVersusEntrance.Shot.PlayerOne || entrance.Frame < 130)) return;
-                if (sample == 1 && (entrance.Current != LocalVersusEntrance.Shot.PlayerTwo || entrance.Frame < 180)) return;
+                if (sample == 0 && (entrance.Current != LocalVersusEntrance.Shot.PlayerOne || entrance.Frame < 60)) return;
+                if (sample == 1 && (entrance.Current != LocalVersusEntrance.Shot.PlayerTwo || entrance.Frame < 60)) return;
                 if (sample == 2 && entrance.Active) return;
                 camera = Camera.main;
                 target = new RenderTexture(1280, 720, 24, RenderTextureFormat.ARGB32);

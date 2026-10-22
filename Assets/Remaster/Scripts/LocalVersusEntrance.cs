@@ -37,6 +37,11 @@ namespace Versus.Remaster
         readonly BattleModel battle;
         readonly FighterActionMotion jinMotion, kazuyaMotion;
         readonly int jinIntro, kazuyaIntro;
+        readonly StagingAction jinStaging, kazuyaStaging;
+        readonly System.Func<int,int> kazuyaFrameMap;
+        readonly Transform[] jinShotBones;
+        public int JinStagingMove => jinStaging.moveId;
+        public int KazuyaStagingMove => kazuyaStaging.moveId;
         readonly int jinIntroFrames, kazuyaIntroFrames;
         readonly EntranceCameraTrack jinCamera, kazuyaCamera;
         readonly SecondaryMotionTrack jinSecondary, kazuyaSecondary;
@@ -64,22 +69,24 @@ namespace Versus.Remaster
             jinRenderers = p2.GetComponentsInChildren<Renderer>(); kazuyaRenderers = p1.GetComponentsInChildren<Renderer>();
             jinRendererEnabled = System.Array.ConvertAll(jinRenderers, r => r.enabled);
             kazuyaRendererEnabled = System.Array.ConvertAll(kazuyaRenderers, r => r.enabled);
-            jinMotion = jin;
-            jinIntro = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == 2220 && a.motion);
-            if (jinIntro < 0)
-                throw new System.InvalidOperationException("Jin entrance requires jz_s02 (move 2220).");
+            jinMotion = jin; kazuyaMotion = kazuya;
+            jinStaging = StagingCatalog.Select("jin", jinCharacter);
+            kazuyaStaging = StagingCatalog.Select("kaz", kazuyaCharacter);
+            jinIntro = System.Array.FindIndex(jinCharacter.actions, a => a.moveId == jinStaging.moveId && a.motion);
+            kazuyaIntro = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == kazuyaStaging.moveId && a.motion);
             jinIntroFrames = System.BitConverter.ToInt32(jinCharacter.actions[jinIntro].motion.bytes, 4);
-            kazuyaMotion = kazuya;
-            kazuyaIntro = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 2326 && a.motion);
-            if (kazuyaIntro < 0)
-                throw new System.InvalidOperationException("Kazuya entrance requires kz_s03 (move 2326).");
-            // Keep native assets intact; omit repeated descent frames in presentation.
             kazuyaIntroFrames = System.BitConverter.ToInt32(kazuyaCharacter.actions[kazuyaIntro].motion.bytes, 4);
-            jinCamera = new EntranceCameraTrack("Jin_s02", 2220, jinIntroFrames);
-            kazuyaCamera = new EntranceCameraTrack("Kazuya_s03", 2326, kazuyaIntroFrames);
-            jinSecondary = new SecondaryMotionTrack(playerTwo, "jin_2220", jinIntroFrames);
-            kazuyaSecondary = new SecondaryMotionTrack(playerOne, "kaz_2326", kazuyaIntroFrames);
-            kazuyaIntroFrames -= KazuyaEntranceTimeline.RemovedFrames;
+            jinCamera = new EntranceCameraTrack(jinStaging.camera, jinStaging.moveId, jinIntroFrames);
+            kazuyaCamera = new EntranceCameraTrack(kazuyaStaging.camera, kazuyaStaging.moveId, kazuyaIntroFrames);
+            jinSecondary = new SecondaryMotionTrack(playerTwo, jinStaging.secondary, jinIntroFrames);
+            kazuyaSecondary = new SecondaryMotionTrack(playerOne, kazuyaStaging.secondary, kazuyaIntroFrames);
+            if (kazuyaStaging.landingStitch)
+            {
+                kazuyaFrameMap = KazuyaEntranceTimeline.SourceFrame;
+                kazuyaIntroFrames -= KazuyaEntranceTimeline.RemovedFrames;
+            }
+            jinShotBones = System.Array.FindAll(p2.GetComponentsInChildren<Transform>(),
+                t => t.name == "Head" || t.name == "L_Foot" || t.name == "R_Foot" || t.name == "L_Hand" || t.name == "R_Hand");
             gameplayFov = camera.fieldOfView;
             lens = sharedLens;
             Current = Shot.PlayerOne;
@@ -92,7 +99,7 @@ namespace Versus.Remaster
             else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
 
             if (kazuyaMotion && Current == Shot.PlayerOne)
-                kazuyaMotion.SetPresentation(kazuyaIntro, SampleFrame, false, true, KazuyaEntranceTimeline.SourceFrame);
+                kazuyaMotion.SetPresentation(kazuyaIntro, SampleFrame, false, true, kazuyaFrameMap);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
@@ -137,7 +144,7 @@ namespace Versus.Remaster
             if (!Active) return;
             SetVisibility(Current != Shot.PlayerOne, Current != Shot.PlayerTwo);
             // Apply after the body renderer so native hands replace its procedural fallback.
-            if (Current == Shot.PlayerOne) kazuyaSecondary.Apply(SampleFrame, KazuyaEntranceTimeline.SourceFrame);
+            if (Current == Shot.PlayerOne) kazuyaSecondary.Apply(SampleFrame, kazuyaFrameMap);
             if (Current == Shot.PlayerTwo) jinSecondary.Apply(SampleFrame);
             // Original clips supply their own motion relative to these camera/actor anchors.
             playerOne.position = P1Ready;
@@ -155,16 +162,17 @@ namespace Versus.Remaster
                 }
                 Bounds close = SubjectBounds(kazuyaHead, null);
                 Bounds wide = SubjectBounds(kazuyaHead, kazuyaShotBones);
-                float sourceFrame = KazuyaEntranceTimeline.SourceFrame(Frame) + (SampleFrame - Frame);
+                float sourceFrame = (kazuyaFrameMap != null ? kazuyaFrameMap(Frame) : Frame) + (SampleFrame - Frame);
                 float closeBlend = Mathf.SmoothStep(0, 1, (sourceFrame - 110) / 30f);
-                Bounds focus = Frame < 47 ? close : new Bounds(
-                    Vector3.Lerp(wide.center, close.center, closeBlend),
-                    Vector3.Lerp(wide.size, close.size, closeBlend));
+                float wideBlend = Mathf.SmoothStep(0, 1, (sourceFrame - 30) / 20f) * (1 - closeBlend);
+                Bounds focus = !kazuyaStaging.landingStitch ? wide : new Bounds(
+                    Vector3.Lerp(close.center, wide.center, wideBlend),
+                    Vector3.Lerp(close.size, wide.size, wideBlend));
                 kazuyaCamera.Apply(cameraRig, playerOne, SampleFrame, lens, focus,
-                    kazuyaFront, KazuyaEntranceTimeline.SourceFrame);
+                    kazuyaFront, kazuyaFrameMap);
             }
             else if (Current == Shot.PlayerTwo)
-                jinCamera.Apply(cameraRig, playerTwo, SampleFrame, lens, SubjectBounds(jinHead, null),
+                jinCamera.Apply(cameraRig, playerTwo, SampleFrame, lens, SubjectBounds(jinHead, jinStaging.moveId == 2220 ? null : jinShotBones),
                     jinHead.TransformDirection(jinFaceAxis));
             else
                 SetGameplayCamera(Current == Shot.RoundStart
