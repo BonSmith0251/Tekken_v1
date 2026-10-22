@@ -136,7 +136,11 @@ namespace Versus.Remaster.Editor
                             PieceEntry entry,Dictionary<string,Material> materials,string costume,string output=Output,WardrobeCharacter options=null)
         {
             var part=JsonUtility.FromJson<Part>(File.ReadAllText(entry.path));var bones=AddBones(skeleton,boneMap,part,options!=null && options.localAnonymousBones?entry.name:null);
-            var mesh=new Mesh {name=entry.name,indexFormat=IndexFormat.UInt32};mesh.vertices=part.vertices;mesh.uv=part.uv;
+            // Rebuild an existing mesh asset in place: copying a new mesh over it kept the old vertex
+            // buffer (Kazuya's glasses stayed at their first export's position after a re-export).
+            string meshPath=output+"/Meshes/"+Safe(costume)+"_"+Safe(entry.name)+".asset";
+            var existing=AssetDatabase.LoadAssetAtPath<Mesh>(meshPath);
+            var mesh=existing?existing:new Mesh();mesh.Clear();mesh.name=entry.name;mesh.indexFormat=IndexFormat.UInt32;mesh.vertices=part.vertices;mesh.uv=part.uv;
             mesh.boneWeights=part.weights.Select(x=>x.Value).ToArray();
             // Sections with an empty material slot in the source (exported as MI_unassigned__*) are not drawn in game.
             var sections=part.submeshes.Where(x=>!x.material.Contains("Eye_ADD") && x.material!="MI_CH_tear" && !x.material.StartsWith("MI_unassigned__")).ToArray();mesh.subMeshCount=sections.Length;
@@ -152,9 +156,7 @@ namespace Versus.Remaster.Editor
             }
             mesh.bindposes=bones.Select(x=>x.worldToLocalMatrix*root.transform.localToWorldMatrix).ToArray();mesh.RecalculateNormals();mesh.RecalculateTangents();mesh.RecalculateBounds();
             foreach(var pair in doubled)mesh.SetTriangles(pair.Value,pair.Key);
-            string meshPath=output+"/Meshes/"+Safe(costume)+"_"+Safe(entry.name)+".asset";
-            var existing=AssetDatabase.LoadAssetAtPath<Mesh>(meshPath);
-            if(existing){EditorUtility.CopySerialized(mesh,existing);UnityEngine.Object.DestroyImmediate(mesh);mesh=existing;}else AssetDatabase.CreateAsset(mesh,meshPath);
+            if(existing)EditorUtility.SetDirty(mesh);else AssetDatabase.CreateAsset(mesh,meshPath);
             var skin=new GameObject(entry.name).AddComponent<SkinnedMeshRenderer>();skin.transform.SetParent(root.transform,false);skin.sharedMesh=mesh;skin.bones=bones;skin.rootBone=boneMap["BASE"];
             skin.sharedMaterials=sections.Select(x=>materials[x.material]).ToArray();skin.updateWhenOffscreen=true;skin.quality=SkinQuality.Bone4;
         }

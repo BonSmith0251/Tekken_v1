@@ -49,6 +49,8 @@ namespace Versus.Remaster.Editor
                     try
                     {
                         var model=preview.InstantiatePrefabInScene(basePrefab);
+                        // A connected prefab instance refuses renderer removal; dress an unpacked copy.
+                        PrefabUtility.UnpackPrefabInstance(model,PrefabUnpackMode.Completely,InteractionMode.AutomatedAction);
                         var selection=MuseumWardrobe.Find(model,wardrobe);selection[s]=i;
                         MuseumWardrobe.Dress(model,wardrobe,selection);
                         var expected=new HashSet<string>{piece.piece};if(piece.dependency)expected.Add(piece.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name);

@@ -26,6 +26,20 @@ namespace Versus.Remaster.Editor
         {
             var wardrobes=JinCostumeImporter.Wardrobes.Select(c=>AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(c.asset)).Where(w=>w).ToArray();
             if(wardrobes.Length==0)throw new InvalidOperationException("Rebuild at least one character wardrobe first.");
+            // Unity cannot overwrite a scene that is open in the editor; update that one in place.
+            var open=UnityEngine.SceneManagement.SceneManager.GetSceneByPath(ScenePath);
+            if(open.isLoaded)
+            {
+                var viewer=open.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<WardrobeViewer>(true)).FirstOrDefault();
+                if(!viewer)throw new InvalidOperationException(ScenePath+" is open but has no WardrobeViewer.");
+                bool hadEdits=open.isDirty;
+                viewer.wardrobes=wardrobes;EditorUtility.SetDirty(viewer);EditorSceneManager.MarkSceneDirty(open);
+                // Save only when the user has no unsaved edits of their own in that scene.
+                if(!hadEdits && !EditorSceneManager.SaveScene(open))throw new IOException("Could not save "+ScenePath);
+                File.WriteAllText("Validation/jin-wardrobe-scene.json","{\"passed\":true,\"scene\":\""+ScenePath+"\",\"characters\":"+wardrobes.Length+",\"updatedOpenScene\":true,\"saved\":"+(hadEdits?"false":"true")+"}");
+                Debug.Log("Updated open "+ScenePath+(hadEdits?" (not saved: it has other unsaved edits)":""));
+                return;
+            }
             var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Additive);
             try
             {
