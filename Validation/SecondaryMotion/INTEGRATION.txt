@@ -1,0 +1,34 @@
+NATIVE HAND AND FACIAL ENTRANCE PLAYBACK
+
+LocalVersus2 now applies Jin and Kazuya's original left-hand, right-hand and
+facial tracks after body rendering. The 81 secondary bones replace procedural
+hands only during their solo entrances. Jin's left hand holds its original
+pose; his right hand changes from open fingers to a fist. Jaw, lip, tongue,
+eye and brow tracks use the original samples.
+
+Both tracks share the fractional body clock. Kazuya uses the same removed
+landing overlaps and six-frame pose joins. Skip restores both rigs before
+combat; subsequent body renders restore the normal procedural fallback.
+This integration covers the two selected entrances, not all combat moves.
+
+Native local transforms are converted through (-X,+Z,-Y), then stored relative
+to each character's source bind pose. Runtime applies those deltas to the
+actual instantiated rig, preserving costume-specific bind offsets. Kazuya's
+19 mesh sources/assets now retain original finger/facial weights while the
+previous remapping of undriven body helpers is preserved.
+
+Reproduce:
+1. python Tools/SecondaryMotion/bake_entrance_tracks.py
+2. If re-exporting Kazuya from the older external exporter, run:
+   python Tools/SecondaryMotion/restore_kazuya_weights.py
+   then Unity menu Remaster/Apply Restored Kazuya Secondary Weights.
+3. python Tools/SecondaryMotion/test_secondary_motion.py
+The bake uses existing local Direct_TekkenAnimHelper.py channel order research;
+its upstream reference is https://github.com/Kiloutre/BlenderTekkenDirect.
+No network access is needed by these scripts.
+
+Verified in Unity Play mode: nine poses, 27 hand/face close-ups, skip restores
+both rigs and combat renders afterward. Contact sheet and sampled transforms
+are saved alongside playback-check.json. Six automated checks pass: two new
+secondary-track/skin-weight tests, landing continuity, and three camera tests.
+Audio/lip-sync playback and native finger tracks during combat are not added.

@@ -18,7 +18,7 @@ AnimationClips. Their frame counts match their respective source body clips.
 Discovery script checks headers, references, frame counts and decode round trips.
 See discovery.json for source hashes, properties and changing channel indices.
 
-Not connected to Unity playback yet. Required work:
+Discovery-stage integration notes (completed for the entrances; see INTEGRATION.txt):
 - Retarget hand and facial channel coordinates to the imported bone hierarchy.
 - Replace procedural finger poses only when a native hand track is active.
 - Preserve/restore facial and finger skin weights (Kazuya's exporter currently

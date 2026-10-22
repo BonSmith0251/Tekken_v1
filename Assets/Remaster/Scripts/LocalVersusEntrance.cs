@@ -39,6 +39,7 @@ namespace Versus.Remaster
         readonly int jinIntro, kazuyaIntro;
         readonly int jinIntroFrames, kazuyaIntroFrames;
         readonly EntranceCameraTrack jinCamera, kazuyaCamera;
+        readonly SecondaryMotionTrack jinSecondary, kazuyaSecondary;
         readonly EntranceCameraLens lens;
         readonly float gameplayFov;
         static readonly Vector3 P1Ready = new Vector3(-BattleModel.StartingHalfSeparation, 0, 0);
@@ -76,6 +77,8 @@ namespace Versus.Remaster
             kazuyaIntroFrames = System.BitConverter.ToInt32(kazuyaCharacter.actions[kazuyaIntro].motion.bytes, 4);
             jinCamera = new EntranceCameraTrack("Jin_s02", 2220, jinIntroFrames);
             kazuyaCamera = new EntranceCameraTrack("Kazuya_s03", 2326, kazuyaIntroFrames);
+            jinSecondary = new SecondaryMotionTrack(playerTwo, "jin_2220", jinIntroFrames);
+            kazuyaSecondary = new SecondaryMotionTrack(playerOne, "kaz_2326", kazuyaIntroFrames);
             kazuyaIntroFrames -= KazuyaEntranceTimeline.RemovedFrames;
             gameplayFov = camera.fieldOfView;
             lens = sharedLens;
@@ -120,6 +123,7 @@ namespace Versus.Remaster
         void Finish()
         {
             Current = Shot.Complete; Frame = 0;
+            jinSecondary.Restore(); kazuyaSecondary.Restore();
             SetVisibility(true, true);
             if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
             if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
@@ -132,6 +136,9 @@ namespace Versus.Remaster
         {
             if (!Active) return;
             SetVisibility(Current != Shot.PlayerOne, Current != Shot.PlayerTwo);
+            // Apply after the body renderer so native hands replace its procedural fallback.
+            if (Current == Shot.PlayerOne) kazuyaSecondary.Apply(SampleFrame, KazuyaEntranceTimeline.SourceFrame);
+            if (Current == Shot.PlayerTwo) jinSecondary.Apply(SampleFrame);
             // Original clips supply their own motion relative to these camera/actor anchors.
             playerOne.position = P1Ready;
             playerTwo.position = P2Ready;
