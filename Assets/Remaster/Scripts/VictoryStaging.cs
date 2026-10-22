@@ -44,7 +44,7 @@ namespace Versus.Remaster
             var bounds=new Bounds(head.position+Vector3.up*.1f,Vector3.one*.44f);
             foreach(var bone in landmarks)bounds.Encapsulate(new Bounds(bone.position,Vector3.one*.2f));
             if(cameras.TryGetValue(selected.moveId,out var track))
-                track.Apply(camera,actor,frame,lens,bounds,head.TransformDirection(faceAxis));
+                track.Apply(camera,actor,frame,lens,bounds,head.TransformDirection(faceAxis), null, head.position);
             else
             {
                 // Paired victory variants have no standalone source camera.

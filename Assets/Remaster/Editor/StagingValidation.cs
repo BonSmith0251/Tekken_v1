@@ -73,7 +73,7 @@ namespace Versus.Remaster.Editor
                     rig.actionMotion.SetPresentation(action,frame,false,true,map);rig.Render(state,game.config.rules,0,false);secondary.Apply(frame,map);
                     var bounds=new Bounds(head.position+Vector3.up*.1f,Vector3.one*.44f);
                     foreach(var bone in landmarks)bounds.Encapsulate(new Bounds(bone.position,Vector3.one*.2f));
-                    if(track!=null)track.Apply(camera,actor.transform,frame,lens,bounds,head.TransformDirection(face),map);
+                    if(track!=null)track.Apply(camera,actor.transform,frame,lens,bounds,head.TransformDirection(face),map,head.position);
                     else {lens.SetHorizontalFov(65);camera.transform.position=bounds.center+actor.transform.forward*5;camera.transform.LookAt(bounds.center);}
                     if(float.IsNaN(camera.transform.position.x)||camera.fieldOfView<=0||camera.fieldOfView>=179)throw new Exception("Invalid camera "+e.moveId);
                     if(frame>0){result.maxCameraStep=Mathf.Max(result.maxCameraStep,Vector3.Distance(last,camera.transform.position));result.maxAngleStep=Mathf.Max(result.maxAngleStep,Quaternion.Angle(rotation,camera.transform.rotation));result.maxFovStep=Mathf.Max(result.maxFovStep,Mathf.Abs(fov-camera.fieldOfView));}

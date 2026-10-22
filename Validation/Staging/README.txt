@@ -34,3 +34,24 @@ finite camera values and records head visibility and maximum per-frame camera
 changes. PNGs show the final rendered frame of each action. flow.json verifies
 random startup entrances, both winner sequences completing, and rematch cleanup.
 Those checks do not claim pixel-identical recreation of the original game.
+
+ACTION-SPECIFIC CAMERA CORRECTION
+The renderer now uses each track's actual camera position relative to its
+animated subject, including lateral movement and height. Previously it reduced
+that position to a distance and substituted the same 12-degree frontal angle
+for every action. Authored roll is now retained up to 12 degrees. The existing
+camera-edit/FOV smoothing remains enabled.
+
+To preserve the requested front view, only the rearward depth component is
+reflected into the front hemisphere; lateral travel remains signed and the
+profile angle is limited to 75 degrees. Bounds fitting and floor clearance
+remain safety adjustments. This is a front-facing adaptation of each native
+track, not an unmodified original-game camera transform.
+
+camera-sources.json records the 17 distinct native camera sample hashes and
+move bindings. The two paired victory variants still have no standalone source
+camera and continue to use the documented full-body fallback.
+
+Shot scale is also adapted per sample from the native distance and FOV. The
+shared full-body safety bounds no longer turn every close-up into a wide shot;
+head bounds remain included so close-up framing does not lose the subject.

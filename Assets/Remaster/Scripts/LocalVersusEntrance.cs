@@ -169,11 +169,11 @@ namespace Versus.Remaster
                     Vector3.Lerp(close.center, wide.center, wideBlend),
                     Vector3.Lerp(close.size, wide.size, wideBlend));
                 kazuyaCamera.Apply(cameraRig, playerOne, SampleFrame, lens, focus,
-                    kazuyaFront, kazuyaFrameMap);
+                    kazuyaFront, kazuyaFrameMap, kazuyaHead.position);
             }
             else if (Current == Shot.PlayerTwo)
                 jinCamera.Apply(cameraRig, playerTwo, SampleFrame, lens, SubjectBounds(jinHead, jinStaging.moveId == 2220 ? null : jinShotBones),
-                    jinHead.TransformDirection(jinFaceAxis));
+                    jinHead.TransformDirection(jinFaceAxis), null, jinHead.position);
             else
                 SetGameplayCamera(Current == Shot.RoundStart
                     ? Mathf.SmoothStep(0, 1, SampleFrame / (float)(CameraSettleFrames - 1)) : 1);

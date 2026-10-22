@@ -11,7 +11,7 @@ namespace Versus.Remaster
         readonly float[] horizontalFov;
         readonly int[] cuts;
         public int Frames => positions.Length;
-        float lastFrame = -1, smoothedFov;
+        float lastFrame = -1, smoothedFov, smoothedRoll;
         float smoothedDistance;
         Vector3 smoothedDirection;
 
@@ -84,7 +84,7 @@ namespace Versus.Remaster
         static Vector3 RigBasis(Vector3 native) => new Vector3(-native.z, native.y, -native.x);
 
         public void Apply(Camera camera, Transform actor, float frame, EntranceCameraLens lens, Bounds focus,
-            Vector3 faceForward, Func<int, int> frameMap = null)
+            Vector3 faceForward, Func<int, int> frameMap = null, Vector3? headPosition = null)
         {
             float sample = Mathf.Clamp(frame, 0, Frames - 1);
             int f = (int)sample, next = Mathf.Min(f + 1, Frames - 1);
@@ -100,26 +100,48 @@ namespace Versus.Remaster
             Quaternion rotation = Quaternion.Slerp(Quaternion.LookRotation(forwards[f], ups[f]),
                 Quaternion.LookRotation(forwards[next], ups[next]), blend);
             lens.SetHorizontalFov(Mathf.Lerp(horizontalFov[f], horizontalFov[next], blend));
-            // Retarget the shot to the anatomical front of the animated head. The
-            // imported rig's bone axes are not Unity's forward axis; the caller
-            // supplies the bind-pose-corrected direction. Keep a slight three-quarter view.
+            // Preserve the take's shot scale: a native close-up must not be
+            // expanded to a full-body shot by the shared framing safety bounds.
+            if (headPosition.HasValue)
+            {
+                float sourceDistance = Vector3.Distance(nativePosition, headPosition.Value);
+                float height = Mathf.Clamp(2 * sourceDistance * Mathf.Tan(camera.fieldOfView * .5f * Mathf.Deg2Rad) * .64f, .5f, Mathf.Max(.5f, focus.size.y));
+                float crop = Mathf.InverseLerp(focus.size.y, .5f, height);
+                Vector3 cropCenter = Vector3.Lerp(focus.center, headPosition.Value, crop);
+                focus = new Bounds(cropCenter, new Vector3(Mathf.Lerp(focus.size.x, .5f, crop), height, Mathf.Lerp(focus.size.z, .44f, crop)));
+                focus.Encapsulate(new Bounds(headPosition.Value + Vector3.up * .08f, Vector3.one * .4f));
+            }
+            // Keep this action's native lateral travel and height. Reflect only
+            // the depth component when it would put the camera behind the face;
+            // a shared frontal azimuth erased the differences between source takes.
             Vector3 front = Vector3.ProjectOnPlane(faceForward, Vector3.up);
             if (front.sqrMagnitude < .001f) front = actor.forward;
-            front = Quaternion.AngleAxis(12, Vector3.up) * front.normalized;
-            Vector3 nativeBack = -(actor.rotation * rotation * Vector3.forward);
-            float elevation = Mathf.Clamp(nativeBack.y, -.25f, .35f);
-            Vector3 offset = (front + Vector3.up * elevation).normalized;
-            float distance = Mathf.Max(.5f, Vector3.Distance(nativePosition, focus.center));
+            front.Normalize();
+            Vector3 right = Vector3.Cross(Vector3.up, front).normalized;
+            Vector3 nativeOffset = nativePosition - focus.center;
+            float depth = Mathf.Abs(Vector3.Dot(nativeOffset, front));
+            float lateral = Vector3.Dot(nativeOffset, right);
+            // Keep a readable three-quarter/profile limit without flattening the
+            // native camera's changing side, orbit, distance or elevation.
+            depth = Mathf.Max(depth, Mathf.Abs(lateral) / Mathf.Tan(75 * Mathf.Deg2Rad), .15f);
+            Vector3 adaptedOffset = right * lateral + front * depth + Vector3.up * nativeOffset.y;
+            float distance = Mathf.Max(.5f, adaptedOffset.magnitude);
+            Vector3 offset = adaptedOffset.normalized;
+            Vector3 nativeUp = actor.rotation * rotation * Vector3.up;
+            Vector3 shotUp = Vector3.ProjectOnPlane(nativeUp, -offset);
+            float roll = shotUp.sqrMagnitude > .001f
+                ? Mathf.Clamp(Vector3.SignedAngle(Vector3.ProjectOnPlane(Vector3.up, -offset), shotUp, -offset), -12, 12) : 0;
             float deltaFrames = frame - lastFrame;
             if (lastFrame < 0 || deltaFrames < 0 || deltaFrames > 30)
             {
                 smoothedDistance = distance; smoothedDirection = offset;
-                smoothedFov = camera.fieldOfView;
+                smoothedFov = camera.fieldOfView; smoothedRoll = roll;
             }
             else
             {
                 float weight = 1 - Mathf.Exp(-Mathf.Max(0, deltaFrames) / 9f);
                 smoothedDistance = Mathf.Lerp(smoothedDistance, distance, weight);
+                smoothedRoll = Mathf.LerpAngle(smoothedRoll, roll, weight);
                 smoothedDirection = Vector3.RotateTowards(smoothedDirection,
                     Vector3.Slerp(smoothedDirection, offset, weight), 2.2f * Mathf.Deg2Rad * deltaFrames, 0).normalized;
                 smoothedFov = Mathf.MoveTowards(smoothedFov,
@@ -128,7 +150,7 @@ namespace Versus.Remaster
             lastFrame = frame;
             lens.SetVerticalFov(smoothedFov);
             camera.transform.SetPositionAndRotation(focus.center + smoothedDirection * smoothedDistance,
-                Quaternion.LookRotation(-smoothedDirection, Vector3.up));
+                Quaternion.LookRotation(-smoothedDirection, Vector3.up) * Quaternion.AngleAxis(smoothedRoll, Vector3.forward));
             // Frame the retargeted subject, including head volume rather than only
             // its neck-level pivot. Native cuts and FOV remain intact.
             float tanY = Mathf.Tan(camera.fieldOfView * .5f * Mathf.Deg2Rad);
