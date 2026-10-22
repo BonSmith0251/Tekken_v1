@@ -1,0 +1,18 @@
+Museum stages
+
+Use the STAGE buttons above the playback controls to cycle through the gallery
+and 34 layouts extracted from the installed game's geometry maps. Layouts retain
+their native stg identifiers, including substage variants. Character, costume,
+action, playback speed and scrub position stay selected when changing stages.
+
+This is an original geometry preview with neutral materials. Original textures,
+animated scenery, particles, crowds, stage lighting and breakable-stage gameplay
+are not included in this pass. Four unresolved/unsupported mesh references are
+listed in Assets/Remaster/Editor/StageSource/report.json.
+
+Regenerate source geometry:
+  C:\Python311\python.exe Tools/import_museum_stages.py
+Then run Versus.Remaster.Editor.CharacterMuseumSetup.Build in Unity.
+
+Run CharacterMuseum.exe --museum-stage-smoke to visit every layout and save
+StageValidation/stages.json and a screenshot per stage beside the executable.
