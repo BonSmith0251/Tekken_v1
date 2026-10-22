@@ -29,11 +29,15 @@ namespace Versus.Remaster
         {
             if (configured) return;
             configured = true;
+            var game = FindFirstObjectByType<VersusGame>();
+            var original = game ? Resources.Load<OriginalStageLightingData>("OriginalStageLighting") : null;
+            GetComponent<Volume>().sharedProfile = original ? original.profile : Resources.Load<VolumeProfile>("RemasterEnvironment");
+            if (original) original.Apply(game);
             foreach (var camera in Camera.allCameras)
             {
-                if (camera.TryGetComponent<HDAdditionalCameraData>(out _)) continue;
-                var data = camera.gameObject.AddComponent<HDAdditionalCameraData>();
-                data.clearColorMode = HDAdditionalCameraData.ClearColorMode.Color;
+                if (!camera.TryGetComponent<HDAdditionalCameraData>(out var data))
+                    data = camera.gameObject.AddComponent<HDAdditionalCameraData>();
+                data.clearColorMode = original ? HDAdditionalCameraData.ClearColorMode.Sky : HDAdditionalCameraData.ClearColorMode.Color;
                 data.backgroundColorHDR = camera.backgroundColor;
                 data.antialiasing = HDAdditionalCameraData.AntialiasingMode.SubpixelMorphologicalAntiAliasing;
                 // Camera transform, physical lens, viewport and entrance cuts remain authored.

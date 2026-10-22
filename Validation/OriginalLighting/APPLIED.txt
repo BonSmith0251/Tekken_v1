@@ -1,0 +1,41 @@
+ORIGINAL STG29 LIGHTING IN HDRP
+
+Source: installed Tekken 7 cooked stg29 assets. See FINDINGS.txt and
+stg29-lighting.json for original properties, provenance, and omitted fields.
+
+Applied to versus scenes automatically by HdrpSceneLighting:
+- Four directional lights, original RGB values, intensity ratios, and relative
+  emission directions. UE (x,y,z) becomes Unity (x,z,-y).
+- Three character lights use rendering layer 2 and do not cast shadows.
+  Fighters receive layers 1 and 2; arena receives layer 1.
+- Original HDR sky: six 1024-square RGBAHalf faces, reoriented without clipping,
+  with mipmaps; used for background, ambient lighting and reflection fallback.
+- Fog disabled; fixed exposure; lens flare disabled.
+- HDRP SSR and light layers enabled in the pipeline asset.
+- Camera lens, transforms and entrance sequence are unchanged.
+
+Cross-renderer mappings (calibration choices, not exact UE equivalence):
+- Native directional intensity -> lux at scale 1. Original ratios retained.
+- UE exposure brightness min/max 1 -> HDRP fixed EV 0.
+- UE bloom .2 -> HDRP intensity .2, scatter .7, threshold 1. UE convolution
+  sizes/tints have no direct equivalent in this profile.
+- UE AO radius 60/power 5 -> HDRP radius .6m/intensity 1. Original radius-space
+  default was not serialized, so this is explicitly an approximation.
+- UE SSR intensity 70 -> SSR enabled and reflection multiplier .7. The latter
+  affects all reflections, not only SSR; smoothness thresholds .55/.8.
+- Neutral tonemapping chosen; original tone curve was not fully recovered.
+- Motion blur and depth of field disabled: stored source values did not prove
+  those effects were active. KO/Rage-only grading is not applied globally.
+- Environment light shadows enabled (inherited source flag unresolved).
+- Light directions use extracted relative rotations; dynamic parent-follow
+  behavior and baked local reflection capture data have not been reproduced.
+
+Rebuild: python Tools/OriginalLighting/extract_stage_lighting.py, then
+python Tools/OriginalLighting/prepare_hdrp_sky.py (requires numpy).
+In Unity: Remaster > Rendering > Apply original stg29 lighting.
+
+Validation: Applied/ contains fresh actual-playback captures of Kazuya, Jin,
+and combat, plus runtime checks for HDRP, materials, lights, character layers,
+fog, fixed exposure and HDR sky resolution. Before/ preserves generic HDRP
+lighting for comparison. Stage geometry and character costumes still differ
+from the original reference; this is not a pixel-identical stage reconstruction.

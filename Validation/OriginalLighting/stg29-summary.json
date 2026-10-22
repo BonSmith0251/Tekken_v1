@@ -1,0 +1,216 @@
+{
+  "stage": "stg29",
+  "reference": "night-ocean stage matching the supplied Jin/Kazuya clip",
+  "captureKind": "original cooked stage assets, not live camera/game-memory values",
+  "lights": [
+    {
+      "actor": "DirectionalLight_1",
+      "nativeIntensity": 0.6000000238418579,
+      "colorRgba8": [
+        200,
+        200,
+        200,
+        255
+      ],
+      "relativeRotationDegrees": {
+        "pitch": -19.63197135925293,
+        "yaw": 39.02755355834961,
+        "roll": -1.0362930297851562
+      },
+      "nativeLightChannel": "inherited / not serialized",
+      "castsShadows": "inherited / not serialized",
+      "attachParent": {
+        "index": 43,
+        "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+      },
+      "sourceExportIndex": 22
+    },
+    {
+      "actor": "DirectionalLight_Chara",
+      "nativeIntensity": 3.0,
+      "colorRgba8": [
+        250,
+        255,
+        218,
+        255
+      ],
+      "relativeRotationDegrees": {
+        "pitch": -19.63197135925293,
+        "yaw": 39.02755355834961,
+        "roll": -1.0362930297851562
+      },
+      "nativeLightChannel": "LC_CHARA_BOTH",
+      "castsShadows": false,
+      "attachParent": {
+        "index": 43,
+        "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+      },
+      "sourceExportIndex": 23
+    },
+    {
+      "actor": "DirectionalLight_Chara2",
+      "nativeIntensity": 1.75,
+      "colorRgba8": [
+        226,
+        223,
+        255,
+        255
+      ],
+      "relativeRotationDegrees": {
+        "pitch": 5.4550461769104,
+        "yaw": -80.742431640625,
+        "roll": 1.7535555362701416
+      },
+      "nativeLightChannel": "LC_CHARA_BOTH",
+      "castsShadows": false,
+      "attachParent": {
+        "index": 43,
+        "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+      },
+      "sourceExportIndex": 24
+    },
+    {
+      "actor": "DirectionalLight_Chara3",
+      "nativeIntensity": 2.75,
+      "colorRgba8": [
+        226,
+        223,
+        255,
+        255
+      ],
+      "relativeRotationDegrees": {
+        "pitch": 4.240946292877197,
+        "yaw": 158.89344787597656,
+        "roll": 3.299945116043091
+      },
+      "nativeLightChannel": "LC_CHARA_BOTH",
+      "castsShadows": false,
+      "attachParent": {
+        "index": 43,
+        "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+      },
+      "sourceExportIndex": 25
+    }
+  ],
+  "postProcessSerialized": {
+    "bOverride_BloomIntensity": true,
+    "bOverride_Bloom1Tint": true,
+    "bOverride_Bloom2Tint": true,
+    "bOverride_Bloom3Tint": true,
+    "bOverride_BloomSizeScale": true,
+    "bOverride_AutoExposureMinBrightness": true,
+    "bOverride_AutoExposureMaxBrightness": true,
+    "bOverride_LensFlareIntensity": true,
+    "bOverride_AmbientOcclusionIntensity": true,
+    "bOverride_AmbientOcclusionRadius": true,
+    "bOverride_AmbientOcclusionPower": true,
+    "bOverride_LPVIntensity": true,
+    "bOverride_ScreenSpaceReflectionIntensity": true,
+    "bOverride_ScreenSpaceReflectionQuality": true,
+    "bOverride_ScreenSpaceReflectionMaxRoughness": true,
+    "BloomIntensity": 0.20000000298023224,
+    "BloomSizeScale": 3.0,
+    "Bloom1Tint": {
+      "r": 0.004999999888241291,
+      "g": 0.004999999888241291,
+      "b": 0.004999999888241291,
+      "a": 1.0
+    },
+    "Bloom2Tint": {
+      "r": 0.019999999552965164,
+      "g": 0.019999999552965164,
+      "b": 0.019999999552965164,
+      "a": 1.0
+    },
+    "Bloom3Tint": {
+      "r": 0.10000000149011612,
+      "g": 0.10000000149011612,
+      "b": 0.10000000149011612,
+      "a": 1.0
+    },
+    "LPVIntensity": 0.0,
+    "AutoExposureMinBrightness": 1.0,
+    "AutoExposureMaxBrightness": 1.0,
+    "LensFlareIntensity": 0.0,
+    "AmbientOcclusionRadius": 60.0,
+    "AmbientOcclusionPower": 5.0,
+    "DepthOfFieldMethod": "DOFM_Gaussian",
+    "DepthOfFieldFocalDistance": 10.0,
+    "DepthOfFieldFocalRegion": 75000.0,
+    "DepthOfFieldNearTransitionRegion": 0.0,
+    "DepthOfFieldFarTransitionRegion": 20000.0,
+    "DepthOfFieldNearBlurSize": 0.0,
+    "DepthOfFieldFarBlurSize": 3.0,
+    "MotionBlurAmount": 0.0,
+    "ScreenSpaceReflectionIntensity": 70.0
+  },
+  "fog": {
+    "FogDensity": 0.0,
+    "FogInscatteringColor": {
+      "r": 0.04192399978637695,
+      "g": 0.039374999701976776,
+      "b": 0.07500000298023224,
+      "a": 1.0
+    },
+    "FogHeightFalloff": 2.0,
+    "StartDistance": 1200.0,
+    "AttachParent": {
+      "index": 43,
+      "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+    },
+    "bVisible": false,
+    "RelativeLocation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 100.0
+    }
+  },
+  "skyLight": {
+    "SourceType": "SLS_SpecifiedCubemap",
+    "Cubemap": {
+      "index": -100,
+      "object": "/Game/Stage/stg80/Shader/Texture/T7_T_ENV_s80skysphere_capturedCube.T7_T_ENV_s80skysphere_capturedCube"
+    },
+    "CubemapResolution": 1024,
+    "SkyDistanceThreshold": 33000.0,
+    "bLowerHemisphereIsBlack": false,
+    "LightGuid": "57387e7aeae09d44b01b48930bd57fd3",
+    "CastShadows": false,
+    "CastStaticShadows": false,
+    "CastDynamicShadows": false,
+    "AttachParent": {
+      "index": 43,
+      "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+    },
+    "RelativeLocation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 500.0
+    },
+    "Mobility": "EComponentMobility::Movable"
+  },
+  "neutralCharacterPostEffect": {
+    "FresnelColor": {
+      "r": 0.5,
+      "g": 0.6673300266265869,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "FresnelExponent": 2.0,
+    "FresnelIntensity": 0.0,
+    "FresnelDirectivitySharpness": 1.100000023841858,
+    "FresnelDirectivitySuppression": 0.699999988079071
+  },
+  "skyCubemap": {
+    "path": "TekkenGame/Content/Stage/stg80/Shader/Texture/T7_T_ENV_s80skysphere_capturedCube.uasset",
+    "sha256": "ae4101f5b66d1a1a28b508130512de7018d4c73937469ab04ccffddb04dea422",
+    "faceWidth": 1024,
+    "faceHeight": 1024,
+    "faces": 6,
+    "format": "PF_FloatRGBA",
+    "dds": "decrypted\\lighting\\T7_T_ENV_s80skysphere_capturedCube.dds",
+    "ddsSha256": "840188827ee3e36c3d0bd4ceb64602abcfebe45dcdfa379bb4e6edb9a29f8ce2",
+    "preview": "clamped sRGB inspection preview, auxiliary alpha ignored; use DDS for HDR lighting"
+  },
+  "hdrpApplied": false
+}

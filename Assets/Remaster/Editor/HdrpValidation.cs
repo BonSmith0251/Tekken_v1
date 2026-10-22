@@ -57,6 +57,27 @@ namespace Versus.Remaster.Editor
                             .SelectMany(r => r.sharedMaterials).Count(m => m && !m.shader.name.StartsWith("HDRP/"));
                         bool hdrp = RenderPipelineManager.currentPipeline is HDRenderPipeline;
                         File.WriteAllText("Validation/HDRP/playback.json", "{\"hdrpActive\":" + hdrp.ToString().ToLowerInvariant() + ",\"nonHdrpMaterials\":" + wrong + ",\"captures\":3}");
+                        var original = Resources.Load<OriginalStageLightingData>("OriginalStageLighting");
+                        if (original)
+                        {
+                            var root = GameObject.Find("Original stg29 lighting");
+                            var lights = root.GetComponentsInChildren<HDAdditionalLightData>();
+                            int characterLights = lights.Count(l => (uint)l.lightlayersMask == OriginalStageLightingData.CharacterLayer);
+                            var rigs = UnityEngine.Object.FindObjectsByType<JinRig>(FindObjectsSortMode.None);
+                            int wrongLayers = rigs.SelectMany(r => r.GetComponentsInChildren<Renderer>(true))
+                                .Count(r => (r.renderingLayerMask & 3) != 3);
+                            original.profile.TryGet<Fog>(out var fog);
+                            original.profile.TryGet<Exposure>(out var exposure);
+                            original.profile.TryGet<HDRISky>(out var sky);
+                            if (lights.Length != 4 || characterLights != 3 || wrongLayers != 0 || fog.enabled.value ||
+                                exposure.mode.value != ExposureMode.Fixed || !sky.hdriSky.value || sky.hdriSky.value.width != 1024)
+                                throw new InvalidOperationException("Original stage lighting runtime check failed.");
+                            Directory.CreateDirectory("Validation/OriginalLighting/Applied");
+                            foreach (var name in Names) File.Copy("Validation/HDRP/" + name + ".png", "Validation/OriginalLighting/Applied/" + name + ".png", true);
+                            File.WriteAllText("Validation/OriginalLighting/Applied/playback.json",
+                                "{\"hdrpActive\":" + hdrp.ToString().ToLowerInvariant() + ",\"nonHdrpMaterials\":" + wrong +
+                                ",\"captures\":3,\"lights\":4,\"characterOnlyLights\":3,\"incorrectCharacterLayers\":0,\"fogEnabled\":false,\"fixedExposure\":true,\"skyResolution\":1024}");
+                        }
                         SessionState.SetBool("HdrpValidation", false); EditorApplication.isPlaying = false;
                     }
                     return;

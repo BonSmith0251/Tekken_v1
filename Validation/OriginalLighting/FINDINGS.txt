@@ -1,0 +1,79 @@
+ORIGINAL STAGE LIGHTING: stg29
+============================
+Target: the night-ocean stage matching the supplied Jin/Kazuya reference video.
+Source: installed TEKKEN.7 archives, read only. No live game process was available.
+This is cooked asset data, not a live measurement or original C++ source code.
+
+DIRECTIONAL LIGHTS
+Actor                       Intensity  Color RGB (8-bit)  Rotation: pitch, yaw, roll (UE degrees)
+DirectionalLight_1          0.60       200,200,200        -19.63197,  39.02755, -1.03629
+DirectionalLight_Chara      3.00       250,255,218        -19.63197,  39.02755, -1.03629
+DirectionalLight_Chara2     1.75       226,223,255          5.45505, -80.74243,  1.75356
+DirectionalLight_Chara3     2.75       226,223,255          4.24095, 158.89345,  3.29995
+
+All three Chara lights explicitly use LC_CHARA_BOTH and disable shadows.
+The environment light does not serialize LightChannel or CastShadows; these are
+inherited/default values, not evidence for a particular channel or shadow flag.
+All four are movable. They attach to far_light_0.DefaultSceneRoot. The map contains
+BP_MugenFarLight, which references this light group and has tick/initialization
+logic. These are relative asset rotations, not measured live world rotations.
+Environment-light shadow distance: 4000 Unreal centimeters (40 m).
+
+GLOBAL POST PROCESS
+Explicit overrides with explicit serialized values:
+- Auto exposure min brightness = 1, max brightness = 1 (locked exposure limits).
+- Bloom intensity = 0.2; size scale = 3.
+- Bloom tints 1/2/3: RGB 0.005 / 0.02 / 0.1, alpha 1 (linear).
+- Lens flare intensity = 0.
+- LPV intensity = 0.
+- Ambient occlusion radius = 60, power = 5 (native parameter values).
+- Screen-space reflection intensity = 70 (native scale).
+AO intensity and SSR quality/max roughness have enabled override flags but their
+values are omitted; native defaults still need resolving before exact porting.
+DOF and motion-blur values also exist in the package, but their override flags
+are not serialized. Do not treat all stored post-process values as active.
+
+FOG
+FogDensity = 0 and bVisible = false: disabled in this stage asset.
+Stored inactive parameters: height falloff 2; start distance 1200 cm (12 m);
+height 100 cm (1 m); linear scattering RGBA (0.041924,0.039375,0.075,1).
+
+SKY / REFLECTIONS
+SkyLight uses SLS_SpecifiedCubemap:
+/Game/Stage/stg80/Shader/Texture/T7_T_ENV_s80skysphere_capturedCube
+1024 x 1024 per face, six faces, PF_FloatRGBA (16-bit float RGBA).
+Original HDR payload preserved byte-for-byte in:
+decrypted/lighting/T7_T_ENV_s80skysphere_capturedCube.dds (relative to game workspace).
+SkyDistanceThreshold = 33000 cm (330 m); lower hemisphere is not forced black;
+all serialized sky shadow flags are false. Sky intensity is not serialized.
+A sphere reflection capture is also present; its captured/baked reflection data
+has not been substituted with the sky texture or decoded by this settings fetch.
+The small PNG is an sRGB inspection preview, not an HDR lighting asset.
+
+CHARACTER POST EFFECT / DYNAMIC CONTROL
+Normal CharacterPostEffect: Fresnel color linear (0.5,0.66733,1,1), exponent 2,
+intensity 0, direction sharpness 1.1, suppression 0.7.
+The RageAttack override contains Fresnel intensity 60; it is not the normal state.
+BP_LightControl has FilmSaturation 0.2 / FilmContrast 1 as control parameters and
+KO/Rage timelines. They are not classified here as always-active global grading.
+Blueprint defaults and source object/property offsets are preserved in the full
+JSON for investigating these changes later.
+
+HDRP PORTING IMPLICATIONS
+- Replace generic two-light illumination with the three character-only lights
+  plus the environment light, using HDRP light layers to isolate the fighters.
+- Use the original HDR sky capture, with coordinate/face orientation verified.
+- Disable the current generic stage fog to match this reference's base setup.
+- Preserve locked exposure behavior; UE brightness 1 is not asserted to be HDRP EV 0.
+- Native light intensity, bloom, SSR and AO values need renderer-specific mapping;
+  the numbers above are not claimed to be calibrated HDRP lux or effect strengths.
+- Convert Unreal axes/rotations and account for the moving parent before applying.
+
+FILES / VERIFICATION
+stg29-summary.json: concise settings for the next integration step.
+stg29-lighting.json: 32 objects from four original packages, property offsets,
+  template/object references, native types, package SHA-256 hashes and defaults.
+verification.json: four archive hashes verified, 71 scalar properties cross-checked
+  using the independent existing package parser; DDS pixel payload equals source.
+Tools/OriginalLighting/extract_stage_lighting.py reproduces the extraction.
+Unity lighting and scenes were not modified by this fetch.

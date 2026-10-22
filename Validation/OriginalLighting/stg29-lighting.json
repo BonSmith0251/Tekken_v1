@@ -1,0 +1,3264 @@
+{
+  "stage": "stg29",
+  "source": "installed original game archives",
+  "liveMemoryCapture": false,
+  "unitySettingsModified": false,
+  "conventions": {
+    "positions": "Unreal centimeters",
+    "rotations": "Unreal pitch/yaw/roll degrees; relative to AttachParent",
+    "intensity": "original serialized units; no HDRP lux conversion assumed",
+    "missingProperties": "inherited/default, NOT zero or false",
+    "postProcess": "serialized values are not necessarily active; check bOverride flags and Blueprint control"
+  },
+  "packages": [
+    {
+      "path": "TekkenGame/Content/Maps/stg29_light.umap",
+      "sha256": "7bd0103db29b8a1366bfc158d7bd247639fac7e72df3184bf064580ede92db2c",
+      "bytes": 1104683,
+      "objects": [
+        {
+          "exportIndex": 8,
+          "object": "stg29_light.PersistentLevel.far_light_0",
+          "class": "Actor",
+          "template": "/Script/Engine.Default__Actor",
+          "serialOffset": 24070,
+          "properties": {
+            "RootComponent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "InstanceComponents": [
+              {
+                "index": 43,
+                "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+              }
+            ]
+          },
+          "propertyTags": {
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 24095
+            },
+            "InstanceComponents": {
+              "type": "ArrayProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "innerType": "ObjectProperty",
+              "valueOffset": 24132
+            }
+          }
+        },
+        {
+          "exportIndex": 11,
+          "object": "stg29_light.PersistentLevel.BP_LightControl_8",
+          "class": "BP_LightControl_C",
+          "template": "/Game/PostProcess/Common/BP_LightControl.Default__BP_LightControl_C",
+          "serialOffset": 26974,
+          "properties": {
+            "DefaultSceneRoot": {
+              "index": 40,
+              "object": "stg29_light.PersistentLevel.BP_LightControl_8.DefaultSceneRoot"
+            },
+            "Timeline_RageArtsKO": {
+              "index": 54,
+              "object": "stg29_light.PersistentLevel.BP_LightControl_8.Timeline_RageArtsKO"
+            },
+            "Timeline_Aiuchi": {
+              "index": 53,
+              "object": "stg29_light.PersistentLevel.BP_LightControl_8.Timeline_Aiuchi"
+            },
+            "PostProcessVolume": {
+              "index": 39,
+              "object": "stg29_light.PersistentLevel.GLOBALPostProcess"
+            },
+            "StageParameter": {
+              "index": 13,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6"
+            },
+            "SphereReflectionCapture": {
+              "index": 47,
+              "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1"
+            },
+            "ExponentialHeightFog": {
+              "index": 28,
+              "object": "stg29_light.PersistentLevel.ExponentialHeightFog_1"
+            },
+            "FilmSaturation": 0.20000000298023224,
+            "FilmContrast": 1.0,
+            "RootComponent": {
+              "index": 40,
+              "object": "stg29_light.PersistentLevel.BP_LightControl_8.DefaultSceneRoot"
+            },
+            "BlueprintCreatedComponents": [
+              {
+                "index": 40,
+                "object": "stg29_light.PersistentLevel.BP_LightControl_8.DefaultSceneRoot"
+              },
+              {
+                "index": 53,
+                "object": "stg29_light.PersistentLevel.BP_LightControl_8.Timeline_Aiuchi"
+              },
+              {
+                "index": 54,
+                "object": "stg29_light.PersistentLevel.BP_LightControl_8.Timeline_RageArtsKO"
+              }
+            ]
+          },
+          "propertyTags": {
+            "DefaultSceneRoot": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 26999
+            },
+            "Timeline_RageArtsKO": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27028
+            },
+            "Timeline_Aiuchi": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27057
+            },
+            "PostProcessVolume": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27086
+            },
+            "StageParameter": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27115
+            },
+            "SphereReflectionCapture": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27144
+            },
+            "ExponentialHeightFog": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27173
+            },
+            "FilmSaturation": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27202
+            },
+            "FilmContrast": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27231
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27260
+            },
+            "BlueprintCreatedComponents": {
+              "type": "ArrayProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "innerType": "ObjectProperty",
+              "valueOffset": 27297
+            }
+          }
+        },
+        {
+          "exportIndex": 12,
+          "object": "stg29_light.PersistentLevel.BP_MugenFarLight",
+          "class": "BP_MugenFar_C",
+          "template": "/Game/Stage/Common/Mugen/BP_MugenFar.Default__BP_MugenFar_C",
+          "serialOffset": 27325,
+          "properties": {
+            "DefaultSceneRoot": {
+              "index": 41,
+              "object": "stg29_light.PersistentLevel.BP_MugenFarLight.DefaultSceneRoot"
+            },
+            "FarFloorGroup": {
+              "index": 8,
+              "object": "stg29_light.PersistentLevel.far_light_0"
+            },
+            "NearFloorRadius": 3200.0,
+            "RootComponent": {
+              "index": 41,
+              "object": "stg29_light.PersistentLevel.BP_MugenFarLight.DefaultSceneRoot"
+            },
+            "BlueprintCreatedComponents": [
+              {
+                "index": 41,
+                "object": "stg29_light.PersistentLevel.BP_MugenFarLight.DefaultSceneRoot"
+              }
+            ]
+          },
+          "propertyTags": {
+            "DefaultSceneRoot": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27350
+            },
+            "FarFloorGroup": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27379
+            },
+            "NearFloorRadius": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27408
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27437
+            },
+            "BlueprintCreatedComponents": {
+              "type": "ArrayProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "innerType": "ObjectProperty",
+              "valueOffset": 27474
+            }
+          }
+        },
+        {
+          "exportIndex": 13,
+          "object": "stg29_light.PersistentLevel.BP_StageParameter_6",
+          "class": "BP_StageParameter_C",
+          "template": "/Game/Character/CharacterPostEffect/BP_StageParameter.Default__BP_StageParameter_C",
+          "serialOffset": 27494,
+          "properties": {
+            "DefaultSceneRoot": {
+              "index": 42,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.DefaultSceneRoot"
+            },
+            "PowerModeWeight_2P": {
+              "index": 62,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.PowerModeWeight_2P"
+            },
+            "PowerModeWeight_1P": {
+              "index": 61,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.PowerModeWeight_1P"
+            },
+            "ExArtsEnd2P": {
+              "index": 60,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsEnd2P"
+            },
+            "ExArtsEnd1P": {
+              "index": 59,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsEnd1P"
+            },
+            "ExArtsBegin2P": {
+              "index": 58,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsBegin2P"
+            },
+            "ExArtsBegin1P": {
+              "index": 57,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsBegin1P"
+            },
+            "ExArts2P": {
+              "index": 56,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArts2P"
+            },
+            "ExArts1P": {
+              "index": 55,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArts1P"
+            },
+            "RageAttackEnd2P": {
+              "index": 66,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackEnd2P"
+            },
+            "RageAttackEnd1P": {
+              "index": 65,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackEnd1P"
+            },
+            "RageAttackBegin2P": {
+              "index": 64,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackBegin2P"
+            },
+            "RageAttackBegin1P": {
+              "index": 63,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackBegin1P"
+            },
+            "Timeline_Armor": {
+              "index": 67,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.Timeline_Armor"
+            },
+            "CharacterPostEffect": {
+              "FresnelColor": {
+                "r": 0.5,
+                "g": 0.6673300266265869,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.0,
+              "FresnelIntensity": 0.0,
+              "FresnelDirectivitySharpness": 1.100000023841858,
+              "FresnelDirectivitySuppression": 0.699999988079071
+            },
+            "RageAttack": {
+              "FresnelColor": {
+                "r": 0.10000000149011612,
+                "g": 0.15000000596046448,
+                "b": 2.5,
+                "a": 1.0
+              },
+              "FresnelIntensity": 60.0
+            },
+            "MRZMaterialComponent": {
+              "index": 38,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.MRZMaterialComponent0"
+            },
+            "RootComponent": {
+              "index": 42,
+              "object": "stg29_light.PersistentLevel.BP_StageParameter_6.DefaultSceneRoot"
+            },
+            "BlueprintCreatedComponents": [
+              {
+                "index": 42,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.DefaultSceneRoot"
+              },
+              {
+                "index": 67,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.Timeline_Armor"
+              },
+              {
+                "index": 63,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackBegin1P"
+              },
+              {
+                "index": 64,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackBegin2P"
+              },
+              {
+                "index": 65,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackEnd1P"
+              },
+              {
+                "index": 66,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.RageAttackEnd2P"
+              },
+              {
+                "index": 55,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArts1P"
+              },
+              {
+                "index": 56,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArts2P"
+              },
+              {
+                "index": 57,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsBegin1P"
+              },
+              {
+                "index": 58,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsBegin2P"
+              },
+              {
+                "index": 59,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsEnd1P"
+              },
+              {
+                "index": 60,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.ExArtsEnd2P"
+              },
+              {
+                "index": 61,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.PowerModeWeight_1P"
+              },
+              {
+                "index": 62,
+                "object": "stg29_light.PersistentLevel.BP_StageParameter_6.PowerModeWeight_2P"
+              }
+            ]
+          },
+          "propertyTags": {
+            "DefaultSceneRoot": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27519
+            },
+            "PowerModeWeight_2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27548
+            },
+            "PowerModeWeight_1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27577
+            },
+            "ExArtsEnd2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27606
+            },
+            "ExArtsEnd1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27635
+            },
+            "ExArtsBegin2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27664
+            },
+            "ExArtsBegin1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27693
+            },
+            "ExArts2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27722
+            },
+            "ExArts1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27751
+            },
+            "RageAttackEnd2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27780
+            },
+            "RageAttackEnd1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27809
+            },
+            "RageAttackBegin2P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27838
+            },
+            "RageAttackBegin1P": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27867
+            },
+            "Timeline_Armor": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 27896
+            },
+            "CharacterPostEffect": {
+              "type": "StructProperty",
+              "size": 189,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 27949,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 27998
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 28039
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 28068
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 28097
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 28126
+                }
+              }
+            },
+            "RageAttack": {
+              "type": "StructProperty",
+              "size": 102,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 28187,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 28236
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 28277
+                }
+              }
+            },
+            "MRZMaterialComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28314
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28343
+            },
+            "BlueprintCreatedComponents": {
+              "type": "ArrayProperty",
+              "size": 60,
+              "arrayIndex": 0,
+              "innerType": "ObjectProperty",
+              "valueOffset": 28380
+            }
+          }
+        },
+        {
+          "exportIndex": 18,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_1",
+          "class": "DirectionalLight",
+          "template": "/Script/Engine.Default__DirectionalLight",
+          "serialOffset": 28799,
+          "properties": {
+            "LightComponent": {
+              "index": 22,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_1.LightComponent0"
+            },
+            "RootComponent": {
+              "index": 22,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_1.LightComponent0"
+            }
+          },
+          "propertyTags": {
+            "LightComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28824
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28853
+            }
+          }
+        },
+        {
+          "exportIndex": 19,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara",
+          "class": "DirectionalLight",
+          "template": "/Script/Engine.Default__DirectionalLight",
+          "serialOffset": 28869,
+          "properties": {
+            "LightComponent": {
+              "index": 23,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara.LightComponent0"
+            },
+            "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+            "RootComponent": {
+              "index": 23,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara.LightComponent0"
+            }
+          },
+          "propertyTags": {
+            "LightComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28894
+            },
+            "SpawnCollisionHandlingMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ESpawnActorCollisionHandlingMethod",
+              "valueOffset": 28931
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 28964
+            }
+          }
+        },
+        {
+          "exportIndex": 20,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara2",
+          "class": "DirectionalLight",
+          "template": "/Script/Engine.Default__DirectionalLight",
+          "serialOffset": 28980,
+          "properties": {
+            "LightComponent": {
+              "index": 24,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara2.LightComponent0"
+            },
+            "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+            "RootComponent": {
+              "index": 24,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara2.LightComponent0"
+            }
+          },
+          "propertyTags": {
+            "LightComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29005
+            },
+            "SpawnCollisionHandlingMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ESpawnActorCollisionHandlingMethod",
+              "valueOffset": 29042
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29075
+            }
+          }
+        },
+        {
+          "exportIndex": 21,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara3",
+          "class": "DirectionalLight",
+          "template": "/Script/Engine.Default__DirectionalLight",
+          "serialOffset": 29091,
+          "properties": {
+            "LightComponent": {
+              "index": 25,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara3.LightComponent0"
+            },
+            "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+            "RootComponent": {
+              "index": 25,
+              "object": "stg29_light.PersistentLevel.DirectionalLight_Chara3.LightComponent0"
+            }
+          },
+          "propertyTags": {
+            "LightComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29116
+            },
+            "SpawnCollisionHandlingMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ESpawnActorCollisionHandlingMethod",
+              "valueOffset": 29153
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29186
+            }
+          }
+        },
+        {
+          "exportIndex": 22,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_1.LightComponent0",
+          "class": "DirectionalLightComponent",
+          "template": "/Script/Engine.Default__DirectionalLight.LightComponent0",
+          "serialOffset": 29202,
+          "properties": {
+            "OcclusionMaskDarkness": 0.30000001192092896,
+            "OcclusionDepthRange": 10000.0,
+            "DynamicShadowDistanceMovableLight": 4000.0,
+            "MinRoughness": 2.0,
+            "BloomScale": 0.25,
+            "BloomThreshold": 0.3499999940395355,
+            "BloomTint": {
+              "r": 255,
+              "g": 247,
+              "b": 203,
+              "a": 255,
+              "encoding": "FColor bytes (BGRA storage)"
+            },
+            "LightGuid": "5154c70a343ab949a4c5d3c36354cf38",
+            "Intensity": 0.6000000238418579,
+            "LightColor": {
+              "r": 200,
+              "g": 200,
+              "b": 200,
+              "a": 255,
+              "encoding": "FColor bytes (BGRA storage)"
+            },
+            "bPrecomputedLightingIsValid": false,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "RelativeLocation": {
+              "x": 7.7188005447387695,
+              "y": 4.337221145629883,
+              "z": 449.20989990234375
+            },
+            "RelativeRotation": {
+              "pitch": -19.63197135925293,
+              "yaw": 39.02755355834961,
+              "roll": -1.0362930297851562
+            },
+            "Mobility": "EComponentMobility::Movable"
+          },
+          "propertyTags": {
+            "OcclusionMaskDarkness": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29227
+            },
+            "OcclusionDepthRange": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29256
+            },
+            "DynamicShadowDistanceMovableLight": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29285
+            },
+            "MinRoughness": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29314
+            },
+            "BloomScale": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29343
+            },
+            "BloomThreshold": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29372
+            },
+            "BloomTint": {
+              "type": "StructProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "struct": "Color",
+              "valueOffset": 29425
+            },
+            "LightGuid": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 29478
+            },
+            "Intensity": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29519
+            },
+            "LightColor": {
+              "type": "StructProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "struct": "Color",
+              "valueOffset": 29572
+            },
+            "bPrecomputedLightingIsValid": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 29602
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 29627
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 29680
+            },
+            "RelativeRotation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Rotator",
+              "valueOffset": 29741
+            },
+            "Mobility": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentMobility",
+              "valueOffset": 29786
+            }
+          }
+        },
+        {
+          "exportIndex": 23,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara.LightComponent0",
+          "class": "DirectionalLightComponent",
+          "template": "/Script/Engine.Default__DirectionalLight.LightComponent0",
+          "serialOffset": 29882,
+          "properties": {
+            "CastTranslucentShadows": false,
+            "LightChannel": "LC_CHARA_BOTH",
+            "LightGuid": "a8526ce702a8ea4fbe3eb3eaf7e7003c",
+            "Intensity": 3.0,
+            "LightColor": {
+              "r": 250,
+              "g": 255,
+              "b": 218,
+              "a": 255,
+              "encoding": "FColor bytes (BGRA storage)"
+            },
+            "CastShadows": false,
+            "CastStaticShadows": false,
+            "CastDynamicShadows": false,
+            "bAffectTranslucentLighting": false,
+            "bPrecomputedLightingIsValid": false,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "RelativeLocation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 350.0
+            },
+            "RelativeRotation": {
+              "pitch": -19.63197135925293,
+              "yaw": 39.02755355834961,
+              "roll": -1.0362930297851562
+            },
+            "Mobility": "EComponentMobility::Movable"
+          },
+          "propertyTags": {
+            "CastTranslucentShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 29908
+            },
+            "LightChannel": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ELightChannel",
+              "valueOffset": 29941
+            },
+            "LightGuid": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 29998
+            },
+            "Intensity": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 30039
+            },
+            "LightColor": {
+              "type": "StructProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "struct": "Color",
+              "valueOffset": 30092
+            },
+            "CastShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30122
+            },
+            "CastStaticShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30148
+            },
+            "CastDynamicShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30174
+            },
+            "bAffectTranslucentLighting": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30200
+            },
+            "bPrecomputedLightingIsValid": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30226
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 30251
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 30304
+            },
+            "RelativeRotation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Rotator",
+              "valueOffset": 30365
+            },
+            "Mobility": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentMobility",
+              "valueOffset": 30410
+            }
+          }
+        },
+        {
+          "exportIndex": 24,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara2.LightComponent0",
+          "class": "DirectionalLightComponent",
+          "template": "/Script/Engine.Default__DirectionalLight.LightComponent0",
+          "serialOffset": 30506,
+          "properties": {
+            "CastTranslucentShadows": false,
+            "LightChannel": "LC_CHARA_BOTH",
+            "LightGuid": "c4a51f77c6ca2040bb7cb036dbe429c8",
+            "Intensity": 1.75,
+            "LightColor": {
+              "r": 226,
+              "g": 223,
+              "b": 255,
+              "a": 255,
+              "encoding": "FColor bytes (BGRA storage)"
+            },
+            "CastShadows": false,
+            "CastStaticShadows": false,
+            "CastDynamicShadows": false,
+            "bAffectTranslucentLighting": false,
+            "bPrecomputedLightingIsValid": false,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "RelativeLocation": {
+              "x": 0.0,
+              "y": 100.0,
+              "z": 300.0
+            },
+            "RelativeRotation": {
+              "pitch": 5.4550461769104,
+              "yaw": -80.742431640625,
+              "roll": 1.7535555362701416
+            },
+            "Mobility": "EComponentMobility::Movable"
+          },
+          "propertyTags": {
+            "CastTranslucentShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30532
+            },
+            "LightChannel": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ELightChannel",
+              "valueOffset": 30565
+            },
+            "LightGuid": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 30622
+            },
+            "Intensity": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 30663
+            },
+            "LightColor": {
+              "type": "StructProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "struct": "Color",
+              "valueOffset": 30716
+            },
+            "CastShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30746
+            },
+            "CastStaticShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30772
+            },
+            "CastDynamicShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30798
+            },
+            "bAffectTranslucentLighting": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30824
+            },
+            "bPrecomputedLightingIsValid": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 30850
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 30875
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 30928
+            },
+            "RelativeRotation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Rotator",
+              "valueOffset": 30989
+            },
+            "Mobility": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentMobility",
+              "valueOffset": 31034
+            }
+          }
+        },
+        {
+          "exportIndex": 25,
+          "object": "stg29_light.PersistentLevel.DirectionalLight_Chara3.LightComponent0",
+          "class": "DirectionalLightComponent",
+          "template": "/Script/Engine.Default__DirectionalLight.LightComponent0",
+          "serialOffset": 31130,
+          "properties": {
+            "CastTranslucentShadows": false,
+            "LightChannel": "LC_CHARA_BOTH",
+            "LightGuid": "f0bfd5e446f2fb43811255165114f332",
+            "Intensity": 2.75,
+            "LightColor": {
+              "r": 226,
+              "g": 223,
+              "b": 255,
+              "a": 255,
+              "encoding": "FColor bytes (BGRA storage)"
+            },
+            "CastShadows": false,
+            "CastStaticShadows": false,
+            "CastDynamicShadows": false,
+            "bAffectTranslucentLighting": false,
+            "bPrecomputedLightingIsValid": false,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "RelativeLocation": {
+              "x": 0.0,
+              "y": -100.0,
+              "z": 300.0
+            },
+            "RelativeRotation": {
+              "pitch": 4.240946292877197,
+              "yaw": 158.89344787597656,
+              "roll": 3.299945116043091
+            },
+            "Mobility": "EComponentMobility::Movable"
+          },
+          "propertyTags": {
+            "CastTranslucentShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31156
+            },
+            "LightChannel": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ELightChannel",
+              "valueOffset": 31189
+            },
+            "LightGuid": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 31246
+            },
+            "Intensity": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 31287
+            },
+            "LightColor": {
+              "type": "StructProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "struct": "Color",
+              "valueOffset": 31340
+            },
+            "CastShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31370
+            },
+            "CastStaticShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31396
+            },
+            "CastDynamicShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31422
+            },
+            "bAffectTranslucentLighting": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31448
+            },
+            "bPrecomputedLightingIsValid": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 31474
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 31499
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 31552
+            },
+            "RelativeRotation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Rotator",
+              "valueOffset": 31613
+            },
+            "Mobility": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentMobility",
+              "valueOffset": 31658
+            }
+          }
+        },
+        {
+          "exportIndex": 28,
+          "object": "stg29_light.PersistentLevel.ExponentialHeightFog_1",
+          "class": "ExponentialHeightFog",
+          "template": "/Script/Engine.Default__ExponentialHeightFog",
+          "serialOffset": 31865,
+          "properties": {
+            "Component": {
+              "index": 29,
+              "object": "stg29_light.PersistentLevel.ExponentialHeightFog_1.HeightFogComponent0"
+            },
+            "RootComponent": {
+              "index": 29,
+              "object": "stg29_light.PersistentLevel.ExponentialHeightFog_1.HeightFogComponent0"
+            }
+          },
+          "propertyTags": {
+            "Component": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 31890
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 31919
+            }
+          }
+        },
+        {
+          "exportIndex": 29,
+          "object": "stg29_light.PersistentLevel.ExponentialHeightFog_1.HeightFogComponent0",
+          "class": "ExponentialHeightFogComponent",
+          "template": "/Script/Engine.Default__ExponentialHeightFog.HeightFogComponent0",
+          "serialOffset": 31935,
+          "properties": {
+            "FogDensity": 0.0,
+            "FogInscatteringColor": {
+              "r": 0.04192399978637695,
+              "g": 0.039374999701976776,
+              "b": 0.07500000298023224,
+              "a": 1.0
+            },
+            "FogHeightFalloff": 2.0,
+            "StartDistance": 1200.0,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "bVisible": false,
+            "RelativeLocation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 100.0
+            }
+          },
+          "propertyTags": {
+            "FogDensity": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 31960
+            },
+            "FogInscatteringColor": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "LinearColor",
+              "valueOffset": 32013
+            },
+            "FogHeightFalloff": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 32054
+            },
+            "StartDistance": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 32083
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 32112
+            },
+            "bVisible": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 32142
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 32191
+            }
+          }
+        },
+        {
+          "exportIndex": 33,
+          "object": "stg29_light.PersistentLevel.LightmassImportanceVolume_0",
+          "class": "LightmassImportanceVolume",
+          "template": "/Script/Engine.Default__LightmassImportanceVolume",
+          "serialOffset": 32861,
+          "properties": {
+            "BrushType": "Brush_Add",
+            "Brush": {
+              "index": 36,
+              "object": "stg29_light.PersistentLevel.LightmassImportanceVolume_0.Model_4"
+            },
+            "BrushComponent": {
+              "index": 15,
+              "object": "stg29_light.PersistentLevel.LightmassImportanceVolume_0.BrushComponent0"
+            },
+            "bHidden": false,
+            "RootComponent": {
+              "index": 15,
+              "object": "stg29_light.PersistentLevel.LightmassImportanceVolume_0.BrushComponent0"
+            }
+          },
+          "propertyTags": {
+            "BrushType": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EBrushType",
+              "valueOffset": 32894
+            },
+            "Brush": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 32927
+            },
+            "BrushComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 32956
+            },
+            "bHidden": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 32986
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 33011
+            }
+          }
+        },
+        {
+          "exportIndex": 39,
+          "object": "stg29_light.PersistentLevel.GLOBALPostProcess",
+          "class": "PostProcessVolume",
+          "template": "/Script/Engine.Default__PostProcessVolume",
+          "serialOffset": 36511,
+          "properties": {
+            "Settings": {
+              "bOverride_BloomIntensity": true,
+              "bOverride_Bloom1Tint": true,
+              "bOverride_Bloom2Tint": true,
+              "bOverride_Bloom3Tint": true,
+              "bOverride_BloomSizeScale": true,
+              "bOverride_AutoExposureMinBrightness": true,
+              "bOverride_AutoExposureMaxBrightness": true,
+              "bOverride_LensFlareIntensity": true,
+              "bOverride_AmbientOcclusionIntensity": true,
+              "bOverride_AmbientOcclusionRadius": true,
+              "bOverride_AmbientOcclusionPower": true,
+              "bOverride_LPVIntensity": true,
+              "bOverride_ScreenSpaceReflectionIntensity": true,
+              "bOverride_ScreenSpaceReflectionQuality": true,
+              "bOverride_ScreenSpaceReflectionMaxRoughness": true,
+              "BloomIntensity": 0.20000000298023224,
+              "BloomSizeScale": 3.0,
+              "Bloom1Tint": {
+                "r": 0.004999999888241291,
+                "g": 0.004999999888241291,
+                "b": 0.004999999888241291,
+                "a": 1.0
+              },
+              "Bloom2Tint": {
+                "r": 0.019999999552965164,
+                "g": 0.019999999552965164,
+                "b": 0.019999999552965164,
+                "a": 1.0
+              },
+              "Bloom3Tint": {
+                "r": 0.10000000149011612,
+                "g": 0.10000000149011612,
+                "b": 0.10000000149011612,
+                "a": 1.0
+              },
+              "LPVIntensity": 0.0,
+              "AutoExposureMinBrightness": 1.0,
+              "AutoExposureMaxBrightness": 1.0,
+              "LensFlareIntensity": 0.0,
+              "AmbientOcclusionRadius": 60.0,
+              "AmbientOcclusionPower": 5.0,
+              "DepthOfFieldMethod": "DOFM_Gaussian",
+              "DepthOfFieldFocalDistance": 10.0,
+              "DepthOfFieldFocalRegion": 75000.0,
+              "DepthOfFieldNearTransitionRegion": 0.0,
+              "DepthOfFieldFarTransitionRegion": 20000.0,
+              "DepthOfFieldNearBlurSize": 0.0,
+              "DepthOfFieldFarBlurSize": 3.0,
+              "MotionBlurAmount": 0.0,
+              "ScreenSpaceReflectionIntensity": 70.0
+            },
+            "bUnbound": true,
+            "BrushType": "Brush_Add",
+            "Brush": {
+              "index": 35,
+              "object": "stg29_light.PersistentLevel.GLOBALPostProcess.Model_5"
+            },
+            "BrushComponent": {
+              "index": 14,
+              "object": "stg29_light.PersistentLevel.GLOBALPostProcess.BrushComponent0"
+            },
+            "SavedSelections": {
+              "undecodedHex": "0200000069010000000000008201000000000000be00000000000000f5000000000000000000000000000000000000000000000000a0010000000000000f010000000000000400000000000000000300000009010000000000000f01000000000000040000000000000000030000006e010000000000000f01000000000000040000000000000000120000002e01000000000000a0010000000000000f010000000000000400000000000000000300000009010000000000000f01000000000000040000000000000000040000006e010000000000000f01000000000000040000000000000000130000002e01000000000000"
+            },
+            "bHidden": false,
+            "RootComponent": {
+              "index": 14,
+              "object": "stg29_light.PersistentLevel.GLOBALPostProcess.BrushComponent0"
+            }
+          },
+          "propertyTags": {
+            "Settings": {
+              "type": "StructProperty",
+              "size": 1098,
+              "arrayIndex": 0,
+              "struct": "PostProcessSettings",
+              "valueOffset": 36560,
+              "children": {
+                "bOverride_BloomIntensity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36586
+                },
+                "bOverride_Bloom1Tint": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36612
+                },
+                "bOverride_Bloom2Tint": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36638
+                },
+                "bOverride_Bloom3Tint": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36664
+                },
+                "bOverride_BloomSizeScale": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36690
+                },
+                "bOverride_AutoExposureMinBrightness": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36716
+                },
+                "bOverride_AutoExposureMaxBrightness": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36742
+                },
+                "bOverride_LensFlareIntensity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36768
+                },
+                "bOverride_AmbientOcclusionIntensity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36794
+                },
+                "bOverride_AmbientOcclusionRadius": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36820
+                },
+                "bOverride_AmbientOcclusionPower": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36846
+                },
+                "bOverride_LPVIntensity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36872
+                },
+                "bOverride_ScreenSpaceReflectionIntensity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36898
+                },
+                "bOverride_ScreenSpaceReflectionQuality": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36924
+                },
+                "bOverride_ScreenSpaceReflectionMaxRoughness": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 36950
+                },
+                "BloomIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 36975
+                },
+                "BloomSizeScale": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37004
+                },
+                "Bloom1Tint": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 37057
+                },
+                "Bloom2Tint": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 37122
+                },
+                "Bloom3Tint": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 37187
+                },
+                "LPVIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37228
+                },
+                "AutoExposureMinBrightness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37257
+                },
+                "AutoExposureMaxBrightness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37286
+                },
+                "LensFlareIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37315
+                },
+                "AmbientOcclusionRadius": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37344
+                },
+                "AmbientOcclusionPower": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37373
+                },
+                "DepthOfFieldMethod": {
+                  "type": "ByteProperty",
+                  "size": 8,
+                  "arrayIndex": 0,
+                  "enum": "EDepthOfFieldMethod",
+                  "valueOffset": 37410
+                },
+                "DepthOfFieldFocalDistance": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37443
+                },
+                "DepthOfFieldFocalRegion": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37472
+                },
+                "DepthOfFieldNearTransitionRegion": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37501
+                },
+                "DepthOfFieldFarTransitionRegion": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37530
+                },
+                "DepthOfFieldNearBlurSize": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37559
+                },
+                "DepthOfFieldFarBlurSize": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37588
+                },
+                "MotionBlurAmount": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37617
+                },
+                "ScreenSpaceReflectionIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 37646
+                }
+              }
+            },
+            "bUnbound": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 37684
+            },
+            "BrushType": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EBrushType",
+              "valueOffset": 37717
+            },
+            "Brush": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 37750
+            },
+            "BrushComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 37779
+            },
+            "SavedSelections": {
+              "type": "ArrayProperty",
+              "size": 243,
+              "arrayIndex": 0,
+              "innerType": "StructProperty",
+              "valueOffset": 37816
+            },
+            "bHidden": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 38085
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38110
+            }
+          }
+        },
+        {
+          "exportIndex": 40,
+          "object": "stg29_light.PersistentLevel.BP_LightControl_8.DefaultSceneRoot",
+          "class": "SceneComponent",
+          "template": "/Game/PostProcess/Common/BP_LightControl.BP_LightControl_C.SceneComponent_0",
+          "serialOffset": 38126,
+          "properties": {
+            "bNetAddressable": true,
+            "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+          },
+          "propertyTags": {
+            "bNetAddressable": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 38152
+            },
+            "CreationMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentCreationMethod",
+              "valueOffset": 38185
+            }
+          }
+        },
+        {
+          "exportIndex": 41,
+          "object": "stg29_light.PersistentLevel.BP_MugenFarLight.DefaultSceneRoot",
+          "class": "SceneComponent",
+          "template": "/Game/Stage/Common/Mugen/BP_MugenFar.BP_MugenFar_C.SceneComponent_0",
+          "serialOffset": 38205,
+          "properties": {
+            "bNetAddressable": true,
+            "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+          },
+          "propertyTags": {
+            "bNetAddressable": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 38231
+            },
+            "CreationMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentCreationMethod",
+              "valueOffset": 38264
+            }
+          }
+        },
+        {
+          "exportIndex": 42,
+          "object": "stg29_light.PersistentLevel.BP_StageParameter_6.DefaultSceneRoot",
+          "class": "SceneComponent",
+          "template": "/Game/Character/CharacterPostEffect/BP_StageParameter.BP_StageParameter_C.SceneComponent_0",
+          "serialOffset": 38284,
+          "properties": {
+            "RelativeLocation": {
+              "x": 381.5817565917969,
+              "y": -127.59283447265625,
+              "z": -4.787405014038086
+            },
+            "bNetAddressable": true,
+            "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+            "UCSModifiedProperties": {
+              "undecodedHex": "01000000a401000000000000820100000000000087000000000000007001000000000000000000000000000000000000000000000024010000000000003001000000000000040000000000000000ddffffff23010000000000002b010000000000000800000000000000006301000000000000220100000000000082010000000000001000000000000000f8000000000000000000000000000000000000000000000000000000000000000000000000000000002e01000000000000"
+            }
+          },
+          "propertyTags": {
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 38333
+            },
+            "bNetAddressable": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 38371
+            },
+            "CreationMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentCreationMethod",
+              "valueOffset": 38404
+            },
+            "UCSModifiedProperties": {
+              "type": "ArrayProperty",
+              "size": 188,
+              "arrayIndex": 0,
+              "innerType": "StructProperty",
+              "valueOffset": 38445
+            }
+          }
+        },
+        {
+          "exportIndex": 43,
+          "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot",
+          "class": "SceneComponent",
+          "template": "/Script/Engine.Default__SceneComponent",
+          "serialOffset": 38645,
+          "properties": {
+            "CreationMethod": "EComponentCreationMethod::Instance"
+          },
+          "propertyTags": {
+            "CreationMethod": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentCreationMethod",
+              "valueOffset": 38678
+            }
+          }
+        },
+        {
+          "exportIndex": 44,
+          "object": "stg29_light.PersistentLevel.InstancedFoliageActor_1.RootComponent0",
+          "class": "SceneComponent",
+          "template": "/Script/Foliage.Default__InstancedFoliageActor.RootComponent0",
+          "serialOffset": 38698,
+          "properties": {},
+          "propertyTags": {}
+        },
+        {
+          "exportIndex": 45,
+          "object": "stg29_light.PersistentLevel.SkyLight_3",
+          "class": "SkyLight",
+          "template": "/Script/Engine.Default__SkyLight",
+          "serialOffset": 38710,
+          "properties": {
+            "LightComponent": {
+              "index": 46,
+              "object": "stg29_light.PersistentLevel.SkyLight_3.SkyLightComponent0"
+            },
+            "RootComponent": {
+              "index": 46,
+              "object": "stg29_light.PersistentLevel.SkyLight_3.SkyLightComponent0"
+            }
+          },
+          "propertyTags": {
+            "LightComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38735
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38764
+            }
+          }
+        },
+        {
+          "exportIndex": 46,
+          "object": "stg29_light.PersistentLevel.SkyLight_3.SkyLightComponent0",
+          "class": "SkyLightComponent",
+          "template": "/Script/Engine.Default__SkyLight.SkyLightComponent0",
+          "serialOffset": 38780,
+          "properties": {
+            "SourceType": "SLS_SpecifiedCubemap",
+            "Cubemap": {
+              "index": -100,
+              "object": "/Game/Stage/stg80/Shader/Texture/T7_T_ENV_s80skysphere_capturedCube.T7_T_ENV_s80skysphere_capturedCube"
+            },
+            "CubemapResolution": 1024,
+            "SkyDistanceThreshold": 33000.0,
+            "bLowerHemisphereIsBlack": false,
+            "LightGuid": "57387e7aeae09d44b01b48930bd57fd3",
+            "CastShadows": false,
+            "CastStaticShadows": false,
+            "CastDynamicShadows": false,
+            "AttachParent": {
+              "index": 43,
+              "object": "stg29_light.PersistentLevel.far_light_0.DefaultSceneRoot"
+            },
+            "RelativeLocation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 500.0
+            },
+            "Mobility": "EComponentMobility::Movable"
+          },
+          "propertyTags": {
+            "SourceType": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ESkyLightSourceType",
+              "valueOffset": 38813
+            },
+            "Cubemap": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38846
+            },
+            "CubemapResolution": {
+              "type": "IntProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38875
+            },
+            "SkyDistanceThreshold": {
+              "type": "FloatProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 38904
+            },
+            "bLowerHemisphereIsBlack": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 38934
+            },
+            "LightGuid": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 38983
+            },
+            "CastShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 39025
+            },
+            "CastStaticShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 39051
+            },
+            "CastDynamicShadows": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 39077
+            },
+            "AttachParent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39102
+            },
+            "RelativeLocation": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 39155
+            },
+            "Mobility": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "EComponentMobility",
+              "valueOffset": 39200
+            }
+          }
+        },
+        {
+          "exportIndex": 47,
+          "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1",
+          "class": "SphereReflectionCapture",
+          "template": "/Script/Engine.Default__SphereReflectionCapture",
+          "serialOffset": 39220,
+          "properties": {
+            "DrawCaptureRadius": {
+              "index": 27,
+              "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1.DrawRadius1"
+            },
+            "CaptureComponent": {
+              "index": 48,
+              "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent"
+            },
+            "RootComponent": {
+              "index": 48,
+              "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent"
+            }
+          },
+          "propertyTags": {
+            "DrawCaptureRadius": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39245
+            },
+            "CaptureComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39274
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39303
+            }
+          }
+        },
+        {
+          "exportIndex": 48,
+          "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent",
+          "class": "SphereReflectionCaptureComponent",
+          "template": "/Script/Engine.Default__SphereReflectionCapture.NewReflectionComponent",
+          "serialOffset": 39319,
+          "properties": {
+            "PreviewInfluenceRadius": {
+              "index": 26,
+              "object": "stg29_light.PersistentLevel.SphereReflectionCapture_1.DrawRadius0"
+            },
+            "CaptureOffsetComponent": {
+              "index": 0,
+              "object": null
+            },
+            "StateId": "746003a76584124eb092af8678ed41d8"
+          },
+          "propertyTags": {
+            "PreviewInfluenceRadius": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39344
+            },
+            "CaptureOffsetComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 39373
+            },
+            "StateId": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "Guid",
+              "valueOffset": 39426
+            }
+          }
+        },
+        {
+          "exportIndex": 69,
+          "object": "stg29_light.PersistentLevel.WorldSettings",
+          "class": "WorldSettings",
+          "template": "/Script/Engine.Default__WorldSettings",
+          "serialOffset": 1104597,
+          "properties": {
+            "LevelLightingQuality": "Quality_Production",
+            "RootComponent": {
+              "index": 49,
+              "object": "stg29_light.PersistentLevel.WorldSettings.StaticMeshComponent0"
+            }
+          },
+          "propertyTags": {
+            "LevelLightingQuality": {
+              "type": "ByteProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "enum": "ELightingBuildQuality",
+              "valueOffset": 1104630
+            },
+            "RootComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 1104663
+            }
+          }
+        }
+      ],
+      "existingExtractionMatchesOriginal": true
+    },
+    {
+      "path": "TekkenGame/Content/PostProcess/Common/BP_LightControl.uasset",
+      "sha256": "517c67132b6d720c65be38aaa6e1ffa284a5646dc11f4af86e23c14b1fe3477d",
+      "bytes": 51822,
+      "objects": [
+        {
+          "exportIndex": 218,
+          "object": "Default__BP_LightControl_C",
+          "class": "BP_LightControl_C",
+          "template": "/Script/Engine.Default__Actor",
+          "serialOffset": 49632,
+          "properties": {
+            "UberGraphFrame": {
+              "undecodedHex": "cc00000000000000"
+            },
+            "CharacterPostEffect": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 6.0,
+              "FresnelIntensity": 2.0,
+              "FresnelDirectivity": true,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "FogInscatteringColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.0
+            },
+            "OverrideFilmSaturation": true,
+            "OverrideFilmContrast": true
+          },
+          "propertyTags": {
+            "UberGraphFrame": {
+              "type": "StructProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "struct": "PointerToUberGraphFrame",
+              "valueOffset": 49681
+            },
+            "CharacterPostEffect": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 49738,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 49787
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 49828
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 49857
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 49887
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 49912
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 49941
+                }
+              }
+            },
+            "FogInscatteringColor": {
+              "type": "StructProperty",
+              "size": 16,
+              "arrayIndex": 0,
+              "struct": "LinearColor",
+              "valueOffset": 50002
+            },
+            "OverrideFilmSaturation": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 50044
+            },
+            "OverrideFilmContrast": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 50070
+            }
+          }
+        },
+        {
+          "exportIndex": 223,
+          "object": "BP_LightControl_C.SceneComponent_0",
+          "class": "SceneComponent",
+          "template": "/Script/Engine.Default__SceneComponent",
+          "serialOffset": 50916,
+          "properties": {},
+          "propertyTags": {}
+        }
+      ],
+      "existingExtractionMatchesOriginal": true
+    },
+    {
+      "path": "TekkenGame/Content/Character/CharacterPostEffect/BP_StageParameter.uasset",
+      "sha256": "b251a0fae2720848ca509fb5211448e5ddc153ba16255b2669c19c181b3bbe1d",
+      "bytes": 92554,
+      "objects": [
+        {
+          "exportIndex": 354,
+          "object": "Default__BP_StageParameter_C",
+          "class": "BP_StageParameter_C",
+          "template": "/Script/TekkenGame.Default__StageParameter",
+          "serialOffset": 82822,
+          "properties": {
+            "UberGraphFrame": {
+              "undecodedHex": "4f01000000000000"
+            },
+            "CharacterPostEffect": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 6.0,
+              "FresnelIntensity": 2.0,
+              "FresnelDirectivity": true,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "Rage": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5,
+              "FresnelIntensity": 5.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "Armor": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5999999046325684,
+              "FresnelIntensity": 20.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "ExArts": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 0.8481630086898804,
+                "b": 0.04098999872803688,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.0,
+              "FresnelIntensity": 20.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "RageAttack": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5999999046325684,
+              "FresnelIntensity": 20.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "KZM Tiger": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 1.5,
+              "FresnelIntensity": 1.0,
+              "FresnelDirectivity": true,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "BS7 Tiger": {
+              "FresnelColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 1.0,
+              "FresnelIntensity": 30.0,
+              "FresnelDirectivity": true,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "NeoAkuma": {
+              "FresnelColor": {
+                "r": 0.7500820159912109,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5,
+              "FresnelIntensity": 5.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "PowerMode": {
+              "FresnelColor": {
+                "r": 0.7500820159912109,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5,
+              "FresnelIntensity": 5.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "MRY_ExArts": {
+              "FresnelColor": {
+                "r": 0.10000000149011612,
+                "g": 0.15000000596046448,
+                "b": 2.5,
+                "a": 1.0
+              },
+              "FresnelExponent": 2.5999999046325684,
+              "FresnelIntensity": 60.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "MRZ": {
+              "FresnelColor": {
+                "r": 0.6000000238418579,
+                "g": 3.119999885559082,
+                "b": 30.0,
+                "a": 1.0
+              },
+              "FresnelExponent": 6.0,
+              "FresnelIntensity": 5.0,
+              "FresnelDirectivity": false,
+              "FresnelDirectivitySharpness": 1.0,
+              "FresnelDirectivitySuppression": 0.0
+            },
+            "Collection": {
+              "index": -98,
+              "object": "/Game/Character/Common/MPC_Character.MPC_Character"
+            },
+            "FresnelColorNames": [
+              "Fresnel Color 1P",
+              "Fresnel Color 2P"
+            ],
+            "FresnelExponentNames": [
+              "Fresnel Exponent 1P",
+              "Fresnel Exponent 2P"
+            ],
+            "FresnelIntensityNames": [
+              "Fresnel Intensity 1P",
+              "Fresnel Intensity 2P"
+            ],
+            "FresnelDirectivityNames": [
+              "Fresnel Directivity 1P",
+              "Fresnel Directivity 2P"
+            ],
+            "FresnelDirectivitySharpnessNames": [
+              "Fresnel Directivity Sharpness 1P",
+              "Fresnel Directivity Sharpness 2P"
+            ],
+            "FresnelDirectivitySuppressionNames": [
+              "Fresnel Directivity Suppression 1P",
+              "Fresnel Directivity Suppression 2P"
+            ],
+            "ArmorWeights": {
+              "undecodedHex": "020000000000000000000000"
+            },
+            "ExArtsWeights": {
+              "undecodedHex": "020000000000000000000000"
+            },
+            "PowerModeWeights": {
+              "undecodedHex": "020000000000000000000000"
+            },
+            "RageAttackWeights": {
+              "undecodedHex": "020000000000000000000000"
+            },
+            "NeoAkumaWeights": {
+              "undecodedHex": "020000000000000000000000"
+            },
+            "MRZMaterialComponent": {
+              "index": 368,
+              "object": "Default__BP_StageParameter_C.MRZMaterialComponent0"
+            }
+          },
+          "propertyTags": {
+            "UberGraphFrame": {
+              "type": "StructProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "struct": "PointerToUberGraphFrame",
+              "valueOffset": 82871
+            },
+            "CharacterPostEffect": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 82928,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 82977
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83018
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83047
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 83077
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83102
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83131
+                }
+              }
+            },
+            "Rage": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 83192,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 83241
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83282
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83311
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 83341
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83366
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83395
+                }
+              }
+            },
+            "Armor": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 83456,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 83505
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83546
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83575
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 83605
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83630
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83659
+                }
+              }
+            },
+            "ExArts": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 83720,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 83769
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83810
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83839
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 83869
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83894
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 83923
+                }
+              }
+            },
+            "RageAttack": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 83984,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 84033
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84074
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84103
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 84133
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84158
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84187
+                }
+              }
+            },
+            "KZM Tiger": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 84248,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 84297
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84338
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84367
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 84397
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84422
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84451
+                }
+              }
+            },
+            "BS7 Tiger": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 84512,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 84561
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84602
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84631
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 84661
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84686
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84715
+                }
+              }
+            },
+            "NeoAkuma": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 84776,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 84825
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84866
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84895
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 84925
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84950
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 84979
+                }
+              }
+            },
+            "PowerMode": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 85040,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 85089
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85130
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85159
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 85189
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85214
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85243
+                }
+              }
+            },
+            "MRY_ExArts": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 85304,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 85353
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85394
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85423
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 85453
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85478
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85507
+                }
+              }
+            },
+            "MRZ": {
+              "type": "StructProperty",
+              "size": 215,
+              "arrayIndex": 0,
+              "struct": "CharacterPostEffectParameter",
+              "valueOffset": 85568,
+              "children": {
+                "FresnelColor": {
+                  "type": "StructProperty",
+                  "size": 16,
+                  "arrayIndex": 0,
+                  "struct": "LinearColor",
+                  "valueOffset": 85617
+                },
+                "FresnelExponent": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85658
+                },
+                "FresnelIntensity": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85687
+                },
+                "FresnelDirectivity": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 85717
+                },
+                "FresnelDirectivitySharpness": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85742
+                },
+                "FresnelDirectivitySuppression": {
+                  "type": "FloatProperty",
+                  "size": 4,
+                  "arrayIndex": 0,
+                  "valueOffset": 85771
+                }
+              }
+            },
+            "Collection": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 85808
+            },
+            "FresnelColorNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 85845
+            },
+            "FresnelExponentNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 85898
+            },
+            "FresnelIntensityNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 85951
+            },
+            "FresnelDirectivityNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 86004
+            },
+            "FresnelDirectivitySharpnessNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 86057
+            },
+            "FresnelDirectivitySuppressionNames": {
+              "type": "ArrayProperty",
+              "size": 20,
+              "arrayIndex": 0,
+              "innerType": "NameProperty",
+              "valueOffset": 86110
+            },
+            "ArmorWeights": {
+              "type": "ArrayProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "innerType": "FloatProperty",
+              "valueOffset": 86163
+            },
+            "ExArtsWeights": {
+              "type": "ArrayProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "innerType": "FloatProperty",
+              "valueOffset": 86208
+            },
+            "PowerModeWeights": {
+              "type": "ArrayProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "innerType": "FloatProperty",
+              "valueOffset": 86253
+            },
+            "RageAttackWeights": {
+              "type": "ArrayProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "innerType": "FloatProperty",
+              "valueOffset": 86298
+            },
+            "NeoAkumaWeights": {
+              "type": "ArrayProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "innerType": "FloatProperty",
+              "valueOffset": 86343
+            },
+            "MRZMaterialComponent": {
+              "type": "ObjectProperty",
+              "size": 4,
+              "arrayIndex": 0,
+              "valueOffset": 86380
+            }
+          }
+        },
+        {
+          "exportIndex": 369,
+          "object": "BP_StageParameter_C.SceneComponent_0",
+          "class": "SceneComponent",
+          "template": "/Script/Engine.Default__SceneComponent",
+          "serialOffset": 88142,
+          "properties": {},
+          "propertyTags": {}
+        }
+      ],
+      "existingExtractionMatchesOriginal": true
+    },
+    {
+      "path": "TekkenGame/Content/Stage/Common/Mugen/BP_MugenFar.uasset",
+      "sha256": "7c894d7c664da48be40f07c3f82845cac79d586191e00b106ddad8c7e6eacea6",
+      "bytes": 22904,
+      "objects": [
+        {
+          "exportIndex": 79,
+          "object": "Default__BP_MugenFar_C",
+          "class": "BP_MugenFar_C",
+          "template": "/Script/Engine.Default__Actor",
+          "serialOffset": 21689,
+          "properties": {
+            "UberGraphFrame": {
+              "undecodedHex": "8000000000000000"
+            },
+            "RotateFarModel": {
+              "pitch": 0.0,
+              "yaw": 0.0,
+              "roll": 0.0
+            },
+            "CameraPos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PrevCameraPos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "centerPos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PrevCenterPos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "CenterOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "EnableMugen": true,
+            "EnableOffset": true,
+            "Player1Pos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "Player2Pos": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PrimaryActorTick": {
+              "bCanEverTick": true
+            }
+          },
+          "propertyTags": {
+            "UberGraphFrame": {
+              "type": "StructProperty",
+              "size": 8,
+              "arrayIndex": 0,
+              "struct": "PointerToUberGraphFrame",
+              "valueOffset": 21738
+            },
+            "RotateFarModel": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Rotator",
+              "valueOffset": 21795
+            },
+            "CameraPos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 21856
+            },
+            "PrevCameraPos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 21917
+            },
+            "centerPos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 21978
+            },
+            "PrevCenterPos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 22039
+            },
+            "CenterOffset": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 22100
+            },
+            "EnableMugen": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 22138
+            },
+            "EnableOffset": {
+              "type": "BoolProperty",
+              "size": 0,
+              "arrayIndex": 0,
+              "valueOffset": 22164
+            },
+            "Player1Pos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 22213
+            },
+            "Player2Pos": {
+              "type": "StructProperty",
+              "size": 12,
+              "arrayIndex": 0,
+              "struct": "Vector",
+              "valueOffset": 22274
+            },
+            "PrimaryActorTick": {
+              "type": "StructProperty",
+              "size": 34,
+              "arrayIndex": 0,
+              "struct": "ActorTickFunction",
+              "valueOffset": 22335,
+              "children": {
+                "bCanEverTick": {
+                  "type": "BoolProperty",
+                  "size": 0,
+                  "arrayIndex": 0,
+                  "valueOffset": 22361
+                }
+              }
+            }
+          }
+        },
+        {
+          "exportIndex": 81,
+          "object": "BP_MugenFar_C.SceneComponent_0",
+          "class": "SceneComponent",
+          "template": "/Script/Engine.Default__SceneComponent",
+          "serialOffset": 22626,
+          "properties": {},
+          "propertyTags": {}
+        }
+      ],
+      "existingExtractionMatchesOriginal": true
+    }
+  ],
+  "skyCubemaps": [
+    {
+      "path": "TekkenGame/Content/Stage/stg80/Shader/Texture/T7_T_ENV_s80skysphere_capturedCube.uasset",
+      "sha256": "ae4101f5b66d1a1a28b508130512de7018d4c73937469ab04ccffddb04dea422",
+      "faceWidth": 1024,
+      "faceHeight": 1024,
+      "faces": 6,
+      "format": "PF_FloatRGBA",
+      "dds": "decrypted\\lighting\\T7_T_ENV_s80skysphere_capturedCube.dds",
+      "ddsSha256": "840188827ee3e36c3d0bd4ceb64602abcfebe45dcdfa379bb4e6edb9a29f8ce2",
+      "preview": "clamped sRGB inspection preview, auxiliary alpha ignored; use DDS for HDR lighting"
+    }
+  ]
+}

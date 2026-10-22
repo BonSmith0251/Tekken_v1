@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc0a69d7374e6c4992d63e4459a5434, type: 3}
+  m_Name: OriginalStageLighting
+  m_EditorClassIdentifier:
+  profile: {fileID: 11400000, guid: 2b827ca19e074744eaade9bd4fb4dfc4, type: 2}
+  lights:
+  - name: DirectionalLight_1
+    nativeIntensity: 0.6
+    color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    unrealPitchYawRoll: {x: -19.631971, y: 39.027554, z: -1.036293}
+    characterOnly: 0
+  - name: DirectionalLight_Chara
+    nativeIntensity: 3
+    color: {r: 0.98039216, g: 1, b: 0.85490197, a: 1}
+    unrealPitchYawRoll: {x: -19.631971, y: 39.027554, z: -1.036293}
+    characterOnly: 1
+  - name: DirectionalLight_Chara2
+    nativeIntensity: 1.75
+    color: {r: 0.8862745, g: 0.8745098, b: 1, a: 1}
+    unrealPitchYawRoll: {x: 5.455046, y: -80.74243, z: 1.7535555}
+    characterOnly: 1
+  - name: DirectionalLight_Chara3
+    nativeIntensity: 2.75
+    color: {r: 0.8862745, g: 0.8745098, b: 1, a: 1}
+    unrealPitchYawRoll: {x: 4.2409463, y: 158.89345, z: 3.299945}
+    characterOnly: 1
+  luxPerNativeUnit: 1
