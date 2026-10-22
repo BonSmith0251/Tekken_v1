@@ -1,0 +1,28 @@
+SECONDARY ENTRANCE ANIMATIONS FOUND
+
+Character   Track       Bank / index   Frames   Changing channels
+Jin         Left hand   1 / 267        301      0 of 19 (authored held pose)
+Jin         Right hand  1 / 266        301      16 of 19
+Jin         Face        2 / 5          301      46 of 90
+Kazuya      Left hand   1 / 299        217      15 of 19
+Kazuya      Right hand  1 / 298        217      15 of 19
+Kazuya      Face        2 / 23         217      49 of 90
+
+Matched to entrance moves Jin 2220 / jz_s02(DVD), Kazuya 2326 / kz_s03(DVD).
+Move properties: 0x842E left hand, 0x842F right hand, 0x84C2 face.
+Both face clips have 18 changing mouth-related channels (jaw/lips/tongue).
+Channel counts include separate translation and rotation triples, not 90 bones.
+
+All six decoded C8 files are little-endian native-space animations, not Unity
+AnimationClips. Their frame counts match their respective source body clips.
+Discovery script checks headers, references, frame counts and decode round trips.
+See discovery.json for source hashes, properties and changing channel indices.
+
+Not connected to Unity playback yet. Required work:
+- Retarget hand and facial channel coordinates to the imported bone hierarchy.
+- Replace procedural finger poses only when a native hand track is active.
+- Preserve/restore facial and finger skin weights (Kazuya's exporter currently
+  collapses these weights onto body ancestors).
+- Sample secondary tracks with the body clock, including Kazuya's removed overlaps.
+- Validate hands, jaw, lips and tongue visually; bone presence alone does not
+  establish that each mesh still has the required skin weights.
