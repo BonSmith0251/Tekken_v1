@@ -105,7 +105,9 @@ namespace Versus.Remaster
                 foreach(int index in indices)
                 {
                     float weight=Mathf.Clamp01((anchor-vertices[index].y)/Mathf.Max(.05f,anchor-bottom));
-                    distances[index]=Mathf.Max(distances[index],reach*weight*weight);
+                    // Skirts modelled flared out at bind (Xiaoyu's Formal) need room to fall back in to the legs.
+                    float spread=hanging?Mathf.Max(0,new Vector2(vertices[index].x,vertices[index].z).magnitude-.18f):0;
+                    distances[index]=Mathf.Max(distances[index],(reach+spread)*weight*weight);
                 }
             }
             if(!distances.Any(d=>d>.001f))return;

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4591dd74dcf845439aabdcd3ea0f3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobe: {fileID: 11400000, guid: 492c5e3d3572aeb4bb8448a80ee2d47b, type: 2}
+  wardrobes:
+  - {fileID: 11400000, guid: 492c5e3d3572aeb4bb8448a80ee2d47b, type: 2}
+  - {fileID: 11400000, guid: 8d844a8f7840ff14f8a185c3a2f5584b, type: 2}
+  - {fileID: 11400000, guid: 5c3b95d8d72ec394eaa33ac7aaa7bfd8, type: 2}
 --- !u!4 &2005912472
 Transform:
   m_ObjectHideFlags: 0

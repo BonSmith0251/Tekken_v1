@@ -8,6 +8,7 @@ namespace Versus.Remaster
     // Dresses an instantiated character from wardrobe pieces. Every piece shares the
     // character's bind skeleton, so its renderer is rebound to the model's bones by name.
     // Piece-specific helper bones are copied in at their bind pose under the same parent.
+    // Dress a freshly instantiated model before posing it: rest poses are compared at bind.
     public static class MuseumWardrobe
     {
         // Wardrobe renderers are named after their piece; the versus model keeps the source
@@ -43,10 +44,14 @@ namespace Versus.Remaster
             var names=new HashSet<string>(wardrobe.slots.SelectMany(s=>s.pieces).SelectMany(p=>new[]{p.piece,p.dependency?p.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name:null}).Where(n=>n!=null),StringComparer.OrdinalIgnoreCase);
             foreach(var renderer in model.GetComponentsInChildren<SkinnedMeshRenderer>(true))
                 if(names.Contains(PieceName(renderer.name))){renderer.gameObject.SetActive(false);Discard(renderer.gameObject);}
-            foreach(var prefab in prefabs)Attach(model,prefab);
+            var animated=new HashSet<string>(wardrobe.character.boneNames??new string[0],StringComparer.OrdinalIgnoreCase);
+            foreach(var prefab in prefabs)Attach(model,prefab,animated);
         }
 
-        static void Attach(GameObject model,GameObject prefab)
+        // Rest poses are per mesh in the source: a helper bone shared by name can rest differently in
+        // two items (Xiaoyu's Formal skirt vs her Default 1P coat). Such a helper gets a copy local to
+        // this piece, at the piece's own rest; bones the animation drives always stay shared.
+        static void Attach(GameObject model,GameObject prefab,ICollection<string> animated)
         {
             if(!prefab)throw new InvalidOperationException("Missing wardrobe prefab.");
             var skeleton=model.transform.Find("Skeleton");
@@ -59,21 +64,33 @@ namespace Versus.Remaster
             {
                 foreach(var renderer in source.GetComponentsInChildren<SkinnedMeshRenderer>(true))
                 {
-                    renderer.bones=renderer.bones.Select(b=>Adopt(b,map,skeleton)).ToArray();
-                    renderer.rootBone=Adopt(renderer.rootBone,map,skeleton);
+                    var adopted=new Dictionary<Transform,Transform>();var local=new HashSet<Transform>();
+                    Transform Adopt(Transform bone)
+                    {
+                        if(adopted.TryGetValue(bone,out var known))return known;
+                        var parent=bone.parent && bone.parent.name!="Skeleton"?Adopt(bone.parent):skeleton;
+                        Transform result;
+                        if(!local.Contains(parent) && map.TryGetValue(bone.name,out var existing) && (animated.Contains(bone.name) || SameRest(existing,bone)))result=existing;
+                        else if(!local.Contains(parent) && !map.ContainsKey(bone.name)){result=Copy(bone,parent,bone.name);map[bone.name]=result;}
+                        else{result=Copy(bone,parent,renderer.name+"_"+bone.name);local.Add(result);}
+                        adopted[bone]=result;return result;
+                    }
+                    renderer.bones=renderer.bones.Select(Adopt).ToArray();
+                    renderer.rootBone=Adopt(renderer.rootBone);
                     renderer.transform.SetParent(model.transform,false);
                 }
             }
             finally{source.SetActive(false);Discard(source);}
         }
 
-        static Transform Adopt(Transform bone,Dictionary<string,Transform> map,Transform skeleton)
+        static bool SameRest(Transform a,Transform b)=>
+            (a.localPosition-b.localPosition).sqrMagnitude<1e-8f && Quaternion.Angle(a.localRotation,b.localRotation)<.5f && (a.localScale-b.localScale).sqrMagnitude<1e-6f;
+
+        static Transform Copy(Transform bone,Transform parent,string name)
         {
-            if(map.TryGetValue(bone.name,out var existing))return existing;
-            var parent=bone.parent && bone.parent.name!="Skeleton"?Adopt(bone.parent,map,skeleton):skeleton;
-            var copy=new GameObject(bone.name).transform;copy.SetParent(parent,false);
+            var copy=new GameObject(name).transform;copy.SetParent(parent,false);
             copy.localPosition=bone.localPosition;copy.localRotation=bone.localRotation;copy.localScale=bone.localScale;
-            map[bone.name]=copy;return copy;
+            return copy;
         }
 
         static void Discard(GameObject value)

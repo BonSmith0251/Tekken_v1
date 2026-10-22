@@ -1,0 +1,859 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b024b8424fca036459e23841ef148a48, type: 3}
+  m_Name: XiaoyuWardrobe
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1d71d5c691611eb4d84858058b4e9d99, type: 2}
+  slots:
+  - name: upper
+    optional: 0
+    pieces:
+    - name: Classic
+      piece: xia_bdu_1p_old
+      common: 0
+      prefab: {fileID: 4008278406201757394, guid: 76b406c50911bad4abedd282859855f8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_xia_bdu_1p_old_china_Cloth
+      - MI_xia_bdu_1p_old_mask_china_etc_Cloth
+    - name: Default 1P
+      piece: xia_bdu_1p
+      common: 0
+      prefab: {fileID: 7561899135372713174, guid: bb223d663285b734380a8fcc5f767020, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_xia_bdu_1p_coat
+      - MI_CH_xia_bdu_1p_feather
+    - name: Formal
+      piece: xia_bdu_formal
+      common: 0
+      prefab: {fileID: 6725290913148104217, guid: 47f10d352e7c0064fa249863465ae156, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Panda
+      piece: xia_bdu_panda
+      common: 0
+      prefab: {fileID: 3405898243981692540, guid: 214efe90662d79e409c53b045d699522, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_xia_bdu_panda_shirt
+    - name: School Uniform
+      piece: xia_bdu_school_bv
+      common: 0
+      prefab: {fileID: 644576741132416069, guid: 1b77241d76376564ab48c76407a19154, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_xia_bdu_school_bv_botan
+      - MI_CH_xia_bdu_school_bv_syatu
+    - name: Bikini Tops
+      piece: xia_bdu_bikini_tops
+      common: 1
+      prefab: {fileID: 2297982311697730774, guid: b09953829c1415a418b2312cdaee9746, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Bustier
+      piece: xia_bdu_bustier
+      common: 1
+      prefab: {fileID: 4138683822562520275, guid: 5014e7c5ab877bc4786d1bbd97e580e8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Camisole
+      piece: xia_bdu_camisole
+      common: 1
+      prefab: {fileID: 3612834831833434927, guid: 02987804baa99c944a6be5162ffb98a7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Coat Mitten
+      piece: xia_bdu_coat_mitten
+      common: 1
+      prefab: {fileID: 2766551260779842331, guid: 263ac771db4c3f8449fd9eaaa29a1394, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Downjacket f
+      piece: xia_bdu_downjacket_f
+      common: 1
+      prefab: {fileID: 4974528323331582215, guid: 6b862bc3788abf245999b8ddbf4fb898, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jersey f
+      piece: xia_bdu_jersey_f
+      common: 1
+      prefab: {fileID: 7492475509179728116, guid: b0854a4280dfba840ab3b7af8c4db490, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Kungfu Slvless
+      piece: xia_bdu_kungfu_slvless
+      common: 1
+      prefab: {fileID: 3380323270169070142, guid: c45a7be1a8356314ea991ba35efa5312, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Military T
+      piece: xia_bdu_military_t
+      common: 1
+      prefab: {fileID: 1375335059883969922, guid: 573d180281748cf45b06563634f9118a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Riders Sports
+      piece: xia_bdu_riders_sports
+      common: 1
+      prefab: {fileID: 6714230441754478797, guid: c5839c48cd129ac4fbcf352a7c99b288, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Njpw
+      piece: xia_bdu_t_njpw
+      common: 1
+      prefab: {fileID: 9149316121974786741, guid: e5a1b09288d0bfc46ad8948ecc3accb1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Turtle Slvles
+      piece: xia_bdu_t_turtle_slvles
+      common: 1
+      prefab: {fileID: 8855102944742226932, guid: fd0a2b47cb0797d4ab849c833a58ab6d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: lower
+    optional: 0
+    pieces:
+    - name: Classic
+      piece: xia_bdl_1p_old
+      common: 0
+      prefab: {fileID: 630272712725482470, guid: c77096fca83b34e448b37946595eb90b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Default 1P
+      piece: xia_bdl_1p
+      common: 0
+      prefab: {fileID: 4762974498604485420, guid: d3a75350c3cbe96459e30f4f816e64c8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Formal
+      piece: xia_bdl_formal
+      common: 0
+      prefab: {fileID: 7574971351154981309, guid: 247aaee2c49dff74e823b6b3876f2e31, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_xia_bdl_formal_a
+    - name: Panda
+      piece: xia_bdl_panda
+      common: 0
+      prefab: {fileID: 3544309890264943619, guid: 8870b5f737701374d8a96da5df51838a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: School Uniform
+      piece: xia_bdl_school_bv
+      common: 0
+      prefab: {fileID: 6227682984016335590, guid: 3a7e8106068363a4587d8ebdb35df034, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_xia_bdl_school_bv_skirt
+    - name: Chaps f
+      piece: xia_bdl_chaps_f
+      common: 1
+      prefab: {fileID: 9149469044103512621, guid: 5fe57081116b9584ebe5be64f3b93c14, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jeans
+      piece: xia_bdl_jeans
+      common: 1
+      prefab: {fileID: 5511452847757319534, guid: bfeab4e62d2537c43bdc98029e7e407e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jeans Dmg f
+      piece: xia_bdl_jeans_dmg_f
+      common: 1
+      prefab: {fileID: 5074958226987237933, guid: 1adf1787074b9fb47829ee7f0b497cc4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jeans Dmg Short
+      piece: xia_bdl_jeans_dmg_short
+      common: 1
+      prefab: {fileID: 3481967468469948247, guid: 016f41dba2b6ecb4a8659ea4ef13659f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Kungfu
+      piece: xia_bdl_kungfu
+      common: 1
+      prefab: {fileID: 7134523138258382096, guid: 8e2321ea644f1ed408d01685912317f8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts f
+      piece: xia_bdl_leatherpts_f
+      common: 1
+      prefab: {fileID: 1559648508584593737, guid: ac093c8d45d5c83429000cbe23ab9126, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts sh f
+      piece: xia_bdl_leatherpts_sh_f
+      common: 1
+      prefab: {fileID: 2607750692286599641, guid: d986ae6451e71164294eea082d770992, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leggings Half
+      piece: xia_bdl_leggings_half
+      common: 1
+      prefab: {fileID: 7258503181590184974, guid: 73e287d63e7c1d04c8cc7c64b0925583, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Military Pts f
+      piece: xia_bdl_military_pts_f
+      common: 1
+      prefab: {fileID: 6869027236405193802, guid: 8d36be6a64306484894c8e2668e2c15f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Slittight Denim
+      piece: xia_bdl_slittight_denim
+      common: 1
+      prefab: {fileID: 8728146364867703728, guid: bed28c61cb3c8134eb518d41df5513c5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Suit Pants
+      piece: xia_bdl_suit_pants
+      common: 1
+      prefab: {fileID: 4411536801396215632, guid: 09711a17a25d9e7478b5087adf7f3458, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Suit Pants Crop
+      piece: xia_bdl_suit_pants_crop
+      common: 1
+      prefab: {fileID: 8913601905112860033, guid: bf3b5282380cc5447a1d011a620fbea6, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Suit Pants sh
+      piece: xia_bdl_suit_pants_sh
+      common: 1
+      prefab: {fileID: 661957034843194514, guid: f69172781bf300e4e88e78492305e227, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: hair
+    optional: 0
+    pieces:
+    - name: Classic
+      piece: xia_har_old
+      common: 0
+      prefab: {fileID: 5641971132780307053, guid: 8077afa096e39494b9d7aaa25759e8ea, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Default 1P
+      piece: xia_har_1p
+      common: 0
+      prefab: {fileID: 7377809047239383843, guid: e06f47792a8436647a2ff484fc0f41d2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Ayanami
+      piece: xia_har_ayanami
+      common: 1
+      prefab: {fileID: 4685378358163201235, guid: 4bea71ccb468d754393b8a6d3db3343c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Bobbed
+      piece: xia_har_bobbed
+      common: 1
+      prefab: {fileID: 8776530167915364040, guid: 58cde0db0461a5e4b98516798e443383, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Emo Bob
+      piece: xia_har_emo_bob
+      common: 1
+      prefab: {fileID: 3898364899937682985, guid: b849468744b28e145b7fce65f2276dd7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Mushshort
+      piece: xia_har_mushshort
+      common: 1
+      prefab: {fileID: 8745844506237342429, guid: 9f90599fac59da34ab59c6332914ca20, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Naname
+      piece: xia_har_naname
+      common: 1
+      prefab: {fileID: 5852125901905869073, guid: 5939171da80e37b42a55a5333e4a7bd0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pattun
+      piece: xia_har_pattun
+      common: 1
+      prefab: {fileID: 8697494449119278378, guid: 88f81061d4c021b428a32e2cdac39bbf, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pony
+      piece: xia_har_pony
+      common: 1
+      prefab: {fileID: 425268710624323818, guid: d41294f6018f3c2419605e3f980ae726, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sl Alison
+      piece: xia_har_sl_alison
+      common: 1
+      prefab: {fileID: 355453983939610587, guid: 83448fac68e21f74498d01afa3d5f23c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sl Chisato
+      piece: xia_har_sl_chisato
+      common: 1
+      prefab: {fileID: 170448801874426351, guid: 29a379e97cf15ec45a485f8162c2d804, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sl Hikari
+      piece: xia_har_sl_hikari
+      common: 1
+      prefab: {fileID: 1537787994711516996, guid: 9bbb83936c3a4dc418566fa74b1c87fc, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Mid
+      piece: xia_har_tare_mid
+      common: 1
+      prefab: {fileID: 3505303321791612328, guid: 8832ac12e5ad0aa45ab1cf2167d45641, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Small
+      piece: xia_har_tare_small
+      common: 1
+      prefab: {fileID: 3150215322570194899, guid: 8dcd020e2f0f1004cb4362862d30bad1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge
+      piece: xia_har_toge
+      common: 1
+      prefab: {fileID: 2702840918415834701, guid: 5c620b472f8624f4fb6858b03ffcfa78, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Nagashi
+      piece: xia_har_toge_nagashi
+      common: 1
+      prefab: {fileID: 3678112983907307175, guid: e02bd692df7ce8544b750687497dd67f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Zanbara
+      piece: xia_har_toge_zanbara
+      common: 1
+      prefab: {fileID: 1921123127339951416, guid: 482595d4a7143154d9e5830db9d43d8d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tuntun
+      piece: xia_har_tuntun
+      common: 1
+      prefab: {fileID: 3066407401183940692, guid: f975ebee3e0b5e94cba4e284f3fbbb2f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Twintail
+      piece: xia_har_twintail
+      common: 1
+      prefab: {fileID: 4659910471793330655, guid: a2c4f6e4c75dc554591901ae6397556c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Two Tail Bun
+      piece: xia_har_two_tail_bun
+      common: 1
+      prefab: {fileID: 5511115547528737118, guid: 23a898e460174bd4182a41bb4b4015c8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wavy Pony
+      piece: xia_har_wavy_pony
+      common: 1
+      prefab: {fileID: 7957841809008118665, guid: 735283124e5fcf549816284a7a2d10f4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: head
+    optional: 1
+    pieces:
+    - name: Magica
+      piece: xia_hed_magica
+      common: 0
+      prefab: {fileID: 8450773065807871163, guid: f8ac178867224b6498f92537db100489, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 759728731456931513, guid: dcf90219e0e36eb4cbe8e2469db0cb67, type: 3}
+      cloth: []
+    - name: Panda
+      piece: xia_hed_panda
+      common: 0
+      prefab: {fileID: 6603553178853192442, guid: 90b8e2d59721ec5408c8e9c1a54c1662, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Panda (A)
+      piece: xia_hed_panda_a
+      common: 0
+      prefab: {fileID: 3853773403661592473, guid: c0592cedf8ea26e43802ba49f8511774, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Panda (B)
+      piece: xia_hed_panda_b
+      common: 0
+      prefab: {fileID: 4036238325107050996, guid: c3aeded8661225e4e8a93259dfb26ad8, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: 10gallon
+      piece: xia_hed_10gallon
+      common: 1
+      prefab: {fileID: 4817951497501479281, guid: 6d760dd4450f2fd47a4979397a5b2170, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Baby Hat
+      piece: xia_hed_baby_hat
+      common: 1
+      prefab: {fileID: 1017921763463242677, guid: c092df4ef1d0ef240abe1cde4238500b, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Bandana
+      piece: xia_hed_bandana
+      common: 1
+      prefab: {fileID: 8807453711827976898, guid: 933451cef9b5ba2408c218b35ec2c36a, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Bret
+      piece: xia_hed_bret
+      common: 1
+      prefab: {fileID: 6303440528761202599, guid: f7a4a08cc2131644196a4f29905fe3f4, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 1540590082398124713, guid: ffa08ac014e410848a9a344819980edd, type: 3}
+      cloth: []
+    - name: Cap
+      piece: xia_hed_cap
+      common: 1
+      prefab: {fileID: 2801093293005365428, guid: 698cc0b759653104fa592fa8fb132a7e, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Casquette
+      piece: xia_hed_casquette
+      common: 1
+      prefab: {fileID: 6056347620150639510, guid: 04158219ae31b9f408b02f2bcb6055c0, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Felthat
+      piece: xia_hed_felthat
+      common: 1
+      prefab: {fileID: 6669999674619478731, guid: 67f4643e4bfa59d408b4dbf2e4e04d4d, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Hachimaki
+      piece: xia_hed_hachimaki
+      common: 1
+      prefab: {fileID: 145127535713454490, guid: da82c8f7491486a4d97d63c253c2e82f, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 9058973368786341695, guid: dfc24c2b5a8e8744ba21a6b3c00da2e2, type: 3}
+      cloth: []
+    - name: Hachimaki s
+      piece: xia_hed_hachimaki_s
+      common: 1
+      prefab: {fileID: 1361899582204167236, guid: b9af98cde24a9234db0f1f0c4b90e9ec, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 9058973368786341695, guid: dfc24c2b5a8e8744ba21a6b3c00da2e2, type: 3}
+      cloth: []
+    - name: Hall Hat
+      piece: xia_hed_hall_hat
+      common: 1
+      prefab: {fileID: 6250935558475588418, guid: 2729fe89d8f02fa428a47efea8623002, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Head Dress
+      piece: xia_hed_head_dress
+      common: 1
+      prefab: {fileID: 5118370503703987617, guid: 17eb157ae9ea0ee4fafdca38835054f2, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 472189239007234744, guid: 1d9c6bdae6735af47a8ef500de022780, type: 3}
+      cloth: []
+    - name: Hunting
+      piece: xia_hed_hunting
+      common: 1
+      prefab: {fileID: 4629887056016985650, guid: 34d8c0da5a38552499bdea0de8c5defa, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Kingcrown
+      piece: xia_hed_kingcrown
+      common: 1
+      prefab: {fileID: 6556094638066496819, guid: f5c7f630be5d87e4e86cfe58577c8418, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 7377809047239383843, guid: e06f47792a8436647a2ff484fc0f41d2, type: 3}
+      cloth: []
+    - name: Knitcap
+      piece: xia_hed_knitcap
+      common: 1
+      prefab: {fileID: 5350481642027159871, guid: 964cce91c627cce41aa856e8999adb88, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Korea Cap
+      piece: xia_hed_korea_cap
+      common: 1
+      prefab: {fileID: 3003968927153999232, guid: f3640e87c1d30cb4ea4138dd9288ea40, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Officerscap
+      piece: xia_hed_officerscap
+      common: 1
+      prefab: {fileID: 8746175018312312759, guid: 327a38eabccd52349abd098010be5958, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Onimask
+      piece: xia_hed_onimask
+      common: 1
+      prefab: {fileID: 2006032704829686224, guid: 966c5553091122844ae74161aa862dba, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 7377809047239383843, guid: e06f47792a8436647a2ff484fc0f41d2, type: 3}
+      cloth: []
+    - name: Panda Hat
+      piece: xia_hed_panda_hat
+      common: 1
+      prefab: {fileID: 3526097454301109262, guid: c481e820f99bacf4f958bb7f436eda89, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Roger Hat
+      piece: xia_hed_roger_hat
+      common: 1
+      prefab: {fileID: 4829416219300211181, guid: 64a88f7758752bb44bbe30a8d6687944, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Santa Hat
+      piece: xia_hed_santa_hat
+      common: 1
+      prefab: {fileID: 5283301133596445437, guid: d895397eeafb2604892c69a45305dac9, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Silkhat
+      piece: xia_hed_silkhat
+      common: 1
+      prefab: {fileID: 200312408336773186, guid: 313ac5fd5d8ba684dbfb738bdbb1029c, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Tiara
+      piece: xia_hed_tiara
+      common: 1
+      prefab: {fileID: 1407668969991334641, guid: efd24e82bdb5bcd44b53b6a99f5d4d1b, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 472189239007234744, guid: 1d9c6bdae6735af47a8ef500de022780, type: 3}
+      cloth: []
+    - name: Tiara Bunny
+      piece: xia_hed_tiara_bunny
+      common: 1
+      prefab: {fileID: 7580748707130143698, guid: 81b6ab80a5282e24db4e9d00837ef7c3, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 472189239007234744, guid: 1d9c6bdae6735af47a8ef500de022780, type: 3}
+      cloth: []
+    - name: Tiara Kitten
+      piece: xia_hed_tiara_kitten
+      common: 1
+      prefab: {fileID: 5215011397226818404, guid: b0ab118edc75ee844be95d5603421bb4, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 472189239007234744, guid: 1d9c6bdae6735af47a8ef500de022780, type: 3}
+      cloth: []
+    - name: Witch Hat
+      piece: xia_hed_witch_hat
+      common: 1
+      prefab: {fileID: 1535351002489499471, guid: 2fe01b640e699e84698f5ca35932fcf5, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 2961578171077223494, guid: ff0328d978e590e4392dfcc3c88c79b4, type: 3}
+      cloth: []
+    - name: Yamasa f
+      piece: xia_hed_yamasa_f
+      common: 1
+      prefab: {fileID: 2058289572058904521, guid: 62e2ecb36a350394d850f2c0528a93dc, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 7377809047239383843, guid: e06f47792a8436647a2ff484fc0f41d2, type: 3}
+      cloth: []
+    - name: Yamasa m
+      piece: xia_hed_yamasa_m
+      common: 1
+      prefab: {fileID: 1233097981375530203, guid: 410703db827f12d4dafc39fb9f0d16f0, type: 3}
+      dependencyBase: xia_har_1p
+      dependency: {fileID: 7377809047239383843, guid: e06f47792a8436647a2ff484fc0f41d2, type: 3}
+      cloth: []
+  - name: glasses
+    optional: 1
+    pieces:
+    - name: 3d
+      piece: xia_gla_3d
+      common: 1
+      prefab: {fileID: 7115864998345404739, guid: a883de0b5cf0b6a4989d5b6462ce5cdf, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blind
+      piece: xia_gla_blind
+      common: 1
+      prefab: {fileID: 7457451257849651273, guid: dc6e1816e06214349831bd8a94364b16, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blow
+      piece: xia_gla_blow
+      common: 1
+      prefab: {fileID: 364102372014665077, guid: c3ec6d9ee503a7a44b91e16fd31f5f55, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb
+      piece: xia_gla_celeb
+      common: 1
+      prefab: {fileID: 2090672173013153263, guid: 4803d7ace9357f647a55a18724098b6a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb Big Huge
+      piece: xia_gla_celeb_big_huge
+      common: 1
+      prefab: {fileID: 8395414376019930280, guid: ce5e9248b9343e54fa3a2ffb56ab7883, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Boston
+      piece: xia_gla_cell_boston
+      common: 1
+      prefab: {fileID: 4961941242009877006, guid: 3229394e20f40b64eb18fb526da6614b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Oval
+      piece: xia_gla_cell_oval
+      common: 1
+      prefab: {fileID: 1553135057143733131, guid: 0fbb8384c8446e749bac040d03b9e2bc, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq
+      piece: xia_gla_cell_sq
+      common: 1
+      prefab: {fileID: 6766348898719441516, guid: 5927f4958979bbb4093c54070f65620d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq Sungl
+      piece: xia_gla_cell_sq_sungl
+      common: 1
+      prefab: {fileID: 9131487617891305634, guid: beba77869328b0b4d935db2fe3413123, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Club
+      piece: xia_gla_club
+      common: 1
+      prefab: {fileID: 1200045588059245118, guid: 3101c79849380be4d97d3962e35647a9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Count
+      piece: xia_gla_count
+      common: 1
+      prefab: {fileID: 7951936387325365046, guid: 5b60dca886f5bb24a8814b2a8e3c5b00, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Eyes
+      piece: xia_gla_eyes
+      common: 1
+      prefab: {fileID: 5118714226581551160, guid: 282046e5b6df27a40bbec64b8fad4989, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Metal Oval
+      piece: xia_gla_metal_oval
+      common: 1
+      prefab: {fileID: 6344306831488502191, guid: a4a8a4748bd1e13478430855c954a8e5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Nose
+      piece: xia_gla_nose
+      common: 1
+      prefab: {fileID: 4082685727982993564, guid: 8a8469525e9374643a0bbb997e20f7ad, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Polycarbonate
+      piece: xia_gla_polycarbonate
+      common: 1
+      prefab: {fileID: 1382314632761154949, guid: e7d4aaa5149cbd64da14119ddf8933f4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Retro
+      piece: xia_gla_retro
+      common: 1
+      prefab: {fileID: 243051916137409882, guid: 4b208692f2fb26242a8868d54d06ecb9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Rimless
+      piece: xia_gla_rimless
+      common: 1
+      prefab: {fileID: 3509731234656097749, guid: 8ce7b12e91541da4c8ddaa04fb96104c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round
+      piece: xia_gla_round
+      common: 1
+      prefab: {fileID: 5135170713508290285, guid: a601c3a88f23a5447bb1a114bd0a52df, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round Sunglass
+      piece: xia_gla_round_sunglass
+      common: 1
+      prefab: {fileID: 1234009845381149413, guid: d3f2b9311bd86f745ab214f703edeaf8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shinframe
+      piece: xia_gla_shinframe
+      common: 1
+      prefab: {fileID: 5417505197813390194, guid: d2307ec9f273e1a4fbcf2a31d8716e68, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shootingglass
+      piece: xia_gla_shootingglass
+      common: 1
+      prefab: {fileID: 4503714830262431109, guid: 51efef6352c78a04e8339d0e28538925, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Snorkel
+      piece: xia_gla_snorkel
+      common: 1
+      prefab: {fileID: 3375534618357326677, guid: cd25ac39a7cdbf2449ff235f52b31802, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Blow
+      piece: xia_gla_sports_blow
+      common: 1
+      prefab: {fileID: 4445230052138102359, guid: 74178a9fe7184664d9762932883f87cb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Rimless
+      piece: xia_gla_sports_rimless
+      common: 1
+      prefab: {fileID: 4169266408040832245, guid: 33c34d348fb7ecb4dbdff21182588292, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Star
+      piece: xia_gla_star
+      common: 1
+      prefab: {fileID: 4101676452610616083, guid: 73950e3048beb1841b16815ecc4f2ba7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teardrop
+      piece: xia_gla_teardrop
+      common: 1
+      prefab: {fileID: 1592393832314085581, guid: b194a1043f2af8e4e856d2f107a83181, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teeneyes
+      piece: xia_gla_teeneyes
+      common: 1
+      prefab: {fileID: 8282779956577432832, guid: ab72e558e7955cb4c9d28c0a0d72d19e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Venetian
+      piece: xia_gla_venetian
+      common: 1
+      prefab: {fileID: 7471840855991293994, guid: fa6941e2ddc94a6448675dda3c79b404, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Vortex
+      piece: xia_gla_vortex
+      common: 1
+      prefab: {fileID: 6852869196755434618, guid: 8309de47930ae02468c168c5bfa245b2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington
+      piece: xia_gla_wellington
+      common: 1
+      prefab: {fileID: 1683160032306902414, guid: fcabb15cce037954aa63349de63909f8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington Sungl
+      piece: xia_gla_wellington_sungl
+      common: 1
+      prefab: {fileID: 5355806046861482780, guid: 880c1238a1791054a8ef46b512a38787, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
