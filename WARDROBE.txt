@@ -1,42 +1,52 @@
-JIN WARDROBE
+WARDROBE (JIN, KAZUYA, XIAOYU)
 
-Open Assets/Remaster/Scenes/Wardrobe.unity and press Play.
-OUTFITS loads one of Jin's seven complete outfit sets. ITEMS swaps single items
-by slot: UPPER, LOWER, HAIR, HEAD and GLASSES; HEAD and GLASSES can be None.
-Any swap shows "Custom outfit"; choosing an outfit resets every slot.
-Jin plays his own stance. Right-drag orbits, the wheel zooms, Close-up frames
-the head, and Space pauses the stance.
+Open Assets/Remaster/Scenes/Wardrobe.unity and press Play. The bar at the top
+switches character. OUTFITS loads one of the character's complete outfit sets.
+ITEMS swaps single items by slot: UPPER, LOWER, HAIR, HEAD and GLASSES; HEAD and
+GLASSES can be None. Any swap shows "Custom outfit"; choosing an outfit resets
+every slot. The character plays their own stance. Right-drag orbits, the wheel
+zooms, Close-up frames the head, and Space pauses the stance.
+
 SAVED ITEMS (USED IN EVERY OTHER SCENE)
 Tick the box beside any item (or None for HEAD/GLASSES); slot tabs show how many
-are ticked. Press "Save fight items" to save. Outside the wardrobe, Jin wears only
+are ticked, and a * on a character's name means unsaved ticks. "Save items"
+saves every character with changes. Outside the wardrobe, characters wear only
 saved items: one random saved item per slot in LocalVersus/LocalVersus2 (per
-session), staging_test (one outfit per session, kept across takes) and the
-Character Museum, where his preset costume list is replaced by the saved outfit
-and a "Shuffle saved items" button. Unsaved items and the seven preset outfits
+session, both fighters), staging_test (one outfit per session, kept across takes)
+and the Character Museum, where the preset costume list is replaced by the saved
+outfit and a "Shuffle saved items" button. Unsaved items and the preset outfits
 are ignored there. HEAD/GLASSES with nothing saved stay empty; an UPPER, LOWER or
-HAIR slot with nothing saved keeps the model's item and logs a warning, since Jin
-cannot go without one. The console logs each outfit chosen.
-The selection is saved to Assets/Remaster/Resources/FightWardrobe/jin.json (by item
-name, so it survives rebuilds); a player build saves its own changes under
-persistentDataPath. The wardrobe asset is found through the editor asset database,
-so player builds need it placed under Resources/Wardrobe first. Cloth physics runs
-only in the Wardrobe scene.
+HAIR slot with nothing saved keeps the model's item and logs a warning, since a
+character cannot go without one. The console logs each outfit chosen.
+Selections are saved by item name (so they survive rebuilds) to
+Assets/Remaster/Resources/FightWardrobe/<code>.json: jin.json, kazuya.json,
+xia.json. A player build saves its own changes under persistentDataPath. The
+wardrobe assets are found through the editor asset database, so player builds
+need them placed under Resources/Wardrobe first. Cloth physics runs only in the
+Wardrobe scene; Xiaoyu's museum keeps her own hair and skirt dynamics.
 
-Cloth & hair physics (on by default) simulates what Jin wears: Unity Cloth on the
-sections the game itself simulates as APEX cloth (Long Coat, School Uniform and
-Emperor jackets, Tattered / Devil hood, cloth and trousers), and springs on the
-_OPT helper bone chains (hair strands, hachimaki and Santa hat tails, belts and
-armor flaps). The toggle shows the live cloth and spring counts.
+Cloth & hair physics (on by default) simulates what the character wears: Unity
+Cloth on the sections the game itself simulates as APEX cloth, and springs on the
+_OPT helper bone chains (hair strands, tails, belts and armor flaps). Cloth items:
+Jin's Long Coat, School Uniform and Emperor jackets and Tattered / Devil pieces;
+Kazuya's Default 1P coat and Karate Gi trousers; Xiaoyu's Default 1P coat and
+feathers, Classic, Formal and School Uniform skirts and shirt, and Panda shirt.
+The toggle shows the live cloth and spring counts.
 
-Inventory: Jin's customization table, Character/Item/CharacterItem/JIN. Every
-CharacterItem (CI_*) whose ItemPosition is one of the five slots and that names
-a mesh: 22 upper, 19 lower, 18 hair, 23 head and 33 glasses. Common items
-(Item/Meshes/cmn, fitted per character) are marked *. CI_jin_bdu_t_yamasa_y has
-no mesh in the installed data and is skipped.
-Head items with a DependencyMesh swap Jin's default hair for the trimmed variant
-the game uses under that item (jin_har_1p_A to _I); other hairs are left as is.
-Glasses are shared static meshes on the skeleton's Head_Socket with Jin's own
-ItemOffsets transform, baked onto the head bone.
+Inventory: each character's customization table,
+Character/Item/CharacterItem/<JIN|KAZ|XIA>. Every CharacterItem (CI_*) whose
+ItemPosition is one of the five slots and that names a mesh:
+  Jin     22 upper, 19 lower, 18 hair, 23 head, 33 glasses
+  Kazuya  20 upper, 19 lower, 18 hair, 24 head, 32 glasses
+  Xiaoyu  16 upper, 18 lower, 21 hair, 31 head, 31 glasses
+Skipped: entries without a mesh (CI_*_bdu_t_yamasa_y, CI_kaz_hed_volcano,
+CI_xia_har_1Ptest), Kazuya's six developer cloth-test sheets, and Xiaoyu's
+CI_xia_har_1p_old, which uses the same mesh as her Default 1P hair.
+Common items (Item/Meshes/cmn, fitted per character) are marked *. Head items
+with a DependencyMesh swap the default hair for the trimmed variant the game uses
+under that item; other hairs are left as is. Glasses are shared static meshes on
+the skeleton's Head_Socket with the character's own ItemOffsets transform, baked
+onto the head bone.
 
 Approximations: lens opacity comes from the game's parent materials, so lenses
 use a fixed clear tint (sunglasses a dark tint). Common items keep their default
@@ -48,9 +58,10 @@ from the Xiaoyu museum setup; the game's own APEX cloth assets and physics asset
 (max distances, constraints, collision bodies) are not decoded, so cloth freedom
 is estimated from each garment's height below the waist.
 
-Rebuild: UnityRemaster/export_jin_wardrobe.py, then
-  prepare_jin_costume_materials.py --source Assets/Remaster/Editor/JinWardrobeSource --out Assets/Remaster/JinWardrobe/Textures
-then Remaster > Rebuild Jin wardrobe (writes Assets/Remaster/Wardrobe/JinWardrobe.asset)
-and Remaster > Create Jin wardrobe scene.
-Remaster > Rendering > Capture Jin wardrobe checks every item and writes
-contact sheets to Validation/Wardrobe.
+Rebuild one character (code jin, kaz or xia; folder Jin, Kazuya or Xiaoyu):
+  UnityRemaster/export_wardrobe.py --character <code>
+  prepare_jin_costume_materials.py --source Assets/Remaster/Editor/<Folder>WardrobeSource --out Assets/Remaster/<Folder>Wardrobe/Textures
+then Remaster > Rebuild <Name> wardrobe (writes Assets/Remaster/Wardrobe/<Folder>Wardrobe.asset)
+and Remaster > Create wardrobe scene. export_jin_wardrobe.py still runs Jin's export.
+Remaster > Rendering > Capture wardrobes checks every item and writes contact
+sheets to Validation/Wardrobe/<code>-<slot>.png with results in <code>-wardrobe.json.
