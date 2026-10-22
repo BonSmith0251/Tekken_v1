@@ -42,7 +42,7 @@ namespace Versus.Remaster.Editor
                 }
                 if(!string.IsNullOrEmpty(e.occlusion)){m.SetTexture("_OcclusionMap",Texture(e.occlusion));m.SetFloat("_OcclusionStrength",1);occlusions++;}
                 if(!string.IsNullOrEmpty(e.albedo)){m.mainTexture=Texture(e.albedo,false,true);m.color=Color.white;albedos++;}
-                HdrpProjectSetup.ConvertMaterial(m);EditorUtility.SetDirty(m);
+                HdrpProjectSetup.ConvertMaterial(m);if(HdrpProjectSetup.IsEyeShadow(m))HdrpProjectSetup.MakeEyeShadowTransparent(m);EditorUtility.SetDirty(m);
             }
             AssetDatabase.SaveAssets();
             var prefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Resources/JinPlayable.prefab");

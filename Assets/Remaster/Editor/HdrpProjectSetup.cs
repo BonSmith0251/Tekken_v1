@@ -17,9 +17,101 @@ namespace Versus.Remaster.Editor
         static HdrpProjectSetup() { EditorApplication.update += Poll; }
         static void Poll()
         {
-            if (!File.Exists("Temp/hdrp-migrate") || EditorApplication.isCompiling || EditorApplication.isPlayingOrWillChangePlaymode) return;
+            if (EditorApplication.isCompiling || EditorApplication.isPlayingOrWillChangePlaymode) return;
+            if (File.Exists("Temp/fix-eye-shadow"))
+            {
+                File.Delete("Temp/fix-eye-shadow");
+                try { FixEyeShadows(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/hdrp-error.txt", e.ToString()); }
+            }
+            if (!File.Exists("Temp/hdrp-migrate")) return;
             File.Delete("Temp/hdrp-migrate");
             try { Apply(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/hdrp-error.txt", e.ToString()); }
+        }
+
+        public static bool IsEyeShadow(Material material) => material &&
+            (material.name.EndsWith("_eye_shadow", StringComparison.OrdinalIgnoreCase) || material.name.EndsWith("_eye_corner", StringComparison.OrdinalIgnoreCase));
+
+        // The source eye shadow is black with a soft alpha gradient that darkens the eyeball
+        // under the lid. Opaque or alpha-tested, it paints a hard black shape over the eye.
+        // Xiaoyu's eye corner is a similar alpha overlay; opaque, its whole quad shows as a pink patch.
+        public static void MakeEyeShadowTransparent(Material material)
+        {
+            material.SetFloat("_AlphaCutoffEnable", 0);
+            material.SetFloat("_SurfaceType", 1);
+            material.SetFloat("_BlendMode", 0);
+            material.SetFloat("_EnableBlendModePreserveSpecularLighting", 0);
+            HDMaterial.ValidateMaterial(material);
+            EditorUtility.SetDirty(material);
+        }
+
+        // Same channel rules as StandardsToHDLitMaterialUpgrader: R metallic red (white for an
+        // unmapped metallic setup, black for specular), G occlusion green, B detail alpha,
+        // A smoothness alpha (white when the source has no alpha).
+        static void WriteMaskMap(Material material, Texture2D metallic, bool metallicSetup, Texture2D occlusion, Texture2D detail, Texture2D smoothness)
+        {
+            var inputs = new[] { metallic, occlusion, detail, smoothness }.Where(t => t).ToArray();
+            int width = inputs.Length > 0 ? inputs.Max(t => t.width) : 4, height = inputs.Length > 0 ? inputs.Max(t => t.height) : 4;
+            var pixels = new Color32[width * height];
+            for (int y = 0; y < height; y++)
+                for (int x = 0; x < width; x++)
+                {
+                    float u = (x + .5f) / width, v = (y + .5f) / height;
+                    float r = metallic ? metallic.GetPixelBilinear(u, v).r : metallicSetup ? 1 : 0;
+                    float g = occlusion ? occlusion.GetPixelBilinear(u, v).g : 1;
+                    float b = detail ? detail.GetPixelBilinear(u, v).a : 1;
+                    // Inputs are decoded to RGBA32, so a source without alpha reads as white.
+                    float a = smoothness ? smoothness.GetPixelBilinear(u, v).a : 1;
+                    pixels[y * width + x] = new Color(r, g, b, a);
+                }
+            var mask = new Texture2D(width, height, TextureFormat.RGBA32, false, true);
+            mask.SetPixels32(pixels);
+            string path = AssetDatabase.GetAssetPath(material);
+            path = path.Remove(path.Length - 4) + "_MaskMap.png";
+            File.WriteAllBytes(path, mask.EncodeToPNG());
+            UnityEngine.Object.DestroyImmediate(mask);
+            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+            if (AssetImporter.GetAtPath(path) is TextureImporter importer && (importer.sRGBTexture || importer.textureType != TextureImporterType.Default))
+            { importer.textureType = TextureImporterType.Default; importer.sRGBTexture = false; importer.SaveAndReimport(); }
+            material.SetTexture("_MaskMap", AssetDatabase.LoadAssetAtPath<Texture2D>(path));
+        }
+
+        const int MaterialIdStandard = 1, MaterialIdSpecularColor = 4;
+
+        static bool ClearStaleSpecularColor(Material material)
+        {
+            if (!material.HasProperty("_MaterialID") || (int)material.GetFloat("_MaterialID") != MaterialIdSpecularColor || material.GetTexture("_SpecularColorMap")) return false;
+            material.SetFloat("_MaterialID", MaterialIdStandard);
+            HDMaterial.ValidateMaterial(material);
+            EditorUtility.SetDirty(material);
+            return true;
+        }
+
+        // A uniformly tinted alpha-blended surface; the base color map is dropped because its alpha is not opacity.
+        public static void MakeTransparent(Material material, Color tint)
+        {
+            material.SetTexture("_BaseColorMap", null);
+            material.SetColor("_BaseColor", tint);
+            MakeEyeShadowTransparent(material);
+        }
+
+        [MenuItem("Remaster/Rendering/Fix eye shadow overlays")]
+        public static void FixEyeShadows()
+        {
+            var fixedPaths = new List<string>();
+            var specularPaths = new List<string>();
+            foreach (string guid in AssetDatabase.FindAssets("t:Material", new[] { "Assets/Remaster" }))
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+                if (material && material.shader.name == "HDRP/Lit" && ClearStaleSpecularColor(material)) specularPaths.Add(path);
+                if (!IsEyeShadow(material)) continue;
+                MakeEyeShadowTransparent(material); fixedPaths.Add(path);
+            }
+            AssetDatabase.SaveAssets();
+            Directory.CreateDirectory("Validation/HDRP");
+            Func<List<string>, string> list = paths => "[" + string.Join(",", paths.Select(p => "\"" + p + "\"")) + "]";
+            File.WriteAllText("Validation/HDRP/eye-shadow.json", "{\"passed\":true,\"materials\":" + list(fixedPaths) + ",\"staleSpecularColorCleared\":" + list(specularPaths) + "}");
+            Debug.Log("Eye shadow overlays set to transparent: " + fixedPaths.Count + "; stale specular color cleared: " + specularPaths.Count);
         }
 
         [MenuItem("Remaster/Rendering/Configure HDRP and convert materials")]
@@ -93,6 +185,8 @@ namespace Versus.Remaster.Editor
             // Temp/convassets, which can fail on this project's duplicate texture filenames.
             Texture originalAlbedo = material.GetTexture("_MainTex");
             Texture originalSpecular = material.HasProperty("_SpecGlossMap") ? material.GetTexture("_SpecGlossMap") : null;
+            bool specularSetup = material.shader.name == "Standard (Specular setup)";
+            bool smoothnessFromAlbedo = material.GetFloat("_SmoothnessTextureChannel") != 0;
             var decoded = new Dictionary<Texture, Texture2D>();
             foreach (var property in new[] { "_MainTex", "_MetallicGlossMap", "_SpecGlossMap", "_OcclusionMap", "_DetailMask" })
             {
@@ -109,11 +203,22 @@ namespace Versus.Remaster.Editor
                 }
                 material.SetTexture(property, texture);
             }
+            Texture2D Decoded(string property) => material.HasProperty(property) ? material.GetTexture(property) as Texture2D : null;
+            var metallic = specularSetup ? null : Decoded("_MetallicGlossMap");
+            var occlusion = Decoded("_OcclusionMap");
+            var detail = Decoded("_DetailMask");
+            var smoothness = smoothnessFromAlbedo ? Decoded("_MainTex") : Decoded(specularSetup ? "_SpecGlossMap" : "_MetallicGlossMap");
             try
             {
                 upgrader.Upgrade(material, MaterialUpgrader.UpgradeFlags.None);
+                // HDRP's TextureCombiner renders the mask on the GPU and returns black once
+                // the HDRP pipeline is active. Rebuild it from the decoded inputs on the CPU.
+                if (material.GetTexture("_MaskMap")) WriteMaskMap(material, metallic, !specularSetup, occlusion, detail, smoothness);
                 material.SetTexture("_BaseColorMap", originalAlbedo);
                 material.SetTexture("_SpecularColorMap", originalSpecular);
+                // The upgrader leaves _MaterialID from a previous conversion of a reused asset.
+                // A stale SpecularColor ID with no map is a white mirror with no diffuse.
+                if (!originalSpecular) ClearStaleSpecularColor(material);
             }
             finally { foreach (var texture in decoded.Values) UnityEngine.Object.DestroyImmediate(texture); }
             HDMaterial.ValidateMaterial(material);
