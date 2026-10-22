@@ -17,6 +17,8 @@ namespace Versus.Remaster
         bool presentationRootMotion;
         Func<int, int> presentationFrameMap;
         float stateStart;
+        SecondaryMotionTrack combatHands;
+        int combatHandFrames;
         public int PlayedActions { get; private set; }
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
@@ -39,6 +41,11 @@ namespace Versus.Remaster
             for (int i = 0; i < bones.Length; i++)
                 if (!map.TryGetValue(source.character.boneNames[i], out bones[i]))
                     throw new InvalidOperationException("Missing " + source.character.boneNames[i] + " on " + source.character.displayName);
+            string handResource = source.character.displayName.StartsWith("Jin", StringComparison.Ordinal) ? "jin_combat_hands" : "kaz_combat_hands";
+            var handAsset = Resources.Load<TextAsset>("SecondaryMotion/" + handResource);
+            if (!handAsset) throw new InvalidOperationException("Missing fighting hand animation: " + handResource);
+            combatHandFrames = BitConverter.ToInt32(handAsset.bytes, 4);
+            combatHands = new SecondaryMotionTrack(transform, handResource, combatHandFrames);
             Load(source.idle);
         }
 
@@ -103,6 +110,10 @@ namespace Versus.Remaster
                 a = Mathf.Clamp(presentationFrameMap(a), 0, frames - 1);
                 b = Mathf.Clamp(presentationFrameMap(b), 0, frames - 1);
             }
+            // Restore authored stance hands after JinRig's generic fallback. Entrance
+            // secondary tracks override this later; attacks use the stance's neutral
+            // hand pose until their own per-move secondary events are implemented.
+            combatHands.Apply(target == catalog.idle ? Mathf.Repeat(frame, combatHandFrames) : 0);
             // Combat stays in place. Original entrance tracks retain root motion to match their cameras.
             Vector3 root = Vector3.Lerp(positions[a], positions[b], t);
             if (presentationAction < 0 || !presentationRootMotion) { root.x = 0; root.y = 0; }
