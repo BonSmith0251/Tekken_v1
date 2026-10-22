@@ -15,6 +15,10 @@ namespace Versus.Remaster
         public int FrameCount {get;private set;}
         public float Frame {get;private set;}
         public bool Playing {get;private set;}=true;
+        public void PausePreview()=>Playing=false;
+        public void SetOriginalCamera(bool enabled){useOriginalCamera=enabled;SetFrame(Frame);}
+        public void RefreshPreviewCamera()=>LateUpdate();
+        public XiaoyuSecondaryDynamics FlexibleMotion=>flexibleMotion;
         GameObject model;
         Transform[] bones;
         Vector3[] positions;
@@ -25,31 +29,96 @@ namespace Versus.Remaster
         int page;
         Vector2 detailScroll;
         Vector2 characterScroll,costumeScroll,actionScroll;
+        // Characters with a wardrobe wear their saved items instead of the preset costumes.
+        string[] savedOutfit;
+        readonly System.Random outfitRandom=new System.Random();
         string search="",error="";
+        static readonly string[] CategoryOrder={"All","Staging","Entrance","Ready","Idle","Movement","Fighting","Throws","Reactions","Transitions","Victory","Other"};
+        string[] categoryOptions=CategoryOrder;
+        int categoryIndex;
+        SecondaryMotionTrack secondaryMotion;
+        XiaoyuSecondaryDynamics flexibleMotion;
+        EntranceCameraTrack actionCamera;
+        EntranceCameraLens actionLens;
+        bool useOriginalCamera;
+        Vector3 headFaceAxis=Vector3.forward;
+        GameObject galleryFloor,galleryPedestal,stageModel;
+        string[] stageNames;
+        int stageIndex;
+        void SelectStage(int index)
+        {
+            stageIndex=index;
+            if(stageModel){stageModel.SetActive(false);Destroy(stageModel);}
+            galleryFloor.SetActive(index==0);galleryPedestal.SetActive(index==0);
+            if(index>0)
+            {
+                stageModel=Instantiate(Resources.Load<GameObject>("MuseumStages/"+stageNames[index-1]),transform);
+                float closest=20,floorHeight=0;
+                // Original maps use different world elevations. Align the nearest
+                // walkable surface at the fight origin with the character's feet.
+                foreach(var filter in stageModel.GetComponentsInChildren<MeshFilter>())
+                {
+                    var bounds=filter.GetComponent<Renderer>().bounds;
+                    if(bounds.min.x>0 || bounds.max.x<0 || bounds.min.z>0 || bounds.max.z<0)continue;
+                    var collider=filter.gameObject.AddComponent<MeshCollider>();collider.sharedMesh=filter.sharedMesh;
+                    Physics.SyncTransforms();
+                    if(collider.Raycast(new Ray(new Vector3(0,20,0),Vector3.down),out var hit,40) && hit.normal.y>.4f && Mathf.Abs(hit.point.y)<closest)
+                    {closest=Mathf.Abs(hit.point.y);floorHeight=hit.point.y;}
+                    Destroy(collider);
+                }
+                stageModel.transform.position-=Vector3.up*floorHeight;
+                cameraRig.farClipPlane=2000;
+            }
+            else cameraRig.farClipPlane=100;
+            Resources.UnloadUnusedAssets();
+        }
         void Start()
         {
             try { CreateGallery();SelectCharacter(0); }
             catch(Exception ex){error=ex.Message;Debug.LogException(ex);}
             if(Array.IndexOf(Environment.GetCommandLineArgs(),"--museum-smoke")>=0)
             {Application.runInBackground=true;Invoke(nameof(Smoke),2);}
+            if(Array.IndexOf(Environment.GetCommandLineArgs(),"--museum-stage-smoke")>=0)
+            {Application.runInBackground=true;StartCoroutine(StageSmoke());}
+        }
+        System.Collections.IEnumerator StageSmoke()
+        {
+            yield return null;
+            string dir=Path.GetFullPath(Path.Combine(Application.dataPath,"..","StageValidation"));Directory.CreateDirectory(dir);
+            for(int i=1;i<=stageNames.Length;i++)
+            {
+                SelectStage(i);yield return null;
+                if(!stageModel || stageModel.GetComponentsInChildren<MeshRenderer>().Length==0){Application.Quit(1);yield break;}
+                LateUpdate();yield return new WaitForEndOfFrame();Capture(Path.Combine(dir,stageNames[i-1]+".png"),800,600);
+                yield return Resources.UnloadUnusedAssets();
+            }
+            SelectStage(0);File.WriteAllText(Path.Combine(dir,"stages.json"),"{\"passed\":true,\"stages\":"+stageNames.Length+"}");Application.Quit(0);
         }
         void CreateGallery()
         {
             RenderSettings.ambientLight=new Color(.45f,.48f,.55f);
             var mat=FighterView.Surface(Color.white);mat.color=new Color(.08f,.11f,.16f);
             var platform=GameObject.CreatePrimitive(PrimitiveType.Cylinder);platform.name="Exhibit pedestal";
+            galleryPedestal=platform;
             platform.transform.SetParent(transform);platform.transform.position=new Vector3(0,-.1f,0);platform.transform.localScale=new Vector3(2.6f,.1f,2.6f);
             platform.GetComponent<Renderer>().material=mat;
             var floor=GameObject.CreatePrimitive(PrimitiveType.Plane);floor.transform.SetParent(transform);floor.transform.position=Vector3.down*.21f;floor.GetComponent<Renderer>().material=mat;
+            galleryFloor=floor;
+            var stageList=Resources.Load<TextAsset>("MuseumStages/StageNames");
+            stageNames=stageList?stageList.text.Split(new[]{'\n','\r'},StringSplitOptions.RemoveEmptyEntries).OrderBy(x=>x).ToArray():new string[0];
             foreach(int side in new[]{1,-1})
             {
                 var light=new GameObject("Gallery light").AddComponent<Light>();light.transform.SetParent(transform);
-                light.type=LightType.Directional;light.intensity=side==1?1.3f:.65f;light.transform.rotation=Quaternion.Euler(40,side*45,0);
+                light.type=LightType.Directional;light.intensity=side==1?1.3f:.65f;light.transform.rotation=Quaternion.Euler(40,side==1?145:-110,0);
             }
+            var clarity=new GameObject("Museum preview clarity").AddComponent<UnityEngine.Rendering.Volume>();clarity.transform.SetParent(transform);
+            clarity.isGlobal=true;clarity.priority=100;clarity.sharedProfile=ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
+            clarity.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.MotionBlur>().intensity.Override(0);
             cameraRig=new GameObject("Museum camera").AddComponent<Camera>();cameraRig.transform.SetParent(transform);
             cameraRig.clearFlags=CameraClearFlags.SolidColor;cameraRig.backgroundColor=new Color(.025f,.035f,.055f);
             cameraRig.fieldOfView=35;cameraRig.nearClipPlane=.05f;cameraRig.farClipPlane=100;
             cameraRig.rect=new Rect(.25f,.19f,.75f,.81f);
+            actionLens=new EntranceCameraLens(cameraRig);
         }
         public void SelectCharacter(int index)
         {
@@ -57,30 +126,48 @@ namespace Versus.Remaster
             var entry=characters[index];
             if(!entry || (entry.prefab==null && (entry.costumes==null || entry.costumes.Length==0)) || entry.actions==null || entry.actions.Length==0)throw new InvalidOperationException("Character needs a model and its own actions.");
             CharacterIndex=index;CostumeIndex=0;LoadModel(entry.costumes!=null && entry.costumes.Length>0?entry.costumes[0].prefab:entry.prefab);
-            search="";page=0;SelectAction(Array.FindIndex(entry.actions,a=>a.moveId==1442)>=0?Array.FindIndex(entry.actions,a=>a.moveId==1442):0);
+            search="";page=0;categoryIndex=0;
+            categoryOptions=CategoryOrder;
+            int stance=Array.FindIndex(entry.actions,a=>a.moveId==entry.stanceMoveId);
+            SelectAction(stance>=0?stance:0);
+            headFaceAxis=bones[4].InverseTransformDirection(model.transform.forward);
         }
         void LoadModel(GameObject prefab)
         {
             if(!prefab)throw new InvalidOperationException("Costume has no model prefab.");
+            secondaryMotion?.Restore();secondaryMotion=null;actionCamera=null;
             if(model){model.SetActive(false);Destroy(model);}
+            flexibleMotion=null;
             model=Instantiate(prefab,transform);
             // Give each character a stable exhibit slot. This also keeps models
             // separated during the frame in which Unity retires a previous instance.
             float slot=characters.Length>1?(CharacterIndex-(characters.Length-1)*.5f)*2.7f:0;
             model.transform.localPosition=new Vector3(slot,0,0);model.transform.localRotation=Quaternion.identity;
+            if(galleryPedestal)galleryPedestal.transform.localPosition=new Vector3(slot,-.1f,0);
             foreach(var behaviour in model.GetComponentsInChildren<MonoBehaviour>())behaviour.enabled=false;
-            var map=new Dictionary<string,Transform>();foreach(var bone in model.GetComponentsInChildren<Transform>())map[bone.name]=bone;
+            var map=new Dictionary<string,Transform>(StringComparer.OrdinalIgnoreCase);foreach(var bone in model.GetComponentsInChildren<Transform>())map[bone.name]=bone;
             var names=characters[CharacterIndex].boneNames;bones=new Transform[names.Length];
             for(int i=0;i<bones.Length;i++)if(!map.TryGetValue(names[i],out bones[i]))throw new InvalidOperationException("Missing bone: "+names[i]);
+            // Saved wardrobe items replace the preset's pieces before any cloth/spring setup reads them.
+            savedOutfit=FightWardrobe.DressSaved(model,characters[CharacterIndex],outfitRandom);
+            if(Application.isPlaying && characters[CharacterIndex].characterCode=="xia")flexibleMotion=new XiaoyuSecondaryDynamics(model.transform);
         }
         public void SelectCostume(int index)
         {
             var entry=characters[CharacterIndex];
             if(entry.costumes==null || index<0 || index>=entry.costumes.Length)throw new InvalidOperationException("Invalid costume selection.");
-            float frame=Frame;LoadModel(entry.costumes[index].prefab);CostumeIndex=index;SetFrame(frame);
+            float frame=Frame;int action=ActionIndex;LoadModel(entry.costumes[index].prefab);CostumeIndex=index;SelectAction(action);SetFrame(frame);
+        }
+        // Re-dresses a wardrobe character with another random combination of its saved items.
+        public void ShuffleSavedOutfit()
+        {
+            var entry=characters[CharacterIndex];
+            float frame=Frame;int action=ActionIndex;LoadModel(entry.costumes!=null && entry.costumes.Length>0?entry.costumes[0].prefab:entry.prefab);
+            SelectAction(action);SetFrame(frame);
         }
         public void SelectAction(int index)
         {
+            secondaryMotion?.Restore();secondaryMotion=null;actionCamera=null;
             var entry=characters[CharacterIndex];var action=entry.actions[index];
             if(!action.motion)throw new InvalidDataException("Missing action motion: "+action.name);
             byte[] data=action.motion.bytes;
@@ -95,15 +182,23 @@ namespace Versus.Remaster
                 for(int c=0;c<count;c++)
                 {int p=offset+12+c*16;rotations[f,c]=new Quaternion(BitConverter.ToSingle(data,p),BitConverter.ToSingle(data,p+4),BitConverter.ToSingle(data,p+8),BitConverter.ToSingle(data,p+12));}
             }
-            ActionIndex=index;FrameCount=frames;detailScroll=Vector2.zero;SetFrame(0);
+            ActionIndex=index;FrameCount=frames;detailScroll=Vector2.zero;
+            if(!string.IsNullOrEmpty(action.secondaryResource))secondaryMotion=new SecondaryMotionTrack(model.transform,action.secondaryResource,frames);
+            if(!string.IsNullOrEmpty(action.cameraResource))actionCamera=new EntranceCameraTrack(action.cameraResource,action.moveId,frames);
+            SetFrame(0);
+            flexibleMotion?.Reset();
         }
         public void SetFrame(float frame)
         {
+            bool wrap=Playing&&loop&&frame<3&&Frame>FrameCount-4;
+            bool seek=!wrap&&(frame<Frame || Mathf.Abs(frame-Frame)>3);
             Frame=Mathf.Clamp(frame,0,FrameCount-1);int a=(int)Frame,b=Mathf.Min(a+1,FrameCount-1);float t=Frame-a;
             Vector3 root=Vector3.Lerp(positions[a],positions[b],t);
-            if(!sourceTravel){root.x=0;root.y=0;}
+            if(!sourceTravel && !(useOriginalCamera && actionCamera!=null)){root.x=0;root.y=0;}
             bones[0].localPosition=root;
             for(int i=0;i<bones.Length;i++)bones[i].localRotation=Quaternion.Slerp(rotations[a,i],rotations[b,i],t);
+            secondaryMotion?.Apply(Frame);
+            if(seek)flexibleMotion?.Reset();
         }
         void Update()
         {
@@ -125,7 +220,16 @@ namespace Versus.Remaster
         }
         void LateUpdate()
         {
+            flexibleMotion?.Tick(Time.deltaTime);
             if(!cameraRig)return;
+            if(useOriginalCamera && actionCamera!=null && model)
+            {
+                var focus=new Bounds(bones[4].position+Vector3.up*.10f,Vector3.one*.44f);
+                foreach(int i in new[]{8,12,15,18})focus.Encapsulate(new Bounds(bones[i].position,Vector3.one*.20f));
+                actionCamera.Apply(cameraRig,model.transform,Frame,actionLens,focus,bones[4].TransformDirection(headFaceAxis),null,bones[4].position);
+                return;
+            }
+            cameraRig.fieldOfView=35;
             Vector3 target=new Vector3(0,1,0);
             float framingDistance=distance;
             if(model)
@@ -138,7 +242,7 @@ namespace Versus.Remaster
                     target=bounds.center;framingDistance=Mathf.Max(distance,bounds.extents.magnitude*2.15f);
                 }
             }
-            if(!sourceTravel){target.x=0;target.z=0;}
+            if(!sourceTravel){target.x=model?model.transform.position.x:0;target.z=model?model.transform.position.z:0;}
             cameraRig.transform.position=target+Quaternion.Euler(-pitch,yaw,0)*new Vector3(0,0,framingDistance);
             cameraRig.transform.LookAt(target);
         }
@@ -154,7 +258,14 @@ namespace Versus.Remaster
             for(int i=0;i<characters.Length;i++)if(GUILayout.Button((i==CharacterIndex?">  ":"")+characters[i].displayName))SelectCharacter(i);
             GUILayout.EndScrollView();
             var costumes=characters[CharacterIndex].costumes;
-            if(costumes!=null && costumes.Length>0)
+            if(savedOutfit!=null)
+            {
+                GUILayout.Label("SAVED ITEMS  /  from the Wardrobe scene");costumeScroll=GUILayout.BeginScrollView(costumeScroll,GUILayout.Height(95));
+                foreach(string item in savedOutfit)GUILayout.Label(item);
+                GUILayout.EndScrollView();
+                if(GUILayout.Button("Shuffle saved items"))ShuffleSavedOutfit();
+            }
+            else if(costumes!=null && costumes.Length>0)
             {
                 GUILayout.Label("COSTUMES  /  "+costumes.Length);costumeScroll=GUILayout.BeginScrollView(costumeScroll,GUILayout.Height(125));
                 for(int i=0;i<costumes.Length;i++)if(GUILayout.Button((i==CostumeIndex?">  ":"")+costumes[i].name))SelectCostume(i);
@@ -162,25 +273,35 @@ namespace Versus.Remaster
             }
             GUILayout.Space(8);
             GUILayout.Label("MOVE RECORDS  /  "+characters[CharacterIndex].actions.Length);
+            GUILayout.BeginHorizontal();
+            if(GUILayout.Button("<",GUILayout.Width(32))){categoryIndex=(categoryIndex+categoryOptions.Length-1)%categoryOptions.Length;page=0;actionScroll=Vector2.zero;}
+            if(GUILayout.Button("CATEGORY: "+categoryOptions[categoryIndex])){categoryIndex=(categoryIndex+1)%categoryOptions.Length;page=0;actionScroll=Vector2.zero;}
+            if(GUILayout.Button(">",GUILayout.Width(32))){categoryIndex=(categoryIndex+1)%categoryOptions.Length;page=0;actionScroll=Vector2.zero;}
+            GUILayout.EndHorizontal();
             string query=GUILayout.TextField(search);if(query!=search){search=query;page=0;actionScroll=Vector2.zero;}
             var actions=characters[CharacterIndex].actions;
-            var matches=Enumerable.Range(0,actions.Length).Where(i=>(actions[i].name+" "+actions[i].animation).IndexOf(search,StringComparison.OrdinalIgnoreCase)>=0).ToArray();
+            string selectedCategory=categoryOptions[categoryIndex];
+            var matches=Enumerable.Range(0,actions.Length).Where(i=>(selectedCategory=="All"||actions[i].category==selectedCategory)&&(actions[i].name+" "+actions[i].animation).IndexOf(search,StringComparison.OrdinalIgnoreCase)>=0).ToArray();
             int pages=Mathf.Max(1,(matches.Length+99)/100);page=Mathf.Clamp(page,0,pages-1);
             GUILayout.BeginHorizontal();if(GUILayout.Button("<") && page>0){page--;actionScroll=Vector2.zero;}
             GUILayout.Label((page+1)+" / "+pages+" ("+matches.Length+")");if(GUILayout.Button(">") && page<pages-1){page++;actionScroll=Vector2.zero;}GUILayout.EndHorizontal();
             actionScroll=GUILayout.BeginScrollView(actionScroll);
             foreach(int i in matches.Skip(page*100).Take(100))if(GUILayout.Button((i==ActionIndex?">  ":"")+actions[i].name,GUILayout.Height(29)))SelectAction(i);
             GUILayout.EndScrollView();GUILayout.EndArea();
-            string costume=costumes!=null && costumes.Length>0?costumes[CostumeIndex].name:"Default";
+            string costume=savedOutfit!=null?"Saved items":costumes!=null && costumes.Length>0?costumes[CostumeIndex].name:"Default";
             GUI.Label(new Rect(345,18,850,35),characters[CharacterIndex].displayName+"  /  "+costume+"  /  "+actions[ActionIndex].name,new GUIStyle(GUI.skin.label){fontSize=24});
             if(GUI.Button(new Rect(20,575,280,30),showDetails?"Hide transitions / record":"Transitions / original record"))showDetails=!showDetails;
             bool travel=GUI.Toggle(new Rect(20,615,280,25),sourceTravel,"Source travel (camera follows)");
             if(travel!=sourceTravel){sourceTravel=travel;SetFrame(Frame);}
+            GUI.enabled=actionCamera!=null;
+            bool nativeCamera=GUI.Toggle(new Rect(20,650,280,25),useOriginalCamera,"Original action camera");
+            if(nativeCamera!=useOriginalCamera){useOriginalCamera=nativeCamera;SetFrame(Frame);}
+            GUI.enabled=true;
             if(showDetails)
             {
                 GUI.Box(new Rect(870,60,395,480),"");GUILayout.BeginArea(new Rect(880,70,375,460));
                 detailScroll=GUILayout.BeginScrollView(detailScroll);
-                var action=actions[ActionIndex];GUILayout.Label("Animation: "+action.animation);
+                var action=actions[ActionIndex];GUILayout.Label("Category: "+action.category);GUILayout.Label("Animation: "+action.animation);
                 if(GUILayout.Button("Default transition -> "+action.transition))JumpTo(action.transition);
                 GUILayout.Label("Cancel branches (manual preview)");
                 if(action.branches!=null)foreach(var branch in action.branches)
@@ -189,6 +310,12 @@ namespace Versus.Remaster
                 GUILayout.EndScrollView();GUILayout.EndArea();
             }
             GUI.Label(new Rect(345,553,850,25),"Right-drag to orbit  •  Scroll to zoom");
+            if(stageNames!=null && stageNames.Length>0)
+            {
+                if(GUI.Button(new Rect(345,505,40,30),"<"))SelectStage((stageIndex+stageNames.Length)%(stageNames.Length+1));
+                if(GUI.Button(new Rect(390,505,400,30),"STAGE: "+(stageIndex==0?"Museum gallery":stageNames[stageIndex-1])+"  >"))SelectStage((stageIndex+1)%(stageNames.Length+1));
+                if(stageIndex>0)GUI.Label(new Rect(345,535,850,20),"Original stage geometry preview — materials and effects pending");
+            }
             if(GUI.Button(new Rect(345,600,100,30),Playing?"Pause":"Play"))Playing=!Playing;
             if(GUI.Button(new Rect(455,600,75,30),"Restart"))SetFrame(0);
             if(GUI.Button(new Rect(540,600,45,30),"<")){Playing=false;SetFrame(Mathf.Floor(Frame)-1);}
@@ -202,7 +329,7 @@ namespace Versus.Remaster
         }
         void JumpTo(int id)
         {int index=Array.FindIndex(characters[CharacterIndex].actions,a=>a.moveId==id);if(index>=0)SelectAction(index);}
-        void Capture(string path,int width,int height)
+        public void Capture(string path,int width,int height)
         {
             var rt=new RenderTexture(width,height,24);cameraRig.targetTexture=rt;
             Rect viewport=cameraRig.rect;cameraRig.rect=new Rect(0,0,1,1);cameraRig.Render();RenderTexture.active=rt;
@@ -215,7 +342,7 @@ namespace Versus.Remaster
             {
                 int actions=0,frames=0,costumes=0;
                 for(int c=0;c<characters.Length;c++)
-                {SelectCharacter(c);if(characters[c].costumes!=null)for(int k=0;k<characters[c].costumes.Length;k++){SelectCostume(k);costumes++;SetFrame(0);LateUpdate();Capture(Path.Combine(Path.GetFullPath(Path.Combine(Application.dataPath,"..")),"costume-"+k.ToString("00")+".png"),700,700);SetFrame(FrameCount-1);}for(int a=0;a<characters[c].actions.Length;a++){SelectAction(a);actions++;for(int f=0;f<FrameCount;f++){SetFrame(f);frames++;}}}
+                {SelectCharacter(c);if(characters[c].costumes!=null)for(int k=0;k<characters[c].costumes.Length;k++){SelectCostume(k);costumes++;SetFrame(0);LateUpdate();Capture(Path.Combine(Path.GetFullPath(Path.Combine(Application.dataPath,"..")),"character-"+c+"-costume-"+k.ToString("00")+".png"),700,700);SetFrame(FrameCount-1);}for(int a=0;a<characters[c].actions.Length;a++){if(string.IsNullOrEmpty(characters[c].actions[a].category))throw new InvalidDataException("Uncategorized action");SelectAction(a);actions++;for(int f=0;f<FrameCount;f++){SetFrame(f);frames++;}}}
                 SelectCharacter(0);JumpTo(1555);SetFrame(10);Playing=false;LateUpdate();
                 string dir=Path.GetFullPath(Path.Combine(Application.dataPath,".."));
                 File.WriteAllText(Path.Combine(dir,"museum-smoke.json"),"{\"passed\":true,\"characters\":"+characters.Length+",\"costumes\":"+costumes+",\"actions\":"+actions+",\"frames\":"+frames+"}");

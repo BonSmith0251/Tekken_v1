@@ -5,6 +5,8 @@ namespace Versus.Remaster
     public sealed class MuseumCharacter : ScriptableObject
     {
         public string displayName;
+        public string characterCode;
+        public int stanceMoveId=1442;
         public GameObject prefab;
         public Costume[] costumes;
         public string[] boneNames;
@@ -19,7 +21,8 @@ namespace Versus.Remaster
             public string name;
             public TextAsset motion;
             public int moveId,transition;
-            public string animation,details;
+            public string category,animation,details;
+            public string secondaryResource,cameraResource;
             public Branch[] branches;
         }
         [System.Serializable] public class Branch

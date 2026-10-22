@@ -1,0 +1,824 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b024b8424fca036459e23841ef148a48, type: 3}
+  m_Name: KazuyaWardrobe
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: c7e163375e4612f44b7def0f74daa312, type: 2}
+  slots:
+  - name: upper
+    optional: 0
+    pieces:
+    - name: Default 1P Silver Coat
+      piece: kaz_bdu_1p
+      common: 0
+      prefab: {fileID: 4677046648677602051, guid: 6364b83ed7fb6954291733c8be9b1cc0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_kaz_bdu_1p_coat_cloth
+    - name: Gilet
+      piece: kaz_bdu_gilet_bv
+      common: 0
+      prefab: {fileID: 3152343926154919, guid: 09d70d2c615480247a3ead623c9272a7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Kamikaze
+      piece: kaz_bdu_kamikaze
+      common: 0
+      prefab: {fileID: 5987171318000148390, guid: 1c3cb50d3c50ecd4d9691a78ba7d5708, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Karate Gi
+      piece: kaz_bdu_dougi_org
+      common: 0
+      prefab: {fileID: 7214210351352619022, guid: 53e551d30d176ee4894cefe17ba43b12, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tattoo Shirt
+      piece: kaz_bdu_tatoo_shirt
+      common: 0
+      prefab: {fileID: 7852429449287525412, guid: 71e24c3f946e9054b94aa4f5bf0b78af, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wagara
+      piece: kaz_bdu_wagara
+      common: 0
+      prefab: {fileID: 6566907420924415663, guid: 04582a9edff439543ada62b1109bc515, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: China Armor
+      piece: kaz_bdu_china_armor
+      common: 1
+      prefab: {fileID: 6461027037483276089, guid: 08b44638f85c200489b7ba848d68799c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Dougi
+      piece: kaz_bdu_dougi
+      common: 1
+      prefab: {fileID: 8292759245488872069, guid: 19b81d0f571aee6428054d6aae1825fb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Downjacket m
+      piece: kaz_bdu_downjacket_m
+      common: 1
+      prefab: {fileID: 4332231662870625626, guid: bffd28d6b3451f644ab4eed731212005, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Fighter
+      piece: kaz_bdu_fighter
+      common: 1
+      prefab: {fileID: 4826179979485342370, guid: d753c4df29329d140b679771cbfd37ba, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Flightjacket
+      piece: kaz_bdu_flightjacket
+      common: 1
+      prefab: {fileID: 5802438588622863307, guid: af97e127fe57df949a70bf2634fba63c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Fullarmor
+      piece: kaz_bdu_fullarmor
+      common: 1
+      prefab: {fileID: 2002836279446780008, guid: e8a74b56cd6afe74c8d4ac65d9c89954, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jersey m
+      piece: kaz_bdu_jersey_m
+      common: 1
+      prefab: {fileID: 172193124602435608, guid: 33782052f1cd7d64d82a9b64610cb9a2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Justaucorps
+      piece: kaz_bdu_justaucorps
+      common: 1
+      prefab: {fileID: 3198273702509983284, guid: b38f7b5a0bfae0a498b5da4c3708fa3f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Naked
+      piece: kaz_bdu_naked
+      common: 1
+      prefab: {fileID: 8404804129233830205, guid: 85bd59ea5f8520849872820b995620a4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Riders Armor
+      piece: kaz_bdu_riders_armor
+      common: 1
+      prefab: {fileID: 3215826180924777323, guid: e39e069117eee9b44ba6c1740f7e31cb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Riders Slvless
+      piece: kaz_bdu_riders_slvless
+      common: 1
+      prefab: {fileID: 4560779968233186739, guid: b99e6376b60afbd41ae1fe09129ff4e8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Crew Neck
+      piece: kaz_bdu_t_crew_neck
+      common: 1
+      prefab: {fileID: 5929993054362524470, guid: e04c1ed791680b04cb24899d8692450e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Njpw
+      piece: kaz_bdu_t_njpw
+      common: 1
+      prefab: {fileID: 6530937142318906188, guid: aed2c3ee7fad87348b4c43df7d2aa5c1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Yokosuka
+      piece: kaz_bdu_yokosuka
+      common: 1
+      prefab: {fileID: 5149397826829558233, guid: 32868e4828dee3641ba40ca579e10a6e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: lower
+    optional: 0
+    pieces:
+    - name: Default 1P Silver Coat
+      piece: kaz_bdl_1p
+      common: 0
+      prefab: {fileID: 4001591516261500456, guid: a3b89341e885bc34f8ec02acbe9b36f3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Gilet
+      piece: kaz_bdl_gilet_bv
+      common: 0
+      prefab: {fileID: 4254835294860308621, guid: 5625e53cc6b387044a91fc81d8fc4071, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Kamikaze
+      piece: kaz_bdl_kamikaze
+      common: 0
+      prefab: {fileID: 2310619936851649350, guid: 7251ab591899592428cfeb6f1385f3a4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Karate Gi
+      piece: kaz_bdl_dougi_org
+      common: 0
+      prefab: {fileID: 3279764950793146543, guid: 6fba9a043856ed64aaa04fec248e54d9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_kaz_bdl_def_pants
+    - name: Tattoo Shirt
+      piece: kaz_bdl_tatoo_shirt
+      common: 0
+      prefab: {fileID: 1806739018374741852, guid: 550b53864a2444b4dbc62b76e51547aa, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wagara
+      piece: kaz_bdl_wagara
+      common: 0
+      prefab: {fileID: 7402952946807881328, guid: 7deb5dce0941d8d42b58b00053c8989c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Bontage Pants
+      piece: kaz_bdl_bontage_pants
+      common: 1
+      prefab: {fileID: 66442986666895094, guid: 24b6a4260b061ab4f9601f155f7121f6, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cargo
+      piece: kaz_bdl_cargo
+      common: 1
+      prefab: {fileID: 1176775642758362541, guid: 57e7864e9c5b46547a5afc3491f9f90d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cargo Half
+      piece: kaz_bdl_cargo_half
+      common: 1
+      prefab: {fileID: 6018871941447636153, guid: a4cdee9e3524ebc4faa6c67fc6526142, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Chaps
+      piece: kaz_bdl_chaps
+      common: 1
+      prefab: {fileID: 4970851379372372420, guid: 60846a6cf948b0c48b480fc534626972, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: China Armor
+      piece: kaz_bdl_china_armor
+      common: 1
+      prefab: {fileID: 6589788677829495868, guid: 269920b1eda77c94195c70d45b3a0813, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Dougi
+      piece: kaz_bdl_dougi
+      common: 1
+      prefab: {fileID: 5729464966381411232, guid: 975daa37effb6e948885beddfe3da4ff, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jeans Dmg m
+      piece: kaz_bdl_jeans_dmg_m
+      common: 1
+      prefab: {fileID: 1517452359523611697, guid: 74c022066665f8f4895139a33fa8da04, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jersey
+      piece: kaz_bdl_jersey
+      common: 1
+      prefab: {fileID: 4019307445233325516, guid: 788c9d258f07f8340839d2aa14a4a751, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts m
+      piece: kaz_bdl_leatherpts_m
+      common: 1
+      prefab: {fileID: 386574298130399618, guid: 98d2e649ccc93a94babddba0eb916a72, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts sh m
+      piece: kaz_bdl_leatherpts_sh_m
+      common: 1
+      prefab: {fileID: 5438388340344326313, guid: c1bfb474eb129e04aba5ae7045704d97, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Military Pts m
+      piece: kaz_bdl_military_pts_m
+      common: 1
+      prefab: {fileID: 3472504996610032884, guid: d02bc2145c240b9428348592d5c2039b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Suits Pants
+      piece: kaz_bdl_suits_pants
+      common: 1
+      prefab: {fileID: 565486731959259562, guid: 3ee3fac2e3115384284a0fb4d2457871, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wrestring Pants
+      piece: kaz_bdl_wrestring_pants
+      common: 1
+      prefab: {fileID: 4206723722184512982, guid: 3651002044e124144b9a03aa186046ed, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: hair
+    optional: 0
+    pieces:
+    - name: Default 1P
+      piece: kaz_har_1p
+      common: 0
+      prefab: {fileID: 2732601760108086236, guid: 26ea01058c6f32d49af12e7d0b875d1c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Default 1P (A)
+      piece: kaz_har_1p_A
+      common: 0
+      prefab: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Default 1P (B)
+      piece: kaz_har_1p_B
+      common: 0
+      prefab: {fileID: 6163908906915776566, guid: a62bd3e7f9376d74cb4e10e9507937f8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Ayanami
+      piece: kaz_har_ayanami
+      common: 1
+      prefab: {fileID: 3409490341638541068, guid: 40b2fc0e05d891643a0cb92ca79bacd7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Bouzu
+      piece: kaz_har_bouzu
+      common: 1
+      prefab: {fileID: 1879673623564167750, guid: ceff5a9b6ee4401418d3efde6bcda0f4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Higeuncle
+      piece: kaz_har_higeuncle
+      common: 1
+      prefab: {fileID: 7950425526806438066, guid: 3989d57e4ab55ff42a0009a63d9fed16, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Naname
+      piece: kaz_har_naname
+      common: 1
+      prefab: {fileID: 8046746375571398607, guid: bfb198587f023774f8239a5d3af40255, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pattun
+      piece: kaz_har_pattun
+      common: 1
+      prefab: {fileID: 1739343217264612758, guid: c8035e01be1405542b248c9304036765, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pony
+      piece: kaz_har_pony
+      common: 1
+      prefab: {fileID: 1508289048805992933, guid: 9b62a732960a4df47b6f9c7ab335998b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shortback
+      piece: kaz_har_shortback
+      common: 1
+      prefab: {fileID: 4230464809877699048, guid: 719425d9eba93ac4793c2f7307743f0c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Slick Dreds
+      piece: kaz_har_slick_dreds
+      common: 1
+      prefab: {fileID: 8618865708617044974, guid: 783accfd83661234a9f5cba8c7948eb7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Mid
+      piece: kaz_har_tare_mid
+      common: 1
+      prefab: {fileID: 4847929858994749593, guid: 45f7f2ef443ade441959dfed65a20e31, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Small
+      piece: kaz_har_tare_small
+      common: 1
+      prefab: {fileID: 6377476088067784529, guid: 93ed05db235abc04b96b9251d0458798, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge
+      piece: kaz_har_toge
+      common: 1
+      prefab: {fileID: 4544148436096882995, guid: 927751898c82cb34080f1a0c3689b5c3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Nagashi
+      piece: kaz_har_toge_nagashi
+      common: 1
+      prefab: {fileID: 352230195430766859, guid: 66e724ff054de3d4696dd22bc50c0b8f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Zanbara
+      piece: kaz_har_toge_zanbara
+      common: 1
+      prefab: {fileID: 5351021361655074348, guid: d8d929afb8f8d8d4f92ca33cdf8f064e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tuntun
+      piece: kaz_har_tuntun
+      common: 1
+      prefab: {fileID: 2539152716534593970, guid: e41c4ec144fcae54b849494c6573704a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Two Block
+      piece: kaz_har_two_block
+      common: 1
+      prefab: {fileID: 5407491697566789716, guid: 903d745c633f53743813cb6ca386526d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: head
+    optional: 1
+    pieces:
+    - name: Hammerhead
+      piece: kaz_hed_hammerhead_IA
+      common: 0
+      prefab: {fileID: 4018781744501563952, guid: 118177a3e640abe478c389338a1ae55b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: 10gallon
+      piece: kaz_hed_10gallon
+      common: 1
+      prefab: {fileID: 1042570351361080657, guid: 7f3a7d3dc7779014298f03af70780634, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Baby Hat
+      piece: kaz_hed_baby_hat
+      common: 1
+      prefab: {fileID: 3370855821158736132, guid: b0c5e317fba6d3c45aa505d4eb88233e, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Bandana
+      piece: kaz_hed_bandana
+      common: 1
+      prefab: {fileID: 5244020605553762232, guid: 9fd180c3550ff9d42ba54908cff6410b, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Bret
+      piece: kaz_hed_bret
+      common: 1
+      prefab: {fileID: 8023548573790142229, guid: 3fce694ef656c7649b9ee203a13318b9, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Cap
+      piece: kaz_hed_cap
+      common: 1
+      prefab: {fileID: 2638488818569228447, guid: 5d9696e94212d634f9b3f30399724cb2, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Casquette
+      piece: kaz_hed_casquette
+      common: 1
+      prefab: {fileID: 5709525239449084183, guid: 72f4b72d49d01c747afc25f8acbb838a, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Felthat
+      piece: kaz_hed_felthat
+      common: 1
+      prefab: {fileID: 7922022136715053247, guid: 9c5beccbd34432e41bc3912f14b3ae9e, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Hachimaki
+      piece: kaz_hed_hachimaki
+      common: 1
+      prefab: {fileID: 122372597403172914, guid: 022f6cced3c689249b16c095e958623f, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 7086018316901460077, guid: 7bab4332984842a459b4110a5d122697, type: 3}
+      cloth: []
+    - name: Hachimaki s
+      piece: kaz_hed_hachimaki_s
+      common: 1
+      prefab: {fileID: 2611161868694097730, guid: f7f8b1f54010dc4438f3b057ad8d3837, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 7086018316901460077, guid: 7bab4332984842a459b4110a5d122697, type: 3}
+      cloth: []
+    - name: Hall Hat
+      piece: kaz_hed_hall_hat
+      common: 1
+      prefab: {fileID: 1658649497406020146, guid: 15569b1d9528dee4b840077a949f09de, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Hunting
+      piece: kaz_hed_hunting
+      common: 1
+      prefab: {fileID: 3751157466557873835, guid: c15a8bc71b1f2c04a9cb71954f9c37f9, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Kingcrown
+      piece: kaz_hed_kingcrown
+      common: 1
+      prefab: {fileID: 561582913694571816, guid: f062fd82106c9414090944a4692aef5e, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 6163908906915776566, guid: a62bd3e7f9376d74cb4e10e9507937f8, type: 3}
+      cloth: []
+    - name: Knitcap
+      piece: kaz_hed_knitcap
+      common: 1
+      prefab: {fileID: 1335071473350934284, guid: b04bc451e9ed44f4180886c59552860f, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Korea Cap
+      piece: kaz_hed_korea_cap
+      common: 1
+      prefab: {fileID: 2238486167268982681, guid: b86c026011f8ebf4dac95803047954db, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Officerscap
+      piece: kaz_hed_officerscap
+      common: 1
+      prefab: {fileID: 3893522578159323862, guid: f5fd28ca54f21684fa8ca01b7c0b999d, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Onimask
+      piece: kaz_hed_onimask
+      common: 1
+      prefab: {fileID: 8966658460391293369, guid: 925ec6a40a836ef4f83f6feb82105234, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 2732601760108086236, guid: 26ea01058c6f32d49af12e7d0b875d1c, type: 3}
+      cloth: []
+    - name: Panda Hat
+      piece: kaz_hed_panda_hat
+      common: 1
+      prefab: {fileID: 5192552822782768347, guid: e52894c744807ca4088155b166bc36be, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Roger Hat
+      piece: kaz_hed_roger_hat
+      common: 1
+      prefab: {fileID: 4798797574117086813, guid: fac55e7985f080b42a84fc9dd582108f, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Santa Hat
+      piece: kaz_hed_santa_hat
+      common: 1
+      prefab: {fileID: 7044911579879574967, guid: 01f50eaa0cf3209459eaa64609d41ed0, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Silkhat
+      piece: kaz_hed_silkhat
+      common: 1
+      prefab: {fileID: 4516876156192043443, guid: fa05560a05e546141843f44a2beb81f1, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Witch Hat
+      piece: kaz_hed_witch_hat
+      common: 1
+      prefab: {fileID: 2684619670196735392, guid: 4d05b8b872975ca469a1989e96127c87, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 1268511622931498697, guid: cb1338cea8793624ebd97037897383a2, type: 3}
+      cloth: []
+    - name: Yamasa f
+      piece: kaz_hed_yamasa_f
+      common: 1
+      prefab: {fileID: 5127824567918335542, guid: 4b9dc854a2faeea4093afc100249b851, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 8794080294412477161, guid: e8e204caf7ac01b47be444ea8a15ee03, type: 3}
+      cloth: []
+    - name: Yamasa m
+      piece: kaz_hed_yamasa_m
+      common: 1
+      prefab: {fileID: 5992227942071407859, guid: be2a39bfe89994c409f1bf17058ce9af, type: 3}
+      dependencyBase: kaz_har_1p
+      dependency: {fileID: 8794080294412477161, guid: e8e204caf7ac01b47be444ea8a15ee03, type: 3}
+      cloth: []
+  - name: glasses
+    optional: 1
+    pieces:
+    - name: 3d
+      piece: kaz_gla_3d
+      common: 1
+      prefab: {fileID: 7888705551596896411, guid: d53cbe6f871635f4d996892ac54804f3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blind
+      piece: kaz_gla_blind
+      common: 1
+      prefab: {fileID: 7549024398008279364, guid: 532b2d196a8808a4f921df167f8d183d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blow
+      piece: kaz_gla_blow
+      common: 1
+      prefab: {fileID: 3800247634777833682, guid: ee3972b864658ef43a32dd383a250012, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb
+      piece: kaz_gla_celeb
+      common: 1
+      prefab: {fileID: 5273838574816277383, guid: c4fca3aef9c0f21479b0fe76d1344e31, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb Big Huge
+      piece: kaz_gla_celeb_big_huge
+      common: 1
+      prefab: {fileID: 8210849270805655774, guid: 91e09d2e9af0ee642a6e950ae9b50a48, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Boston
+      piece: kaz_gla_cell_boston
+      common: 1
+      prefab: {fileID: 9003634678724548115, guid: be7930931d9da7b4989de14af6dc00e1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Oval
+      piece: kaz_gla_cell_oval
+      common: 1
+      prefab: {fileID: 6832593921066962400, guid: 622e349c12ac89d4ba112731d8bf966a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq
+      piece: kaz_gla_cell_sq
+      common: 1
+      prefab: {fileID: 6397584410227460910, guid: 27ae6bc8f713fa741a81ef0b7c5c342b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq Sungl
+      piece: kaz_gla_cell_sq_sungl
+      common: 1
+      prefab: {fileID: 8014763445930785430, guid: db229947ac83a914cb7668804bd14978, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Club
+      piece: kaz_gla_club
+      common: 1
+      prefab: {fileID: 2641286502163806906, guid: 86bff0e362c127c408c0fe80c52cd292, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Count
+      piece: kaz_gla_count
+      common: 1
+      prefab: {fileID: 7905096421022647063, guid: 99a2588581f5dd140add71bdb0c9addb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Eyes
+      piece: kaz_gla_eyes
+      common: 1
+      prefab: {fileID: 8506766314585323705, guid: 4bfc8e16ea60979428f183af66a192e0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Higeuncle
+      piece: kaz_gla_higeuncle
+      common: 1
+      prefab: {fileID: 2396628440240006379, guid: f22be593577d8e044b8e48b757153203, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Metal Oval
+      piece: kaz_gla_metal_oval
+      common: 1
+      prefab: {fileID: 802882893664193287, guid: 06307912e305e3040b524f45cd38052b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Nose
+      piece: kaz_gla_nose
+      common: 1
+      prefab: {fileID: 8093548625043355527, guid: 4526a426af43b62448b57d7aaa7ef351, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Polycarbonate
+      piece: kaz_gla_polycarbonate
+      common: 1
+      prefab: {fileID: 2862618786663983266, guid: 1719659c250551c438fa4c01146a9fea, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Retro
+      piece: kaz_gla_retro
+      common: 1
+      prefab: {fileID: 2133231222352635752, guid: 19552f0b5363070439059863d901f160, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Rimless
+      piece: kaz_gla_rimless
+      common: 1
+      prefab: {fileID: 8407077585079019905, guid: d096709ad738e2e4abe594e8e44aaca9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round
+      piece: kaz_gla_round
+      common: 1
+      prefab: {fileID: 4550366290946627024, guid: 20521fdee4f45bd4eb5d2d395af472b5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round Sunglass
+      piece: kaz_gla_round_sunglass
+      common: 1
+      prefab: {fileID: 1328335241009457613, guid: 7402b62e512de23409d114c878d58ac5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shinframe
+      piece: kaz_gla_shinframe
+      common: 1
+      prefab: {fileID: 8252480156585908037, guid: db8f1c8ef3a26aa418aab7a5445a45dd, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shootingglass
+      piece: kaz_gla_shootingglass
+      common: 1
+      prefab: {fileID: 4227567859231818279, guid: 67c42425ed36c244f88ffee15b6bb79c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Snorkel
+      piece: kaz_gla_snorkel
+      common: 1
+      prefab: {fileID: 9052841083740346419, guid: 63fcf2298c68df24f99873dd5a4c3b8c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Blow
+      piece: kaz_gla_sports_blow
+      common: 1
+      prefab: {fileID: 701434210621737168, guid: f9b42813e7003104f9e0d357ee8010ca, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Rimless
+      piece: kaz_gla_sports_rimless
+      common: 1
+      prefab: {fileID: 9200065902194571152, guid: eb175dce8ba92554a9e26d7fb99f1e95, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Star
+      piece: kaz_gla_star
+      common: 1
+      prefab: {fileID: 3397596330136490431, guid: b9bc12323f4e54642bf1ace3e93304bb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teardrop
+      piece: kaz_gla_teardrop
+      common: 1
+      prefab: {fileID: 3122809600115438146, guid: 865390b2c906e7b4aa93143c4c11e574, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teeneyes
+      piece: kaz_gla_teeneyes
+      common: 1
+      prefab: {fileID: 4530154971022642502, guid: 910faeda6c372d64ebc2def30c544fd9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Venetian
+      piece: kaz_gla_venetian
+      common: 1
+      prefab: {fileID: 3472418617400439019, guid: 5f5b7f0040cd2fa4f91ab81b9ffa2bbc, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Vortex
+      piece: kaz_gla_vortex
+      common: 1
+      prefab: {fileID: 6391918001994110856, guid: 75841777dd1e16643b93a567001d20ee, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington
+      piece: kaz_gla_wellington
+      common: 1
+      prefab: {fileID: 3343152350443332810, guid: 4c364760dbe76d2469315c4e203fb2a3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington Sungl
+      piece: kaz_gla_wellington_sungl
+      common: 1
+      prefab: {fileID: 1058398287939994994, guid: 43d1e22312f202040b43402e328772a7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []

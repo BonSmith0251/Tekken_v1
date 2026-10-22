@@ -1,0 +1,846 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b024b8424fca036459e23841ef148a48, type: 3}
+  m_Name: JinWardrobe
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 6df2c8188b8d174479c70a2a312b9e29, type: 2}
+  slots:
+  - name: upper
+    optional: 0
+    pieces:
+    - name: Default 1P
+      piece: jin_bdu_1P
+      common: 0
+      prefab: {fileID: 902837754929628999, guid: 1da53903f7506044aab1ffef58641cf3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Emperor
+      piece: jin_bdu_emperor
+      common: 0
+      prefab: {fileID: 1781448061978000116, guid: 4d8879b27be58a14d83d492692f60eca, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_jin_bdu_vaga_jacketcloth
+    - name: Karate Gi
+      piece: jin_bdu_dougi_org
+      common: 0
+      prefab: {fileID: 8479731613405907754, guid: a7977765f5cad8f41b4421e680d71c89, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Long Coat
+      piece: jin_bdu_longcoat
+      common: 0
+      prefab: {fileID: 8536081384517399653, guid: 3b0001ccfea97784a964af76e235e52b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_jin_bdu_longcoat_cort_cloth
+      - MI_CH_jin_bdu_longcoat_misima
+      - MI_CH_jin_bdu_longcoat_shirts_button_cloth
+    - name: Regulus
+      piece: jin_bdu_regulus
+      common: 0
+      prefab: {fileID: 1999031086215557663, guid: eebfc02cb32311d4db32232403ec0298, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: School Uniform
+      piece: jin_bdu_gakuran
+      common: 0
+      prefab: {fileID: 6126076238191434705, guid: fd3bad9ecfc864e41985a56e3e12645c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_jin_bdugakuran_jacket
+    - name: Tattered / Devil
+      piece: jin_bdu_tattered
+      common: 0
+      prefab: {fileID: 6297318539518988211, guid: 8efb571a2359472488f08082a4991b0f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_dvj_jin_bdu_tattered_cloth
+      - MI_CH_dvj_jin_bdu_tattered_hood
+      - MI_CH_jin_bdu_tattered_dvj1p
+    - name: Tattered / Devil (off)
+      piece: jin_bdu_tattered_off
+      common: 0
+      prefab: {fileID: 1632023237435751872, guid: 8c72a2cc40f255c4e9294b2389dc4bd7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_jin_bdu_tattered_dvj1p
+    - name: China Armor
+      piece: jin_bdu_china_armor
+      common: 1
+      prefab: {fileID: 3875281875563788035, guid: 113150ef8a616cd408c21a7258ee9974, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Dougi
+      piece: jin_bdu_dougi
+      common: 1
+      prefab: {fileID: 2555989609699738606, guid: 9d33147525782aa4aa9a1738d3adae43, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Downjacket m
+      piece: jin_bdu_downjacket_m
+      common: 1
+      prefab: {fileID: 2477603929555997140, guid: 4b4264d200b52c54882cecb28740c960, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Fighter
+      piece: jin_bdu_fighter
+      common: 1
+      prefab: {fileID: 3464369487266826269, guid: 4d24b13a2a2ec4a4e829f143e184886f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Flightjacket
+      piece: jin_bdu_flightjacket
+      common: 1
+      prefab: {fileID: 1478834016052850798, guid: 8bc7098c7756cf14aa07983c9fad6a1e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Fullarmor
+      piece: jin_bdu_fullarmor
+      common: 1
+      prefab: {fileID: 6824339400888155721, guid: e14f7659c718e0044887bbf9a3df443d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jersey m
+      piece: jin_bdu_jersey_m
+      common: 1
+      prefab: {fileID: 5444222582736643778, guid: 7d3b920cc962ba84aa76fb8a7b2dedb1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Justaucorps
+      piece: jin_bdu_justaucorps
+      common: 1
+      prefab: {fileID: 2766230113045698918, guid: 92332e2cd18eceb4cade4892c45c850c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Naked
+      piece: jin_bdu_naked
+      common: 1
+      prefab: {fileID: 6059757277292571197, guid: 2ae5f25aba4dcac41a43e7a238c1b690, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Riders Armor
+      piece: jin_bdu_riders_armor
+      common: 1
+      prefab: {fileID: 5443933318212855516, guid: e893d8c1a1559054ca575972ad03a0a1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Riders Slvless
+      piece: jin_bdu_riders_slvless
+      common: 1
+      prefab: {fileID: 328517116059875325, guid: fd0987feb5c2ff44a963f12720846467, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Crew Neck
+      piece: jin_bdu_t_crew_neck
+      common: 1
+      prefab: {fileID: 8583738384012678034, guid: 39b2902ad1e7d1945a5a1ecafa8a8491, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: T Njpw
+      piece: jin_bdu_t_njpw
+      common: 1
+      prefab: {fileID: 6856272602693678069, guid: c81eb49d60236a14c8095576b07bb311, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Yokosuka
+      piece: jin_bdu_yokosuka
+      common: 1
+      prefab: {fileID: 2878787462519408712, guid: 124507efcfbca904e862498b6b0729c8, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: lower
+    optional: 0
+    pieces:
+    - name: Default 1P
+      piece: jin_bdl_1P
+      common: 0
+      prefab: {fileID: 5825132449797227546, guid: 6e4d066bac8c6ab48adbafe79db52c59, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Emperor
+      piece: jin_bdl_emperor
+      common: 0
+      prefab: {fileID: 2306257304762790371, guid: 8fb144ee807757643b45c0391aa2d0d6, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Karate Gi
+      piece: jin_bdl_dougi_org
+      common: 0
+      prefab: {fileID: 8448502219875597256, guid: 821fa2e46d1e99741a1fa701a3c622e4, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Regulus
+      piece: jin_bdl_regulus
+      common: 0
+      prefab: {fileID: 1937232975857777093, guid: f2355d78498bdfb40bf9fdfcff8344ba, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: School Uniform
+      piece: jin_bdl_gakuran
+      common: 0
+      prefab: {fileID: 1931210803765801869, guid: dddbdb13748c93b419f3b7316fa21fc0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tattered / Devil
+      piece: jin_bdl_tattered
+      common: 0
+      prefab: {fileID: 7487405809213279598, guid: 555af5518b0e0d84cb12ab329e7af842, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth:
+      - MI_CH_jin_bdl_tattered_pant1
+    - name: Bontage Pants
+      piece: jin_bdl_bontage_pants
+      common: 1
+      prefab: {fileID: 5028693100076565087, guid: 749c108126a88cd4792bd0454a6e6e03, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cargo
+      piece: jin_bdl_cargo
+      common: 1
+      prefab: {fileID: 3171269646388430196, guid: 74bf4517269e7bc48a30ede142d2c207, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cargo Half
+      piece: jin_bdl_cargo_half
+      common: 1
+      prefab: {fileID: 7647262302419316628, guid: 98af99baf9390984c9cf3bdc5c476c3c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Chaps
+      piece: jin_bdl_chaps
+      common: 1
+      prefab: {fileID: 8752307067576954573, guid: a7554b240a0bf584fb85e76b301dbd10, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: China Armor
+      piece: jin_bdl_china_armor
+      common: 1
+      prefab: {fileID: 3971267847733464331, guid: 376f50951a959b643ae56ab8b5563b9e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Dougi
+      piece: jin_bdl_dougi
+      common: 1
+      prefab: {fileID: 8789687708923941263, guid: fd6adc01a77a25040b7240c46f8a30c6, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jeans Dmg m
+      piece: jin_bdl_jeans_dmg_m
+      common: 1
+      prefab: {fileID: 9131696855990938398, guid: c456c0ea6f62a3a4fa73dee70e9f60d6, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Jersey
+      piece: jin_bdl_jersey
+      common: 1
+      prefab: {fileID: 2653815456001896659, guid: 2af72bc45b9a31945925f01d965995be, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts m
+      piece: jin_bdl_leatherpts_m
+      common: 1
+      prefab: {fileID: 2861329285036956872, guid: f4ef7c89716d2f84b966d0d3499f5919, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Leatherpts sh m
+      piece: jin_bdl_leatherpts_sh_m
+      common: 1
+      prefab: {fileID: 3770817723388331159, guid: e3b041631c9f0f34ab423fc2cf4db3a7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Military Pts m
+      piece: jin_bdl_military_pts_m
+      common: 1
+      prefab: {fileID: 5240241473722921845, guid: 95d5fc63d1c342941b418b928a04332d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Suits Pants
+      piece: jin_bdl_suits_pants
+      common: 1
+      prefab: {fileID: 2650862822081280291, guid: b63a5cc430fdcb34a936274856998e19, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wrestring Pants
+      piece: jin_bdl_wrestring_pants
+      common: 1
+      prefab: {fileID: 3930165232346456357, guid: 9896c4f9e07adee408185d34d44971c1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: hair
+    optional: 0
+    pieces:
+    - name: Default 1P
+      piece: jin_har_1p
+      common: 0
+      prefab: {fileID: 3418090696601716776, guid: c010edee6fce7814c8a8f69adbe8ac0e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Default 1P (A)
+      piece: jin_har_1p_A
+      common: 0
+      prefab: {fileID: 2076297507469526333, guid: fd15a7bfce6043c469742de90543f250, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tattered / Devil
+      piece: jin_har_tattered
+      common: 0
+      prefab: {fileID: 6350801629389979953, guid: 85420ade89bc07c4999bbfb5143cd8fb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Ayanami
+      piece: jin_har_ayanami
+      common: 1
+      prefab: {fileID: 5526724316346564169, guid: 5b7b6ec161369834bb0695750a412217, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Bouzu
+      piece: jin_har_bouzu
+      common: 1
+      prefab: {fileID: 6313964158123193631, guid: f4c5f8f67f04e134baa4dc0d28c789d5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Higeuncle
+      piece: jin_har_higeuncle
+      common: 1
+      prefab: {fileID: 3620876987779551255, guid: 7f14ddfc9e76ea0419187555afff54c0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Naname
+      piece: jin_har_naname
+      common: 1
+      prefab: {fileID: 2855988881577714942, guid: fe3fb4db77cce6e4fb8cf5ddf818ac3f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pattun
+      piece: jin_har_pattun
+      common: 1
+      prefab: {fileID: 4485456829948540204, guid: ada62ec744df42a4195330ae7d2efcf9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Pony
+      piece: jin_har_pony
+      common: 1
+      prefab: {fileID: 157090069224982945, guid: b1fa4a64492683640ad6cfbf4c4fe32b, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shortback
+      piece: jin_har_shortback
+      common: 1
+      prefab: {fileID: 4923453358808991974, guid: b41498dd1592f3448b4c4519965e713f, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Slick Dreds
+      piece: jin_har_slick_dreds
+      common: 1
+      prefab: {fileID: 153094345260814574, guid: 9a0c894a2ff35e941adbb30689865b88, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Mid
+      piece: jin_har_tare_mid
+      common: 1
+      prefab: {fileID: 1214975687235191347, guid: 834715d408632af4ca3de88cac8a4459, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tare Small
+      piece: jin_har_tare_small
+      common: 1
+      prefab: {fileID: 7713144668369903942, guid: e20e83d4455b9cb4e95a8c45831a3309, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge
+      piece: jin_har_toge
+      common: 1
+      prefab: {fileID: 5030481273921486434, guid: 758257472dccd4943854e6aff8b9c7e5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Nagashi
+      piece: jin_har_toge_nagashi
+      common: 1
+      prefab: {fileID: 2454884899105427719, guid: 2a00375588b8cb84ab644068590e8a75, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Toge Zanbara
+      piece: jin_har_toge_zanbara
+      common: 1
+      prefab: {fileID: 7551297005175116185, guid: 6cfaaa6910394284f970cdd7eb7fa837, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Tuntun
+      piece: jin_har_tuntun
+      common: 1
+      prefab: {fileID: 4208293060211135192, guid: f3eea36a7b85ed94a9af71b00cc41d87, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Two Block
+      piece: jin_har_two_block
+      common: 1
+      prefab: {fileID: 591915192467440707, guid: 2b2eb96c293ac404ca4fd50d1b303220, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+  - name: head
+    optional: 1
+    pieces:
+    - name: 10gallon
+      piece: jin_hed_10gallon
+      common: 1
+      prefab: {fileID: 7396858943720575687, guid: de9c336710e19d64a9e4179f00f69117, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Baby Hat
+      piece: jin_hed_baby_hat
+      common: 1
+      prefab: {fileID: 2066324663065380621, guid: 520ee08ee4f572344b8975f65c2bdfae, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Bandana
+      piece: jin_hed_bandana
+      common: 1
+      prefab: {fileID: 313489944952500841, guid: 79b27aef89be73d48acef23622c3c67c, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Bret
+      piece: jin_hed_bret
+      common: 1
+      prefab: {fileID: 3988161115471392724, guid: 29280bd1ad148a6409440bf5f1948cb5, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 2076297507469526333, guid: fd15a7bfce6043c469742de90543f250, type: 3}
+      cloth: []
+    - name: Cap
+      piece: jin_hed_cap
+      common: 1
+      prefab: {fileID: 2109154327939574219, guid: b41f23991e4aedc4b9cd080d96581bcf, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Casquette
+      piece: jin_hed_casquette
+      common: 1
+      prefab: {fileID: 3425904417346396318, guid: eca450176b0e422469dee8be9b1b8d11, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Felthat
+      piece: jin_hed_felthat
+      common: 1
+      prefab: {fileID: 6383012274863192091, guid: 3890ef3671ecd104b818d7e3671ce67a, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Hachimaki
+      piece: jin_hed_hachimaki
+      common: 1
+      prefab: {fileID: 4100371958733657315, guid: 311e7164df23d9d4c827829d0da3f89f, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 1601249422671081137, guid: f36c73c08b0202f4ba8a0dda0d4e0ab6, type: 3}
+      cloth: []
+    - name: Hachimaki s
+      piece: jin_hed_hachimaki_s
+      common: 1
+      prefab: {fileID: 6574123159441552725, guid: 58118a2b66cf1df42bba48afd5923150, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 1601249422671081137, guid: f36c73c08b0202f4ba8a0dda0d4e0ab6, type: 3}
+      cloth: []
+    - name: Hall Hat
+      piece: jin_hed_hall_hat
+      common: 1
+      prefab: {fileID: 1219449296304278987, guid: bd02507e09a7007429ef91323f2ddec2, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Hunting
+      piece: jin_hed_hunting
+      common: 1
+      prefab: {fileID: 805092570111438788, guid: b501959cdbc75a143bfd4156b5553637, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 2076297507469526333, guid: fd15a7bfce6043c469742de90543f250, type: 3}
+      cloth: []
+    - name: Kingcrown
+      piece: jin_hed_kingcrown
+      common: 1
+      prefab: {fileID: 3041226911889787559, guid: 390f4d40fe8305b439596dd279415d8d, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 1687812589796977670, guid: fc574699f737d234786e11312dbe2338, type: 3}
+      cloth: []
+    - name: Knitcap
+      piece: jin_hed_knitcap
+      common: 1
+      prefab: {fileID: 207571087280544855, guid: 9ef61493477d4c342b7d333d376e537a, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Korea Cap
+      piece: jin_hed_korea_cap
+      common: 1
+      prefab: {fileID: 3786198754201241840, guid: 6452e646e9b909647b1ca10170c12862, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Officerscap
+      piece: jin_hed_officerscap
+      common: 1
+      prefab: {fileID: 7387625706012512495, guid: 8ca1590330f5a20459e8628b18c96c8c, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4949642157371196515, guid: 171b459d6cf5baa47a404efa39b60c42, type: 3}
+      cloth: []
+    - name: Onimask
+      piece: jin_hed_onimask
+      common: 1
+      prefab: {fileID: 1995944360730957060, guid: 498bd2649a7c1b149992cca72bfec0eb, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 136831104535688269, guid: 0d0998836fbcfd1498661a4b036eb9ea, type: 3}
+      cloth: []
+    - name: Panda Hat
+      piece: jin_hed_panda_hat
+      common: 1
+      prefab: {fileID: 4275934987262479059, guid: 9da3445f9d6aa7149b9364cd202a90ed, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Roger Hat
+      piece: jin_hed_roger_hat
+      common: 1
+      prefab: {fileID: 7307612162841198109, guid: e0daf5b5848ec4045b55def438b21a75, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Santa Hat
+      piece: jin_hed_santa_hat
+      common: 1
+      prefab: {fileID: 2154214878037397115, guid: a3924e8daf582384e9bec2bf6c24c6f9, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Silkhat
+      piece: jin_hed_silkhat
+      common: 1
+      prefab: {fileID: 3659044444530087162, guid: 008e08115af3ed144b0a353cd49b1cc5, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Witch Hat
+      piece: jin_hed_witch_hat
+      common: 1
+      prefab: {fileID: 5283022278655637603, guid: 870ddabc6c8bfd14a95d007e4efde7c3, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 4514642658013673772, guid: a4de9875ed755254c9d4f8bd6b6a9e78, type: 3}
+      cloth: []
+    - name: Yamasa f
+      piece: jin_hed_yamasa_f
+      common: 1
+      prefab: {fileID: 5790207852335768238, guid: 3f01dee79e614bf40bfc1cce447293e3, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 1761062293261751554, guid: 0c350496329ae3e49a631a1d636c7f3b, type: 3}
+      cloth: []
+    - name: Yamasa m
+      piece: jin_hed_yamasa_m
+      common: 1
+      prefab: {fileID: 2412957103381172556, guid: 0c2fac59cf7841744921d50ef906b8b6, type: 3}
+      dependencyBase: jin_har_1p
+      dependency: {fileID: 1761062293261751554, guid: 0c350496329ae3e49a631a1d636c7f3b, type: 3}
+      cloth: []
+  - name: glasses
+    optional: 1
+    pieces:
+    - name: Evil Eyes
+      piece: jin_gla_evil_eyes_IA
+      common: 0
+      prefab: {fileID: 2660149149783436820, guid: a9399bd9c36c6544c813da7495972642, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: 3d
+      piece: jin_gla_3d
+      common: 1
+      prefab: {fileID: 1332849698841931689, guid: 8b6854ca255ded54b8ce5b8de908cd3e, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blind
+      piece: jin_gla_blind
+      common: 1
+      prefab: {fileID: 6086392416502906059, guid: 3ae88a4fc0472d24f9a52b1a19abdaa5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Blow
+      piece: jin_gla_blow
+      common: 1
+      prefab: {fileID: 6707276474393631494, guid: a0139fdbbe65a3f42ade78cc85b299e3, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb
+      piece: jin_gla_celeb
+      common: 1
+      prefab: {fileID: 6764498765187816680, guid: a55648ae3fcb7a84991bdd2545da0a70, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Celeb Big Huge
+      piece: jin_gla_celeb_big_huge
+      common: 1
+      prefab: {fileID: 8905481303383499457, guid: 1e7fa293ef8b70d4a9226c49bc8dcbf0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Boston
+      piece: jin_gla_cell_boston
+      common: 1
+      prefab: {fileID: 2729981429886709595, guid: 1bb9b194005949e4b8232938017d51a5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Oval
+      piece: jin_gla_cell_oval
+      common: 1
+      prefab: {fileID: 4560079389964130746, guid: 082ee53760353cc4bad20b3a81e017c9, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq
+      piece: jin_gla_cell_sq
+      common: 1
+      prefab: {fileID: 4360710977366179408, guid: b04267e3c02f9874d9ffc8a0d8fb2bd0, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Cell Sq Sungl
+      piece: jin_gla_cell_sq_sungl
+      common: 1
+      prefab: {fileID: 7348136683399107219, guid: aadbfe3db0cf68643af3835e39be0da2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Club
+      piece: jin_gla_club
+      common: 1
+      prefab: {fileID: 3420742854401791732, guid: 84bf71264e682ac44a44736ac3c361fb, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Count
+      piece: jin_gla_count
+      common: 1
+      prefab: {fileID: 4683261473624701586, guid: 0b2cd88629801e049a482b58111a5498, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Eyes
+      piece: jin_gla_eyes
+      common: 1
+      prefab: {fileID: 6404207529753119464, guid: 88ad7c65ca5e5ab47a08c48639ef8715, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Higeuncle
+      piece: jin_gla_higeuncle
+      common: 1
+      prefab: {fileID: 6626038905296592591, guid: 8acc3033d2fdac247937eb1edea29722, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Metal Oval
+      piece: jin_gla_metal_oval
+      common: 1
+      prefab: {fileID: 7011218204951152824, guid: 4278d3c967d758647bd30a810d38917a, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Nose
+      piece: jin_gla_nose
+      common: 1
+      prefab: {fileID: 4161978092788355401, guid: cdb8206c85cf1fc4f9b080ecbefe1475, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Polycarbonate
+      piece: jin_gla_polycarbonate
+      common: 1
+      prefab: {fileID: 4530546307587024389, guid: e21b21ec47582204e982ef20936f6723, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Retro
+      piece: jin_gla_retro
+      common: 1
+      prefab: {fileID: 4098202895998477119, guid: e83028a977b16624fabe875489eff9f5, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Rimless
+      piece: jin_gla_rimless
+      common: 1
+      prefab: {fileID: 718230258049442167, guid: f8b1c835ee0459e488decf0e988fc9ce, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round
+      piece: jin_gla_round
+      common: 1
+      prefab: {fileID: 5515757030680671966, guid: 0df0b1686dda49e4191e45a3d78652f7, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Round Sunglass
+      piece: jin_gla_round_sunglass
+      common: 1
+      prefab: {fileID: 5952047840724202913, guid: 8772cefc386dcb34c881d00133ac383d, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shinframe
+      piece: jin_gla_shinframe
+      common: 1
+      prefab: {fileID: 2373709142897108279, guid: 2672e86f3c1a29742a13db56545ea4c2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Shootingglass
+      piece: jin_gla_shootingglass
+      common: 1
+      prefab: {fileID: 6960606616364785921, guid: bbc21fe5a84b88d47a44fcc781b88701, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Snorkel
+      piece: jin_gla_snorkel
+      common: 1
+      prefab: {fileID: 3704431438103231716, guid: 62a73180f331e2341b2ee097013a16cc, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Blow
+      piece: jin_gla_sports_blow
+      common: 1
+      prefab: {fileID: 6812482486173127589, guid: 1d08d49783e15c6439ab53e25348b858, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Sports Rimless
+      piece: jin_gla_sports_rimless
+      common: 1
+      prefab: {fileID: 7222604966090527673, guid: bc4f4a010f2f1a74a8f68bdb2c80a92c, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Star
+      piece: jin_gla_star
+      common: 1
+      prefab: {fileID: 8513066347169101870, guid: b2353e3ca8b9d884dbc52eb29d013da2, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teardrop
+      piece: jin_gla_teardrop
+      common: 1
+      prefab: {fileID: 4602210488603656597, guid: a40487ae117a160469c71da99ced1575, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Teeneyes
+      piece: jin_gla_teeneyes
+      common: 1
+      prefab: {fileID: 2747447712006412206, guid: e5afe45efa66b6a44b0f75ec3dc433c1, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Venetian
+      piece: jin_gla_venetian
+      common: 1
+      prefab: {fileID: 2712568817069700723, guid: 789a77fca35f5124e92d3731fda878ab, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Vortex
+      piece: jin_gla_vortex
+      common: 1
+      prefab: {fileID: 260583496584385477, guid: 4332aa6652e81ed4fb2fad4f6581d2ff, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington
+      piece: jin_gla_wellington
+      common: 1
+      prefab: {fileID: 1933546186310279904, guid: 9680d354451843a48b24e59639445bbf, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []
+    - name: Wellington Sungl
+      piece: jin_gla_wellington_sungl
+      common: 1
+      prefab: {fileID: 7872161453091536116, guid: 0aa34ab7aefc9f743bcd633c904a4ffd, type: 3}
+      dependencyBase: 
+      dependency: {fileID: 0}
+      cloth: []

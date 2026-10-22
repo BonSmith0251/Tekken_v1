@@ -8,8 +8,42 @@ using UnityEngine.Rendering;
 
 namespace Versus.Remaster.Editor
 {
+    [InitializeOnLoad]
     public static class JinCostumeImporter
     {
+        static JinCostumeImporter() { EditorApplication.update += Poll; }
+        static void Poll()
+        {
+            if (EditorApplication.isCompiling || EditorApplication.isPlayingOrWillChangePlaymode) return;
+            foreach (var character in Wardrobes)
+            {
+                string flag = "Temp/import-" + character.code + "-wardrobe";
+                if (!File.Exists(flag)) continue;
+                File.Delete(flag);
+                try { ImportWardrobe(character); } catch (Exception e) { Debug.LogException(e); File.WriteAllText(flag + "-error.txt", e.ToString()); }
+                return;
+            }
+        }
+        // Wardrobe characters: their outfit-set source (face skeleton, reused skin/face/outfit
+        // materials), the exported wardrobe source, the built output, and import options that
+        // match each character's own costume importer.
+        public sealed class WardrobeCharacter
+        {
+            public string code,costumeSource,costumeMaterials,face,wardrobeSource,output,asset,museum;
+            public bool weldTriangleSoup,localAnonymousBones;
+            public string[] doubleSided={"har_","cloth"};
+        }
+        public static readonly WardrobeCharacter[] Wardrobes={
+            new WardrobeCharacter {code="jin",costumeSource="Assets/Remaster/Editor/JinCostumeSource",costumeMaterials="Assets/Remaster/JinCostumes/Materials",face="jin_fac.json",
+                wardrobeSource="Assets/Remaster/Editor/JinWardrobeSource",output="Assets/Remaster/JinWardrobe",asset="Assets/Remaster/Wardrobe/JinWardrobe.asset",museum="Assets/Remaster/Museum/Jin.asset"},
+            new WardrobeCharacter {code="kaz",costumeSource="Assets/Remaster/Editor/KazuyaSource",costumeMaterials="Assets/Remaster/Kazuya/Materials",face="kaz_fac.json",
+                wardrobeSource="Assets/Remaster/Editor/KazuyaWardrobeSource",output="Assets/Remaster/KazuyaWardrobe",asset="Assets/Remaster/Wardrobe/KazuyaWardrobe.asset",museum="Assets/Remaster/Museum/Kazuya.asset"},
+            // Xiaoyu's importer welds triangle-soup sections, keeps anonymous transformN helpers
+            // local to their piece, and renders eyelashes and feathers double-sided.
+            new WardrobeCharacter {code="xia",costumeSource="Assets/Remaster/Editor/XiaoyuSource",costumeMaterials="Assets/Remaster/Xiaoyu/Materials",face="xia_fac.json",
+                wardrobeSource="Assets/Remaster/Editor/XiaoyuWardrobeSource",output="Assets/Remaster/XiaoyuWardrobe",asset="Assets/Remaster/Wardrobe/XiaoyuWardrobe.asset",museum="Assets/Remaster/Museum/Xiaoyu.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash","feather"}},
+        };
         [Serializable] class Bone { public string name; public int parent; public Vector3 position,scale; public Quaternion rotation; }
         [Serializable] class Section { public string material; public int[] triangles; }
         [Serializable] class Weight
@@ -22,10 +56,13 @@ namespace Versus.Remaster.Editor
         [Serializable] class Part { public Bone[] bones; public Vector3[] vertices; public Vector2[] uv; public Weight[] weights; public Section[] submeshes; }
         [Serializable] class UnityMaps { public string albedo,normal,surface,occlusion; public bool specular,cutout; }
         [Serializable] class MaterialEntry { public string name; public UnityMaps unity; }
-        [Serializable] class PieceEntry { public string name,path; public string[] materials; }
+        [Serializable] class PieceEntry { public string name,path; public string[] materials,cloth; }
         [Serializable] class CostumeEntry { public string name; public string[] pieces; }
         [Serializable] class Manifest { public CostumeEntry[] costumes; public PieceEntry[] pieceEntries; public MaterialEntry[] materialEntries; }
+        [Serializable] class WardrobeEntry { public string piece,slot,owner,item,name,dependency,dependencyBase; }
+        [Serializable] class WardrobeManifest { public WardrobeEntry[] wardrobe; public PieceEntry[] pieceEntries; public MaterialEntry[] materialEntries; }
         const string Source="Assets/Remaster/Editor/JinCostumeSource";
+        static readonly string[] WardrobeSlots={"upper","lower","hair","head","glasses"};
         const string Output="Assets/Remaster/JinCostumes";
 
         static Texture2D Texture(string path,bool normal=false,bool color=false)
@@ -39,9 +76,9 @@ namespace Versus.Remaster.Editor
             return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
         }
         static string Safe(string value)=>new string(value.Select(c=>char.IsLetterOrDigit(c)?c:'_').ToArray());
-        static Material BuildMaterial(MaterialEntry entry)
+        static Material BuildMaterial(MaterialEntry entry,string output=Output)
         {
-            string path=Output+"/Materials/"+Safe(entry.name)+".mat";
+            string path=output+"/Materials/"+Safe(entry.name)+".mat";
             var mat=AssetDatabase.LoadAssetAtPath<Material>(path);
             Shader shader=Shader.Find(entry.unity.specular?"Standard (Specular setup)":"Standard");
             if(!mat){mat=new Material(shader);AssetDatabase.CreateAsset(mat,path);}else mat.shader=shader;
@@ -57,37 +94,65 @@ namespace Versus.Remaster.Editor
             var ao=Texture(entry.unity.occlusion);if(ao){mat.SetTexture("_OcclusionMap",ao);mat.SetFloat("_OcclusionStrength",1);}
             if(entry.unity.cutout)
             {mat.SetFloat("_Mode",1);mat.SetFloat("_Cutoff",.25f);mat.EnableKeyword("_ALPHATEST_ON");mat.SetOverrideTag("RenderType","TransparentCutout");mat.renderQueue=(int)RenderQueue.AlphaTest;}
-            HdrpProjectSetup.ConvertMaterial(mat);EditorUtility.SetDirty(mat);return mat;
+            HdrpProjectSetup.ConvertMaterial(mat);if(HdrpProjectSetup.IsEyeShadow(mat))HdrpProjectSetup.MakeEyeShadowTransparent(mat);EditorUtility.SetDirty(mat);return mat;
         }
-        static void AddPart(GameObject root,Transform skeleton,Dictionary<string,Transform> boneMap,
-                            PieceEntry entry,Dictionary<string,Material> materials,string costume)
+        // localPrefix: when set, anonymous DCC helpers (transformN) stay local to this piece under
+        // that prefix, because two pieces can share a helper name with different parents.
+        static Transform[] AddBones(Transform skeleton,Dictionary<string,Transform> boneMap,Part part,string localPrefix=null)
         {
-            var part=JsonUtility.FromJson<Part>(File.ReadAllText(entry.path));var bones=new Transform[part.bones.Length];
+            var bones=new Transform[part.bones.Length];
             for(int i=0;i<bones.Length;i++)
             {
                 var source=part.bones[i];
-                if(!boneMap.TryGetValue(source.name,out var bone))
+                bool local=localPrefix!=null && System.Text.RegularExpressions.Regex.IsMatch(source.name,@"^transform\d+$",System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                if(local || !boneMap.TryGetValue(source.name,out var bone))
                 {
-                    bone=new GameObject(source.name).transform;
+                    bone=new GameObject(local?localPrefix+"_"+source.name:source.name).transform;
                     bone.SetParent(source.parent<0?skeleton:bones[source.parent],false);
-                    bone.localPosition=source.position;bone.localRotation=source.rotation;bone.localScale=source.scale;boneMap.Add(source.name,bone);
+                    bone.localPosition=source.position;bone.localRotation=source.rotation;bone.localScale=source.scale;if(!local)boneMap.Add(source.name,bone);
                 }
                 bones[i]=bone;
             }
+            return bones;
+        }
+        // Some sections store unshared triangles, which RecalculateNormals shades flat. Share
+        // corners with identical position, UV and skin weights in those sections only.
+        static void WeldTriangleSoup(Part part,Section[] sections)
+        {
+            foreach(var section in sections)
+            {
+                var triangles=section.triangles;
+                if(triangles.Length==0 || triangles.Distinct().Count()<triangles.Length)continue;
+                var first=new Dictionary<string,int>();
+                for(int i=0;i<triangles.Length;i++)
+                {
+                    int v=triangles[i];var p=part.vertices[v];var t=part.uv[v];var w=part.weights[v];
+                    string key=string.Join(",",new[]{p.x,p.y,p.z,t.x,t.y,w.weight0,w.weight1,w.weight2,w.weight3}.Select(x=>Mathf.RoundToInt(x*100000)))+"|"+w.boneIndex0+","+w.boneIndex1+","+w.boneIndex2+","+w.boneIndex3;
+                    if(first.TryGetValue(key,out int shared))triangles[i]=shared;else first.Add(key,v);
+                }
+            }
+        }
+        static void AddPart(GameObject root,Transform skeleton,Dictionary<string,Transform> boneMap,
+                            PieceEntry entry,Dictionary<string,Material> materials,string costume,string output=Output,WardrobeCharacter options=null)
+        {
+            var part=JsonUtility.FromJson<Part>(File.ReadAllText(entry.path));var bones=AddBones(skeleton,boneMap,part,options!=null && options.localAnonymousBones?entry.name:null);
             var mesh=new Mesh {name=entry.name,indexFormat=IndexFormat.UInt32};mesh.vertices=part.vertices;mesh.uv=part.uv;
             mesh.boneWeights=part.weights.Select(x=>x.Value).ToArray();
-            var sections=part.submeshes.Where(x=>!x.material.Contains("Eye_ADD") && x.material!="MI_CH_tear").ToArray();mesh.subMeshCount=sections.Length;
+            // Sections with an empty material slot in the source (exported as MI_unassigned__*) are not drawn in game.
+            var sections=part.submeshes.Where(x=>!x.material.Contains("Eye_ADD") && x.material!="MI_CH_tear" && !x.material.StartsWith("MI_unassigned__")).ToArray();mesh.subMeshCount=sections.Length;
+            if(options!=null && options.weldTriangleSoup)WeldTriangleSoup(part,sections);
+            var doubleSided=options!=null?options.doubleSided:new[]{"har_","cloth"};
             var doubled=new Dictionary<int,int[]>();
             for(int i=0;i<sections.Length;i++)
             {
                 var indices=(int[])sections[i].triangles.Clone();for(int t=0;t<indices.Length;t+=3)(indices[t],indices[t+2])=(indices[t+2],indices[t]);
                 mesh.SetTriangles(indices,i);
-                if(sections[i].material.Contains("har_") || sections[i].material.Contains("cloth"))
+                if(doubleSided.Any(token=>sections[i].material.IndexOf(token,StringComparison.OrdinalIgnoreCase)>=0))
                 {var both=new int[indices.Length*2];Array.Copy(indices,both,indices.Length);for(int t=0;t<indices.Length;t+=3){both[indices.Length+t]=indices[t+2];both[indices.Length+t+1]=indices[t+1];both[indices.Length+t+2]=indices[t];}doubled[i]=both;}
             }
             mesh.bindposes=bones.Select(x=>x.worldToLocalMatrix*root.transform.localToWorldMatrix).ToArray();mesh.RecalculateNormals();mesh.RecalculateTangents();mesh.RecalculateBounds();
             foreach(var pair in doubled)mesh.SetTriangles(pair.Value,pair.Key);
-            string meshPath=Output+"/Meshes/"+Safe(costume)+"_"+Safe(entry.name)+".asset";
+            string meshPath=output+"/Meshes/"+Safe(costume)+"_"+Safe(entry.name)+".asset";
             var existing=AssetDatabase.LoadAssetAtPath<Mesh>(meshPath);
             if(existing){EditorUtility.CopySerialized(mesh,existing);UnityEngine.Object.DestroyImmediate(mesh);mesh=existing;}else AssetDatabase.CreateAsset(mesh,meshPath);
             var skin=new GameObject(entry.name).AddComponent<SkinnedMeshRenderer>();skin.transform.SetParent(root.transform,false);skin.sharedMesh=mesh;skin.bones=bones;skin.rootBone=boneMap["BASE"];
@@ -99,7 +164,7 @@ namespace Versus.Remaster.Editor
             Directory.CreateDirectory(Output+"/Materials");Directory.CreateDirectory(Output+"/Meshes");Directory.CreateDirectory(Output+"/Prefabs");AssetDatabase.Refresh();
             var manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(Source+"/manifest.json"));
             if(manifest.costumes.Length!=7 || manifest.pieceEntries.Length!=16 || manifest.materialEntries.Length!=57)throw new Exception("Unexpected Jin costume inventory");
-            var materials=manifest.materialEntries.ToDictionary(x=>x.name,BuildMaterial);var pieces=manifest.pieceEntries.ToDictionary(x=>x.name);
+            var materials=manifest.materialEntries.ToDictionary(x=>x.name,x=>BuildMaterial(x));var pieces=manifest.pieceEntries.ToDictionary(x=>x.name);
             foreach(var costume in manifest.costumes)
             {
                 var root=new GameObject("Jin Kazama - "+costume.name);var skeleton=new GameObject("Skeleton").transform;skeleton.SetParent(root.transform,false);
@@ -108,6 +173,67 @@ namespace Versus.Remaster.Editor
             }
             AssetDatabase.SaveAssets();
             File.WriteAllText("Validation/jin-costumes.json","{\"passed\":true,\"costumes\":7,\"pieces\":16,\"materials\":57}");
+        }
+        [MenuItem("Remaster/Rebuild Jin wardrobe")]static void ImportJinWardrobe()=>ImportWardrobe(Wardrobes[0]);
+        [MenuItem("Remaster/Rebuild Kazuya wardrobe")]static void ImportKazuyaWardrobe()=>ImportWardrobe(Wardrobes[1]);
+        [MenuItem("Remaster/Rebuild Xiaoyu wardrobe")]static void ImportXiaoyuWardrobe()=>ImportWardrobe(Wardrobes[2]);
+        // One prefab per wearable piece; the wardrobe scene dresses the skeleton with them by bone name.
+        public static void ImportWardrobe(WardrobeCharacter character)
+        {
+            string WardrobeOutput=character.output,WardrobeAsset=character.asset;
+            foreach(string folder in new[]{"/Materials","/Meshes","/Prefabs"})Directory.CreateDirectory(WardrobeOutput+folder);AssetDatabase.Refresh();
+            var manifest=JsonUtility.FromJson<WardrobeManifest>(File.ReadAllText(character.wardrobeSource+"/manifest.json"));
+            var costumeMaterials=JsonUtility.FromJson<Manifest>(File.ReadAllText(character.costumeSource+"/manifest.json")).materialEntries.Select(x=>x.name);
+            var materials=manifest.materialEntries.ToDictionary(x=>x.name,x=>BuildMaterial(x,WardrobeOutput));
+            // Glasses lens opacity lives in the source parent materials, not the textures: use a fixed clear or tinted lens.
+            foreach(var pair in materials)
+            {
+                string name=pair.Key.ToLowerInvariant();
+                if(name.Contains("gla_") && (name.Contains("_lens") || name.Contains("_trans")))
+                    HdrpProjectSetup.MakeTransparent(pair.Value,name.Contains("sun")?new Color(.06f,.06f,.07f,.75f):new Color(.85f,.88f,.9f,.2f));
+            }
+            // Skin, face and outfit materials are shared with the character's outfit sets.
+            foreach(string name in costumeMaterials)if(!materials.ContainsKey(name))
+                materials[name]=AssetDatabase.LoadAssetAtPath<Material>(character.costumeMaterials+"/"+Safe(name)+".mat");
+            var pieces=manifest.pieceEntries.ToDictionary(x=>x.name);int built=0;
+            // Some pieces only carry the bones they skin to; the face skeleton supplies BASE and the full chain.
+            var faceSkeleton=JsonUtility.FromJson<Part>(File.ReadAllText(character.costumeSource+"/"+character.face));
+            foreach(var stale in UnityEngine.Object.FindObjectsByType<Transform>(FindObjectsInactive.Include,FindObjectsSortMode.None).Where(t=>!t.parent && t.name.EndsWith(" wardrobe piece") ).ToArray())
+                UnityEngine.Object.DestroyImmediate(stale.gameObject);
+            foreach(var item in manifest.wardrobe)
+            {
+                var piece=pieces[item.piece];var missing=piece.materials.Where(m=>!materials.TryGetValue(m,out var mat)||!mat).ToArray();
+                if(missing.Length>0)throw new Exception("Wardrobe piece "+item.piece+" is missing materials: "+string.Join(", ",missing));
+                var root=new GameObject(item.piece+" wardrobe piece");
+                try
+                {
+                    var skeleton=new GameObject("Skeleton").transform;skeleton.SetParent(root.transform,false);
+                    // Common items spell shared bones in other cases (Base, HEAD); Unreal matches them case-insensitively.
+                    var bones=new Dictionary<string,Transform>(StringComparer.OrdinalIgnoreCase);AddBones(skeleton,bones,faceSkeleton,character.localAnonymousBones?Path.GetFileNameWithoutExtension(character.face):null);
+                    AddPart(root,skeleton,bones,piece,materials,"wardrobe",WardrobeOutput,character);
+                    PrefabUtility.SaveAsPrefabAsset(root,WardrobeOutput+"/Prefabs/"+Safe(item.piece)+".prefab");built++;
+                }
+                finally{UnityEngine.Object.DestroyImmediate(root);}
+            }
+            AssetDatabase.SaveAssets();
+            Directory.CreateDirectory(Path.GetDirectoryName(WardrobeAsset));AssetDatabase.Refresh();
+            var wardrobe=AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(WardrobeAsset);
+            if(!wardrobe){wardrobe=ScriptableObject.CreateInstance<CharacterWardrobe>();AssetDatabase.CreateAsset(wardrobe,WardrobeAsset);}
+            wardrobe.character=AssetDatabase.LoadAssetAtPath<MuseumCharacter>(character.museum);
+            wardrobe.slots=LoadWardrobe(manifest,manifest.pieceEntries.ToDictionary(x=>x.name),WardrobeOutput);EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
+            var counts=WardrobeSlots.Concat(new[]{"variant"}).Select(s=>"\""+s+"\":"+manifest.wardrobe.Count(w=>w.slot==s));
+            File.WriteAllText("Validation/"+character.code+"-wardrobe.json","{\"passed\":true,\"pieces\":"+built+","+string.Join(",",counts)+",\"materials\":"+manifest.materialEntries.Length+",\"wardrobeAsset\":\""+WardrobeAsset+"\"}");
+            Debug.Log(character.code+" wardrobe imported: "+built+" pieces");
+        }
+        static CharacterWardrobe.Slot[] LoadWardrobe(WardrobeManifest manifest,Dictionary<string,PieceEntry> pieces,string WardrobeOutput)
+        {
+            GameObject Prefab(string piece)=>string.IsNullOrEmpty(piece)?null:AssetDatabase.LoadAssetAtPath<GameObject>(WardrobeOutput+"/Prefabs/"+Safe(piece)+".prefab");
+            // The character's own items first, then the common customization items, each alphabetical.
+            // Head items and glasses may be left off; variants are only worn under head items.
+            return WardrobeSlots.Select(slot=>new CharacterWardrobe.Slot {name=slot,optional=slot=="head"||slot=="glasses",pieces=manifest.wardrobe.Where(w=>w.slot==slot)
+                .OrderBy(w=>w.owner=="cmn"?1:0).ThenBy(w=>w.name,StringComparer.OrdinalIgnoreCase)
+                .Select(w=>new CharacterWardrobe.Piece {name=w.name,piece=w.piece,common=w.owner=="cmn",prefab=Prefab(w.piece),
+                    dependencyBase=w.dependencyBase,dependency=Prefab(w.dependency),cloth=pieces[w.piece].cloth??new string[0]}).ToArray()}).ToArray();
         }
         public static MuseumCharacter.Costume[] LoadCostumes()
         {
