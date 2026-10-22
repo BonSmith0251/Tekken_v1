@@ -1,0 +1,11 @@
+JIN HAND POSE CORRECTION
+Replaced the uniform local-Z finger rotation with mirrored palmward hinges,
+converted from each hand's bind basis into each finger joint's local basis.
+Finger joint curls are 55/75/45 degrees; thumbs use 20/25/15 degrees.
+Poses are cached from the bind pose and assigned absolutely every render.
+The shared JinRig implementation also corrects the same axes on Kazuya.
+These are procedural hand poses, not recovered native finger animation.
+Verification: runtime C# compilation passed; bind-skeleton forward kinematics
+checked all eight finger tips curl 5.3-7.0 cm palmward with negligible sideways
+movement. Both Jin hands were captured in live Unity Play mode during his
+entrance: L_Hand.png and R_Hand.png.

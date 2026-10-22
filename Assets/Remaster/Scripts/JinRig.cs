@@ -16,6 +16,8 @@ namespace Versus.Remaster
         Transform[] bones;
         Vector3[] positions;
         Quaternion[] rotations;
+        Quaternion[] fingerPoses;
+        bool[] fingerJoints;
         readonly Dictionary<string, Transform> byName = new Dictionary<string, Transform>();
         Transform pelvis;
         Material[] materials;
@@ -32,6 +34,7 @@ namespace Versus.Remaster
             {
                 byName[bones[i].name] = bones[i]; positions[i] = bones[i].localPosition; rotations[i] = bones[i].localRotation;
             }
+            CacheFingerPoses();
             pelvis = byName["BASE"];
             var allMaterials = new List<Material>();
             foreach (var skin in GetComponentsInChildren<SkinnedMeshRenderer>()) allMaterials.AddRange(skin.materials);
@@ -71,17 +74,45 @@ namespace Versus.Remaster
             if (f.attack == 3) rightFoot = Vector3.Lerp(rightFoot, new Vector3(.12f, 1.1f, 1.15f), action);
             Solve("L_UpLeg", "L_Leg", "L_Foot", leftFoot, new Vector3(-.3f, .6f, 1));
             Solve("R_UpLeg", "R_Leg", "R_Foot", rightFoot, new Vector3(.3f, .6f, 1));
-            // Close the hands without changing the imported bind hierarchy.
-            foreach (var bone in bones)
-                if ((bone.name.Contains("Index") || bone.name.Contains("Middle") || bone.name.Contains("Ring") || bone.name.Contains("Pinky")) &&
-                    (bone.name.EndsWith("1") || bone.name.EndsWith("2") || bone.name.EndsWith("3")))
-                    bone.localRotation *= Quaternion.Euler(0, 0, 65);
+            // Absolute bind-relative poses: no sideways curl or accumulated rotation.
+            for (int i = 0; i < bones.Length; i++)
+                if (fingerJoints[i]) bones[i].localRotation = fingerPoses[i];
             if (f.health == 0)
             { transform.position += Vector3.up * .18f; transform.rotation *= Quaternion.Euler(-83, 0, 0); }
             for (int i = 0; i < materials.Length; i++) materials[i].color = f.flash > 0 ? Color.Lerp(baseColors[i], Color.white, .75f) : baseColors[i];
             if(actionMotion)actionMotion.Apply(f, f.attack >= 0 ? fighterMoves[f.attack] : null, clock, moving);
             else if(retarget)retarget.Apply(f,rules,clock,moving);
         }
+        void CacheFingerPoses()
+        {
+            fingerPoses = new Quaternion[bones.Length];
+            fingerJoints = new bool[bones.Length];
+            for (int i = 0; i < bones.Length; i++)
+            {
+                string name = bones[i].name;
+                bool left = name.StartsWith("L_", StringComparison.Ordinal);
+                if (!left && !name.StartsWith("R_", StringComparison.Ordinal)) continue;
+                string digit = name.Substring(2);
+                if (digit.Length < 2) continue;
+                int joint = digit[digit.Length - 1] - '0';
+                if (joint < 1 || joint > 3) continue;
+                digit = digit.Substring(0, digit.Length - 1);
+                bool thumb = digit == "Thumb";
+                if (!thumb && digit != "Index" && digit != "Middle" && digit != "Ring" && digit != "Pinky") continue;
+                if (!byName.TryGetValue(left ? "L_Hand" : "R_Hand", out var hand)) continue;
+                // Fingers extend along local -X and lie in the hand's XY plane.
+                // Curl toward palm +Z on the left, -Z on the right, not sideways
+                // around Z. Convert the hand hinge into each joint's bind basis;
+                // this also respects the thumb's different bind orientation.
+                Vector3 hinge = bones[i].InverseTransformDirection(
+                    hand.TransformDirection(left ? Vector3.up : Vector3.down));
+                float angle = thumb ? (joint == 1 ? 20 : joint == 2 ? 25 : 15)
+                    : (joint == 1 ? 55 : joint == 2 ? 75 : 45);
+                fingerJoints[i] = true;
+                fingerPoses[i] = rotations[i] * Quaternion.AngleAxis(angle, hinge.normalized);
+            }
+        }
+
         void Solve(string upperName, string middleName, string endName, Vector3 localTarget, Vector3 localPole)
         {
             Transform upper = byName[upperName], middle = byName[middleName], end = byName[endName];
