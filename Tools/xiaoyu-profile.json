@@ -1,0 +1,41 @@
+{
+  "characterCode": "xia",
+  "displayName": "Ling Xiaoyu",
+  "animationPrefix": "fu",
+  "stanceMoveId": 1428,
+  "stanceAnimation": "kmfu_kamae(DVD)",
+  "moveset": "decrypted/tkdata/mothead/bin/xiamot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/xiarotsm.arc",
+  "archiveSha256": "9a1acc9c7c54c7751921f6c4fb32552b69bf328329cb42cab049a9cf335be698",
+  "targetRig": "Assets/Remaster/Editor/XiaoyuSource/target-rig.json",
+  "targetRigSha256": "7373addf718f32625c19dcc3a481bfd11429c341ffef8c324cccec7230a56b64",
+  "bodyBoneCount": 19,
+  "bodySourceChannels": 23,
+  "bindOrientationDeltaDegreesFromReference": 0.00010585416209144744,
+  "meshPositionBasis": "UE centimeters (x,y,z) -> Unity meters (-x,z,y)",
+  "bodyConversion": "Native 64 spherical axis-angle converted through C8 and the reference rig into Xiaoyu's extracted bind orientations; target's original body scaling and skin weights retained.",
+  "sharedClips": "Only reuse common-bank body clips with identical source SHA256 and verified compatible body bind orientations.",
+  "skinInfluences": "Four strongest original normalized influences per vertex; helper/finger/face influences are preserved.",
+  "costumes": ["Default 1P", "Classic", "Formal", "School Uniform"],
+  "moveRecords": 2437,
+  "uniqueBodyClips": 1462,
+  "cancelBranches": 9020,
+  "entranceMoves": [2428,2429,2430,2431,2432],
+  "victoryMoves": [2433,2434,2435,2436],
+  "stagingSecondary": "Native 19-channel hand tracks on all nine takes; native 90-channel facial tracks on eight takes.",
+  "stagingCameras": "Eight original camera resources; optional museum playback uses the existing frontal framing adaptation.",
+  "secondaryPhysics": {
+    "implementation": "Adapted Unity cloth plus damped bone springs; not the original Unreal solver.",
+    "scope": "All four imported costumes: hair chains, feathers, tassels and garment hems; body, face and hands retain their animation bindings.",
+    "cloth": "Pinned attachment areas, bounded hem motion, torso/thigh/calf capsule collisions, bending stiffness 0.75 and damping 0.5.",
+    "seeking": "Reset bone-spring history and clear transform-induced cloth inertia on timeline jumps; retain simulation through continuous loops.",
+    "rigRepair": "Anonymous transformN helpers are scoped to each mesh piece so hair and clothing cannot accidentally share unrelated parents."
+  },
+  "fallbacks": [
+    "fu_w01_y has no independent source camera/face event; uses museum orbit camera and bind face.",
+    "Combat clips currently apply body channels; action-specific combat finger/facial tracks are not integrated.",
+    "Palette/normal/roughness/specular/AO maps are adapted to HDRP; renderer appearance is not an exact original-engine reproduction.",
+    "Additional source channels for attachments are retained in extracted native clips but are not played by the 19-bone body sampler."
+  ],
+  "originalGameVisualComparison": false
+}
