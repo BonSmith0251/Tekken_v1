@@ -2,6 +2,18 @@ using UnityEngine;
 
 namespace Versus.Remaster
 {
+    public static class KazuyaEntranceTimeline
+    {
+        // Source shot edits repeat 47..57 and 88..96. Join 46->58 and 87->97
+        // to keep the descent advancing across both cuts, including fractional poses.
+        public const int FirstCut = 47, FirstOverlap = 11;
+        public const int SecondCut = 77, SecondOverlap = 9;
+        public const int RemovedFrames = FirstOverlap + SecondOverlap;
+        public static int SourceFrame(int frame) => frame +
+            (frame >= FirstCut ? FirstOverlap : 0) +
+            (frame >= SecondCut ? SecondOverlap : 0);
+    }
+
     // Native entrance variants and a round-start transition calibrated to the reference video.
     public sealed class LocalVersusEntrance
     {
@@ -60,10 +72,11 @@ namespace Versus.Remaster
             kazuyaIntro = System.Array.FindIndex(kazuyaCharacter.actions, a => a.moveId == 2326 && a.motion);
             if (kazuyaIntro < 0)
                 throw new System.InvalidOperationException("Kazuya entrance requires kz_s03 (move 2326).");
-            // Use the complete imported sequence at its native 60 fps, not a fixed idle beat.
+            // Keep native assets intact; omit repeated descent frames in presentation.
             kazuyaIntroFrames = System.BitConverter.ToInt32(kazuyaCharacter.actions[kazuyaIntro].motion.bytes, 4);
             jinCamera = new EntranceCameraTrack("Jin_s02", 2220, jinIntroFrames);
             kazuyaCamera = new EntranceCameraTrack("Kazuya_s03", 2326, kazuyaIntroFrames);
+            kazuyaIntroFrames -= KazuyaEntranceTimeline.RemovedFrames;
             gameplayFov = camera.fieldOfView;
             lens = sharedLens;
             Current = Shot.PlayerOne;
@@ -76,7 +89,7 @@ namespace Versus.Remaster
             else if (jinMotion) jinMotion.SetPresentation(-1, 0, false);
 
             if (kazuyaMotion && Current == Shot.PlayerOne)
-                kazuyaMotion.SetPresentation(kazuyaIntro, SampleFrame, false, true);
+                kazuyaMotion.SetPresentation(kazuyaIntro, SampleFrame, false, true, KazuyaEntranceTimeline.SourceFrame);
             else if (kazuyaMotion) kazuyaMotion.SetPresentation(-1, 0, false);
         }
 
@@ -135,12 +148,13 @@ namespace Versus.Remaster
                 }
                 Bounds close = SubjectBounds(kazuyaHead, null);
                 Bounds wide = SubjectBounds(kazuyaHead, kazuyaShotBones);
-                float closeBlend = Mathf.SmoothStep(0, 1, (SampleFrame - 110) / 30f);
+                float sourceFrame = KazuyaEntranceTimeline.SourceFrame(Frame) + (SampleFrame - Frame);
+                float closeBlend = Mathf.SmoothStep(0, 1, (sourceFrame - 110) / 30f);
                 Bounds focus = Frame < 47 ? close : new Bounds(
                     Vector3.Lerp(wide.center, close.center, closeBlend),
                     Vector3.Lerp(wide.size, close.size, closeBlend));
                 kazuyaCamera.Apply(cameraRig, playerOne, SampleFrame, lens, focus,
-                    kazuyaFront);
+                    kazuyaFront, KazuyaEntranceTimeline.SourceFrame);
             }
             else if (Current == Shot.PlayerTwo)
                 jinCamera.Apply(cameraRig, playerTwo, SampleFrame, lens, SubjectBounds(jinHead, null),

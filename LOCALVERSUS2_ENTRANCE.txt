@@ -1,3 +1,16 @@
+KAZUYA LANDING OVERLAP REPAIR
+Source motion rewinds at shot cuts: frame 46->47 rises from 4.404 m to
+5.420 m, and frame 87->88 rises from 1.021 m to 1.925 m. Presentation now
+omits repeated frames 47..57 and 88..96. The joins are 46->58 and 87->97,
+with downward root steps of 0.109 m and 0.113 m. Both body and camera use
+the same endpoint mapping, and joint poses ease over six frames at each
+join. Fractional interpolation never samples the removed frames.
+Kazuya now lasts 197 frames (3.283 s), 20 frames shorter; subsequent entrance
+and round phases advance accordingly. Original binary assets are unchanged.
+Compilation and source-data regression tests pass. Live playback could not
+be checked this session because Unity reported no active Editor license.
+Evidence: Validation/EntranceFraming/landing-stitch-check.json.
+
 FRONT VIEWS AND SMOOTH ENTRANCE SAMPLING
 Body poses and camera tracks now share fractional 60 Hz sample time. Camera
 position/rotation/FOV interpolate between samples, with hard cuts preserved at

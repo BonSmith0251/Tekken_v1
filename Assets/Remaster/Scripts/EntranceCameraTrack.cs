@@ -49,12 +49,18 @@ namespace Versus.Remaster
         static Vector3 RigBasis(Vector3 native) => new Vector3(-native.z, native.y, -native.x);
 
         public void Apply(Camera camera, Transform actor, float frame, EntranceCameraLens lens, Bounds focus,
-            Vector3 faceForward)
+            Vector3 faceForward, Func<int, int> frameMap = null)
         {
             float sample = Mathf.Clamp(frame, 0, Frames - 1);
             int f = (int)sample, next = Mathf.Min(f + 1, Frames - 1);
-            // Interpolate body and camera on the same clock, holding before an authored cut.
-            float blend = Array.IndexOf(cuts, next) >= 0 ? 0 : sample - f;
+            float blend = sample - f;
+            if (frameMap != null)
+            {
+                f = Mathf.Clamp(frameMap(f), 0, Frames - 1);
+                next = Mathf.Clamp(frameMap(next), 0, Frames - 1);
+            }
+            // A removed overlap is also a camera cut, never a sweep through discarded samples.
+            if (next > f + 1 || Array.IndexOf(cuts, next) >= 0) blend = 0;
             Vector3 nativePosition = actor.TransformPoint(Vector3.Lerp(positions[f], positions[next], blend));
             Quaternion rotation = Quaternion.Slerp(Quaternion.LookRotation(forwards[f], ups[f]),
                 Quaternion.LookRotation(forwards[next], ups[next]), blend);

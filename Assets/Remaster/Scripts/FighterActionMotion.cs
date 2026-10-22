@@ -15,17 +15,19 @@ namespace Versus.Remaster
         float presentationFrame;
         bool presentationLoops;
         bool presentationRootMotion;
+        Func<int, int> presentationFrameMap;
         float stateStart;
         public int PlayedActions { get; private set; }
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
 
-        public void SetPresentation(int action, float frame, bool loop, bool rootMotion = false)
+        public void SetPresentation(int action, float frame, bool loop, bool rootMotion = false, Func<int, int> frameMap = null)
         {
             presentationAction = action;
             presentationFrame = frame;
             presentationLoops = loop;
             presentationRootMotion = rootMotion;
+            presentationFrameMap = frameMap;
         }
 
         public void Initialize(FighterActionCatalog source)
@@ -85,12 +87,32 @@ namespace Versus.Remaster
                 : Mathf.Repeat((clock - stateStart) * 60, frames);
             int a = Mathf.Clamp((int)frame, 0, frames - 1), b = Mathf.Min(a + 1, frames - 1);
             float t = frame - a;
+            int stitchFrom = -1;
+            float stitchBlend = 1;
+            if (presentationAction >= 0 && presentationFrameMap != null)
+            {
+                // Ease joint rotations across edited shot joins; root translation keeps
+                // descending along the stitched trajectory without replaying the fall.
+                for (int cut = Mathf.Max(1, a - 5); cut <= a + 1; cut++)
+                    if (presentationFrameMap(cut) > presentationFrameMap(cut - 1) + 1)
+                    {
+                        stitchFrom = Mathf.Clamp(presentationFrameMap(cut - 1), 0, frames - 1);
+                        stitchBlend = Mathf.SmoothStep(0, 1, (frame - (cut - 1)) / 6f);
+                    }
+                // Map endpoints separately so interpolation never visits removed overlap frames.
+                a = Mathf.Clamp(presentationFrameMap(a), 0, frames - 1);
+                b = Mathf.Clamp(presentationFrameMap(b), 0, frames - 1);
+            }
             // Combat stays in place. Original entrance tracks retain root motion to match their cameras.
             Vector3 root = Vector3.Lerp(positions[a], positions[b], t);
             if (presentationAction < 0 || !presentationRootMotion) { root.x = 0; root.y = 0; }
             bones[0].localPosition = root;
             for (int i = 0; i < bones.Length; i++)
-                bones[i].localRotation = Quaternion.Slerp(rotations[a, i], rotations[b, i], t);
+                {
+                Quaternion pose = Quaternion.Slerp(rotations[a, i], rotations[b, i], t);
+                bones[i].localRotation = stitchFrom >= 0
+                    ? Quaternion.Slerp(rotations[stitchFrom, i], pose, stitchBlend) : pose;
+            }
         }
     }
 }
