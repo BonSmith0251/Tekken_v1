@@ -33,6 +33,7 @@ namespace Versus.Remaster
         readonly CpuPlayer[] cpu = new CpuPlayer[2];
         IFighterPresentation[] views;
         Camera cameraRig;
+        StagingRenderSettings renderSettings;
         EntranceCameraLens gameplayLens;
         // Read from the original game camera +0x39C during a user-confirmed normal fight.
         const float GameplayHorizontalFov = GameplayCameraFraming.HorizontalFov;
@@ -87,6 +88,20 @@ namespace Versus.Remaster
         Material impactMaterial, blockMaterial;
         GUIStyle text, title, small, button;
         readonly List<GameObject> hitEffects = new List<GameObject>();
+        // The original common battle effects (BP_CommonEffectManager roles). Which role plays when is
+        // native code in the original; here it follows the hit outcome, floor contact and Rage.
+        CascadeEffects effects;
+        // Striking points (hands, elbows, knees, feet, head), the struck body line (hip to head) and the
+        // bones Rage effects gather around, per fighter.
+        Transform[][] strikeBones, bodyBones, auraBones;
+        static readonly string[] StrikeBoneNames = { "L_Hand", "R_Hand", "L_ForeArm", "R_ForeArm", "L_Leg", "R_Leg", "L_Foot", "R_Foot", "Head" };
+        static readonly string[] BodyBoneNames = { "Hip", "Spine2", "Head" };
+        static readonly string[] AuraBoneNames = { "Hip", "Spine1", "Spine2", "Head", "L_Arm", "R_Arm", "L_ForeArm", "R_ForeArm",
+            "L_Hand", "R_Hand", "L_UpLeg", "R_UpLeg", "L_Leg", "R_Leg", "L_Foot", "R_Foot" };
+        // Not recovered: the original picks PierceFX natively; heavy clean hits use it here.
+        const int PierceDamage = 20;
+        readonly bool[] wasDowned = new bool[2], wasAirborne = new bool[2], wasRage = new bool[2];
+        readonly CascadeInstance[] rageAura = new CascadeInstance[2];
         static readonly Color Ink = new Color(.025f, .035f, .055f, .96f);
         static readonly Color Muted = new Color(.58f, .66f, .75f);
         static readonly Color Accent = new Color(.95f, .78f, .35f);
@@ -141,6 +156,14 @@ namespace Versus.Remaster
             for (int i = 0; i < 2; i++)
                 framingBones[i] = Array.FindAll(objects[i].GetComponentsInChildren<Transform>(),
                     t => Array.Exists(FramingBoneNames, n => string.Equals(n, t.name, StringComparison.OrdinalIgnoreCase)));
+            effects = CascadeEffects.Create(transform);
+            strikeBones = new Transform[2][]; bodyBones = new Transform[2][]; auraBones = new Transform[2][];
+            for (int i = 0; i < 2; i++)
+            {
+                strikeBones[i] = Bones(objects[i], StrikeBoneNames);
+                bodyBones[i] = Bones(objects[i], BodyBoneNames);
+                auraBones[i] = Bones(objects[i], AuraBoneNames);
+            }
             // Scene fighters that are not playing this match stay out of view.
             foreach (var unused in new[] { sceneJin, sceneKazuya })
                 if (unused && unused != objects[0] && unused != objects[1]) unused.SetActive(false);
@@ -167,6 +190,19 @@ namespace Versus.Remaster
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
         }
         struct FighterSetup { public string code, prefix; public MuseumCharacter actions; public Fighter fighter; }
+
+        // Bones in the given order (rigs spell some names differently, so match case-insensitively).
+        static Transform[] Bones(GameObject root, string[] names)
+        {
+            var all = root.GetComponentsInChildren<Transform>();
+            var found = new List<Transform>();
+            foreach (var n in names)
+            {
+                var bone = Array.Find(all, t => string.Equals(t.name, n, StringComparison.OrdinalIgnoreCase));
+                if (bone) found.Add(bone);
+            }
+            return found.ToArray();
+        }
 
         FighterSetup Setup(Fighter fighter)
         {
@@ -274,16 +310,25 @@ namespace Versus.Remaster
                 FighterView.Piece("Distant architecture", PrimitiveType.Cube, transform, new Vector3(x, h / 2 - .3f, 11 + i % 3), new Vector3(1.7f, h, 2), floor);
                 FighterView.Piece("Light column", PrimitiveType.Cube, transform, new Vector3(x - .55f, h / 2 - .3f, 9.95f + i % 3), new Vector3(.06f, h * .7f, .04f), neon);
             }
-            var light = new GameObject("Key light").AddComponent<Light>(); light.transform.SetParent(transform);
-            light.type = LightType.Directional; light.intensity = 1.3f; light.shadows = LightShadows.Soft;
-            light.transform.rotation = Quaternion.Euler(45, -35, 0);
-            var fill = new GameObject("Cool rim light").AddComponent<Light>(); fill.transform.SetParent(transform);
-            fill.type = LightType.Directional; fill.color = new Color(.35f, .6f, 1); fill.intensity = .65f;
-            fill.transform.rotation = Quaternion.Euler(30, 140, 0);
+            // A Render Settings object in the scene supplies lights, volume and background (the
+            // staging_test look). Without one, these lights stand in until HdrpSceneLighting
+            // replaces them with the original stg29 stage lighting.
+            renderSettings = FindFirstObjectByType<StagingRenderSettings>();
+            if (!renderSettings)
+            {
+                var light = new GameObject("Key light").AddComponent<Light>(); light.transform.SetParent(transform);
+                light.type = LightType.Directional; light.intensity = 1.3f; light.shadows = LightShadows.Soft;
+                light.transform.rotation = Quaternion.Euler(45, -35, 0);
+                var fill = new GameObject("Cool rim light").AddComponent<Light>(); fill.transform.SetParent(transform);
+                fill.type = LightType.Directional; fill.color = new Color(.35f, .6f, 1); fill.intensity = .65f;
+                fill.transform.rotation = Quaternion.Euler(30, 140, 0);
+            }
             cameraRig = sceneCamera ? sceneCamera : new GameObject("Versus camera").AddComponent<Camera>();
             if (!sceneCamera) cameraRig.transform.SetParent(transform);
             cameraRig.tag = "MainCamera"; cameraRig.backgroundColor = new Color(.025f, .04f, .07f);
             cameraRig.clearFlags = CameraClearFlags.SolidColor;
+            // The arena keeps its own floor materials.
+            if (renderSettings) renderSettings.Apply(cameraRig, null);
             gameplayLens = new EntranceCameraLens(cameraRig);
             gameplayLens.SetHorizontalFov(GameplayHorizontalFov);
             cameraRig.nearClipPlane = .1f; cameraRig.farClipPlane = 100;
@@ -367,6 +412,8 @@ namespace Versus.Remaster
         }
         void LateUpdate()
         {
+            // Re-applied so color edits on the Render Settings object show live during Play.
+            if (renderSettings && cameraRig) renderSettings.Apply(cameraRig, null);
             if (views == null) return;
             if (battle.phase == MatchPhase.MatchOver && battle.winner >= 0 && victory == null &&
                 (!battle.UsesCommandGraphs || roundEndClock >= VictoryDelaySeconds))
@@ -617,12 +664,14 @@ namespace Versus.Remaster
                 Impact(.06f);
             }
             lastPhase = battle.phase;
+            UpdateBattleEffects();
         }
 
         void ResetImpactEffects()
         {
             impactShake = zoomHold = koSlowTime = 0; koFocus = -1; Time.timeScale = 1; StopCinematic();
             cameraInitialized = false;
+            for (int i = 0; i < 2; i++) { StopAura(i); wasDowned[i] = wasAirborne[i] = wasRage[i] = false; }
         }
 
         void OnDisable() => Time.timeScale = 1;
@@ -637,12 +686,91 @@ namespace Versus.Remaster
             hitLabel = hit.blocked ? "GUARD" : "P" + (hit.attacker + 1) + "   /   " + hit.damage + " DAMAGE";
             hitLabelTime = .65f; shake = hit.blocked ? .12f : .4f;
             audioSource.PlayOneShot(hit.blocked ? guardSound : strikeSound);
+            string role = hit.blocked ? CascadeEffects.Guard : hit.counterHit ? CascadeEffects.Counter : CascadeEffects.Hit;
+            if (effects && effects.Has(role))
+            {
+                Contact(hit.attacker, hit.defender, out var point, out var direction);
+                var rotation = Quaternion.LookRotation(direction, Vector3.up);
+                effects.Play(role, point, rotation);
+                if (!hit.blocked && hit.damage >= PierceDamage) effects.Play(CascadeEffects.Pierce, point, rotation);
+                return;
+            }
             var f = battle.fighters[hit.defender];
             var spark = FighterView.Piece("Impact", PrimitiveType.Sphere, transform, new Vector3(f.x, 1.3f, f.z - .1f),
                 Vector3.one * .2f, hit.blocked ? blockMaterial : impactMaterial).gameObject;
             hitEffects.Add(spark); Destroy(spark, .08f);
             hitEffects.RemoveAll(x => !x);
         }
+
+        // The data holds no hitbox positions for the effects: the struck point is taken where the
+        // attacker's nearest striking bone meets the defender's body line, and the effect faces along
+        // the blow (the source's effect X axis).
+        void Contact(int attacker, int defender, out Vector3 point, out Vector3 direction)
+        {
+            var a = battle.fighters[attacker]; var d = battle.fighters[defender];
+            var across = new Vector3(d.x - a.x, 0, d.z - a.z);
+            direction = across.sqrMagnitude > 1e-6f ? across.normalized : Vector3.forward;
+            point = transform.TransformPoint(new Vector3(d.x, 1.2f, d.z));
+            var limbs = strikeBones?[attacker]; var body = bodyBones?[defender];
+            if (limbs == null || body == null || limbs.Length == 0 || body.Length < 2) return;
+            float best = float.MaxValue; Vector3 limb = point, onBody = point;
+            foreach (var l in limbs)
+                for (int k = 0; k + 1 < body.Length; k++)
+                {
+                    var q = ClosestOnSegment(l.position, body[k].position, body[k + 1].position);
+                    float dist = (l.position - q).sqrMagnitude;
+                    if (dist < best) { best = dist; limb = l.position; onBody = q; }
+                }
+            var toLimb = limb - onBody;
+            // On the body surface, toward the striking limb.
+            point = onBody + (toLimb.sqrMagnitude > 1e-6f ? toLimb.normalized * Mathf.Min(.12f, toLimb.magnitude * .5f) : Vector3.zero);
+            var blow = onBody - limb;
+            if (blow.sqrMagnitude > 1e-4f) direction = Vector3.Slerp(direction, blow.normalized, .5f).normalized;
+        }
+
+        static Vector3 ClosestOnSegment(Vector3 p, Vector3 a, Vector3 b)
+        {
+            var ab = b - a; float len = ab.sqrMagnitude;
+            return len < 1e-8f ? a : a + ab * Mathf.Clamp01(Vector3.Dot(p - a, ab) / len);
+        }
+
+        // Floor impacts and Rage, from state changes after each tick: a body that lands from the air
+        // plays BlastFX and SmokeFX, any other fall to the floor SmokeFX; Rage starts with RageFX and
+        // keeps RageAuraFX on the fighter until the round ends. Rage is not spent here, since the model
+        // has no Rage Art consumption, so the aura stays while health is at a quarter or less.
+        void UpdateBattleEffects()
+        {
+            if (!effects) return;
+            for (int i = 0; i < 2; i++)
+            {
+                var f = battle.fighters[i];
+                bool live = battle.phase == MatchPhase.Fight || battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver;
+                if (live && f.downed && !wasDowned[i])
+                {
+                    var hip = bodyBones[i].Length > 0 ? bodyBones[i][0].position : transform.TransformPoint(new Vector3(f.x, 0, f.z));
+                    var floor = new Vector3(hip.x, 0, hip.z);
+                    var facing = Quaternion.LookRotation(new Vector3(f.dirX, 0, f.dirZ).sqrMagnitude > 1e-6f ? new Vector3(f.dirX, 0, f.dirZ) : Vector3.forward);
+                    if (wasAirborne[i]) effects.Play(CascadeEffects.Blast, floor, facing);
+                    effects.Play(CascadeEffects.Smoke, floor, facing);
+                }
+                wasDowned[i] = f.downed; wasAirborne[i] = f.airborne;
+                bool rage = battle.phase == MatchPhase.Fight && f.health > 0 && f.health * 4 <= battle.rules.health;
+                if (rage && !wasRage[i])
+                {
+                    var center = bodyBones[i].Length > 1 ? bodyBones[i][1].position : transform.TransformPoint(new Vector3(f.x, 1, f.z));
+                    // The source effects are authored in the character's frame: X along its facing.
+                    var heading = new Vector3(f.dirX, 0, f.dirZ);
+                    var facing = Quaternion.LookRotation(heading.sqrMagnitude > 1e-6f ? heading : Vector3.forward);
+                    effects.Play(CascadeEffects.Rage, center, facing, 1, auraBones[i]);
+                    rageAura[i] = effects.Play(CascadeEffects.RageAura, center, facing, 1, auraBones[i]);
+                }
+                else if (!rage && wasRage[i]) StopAura(i);
+                wasRage[i] = rage;
+                if (rageAura[i] && bodyBones[i].Length > 1) rageAura[i].transform.position = bodyBones[i][1].position;
+            }
+        }
+
+        void StopAura(int i) { if (rageAura[i]) rageAura[i].Stop(); rageAura[i] = null; }
         void Styles()
         {
             if (text != null) return;
