@@ -24,6 +24,7 @@ Game sources:
 - `Assets/Remaster/Scripts` contains runtime action catalogs, staging selection, native camera sampling, HDRP scene lighting and museum UI.
 - `Assets/Remaster/Editor/StagingValidation.cs`, `StagingFlowValidation.cs`, `CombatHandValidation.cs`, `HdrpValidation.cs` are editor probes. Some assume current Jin/Kazuya objects or mutate the play state; inspect and generalize them to the requested fighter before using.
 - `Validation/Staging`, `Validation/CombatHands`, `Validation/OriginalLighting` retain source records, captures and measured checks. Store fresh evidence with clear character/action attribution.
+- `Tools/HitEffects/export_hit_effects.py` exports the original common hit-effect systems to `Resources/HitEffects` (in progress; see the versus skill).
 - `UnityRemaster/CategoryBuild` is a copy of the project that Codex uses for batchmode builds while the editor is open. `deploy_xiaoyu_museum.py` and `deploy_xiaoyu_skirts.py` copy files from it back into the main project, with backups: `XiaoyuImporter.cs`, `XiaoyuSecondaryDynamics.cs`, `CharacterMuseum.cs` and `CharacterMuseum.unity`. The copy lacks later fixes (`WeldTriangleSoup`, `SeparateGarment`) and still has the abandoned `JointCorrection` code, so rerunning a deploy wipes main-project fixes. Sync CategoryBuild from the main project first, and update the deploy asserts (`characters=3, costumes=19, actions=6997`). A copied project also needs `com.unity.modules.cloth` in its package manifest.
 
 ## Unity control and screenshots
@@ -117,7 +118,14 @@ Report imported fighters/costumes/actions and what remains missing, approximate 
 **Git:**
 
 - **Ownership.** The `TekkenVersusRemaster` repository is owned by another Windows user (CodexSandboxOffline). Use `git -c safe.directory='*' …` and never change global git config without asking.
-- **Remote.** The remote is `origin` (`BonSmith0251/Tekken_v1`). Commit or push only when the user asks; report the real status.
+- **Remote.** The remote is `origin` (`BonSmith0251/Tekken_v1`); `main` was at `914db5e2` on 2026-10-23, with the command graph and versus rework pushed. Commit or push only when the user asks; "commit (don't push yet)" means hold the push. Report the real status by checking `git log origin/main..`.
+- **Large pushes.** Multi-GB commits failed with connection resets and HTTP 408. The cause was a forced `-c http.postBuffer=1048576000`, which buffered the whole pack. What works:
+  - default buffering, with `-c http.version=HTTP/1.1` and `GIT_TERMINAL_PROMPT=0`;
+  - commits of about 300 MB or less, one commit per push;
+  - a retry loop of up to 4 tries, at about 3.5 to 7 minutes per chunk.
+
+  The pre-split originals are on the local branch `backup-before-split`.
+- **Rewriting history.** Before splitting or rewriting commits, list unpushed commits from other sessions and branches. A split once dropped another session's local commit; its content survived only because an identical commit existed.
 - **Index lock.** TortoiseGit's `TGitCache` intermittently blocks `git add` with "unable to write new index file"; retry the step.
 - **Bulk output.** Commit regenerable bulk output (for example the stage layouts) separately so it can be dropped.
 - **User data.** Treat `Resources/FightWardrobe/*.json` as user data.

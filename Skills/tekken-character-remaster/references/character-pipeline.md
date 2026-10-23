@@ -26,9 +26,9 @@ Current project modules to inspect before adding another fighter:
 
 - `MuseumCharacter.cs`: model/costume references, body bone names and original move records.
 - `FighterActionCatalog.cs`: currently chooses Jin/Kazuya stance IDs through prefix checks. Replace this with profile data for additional characters; do not fall through to the wrong fighter's stance.
-- `FighterActionMotion.cs`: JRT1 body sampling and presentation overrides. Its combat-hand resource selection currently uses a Jin-versus-Kazuya name test; generalize that binding before adding anyone else.
+- `FighterActionMotion.cs`: JRT1 body sampling, a 5-frame SmoothStep crossfade between moves, and presentation overrides. Combat hands load `Resources/SecondaryMotion/<code>_combat_hands` keyed on `characterCode`, otherwise they use the body clip's hands. Jin's and Kazuya's museum assets predate `characterCode`, so a display-name fallback remains for them.
 - `JinRig.cs`: shared presentation class name does not prove skeleton compatibility. Its solver expects particular humanoid bone names and has a generic finger-curl fallback.
-- `VersusGame.cs`: hard-codes the Kazuya/Jin prefabs, catalogs and `VictoryStaging` setup (around lines 11-114), and dresses fighters through `FightWardrobe.DressSaved`. Generalize it before a third fighter can enter versus.
+- `VersusGame.cs`: picks fighters per player (`enum Fighter { Kazuya, Jin, Xiaoyu }`, `playerOneFighter`/`playerTwoFighter`, default Jin vs Xiaoyu). It dresses them through `FightWardrobe.DressSaved` and builds `WardrobeDynamics`. Only `Spawn` keeps per-fighter branches. Adding a fighter to versus follows the `tekken-versus-battle` skill (command graph export, demo oracle, `Setup`/`Spawn`).
 - `StagingTestPlayer.cs`: `Code()` must return `characterCode`, and it attaches character dynamics per take. `StagingValidation.cs` once sent every non-Jin entry to Kazuya; editor validators often assume two fighters.
 - `CharacterMuseum.cs`, `CharacterMuseumSetup.cs`: preserve existing search, categories, scrubbing and manual transition navigation. The preset costume list has been replaced by the saved wardrobe items for characters with a wardrobe. The Staging category comes from the regex `^(jz|kz|fu)_[sw]\d{2}` in `CharacterMuseumSetup.cs`; add each new animation prefix there. The museum camera must frame the model's exhibit x/z, not the gallery origin. Inspect current secondary-motion support; do not assume versus support automatically applies in the museum.
 
@@ -46,6 +46,8 @@ Basis conventions differ by exporter, so never stack an unverified Unity permuta
 Use the existing reference-rig/body converter as a starting point, then establish the new skeleton's rest transforms, scale, heading, root axes and parent relationships. A permutation that fixes one fighter is not proof for another skeleton or for a camera. Generic humanoid retargeting must not silently discard source body motion, extra limbs or attachment channels.
 
 JRT1 body resource layout in this project: magic, frame count, bone count, rate (four little-endian 32-bit fields), then each frame's root float3 and local quaternion float4 per mapped bone. Expected size is `16 + frames * (3 + bones*4) * 4`. Existing output is 60 Hz; validate source assumptions before resampling other data.
+
+The JRT1 root is −x forward, +y left, z up, and the body heading is the hip (bone 2) yaw. Under `BODY_SCALE__group` the root travel lands 90° off the body. Any presentation that plays source root travel (versus entrance and victory) must remap `(dx, dy) → (−dy, −dx)`; without it, fighters looked like they were "walking slippery/in the air". The museum's "Source travel" toggle (`CharacterMuseum.cs`) and the `staging_test` player do not apply this remap and are suspected of the same 90° slide (unverified). Versus battle travel instead uses the exported clip `forward`/`lateral` along the body heading.
 
 Combat body motion stays in place while staging may use source root travel. Apply any edited source-frame map consistently to root translation, rotations, secondary tracks, camera and completion time. Blend pose joins without replaying removed overlap frames.
 

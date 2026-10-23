@@ -5,9 +5,12 @@ description: Import, repair, and validate original Tekken character models, body
 
 # Tekken Character Remaster
 
-Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested workflow for Jin and Kazuya (museum, versus, staging) and Xiaoyu (museum and `staging_test`; not versus). It is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
+Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested workflow for Jin, Kazuya and Xiaoyu across the museum, `staging_test` and versus. In `LocalVersus2` Xiaoyu is the default player 2, but she has had less play-testing than the other two. It is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
 
-Costumes, outfits and worn items (hair, hats, glasses, customization pieces) are handled by the separate `tekken-costume-wardrobe` skill (`~/.claude/skills/tekken-costume-wardrobe`). Use it for those and keep the wardrobe in its own `Wardrobe.unity` scene.
+Two sibling Claude skills in `~/.claude/skills` cover the rest:
+
+- `tekken-costume-wardrobe`: costumes, outfits and worn items (hair, hats, glasses, customization pieces). The wardrobe stays in its own `Wardrobe.unity` scene.
+- `tekken-versus-battle`: the versus scene (command graphs, hits, facing, KO, fight camera, impact effects, CPU) and adding a fighter to it.
 
 ## Start with the requested scope
 
@@ -17,7 +20,7 @@ Costumes, outfits and worn items (hair, hats, glasses, customization pieces) are
 - Follow the user's chosen scene, engine version and rendering pipeline. A new character does not require a pipeline migration, stage replacement or publishing operation.
 - Confirm which scene a visual report comes from before fixing it. The museum, `staging_test`, versus and the wardrobe each build their own lights and dynamics; a user once had to stop a museum investigation with "no, no. in the staging_test scene."
 - Other Claude sessions and Codex may edit this project concurrently, and Codex keeps a batchmode copy (`UnityRemaster/CategoryBuild`) whose deploy scripts overwrite main-project files. Check recent changes and linked sessions before rebuilding something; see [project-and-rendering.md](references/project-and-rendering.md).
-- Stay within the requested scope. The user declined generalizing versus for Xiaoyu ("Not now"); offer such follow-ups, do not start them.
+- Stay within the requested scope. Offer follow-ups such as wiring a fighter into another scene, and wait for the user to ask. They first declined Xiaoyu in versus ("Not now"), then asked for it later.
 
 ## Build a character profile first
 
