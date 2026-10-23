@@ -15,8 +15,8 @@ namespace Versus.Remaster
         {
             public Transform bone,child;
             public Quaternion rest;
-            public Vector3 tip,previous;
-            public float stiffness,limit,gravity;
+            public Vector3 tip,previous,origin;
+            public float stiffness,limit,gravity,retention;
             public bool hair;
         }
         sealed class BodyCapsule
@@ -31,7 +31,7 @@ namespace Versus.Remaster
         // Per-garment vertex freedom, applied once Unity has built the cloth particles.
         readonly List<(Cloth cloth,Vector3[] vertices,float[] distances)> pending=new List<(Cloth,Vector3[],float[])>();
         Vector3 lastRoot;
-        float accumulator;
+        float lastStep=1f/120;
         bool initialized;
         int simulationFrame=-1;
         public int SpringCount=>springs.Count;
@@ -48,10 +48,14 @@ namespace Versus.Remaster
             {
                 if(bone.name.IndexOf("_OPT",StringComparison.OrdinalIgnoreCase)<0)continue;
                 var child=bone.Cast<Transform>().FirstOrDefault(t=>t.name.IndexOf("_OPT",StringComparison.OrdinalIgnoreCase)>=0);if(!child)continue;
-                bool hair=bone.name.StartsWith("hair",StringComparison.OrdinalIgnoreCase)||bone.name.StartsWith("Head_",StringComparison.OrdinalIgnoreCase);
+                // Helpers copied per piece carry the piece name as a prefix (xia_har_pony_Hair_...).
+                bool hair=bone.name.IndexOf("hair",StringComparison.OrdinalIgnoreCase)>=0||bone.name.IndexOf("Head_",StringComparison.OrdinalIgnoreCase)>=0;
                 bool fringe=hair&&bone.name.IndexOf("_F_",StringComparison.OrdinalIgnoreCase)>=0;
-                springs.Add(new Spring {bone=bone,child=child,rest=bone.localRotation,hair=hair,
-                    stiffness=fringe?420:hair?180:260,limit=(fringe?25:hair?70:30)*Mathf.Deg2Rad,gravity=hair?.65f:.25f});
+                // Soft, lightly damped chains so strands and flaps swing and settle over a few tenths of
+                // a second; gravity scales with stiffness so the authored rest droop is kept.
+                float stiffness=fringe?320:hair?130:190;
+                springs.Add(new Spring {bone=bone,child=child,rest=bone.localRotation,hair=hair,stiffness=stiffness,
+                    limit=(fringe?28:hair?60:40)*Mathf.Deg2Rad,gravity=(hair?.65f/180:.25f/260)*stiffness,retention=fringe?.86f:hair?.9f:.88f});
             }
             AddCapsule(bones["Hip"],bones["Neck"],.13f);
             foreach(string side in new[]{"L","R"})
@@ -174,9 +178,9 @@ namespace Versus.Remaster
         {
             UpdateCapsules();
             foreach(var spring in springs)spring.bone.localRotation=spring.rest;
-            foreach(var spring in springs)spring.tip=spring.previous=spring.child.position;
+            foreach(var spring in springs){spring.tip=spring.previous=spring.child.position;spring.origin=spring.bone.position;}
             foreach(var cloth in garments)cloth.ClearTransformMotion();
-            lastRoot=actor.position;accumulator=0;initialized=true;
+            lastRoot=actor.position;lastStep=1f/120;initialized=true;
         }
 
         public void Tick(float elapsed)
@@ -187,9 +191,20 @@ namespace Versus.Remaster
             UpdateCapsules();
             if(!initialized || Vector3.Distance(actor.position,lastRoot)>.5f || elapsed>.2f)Reset();
             lastRoot=actor.position;
-            accumulator+=Mathf.Clamp(elapsed,0,.0667f);
-            const float step=1f/60;
-            while(accumulator>=step){Simulate(step);accumulator-=step;}
+            // One evenly split update every rendered frame: fixed 1/60 steps alternate between zero and
+            // two steps at other frame rates, which reads as stutter.
+            float time=Mathf.Clamp(elapsed,0,.05f);if(time<=0)return;
+            int count=Mathf.CeilToInt(time*120);
+            // Fighters are knocked and snapped across the floor instantly; strands follow most of their
+            // root's translation and lag only a little, so the swing comes from turning and bending.
+            const float carry=.8f;
+            foreach(var spring in springs)
+            {
+                spring.bone.localRotation=spring.rest;
+                Vector3 moved=(spring.bone.position-spring.origin)*carry;
+                spring.tip+=moved;spring.previous+=moved;spring.origin=spring.bone.position;
+            }
+            for(int i=0;i<count;i++)Simulate(time/count);
         }
 
         void Simulate(float step)
@@ -200,7 +215,7 @@ namespace Versus.Remaster
                 Vector3 root=spring.bone.position,restTip=spring.child.position,restDirection=restTip-root;
                 float length=restDirection.magnitude;if(length<.001f)continue;
                 Quaternion restRotation=spring.bone.rotation;
-                Vector3 predicted=spring.tip+(spring.tip-spring.previous)*.84f+
+                Vector3 predicted=spring.tip+(spring.tip-spring.previous)*(step/lastStep)*Mathf.Pow(spring.retention,step*60)+
                     (Physics.gravity*spring.gravity+(restTip-spring.tip)*spring.stiffness)*(step*step);
                 spring.previous=spring.tip;
                 Vector3 direction=Vector3.RotateTowards(restDirection.normalized,(predicted-root).normalized,spring.limit,0);
@@ -215,6 +230,7 @@ namespace Versus.Remaster
                 spring.bone.rotation=Quaternion.FromToRotation(restDirection,direction)*restRotation;
                 spring.tip=spring.child.position;
             }
+            lastStep=step;
         }
     }
 }

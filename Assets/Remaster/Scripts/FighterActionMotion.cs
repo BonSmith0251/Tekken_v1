@@ -6,11 +6,13 @@ namespace Versus.Remaster
 {
     public sealed class FighterActionMotion : MonoBehaviour
     {
-        FighterActionCatalog catalog;
+        FighterActionCatalog catalog, currentSource;
+        /// <summary>The opponent's catalog: hit reactions borrowed from its moveset may use its own clips.</summary>
+        public FighterActionCatalog opponent;
         Transform[] bones;
         Vector3[] positions;
         Quaternion[,] rotations;
-        int frames, current = -1, lastAttackFrame = -1;
+        int frames, current = -1, lastAttackFrame = -1, lastMoveFrame = -1;
         int presentationAction = -1;
         float presentationFrame;
         bool presentationLoops;
@@ -20,6 +22,12 @@ namespace Versus.Remaster
         SecondaryMotionTrack combatHands;
         int combatHandFrames;
         public int PlayedActions { get; private set; }
+        // Move changes in command battles blend from the last shown pose over a few frames, as the
+        // original animation system does, so one-frame transitional states never pop.
+        const float CrossfadeFrames = 5;
+        Quaternion[] shownPose, fadeFrom;
+        Vector3 shownRoot, fadeRoot;
+        float fadeClock = -1;
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
 
@@ -35,23 +43,29 @@ namespace Versus.Remaster
         public void Initialize(FighterActionCatalog source)
         {
             catalog = source;
-            var map = new Dictionary<string, Transform>();
+            var map = new Dictionary<string, Transform>(StringComparer.OrdinalIgnoreCase);
             foreach (var bone in GetComponentsInChildren<Transform>()) map[bone.name] = bone;
             bones = new Transform[source.character.boneNames.Length];
             for (int i = 0; i < bones.Length; i++)
                 if (!map.TryGetValue(source.character.boneNames[i], out bones[i]))
                     throw new InvalidOperationException("Missing " + source.character.boneNames[i] + " on " + source.character.displayName);
-            string handResource = source.character.displayName.StartsWith("Jin", StringComparison.Ordinal) ? "jin_combat_hands" : "kaz_combat_hands";
+            // Native stance hands by character code; fighters without a baked track keep the body clip's hands.
+            // Jin's and Kazuya's museum assets predate characterCode.
+            string code = !string.IsNullOrEmpty(source.character.characterCode) ? source.character.characterCode :
+                source.character.displayName.StartsWith("Jin", StringComparison.Ordinal) ? "jin" : "kaz";
+            string handResource = code + "_combat_hands";
             var handAsset = Resources.Load<TextAsset>("SecondaryMotion/" + handResource);
-            if (!handAsset) throw new InvalidOperationException("Missing fighting hand animation: " + handResource);
-            combatHandFrames = BitConverter.ToInt32(handAsset.bytes, 4);
-            combatHands = new SecondaryMotionTrack(transform, handResource, combatHandFrames);
-            Load(source.idle);
+            if (handAsset)
+            {
+                combatHandFrames = BitConverter.ToInt32(handAsset.bytes, 4);
+                combatHands = new SecondaryMotionTrack(transform, handResource, combatHandFrames);
+            }
+            Load(source, source.idle);
         }
 
-        void Load(int index)
+        void Load(FighterActionCatalog source, int index)
         {
-            var asset = catalog.character.actions[index].motion;
+            var asset = source.character.actions[index].motion;
             if (!asset) throw new InvalidOperationException("Missing action motion " + index);
             byte[] data = asset.bytes;
             if (data.Length < 16 || System.Text.Encoding.ASCII.GetString(data, 0, 4) != "JRT1")
@@ -73,22 +87,48 @@ namespace Versus.Remaster
                         BitConverter.ToSingle(data, p + 8), BitConverter.ToSingle(data, p + 12));
                 }
             }
-            current = index;
+            current = index; currentSource = source;
         }
 
         public void Apply(FighterState fighter, MoveSpec move, float clock, bool moving)
         {
             if (!Ready) return;
-            int target = presentationAction >= 0 ? presentationAction :
-                fighter.attack >= 0 ? fighter.attack : catalog.idle;
-            if (target != current || (fighter.attack >= 0 && fighter.attackFrame < lastAttackFrame))
+            // Command battles name the original move's clip and frame; otherwise the prototype attack.
+            // A reaction borrowed from the opponent's moveset uses this rig's conversion of shared
+            // common clips, and the opponent's conversion of its own character clips (same 19 bones).
+            var source = catalog;
+            int commandAction = -1;
+            if (presentationAction < 0 && fighter.move >= 0)
             {
-                Load(target); stateStart = clock;
-                if (fighter.attack >= 0) PlayedActions++;
+                bool shared = fighter.clipKey != null && fighter.clipKey.StartsWith("common/", StringComparison.Ordinal);
+                if (fighter.borrowed && !shared && opponent != null) source = opponent;
+                commandAction = source.ActionForClip(fighter.clipKey);
+                if (commandAction < 0 && !fighter.borrowed) commandAction = catalog.ActionForMove(fighter.move);
+                if (commandAction < 0) source = catalog;
+            }
+            int target = presentationAction >= 0 ? presentationAction :
+                fighter.move >= 0 ? (commandAction >= 0 ? commandAction : current >= 0 ? current : catalog.idle) :
+                fighter.attack >= 0 ? fighter.attack : catalog.idle;
+            if (fighter.move >= 0 && commandAction < 0 && presentationAction < 0) source = currentSource ?? catalog;
+            if (target != current || source != currentSource || (fighter.attack >= 0 && fighter.attackFrame < lastAttackFrame) ||
+                (commandAction >= 0 && fighter.moveFrame < lastMoveFrame))
+            {
+                // Blend fight moves and the switch into a victory take; entrance shots start on a cut.
+                if (shownPose != null && (fighter.move >= 0 || presentationAction >= 0) && presentationFrameMap == null)
+                {
+                    if (fadeFrom == null) fadeFrom = new Quaternion[shownPose.Length];
+                    Array.Copy(shownPose, fadeFrom, shownPose.Length); fadeRoot = shownRoot; fadeClock = clock;
+                }
+                else fadeClock = -1;
+                Load(source, target); stateStart = clock;
+                if (fighter.attack >= 0 || (commandAction >= 0 && target != catalog.idle)) PlayedActions++;
             }
             lastAttackFrame = fighter.attackFrame;
+            lastMoveFrame = fighter.moveFrame;
             float frame = presentationAction >= 0 ?
                 (presentationLoops ? Mathf.Repeat(presentationFrame, frames) : Mathf.Clamp(presentationFrame, 0, frames - 1)) :
+                commandAction >= 0 ? Mathf.Clamp(fighter.moveFrame - 1, 0, frames - 1) :
+                fighter.move >= 0 ? Mathf.Repeat((clock - stateStart) * 60, frames) :
                 fighter.attack >= 0 && move != null
                 ? Mathf.Clamp01((float)fighter.attackFrame / (move.startup + move.active + move.recovery)) * (frames - 1)
                 : Mathf.Repeat((clock - stateStart) * 60, frames);
@@ -113,16 +153,31 @@ namespace Versus.Remaster
             // Restore authored stance hands after JinRig's generic fallback. Entrance
             // secondary tracks override this later; attacks use the stance's neutral
             // hand pose until their own per-move secondary events are implemented.
-            combatHands.Apply(target == catalog.idle ? Mathf.Repeat(frame, combatHandFrames) : 0);
+            combatHands?.Apply(target == catalog.idle && currentSource == catalog ? Mathf.Repeat(frame, combatHandFrames) : 0);
             // Combat stays in place. Original entrance tracks retain root motion to match their cameras.
             Vector3 root = Vector3.Lerp(positions[a], positions[b], t);
             if (presentationAction < 0 || !presentationRootMotion) { root.x = 0; root.y = 0; }
+            else
+            {
+                // A clip's root travel is forward along local -x and left along +y, but under the rig's
+                // BODY_SCALE group those axes land 90 degrees off the animated body (which faces model +z).
+                // Map the travel into the body frame: -x forward -> +y, +y left -> -x (measured on the
+                // converted walk and victory clips: planted-foot slide drops from metres to centimetres).
+                float dx = root.x - positions[0].x, dy = root.y - positions[0].y;
+                root.x = positions[0].x - dy; root.y = positions[0].y - dx;
+            }
+            float fade = fadeClock < 0 ? 1 : Mathf.SmoothStep(0, 1, (clock - fadeClock) * 60 / CrossfadeFrames);
+            if (fade >= 1) fadeClock = -1;
+            if (fade < 1) root = Vector3.Lerp(fadeRoot, root, fade);
             bones[0].localPosition = root;
+            if (shownPose == null) shownPose = new Quaternion[bones.Length];
+            shownRoot = root;
             for (int i = 0; i < bones.Length; i++)
-                {
+            {
                 Quaternion pose = Quaternion.Slerp(rotations[a, i], rotations[b, i], t);
-                bones[i].localRotation = stitchFrom >= 0
-                    ? Quaternion.Slerp(rotations[stitchFrom, i], pose, stitchBlend) : pose;
+                if (stitchFrom >= 0) pose = Quaternion.Slerp(rotations[stitchFrom, i], pose, stitchBlend);
+                if (fade < 1) pose = Quaternion.Slerp(fadeFrom[i], pose, fade);
+                bones[i].localRotation = shownPose[i] = pose;
             }
         }
     }

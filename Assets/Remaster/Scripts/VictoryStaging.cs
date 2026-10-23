@@ -21,9 +21,9 @@ namespace Versus.Remaster
         public VictoryStaging(Transform actor,FighterActionMotion motion,MuseumCharacter character,string key)
         {
             this.actor=actor;this.motion=motion;this.character=character;this.key=key;
-            head=actor.GetComponentsInChildren<Transform>().First(t=>t.name=="Head");
+            head=actor.GetComponentsInChildren<Transform>().First(t=>string.Equals(t.name,"Head",StringComparison.OrdinalIgnoreCase));
             faceAxis=head.InverseTransformDirection(actor.forward);
-            landmarks=actor.GetComponentsInChildren<Transform>().Where(t=>t.name=="L_Foot"||t.name=="R_Foot"||t.name=="L_Hand"||t.name=="R_Hand").ToArray();
+            landmarks=actor.GetComponentsInChildren<Transform>().Where(t=>new[]{"L_Foot","R_Foot","L_Hand","R_Hand"}.Contains(t.name,StringComparer.OrdinalIgnoreCase)).ToArray();
             // Cache against the untouched bind pose, never an animated hand/face.
             foreach(var entry in StagingCatalog.Load().entries.Where(e=>e.character==key && e.kind=="victory"))
             {
@@ -31,7 +31,7 @@ namespace Versus.Remaster
                 if(!string.IsNullOrEmpty(entry.camera))cameras.Add(entry.moveId,new EntranceCameraTrack(entry.camera,entry.moveId,entry.frames));
             }
         }
-        public void Begin(){selected=StagingCatalog.Select(key,character,"victory");frame=0;}
+        public void Begin(Func<StagingAction,bool> allowed=null,int preferred=-1){selected=StagingCatalog.Select(key,character,"victory",allowed,preferred);frame=0;}
         public void Advance(float delta){if(Active)frame=Mathf.Min(frame+Mathf.Clamp(delta,0,1f/15f)*60,selected.frames-1);}
         public void Prepare()
         {

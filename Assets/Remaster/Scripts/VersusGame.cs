@@ -13,14 +13,24 @@ namespace Versus.Remaster
         public MuseumCharacter kazuyaActions;
         public GameObject sceneJin;
         public GameObject sceneKazuya;
+        public MuseumCharacter xiaoyuActions;
+        public GameObject xiaoyuPrefab;
+        public enum Fighter { Kazuya, Jin, Xiaoyu }
+        [Tooltip("Fighters for this match. Each runs its original moveset, entrance and victory takes.")]
+        public Fighter playerOneFighter = Fighter.Jin, playerTwoFighter = Fighter.Xiaoyu;
         public Camera sceneCamera;
         public bool automaticFight = true;
         public bool playEntrance;
         public BattleModel battle { get; private set; }
+        // Tekken 7 standard health; original damage values use this scale.
+        public const int TekkenHealth = 170;
+        public const int IdleGetupTicks = 45;
         public bool paused { get; private set; }
         readonly PlayerCommand[] commands = { PlayerCommand.Neutral, PlayerCommand.Neutral };
-        readonly int[] pending = { -1, -1 };
-        readonly float[] pendingAt = { 0, 0 };
+        // Buttons pressed since the last 60 Hz tick, so a tap shorter than one tick still registers.
+        readonly int[] pressedSinceTick = new int[2];
+        CommandGraph[] graphs;
+        readonly CpuPlayer[] cpu = new CpuPlayer[2];
         IFighterPresentation[] views;
         Camera cameraRig;
         EntranceCameraLens gameplayLens;
@@ -30,9 +40,44 @@ namespace Versus.Remaster
         VictoryStaging[] victoryStaging;
         VictoryStaging victory;
         bool menu, help, diagnostic;
-        readonly int[] aiCooldown = new int[2];
         FighterActionCatalog[] catalogs;
-        readonly int[] aiSequence = new int[2];
+        // Render interpolation: fighter floor positions/facing at the previous 60 Hz tick.
+        readonly Vector3[] previousPosition = new Vector3[2], previousFacing = new Vector3[2];
+        // Smoothed gameplay camera rig: fight-line angle, framing centre and distance.
+        bool cameraInitialized;
+        float cameraYaw, cameraDistance, cameraZoom = 1;
+        Vector3 cameraTarget;
+        // Critically damped spring velocities: motion starts and settles without jolts.
+        float yawVelocity, distanceVelocity, zoomVelocity;
+        // Bones that must stay in shot during the fight (head, hands, feet, hips) per fighter.
+        Transform[][] framingBones;
+        static readonly string[] FramingBoneNames = { "Head", "L_Hand", "R_Hand", "L_Foot", "R_Foot", "BASE" };
+        // Horizontal room for reaching limbs; vertically the calibrated shot already runs close to the
+        // feet, so only bodies that rise or drop beyond it (launches, juggles) pull the camera back.
+        const float FramingPadX = .18f, FramingMarginX = .86f, FramingPadY = .05f, FramingMarginY = .95f;
+        Vector3 targetVelocity;
+        const float KoSlowDuration = 1.2f, KoSlowScale = .3f;
+        float koSlowStart;
+        // Impact presentation. Shake levels, the airborne preset zoom and Rage Art cameras come from
+        // the original move properties; their magnitudes and the KO slow-motion are approximations.
+        string[] codes;
+        readonly XiaoyuSecondaryDynamics[] flexibleMotion = new XiaoyuSecondaryDynamics[2];
+        readonly WardrobeDynamics[] wardrobeMotion = new WardrobeDynamics[2];
+        float impactShake, zoomHold, koSlowTime;
+        // Real seconds since the round ended: the K.O. call shows first, then the result panel;
+        // the match winner's victory take starts once the loser's death fall has played.
+        float roundEndClock;
+        const float KoCallSeconds = 1.8f, VictoryDelaySeconds = 2.4f;
+        int koFocus = -1;
+        MatchPhase lastPhase;
+        // The winner's pose anchor while the victory take plays: the battle keeps simulating, but the
+        // take and its actor-relative camera play from a fixed spot, squarely facing the loser.
+        FighterState victoryAnchor;
+        int victoryPlayer = -1;
+        FightCameraTrack cinematic;
+        int cinematicPlayer = -1;
+        float cinematicFrame;
+        Vector3 cinematicAnchor, cinematicForward;
         int rematchTicks;
         int hitsResolved;
         string hitLabel = "";
@@ -52,53 +97,65 @@ namespace Versus.Remaster
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0) automaticFight = true;
             if (diagnostic) Application.runInBackground = true;
             if (!config) config = ScriptableObject.CreateInstance<RemasterConfig>();
-#if UNITY_EDITOR
-            if (!jinActions) jinActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Jin.asset");
-            if (!kazuyaActions) kazuyaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Kazuya.asset");
-#endif
-            if (!jinActions || !kazuyaActions) throw new InvalidOperationException("Assign both character move catalogs in LocalVersus.");
-            catalogs = new[] { new FighterActionCatalog(kazuyaActions, "Kz_"), new FighterActionCatalog(jinActions, "Jz_") };
-            battle = new BattleModel(config.rules, new[] { catalogs[0].moves, catalogs[1].moves }); battle.Hit += OnHit;
+            var setups = new[] { Setup(playerOneFighter), Setup(playerTwoFighter) };
+            codes = new[] { setups[0].code, setups[1].code };
+            catalogs = new FighterActionCatalog[2];
+            graphs = new CommandGraph[2];
+            for (int i = 0; i < 2; i++)
+            {
+                graphs[i] = CommandGraph.Load(setups[i].code);
+                catalogs[i] = new FighterActionCatalog(setups[i].actions, setups[i].prefix, graphs[i].stance);
+            }
+            var rules = new MatchRules { seconds = config.rules.seconds, roundsToWin = config.rules.roundsToWin,
+                arenaHalfWidth = config.rules.arenaHalfWidth, arenaHalfDepth = config.rules.arenaHalfDepth,
+                health = TekkenHealth };
+            battle = new BattleModel(rules, graphs); battle.Hit += OnHit; battle.MoveProperty += OnMoveProperty;
+            for (int i = 0; i < 2; i++) cpu[i] = new CpuPlayer(graphs[i], 31 + i * 17);
             Time.fixedDeltaTime = 1f / 60;
             Application.targetFrameRate = 120;
             QualitySettings.vSyncCount = 1;
             BuildArena();
-            var jinObject = sceneJin ? sceneJin : Instantiate(Resources.Load<GameObject>("JinPlayable"), transform);
-            var jin = jinObject.GetComponent<JinRig>();
             // Both fighters wear random items saved in the wardrobe scene, not their preset costumes.
             var outfitRandom = new System.Random();
-            Dress(jinObject, jinActions, outfitRandom);
-            jin.RefreshMaterials();
-            jin.fighterMoves = catalogs[1].moves;
-            jin.actionMotion = jin.gameObject.AddComponent<FighterActionMotion>();
-            jin.actionMotion.Initialize(catalogs[1]);
-            // An editor session can retain an older in-memory scene after the scene file changes.
-            // Resolve the imported prefab for that session as well as for the serialized scene.
-#if UNITY_EDITOR
-            if (!sceneKazuya && !kazuyaPrefab)
-                kazuyaPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>(
-                    "Assets/Remaster/Kazuya/Prefabs/Karate_Gi.prefab");
-#endif
-            if (!sceneKazuya && !kazuyaPrefab) throw new InvalidOperationException("Assign the Kazuya Karate Gi prefab in LocalVersus.");
-            var kazuyaObject = sceneKazuya ? sceneKazuya : Instantiate(kazuyaPrefab, transform);
-            Dress(kazuyaObject, kazuyaActions, outfitRandom);
-            var kazuya = kazuyaObject.GetComponent<JinRig>();
-            if (!kazuya) kazuya = kazuyaObject.AddComponent<JinRig>();
-            kazuya.RefreshMaterials();
-            kazuya.fighterMoves = catalogs[0].moves;
-            kazuya.actionMotion = kazuya.gameObject.AddComponent<FighterActionMotion>();
-            kazuya.actionMotion.Initialize(catalogs[0]);
-            config.playerOne = "KAZUYA MISHIMA";
-            config.playerTwo = "JIN KAZAMA";
-            views = new IFighterPresentation[] { kazuya, jin };
-            kazuyaObject.name = "Kazuya Mishima - Player 1";
-            jinObject.name = "Jin Kazama - Player 2";
+            var objects = new GameObject[2];
+            var rigs = new JinRig[2];
+            for (int i = 0; i < 2; i++)
+            {
+                objects[i] = Spawn(setups[i], i);
+                Dress(objects[i], setups[i].actions, outfitRandom);
+                var rig = objects[i].GetComponent<JinRig>();
+                if (!rig) rig = objects[i].AddComponent<JinRig>();
+                rig.RefreshMaterials();
+                rig.fighterMoves = catalogs[i].moves;
+                rig.actionMotion = rig.gameObject.AddComponent<FighterActionMotion>();
+                rig.actionMotion.Initialize(catalogs[i]);
+                rigs[i] = rig;
+                // Hair strands, gi flaps and cloth of whatever the fighter wears (the wardrobe's dynamics);
+                // a fighter without a wardrobe falls back to the museum's adapted Xiaoyu setup.
+                var wardrobe = FightWardrobe.ForCharacter(setups[i].actions);
+                if (wardrobe) wardrobeMotion[i] = new WardrobeDynamics(objects[i].transform, wardrobe);
+                else if (setups[i].code == "xia") flexibleMotion[i] = new XiaoyuSecondaryDynamics(objects[i].transform);
+                objects[i].name = setups[i].actions.displayName + " - Player " + (i + 1);
+            }
+            framingBones = new Transform[2][];
+            for (int i = 0; i < 2; i++)
+                framingBones[i] = Array.FindAll(objects[i].GetComponentsInChildren<Transform>(),
+                    t => Array.Exists(FramingBoneNames, n => string.Equals(n, t.name, StringComparison.OrdinalIgnoreCase)));
+            // Scene fighters that are not playing this match stay out of view.
+            foreach (var unused in new[] { sceneJin, sceneKazuya })
+                if (unused && unused != objects[0] && unused != objects[1]) unused.SetActive(false);
+            // Hit reactions run in the attacker's moveset and may use the attacker's own clips.
+            rigs[0].actionMotion.opponent = catalogs[1]; rigs[1].actionMotion.opponent = catalogs[0];
+            config.playerOne = setups[0].actions.displayName.ToUpperInvariant();
+            config.playerTwo = setups[1].actions.displayName.ToUpperInvariant();
+            views = new IFighterPresentation[] { rigs[0], rigs[1] };
             if (playEntrance)
-                entrance = new LocalVersusEntrance(kazuyaObject.transform, jinObject.transform,
-                    cameraRig, battle, jin.actionMotion, jinActions, kazuya.actionMotion, kazuyaActions, gameplayLens);
+                entrance = new LocalVersusEntrance(objects[0].transform, objects[1].transform,
+                    cameraRig, battle, rigs[1].actionMotion, setups[1].actions, rigs[0].actionMotion, setups[0].actions, gameplayLens,
+                    setups[0].code, setups[1].code);
             victoryStaging = new[] {
-                new VictoryStaging(kazuyaObject.transform, kazuya.actionMotion, kazuyaActions, "kaz"),
-                new VictoryStaging(jinObject.transform, jin.actionMotion, jinActions, "jin") };
+                new VictoryStaging(objects[0].transform, rigs[0].actionMotion, setups[0].actions, setups[0].code),
+                new VictoryStaging(objects[1].transform, rigs[1].actionMotion, setups[1].actions, setups[1].code) };
             audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0; audioSource.volume = .3f;
             strikeSound = Tone("Strike", 110, .1f); guardSound = Tone("Guard", 420, .06f);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
@@ -109,6 +166,48 @@ namespace Versus.Remaster
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
         }
+        struct FighterSetup { public string code, prefix; public MuseumCharacter actions; public Fighter fighter; }
+
+        FighterSetup Setup(Fighter fighter)
+        {
+#if UNITY_EDITOR
+            if (!jinActions) jinActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Jin.asset");
+            if (!kazuyaActions) kazuyaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Kazuya.asset");
+            if (!xiaoyuActions) xiaoyuActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Xiaoyu.asset");
+#endif
+            var setup = fighter == Fighter.Jin ? new FighterSetup { code = "jin", prefix = "Jz_", actions = jinActions } :
+                        fighter == Fighter.Kazuya ? new FighterSetup { code = "kaz", prefix = "Kz_", actions = kazuyaActions } :
+                        new FighterSetup { code = "xia", prefix = "Fu_", actions = xiaoyuActions };
+            setup.fighter = fighter;
+            if (!setup.actions) throw new InvalidOperationException("Assign the " + fighter + " move catalog in LocalVersus.");
+            return setup;
+        }
+
+        // Scene-placed fighters are used once; a second copy (mirror match) or Xiaoyu comes from the prefab.
+        GameObject Spawn(FighterSetup setup, int player)
+        {
+            if (setup.fighter == Fighter.Jin)
+            {
+                if (sceneJin && sceneJin.activeSelf && (player == 0 || playerOneFighter != Fighter.Jin)) return sceneJin;
+                return Instantiate(Resources.Load<GameObject>("JinPlayable"), transform);
+            }
+            if (setup.fighter == Fighter.Kazuya)
+            {
+                if (sceneKazuya && (player == 0 || playerOneFighter != Fighter.Kazuya)) return sceneKazuya;
+#if UNITY_EDITOR
+                // An editor session can retain an older in-memory scene after the scene file changes.
+                if (!kazuyaPrefab) kazuyaPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Kazuya/Prefabs/Karate_Gi.prefab");
+#endif
+                if (!kazuyaPrefab) throw new InvalidOperationException("Assign the Kazuya Karate Gi prefab in LocalVersus.");
+                return Instantiate(kazuyaPrefab, transform);
+            }
+#if UNITY_EDITOR
+            if (!xiaoyuPrefab) xiaoyuPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Xiaoyu/Prefabs/Default_1P.prefab");
+#endif
+            if (!xiaoyuPrefab) throw new InvalidOperationException("Assign the Xiaoyu Default 1P prefab in LocalVersus.");
+            return Instantiate(xiaoyuPrefab, transform);
+        }
+
         static void Dress(GameObject fighter, MuseumCharacter character, System.Random random)
         {
             var outfit = FightWardrobe.DressSaved(fighter, character, random);
@@ -192,6 +291,20 @@ namespace Versus.Remaster
         }
         void Update()
         {
+            float realDelta = Time.unscaledDeltaTime;
+            if (battle != null && (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && !paused)
+                roundEndClock += realDelta;
+            impactShake *= Mathf.Exp(-realDelta * 9);
+            zoomHold -= realDelta;
+            if (koSlowTime > 0)
+            {
+                // Ease into and out of the final-blow slow motion rather than switching speed.
+                koSlowTime -= realDelta;
+                float elapsed = koSlowStart - koSlowTime;
+                float amount = Mathf.SmoothStep(0, 1, Mathf.Clamp01(elapsed / .15f)) * Mathf.SmoothStep(0, 1, Mathf.Clamp01(koSlowTime / .35f));
+                Time.timeScale = koSlowTime > 0 ? Mathf.Lerp(1, KoSlowScale, amount) : 1;
+                if (koSlowTime <= 0) koFocus = -1;
+            }
             if (victory != null && !paused) victory.Advance(Time.unscaledDeltaTime);
             if (entrance != null && entrance.Active)
             {
@@ -206,11 +319,8 @@ namespace Versus.Remaster
             { if (menu || battle.phase == MatchPhase.MatchOver) StartMatch(); else if (paused) paused = false; }
             if (menu || paused) return;
             if (automaticFight) { visualTime += Time.deltaTime; hitLabelTime -= Time.deltaTime; shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * 1.8f); return; }
-            for (int i = 0; i < 2; i++)
-            {
-                commands[i] = diagnostic ? PlayerCommand.Neutral : ReadInput(i);
-                if (commands[i].attack >= 0) { pending[i] = commands[i].attack; pendingAt[i] = Time.unscaledTime; }
-            }
+            if (!diagnostic)
+                for (int i = 0; i < 2; i++) pressedSinceTick[i] |= PressedButtons(i);
             visualTime += Time.deltaTime;
             hitLabelTime -= Time.deltaTime; shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * 1.8f);
         }
@@ -222,91 +332,305 @@ namespace Versus.Remaster
             {
                 if (battle.phase == MatchPhase.MatchOver)
                 {
+                    // Keep the fighters animating: the loser's original death fall plays out.
+                    CapturePrevious();
+                    battle.Tick(PlayerCommand.Neutral, PlayerCommand.Neutral);
+                    AfterTick();
                     if (battle.winner >= 0 && (victory == null || !victory.Complete)) return;
-                    if (++rematchTicks >= 180) { rematchTicks = 0; ClearVictory(); battle.Restart(); }
+                    if (++rematchTicks >= 180) { rematchTicks = 0; ClearVictory(); ResetImpactEffects(); battle.Restart(); lastPhase = battle.phase; }
                     return;
                 }
                 commands[0] = AutoCommand(0);
                 commands[1] = AutoCommand(1);
+                CapturePrevious();
                 battle.Tick(commands[0], commands[1]);
+                AfterTick();
                 return;
             }
             for (int i = 0; i < 2; i++)
-            { commands[i].attack = Time.unscaledTime - pendingAt[i] < .14f ? pending[i] : -1; pending[i] = -1; }
+            {
+                commands[i] = diagnostic ? PlayerCommand.Neutral : ReadInput(i);
+                commands[i].buttons |= pressedSinceTick[i]; pressedSinceTick[i] = 0;
+                // Convenience, not original behaviour: a player who stays down without input
+                // stands up in place after IdleGetupTicks (any getup input works at once).
+                var f = battle.fighters[i];
+                if (f.downedTicks >= IdleGetupTicks && commands[i].stick == 5 && commands[i].buttons == 0) commands[i].stick = 8;
+            }
+            CapturePrevious();
             battle.Tick(commands[0], commands[1]);
+            AfterTick();
         }
         PlayerCommand AutoCommand(int player)
         {
-            var command = PlayerCommand.Neutral;
-            if (battle.phase != MatchPhase.Fight) return command;
-            var self = battle.fighters[player]; var foe = battle.fighters[1 - player];
-            float gap = Mathf.Abs(foe.x - self.x), lane = foe.z - self.z;
-            if (Mathf.Abs(lane) > .3f) command.z = Mathf.Sign(lane);
-            if (gap > 1.45f) command.x = self.facing;
-            else if (gap < .9f && self.stun == 0) command.x = -self.facing * .45f;
-            if (foe.attack >= 0 && gap < 2.15f && self.attack < 0 &&
-                (battle.ticksLeft / 53 + player) % 3 == 0)
-            {
-                var threat = battle.Move(1 - player, foe.attack);
-                command.guard = true;
-                command.crouch = threat.height == HitHeight.Low;
-            }
-            if (aiCooldown[player] > 0) aiCooldown[player]--;
-            if (gap <= 1.7f && Mathf.Abs(lane) < .55f && self.attack < 0 && self.stun == 0 && !command.guard && aiCooldown[player] == 0)
-            {
-                int[] pool = catalogs[player].autoActions;
-                int choice = pool[(aiSequence[player]++ * 37 + player * 11) % pool.Length];
-                command.attack = choice;
-                var move = battle.Move(player, choice);
-                aiCooldown[player] = move.startup + move.active + move.recovery + 12;
-            }
-            return command;
+            if (battle.phase != MatchPhase.Fight) return PlayerCommand.Neutral;
+            return cpu[player].Next(battle.fighters[player], battle.fighters[1 - player]);
         }
         void LateUpdate()
         {
             if (views == null) return;
-            if (battle.phase == MatchPhase.MatchOver && battle.winner >= 0 && victory == null)
-            { victory = victoryStaging[battle.winner]; victory.Begin(); }
+            if (battle.phase == MatchPhase.MatchOver && battle.winner >= 0 && victory == null &&
+                (!battle.UsesCommandGraphs || roundEndClock >= VictoryDelaySeconds))
+            {
+                victory = victoryStaging[battle.winner];
+                // Only takes the winner's own moveset reaches (paired "_y" partner takes are never
+                // played by the winner); a button held at the end picks its take, as in the original.
+                var winnerGraph = graphs[battle.winner];
+                var reachable = VictoryTargets(winnerGraph);
+                int held = automaticFight || diagnostic ? 0 : ReadInput(battle.winner).buttons;
+                victory.Begin(e => reachable.ContainsKey(e.moveId), PreferredVictory(reachable, held, codes[battle.winner]));
+                victoryPlayer = battle.winner;
+                victoryAnchor = battle.fighters[victoryPlayer].Snapshot();
+                var loser = battle.fighters[1 - victoryPlayer];
+                float dx = loser.x - victoryAnchor.x, dz = loser.z - victoryAnchor.z, length = Mathf.Sqrt(dx * dx + dz * dz);
+                if (length > 1e-3f) { victoryAnchor.dirX = dx / length; victoryAnchor.dirZ = dz / length; }
+                victoryAnchor.turn = 0; victoryAnchor.backturned = false;
+            }
             if (victory != null) victory.Prepare();
             if (entrance != null && entrance.Active) entrance.PrepareMotion();
-            for (int i = 0; i < 2; i++) views[i].Render(battle.fighters[i], config.rules, visualTime,
-                !menu && !paused && battle.phase == MatchPhase.Fight && Mathf.Abs(commands[i].x) + Mathf.Abs(commands[i].z) > .1f);
+            var shown = new FighterState[2];
+            for (int i = 0; i < 2; i++)
+            {
+                shown[i] = victory != null && i == victoryPlayer && victoryAnchor != null ? victoryAnchor : Interpolated(i);
+                views[i].Render(shown[i], config.rules, visualTime,
+                    !menu && !paused && battle.phase == MatchPhase.Fight && commands[i].stick != 5);
+                if (!paused) { flexibleMotion[i]?.Tick(Time.deltaTime); wardrobeMotion[i]?.Tick(Time.deltaTime); }
+            }
             if (entrance != null && entrance.Active) { entrance.Present(); return; }
             if (victory != null) { victory.Present(cameraRig, gameplayLens); return; }
             gameplayLens.SetHorizontalFov(GameplayHorizontalFov);
-            var a = battle.fighters[0]; var b = battle.fighters[1];
+            var a = shown[0]; var b = shown[1];
             GameplayCameraFraming.Evaluate(new Vector3(a.x, 0, a.z), new Vector3(b.x, 0, b.z),
-                out Vector3 position, out Vector3 target);
-            position += new Vector3(Mathf.Sin(visualTime * 95) * shake * .15f, 0, 0);
-            cameraRig.transform.position = Vector3.Lerp(cameraRig.transform.position == Vector3.zero ? position : cameraRig.transform.position,
-                position, 1 - Mathf.Exp(-Time.unscaledDeltaTime * 7));
-            // Keep the calibrated level angle while the follow position catches up.
-            cameraRig.transform.rotation = Quaternion.LookRotation(target - position);
+                new Vector3(battle.screenRightX, 0, battle.screenRightZ), out Vector3 goalPosition, out Vector3 goalTarget);
+            // Ease the rig as a whole: the fight-line angle turns slowly (ignoring walk-cycle sway),
+            // the framing centre and distance follow faster, and the view always aims at the
+            // smoothed centre from the smoothed position, so turning and tracking never disagree.
+            var goalOffset = goalPosition - goalTarget;
+            float goalYaw = Mathf.Atan2(goalOffset.x, goalOffset.z) * Mathf.Rad2Deg;
+            float goalDistance = new Vector2(goalOffset.x, goalOffset.z).magnitude;
+            float dt = Time.unscaledDeltaTime;
+            // Airborne preset zoom and the KO close-up pull the rig in; the KO also centres the downed fighter.
+            float zoomGoal = koFocus >= 0 ? .72f : zoomHold > 0 ? .84f : 1;
+            if (dt > 0) cameraZoom = Mathf.SmoothDamp(cameraZoom, zoomGoal, ref zoomVelocity, .4f, Mathf.Infinity, dt);
+            goalDistance *= cameraZoom;
+            if (koFocus >= 0) goalTarget = Vector3.Lerp(goalTarget, new Vector3(shown[koFocus].x, goalTarget.y - .25f, shown[koFocus].z), .6f);
+            if (!cameraInitialized)
+            {
+                cameraYaw = goalYaw; cameraDistance = goalDistance; cameraTarget = goalTarget; cameraInitialized = true;
+                yawVelocity = distanceVelocity = 0; targetVelocity = Vector3.zero;
+            }
+            else if (dt > 0)
+            {
+                // The fight-line angle turns slowest (walk sway never shows), the framing centre
+                // follows a little faster, and the distance eases between the two.
+                cameraYaw = Mathf.SmoothDampAngle(cameraYaw, goalYaw, ref yawVelocity, .38f, 240, dt);
+                cameraDistance = Mathf.SmoothDamp(cameraDistance, goalDistance, ref distanceVelocity, .32f, Mathf.Infinity, dt);
+                cameraTarget = Vector3.SmoothDamp(cameraTarget, goalTarget, ref targetVelocity, .2f, Mathf.Infinity, dt);
+            }
+            var orbit = Quaternion.Euler(0, cameraYaw, 0);
+            var position = cameraTarget + orbit * Vector3.forward * cameraDistance + Vector3.up * goalOffset.y;
+            if (battle.phase == MatchPhase.Fight && koFocus < 0 && cinematic == null)
+            {
+                // Hard framing guarantee after the easing: if any fighter's head, hands, feet or hips
+                // (padded for limbs) would leave the frame, pull back at once instead of easing out.
+                float required = RequiredFramingDistance(Quaternion.LookRotation(cameraTarget - position), cameraTarget);
+                if (cameraDistance < required)
+                {
+                    cameraDistance = required; distanceVelocity = Mathf.Max(0, distanceVelocity);
+                    position = cameraTarget + orbit * Vector3.forward * cameraDistance + Vector3.up * goalOffset.y;
+                }
+            }
+            // Keep the calibrated level angle; hit and impact shake offset the camera without turning it.
+            var rotation = Quaternion.LookRotation(cameraTarget - position);
+            // Shakes use smooth noise (about 14 Hz) rather than a fast sine, so they read as weight, not jitter.
+            float realTime = Time.unscaledTime, amplitude = impactShake + shake * .05f;
+            var jolt = (orbit * Vector3.right * (Mathf.PerlinNoise(realTime * 14, .3f) * 2 - 1) +
+                        Vector3.up * (Mathf.PerlinNoise(.7f, realTime * 14 + 5) * 2 - 1) * .8f) * amplitude;
+            float fov = GameplayHorizontalFov;
+            if (cinematic != null)
+            {
+                // Original Rage Art camera, blended back to the gameplay view by the track's own weight.
+                float alpha = Mathf.Clamp01((Time.time - Time.fixedTime) / Time.fixedDeltaTime);
+                cinematic.Sample(cinematicFrame + alpha, cinematicAnchor, cinematicForward,
+                    out Vector3 shotPosition, out Vector3 shotTarget, out float shotFov, out float weight);
+                shotPosition.y = Mathf.Max(.25f, shotPosition.y);
+                var shotRotation = Quaternion.LookRotation(shotTarget - shotPosition);
+                position = Vector3.Lerp(shotPosition, position, weight);
+                rotation = Quaternion.Slerp(shotRotation, rotation, weight);
+                fov = Mathf.Lerp(shotFov, GameplayHorizontalFov, weight);
+            }
+            gameplayLens.SetHorizontalFov(fov);
+            cameraRig.transform.SetPositionAndRotation(position + jolt, rotation);
+        }
+
+        // Distance from the framing centre at which every framing bone fits inside the margins.
+        float RequiredFramingDistance(Quaternion look, Vector3 centre)
+        {
+            if (framingBones == null) return 0;
+            float tanY = Mathf.Tan(cameraRig.fieldOfView * .5f * Mathf.Deg2Rad), tanX = tanY * cameraRig.aspect;
+            var inverse = Quaternion.Inverse(look);
+            float required = 0;
+            foreach (var bones in framingBones)
+                foreach (var bone in bones)
+                {
+                    if (!bone) continue;
+                    // Camera looks along +z from -distance; a point's depth is distance + local.z.
+                    var local = inverse * (bone.position - centre);
+                    required = Mathf.Max(required,
+                        (Mathf.Abs(local.x) + FramingPadX) / (tanX * FramingMarginX) - local.z,
+                        (Mathf.Abs(local.y) + FramingPadY) / (tanY * FramingMarginY) - local.z);
+                }
+            return required;
+        }
+
+        // Victory takes targeted by the moveset's own cancels, with the held button (bits 1, 2, 4, 8 for
+        // 1-4) that selects each: those cancels carry the button one byte above the normal button bits.
+        static Dictionary<int, int> VictoryTargets(CommandGraph graph)
+        {
+            var targets = new Dictionary<int, int>();
+            foreach (var table in new[] { graph.cancels, graph.groupCancels })
+                foreach (var c in table)
+                {
+                    if ((c.command & 0xFFFFFFFF) == 0x800B || c.target < 0 || c.target >= graph.moves.Length) continue;
+                    int held = (int)((c.command >> 40) & 0xF);
+                    if (!targets.TryGetValue(c.target, out int known) || known == 0) targets[c.target] = held;
+                }
+            return targets;
+        }
+
+        static int PreferredVictory(Dictionary<int, int> targets, int held, string code)
+        {
+            if (held == 0) return -1;
+            foreach (var e in StagingCatalog.Load().entries)
+                if (e.character == code && e.kind == "victory" && targets.TryGetValue(e.moveId, out int button) &&
+                    button != 0 && (held & button) == button)
+                    return e.moveId;
+            return -1;
+        }
+
+        void CapturePrevious()
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                var f = battle.fighters[i];
+                previousPosition[i] = new Vector3(f.x, 0, f.z); previousFacing[i] = new Vector3(f.dirX, 0, f.dirZ);
+            }
+        }
+
+        // The simulation runs at 60 Hz; draw fighters between their last two ticks so motion stays
+        // smooth at any frame rate. Poses still come from the current tick's move and frame.
+        FighterState Interpolated(int i)
+        {
+            var f = battle.fighters[i];
+            if (!battle.UsesCommandGraphs || menu || paused) return f;
+            float alpha = Mathf.Clamp01((Time.time - Time.fixedTime) / Time.fixedDeltaTime);
+            var current = new Vector3(f.x, 0, f.z);
+            if ((current - previousPosition[i]).sqrMagnitude > 1) return f;   // round reset: no sweep
+            var s = f.Snapshot();
+            var p = Vector3.Lerp(previousPosition[i], current, alpha);
+            var d = Vector3.Slerp(previousFacing[i], new Vector3(f.dirX, 0, f.dirZ), alpha);
+            s.x = p.x; s.z = p.z;
+            if (d.sqrMagnitude > 1e-6f) { d.Normalize(); s.dirX = d.x; s.dirZ = d.z; }
+            return s;
+        }
+        // Tekken 7 PC defaults: P1 W/A/S/D with U I J K for 1 2 3 4. P2 uses the arrows and the number
+        // pad laid out like the buttons (4 5 over 1 2), or O P L ; without a pad. Gamepads follow
+        // the original pad layout: X = 1, Y = 2, A = 3, B = 4.
+        static readonly KeyCode[][] ButtonKeys = {
+            new[] { KeyCode.U, KeyCode.I, KeyCode.J, KeyCode.K },
+            new[] { KeyCode.Keypad4, KeyCode.Keypad5, KeyCode.Keypad1, KeyCode.Keypad2 } };
+        static readonly KeyCode[] AlternateP2 = { KeyCode.O, KeyCode.P, KeyCode.L, KeyCode.Semicolon };
+        static readonly int[] PadButton = { 2, 3, 0, 1 };
+        bool ButtonHeld(int player, int button, bool down)
+        {
+            bool one = player == 0;
+            KeyCode key = ButtonKeys[player][button], pad = (KeyCode)((int)(one ? KeyCode.Joystick1Button0 : KeyCode.Joystick2Button0) + PadButton[button]);
+            return down ? Input.GetKeyDown(key) || (!one && Input.GetKeyDown(AlternateP2[button])) || Input.GetKeyDown(pad)
+                        : Input.GetKey(key) || (!one && Input.GetKey(AlternateP2[button])) || Input.GetKey(pad);
+        }
+        int PressedButtons(int player)
+        {
+            int mask = 0;
+            for (int b = 0; b < 4; b++) if (ButtonHeld(player, b, true)) mask |= 1 << b;
+            return mask;
         }
         PlayerCommand ReadInput(int player)
         {
             bool one = player == 0;
             var c = PlayerCommand.Neutral;
-            c.x = (Input.GetKey(one ? KeyCode.D : KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey(one ? KeyCode.A : KeyCode.LeftArrow) ? 1 : 0);
-            c.z = (Input.GetKey(one ? KeyCode.W : KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey(one ? KeyCode.S : KeyCode.DownArrow) ? 1 : 0);
-            c.guard = Input.GetKey(one ? KeyCode.R : KeyCode.RightShift);
-            c.crouch = Input.GetKey(one ? KeyCode.T : KeyCode.RightControl);
-            KeyCode[] keys = one ? new[] { KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J } :
-                                   new[] { KeyCode.Keypad1, KeyCode.Keypad2, KeyCode.Keypad4, KeyCode.Keypad5 };
-            // Alternate P2 attack keys for keyboards without a number pad.
-            KeyCode[] alternate = { KeyCode.Comma, KeyCode.Period, KeyCode.Slash, KeyCode.Semicolon };
-            int joystickBase = (int)(one ? KeyCode.Joystick1Button0 : KeyCode.Joystick2Button0);
-            for (int i = 0; i < 4; i++)
-                if (Input.GetKeyDown(keys[i]) || (!one && Input.GetKeyDown(alternate[i])) || Input.GetKeyDown((KeyCode)(joystickBase + i))) c.attack = i;
-            c.x = Mathf.Clamp(c.x + Input.GetAxisRaw(one ? "P1StickX" : "P2StickX"), -1, 1);
-            c.z = Mathf.Clamp(c.z - Input.GetAxisRaw(one ? "P1StickY" : "P2StickY"), -1, 1);
-            c.guard |= Input.GetKey((KeyCode)(joystickBase + 4)); c.crouch |= Input.GetKey((KeyCode)(joystickBase + 5));
+            float x = (Input.GetKey(one ? KeyCode.D : KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey(one ? KeyCode.A : KeyCode.LeftArrow) ? 1 : 0);
+            float y = (Input.GetKey(one ? KeyCode.W : KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey(one ? KeyCode.S : KeyCode.DownArrow) ? 1 : 0);
+            x = Mathf.Clamp(x + Input.GetAxisRaw(one ? "P1StickX" : "P2StickX"), -1, 1);
+            y = Mathf.Clamp(y - Input.GetAxisRaw(one ? "P1StickY" : "P2StickY"), -1, 1);
+            int column = x > .5f ? 2 : x < -.5f ? 0 : 1, row = y > .5f ? 2 : y < -.5f ? 0 : 1;
+            c.stick = row * 3 + column + 1;
+            for (int b = 0; b < 4; b++) if (ButtonHeld(player, b, false)) c.buttons |= 1 << b;
             return c;
         }
+        void OnMoveProperty(int player, long id, long value)
+        {
+            switch (id)
+            {
+                // Two families of four original shake levels; amplitudes are not stored in the data.
+                case 0x8001: case 0x8006: Impact(.012f); break;
+                case 0x8002: case 0x8007: Impact(.025f); break;
+                case 0x8003: case 0x8008: Impact(.045f); break;
+                case 0x8004: case 0x8009: Impact(.08f); break;
+                case 0x84CC: zoomHold = .45f; break;          // preset camera zoom on airborne reactions
+                case 0x8439: case 0x843A:                      // cinematic camera, left/right screen side
+                    if ((value & 0xC000) == 0x4000 && (id == 0x8439) == (battle.fighters[player].facing > 0))
+                        StartCinematic(player, (int)(value & 0x3FFF));
+                    break;
+            }
+        }
+
+        void Impact(float amplitude) => impactShake = Mathf.Max(impactShake, amplitude);
+
+        void StartCinematic(int player, int track)
+        {
+            try { cinematic = new FightCameraTrack(codes[player] + "_" + track); }
+            catch (Exception e) { Debug.LogWarning(e.Message); cinematic = null; return; }
+            var f = battle.fighters[player];
+            cinematicPlayer = player; cinematicFrame = 0;
+            cinematicAnchor = new Vector3(f.x, 0, f.z); cinematicForward = new Vector3(f.dirX, 0, f.dirZ);
+        }
+
+        void StopCinematic() { cinematic = null; cinematicPlayer = -1; }
+
+        void AfterTick()
+        {
+            if (cinematic != null)
+            {
+                cinematicFrame++;
+                // The camera belongs to the attacker's action: it ends with the track, the round,
+                // or when the attacker is hit out of it.
+                if (cinematicFrame >= cinematic.Frames - 1 || battle.phase != MatchPhase.Fight || battle.fighters[cinematicPlayer].reacting)
+                    StopCinematic();
+            }
+            if (lastPhase == MatchPhase.Fight && battle.phase != MatchPhase.Fight) roundEndClock = 0;
+            if (lastPhase == MatchPhase.Fight && battle.phase != MatchPhase.Fight && battle.result != "TIME UP")
+            {
+                // Final blow: brief slow motion, closing in on the fighter who went down.
+                // Final round: a longer slow motion, as the match-deciding blow in the original.
+                koSlowTime = battle.phase == MatchPhase.MatchOver ? KoSlowDuration * 1.6f : KoSlowDuration;
+                koSlowStart = koSlowTime;
+                koFocus = battle.winner >= 0 ? 1 - battle.winner : 0;
+                Impact(.06f);
+            }
+            lastPhase = battle.phase;
+        }
+
+        void ResetImpactEffects()
+        {
+            impactShake = zoomHold = koSlowTime = 0; koFocus = -1; Time.timeScale = 1; StopCinematic();
+            cameraInitialized = false;
+        }
+
+        void OnDisable() => Time.timeScale = 1;
+
         void OnApplicationFocus(bool focus) { if (!focus && !menu && !diagnostic) { paused = true; ClearInputs(); } }
-        void ClearInputs() { for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pending[i] = -1; } }
-        void ClearVictory() { if (victory != null) victory.Clear(); victory = null; }
-        void StartMatch() { menu = false; paused = false; ClearVictory(); ClearInputs(); battle.Restart(); }
+        void ClearInputs() { for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pressedSinceTick[i] = 0; cpu[i]?.Clear(); } }
+        void ClearVictory() { if (victory != null) victory.Clear(); victory = null; victoryPlayer = -1; victoryAnchor = null; }
+        void StartMatch() { menu = false; paused = false; ClearVictory(); ClearInputs(); ResetImpactEffects(); battle.Restart(); lastPhase = battle.phase; }
         void OnHit(HitEvent hit)
         {
             hitsResolved++;
@@ -358,7 +682,7 @@ namespace Versus.Remaster
                 float x = i == 0 ? 40 : 740; var f = battle.fighters[i];
                 Label(new Rect(x, 14, 470, 30), "P" + (i + 1) + "   " + (i == 0 ? config.playerOne : config.playerTwo), text);
                 Panel(new Rect(x, 50, 500, 18), new Color(.2f, .22f, .27f));
-                float width = 500f * f.health / config.rules.health;
+                float width = 500f * f.health / battle.rules.health;
                 Panel(new Rect(i == 0 ? x : x + 500 - width, 50, width, 18), i == 0 ? config.colorOne : config.colorTwo);
                 Label(new Rect(x, 73, 360, 25), f.health + " HP    /    " + f.wins + " ROUND" + (f.wins == 1 ? "" : "S"), small);
             }
@@ -368,17 +692,31 @@ namespace Versus.Remaster
             if (hitLabelTime > 0) Label(new Rect(440, 150, 400, 40), hitLabel, new GUIStyle(text) { alignment = TextAnchor.MiddleCenter }, Accent);
             if (battle.phase == MatchPhase.Intro && (entrance == null || !entrance.Active))
                 Label(new Rect(250, 240, 780, 90), battle.phaseTicks > 45 ? "ROUND " + battle.round : "FIGHT", title);
-            if (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver)
+            if ((battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && battle.UsesCommandGraphs && roundEndClock < KoCallSeconds)
+            {
+                // The round call first, over the slow-motion fall.
+                string call = battle.result == "KNOCKOUT" ? "K.O." : battle.result == "DOUBLE KO" ? "DOUBLE K.O." : battle.result;
+                float pop = Mathf.SmoothStep(1.35f, 1, Mathf.Clamp01(roundEndClock / .25f));
+                var callStyle = new GUIStyle(title) { fontSize = Mathf.RoundToInt(120 * pop) };
+                Label(new Rect(140, 210, 1000, 200), call, callStyle, Accent);
+            }
+            else if (battle.phase == MatchPhase.MatchOver && victory != null && !victory.Complete)
+            {
+                // During the winner's victory take only a lower-third banner, as in the original.
+                Panel(new Rect(0, 560, 1280, 70), Ink);
+                Label(new Rect(0, 565, 1280, 60), (battle.winner == 0 ? config.playerOne : config.playerTwo) + "  WINS", new GUIStyle(title) { fontSize = 40 }, Accent);
+            }
+            else if (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver)
             {
                 Panel(new Rect(260, 220, 760, 250), Ink);
-                Label(new Rect(280, 235, 720, 80), battle.result, title, Accent);
+                Label(new Rect(280, 235, 720, 80), battle.result == "KNOCKOUT" ? "K.O." : battle.result == "DOUBLE KO" ? "DOUBLE K.O." : battle.result, title, Accent);
                 string result = battle.winner < 0 ? "DRAW - ROUND REPLAY" : "PLAYER " + (battle.winner + 1) + (battle.phase == MatchPhase.MatchOver ? " WINS THE MATCH" : " WINS THE ROUND");
                 Label(new Rect(280, 315, 720, 45), result, new GUIStyle(text) { alignment = TextAnchor.MiddleCenter });
                 if (battle.phase == MatchPhase.MatchOver && GUI.Button(new Rect(470, 390, 340, 52), "REMATCH   /   ENTER", button)) StartMatch();
             }
             Panel(new Rect(0, 650, 1280, 70), Ink);
-            Label(new Rect(30, 657, 1200, 23), "P1  WASD  /  F G H J attacks  /  R guard  /  T crouch       P2  ARROWS  /  NUM 1 2 4 5 attacks  /  R-SHIFT guard  /  R-CTRL crouch", small);
-            Label(new Rect(30, 682, 1200, 23), "F1 controls   /   F2 auto/manual   /   ESC pause       Jin and Kazuya / prototype combat rules.", small);
+            Label(new Rect(30, 657, 1200, 23), "P1  W A S D  /  U I J K = 1 2 3 4        P2  ARROWS  /  NUM 4 5 1 2 (or O P L ;) = 1 2 3 4        Hold back to guard", small);
+            Label(new Rect(30, 682, 1200, 23), "F1 command list   /   F2 auto/manual   /   ESC pause       Original " + config.playerOne + " and " + config.playerTwo + " movesets.", small);
             if (help) DrawHelp();
             if (paused)
             {
@@ -386,7 +724,7 @@ namespace Versus.Remaster
                 Panel(new Rect(440, 180, 400, 340), Ink); Label(new Rect(440, 195, 400, 80), "PAUSED", title);
                 if (GUI.Button(new Rect(490, 290, 300, 48), "RESUME", button)) paused = false;
                 if (GUI.Button(new Rect(490, 350, 300, 48), "RESTART MATCH", button)) StartMatch();
-                if (GUI.Button(new Rect(490, 410, 300, 48), "MAIN MENU", button)) { menu = true; paused = false; ClearInputs(); }
+                if (GUI.Button(new Rect(490, 410, 300, 48), "MAIN MENU", button)) { menu = true; paused = false; ClearInputs(); ResetImpactEffects(); }
             }
         }
         void DrawMenu()
@@ -395,24 +733,41 @@ namespace Versus.Remaster
             Label(new Rect(80, 100, 700, 35), "TEKKEN   /   UNITY REMASTER WORKSPACE", small, Accent);
             Label(new Rect(70, 150, 720, 100), "VERSUS", new GUIStyle(title) { fontSize = 94, alignment = TextAnchor.MiddleLeft });
             Label(new Rect(80, 270, 700, 60), "TWO PLAYERS. ONE ARENA.", text);
-            Label(new Rect(80, 330, 700, 65), "Play as KAZUYA MISHIMA against Player 2 (JIN).\nOriginal combat clips / local versus", small);
+            Label(new Rect(80, 330, 700, 65), "Play as " + config.playerOne + " against Player 2 (" + config.playerTwo + ").\nOriginal movesets / local versus", small);
             if (GUI.Button(new Rect(80, 440, 400, 60), "LOCAL TWO-PLAYER   /   ENTER", button)) StartMatch();
             if (GUI.Button(new Rect(80, 515, 195, 45), "CONTROLS", button)) help = !help;
             if (GUI.Button(new Rect(285, 515, 195, 45), "QUIT", button)) Application.Quit();
-            Label(new Rect(80, 642, 1100, 35), "KEYBOARD SHARING + TWO GAMEPADS    /    FIRST TO TWO    /    60-SECOND ROUNDS", small);
+            Label(new Rect(80, 642, 1100, 35), "KEYBOARD SHARING + TWO GAMEPADS    /    FIRST TO " + config.rules.roundsToWin + "    /    " + config.rules.seconds + "-SECOND ROUNDS", small);
             if (help) DrawHelp();
         }
+        int helpPage;
         void DrawHelp()
         {
-            Panel(new Rect(225, 145, 830, 440), Ink);
-            Label(new Rect(255, 165, 760, 55), "LOCAL CONTROLS", title);
-            string controls = "PLAYER 1:  WASD move / sidestep.  F jab, G cross, H sweep, J kick.  R guard, T crouch.\n\n" +
-                "PLAYER 2:  Arrow keys move.  Numpad 1, 2, 4, 5 attack (or , . / ;).  Right Shift guard, Right Ctrl crouch.\n\n" +
-                "GAMEPADS:  Controller 1 = P1; controller 2 = P2. Left stick move. Buttons 0-3 attack. Bumpers guard / crouch.\n\n" +
-                "Hold back to guard. Crouch + guard stops sweeps; mids beat crouching guard. High jabs miss crouching targets.\n\n" +
-                "Keyboard rollover varies. Two controllers are useful when many keys are held. Controller mappings use the legacy Input Manager.";
-            Label(new Rect(260, 235, 760, 265), controls, new GUIStyle(small) { wordWrap = true, fontSize = 16 });
-            if (GUI.Button(new Rect(485, 515, 310, 45), "CLOSE   /   F1", button)) help = false;
+            const int perPage = 14;
+            int pages = Mathf.Max(1, Mathf.CeilToInt(Mathf.Max(graphs[0].demos.Length, graphs[1].demos.Length) / (float)perPage));
+            if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.PageDown) helpPage = (helpPage + 1) % pages;
+            if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.PageUp) helpPage = (helpPage + pages - 1) % pages;
+            helpPage = Mathf.Clamp(helpPage, 0, pages - 1);
+            Panel(new Rect(110, 95, 1060, 540), Ink);
+            Label(new Rect(140, 105, 1000, 45), "COMMAND LIST", new GUIStyle(title) { fontSize = 34 });
+            Label(new Rect(140, 150, 1000, 44), "Directions are relative to facing: f = toward the opponent, b = away (hold to guard), u/d = up/down.\n" +
+                "P1: W A S D, U I J K = 1 2 3 4.   P2: arrows, number pad 4 5 1 2 (or O P L ;) = 1 2 3 4.   Pads: X Y A B = 1 2 3 4.", small);
+            var line = new GUIStyle(small) { fontSize = 14 };
+            for (int side = 0; side < 2; side++)
+            {
+                float x = 140 + side * 510;
+                Label(new Rect(x, 200, 480, 24), "P" + (side + 1) + "  " + (side == 0 ? config.playerOne : config.playerTwo), text, Accent);
+                var demos = graphs[side].demos;
+                for (int k = 0; k < perPage; k++)
+                {
+                    int index = helpPage * perPage + k;
+                    if (index >= demos.Length) break;
+                    Label(new Rect(x, 232 + k * 24, 250, 22), demos[index].name, line);
+                    Label(new Rect(x + 255, 232 + k * 24, 230, 22), demos[index].command.Replace("{U+E034}", ",n,"), line, Color.white);
+                }
+            }
+            Label(new Rect(140, 572, 600, 22), "PAGE " + (helpPage + 1) + " / " + pages + "   (Page Up / Page Down)", small);
+            if (GUI.Button(new Rect(860, 568, 280, 45), "CLOSE   /   F1", button)) help = false;
         }
     }
 }

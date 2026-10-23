@@ -18,8 +18,13 @@ namespace Versus.Remaster
         Quaternion[] rotations;
         Quaternion[] fingerPoses;
         bool[] fingerJoints;
-        readonly Dictionary<string, Transform> byName = new Dictionary<string, Transform>();
+        // Rigs differ in case (Xiaoyu: Base, HEAD), so bone lookups ignore it.
+        readonly Dictionary<string, Transform> byName = new Dictionary<string, Transform>(System.StringComparer.OrdinalIgnoreCase);
         Transform pelvis;
+        // Heading shown on screen: eases toward the fighter's facing so re-facing the opponent after
+        // a long move, a cross-up or a hit turns the body instead of snapping it.
+        Vector3 shownDir, shownAt;
+        bool hasShownDir;
         Material[] materials;
         Color[] baseColors;
         void Awake() => Initialize();
@@ -46,12 +51,32 @@ namespace Versus.Remaster
             materials = allMaterials.ToArray(); baseColors = new Color[materials.Length];
             for (int i = 0; i < materials.Length; i++) baseColors[i] = materials[i].color;
         }
+        Vector3 ShownDirection(FighterState f)
+        {
+            var target = new Vector3(f.dirX, 0, f.dirZ);
+            var at = new Vector3(f.x, 0, f.z);
+            // A new round or a staged cut places the fighter afresh: show its heading at once.
+            if (!hasShownDir || (at - shownAt).sqrMagnitude > .25f || target.sqrMagnitude < 1e-6f) shownDir = target;
+            else
+            {
+                // Ease the yaw about up only (a half turn must not tip the body through the vertical).
+                float ease = 1 - Mathf.Exp(-Mathf.Max(0, Time.deltaTime) * 18);
+                float yaw = Mathf.LerpAngle(Mathf.Atan2(shownDir.x, shownDir.z) * Mathf.Rad2Deg, Mathf.Atan2(target.x, target.z) * Mathf.Rad2Deg, ease);
+                shownDir = new Vector3(Mathf.Sin(yaw * Mathf.Deg2Rad), 0, Mathf.Cos(yaw * Mathf.Deg2Rad));
+            }
+            hasShownDir = true; shownAt = at;
+            return shownDir.sqrMagnitude > 1e-6f ? shownDir : Vector3.forward;
+        }
+
         public void Render(FighterState f, MatchRules rules, float clock, bool moving)
         {
             Initialize();
             for (int i = 0; i < bones.Length; i++) { bones[i].localPosition = positions[i]; bones[i].localRotation = rotations[i]; }
             transform.position = new Vector3(f.x, 0, f.z);
-            transform.rotation = Quaternion.Euler(0, f.facing > 0 ? 90 : -90, 0);
+            // Command battles face the opponent in 3D; the prototype faces along x.
+            // The carried turn (backturned stance) rotates the body about up, positive to its right.
+            transform.rotation = f.move >= 0 ? Quaternion.LookRotation(ShownDirection(f)) * Quaternion.Euler(0, f.turn, 0)
+                                             : Quaternion.Euler(0, f.facing > 0 ? 90 : -90, 0);
             float action = 0;
             if (f.attack >= 0)
             {
@@ -82,7 +107,8 @@ namespace Versus.Remaster
             // Absolute bind-relative poses: no sideways curl or accumulated rotation.
             for (int i = 0; i < bones.Length; i++)
                 if (fingerJoints[i]) bones[i].localRotation = fingerPoses[i];
-            if (f.health == 0)
+            // Command battles play the original knockdown reaction instead of this tilt.
+            if (f.health == 0 && f.move < 0)
             { transform.position += Vector3.up * .18f; transform.rotation *= Quaternion.Euler(-83, 0, 0); }
             for (int i = 0; i < materials.Length; i++) materials[i].color = f.flash > 0 ? Color.Lerp(baseColors[i], Color.white, .75f) : baseColors[i];
             if(actionMotion)actionMotion.Apply(f, f.attack >= 0 ? fighterMoves[f.attack] : null, clock, moving);

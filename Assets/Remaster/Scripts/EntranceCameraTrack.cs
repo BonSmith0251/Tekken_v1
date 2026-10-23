@@ -187,6 +187,23 @@ namespace Versus.Remaster
     public static class GameplayCameraFraming
     {
         public const float HorizontalFov = 65f;
+        /// <summary>Frames both fighters from the side of their line; screenRight is that line's screen-right direction.</summary>
+        public static void Evaluate(Vector3 one, Vector3 two, Vector3 screenRight, out Vector3 position, out Vector3 target)
+        {
+            screenRight.y = 0;
+            if (screenRight.sqrMagnitude < 1e-6f) screenRight = Vector3.right;
+            screenRight.Normalize();
+            var forward = Vector3.Cross(screenRight, Vector3.up);
+            target = (one + two) * .5f;
+            target.y = 1.08f;
+            var offset = two - one; offset.y = 0;
+            float along = Mathf.Abs(Vector3.Dot(offset, screenRight)), depth = Mathf.Abs(Vector3.Dot(offset, forward));
+            float halfWidth = along * .5f + .65f;
+            float horizontalDistance = halfWidth / (Mathf.Tan(HorizontalFov * .5f * Mathf.Deg2Rad) * .90f);
+            float distance = Mathf.Max(3.45f, horizontalDistance) + depth * .5f;
+            position = target - forward * distance;
+        }
+
         public static void Evaluate(Vector3 one, Vector3 two, out Vector3 position, out Vector3 target)
         {
             target = (one + two) * .5f;
