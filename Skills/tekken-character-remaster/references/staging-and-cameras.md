@@ -4,9 +4,24 @@
 
 Use original move records and properties, not guessed numeric ranges. Native `*_sNN` and `*_wNN` stems are useful entrance/victory candidates in this dataset; verify their meaning for the requested fighter. Some story/paired records alias a clip. Preserve the records but avoid double-weighting identical entrance aliases when choosing randomly. Compare body, secondary and camera references before deduplicating by animation name.
 
-The inspector lists aliases and all secondary/camera events. Resolve missing tracks explicitly. In this session two paired victory variants had no standalone camera/face property and received a documented full-body fallback; do not claim those were original camera tracks.
+The inspector lists aliases and all secondary/camera events. Resolve missing tracks explicitly. Paired victory variants (the `_y` takes such as Xiaoyu's `fu_w01_y`, move 2435, and earlier Jin/Kazuya pairs) usually have hand tracks but no standalone camera or face property. They get a labelled frontal full-body fallback, and the on-screen caption says so; do not claim those are original camera tracks.
 
-`StagingCatalog.json` and `StagingCatalog.cs` currently connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. Generalize the manifest/exporter inputs before applying it to the full roster: `bake_staging_tracks.py` currently loops only Jin and Kazuya and assumes synchronized single events.
+Camera extraction rules that held for Jin, Kazuya and Xiaoyu:
+
+- Read property 33845 (0x8435) from bank 4.
+- Assert C8 format, four descriptors, and a sample count equal to the move's frames.
+- Secondary properties are 33838 (left hand), 33839 (right hand) and 33986 (face).
+
+`StagingCatalog.json` and `StagingCatalog.cs` connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. The catalog holds jin 9, kaz 10 and xia 9 takes. `bake_staging_tracks.py` bakes only Jin and Kazuya itself, assumes synchronized single events, and then appends the entries from `Assets/Remaster/Editor/XiaoyuSource/staging.json`, so a re-bake keeps Xiaoyu.
+
+## Adding a fighter to staging_test
+
+1. Bake the fighter's tracks with a per-character script, for example `UnityRemaster/prepare_xiaoyu_staging.py`. It writes `<Char>Source/staging.json`, `Resources/EntranceCameras/<code>_staging_<move>.bytes` (T7C1) and the SMT1 secondary resources.
+2. Add a merge hook for that `staging.json` to `bake_staging_tracks.py`.
+3. Add the `MuseumCharacter` asset's GUID to the `characters:` list in `staging_test.unity`. Edit the file on disk only when that scene is not open in the editor; check the Unity window title.
+4. Make sure `StagingTestPlayer.Code()` resolves the fighter through `characterCode`, and that its bone dictionary ignores case.
+5. Attach character dynamics (for example `XiaoyuSecondaryDynamics`) per take, after dressing. Call `Reset()` after the first `Present()`, tick with unscaled delta time, freeze while paused, and null them on take change.
+6. Filter editor validators to the characters they support. `VictoryStaging.cs` filters by key.
 
 ## Sequence behavior
 
@@ -37,6 +52,12 @@ Kazuya `kz_s03`, move 2326 in this installation, repeats source descent segments
 ## Verification
 
 - Check move/body/camera IDs, frame counts, finite samples and unique resource bindings.
+- Before Play, run an offline consistency check per catalog entry:
+  - JRT1 body frames = SMT1 frames = T7C1 frames;
+  - JRT1 bone count = the asset's `boneNames` count (Xiaoyu: 19);
+  - the camera magic is `T7C1`.
+
+  Editor.log lines such as "Staging test playing Ling Xiaoyu entrance fu_s00" prove that takes cycle, not that they look right.
 - Scan each take through the whole timeline and edited joins. Record visibility and camera position/angular/FOV changes; a passing JSON boolean without reviewing those values is insufficient.
 - Capture actual rendered frames after at least several skinning updates, not a stale mesh immediately after setting bones. Inspect opening/middle/end and joins where the risk is localized.
 - Exercise randomized startup, skip, fight, both winner paths and cleanup for changed flows. Use deterministic validation selection without leaking it into normal random play.

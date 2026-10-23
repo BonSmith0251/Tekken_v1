@@ -1,11 +1,13 @@
 ---
 name: tekken-character-remaster
-description: Import, repair, and validate original Tekken character models, body and hand/facial animation, entrance and victory staging, and action-specific cameras in a Unity remaster. Use when extending this character/museum/versus pipeline to additional fighters or fixing its animation and camera integration; includes optional HDRP stage-lighting guidance.
+description: Import, repair, and validate original Tekken character models, body and hand/facial animation, entrance and victory staging, and action-specific cameras in a Unity remaster. Use when extending this character/museum/versus pipeline to additional fighters or fixing its animation, camera, HDRP material, skinning or cloth problems (wrong-looking eyes, skin, faceting, swollen limbs); includes optional HDRP stage-lighting guidance.
 ---
 
 # Tekken Character Remaster
 
-Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested Jin/Kazuya workflow; it is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
+Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested workflow for Jin and Kazuya (museum, versus, staging) and Xiaoyu (museum and `staging_test`; not versus). It is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
+
+Costumes, outfits and worn items (hair, hats, glasses, customization pieces) are handled by the separate `tekken-costume-wardrobe` skill (`~/.claude/skills/tekken-costume-wardrobe`). Use it for those and keep the wardrobe in its own `Wardrobe.unity` scene.
 
 ## Start with the requested scope
 
@@ -13,10 +15,13 @@ Extend the existing project using each requested fighter's own source assets and
 - Inspect the working tree and current Unity editor/play state. Preserve existing museum, costume and render work. Stop an active Play session before script changes: this project's nonserialized battle state is lost on domain reload.
 - For a named fighter, process that fighter. For an explicit request for all characters, inventory the available roster and process it incrementally; report coverage by character without presenting one successful fighter as roster-wide success.
 - Follow the user's chosen scene, engine version and rendering pipeline. A new character does not require a pipeline migration, stage replacement or publishing operation.
+- Confirm which scene a visual report comes from before fixing it. The museum, `staging_test`, versus and the wardrobe each build their own lights and dynamics; a user once had to stop a museum investigation with "no, no. in the staging_test scene."
+- Other Claude sessions and Codex may edit this project concurrently, and Codex keeps a batchmode copy (`UnityRemaster/CategoryBuild`) whose deploy scripts overwrite main-project files. Check recent changes and linked sessions before rebuilding something; see [project-and-rendering.md](references/project-and-rendering.md).
+- Stay within the requested scope. The user declined generalizing versus for Xiaoyu ("Not now"); offer such follow-ups, do not start them.
 
 ## Build a character profile first
 
-Read [character-pipeline.md](references/character-pipeline.md) for body, skin, hand and face conversion. Record source character code, animation prefix, moveset/archive paths, skeleton, costume assets, proven coordinate conversions, stance move, staging candidates and imported resource locations. Resolve these per fighter.
+Read [character-pipeline.md](references/character-pipeline.md) for body, skin, hand and face conversion. Record source character code, animation prefix (it can differ from the code: Xiaoyu is `xia` with `fu_` animations), moveset/archive paths, skeleton asset, costume assets, proven coordinate conversions, stance move, staging candidates and imported resource locations. Resolve these per fighter. `Tools/xiaoyu-profile.json` in the Unity project is the worked example of a profile.
 
 Run the bundled read-only inspector to find candidate staging records and audit their references:
 
@@ -40,9 +45,24 @@ The JSON output identifies candidates and unresolved references, not semantic pr
 - Inspect both hands and the mouth in representative poses; a closed fist, nonzero bone motion or a successful import alone does not prove correct deformation.
 - Exercise each connected staging action through its full duration, including joins, source frame edits, hand/face synchronization, camera motion and subject visibility. Source camera files must affect the rendered path, not merely be loaded.
 - Capture real rendered frames after skinning updates. Inspect screenshots for mesh occlusion as well as viewport bounds; an on-screen head can still be hidden by arena geometry.
+- After every import, audit the materials and meshes against Jin and Kazuya:
+  - no all-zero `*_MaskMap.png`;
+  - no SpecularColor material ID without a specular map;
+  - every alpha face overlay transparent (`*_eye_shadow`, `*_eye_corner`);
+  - eyes tinted two-tone (iris versus sclera) with smoothness around 0.25;
+  - roughly 0.55–0.8 vertices per triangle (3.00 means triangle soup and flat shading);
+  - re-imported meshes really updated (the `CopySerialized` trap).
+
+  See [project-and-rendering.md](references/project-and-rendering.md) and [character-pipeline.md](references/character-pipeline.md). After fixing one material, re-check skin separately from clothing: one fix has exposed a hidden mesh defect before ("costumes are ok, but the body skin is not ok now").
+- Where runtime `Cloth` is added, keep skin off the cloth renderer. Check neck and thigh close-ups in the user's museum with dynamics running; captures with cloth disabled hide the defect.
+- The user's verdict in their running scene ("Looks fixed") is the accepted final check. Report preview renders, JSON validators and log lines as not yet checked in their scene.
 - Verify a fresh startup, skip-to-fight, winner playback and rematch cleanup when those flows changed. Avoid unrelated exhaustive tests once the changed behavior is sufficiently checked.
 - Report exact coverage, remaining fallbacks and whether changes were only saved, committed locally, or pushed. This skill does not itself authorize GitHub publication.
 
 ## Session defaults to preserve unless changed by the user
 
-Randomize one entrance per character at startup, avoid immediate repeats, and reserve victory actions for wins. Preserve smooth joins and readable front-facing shots while retaining each action's native camera movement and shot scale. These are project preferences, not Tekken format rules.
+Randomize one entrance per character at startup, avoid immediate repeats, and reserve victory actions for wins. Preserve smooth joins and readable front-facing shots while retaining each action's native camera movement and shot scale.
+
+Outside the wardrobe, every scene (versus, `staging_test`, museum) dresses each fighter with one random item per slot from the items the user saved in the Wardrobe scene, ignoring preset costumes. The museum's costume list is replaced by a SAVED ITEMS list with a Shuffle button. Characters with nothing saved fall back to their first preset, with warnings. Details are in the wardrobe skill.
+
+These are project preferences, not Tekken format rules.
