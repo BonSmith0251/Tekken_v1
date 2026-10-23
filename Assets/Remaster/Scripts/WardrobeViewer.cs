@@ -26,12 +26,23 @@ namespace Versus.Remaster
         WardrobeDynamics dynamics;
         // Saved items per character code (by slot name), and the codes with unsaved ticks.
         readonly Dictionary<string,Dictionary<string,HashSet<string>>> allPicks=new Dictionary<string,Dictionary<string,HashSet<string>>>();
+        // Picked item colors per character code: piece -> four optional sRGB colors.
+        readonly Dictionary<string,Dictionary<string,Color?[]>> allColors=new Dictionary<string,Dictionary<string,Color?[]>>();
+        Dictionary<string,Color?[]> colors;
+        int editColor=-1;
+        static readonly Color[] Palette={
+            new Color(.05f,.05f,.05f),new Color(.25f,.25f,.26f),new Color(.5f,.5f,.52f),new Color(.75f,.75f,.76f),new Color(.97f,.97f,.96f),new Color(.86f,.12f,.12f),
+            new Color(.45f,.04f,.06f),new Color(.95f,.48f,.1f),new Color(.98f,.84f,.2f),new Color(.45f,.45f,.15f),new Color(.2f,.62f,.22f),new Color(.08f,.3f,.12f),
+            new Color(.1f,.5f,.5f),new Color(.3f,.8f,.9f),new Color(.45f,.65f,.95f),new Color(.12f,.3f,.8f),new Color(.06f,.1f,.32f),new Color(.45f,.2f,.7f),
+            new Color(.85f,.25f,.7f),new Color(.98f,.65f,.75f),new Color(.4f,.24f,.12f),new Color(.78f,.62f,.42f),new Color(.82f,.65f,.2f),new Color(.6f,.58f,.42f)};
         readonly HashSet<string> unsaved=new HashSet<string>();
         Dictionary<string,HashSet<string>> fightPicks;
         bool picksChanged=>unsaved.Count>0;
         string Code=>FightWardrobe.Code(wardrobe);
         float frame,yaw=20,pitch=8,distance=3.4f;
         Camera viewCamera;
+        StagingRenderSettings renderSettings;
+        Renderer floorRenderer;
         Vector2 presetScroll,itemScroll;
         string error="";
 
@@ -48,31 +59,21 @@ namespace Versus.Remaster
 
         void CreateRoom()
         {
-            RenderSettings.ambientLight=new Color(.45f,.48f,.55f);
-            var surface=FighterView.Surface(Color.white);surface.color=new Color(.08f,.11f,.16f);
+            // Lights, shadows and colors come from the scene's Render Settings object (the staging_test look).
+            renderSettings=StagingRenderSettings.FindOrCreate(transform);
+            var surface=FighterView.Surface(renderSettings.floor);
             var pedestal=GameObject.CreatePrimitive(PrimitiveType.Cylinder);pedestal.name="Wardrobe pedestal";
             pedestal.transform.SetParent(transform);pedestal.transform.position=new Vector3(0,-.1f,0);pedestal.transform.localScale=new Vector3(2.2f,.1f,2.2f);
             pedestal.GetComponent<Renderer>().material=surface;
             var floor=GameObject.CreatePrimitive(PrimitiveType.Plane);floor.name="Wardrobe floor";floor.transform.SetParent(transform);
             floor.transform.position=Vector3.down*.21f;floor.GetComponent<Renderer>().material=surface;
-            foreach(int side in new[]{1,-1})
-            {
-                var light=new GameObject(side==1?"Key light":"Fill light").AddComponent<Light>();light.transform.SetParent(transform);
-                light.type=LightType.Directional;light.intensity=side==1?1.3f:.65f;light.transform.rotation=Quaternion.Euler(40,side==1?145:-110,0);
-                // Shadows and contact shadows keep light from reaching the eyes and mouth through lids and lips.
-                light.shadows=side==1?LightShadows.Soft:LightShadows.None;
-                var data=light.gameObject.AddComponent<HDAdditionalLightData>();
-                data.SetIntensity(light.intensity*Mathf.PI,LightUnit.Lux);
-                data.useContactShadow.useOverride=true;data.useContactShadow.@override=true;
-            }
+            floorRenderer=floor.GetComponent<Renderer>();
+            // Preview clarity only; shadows and contact shadows live in the Render Settings volume.
             var profile=ScriptableObject.CreateInstance<VolumeProfile>();
-            var contact=profile.Add<ContactShadows>(true);
-            contact.enable.value=true;contact.length.value=.04f;contact.thicknessScale.value=.02f;contact.maxDistance.value=20;contact.fadeDistance.value=2;
-            profile.Add<HDShadowSettings>(true).maxShadowDistance.value=12;
             profile.Add<MotionBlur>().intensity.Override(0);
             var volume=gameObject.AddComponent<Volume>();volume.isGlobal=true;volume.priority=100;volume.sharedProfile=profile;
             viewCamera=new GameObject("Wardrobe camera").AddComponent<Camera>();viewCamera.transform.SetParent(transform);
-            viewCamera.clearFlags=CameraClearFlags.SolidColor;viewCamera.backgroundColor=new Color(.025f,.035f,.055f);
+            viewCamera.clearFlags=CameraClearFlags.SolidColor;renderSettings.Apply(viewCamera,floorRenderer);
             viewCamera.fieldOfView=30;viewCamera.nearClipPlane=.02f;viewCamera.farClipPlane=100;
             viewCamera.rect=new Rect(340f/1280,0,1-340f/1280,1);
         }
@@ -101,6 +102,8 @@ namespace Versus.Remaster
         {
             characterIndex=index;wardrobe=wardrobes[index];slotIndex=0;itemScroll=presetScroll=Vector2.zero;
             if(!allPicks.TryGetValue(Code,out fightPicks))allPicks[Code]=fightPicks=FightWardrobe.Load(Code);
+            if(!allColors.TryGetValue(Code,out colors))allColors[Code]=colors=FightWardrobe.LoadColors(Code);
+            editColor=-1;
             LoadStance();WearPreset(0);
         }
 
@@ -127,6 +130,8 @@ namespace Versus.Remaster
             model=Instantiate(wardrobe.character.costumes[preset].prefab,transform);model.transform.localPosition=Vector3.zero;model.transform.localRotation=Quaternion.identity;
             foreach(var behaviour in model.GetComponentsInChildren<MonoBehaviour>())behaviour.enabled=false;
             if(custom)MuseumWardrobe.Dress(model,wardrobe,worn);else worn=MuseumWardrobe.Find(model,wardrobe);
+            // Before dynamics: cloth garments split off later share these recolored materials.
+            CostumeColors.Apply(model,wardrobe,colors);
             var map=model.GetComponentsInChildren<Transform>().GroupBy(t=>t.name,StringComparer.OrdinalIgnoreCase).ToDictionary(g=>g.Key,g=>g.First(),StringComparer.OrdinalIgnoreCase);
             bones=wardrobe.character.boneNames.Select(n=>map.TryGetValue(n,out var bone)?bone:throw new InvalidOperationException("Missing bone: "+n)).ToArray();
             head=map.TryGetValue("Head",out var h)?h:bones[0];
@@ -156,6 +161,8 @@ namespace Versus.Remaster
 
         void LateUpdate()
         {
+            // Re-applied so color edits on the Render Settings object show live during Play.
+            if(renderSettings && viewCamera)renderSettings.Apply(viewCamera,floorRenderer);
             if(!viewCamera || !model)return;
             // Springs and cloth follow the stance pose applied in Update.
             dynamics?.Tick(Time.deltaTime);
@@ -218,7 +225,7 @@ namespace Versus.Remaster
             GUILayout.Label("Saved items: "+fightPicks.Values.Sum(v=>v.Count)+" ticked"+(unsaved.Contains(Code)?"  (unsaved)":"  (saved)"),GUILayout.Width(180));
             GUI.enabled=picksChanged;
             // Saves every character with unsaved ticks, so switching characters never loses work.
-            if(GUILayout.Button("Save items")){foreach(string code in unsaved.ToArray())FightWardrobe.Save(code,allPicks[code]);unsaved.Clear();}
+            if(GUILayout.Button("Save items")){foreach(string code in unsaved.ToArray())FightWardrobe.Save(code,allPicks[code],allColors.TryGetValue(code,out var saved)?saved:FightWardrobe.LoadColors(code));unsaved.Clear();}
             GUI.enabled=true;
             GUILayout.EndHorizontal();
             bool simulate=GUILayout.Toggle(physics,dynamics!=null?"Cloth & hair physics  ("+dynamics.GarmentCount+" cloth, "+dynamics.SpringCount+" springs)":"Cloth & hair physics");
@@ -231,6 +238,67 @@ namespace Versus.Remaster
             string outfit=custom?"Custom outfit":costumes[preset].name;
             GUI.Label(new Rect(360,16,900,32),wardrobe.character.displayName+"  /  "+outfit,new GUIStyle(GUI.skin.label){fontSize=22});
             GUI.Label(new Rect(360,684,900,24),"Right-drag to orbit, wheel to zoom, Space to pause the stance.");
+            DrawColors();
+        }
+
+        // Colors of the item worn in the selected slot: one row per color slot its mask uses.
+        void DrawColors()
+        {
+            int worn=this.worn[slotIndex];
+            GUI.Box(new Rect(1010,56,255,editColor>=0?330:160),"");
+            GUILayout.BeginArea(new Rect(1020,62,235,editColor>=0?320:150));
+            if(worn<0){GUILayout.Label("COLORS\nNo item worn in this slot.");GUILayout.EndArea();return;}
+            var piece=wardrobe.slots[slotIndex].pieces[worn];
+            GUILayout.Label("COLORS  /  "+piece.name);
+            var used=CostumeColors.UsedSlots(piece);
+            if(!used.Any(u=>u)){GUILayout.Label("This item has no color options.");GUILayout.EndArea();return;}
+            colors.TryGetValue(piece.piece,out var picked);
+            for(int s=0;s<CostumeColors.Slots;s++)
+            {
+                if(!used[s])continue;
+                GUILayout.BeginHorizontal();
+                bool hair=piece.tints.Any(t=>t.hair);
+                GUILayout.Label((hair && s==0?"Hair color":"Color "+(s+1))+(picked!=null && picked[s].HasValue?"":"  (default)"),GUILayout.Width(120));
+                var swatch=GUILayoutUtility.GetRect(36,18,GUILayout.Width(36));
+                var previous=GUI.color;GUI.color=CostumeColors.Current(piece,picked,s);GUI.DrawTexture(swatch,Texture2D.whiteTexture);GUI.color=previous;
+                if(GUILayout.Button(editColor==s?"Done":"Edit"))editColor=editColor==s?-1:s;
+                GUILayout.EndHorizontal();
+            }
+            if(editColor>=0 && used[editColor])
+            {
+                var current=CostumeColors.Current(piece,picked,editColor);var chosen=current;
+                for(int row=0;row<4;row++)
+                {
+                    GUILayout.BeginHorizontal();
+                    for(int c=row*6;c<row*6+6;c++)
+                    {
+                        var cell=GUILayoutUtility.GetRect(34,22,GUILayout.Width(34));
+                        if(GUI.Button(cell,""))chosen=Palette[c];
+                        var previous=GUI.color;GUI.color=Palette[c];GUI.DrawTexture(new Rect(cell.x+3,cell.y+3,cell.width-6,cell.height-6),Texture2D.whiteTexture);GUI.color=previous;
+                    }
+                    GUILayout.EndHorizontal();
+                }
+                chosen.r=Slider("R",chosen.r);chosen.g=Slider("G",chosen.g);chosen.b=Slider("B",chosen.b);
+                if(chosen!=current)SetColor(piece,editColor,chosen);
+                if(GUILayout.Button("Game default"))SetColor(piece,editColor,null);
+            }
+            GUILayout.EndArea();
+        }
+
+        static float Slider(string label,float value)
+        {
+            GUILayout.BeginHorizontal();GUILayout.Label(label,GUILayout.Width(14));
+            value=GUILayout.HorizontalSlider(value,0,1);GUILayout.Label(Mathf.RoundToInt(value*255).ToString(),GUILayout.Width(30));
+            GUILayout.EndHorizontal();return value;
+        }
+
+        void SetColor(CharacterWardrobe.Piece piece,int slot,Color? color)
+        {
+            if(!colors.TryGetValue(piece.piece,out var picked))colors[piece.piece]=picked=new Color?[CostumeColors.Slots];
+            picked[slot]=color;
+            if(picked.All(c=>!c.HasValue))colors.Remove(piece.piece);
+            unsaved.Add(Code);
+            CostumeColors.Apply(model,wardrobe,colors);
         }
     }
 }

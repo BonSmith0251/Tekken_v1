@@ -13,7 +13,7 @@ namespace Versus.Remaster
     {
         // Wardrobe renderers are named after their piece; the versus model keeps the source
         // mesh name (SK_CH_jin_bdu_1P), which names the same piece.
-        static string PieceName(string rendererName)=>rendererName.StartsWith("SK_CH_",StringComparison.OrdinalIgnoreCase)?rendererName.Substring(6):rendererName;
+        public static string PieceName(string rendererName)=>rendererName.StartsWith("SK_CH_",StringComparison.OrdinalIgnoreCase)?rendererName.Substring(6):rendererName;
 
         // The worn piece index per slot for a loaded outfit (-1 when the slot is empty).
         public static int[] Find(GameObject model,CharacterWardrobe wardrobe)

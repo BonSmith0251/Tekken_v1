@@ -7,6 +7,19 @@ GLASSES can be None. Any swap shows "Custom outfit"; choosing an outfit resets
 every slot. The character plays their own stance. Right-drag orbits, the wheel
 zooms, Close-up frames the head, and Space pauses the stance.
 
+COLORS
+The COLORS panel (right) recolors the item worn in the selected slot the way the
+game's customization does: up to four color slots (Color01..04) chosen per pixel
+by the item's color mask; hair has one Hair color. Edit opens a palette and RGB
+sliders; Game default resets a slot. Colors are per item and per color slot,
+change the model live, and are saved by "Save items" with the ticks. Every scene
+that dresses a character from saved items uses them.
+Defaults are the game's material colors, including colors a material inherits
+from its parent material (previously ignored, which left most common items
+grey); hair defaults to black. Items without a color mask have no color options.
+Recoloring re-tints the untinted texture on the GPU (Resources/CostumeTint.shader)
+into a per-model copy of the material; the imported textures are unchanged.
+
 SAVED ITEMS (USED IN EVERY OTHER SCENE)
 Tick the box beside any item (or None for HEAD/GLASSES); slot tabs show how many
 are ticked, and a * on a character's name means unsaved ticks. "Save items"
@@ -60,7 +73,11 @@ is estimated from each garment's height below the waist.
 
 Rebuild one character (code jin, kaz or xia; folder Jin, Kazuya or Xiaoyu):
   UnityRemaster/export_wardrobe.py --character <code>
+  resolve_material_colors.py --source Assets/Remaster/Editor/<Folder>WardrobeSource
   prepare_jin_costume_materials.py --source Assets/Remaster/Editor/<Folder>WardrobeSource --out Assets/Remaster/<Folder>Wardrobe/Textures
+  (outfit sets: resolve_material_colors.py, then prepare ... --tint-only, adding
+  --baked-when-complete for JinCostumeSource and XiaoyuSource; images untouched)
+Colors only: Remaster > Rebuild <Name> wardrobe, or the Temp/tints-<code>-wardrobe flag.
 then Remaster > Rebuild <Name> wardrobe (writes Assets/Remaster/Wardrobe/<Folder>Wardrobe.asset)
 and Remaster > Create wardrobe scene. export_jin_wardrobe.py still runs Jin's export.
 Remaster > Rendering > Capture wardrobes checks every item and writes contact

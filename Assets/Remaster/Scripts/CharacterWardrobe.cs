@@ -24,6 +24,20 @@ namespace Versus.Remaster
             public GameObject dependency;
             // Material sections the game simulates as cloth (APEX) on this piece.
             public string[] cloth;
+            // Customizable materials (Color01..04 tinted through a mask), for recoloring.
+            public Tint[] tints;
+        }
+        [System.Serializable] public class Tint
+        {
+            public string material;
+            public Texture2D baseMap,maskMap;
+            // Game defaults, linear; slots the mask actually uses.
+            public Color[] colors;
+            public bool[] slots;
+            // Whether the imported albedo already bakes the default colors.
+            public bool baked;
+            // Hair: no mask, one color (Color01) over the whole texture.
+            public bool hair;
         }
     }
 }

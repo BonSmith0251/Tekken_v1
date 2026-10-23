@@ -53,6 +53,8 @@ namespace Versus.Remaster.Editor
                         PrefabUtility.UnpackPrefabInstance(model,PrefabUnpackMode.Completely,InteractionMode.AutomatedAction);
                         var selection=MuseumWardrobe.Find(model,wardrobe);selection[s]=i;
                         MuseumWardrobe.Dress(model,wardrobe,selection);
+                        // Game-default colors that the imported textures do not bake, as every scene shows them.
+                        CostumeColors.Apply(model,wardrobe,new Dictionary<string,Color?[]>());
                         var expected=new HashSet<string>{piece.piece};if(piece.dependency)expected.Add(piece.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name);
                         var worn=model.GetComponentsInChildren<SkinnedMeshRenderer>().Where(r=>expected.Contains(r.name)).ToArray();
                         // Build the scene's cloth and spring dynamics too, so setup errors surface here.

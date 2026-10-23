@@ -10,13 +10,16 @@ namespace Versus.Remaster
     // that shows the character (versus, museum, staging) dresses it with a random saved item per
     // slot; unsaved items and the preset costumes are ignored. A required slot with nothing saved
     // keeps the model's item and logs a warning; an optional slot with nothing saved stays empty.
+    // Picked item colors are saved alongside (CostumeColors).
     // In the editor the selection is saved into Resources so builds ship it; a player build
     // saves its own changes under persistentDataPath.
     public static class FightWardrobe
     {
         public const string None="none";
         [Serializable] class SlotData { public string slot; public string[] pieces; }
-        [Serializable] class Data { public SlotData[] slots; }
+        // A picked item color: piece, color slot (0-3 for Color01..04) and sRGB hex.
+        [Serializable] class ColorData { public string piece; public int slot; public string color; }
+        [Serializable] class Data { public SlotData[] slots; public ColorData[] colors; }
 
         static string ResourcePath(string code)=>"FightWardrobe/"+code;
         static string ProjectFile(string code)=>Path.Combine(Application.dataPath,"Remaster/Resources/FightWardrobe",code+".json");
@@ -40,21 +43,40 @@ namespace Versus.Remaster
 #endif
         }
 
-        public static Dictionary<string,HashSet<string>> Load(string code)
+        static Data Read(string code)
         {
             string json=null;
             if(Application.isEditor){if(File.Exists(ProjectFile(code)))json=File.ReadAllText(ProjectFile(code));}
             else if(File.Exists(PlayerFile(code)))json=File.ReadAllText(PlayerFile(code));
             else json=Resources.Load<TextAsset>(ResourcePath(code))?.text;
+            return string.IsNullOrEmpty(json)?null:JsonUtility.FromJson<Data>(json);
+        }
+
+        // Saved colors: piece name -> four optional sRGB colors (null keeps the game default).
+        public static Dictionary<string,Color?[]> LoadColors(string code)
+        {
+            var result=new Dictionary<string,Color?[]>(StringComparer.OrdinalIgnoreCase);
+            foreach(var entry in Read(code)?.colors??new ColorData[0])
+            {
+                if(entry.slot<0 || entry.slot>=CostumeColors.Slots || !ColorUtility.TryParseHtmlString("#"+entry.color,out var color))continue;
+                if(!result.TryGetValue(entry.piece,out var colors))result[entry.piece]=colors=new Color?[CostumeColors.Slots];
+                colors[entry.slot]=color;
+            }
+            return result;
+        }
+
+        public static Dictionary<string,HashSet<string>> Load(string code)
+        {
             var result=new Dictionary<string,HashSet<string>>(StringComparer.OrdinalIgnoreCase);
-            var data=string.IsNullOrEmpty(json)?null:JsonUtility.FromJson<Data>(json);
+            var data=Read(code);
             if(data?.slots!=null)foreach(var slot in data.slots)result[slot.slot]=new HashSet<string>(slot.pieces??new string[0],StringComparer.OrdinalIgnoreCase);
             return result;
         }
 
-        public static void Save(string code,Dictionary<string,HashSet<string>> selection)
+        public static void Save(string code,Dictionary<string,HashSet<string>> selection,Dictionary<string,Color?[]> colors)
         {
-            var data=new Data {slots=selection.OrderBy(p=>p.Key).Select(p=>new SlotData {slot=p.Key,pieces=p.Value.OrderBy(x=>x).ToArray()}).ToArray()};
+            var data=new Data {slots=selection.OrderBy(p=>p.Key).Select(p=>new SlotData {slot=p.Key,pieces=p.Value.OrderBy(x=>x).ToArray()}).ToArray(),
+                colors=colors.OrderBy(p=>p.Key).SelectMany(p=>p.Value.Select((c,s)=>c.HasValue?new ColorData {piece=p.Key,slot=s,color=ColorUtility.ToHtmlStringRGB(c.Value)}:null)).Where(c=>c!=null).ToArray()};
             string file=Application.isEditor?ProjectFile(code):PlayerFile(code);
             Directory.CreateDirectory(Path.GetDirectoryName(file));
             File.WriteAllText(file,JsonUtility.ToJson(data,true));
@@ -97,6 +119,8 @@ namespace Versus.Remaster
                 throw new InvalidOperationException("The fighter model does not wear a known item in every required slot.");
             var chosen=Pick(wardrobe,selection,current,random);
             if(!chosen.SequenceEqual(current))MuseumWardrobe.Dress(fighter,wardrobe,chosen);
+            // Saved colors, and game-default tints that the imported textures do not bake.
+            CostumeColors.Apply(fighter,wardrobe,LoadColors(code));
             return chosen.Select((index,s)=>wardrobe.slots[s].name+": "+(index<0?"None":wardrobe.slots[s].pieces[index].name)).ToArray();
         }
     }

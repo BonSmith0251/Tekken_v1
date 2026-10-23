@@ -98,7 +98,7 @@ namespace Versus.Remaster
             for(int section=0;section<mesh.subMeshCount;section++)
             {
                 var material=renderer.sharedMaterials[section];
-                if(!material || !clothMaterials.Contains(Key(material.name)))continue;
+                if(!material || !clothMaterials.Contains(Key(CostumeColors.SourceName(material))))continue;
                 var indices=mesh.GetTriangles(section);if(indices.Length==0)continue;
                 clothSections.Add(section);
                 float top=indices.Max(i=>vertices[i].y),bottom=indices.Min(i=>vertices[i].y);

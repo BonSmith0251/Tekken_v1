@@ -17,7 +17,13 @@ namespace Versus.Remaster.Editor
             if (EditorApplication.isCompiling || EditorApplication.isPlayingOrWillChangePlaymode) return;
             foreach (var character in Wardrobes)
             {
-                string flag = "Temp/import-" + character.code + "-wardrobe";
+                string flag = "Temp/import-" + character.code + "-wardrobe", tints = "Temp/tints-" + character.code + "-wardrobe";
+                if (File.Exists(tints))
+                {
+                    File.Delete(tints);
+                    try { UpdateTints(character); } catch (Exception e) { Debug.LogException(e); File.WriteAllText(tints + "-error.txt", e.ToString()); }
+                    return;
+                }
                 if (!File.Exists(flag)) continue;
                 File.Delete(flag);
                 try { ImportWardrobe(character); } catch (Exception e) { Debug.LogException(e); File.WriteAllText(flag + "-error.txt", e.ToString()); }
@@ -54,7 +60,9 @@ namespace Versus.Remaster.Editor
                 weight0=weight0,weight1=weight1,weight2=weight2,weight3=weight3};
         }
         [Serializable] class Part { public Bone[] bones; public Vector3[] vertices; public Vector2[] uv; public Weight[] weights; public Section[] submeshes; }
-        [Serializable] class UnityMaps { public string albedo,normal,surface,occlusion; public bool specular,cutout; }
+        [Serializable] class UnityMaps { public string albedo,normal,surface,occlusion; public bool specular,cutout; public TintEntry tint; }
+        // Written by prepare_jin_costume_materials.py for customizable materials; colors are flat linear RGB x4.
+        [Serializable] class TintEntry { public string @base,mask; public float[] colors; public bool[] slots; public bool baked,hair; }
         [Serializable] class MaterialEntry { public string name; public UnityMaps unity; }
         [Serializable] class PieceEntry { public string name,path; public string[] materials,cloth; }
         [Serializable] class CostumeEntry { public string name; public string[] pieces; }
@@ -222,12 +230,47 @@ namespace Versus.Remaster.Editor
             var wardrobe=AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(WardrobeAsset);
             if(!wardrobe){wardrobe=ScriptableObject.CreateInstance<CharacterWardrobe>();AssetDatabase.CreateAsset(wardrobe,WardrobeAsset);}
             wardrobe.character=AssetDatabase.LoadAssetAtPath<MuseumCharacter>(character.museum);
-            wardrobe.slots=LoadWardrobe(manifest,manifest.pieceEntries.ToDictionary(x=>x.name),WardrobeOutput);EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
+            wardrobe.slots=LoadWardrobe(manifest,manifest.pieceEntries.ToDictionary(x=>x.name),WardrobeOutput,TintMaterials(character,manifest));EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
             var counts=WardrobeSlots.Concat(new[]{"variant"}).Select(s=>"\""+s+"\":"+manifest.wardrobe.Count(w=>w.slot==s));
             File.WriteAllText("Validation/"+character.code+"-wardrobe.json","{\"passed\":true,\"pieces\":"+built+","+string.Join(",",counts)+",\"materials\":"+manifest.materialEntries.Length+",\"wardrobeAsset\":\""+WardrobeAsset+"\"}");
             Debug.Log(character.code+" wardrobe imported: "+built+" pieces");
         }
-        static CharacterWardrobe.Slot[] LoadWardrobe(WardrobeManifest manifest,Dictionary<string,PieceEntry> pieces,string WardrobeOutput)
+        // Customizable materials of the wardrobe and of the character's outfit sets (own items reuse those).
+        static Dictionary<string,MaterialEntry> TintMaterials(WardrobeCharacter character,WardrobeManifest manifest)
+        {
+            var materials=JsonUtility.FromJson<Manifest>(File.ReadAllText(character.costumeSource+"/manifest.json")).materialEntries
+                .Where(m=>m.unity?.tint!=null && !string.IsNullOrEmpty(m.unity.tint.@base)).ToDictionary(m=>m.name);
+            foreach(var m in manifest.materialEntries)if(m.unity?.tint!=null && !string.IsNullOrEmpty(m.unity.tint.@base))materials[m.name]=m;
+            return materials;
+        }
+        static Texture2D TintTexture(string path,bool color)
+        {
+            var importer=AssetImporter.GetAtPath(path) as TextureImporter;
+            if(!importer)throw new Exception("Missing tint texture: "+path);
+            // Masks hold weights, not colors: they must stay linear.
+            if(importer.sRGBTexture!=color || importer.textureType!=TextureImporterType.Default)
+            {importer.textureType=TextureImporterType.Default;importer.sRGBTexture=color;importer.textureCompression=TextureImporterCompression.CompressedHQ;importer.SaveAndReimport();}
+            return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        }
+        static CharacterWardrobe.Tint[] Tints(PieceEntry piece,Dictionary<string,MaterialEntry> materials)=>
+            (piece.materials??new string[0]).Where(materials.ContainsKey).Select(name=>{var t=materials[name].unity.tint;return new CharacterWardrobe.Tint {
+                material=name,baseMap=TintTexture(t.@base,true),maskMap=string.IsNullOrEmpty(t.mask)?null:TintTexture(t.mask,false),slots=t.slots,baked=t.baked,hair=t.hair,
+                colors=Enumerable.Range(0,4).Select(i=>new Color(t.colors[i*3],t.colors[i*3+1],t.colors[i*3+2],1)).ToArray()};}).ToArray();
+
+        // Refreshes only the recoloring data of an imported wardrobe (no mesh, material or prefab rebuild).
+        public static void UpdateTints(WardrobeCharacter character)
+        {
+            var manifest=JsonUtility.FromJson<WardrobeManifest>(File.ReadAllText(character.wardrobeSource+"/manifest.json"));
+            var wardrobe=AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(character.asset);
+            if(!wardrobe)throw new InvalidOperationException("Import the "+character.code+" wardrobe first.");
+            var pieces=manifest.pieceEntries.ToDictionary(x=>x.name);var materials=TintMaterials(character,manifest);int count=0;
+            foreach(var piece in wardrobe.slots.SelectMany(s=>s.pieces))
+            {piece.tints=pieces.TryGetValue(piece.piece,out var entry)?Tints(entry,materials):new CharacterWardrobe.Tint[0];if(piece.tints.Length>0)count++;}
+            EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
+            File.WriteAllText("Validation/"+character.code+"-wardrobe-colors.json","{\"passed\":true,\"recolorablePieces\":"+count+",\"tintMaterials\":"+materials.Count+"}");
+            Debug.Log(character.code+" wardrobe colors: "+count+" recolorable pieces");
+        }
+        static CharacterWardrobe.Slot[] LoadWardrobe(WardrobeManifest manifest,Dictionary<string,PieceEntry> pieces,string WardrobeOutput,Dictionary<string,MaterialEntry> tintMaterials)
         {
             GameObject Prefab(string piece)=>string.IsNullOrEmpty(piece)?null:AssetDatabase.LoadAssetAtPath<GameObject>(WardrobeOutput+"/Prefabs/"+Safe(piece)+".prefab");
             // The character's own items first, then the common customization items, each alphabetical.
@@ -235,7 +278,7 @@ namespace Versus.Remaster.Editor
             return WardrobeSlots.Select(slot=>new CharacterWardrobe.Slot {name=slot,optional=slot=="head"||slot=="glasses",pieces=manifest.wardrobe.Where(w=>w.slot==slot)
                 .OrderBy(w=>w.owner=="cmn"?1:0).ThenBy(w=>w.name,StringComparer.OrdinalIgnoreCase)
                 .Select(w=>new CharacterWardrobe.Piece {name=w.name,piece=w.piece,common=w.owner=="cmn",prefab=Prefab(w.piece),
-                    dependencyBase=w.dependencyBase,dependency=Prefab(w.dependency),cloth=pieces[w.piece].cloth??new string[0]}).ToArray()}).ToArray();
+                    dependencyBase=w.dependencyBase,dependency=Prefab(w.dependency),cloth=pieces[w.piece].cloth??new string[0],tints=Tints(pieces[w.piece],tintMaterials)}).ToArray()}).ToArray();
         }
         public static MuseumCharacter.Costume[] LoadCostumes()
         {

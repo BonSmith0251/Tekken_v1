@@ -291,7 +291,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_dvj_jin_bdu_tattered_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_cape_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_cape_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.44999998807907104,
+            0.23999999463558197,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
       }
     },
     "MI_CH_dvj_jin_bdu_tattered_hood": {
@@ -345,7 +370,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_dvj_jin_bdu_tattered_hood_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_hood_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_hood_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.44999998807907104,
+            0.23999999463558197,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
       }
     },
     "MI_CH_dvj_skin_neck": {
@@ -451,6 +501,24 @@
           0.010999999940395355,
           0.009022999554872513,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_foot.uasset",
@@ -460,8 +528,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_foot_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.009022999554872513,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_def_foot_color": {
       "diffuse": "T_CH_jin_bdl_def_foot_color_D",
@@ -487,6 +585,24 @@
           0.02264999970793724,
           0.02264999970793724,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_foot_color.uasset",
@@ -496,8 +612,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_foot_color_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_color_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_color_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.7549999952316284,
+            0.02264999970793724,
+            0.02264999970793724,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_def_obi": {
       "diffuse": "T_CH_jin_bdl_def_obi_D",
@@ -517,7 +663,31 @@
         "DetalNormal": "T_CH_cloth01_N",
         "DiffuseMap": "T_CH_jin_bdl_def_obi_D",
         "MaskMap": "T_CH_jin_bdl_def_obi_M",
-        "Normal": "T_CH_jin_bdl_def_obi_N"
+        "Normal": "T_CH_jin_bdl_def_obi_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_obi.uasset",
       "unity": {
@@ -526,8 +696,39 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_obi_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_obi_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_obi_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_def_pants": {
       "diffuse": "T_CH_jin_bdl_def_pants_D",
@@ -553,6 +754,24 @@
           0.009770000353455544,
           0.008949999697506428,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_pants.uasset",
@@ -562,8 +781,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pants_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pants_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.009999999776482582,
+            0.009770000353455544,
+            0.008949999697506428,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_def_pantsfire2": {
       "diffuse": "T_CH_jin_bdl_def_pantsfire_D",
@@ -595,6 +844,18 @@
           0.0,
           0.0,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_pantsfire2.uasset",
@@ -604,8 +865,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_pantsfire2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pantsfire_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pantsfire_M.png",
+          "colors": [
+            0.9350000023841858,
+            0.6192439794540405,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_regulus_pants": {
       "diffuse": "T_CH_jin_regulus_trousers_D",
@@ -638,6 +928,12 @@
           0.3496060073375702,
           0.20915000140666962,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_regulus/Material/MI_CH_jin_bdl_regulus_pants.uasset",
@@ -647,8 +943,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_regulus_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_trousers_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_trousers_M.png",
+          "colors": [
+            0.026100000366568565,
+            0.050985001027584076,
+            0.09000000357627869,
+            0.13500000536441803,
+            0.06985600292682648,
+            0.053325001150369644,
+            0.4699999988079071,
+            0.3496060073375702,
+            0.20915000140666962,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_regulus_shose": {
       "diffuse": "T_CH_jin_regulus_boot_D",
@@ -681,6 +1005,18 @@
           0.37387800216674805,
           0.2134619951248169,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_regulus/Material/MI_CH_jin_bdl_regulus_shose.uasset",
@@ -690,8 +1026,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_regulus_shose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_boot_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.16387100517749786,
+            0.12789000570774078,
+            0.531000018119812,
+            0.37387800216674805,
+            0.2134619951248169,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_tattered_boot": {
       "diffuse": "T_CH_dvj_bdl_1p_boot_D",
@@ -729,6 +1094,12 @@
           0.6399999856948853,
           0.6399999856948853,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_boot.uasset",
@@ -738,8 +1109,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_boot_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_boot_M.png",
+          "colors": [
+            0.05000000074505806,
+            0.042750000953674316,
+            0.042817000299692154,
+            0.3199999928474426,
+            0.10719999670982361,
+            0.09600000083446503,
+            0.6399999856948853,
+            0.6399999856948853,
+            0.6399999856948853,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_tattered_pant1": {
       "diffuse": "T_CH_dvj_bdl_1p_pant2_D",
@@ -771,6 +1170,18 @@
           0.10237500071525574,
           0.1027270033955574,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_pant1.uasset",
@@ -780,8 +1191,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_pant1_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant2_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant2_M.png",
+          "colors": [
+            0.8999999761581421,
+            0.7932140231132507,
+            0.6945719718933105,
+            0.10499999672174454,
+            0.10237500071525574,
+            0.1027270033955574,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_tattered_pant2": {
       "diffuse": "T_CH_dvj_bdl_1p_pant1_D",
@@ -819,6 +1259,12 @@
           0.15399999916553497,
           0.14000000059604645,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_pant2.uasset",
@@ -828,8 +1274,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_pant2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant1_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant1_M.png",
+          "colors": [
+            0.9215689897537231,
+            0.8117650151252747,
+            0.7098039984703064,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.3499999940395355,
+            0.15399999916553497,
+            0.14000000059604645,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_vaga_pants": {
       "diffuse": "T_CH_jin_bdl_vaga_pants_D",
@@ -863,6 +1337,12 @@
           0.17579199373722076,
           0.07153300195932388,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_emperor/Material/MI_CH_jin_bdl_vaga_pants.uasset",
@@ -872,8 +1352,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_vaga_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_pants_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_pants_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.35499998927116394,
+            0.17579199373722076,
+            0.07153300195932388,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdl_vaga_shoes": {
       "diffuse": "T_CH_jin_bdl_vaga_shoes_D",
@@ -900,6 +1408,18 @@
           0.04500000178813934,
           0.04500000178813934,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_emperor/Material/MI_CH_jin_bdl_vaga_shoes.uasset",
@@ -909,8 +1429,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_vaga_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_shoes_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_shoes_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.054999999701976776,
+            0.054999999701976776,
+            0.04500000178813934,
+            0.04500000178813934,
+            0.04500000178813934,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_def_glove": {
       "diffuse": "T_CH_jin_bdu_def_glove_D",
@@ -936,6 +1485,24 @@
           0.010999999940395355,
           0.008999999612569809,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove.uasset",
@@ -945,8 +1512,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.008999999612569809,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_def_glove_kote": {
       "diffuse": "T_CH_jin_bdu_def_glove_kote_D",
@@ -972,6 +1569,24 @@
           0.02264999970793724,
           0.02264999970793724,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_kote.uasset",
@@ -981,8 +1596,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_kote_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_kote_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.7549999952316284,
+            0.02264999970793724,
+            0.02264999970793724,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_def_glove_metal": {
       "diffuse": "T_CH_jin_bdu_def_glove_rubber_D",
@@ -1008,6 +1653,24 @@
           0.8601999878883362,
           0.9350000023841858,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_metal.uasset",
@@ -1017,8 +1680,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_metal_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8777210116386414,
+            0.8601999878883362,
+            0.9350000023841858,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_def_glove_rubber": {
       "diffuse": "T_CH_jin_bdu_def_glove_rubber_D",
@@ -1044,6 +1737,24 @@
           0.010999999940395355,
           0.009022999554872513,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_rubber.uasset",
@@ -1053,8 +1764,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_rubber_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.009022999554872513,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_gakuran_boots": {
       "diffuse": "T_CH_jin_bdl_gakuran_boot_D",
@@ -1107,7 +1848,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_gakuran_boots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_boot_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.04990699887275696,
+            0.048850998282432556,
+            0.0949999988079071,
+            0.08620300143957138,
+            0.08437900245189667,
+            0.07500000298023224,
+            0.06805499643087387,
+            0.06661500036716461,
+            0.1899999976158142,
+            0.022450000047683716,
+            0.017006000503897667
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_gakuran_glove": {
@@ -1155,7 +1921,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_gakuran_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_glove_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_glove_M.png",
+          "colors": [
+            0.06404999643564224,
+            0.06736499816179276,
+            0.07000000029802322,
+            0.23000000417232513,
+            0.07183700054883957,
+            0.05423400178551674,
+            0.3050000071525574,
+            0.2872160077095032,
+            0.30471399426460266,
+            0.3050000071525574,
+            0.2872160077095032,
+            0.30471399426460266
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_longcoat_cort": {
@@ -1188,6 +1979,18 @@
           0.22499999403953552,
           0.24800999462604523,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_cort.uasset",
@@ -1197,8 +2000,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_cort_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_M.png",
+          "colors": [
+            0.038819000124931335,
+            0.037459999322891235,
+            0.05000000074505806,
+            0.8999999761581421,
+            0.22499999403953552,
+            0.24800999462604523,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_longcoat_cort_cloth": {
       "diffuse": "T_CH_jin_bdu_longcoat_cort_D",
@@ -1230,6 +2062,18 @@
           0.22499999403953552,
           0.24800999462604523,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_cort_cloth.uasset",
@@ -1239,8 +2083,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_cort_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_M.png",
+          "colors": [
+            0.038819000124931335,
+            0.037459999322891235,
+            0.05000000074505806,
+            0.8999999761581421,
+            0.22499999403953552,
+            0.24800999462604523,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_longcoat_misima": {
       "diffuse": "T_CH_jin_bdu_longcoat_misima_D",
@@ -1254,7 +2127,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_jin_bdu_longcoat_misima_D",
         "MaskMap": "T_CH_jin_bdu_longcoat_misima_M",
-        "Normal": "T_CH_jin_bdu_longcoat_misima_N"
+        "Normal": "T_CH_jin_bdu_longcoat_misima_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_misima.uasset",
       "unity": {
@@ -1263,8 +2160,39 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_misima_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_misima_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_misima_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_longcoat_shirts_button": {
       "diffuse": "T_CH_jin_bdu_longcoat_shirts_button_D",
@@ -1284,6 +2212,24 @@
           0.015317999757826328,
           0.019999999552965164,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shirts_button.uasset",
@@ -1293,8 +2239,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shirts_button_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_M.png",
+          "colors": [
+            0.019217999652028084,
+            0.015317999757826328,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_longcoat_shirts_button_cloth": {
       "diffuse": "T_CH_jin_bdu_longcoat_shirts_button_D",
@@ -1314,6 +2290,24 @@
           0.015317999757826328,
           0.019999999552965164,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shirts_button_cloth.uasset",
@@ -1323,8 +2317,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shirts_button_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_M.png",
+          "colors": [
+            0.019217999652028084,
+            0.015317999757826328,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_longcoat_shuts": {
       "diffuse": "T_CH_jin_bdu_longcoat_shuts_D",
@@ -1350,6 +2374,24 @@
           0.8074619770050049,
           0.949999988079071,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shuts.uasset",
@@ -1359,8 +2401,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shuts_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shuts_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shuts_M.png",
+          "colors": [
+            0.7685019969940186,
+            0.8074619770050049,
+            0.949999988079071,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_regulus": {
       "diffuse": "T_CH_jin_regulus_jacket_D",
@@ -1415,7 +2487,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_regulus_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_jacket_M.png",
+          "colors": [
+            0.38060998916625977,
+            0.37439998984336853,
+            0.38999998569488525,
+            0.07000000029802322,
+            0.06509999930858612,
+            0.06509999930858612,
+            0.12999999523162842,
+            0.11639799922704697,
+            0.10400000214576721,
+            0.3449999988079071,
+            0.2966580092906952,
+            0.279449999332428
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_tattered_dvj1p": {
@@ -1469,7 +2566,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_tattered_dvj1p_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdu_1p_upper_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdu_1p_upper_M.png",
+          "colors": [
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100070118904114,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_vaga_alpha": {
@@ -1490,6 +2612,24 @@
           0.17579199373722076,
           0.07153300195932388,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_alpha.uasset",
@@ -1499,8 +2639,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_alpha_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_alpha_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_alpha_M.png",
+          "colors": [
+            0.35499998927116394,
+            0.17579199373722076,
+            0.07153300195932388,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_vaga_jacket": {
       "diffuse": "T_CH_jin_bdu_vaga_jacket_D",
@@ -1549,7 +2719,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_jacket_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.35499998927116394,
+            0.21537500619888306,
+            0.0881119966506958,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.45500001311302185,
+            0.0,
+            0.018245000392198563
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_vaga_jacketcloth": {
@@ -1599,7 +2794,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_jacketcloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.35499998927116394,
+            0.21537500619888306,
+            0.0881119966506958,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.45500001311302185,
+            0.0,
+            0.018245000392198563
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdu_vaga_parts": {
@@ -1633,6 +2853,18 @@
           0.18000000715255737,
           0.18000000715255737,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_parts.uasset",
@@ -1642,8 +2874,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_parts_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_parts_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_parts_M.png",
+          "colors": [
+            0.5249999761581421,
+            0.3279989957809448,
+            0.1496250033378601,
+            0.18000000715255737,
+            0.18000000715255737,
+            0.18000000715255737,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdu_vaga_tape": {
       "diffuse": "T_CH_jin_bdu_vaga_tape_D",
@@ -1663,6 +2924,24 @@
           0.21223700046539307,
           0.08749999850988388,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_tape.uasset",
@@ -1672,8 +2951,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_tape_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_tape_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_tape_M.png",
+          "colors": [
+            0.3499999940395355,
+            0.21223700046539307,
+            0.08749999850988388,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_jin_bdugakuran_jacket": {
       "diffuse": "T_CH_jin_bdu_gakuran_overcoat_D",
@@ -1721,7 +3030,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdugakuran_jacket_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_overcoat_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_overcoat_M.png",
+          "colors": [
+            0.0949999988079071,
+            0.08501400053501129,
+            0.07837499678134918,
+            0.23999999463558197,
+            0.08064699918031693,
+            0.06917800009250641,
+            0.5,
+            0.3367759883403778,
+            0.10249999910593033,
+            0.35499998927116394,
+            0.031950000673532486,
+            0.03733300045132637
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_bdugakuran_trousers": {
@@ -1770,7 +3104,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdugakuran_trousers_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_trousers_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_trousers_M.png",
+          "colors": [
+            0.11999999731779099,
+            0.1073869988322258,
+            0.0989999994635582,
+            0.7549999952316284,
+            0.7267770171165466,
+            0.7043529748916626,
+            0.3199999928474426,
+            0.19465599954128265,
+            0.07999999821186066,
+            0.38499999046325684,
+            0.12937100231647491,
+            0.11097300052642822
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_jin_eye_shadow": {
@@ -1860,7 +3219,33 @@
         "surface": "",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_jin_har_1p2": {
@@ -1891,7 +3276,33 @@
         "surface": "",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_jin_skin_arm": {
@@ -2146,7 +3557,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdl_1p_01_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_02_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_02_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.0,
+            0.005305000115185976,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806,
+            0.41499999165534973,
+            0.22436200082302094,
+            0.002810999983921647,
+            1.0,
+            0.6105129718780518,
+            0.9228950142860413
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_jin_bdl_1p_02": {
@@ -2195,7 +3631,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdl_1p_02_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_01_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_01_M.png",
+          "colors": [
+            0.2849999964237213,
+            0.04132499918341637,
+            0.04347899928689003,
+            0.10315000265836716,
+            0.09937500208616257,
+            0.125,
+            0.25999999046325684,
+            0.1646140068769455,
+            0.07150000333786011,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_jin_bdu_1p_01": {
@@ -2244,7 +3705,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdu_1p_01_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_1P_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_1P_M.png",
+          "colors": [
+            0.44999998807907104,
+            0.05624999850988388,
+            0.059730999171733856,
+            0.1667339950799942,
+            0.1618500053882599,
+            0.19499999284744263,
+            0.6850000023841858,
+            0.39348798990249634,
+            0.20207500457763672,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     }
   },
@@ -2510,7 +3996,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_dvj_jin_bdu_tattered_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_cape_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_cape_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.44999998807907104,
+            0.23999999463558197,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
       }
     },
     {
@@ -2565,7 +4076,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_dvj_jin_bdu_tattered_hood_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_hood_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdf_tattered_hood_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.44999998807907104,
+            0.23999999463558197,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
       }
     },
     {
@@ -2675,6 +4211,24 @@
           0.010999999940395355,
           0.009022999554872513,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_foot.uasset",
@@ -2684,8 +4238,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_foot_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.009022999554872513,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_def_foot_color",
@@ -2712,6 +4296,24 @@
           0.02264999970793724,
           0.02264999970793724,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_foot_color.uasset",
@@ -2721,8 +4323,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_foot_color_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_color_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_foot_color_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.7549999952316284,
+            0.02264999970793724,
+            0.02264999970793724,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_def_obi",
@@ -2743,7 +4375,31 @@
         "DetalNormal": "T_CH_cloth01_N",
         "DiffuseMap": "T_CH_jin_bdl_def_obi_D",
         "MaskMap": "T_CH_jin_bdl_def_obi_M",
-        "Normal": "T_CH_jin_bdl_def_obi_N"
+        "Normal": "T_CH_jin_bdl_def_obi_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_obi.uasset",
       "unity": {
@@ -2752,8 +4408,39 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_obi_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_obi_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_obi_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_def_pants",
@@ -2780,6 +4467,24 @@
           0.009770000353455544,
           0.008949999697506428,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_pants.uasset",
@@ -2789,8 +4494,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pants_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pants_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.009999999776482582,
+            0.009770000353455544,
+            0.008949999697506428,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_def_pantsfire2",
@@ -2823,6 +4558,18 @@
           0.0,
           0.0,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_dougi_org/Material/MI_CH_jin_bdl_def_pantsfire2.uasset",
@@ -2832,8 +4579,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_def_pantsfire2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pantsfire_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_def_pantsfire_M.png",
+          "colors": [
+            0.9350000023841858,
+            0.6192439794540405,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_regulus_pants",
@@ -2867,6 +4643,12 @@
           0.3496060073375702,
           0.20915000140666962,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_regulus/Material/MI_CH_jin_bdl_regulus_pants.uasset",
@@ -2876,8 +4658,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_regulus_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_trousers_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_trousers_M.png",
+          "colors": [
+            0.026100000366568565,
+            0.050985001027584076,
+            0.09000000357627869,
+            0.13500000536441803,
+            0.06985600292682648,
+            0.053325001150369644,
+            0.4699999988079071,
+            0.3496060073375702,
+            0.20915000140666962,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_regulus_shose",
@@ -2911,6 +4721,18 @@
           0.37387800216674805,
           0.2134619951248169,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_regulus/Material/MI_CH_jin_bdl_regulus_shose.uasset",
@@ -2920,8 +4742,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_regulus_shose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_boot_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.16387100517749786,
+            0.12789000570774078,
+            0.531000018119812,
+            0.37387800216674805,
+            0.2134619951248169,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_tattered_boot",
@@ -2960,6 +4811,12 @@
           0.6399999856948853,
           0.6399999856948853,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_boot.uasset",
@@ -2969,8 +4826,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_boot_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_boot_M.png",
+          "colors": [
+            0.05000000074505806,
+            0.042750000953674316,
+            0.042817000299692154,
+            0.3199999928474426,
+            0.10719999670982361,
+            0.09600000083446503,
+            0.6399999856948853,
+            0.6399999856948853,
+            0.6399999856948853,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_tattered_pant1",
@@ -3003,6 +4888,18 @@
           0.10237500071525574,
           0.1027270033955574,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_pant1.uasset",
@@ -3012,8 +4909,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_pant1_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant2_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant2_M.png",
+          "colors": [
+            0.8999999761581421,
+            0.7932140231132507,
+            0.6945719718933105,
+            0.10499999672174454,
+            0.10237500071525574,
+            0.1027270033955574,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_tattered_pant2",
@@ -3052,6 +4978,12 @@
           0.15399999916553497,
           0.14000000059604645,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_tattered/Material/MI_CH_jin_bdl_tattered_pant2.uasset",
@@ -3061,8 +4993,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_tattered_pant2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant1_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdl_1p_pant1_M.png",
+          "colors": [
+            0.9215689897537231,
+            0.8117650151252747,
+            0.7098039984703064,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.3499999940395355,
+            0.15399999916553497,
+            0.14000000059604645,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_vaga_pants",
@@ -3097,6 +5057,12 @@
           0.17579199373722076,
           0.07153300195932388,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_emperor/Material/MI_CH_jin_bdl_vaga_pants.uasset",
@@ -3106,8 +5072,36 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_vaga_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_pants_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_pants_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.35499998927116394,
+            0.17579199373722076,
+            0.07153300195932388,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdl_vaga_shoes",
@@ -3135,6 +5129,18 @@
           0.04500000178813934,
           0.04500000178813934,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Lower/jin_bdl_emperor/Material/MI_CH_jin_bdl_vaga_shoes.uasset",
@@ -3144,8 +5150,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdl_vaga_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_shoes_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_vaga_shoes_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.054999999701976776,
+            0.054999999701976776,
+            0.04500000178813934,
+            0.04500000178813934,
+            0.04500000178813934,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_def_glove",
@@ -3172,6 +5207,24 @@
           0.010999999940395355,
           0.008999999612569809,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove.uasset",
@@ -3181,8 +5234,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.008999999612569809,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_def_glove_kote",
@@ -3209,6 +5292,24 @@
           0.02264999970793724,
           0.02264999970793724,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_kote.uasset",
@@ -3218,8 +5319,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_kote_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_kote_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.7549999952316284,
+            0.02264999970793724,
+            0.02264999970793724,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_def_glove_metal",
@@ -3246,6 +5377,24 @@
           0.8601999878883362,
           0.9350000023841858,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_metal.uasset",
@@ -3255,8 +5404,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_metal_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8777210116386414,
+            0.8601999878883362,
+            0.9350000023841858,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_def_glove_rubber",
@@ -3283,6 +5462,24 @@
           0.010999999940395355,
           0.009022999554872513,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_dougi_org/Material/MI_CH_jin_bdu_def_glove_rubber.uasset",
@@ -3292,8 +5489,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_def_glove_rubber_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_def_glove_rubber_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.014999999664723873,
+            0.010999999940395355,
+            0.009022999554872513,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_gakuran_boots",
@@ -3347,7 +5574,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_gakuran_boots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_boot_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_boot_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.04990699887275696,
+            0.048850998282432556,
+            0.0949999988079071,
+            0.08620300143957138,
+            0.08437900245189667,
+            0.07500000298023224,
+            0.06805499643087387,
+            0.06661500036716461,
+            0.1899999976158142,
+            0.022450000047683716,
+            0.017006000503897667
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3396,7 +5648,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_gakuran_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_glove_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_glove_M.png",
+          "colors": [
+            0.06404999643564224,
+            0.06736499816179276,
+            0.07000000029802322,
+            0.23000000417232513,
+            0.07183700054883957,
+            0.05423400178551674,
+            0.3050000071525574,
+            0.2872160077095032,
+            0.30471399426460266,
+            0.3050000071525574,
+            0.2872160077095032,
+            0.30471399426460266
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3430,6 +5707,18 @@
           0.22499999403953552,
           0.24800999462604523,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_cort.uasset",
@@ -3439,8 +5728,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_cort_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_M.png",
+          "colors": [
+            0.038819000124931335,
+            0.037459999322891235,
+            0.05000000074505806,
+            0.8999999761581421,
+            0.22499999403953552,
+            0.24800999462604523,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_longcoat_cort_cloth",
@@ -3473,6 +5791,18 @@
           0.22499999403953552,
           0.24800999462604523,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_cort_cloth.uasset",
@@ -3482,8 +5812,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_cort_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_cort_M.png",
+          "colors": [
+            0.038819000124931335,
+            0.037459999322891235,
+            0.05000000074505806,
+            0.8999999761581421,
+            0.22499999403953552,
+            0.24800999462604523,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_longcoat_misima",
@@ -3498,7 +5857,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_jin_bdu_longcoat_misima_D",
         "MaskMap": "T_CH_jin_bdu_longcoat_misima_M",
-        "Normal": "T_CH_jin_bdu_longcoat_misima_N"
+        "Normal": "T_CH_jin_bdu_longcoat_misima_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_misima.uasset",
       "unity": {
@@ -3507,8 +5890,39 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_misima_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_misima_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_misima_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_longcoat_shirts_button",
@@ -3529,6 +5943,24 @@
           0.015317999757826328,
           0.019999999552965164,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shirts_button.uasset",
@@ -3538,8 +5970,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shirts_button_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_M.png",
+          "colors": [
+            0.019217999652028084,
+            0.015317999757826328,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_longcoat_shirts_button_cloth",
@@ -3560,6 +6022,24 @@
           0.015317999757826328,
           0.019999999552965164,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shirts_button_cloth.uasset",
@@ -3569,8 +6049,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shirts_button_cloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shirts_button_M.png",
+          "colors": [
+            0.019217999652028084,
+            0.015317999757826328,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_longcoat_shuts",
@@ -3597,6 +6107,24 @@
           0.8074619770050049,
           0.949999988079071,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_longcoat/Material/MI_CH_jin_bdu_longcoat_shuts.uasset",
@@ -3606,8 +6134,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_longcoat_shuts_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shuts_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_longcoat_shuts_M.png",
+          "colors": [
+            0.7685019969940186,
+            0.8074619770050049,
+            0.949999988079071,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_regulus",
@@ -3663,7 +6221,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_regulus_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_regulus_jacket_M.png",
+          "colors": [
+            0.38060998916625977,
+            0.37439998984336853,
+            0.38999998569488525,
+            0.07000000029802322,
+            0.06509999930858612,
+            0.06509999930858612,
+            0.12999999523162842,
+            0.11639799922704697,
+            0.10400000214576721,
+            0.3449999988079071,
+            0.2966580092906952,
+            0.279449999332428
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3718,7 +6301,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_tattered_dvj1p_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdu_1p_upper_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_dvj_bdu_1p_upper_M.png",
+          "colors": [
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100070118904114,
+            0.20499999821186066,
+            0.18067699670791626,
+            0.1582079976797104,
+            0.9200000166893005,
+            0.8108410239219666,
+            0.7100059986114502,
+            0.05000000074505806,
+            0.04406699910759926,
+            0.03858700022101402
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3740,6 +6348,24 @@
           0.17579199373722076,
           0.07153300195932388,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_alpha.uasset",
@@ -3749,8 +6375,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_alpha_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_alpha_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_alpha_M.png",
+          "colors": [
+            0.35499998927116394,
+            0.17579199373722076,
+            0.07153300195932388,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_vaga_jacket",
@@ -3800,7 +6456,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_jacket_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.35499998927116394,
+            0.21537500619888306,
+            0.0881119966506958,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.45500001311302185,
+            0.0,
+            0.018245000392198563
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3851,7 +6532,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_jacketcloth_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_jacket_M.png",
+          "colors": [
+            0.07199999690055847,
+            0.0766419991850853,
+            0.09000000357627869,
+            0.35499998927116394,
+            0.21537500619888306,
+            0.0881119966506958,
+            0.05999999865889549,
+            0.04303999990224838,
+            0.04170000180602074,
+            0.45500001311302185,
+            0.0,
+            0.018245000392198563
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3886,6 +6592,18 @@
           0.18000000715255737,
           0.18000000715255737,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_parts.uasset",
@@ -3895,8 +6613,37 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_parts_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_parts_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_parts_M.png",
+          "colors": [
+            0.5249999761581421,
+            0.3279989957809448,
+            0.1496250033378601,
+            0.18000000715255737,
+            0.18000000715255737,
+            0.18000000715255737,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdu_vaga_tape",
@@ -3917,6 +6664,24 @@
           0.21223700046539307,
           0.08749999850988388,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/jin/Upper/jin_bdu_emperor/Material/MI_CH_jin_bdu_vaga_tape.uasset",
@@ -3926,8 +6691,38 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdu_vaga_tape_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_tape_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_vaga_tape_M.png",
+          "colors": [
+            0.3499999940395355,
+            0.21223700046539307,
+            0.08749999850988388,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_jin_bdugakuran_jacket",
@@ -3976,7 +6771,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdugakuran_jacket_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_overcoat_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_gakuran_overcoat_M.png",
+          "colors": [
+            0.0949999988079071,
+            0.08501400053501129,
+            0.07837499678134918,
+            0.23999999463558197,
+            0.08064699918031693,
+            0.06917800009250641,
+            0.5,
+            0.3367759883403778,
+            0.10249999910593033,
+            0.35499998927116394,
+            0.031950000673532486,
+            0.03733300045132637
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -4026,7 +6846,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_CH_jin_bdugakuran_trousers_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_trousers_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_gakuran_trousers_M.png",
+          "colors": [
+            0.11999999731779099,
+            0.1073869988322258,
+            0.0989999994635582,
+            0.7549999952316284,
+            0.7267770171165466,
+            0.7043529748916626,
+            0.3199999928474426,
+            0.19465599954128265,
+            0.07999999821186066,
+            0.38499999046325684,
+            0.12937100231647491,
+            0.11097300052642822
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -4120,7 +6965,33 @@
         "surface": "",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4152,7 +7023,33 @@
         "surface": "",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4419,7 +7316,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdl_1p_01_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_02_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_02_M.png",
+          "colors": [
+            0.6000000238418579,
+            0.0,
+            0.005305000115185976,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806,
+            0.41499999165534973,
+            0.22436200082302094,
+            0.002810999983921647,
+            1.0,
+            0.6105129718780518,
+            0.9228950142860413
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -4469,7 +7391,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdl_1p_02_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_01_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdl_1P_01_M.png",
+          "colors": [
+            0.2849999964237213,
+            0.04132499918341637,
+            0.04347899928689003,
+            0.10315000265836716,
+            0.09937500208616257,
+            0.125,
+            0.25999999046325684,
+            0.1646140068769455,
+            0.07150000333786011,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -4519,7 +7466,32 @@
         "surface": "Assets/Remaster/JinCostumes/Textures/MI_jin_bdu_1p_01_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_1P_D.png",
+          "mask": "Assets/Remaster/Editor/JinCostumeSource/Textures/T_CH_jin_bdu_1P_M.png",
+          "colors": [
+            0.44999998807907104,
+            0.05624999850988388,
+            0.059730999171733856,
+            0.1667339950799942,
+            0.1618500053882599,
+            0.19499999284744263,
+            0.6850000023841858,
+            0.39348798990249634,
+            0.20207500457763672,
+            0.023785000666975975,
+            0.025926999747753143,
+            0.05000000074505806
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     }
   ]
