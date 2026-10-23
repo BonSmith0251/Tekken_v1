@@ -24,7 +24,7 @@ Game sources:
 - `Assets/Remaster/Scripts` contains runtime action catalogs, staging selection, native camera sampling, HDRP scene lighting and museum UI.
 - `Assets/Remaster/Editor/StagingValidation.cs`, `StagingFlowValidation.cs`, `CombatHandValidation.cs`, `HdrpValidation.cs` are editor probes. Some assume current Jin/Kazuya objects or mutate the play state; inspect and generalize them to the requested fighter before using.
 - `Validation/Staging`, `Validation/CombatHands`, `Validation/OriginalLighting` retain source records, captures and measured checks. Store fresh evidence with clear character/action attribution.
-- `Tools/HitEffects/export_hit_effects.py` exports the original common hit-effect systems to `Resources/HitEffects` (in progress; see the versus skill).
+- `Tools/HitEffects/export_hit_effects.py` exports the original common hit-effect systems to `Resources/HitEffects`. `Scripts/CascadeEffects.cs` plays them in versus (commit `b71b8341e`); see the versus skill.
 - `UnityRemaster/CategoryBuild` is a copy of the project that Codex uses for batchmode builds while the editor is open. `deploy_xiaoyu_museum.py` and `deploy_xiaoyu_skirts.py` copy files from it back into the main project, with backups: `XiaoyuImporter.cs`, `XiaoyuSecondaryDynamics.cs`, `CharacterMuseum.cs` and `CharacterMuseum.unity`. The copy lacks later fixes (`WeldTriangleSoup`, `SeparateGarment`) and still has the abandoned `JointCorrection` code, so rerunning a deploy wipes main-project fixes. Sync CategoryBuild from the main project first, and update the deploy asserts (`characters=3, costumes=19, actions=6997`). A copied project also needs `com.unity.modules.cloth` in its package manifest.
 
 ## Unity control and screenshots
@@ -41,12 +41,13 @@ The user often keeps the editor open with an unsaved scene or in Play, so batchm
 
 **Flag jobs.** Run editor jobs through `[InitializeOnLoad]` hooks that watch a `Temp/<flag>` file and skip while compiling or playing.
 
-- **Compiling.** Scripts only recompile when the editor gets focus. Computer-use access resolves "Unity" to a separate 6000.6 install, not the 2023.2 editor, so Claude cannot focus it. Ask the user to stop Play and click into Unity. A fix usually takes two round trips: compile, then the flag.
+- **Compiling.** Create `Temp/refresh-assets` (`Editor/AssetRefreshHook.cs`) and the open editor refreshes and recompiles without the user clicking in; it waits while Play is on. Wait for the DLL, then create the job flag. Without the hook (or before its first load), scripts only recompile when the editor gets focus. Computer-use resolves "Unity" to a separate 6000.6 install, so Claude cannot focus the 2023.2 editor; ask the user to stop Play or click in.
 - **When to create the flag.** Only after `Library/ScriptAssemblies/Assembly-CSharp-Editor.dll` is newer than the edited script; otherwise the stale assembly consumes it.
 - **Clean compile check.** Editor.log is `%LOCALAPPDATA%\Unity\Editor\Editor.log`. A compile is clean when the last `error CS` line is above the last `Reloading assemblies` line; old errors stay in the log.
 - **Flag conventions.** A flag file is deleted when consumed. Failures go to `Temp/<flag>-error.txt`, and success writes a report (for example `Validation/xiaoyu-model.json` or `Validation/HDRP/eye-shadow.json`). Poll for the flag disappearing, then for the error file or a report newer than the edit. Run long chains (import, scene, capture; about 1,000 textures) as a background loop.
 - **Re-imports.** These overwrite meshes and prefabs in place, so museum references survive; they need the editor out of Play.
-- **Flag names.** They multiply (`fix-eye-shadow`, `capture-eyes`, `capture-xiaoyu-rig`, `reconvert-xiaoyu-materials`, `reimport-xiaoyu`, `import-<code>-wardrobe`, `capture-<code>-wardrobe`, `create-jin-wardrobe-scene`, ...). Read the handler rather than trusting a list.
+- **Flag names.** They multiply (`refresh-assets`, `fix-eye-shadow`, `capture-eyes`, `capture-xiaoyu-rig`, `reconvert-xiaoyu-materials`, `reimport-xiaoyu`, `import-<code>-wardrobe`, `tints-<code>-wardrobe`, `capture-<code>-wardrobe`, `create-jin-wardrobe-scene`, `capture-hit-effects`, `create-staging-render-settings`, `add-render-settings-all-scenes`, ...). Read the handler rather than trusting a list.
+- **Concurrent sessions.** Several sessions edit the same project at once, so commits mix their work. If the compile breaks in a file another session touched, fix it directly; the user prefers that to a report.
 
 **Preview renders.** For quick close-ups without touching the open scene, render in a `PreviewRenderUtility` scene (`EyeCloseupCapture.cs`, `XiaoyuRigCapture.cs`).
 
@@ -74,7 +75,7 @@ All importers convert legacy Standard materials through `HdrpProjectSetup.Conver
 - **Eyeball gloss.** Smoothness 0.45 was an importer fallback, not a source value, and gave a broad milky reflection. `*_Eyes` use about 0.25. The real cornea highlight is the separate `Eye_ADD` layer (Ref_Intensity 0.3, cubemap, `T_CH_eye_ref_small`, `T_CH_Eye_outer_N`), which every importer still drops along with `MI_CH_tear`. Disclose it as an open gap.
 - **Masks are not regenerated by prepare scripts.** `*_MaskMap.png` is built only inside `ConvertMaterial`. After re-running a prepare script, reconvert the material or copy the changed channel into the mask.
 - **Material prep conventions.**
-  - Outfit albedo is the colour-mask palette: mask RGB plus a remainder, times `Color01–04`, in linear space.
+  - Outfit albedo is the colour-mask palette: mask RGB plus a remainder, times `Color01–04`, in linear space. User-chosen item and hair colours are a runtime re-tint (`CostumeColors`, `CostumeTint.shader`); its rules are in the wardrobe skill's `formats.md`.
   - Packed skin specular gives specular = R×0.096 and AO from B.
   - Without a roughness map, roughness comes from the normal map's alpha scaled by `RoughnessMin/Max`.
   - The t7extract glTF exporter wires only the `Diffuse` and `Normal` parameters, so grey diffuse textures usually mean an unapplied tint, not a decode bug.
@@ -82,19 +83,34 @@ All importers convert legacy Standard materials through `HdrpProjectSetup.Conver
 
 Compare a new fighter's material table (MaterialID, mask means, specular map presence, albedo means) against Jin and Kazuya before judging appearance. Matching scalars with different looks usually means a texture or mesh defect.
 
-Scene lights created at runtime default to `LightShadows.None`. Without shadows, light reaches the eyeballs and mouth interior through lids and lips, giving bright lid rims and a glowing lip line. `StagingTestPlayer.CreateSet` fixes this:
+Scene lights created at runtime default to `LightShadows.None`. Without shadows, light reaches the eyeballs and mouth interior through lids and lips, giving bright lid rims and a glowing lip line. The fix, which the user confirmed in `staging_test` ("Looks fixed"):
 
 - soft shadows on the key light only;
 - HDRP contact shadows on both lights (length about 0.04 m, thickness 0.02), because lids and lips are too thin for the shadow map;
-- a volume local to the scene with a 12 m shadow distance, leaving the shared `RemasterEnvironment` profile unchanged;
-- HDRP intensity set the same way `HdrpSceneLighting` sets it.
+- a 12 m shadow distance.
 
-The user confirmed it ("Looks fixed"), and `Wardrobe.unity` reuses the setup. The museum and versus lights have not been checked.
+**One shared look for every runtime scene.** All five runtime scenes (staging_test, CharacterMuseum, Wardrobe, LocalVersus, LocalVersus2) now carry a **"Render Settings" GameObject**:
+
+- A `StagingRenderSettings` component re-applies the ambient, background and floor colours every frame.
+- A "Key light" child: white, 1.35×π lux, soft shadows, yaw -45.
+- A "Fill light" child: (0.65, 0.75, 1), 0.65×π lux, no shadow map, yaw 45.
+- Both lights use contact shadows.
+- A priority-10 Volume uses the **shared** `Rendering/StagingTestVolume.asset` (contact shadows, 12 m shadow distance).
+
+Controllers call `StagingRenderSettings.FindOrCreate`, which builds identical defaults only when a scene lacks the object. Versus yaws it 180° (`VersusYaw`), and while it exists `HdrpSceneLighting` leaves the extracted stg29 lighting and sky dormant; delete the object to restore them. The museum and wardrobe keep their own priority-100 motion-blur-off volumes.
+
+How to change the look:
+
+- Change it in the scene object (lights and colours, separate in each scene) or in the profile (shared by all five scenes), not in code.
+- Lights and colours changed during Play are lost; profile edits are kept.
+- Menu: Remaster → Rendering → "Add staging render settings to (all) scenes".
+- For a warm or soft look, add your own Global Volume above priority 10 (White Balance, Color Adjustments, Bloom, Vignette), plus light angular diameter. Exposure is fixed in the project profiles, and `HdrpSceneLighting` replaces the runtime global volume's profile, so don't add overrides there.
+- Only the staging_test close-ups were checked by eye; the museum, wardrobe and versus haven't been. The user turned down a ScriptableObject in favour of a visible Hierarchy object with real lights, and was asked before the original stg29 lighting was replaced. Keep that kind of change reversible.
 
 Open fidelity gaps to keep reporting:
 
 - `Eye_ADD` and tear layers are dropped.
-- Jin's hair renders light grey; it is black in the original. Not investigated.
+- Hair renders black by default: the wardrobe colour pass defaults hair to black, and the user can pick another colour. Grey hair seen earlier came from unapplied tints.
 - Xiaoyu's body, arm and leg skin uses shared female textures that are lighter and pinker than her face.
 
 ## HDRP and original lighting (only when requested)
@@ -118,7 +134,7 @@ Report imported fighters/costumes/actions and what remains missing, approximate 
 **Git:**
 
 - **Ownership.** The `TekkenVersusRemaster` repository is owned by another Windows user (CodexSandboxOffline). Use `git -c safe.directory='*' …` and never change global git config without asking.
-- **Remote.** The remote is `origin` (`BonSmith0251/Tekken_v1`); `main` was at `914db5e2` on 2026-10-23, with the command graph and versus rework pushed. Commit or push only when the user asks; "commit (don't push yet)" means hold the push. Report the real status by checking `git log origin/main..`.
+- **Remote.** The remote is `origin` (`BonSmith0251/Tekken_v1`); `origin/main` was at `e902f1d1` late on 2026-10-23; the colours, shared render look, battle effects and linear-mask commits after it were local only. Commit or push only when the user asks; "commit (don't push yet)" means hold the push. Report the real status by checking `git log origin/main..`.
 - **Large pushes.** Multi-GB commits failed with connection resets and HTTP 408. The cause was a forced `-c http.postBuffer=1048576000`, which buffered the whole pack. What works:
   - default buffering, with `-c http.version=HTTP/1.1` and `GIT_TERMINAL_PROMPT=0`;
   - commits of about 300 MB or less, one commit per push;
@@ -126,7 +142,7 @@ Report imported fighters/costumes/actions and what remains missing, approximate 
 
   The pre-split originals are on the local branch `backup-before-split`.
 - **Rewriting history.** Before splitting or rewriting commits, list unpushed commits from other sessions and branches. A split once dropped another session's local commit; its content survived only because an identical commit existed.
-- **Index lock.** TortoiseGit's `TGitCache` intermittently blocks `git add` with "unable to write new index file"; retry the step.
+- **Index lock.** TortoiseGit's `TGitCache` intermittently blocks `git add` with "unable to write new index file". Loop the retry: staging has needed up to 20 attempts and committing up to 9.
 - **Bulk output.** Commit regenerable bulk output (for example the stage layouts) separately so it can be dropped.
 - **User data.** Treat `Resources/FightWardrobe/*.json` as user data.
 

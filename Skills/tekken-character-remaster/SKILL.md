@@ -18,7 +18,8 @@ Two sibling Claude skills in `~/.claude/skills` cover the rest:
 - Inspect the working tree and current Unity editor/play state. Preserve existing museum, costume and render work. Stop an active Play session before script changes: this project's nonserialized battle state is lost on domain reload.
 - For a named fighter, process that fighter. For an explicit request for all characters, inventory the available roster and process it incrementally; report coverage by character without presenting one successful fighter as roster-wide success.
 - Follow the user's chosen scene, engine version and rendering pipeline. A new character does not require a pipeline migration, stage replacement or publishing operation.
-- Confirm which scene a visual report comes from before fixing it. The museum, `staging_test`, versus and the wardrobe each build their own lights and dynamics; a user once had to stop a museum investigation with "no, no. in the staging_test scene."
+- Confirm which scene a visual report comes from before fixing it. The museum, `staging_test`, versus and the wardrobe each have their own copy of the "Render Settings" lights and their own dynamics, but all share one volume profile. A user once had to stop a museum investigation with "no, no. in the staging_test scene."
+- When the user asks how to do something ("I'll do it by myself, just let me know how"), explain it without editing anything.
 - Other Claude sessions and Codex may edit this project concurrently, and Codex keeps a batchmode copy (`UnityRemaster/CategoryBuild`) whose deploy scripts overwrite main-project files. Check recent changes and linked sessions before rebuilding something; see [project-and-rendering.md](references/project-and-rendering.md).
 - Stay within the requested scope. Offer follow-ups such as wiring a fighter into another scene, and wait for the user to ask. They first declined Xiaoyu in versus ("Not now"), then asked for it later.
 
