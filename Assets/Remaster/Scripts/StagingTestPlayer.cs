@@ -13,6 +13,8 @@ namespace Versus.Remaster
         public MuseumCharacter[] characters;
         public bool repeat = true;
         public float gapSeconds = .75f;
+        [Tooltip("The scene's Render Settings object (lights, volume, colors). Empty finds or creates one.")]
+        public StagingRenderSettings renderSettings;
 
         sealed class Take
         {
@@ -26,6 +28,7 @@ namespace Versus.Remaster
         readonly int outfitSeed = Environment.TickCount;
         GameObject actor;
         Camera sceneCamera;
+        Renderer floorRenderer;
         EntranceCameraLens lens;
         Transform[] bones, landmarks;
         Vector3[] positions;
@@ -55,46 +58,29 @@ namespace Versus.Remaster
 
         void CreateSet()
         {
-            RenderSettings.ambientLight = new Color(.46f, .48f, .54f);
+            if (!renderSettings) renderSettings = StagingRenderSettings.FindOrCreate(transform);
             var floor = GameObject.CreatePrimitive(PrimitiveType.Plane);
             floor.name = "Staging test floor";
             floor.transform.SetParent(transform, false);
             floor.transform.localScale = Vector3.one * 2;
-            floor.GetComponent<Renderer>().material = FighterView.Surface(new Color(.12f, .16f, .21f));
-            foreach (int side in new[] { -1, 1 })
-            {
-                var light = new GameObject(side < 0 ? "Key light" : "Fill light").AddComponent<Light>();
-                light.transform.SetParent(transform, false);
-                light.type = LightType.Directional;
-                light.color = side < 0 ? Color.white : new Color(.65f, .75f, 1f);
-                light.intensity = side < 0 ? 1.35f : .65f;
-                light.transform.rotation = Quaternion.Euler(42, side * 45, 0);
-                // Without shadows both lights reach the eyeballs and mouth interior through the
-                // lids and lips. Contact shadows resolve the millimeter gaps the shadow map cannot.
-                light.shadows = side < 0 ? LightShadows.Soft : LightShadows.None;
-                var data = light.gameObject.AddComponent<HDAdditionalLightData>();
-                data.SetIntensity(light.intensity * Mathf.PI, LightUnit.Lux);
-                data.useContactShadow.useOverride = true;
-                data.useContactShadow.@override = true;
-            }
-            // Close-up takes need short shadow ranges; keep this local so other scenes are unchanged.
-            var profile = ScriptableObject.CreateInstance<VolumeProfile>();
-            var contact = profile.Add<ContactShadows>(true);
-            contact.enable.value = true; contact.length.value = .04f; contact.thicknessScale.value = .02f;
-            contact.maxDistance.value = 20; contact.fadeDistance.value = 2;
-            profile.Add<HDShadowSettings>(true).maxShadowDistance.value = 12;
-            var volume = gameObject.AddComponent<Volume>();
-            volume.isGlobal = true; volume.priority = 10; volume.sharedProfile = profile;
+            floorRenderer = floor.GetComponent<Renderer>();
+            floorRenderer.sharedMaterial = FighterView.Surface(renderSettings.floor);
             sceneCamera = new GameObject("Staging action camera").AddComponent<Camera>();
             sceneCamera.transform.SetParent(transform, false);
             sceneCamera.tag = "MainCamera";
             sceneCamera.clearFlags = CameraClearFlags.SolidColor;
-            sceneCamera.backgroundColor = new Color(.025f, .035f, .055f);
             sceneCamera.nearClipPlane = .05f;
             sceneCamera.farClipPlane = 100;
             sceneCamera.gameObject.AddComponent<AudioListener>();
             lens = new EntranceCameraLens(sceneCamera);
             lens.SetHorizontalFov(65);
+            ApplyRenderSettings();
+        }
+
+        // Applied every frame so color edits on the Render Settings object show live during Play.
+        void ApplyRenderSettings()
+        {
+            if (renderSettings && sceneCamera) renderSettings.Apply(sceneCamera, floorRenderer);
         }
 
         void BuildPlaylist()
@@ -220,6 +206,7 @@ namespace Versus.Remaster
 
         void LateUpdate()
         {
+            ApplyRenderSettings();
             if (error != null || current == null) return;
             try { Present(); if (!paused) flexibleMotion?.Tick(Time.unscaledDeltaTime); }
             catch (Exception exception) { Fail(exception); }

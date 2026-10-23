@@ -30,7 +30,10 @@ namespace Versus.Remaster
             if (configured) return;
             configured = true;
             var game = FindFirstObjectByType<VersusGame>();
-            var original = game ? Resources.Load<OriginalStageLightingData>("OriginalStageLighting") : null;
+            // A Render Settings object (the staging_test look) replaces the extracted stage lighting;
+            // removing it from a versus scene restores the original stg29 lights and sky.
+            bool customLook = FindFirstObjectByType<StagingRenderSettings>();
+            var original = game && !customLook ? Resources.Load<OriginalStageLightingData>("OriginalStageLighting") : null;
             GetComponent<Volume>().sharedProfile = original ? original.profile : Resources.Load<VolumeProfile>("RemasterEnvironment");
             if (original) original.Apply(game);
             foreach (var camera in Camera.allCameras)

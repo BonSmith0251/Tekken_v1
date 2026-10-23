@@ -43,6 +43,7 @@ namespace Versus.Remaster
         bool useOriginalCamera;
         Vector3 headFaceAxis=Vector3.forward;
         GameObject galleryFloor,galleryPedestal,stageModel;
+        StagingRenderSettings renderSettings;
         string[] stageNames;
         int stageIndex;
         void SelectStage(int index)
@@ -96,8 +97,9 @@ namespace Versus.Remaster
         }
         void CreateGallery()
         {
-            RenderSettings.ambientLight=new Color(.45f,.48f,.55f);
-            var mat=FighterView.Surface(Color.white);mat.color=new Color(.08f,.11f,.16f);
+            // Lights, volume and colors come from the scene's Render Settings object (the staging_test look).
+            renderSettings=StagingRenderSettings.FindOrCreate(transform);
+            var mat=FighterView.Surface(renderSettings.floor);
             var platform=GameObject.CreatePrimitive(PrimitiveType.Cylinder);platform.name="Exhibit pedestal";
             galleryPedestal=platform;
             platform.transform.SetParent(transform);platform.transform.position=new Vector3(0,-.1f,0);platform.transform.localScale=new Vector3(2.6f,.1f,2.6f);
@@ -106,16 +108,11 @@ namespace Versus.Remaster
             galleryFloor=floor;
             var stageList=Resources.Load<TextAsset>("MuseumStages/StageNames");
             stageNames=stageList?stageList.text.Split(new[]{'\n','\r'},StringSplitOptions.RemoveEmptyEntries).OrderBy(x=>x).ToArray():new string[0];
-            foreach(int side in new[]{1,-1})
-            {
-                var light=new GameObject("Gallery light").AddComponent<Light>();light.transform.SetParent(transform);
-                light.type=LightType.Directional;light.intensity=side==1?1.3f:.65f;light.transform.rotation=Quaternion.Euler(40,side==1?145:-110,0);
-            }
             var clarity=new GameObject("Museum preview clarity").AddComponent<UnityEngine.Rendering.Volume>();clarity.transform.SetParent(transform);
             clarity.isGlobal=true;clarity.priority=100;clarity.sharedProfile=ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
             clarity.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.MotionBlur>().intensity.Override(0);
             cameraRig=new GameObject("Museum camera").AddComponent<Camera>();cameraRig.transform.SetParent(transform);
-            cameraRig.clearFlags=CameraClearFlags.SolidColor;cameraRig.backgroundColor=new Color(.025f,.035f,.055f);
+            cameraRig.clearFlags=CameraClearFlags.SolidColor;renderSettings.Apply(cameraRig,galleryFloor.GetComponent<Renderer>());
             cameraRig.fieldOfView=35;cameraRig.nearClipPlane=.05f;cameraRig.farClipPlane=100;
             cameraRig.rect=new Rect(.25f,.19f,.75f,.81f);
             actionLens=new EntranceCameraLens(cameraRig);
@@ -222,6 +219,8 @@ namespace Versus.Remaster
         {
             flexibleMotion?.Tick(Time.deltaTime);
             if(!cameraRig)return;
+            // Re-applied so color edits on the Render Settings object show live during Play.
+            if(renderSettings)renderSettings.Apply(cameraRig,galleryFloor?galleryFloor.GetComponent<Renderer>():null);
             if(useOriginalCamera && actionCamera!=null && model)
             {
                 var focus=new Bounds(bones[4].position+Vector3.up*.10f,Vector3.one*.44f);

@@ -58,9 +58,10 @@ namespace Versus.Remaster.Editor
                         bool hdrp = RenderPipelineManager.currentPipeline is HDRenderPipeline;
                         File.WriteAllText("Validation/HDRP/playback.json", "{\"hdrpActive\":" + hdrp.ToString().ToLowerInvariant() + ",\"nonHdrpMaterials\":" + wrong + ",\"captures\":3}");
                         var original = Resources.Load<OriginalStageLightingData>("OriginalStageLighting");
-                        if (original)
+                        // A scene with a Render Settings object uses that look instead of the original stage lighting.
+                        var root = GameObject.Find("Original stg29 lighting");
+                        if (original && root)
                         {
-                            var root = GameObject.Find("Original stg29 lighting");
                             var lights = root.GetComponentsInChildren<HDAdditionalLightData>();
                             int characterLights = lights.Count(l => (uint)l.lightlayersMask == OriginalStageLightingData.CharacterLayer);
                             var rigs = UnityEngine.Object.FindObjectsByType<JinRig>(FindObjectsSortMode.None);
