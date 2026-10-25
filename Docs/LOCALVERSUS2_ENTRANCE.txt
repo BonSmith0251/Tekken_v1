@@ -1,0 +1,124 @@
+KAZUYA LANDING OVERLAP REPAIR
+Source motion rewinds at shot cuts: frame 46->47 rises from 4.404 m to
+5.420 m, and frame 87->88 rises from 1.021 m to 1.925 m. Presentation now
+omits repeated frames 47..57 and 88..96. The joins are 46->58 and 87->97,
+with downward root steps of 0.109 m and 0.113 m. Both body and camera use
+the same endpoint mapping, and joint poses ease over six frames at each
+join. Fractional interpolation never samples the removed frames.
+Kazuya now lasts 197 frames (3.283 s), 20 frames shorter; subsequent entrance
+and round phases advance accordingly. Original binary assets are unchanged.
+Compilation and source-data regression tests pass. Live playback could not
+be checked this session because Unity reported no active Editor license.
+Evidence: Validation/EntranceFraming/landing-stitch-check.json.
+
+FRONT VIEWS AND SMOOTH ENTRANCE SAMPLING
+Body poses and camera tracks now share fractional 60 Hz sample time. Camera
+position/rotation/FOV interpolate between samples, with hard cuts preserved at
+Kazuya frames 47/88 and Jin frame 123. Kazuya's wide-to-close subject bounds
+blend over frames 110-140 instead of snapping at frame 130. The floor correction
+clamps continuously to 0.35 m instead of jumping to the subject's height.
+Entrance shots use the rig's bind-corrected facial direction. Kazuya's opening
+frontal azimuth is held through the dive and landing so a downward head pitch
+cannot swing the camera behind him. Jin follows his facial direction. Both use
+a slight frontal three-quarter angle. Native FOV and cuts are retained; these
+are deliberately adapted front views, not exact copies of native camera poses.
+Verified 14 live Unity captures and fractional-frame boundary continuity:
+Validation/EntranceFraming/front-entrances.png and front-continuity.txt.
+
+ENTRANCE VISIBILITY FIX
+The reported clipping was during entrances, not combat. Gameplay camera values
+are unchanged by this fix. Entrance camera local axes are (-native.z, native.y,
+-native.x), with the native roll sign reversed. The camera is translated to frame
+a posed head volume (rather than just its neck-level pivot), and includes full
+body landmarks during Kazuya's wide aerial/landing segment. Native shot cuts,
+FOV samples and action frames remain the sources; position corrections adapt
+those tracks to the imported rig and are not a claim of exact original framing.
+An above-floor fallback prevents a close-up dolly from entering the Unity stage.
+Only the featured fighter is rendered during each solo entrance; both renderer
+states are restored for the round reveal and skip. The first loading delta is
+ignored, and large hitches are capped so the opening shot is not fast-forwarded.
+13 live Unity captures were checked for a visible featured head. Evidence:
+Validation/EntranceFraming/entrance-contact-sheet.png and capture-check.json.
+Close-ups intentionally crop legs/arms; exact reference pose/camera fidelity
+remains a separate limitation.
+
+LIVE-VERIFIED GAMEPLAY FRAMING CORRECTION
+The reference-calibrated starting camera is (0, 1.08, -3.45), with zero pitch,
+yaw and roll, and 65 degrees horizontal FOV. Live Play capture:
+Validation/CameraFraming/reference-calibrated.png (camera-only, without GUI).
+Both fighters remain fully visible and occupy approximately 75% of image height.
+The old four-unit starting separation forced a 4.89-unit camera distance even
+with a 3.25-unit minimum. Starting separation is now 2.2 units (+/-1.1), shared
+by round resets, entrance anchors and the serialized scene. This changes the
+initial combat spacing; attack ranges and movement speeds are unchanged.
+The camera pulls back at wider spacing, allowing 10% horizontal screen margin.
+Follow interpolation preserves the level angle rather than aiming from a lagging
+camera position. Round reveal uses a fixed 25-degree downward angle and settles
+to level in the existing 24 frames; this replaces a fixed three-unit lift.
+The gameplay result was rendered in Unity; the revised reveal angle was compiled
+but not separately captured. Earlier calibration values below are superseded.
+
+CURRENT REFERENCE SEQUENCE (supersedes earlier clip/timing notes below)
+Reference: TEKKEN 7  2026-10-21 08-43-06.mp4.
+Kazuya P1: kz_s03, move 2326, body 714, camera track 124, 217 frames.
+Jin P2: jz_s02, move 2220, body 663, camera track 106, 301 frames.
+Both body/camera tracks run together at native 60 fps, without speed changes.
+There is a two-frame black cut between entrances and before the round reveal.
+Round reveal: 90 frames, camera settles from an elevated two-shot to the level
+combat camera in 24 frames. ROUND 1 appears on frames 15 through 65.
+READY: 45 frames. FIGHT: 45 frames. Combat starts after FIGHT; total 11.7 sec.
+The health HUD is visible during the round reveal, READY and FIGHT.
+This replaces the old sweep from the final face close-up across the arena.
+The round camera and overlay timings are video-calibrated approximations;
+only entrance body/camera tracks are recovered native data. Live verification
+is pending. Evidence: Tools/EntranceCamera/reference-timeline.json.
+
+EARLIER IMPLEMENTATION NOTES
+LocalVersus2 entrance implementation
+
+Open Assets/_Project/Scenes/LocalVersus2.unity, or use Remaster > Open LocalVersus2 entrance scene, then press Play. The scene starts with manual Jin (P1) versus Kazuya (P2). It shows Jin's entrance shot, Kazuya's entrance shot, a face-off, READY, then FIGHT. Enter skips the sequence. The existing controls apply after FIGHT. The match timer and combat simulation remain stopped through the entrance.
+
+Jin starts directly with the original `jz_s00` sequence (move 2218, character_0661.bytes), playing all 255 frames with its matching camera. His complete shot lasts 255 frames.
+
+Kazuya starts directly with `kz_s06_7CS` (move 2247, character_0700.bytes), playing all 316 frames with its matching camera. His complete shot lasts 316 frames. Both entrance clips retain their original root movement so the actor stays aligned with the source camera trajectory.
+
+Original camera data is recovered from bank 4 of jinrotsm.arc and kazrotsm.arc. Move property 33845 links Jin's action to track 104 (0x4068) and Kazuya's action to track 120 (0x4078). Each source track has exactly the same duration as its body clip. EntranceCameraTrack samples native position, XYZ Euler rotation, and lens channels at 60 fps, preserving cuts without smoothing. The native camera looks along negative Z; the Unity conversion uses the same heading/reflection as the body retargeter, converts millimeters to meters, and interprets the lens channel as horizontal FOV in radians. These conventions still need a visual comparison with the original game. Tools/EntranceCamera/source-manifest.json records source hashes and mapping evidence; import_entrance_cameras.py regenerates the resource bytes.
+
+The extra combat walk-ins have been removed: their raised-guard walking poses were not part of the original entrance sequences. Each entrance animation and camera now start together at frame zero, with fixed actor anchors and movement supplied by the clip. After Kazuya's final sample, an authored 45-frame face-off blend restores gameplay position, rotation, and FOV; READY lasts 60 frames and FIGHT lasts 35. The combat camera does not write during the entrance. Enter skips immediately, clears both motion overrides, and restores the gameplay camera and lens. Total entrance time is 11.85 seconds; smoke-test capture/exit timing includes this duration.
+
+Build menu: Remaster > Build LocalVersus2 Windows player. Output: Builds/LocalVersus2/LocalVersus2.exe.
+
+Lens and aspect audit: entrance rendering now uses a centered 16:9 viewport, including in a resized Unity Game view. This reference aspect is consistent with the installed game's DesiredScreenWidth=1280 and DesiredScreenHeight=720; it has not been measured from the original game's live projection matrix. Black bars fill unused screen space and entrance UI scales to the same viewport. The native FOV samples remain authoritative for zoom, interpreted as horizontal radians consistently with Unreal's horizontal FOV convention and the local TekkenDirect camera reference. Unity now uses an equivalent physical lens: 36 x 20.25 mm sensor, zero lens shift, gate fit None, focalLength = 36 / (2 * tan(horizontalFov / 2)). These sensor dimensions are a conversion convention, not recovered original hardware. The old serialized 50 mm value was inactive while the camera used nonphysical FOV. Original viewport and lens settings are restored on skip/completion. See Tools/EntranceCamera/lens-audit.json for sampled ranges and evidence limits.
+
+Verification: runtime scripts compile against the installed Unity assemblies. Camera tests verify body/track durations, finite samples, valid lens values, and exact equality of all exported samples with the original archives. A numerical rig projection check places each character's head inside the camera frame at the first, middle, and last samples. The integrated scene has not been visually verified in Play mode; check the original game's framing, cuts, zoom, and the skip-to-fight transition before claiming an exact reproduction.
+
+GAMEPLAY LENS
+The original running game was sampled read-only for 120 camera snapshots.
+The user confirmed normal gameplay. See Tools/EntranceCamera/gameplay-camera-capture.json.
+The live horizontal FOV is 65 degrees, with camera aspect fields reporting
+1.777778 (16:9). The clone now uses this recovered horizontal FOV, replacing
+its 38-degree vertical prototype setting. At 16:9 the vertical FOV is
+39.43049 degrees and equivalent focal length is 28.25434 mm on a 36 mm gate.
+The filmback/focal length are equivalences, not recovered native settings.
+Gameplay shares the entrance lens controller; Ready/fight and skipping preserve
+this projection. HUD and menus fit the viewport, including after resizing.
+Native position and rotation samples are recorded as evidence, but the tracking
+algorithm, distance rules and exceptional cinematic lenses are not reconstructed.
+
+REFERENCE VIDEO FRAMING CORRECTION
+GameplayCameraFraming now supplies both gameplay and the entrance handoff.
+Camera/aim height is 0.95 Unity units with a level view, replacing the old
+distance * 0.27 elevation (about 15 degrees downward). Close-range distance
+is 3.25 units, replacing the 11-unit minimum. At wider separations, distance
+is calculated from the recovered 65-degree horizontal lens and fighter spacing,
+with 0.65 units of silhouette allowance and 15% horizontal screen margin.
+Depth separation is included to protect the nearer fighter from cropping.
+These are reference-video calibration values, not recovered native constants.
+Live visual verification of this correction remains pending.
+
+REFERENCE PLAYER ORDER
+Player 1 is Kazuya on the left, facing right; Player 2 is Jin on the right,
+facing left. Controls, move catalogs, AI, HUD and smoke diagnostics follow
+this assignment. Kazuya's 316-frame entrance/camera plays first, followed by
+Jin's 255-frame entrance/camera. Skip and combat retain the same player sides.
+The serialized LocalVersus2 scene also uses these positions and rotations.

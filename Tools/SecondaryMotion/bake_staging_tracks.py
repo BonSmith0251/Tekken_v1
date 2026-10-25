@@ -8,10 +8,10 @@ from bake_entrance_tracks import PROJECT,hand_names,face_names,hand_rotation
 from t7extract.motion import decode_motion
 workspace=PROJECT.parents[1]
 entries=[]
-for ch,folder,rigpath in [('jin','jin_motion','JinSource/SK_CH_jin_fac.json'),('kaz','kazuya_motion','KazuyaSource/kaz_fac.json')]:
+for ch,folder,rigpath in [('jin','jin_motion','Jin/Source/Base/SK_CH_jin_fac.json'),('kaz','kazuya_motion','Kazuya/Source/Base/kaz_fac.json')]:
     moves=json.loads((workspace/f'decrypted/{folder}/{ch}/moveset.json').read_text())['moves']
     raw=(workspace/f'decrypted/tkdata/mothead/mask/{ch}rotsm.arc').read_bytes()
-    rig={b['name']:b for b in json.loads((PROJECT/'Assets/Remaster/Editor'/rigpath).read_text())['bones']}
+    rig={b['name']:b for b in json.loads((PROJECT/'Assets/_Project/Characters'/rigpath).read_text())['bones']}
     seen=set()
     def track(reference,bank):
         assert reference&0xc000==0x4000
@@ -35,7 +35,7 @@ for ch,folder,rigpath in [('jin','jin_motion','JinSource/SK_CH_jin_fac.json'),('
             fmt,count,n=struct.unpack_from('>HHI',data);assert (fmt,count,n)==(0xc8,4,frames)
             values=struct.unpack_from('>'+str(frames*12)+'f',data,24)
             camera=resource
-            (PROJECT/f'Assets/Remaster/Resources/EntranceCameras/{resource}.bytes').write_bytes(struct.pack('<4sIIII',b'T7C1',frames,60,mid,index)+struct.pack('<'+str(len(values))+'f',*values))
+            (PROJECT/f'Assets/_Project/Resources/EntranceCameras/{resource}.bytes').write_bytes(struct.pack('<4sIIII',b'T7C1',frames,60,mid,index)+struct.pack('<'+str(len(values))+'f',*values))
         bones=[]
         for pid,bank,side in [(33838,1,'L'),(33839,1,'R'),(33986,2,None)]:
             if pid not in props:continue
@@ -66,11 +66,11 @@ for ch,folder,rigpath in [('jin','jin_motion','JinSource/SK_CH_jin_fac.json'),('
             b=name.encode();payload+=struct.pack('<I',len(b))+b
         samples=np.array([v for _,v in bones]).transpose(1,0,2).astype('<f4');assert np.isfinite(samples).all()
         payload+=samples.tobytes()
-        (PROJECT/f'Assets/Remaster/Resources/SecondaryMotion/{resource}.bytes').write_bytes(payload)
+        (PROJECT/f'Assets/_Project/Resources/SecondaryMotion/{resource}.bytes').write_bytes(payload)
         entries.append(dict(character=ch,moveId=mid,animation=anim,kind=kind,frames=frames,camera=camera,secondary=resource,landingStitch=ch=='kaz' and mid==2326))
 # Xiaoyu's and Alisa's tracks are baked by their own prepare scripts; keep their catalog entries.
-for code,folder in [('xia','XiaoyuSource'),('asa','AlisaSource')]:
-    for e in json.loads((PROJECT/f'Assets/Remaster/Editor/{folder}/staging.json').read_text())['entries']:
+for code,folder in [('xia','Xiaoyu'),('asa','Alisa')]:
+    for e in json.loads((PROJECT/f'Assets/_Project/Characters/{folder}/Source/Base/staging.json').read_text())['entries']:
         entries.append(dict(character=code,moveId=e['moveId'],animation=e['animation'],kind=e['kind'],frames=e['frames'],camera=e['camera'],secondary=e['secondary'],landingStitch=False))
-output=PROJECT/'Assets/Remaster/Resources/StagingCatalog.json';output.write_text(json.dumps(dict(entries=entries),indent=2)+'\n')
+output=PROJECT/'Assets/_Project/Resources/StagingCatalog.json';output.write_text(json.dumps(dict(entries=entries),indent=2)+'\n')
 print(json.dumps(entries,indent=2))

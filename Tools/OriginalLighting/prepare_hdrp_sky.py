@@ -31,7 +31,7 @@ for ux,uy,uz in directions:
     pixels[:,:,3] = 1  # original auxiliary alpha is not sky opacity
     # Unity cube uploads use the opposite row order from the direction grid.
     faces.append(pixels[::-1].tobytes())
-output = PROJECT/'Assets/Remaster/Rendering/OriginalStage/Stg29Sky.t7sky'
+output = PROJECT/'Assets/_Project/Rendering/OriginalStage/Stg29Sky.t7sky'
 output.parent.mkdir(parents=True,exist_ok=True)
 output.write_bytes(gzip.compress(b'T7SK'+struct.pack('<I',n)+b''.join(faces),mtime=0))
 report = dict(sourceDdsSha256=expected,resolution=n,faces=6,format='RGBAHalf',sourceToUnityBasis='(x,z,-y)',resampling='exact texel reorientation with Unity cube row order; no HDR clipping',auxiliaryAlpha='set to 1',compressedBytes=output.stat().st_size)

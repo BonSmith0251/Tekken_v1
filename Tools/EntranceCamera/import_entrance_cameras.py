@@ -11,7 +11,7 @@ import struct
 
 
 def export(workspace, project):
-    output = project / 'Assets/Remaster/Resources/EntranceCameras'
+    output = project / 'Assets/_Project/Resources/EntranceCameras'
     output.mkdir(parents=True, exist_ok=True)
     records = []
     for character, folder, move_id, resource in [

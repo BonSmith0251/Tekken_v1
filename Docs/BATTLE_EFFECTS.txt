@@ -1,0 +1,48 @@
+BATTLE EFFECTS (LocalVersus / LocalVersus2)
+
+The fight now plays Tekken 7's own common battle effects. The original keeps them in
+Effect/TK75/Common; BP_CommonEffectManager names the particle system for each role, and the
+game's native code decides when each plays. The remaster triggers them from its own events:
+
+  Clean hit                 HitFX           PS_EF_cmnhit00_ts       sparks, glow, orange light flash
+  Counter hit               CriticalHit3FX  PS_EF_cmncritical00_ts  rings, spark burst, speed lines
+  Guarded hit               GuardFX         PS_EF_cmnguard01_ts     guard flash, lines, smoke puff
+  Clean hit, 20+ damage     PierceFX        PS_EF_cmnhit_line00     directional speed lines (*)
+  Body lands from the air   BlastFX         PS_EF_cmndown00_ts      floor rings and wind circle
+  Any fall to the floor     SmokeFX         PS_EF_cmnsmoke00        dust
+  Rage begins (25% health)  RageFX          PS_EF_cmnragestart00_ss rings and ribbons around the body
+  While in Rage             RageAuraFX      PS_EF_cmnrageaura_ts    looping red aura on the body bones
+
+(*) The original chooses PierceFX in native code; using it for heavy hits is this project's choice.
+The model does not spend Rage (no Rage Art consumption), so the aura stays while health is at a
+quarter or less, and ends with the round.
+
+Where the effect plays: the data has no hitbox positions for effects, so the struck point is where
+the attacker's nearest striking bone (hand, elbow, knee, foot, head) meets the defender's hip-to-head
+line, and the effect faces along the blow. Effects run on game time, so they slow with the KO.
+
+Conversion (Tools/HitEffects/export_hit_effects.py): every emitter's spawn bursts and rate, lifetime,
+size and size-over-life, colour and colour-over-life (HDR peak -> material intensity), velocity,
+cone, drag, acceleration, spawn shape, rotation, mesh particles, camera offset, floor placement,
+point-light flashes and character-bone spawning are decoded from the original lookup tables and
+curves (centimetres -> metres, UE axes -> Unity).
+
+Approximated (not recovered):
+- GPU vector fields: their tightness becomes drag and their strength becomes noise, which keeps
+  sparks compact around the impact; the field shapes themselves are not decoded.
+- AlphaClip: the cooked effect materials keep only parameter names, not their maths. The spark
+  material's static "Alpha Clip" sharpens coverage to its core, saturate(a * (1 + c) - c); the
+  distortion material's per-particle AlphaClip curve erodes it, a ^ max(1, c). Both were fitted
+  against the captures.
+- Glare/bloom strength (CascadeEffects.glareGain).
+Not reproduced: texture scroll/distortion dynamic parameters, refraction-only emitters, and bursts
+above 600 particles (capped).
+
+Regenerate:
+  python -m t7extract unpack <game> "*/Effect/TK75/Common/*" -o <src>
+  python -m t7extract unpack <game> "*/Effect/TK75/Character/mrx/Mesh/SM_EF_MRX_*" -o <src>
+  python Tools/HitEffects/export_hit_effects.py --source <src> --t7extract <asset_workshop>
+Output: Assets/_Project/Resources/HitEffects (effects.json, Textures, Meshes, CascadeParticle.shader).
+
+Preview: Remaster > Rendering > Capture battle effects writes Validation/HitEffects/<role>-<ms>.png.
+The project needs the built-in Particle System module (com.unity.modules.particlesystem).

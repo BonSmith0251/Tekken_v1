@@ -7,7 +7,7 @@ Project relative to that workspace: `UnityRemaster/TekkenVersusRemaster`.
 Source tools: workspace `t7extract`; source game: `TEKKEN.7`; extracted references: `decrypted`.
 These are discovery hints, not required paths. Read the target environment and `Tools/source-paths.json` first.
 
-At creation the project used Unity 2023.2.22f1, HDRP 16.0.6. Read ProjectVersion.txt, manifest.json and the local PackageCache before changing APIs. Main scenes are `Assets/Remaster/Scenes/LocalVersus2.unity`, `CharacterMuseum.unity`, `staging_test.unity` and `Wardrobe.unity`.
+At creation the project used Unity 2023.2.22f1, HDRP 16.0.6. Read ProjectVersion.txt, manifest.json and the local PackageCache before changing APIs. Main scenes are `Assets/_Project/Scenes/LocalVersus2.unity`, `CharacterMuseum.unity`, `staging_test.unity` and `Wardrobe.unity`.
 
 Game sources:
 
@@ -21,8 +21,8 @@ Game sources:
 - Character importers and museum setup contain Jin/Kazuya assumptions. Extend actual profile/catalog data and importer inputs; do not rename a Jin rig and treat it as another character.
 - `Tools/CombatPoseConverter` supplies the established body decoder/reference-rig conversion. Dependencies include numpy/scipy for current baking tools.
 - `Tools/SecondaryMotion` contains the native hand/face research and exporters. These are examples to parameterize, not already roster-wide tools.
-- `Assets/Remaster/Scripts` contains runtime action catalogs, staging selection, native camera sampling, HDRP scene lighting and museum UI.
-- `Assets/Remaster/Editor/StagingValidation.cs`, `StagingFlowValidation.cs`, `CombatHandValidation.cs`, `HdrpValidation.cs` are editor probes. Some assume current Jin/Kazuya objects or mutate the play state; inspect and generalize them to the requested fighter before using.
+- `Assets/_Project/Scripts/Runtime` contains runtime action catalogs, staging selection, native camera sampling, HDRP scene lighting and museum UI.
+- `Assets/_Project/Scripts/Editor/StagingValidation.cs`, `StagingFlowValidation.cs`, `CombatHandValidation.cs`, `HdrpValidation.cs` are editor probes. Some assume current Jin/Kazuya objects or mutate the play state; inspect and generalize them to the requested fighter before using.
 - `Validation/Staging`, `Validation/CombatHands`, `Validation/OriginalLighting` retain source records, captures and measured checks. Store fresh evidence with clear character/action attribution.
 - `Tools/HitEffects/export_hit_effects.py` exports the original common hit-effect systems to `Resources/HitEffects`. `Scripts/CascadeEffects.cs` plays them in versus (commit `b71b8341e`); see the versus skill.
 - `UnityRemaster/CategoryBuild` is a copy of the project that Codex uses for batchmode builds while the editor is open. `deploy_xiaoyu_museum.py` and `deploy_xiaoyu_skirts.py` copy files from it back into the main project, with backups: `XiaoyuImporter.cs`, `XiaoyuSecondaryDynamics.cs`, `CharacterMuseum.cs` and `CharacterMuseum.unity`. The copy lacks later fixes (`WeldTriangleSoup`, `SeparateGarment`) and still has the abandoned `JointCorrection` code, so rerunning a deploy wipes main-project fixes. Sync CategoryBuild from the main project first, and update the deploy asserts (`characters=3, costumes=19, actions=6997`). A copied project also needs `com.unity.modules.cloth` in its package manifest.

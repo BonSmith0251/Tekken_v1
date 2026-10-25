@@ -1,14 +1,27 @@
 TEKKEN VERSUS REMASTER - UNITY WORKSPACE
 
+PROJECT LAYOUT
+Assets/_Project/Characters/<Name>/  one folder per fighter (Jin, Kazuya, Xiaoyu, Alisa)
+    Source/     extracted inputs the importers read (Base, Costumes, Wardrobe, Motion)
+    Costumes/   imported outfits (materials, meshes, prefabs, textures)
+    Wardrobe/   imported wearable items; Base/ is Jin's original versus import
+    Motion/, References/   Jin's decoded and retargeted motion libraries
+Assets/_Project/Shared/Textures/    textures used by more than one fighter
+Assets/_Project/Stages/Source/      extracted stage geometry
+Assets/_Project/Scripts/Runtime, Scripts/Editor
+Assets/_Project/Scenes, Resources, Museum, Wardrobe, Rendering, Settings
+Docs/  feature notes (museum, staging, wardrobe, battle effects, HDRP...)
+Tools/, References/, Validation/, Skills/  pipeline tools, extracted references, checks
+
 Open with Unity 2023.2.22f1. Double-click Open in Unity.cmd.
-Open Assets/Remaster/Scenes/LocalVersus.unity and press Play, then Enter.
+Open Assets/_Project/Scenes/LocalVersus.unity and press Play, then Enter.
 The Windows build is Builds/Windows/VersusRemaster.exe when built successfully.
 Double-click Play Jin Prototype.cmd to launch the Windows build.
 
 DECODED ORIGINAL MOTION SOURCES
 Open Remaster > Original Jin motions to search 1,710 decoded clips by animation
 or move name. Select a result and scrub its original frame samples in the Inspector.
-These source assets are under Assets/Remaster/Editor/OriginalMotions; move names,
+These source assets are under Assets/_Project/Characters/Jin/Motion/Original; move names,
 damage and active-frame references are under References/OriginalJinMotion.
 The source samples have been decoded. Remaster > Jin retarget preview plays 194
 compatible C8 clips with corrected v2 axes and exports Unity AnimationClips.
@@ -40,16 +53,16 @@ Enter start/rematch, Esc pause, F1 controls. Focus loss pauses the match.
 Keyboard ghosting/rollover depends on hardware; gamepads are optional.
 
 EDITING
-Assets/Remaster/Settings/LocalVersus.asset: health, timer, rounds, movement,
+Assets/_Project/Settings/LocalVersus.asset: health, timer, rounds, movement,
     four moves' startup/active/recovery frames, reach, damage, height and stun.
-Assets/Remaster/Scripts/BattleModel.cs: 60 Hz combat simulation.
-Assets/Remaster/Scripts/FighterView.cs: replaceable procedural presentation.
-Assets/Remaster/Scripts/JinRig.cs: procedural two-bone IK on Jin's original rig.
-Assets/Remaster/Scripts/JinRetargetMotion.cs: retargeted idle playback and blending.
-Assets/Remaster/Resources/JinRetargeted/Stance.bytes: corrected common/0462 samples.
-Assets/Remaster/Resources/JinPlayable.prefab: the playable four-part skinned Jin.
-Assets/Remaster/Jin: imported native Unity meshes, textures and materials.
-Assets/Remaster/Scripts/VersusGame.cs: local input, arena, HUD, camera and sound.
+Assets/_Project/Scripts/Runtime/BattleModel.cs: 60 Hz combat simulation.
+Assets/_Project/Scripts/Runtime/FighterView.cs: replaceable procedural presentation.
+Assets/_Project/Scripts/Runtime/JinRig.cs: procedural two-bone IK on Jin's original rig.
+Assets/_Project/Scripts/Runtime/JinRetargetMotion.cs: retargeted idle playback and blending.
+Assets/_Project/Resources/JinRetargeted/Stance.bytes: corrected common/0462 samples.
+Assets/_Project/Resources/JinPlayable.prefab: the playable four-part skinned Jin.
+Assets/_Project/Characters/Jin/Base: imported native Unity meshes, textures and materials.
+Assets/_Project/Scripts/Runtime/VersusGame.cs: local input, arena, HUD, camera and sound.
 Remaster menu: open scene, validate combat, build Windows, browse references.
 
 EXTRACTED DATA
@@ -59,20 +72,20 @@ The complete native Tekken combat implementation has not been recovered.
 Cooked .uasset/.umap copies remain at the path in Tools/source-paths.json.
 Do not drag those cooked packages into Unity expecting them to run.
 
-Assets/Remaster/ImportedReferences/Jin contains converted static reference-pose
+Assets/_Project/Characters/Jin/References contains converted static reference-pose
 OBJ geometry: face, hair, upper and lower costume. These older samples have no rig,
 skin weights, UVs, textures, or animation. Use JinPlayable.prefab for the fighter.
 Use Remaster > Create Jin reference scene to inspect the assembled samples.
 Each OBJ has a .source.json provenance and SHA256 record.
 
 Export another supported static/reference-pose mesh from PowerShell:
-  python Tools/export_mesh.py "TekkenGame/Content/.../Mesh.uasset" "Assets/Remaster/ImportedReferences/MyMesh.obj"
+  python Tools/export_mesh.py "TekkenGame/Content/.../Mesh.uasset" "Assets/_Project/References/MyMesh.obj"
 The exporter requires the existing Asset Workshop and Python dependencies.
 Edit Tools/source-paths.json if you move the original game or tool.
 
 NEXT REMASTER WORK
-Jin's skeleton, skinning and UV conversion is implemented in Editor/JinSource
-and Editor/JinImporter.cs. The importer preserves up to four influences per vertex.
+Jin's skeleton, skinning and UV conversion is implemented in Characters/Jin/Source/Base
+and Scripts/Editor/JinImporter.cs. The importer preserves up to four influences per vertex.
 Convert the original animation clips, material shaders and additional characters.
 Retarget animation to Unity; replace FighterView with an Animator-driven view.
 Rebuild authentic movement, throws, juggling, movesets and collision timing.

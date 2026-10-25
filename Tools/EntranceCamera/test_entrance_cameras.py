@@ -13,7 +13,7 @@ class EntranceCameraTests(unittest.TestCase):
         # Independent pinhole projection check for every animated lens sample.
         # 36 x 20.25 mm is an equivalent 16:9 gate, not a recovered filmback.
         for resource in ['Jin_s00', 'Kazuya_s06', 'Jin_s02', 'Kazuya_s03']:
-            camera = (PROJECT / f'Assets/Remaster/Resources/EntranceCameras/{resource}.bytes').read_bytes()
+            camera = (PROJECT / f'Assets/_Project/Resources/EntranceCameras/{resource}.bytes').read_bytes()
             frames = struct.unpack_from('<I', camera, 4)[0]
             for frame in range(frames):
                 horizontal = struct.unpack_from('<f', camera, 20 + frame * 48 + 24)[0]
@@ -35,8 +35,8 @@ class EntranceCameraTests(unittest.TestCase):
             ('Kazuya', 714, 'Kazuya_s03', 2326, 124),
         ]:
             with self.subTest(character=character):
-                body = (PROJECT / f'Assets/Remaster/Museum/{character}Full/character_{motion:04}.bytes').read_bytes()
-                camera = (PROJECT / f'Assets/Remaster/Resources/EntranceCameras/{resource}.bytes').read_bytes()
+                body = (PROJECT / f'Assets/_Project/Museum/{character}Full/character_{motion:04}.bytes').read_bytes()
+                camera = (PROJECT / f'Assets/_Project/Resources/EntranceCameras/{resource}.bytes').read_bytes()
                 magic, frames, fps, source_move, source_track = struct.unpack_from('<4sIIII', camera)
                 self.assertEqual((magic, fps, source_move, source_track), (b'T7C1', 60, move, track))
                 self.assertEqual(frames, struct.unpack_from('<I', body, 4)[0])
@@ -57,7 +57,7 @@ class EntranceCameraTests(unittest.TestCase):
             start = offset + struct.unpack_from('>I', data, offset + 20 + record['track'] * 4)[0]
             count = record['frames'] * 12
             expected = struct.unpack_from(f'>{count}f', data, start + 24)
-            exported = (PROJECT / f'Assets/Remaster/Resources/EntranceCameras/{record["resource"]}.bytes').read_bytes()
+            exported = (PROJECT / f'Assets/_Project/Resources/EntranceCameras/{record["resource"]}.bytes').read_bytes()
             self.assertEqual(expected, struct.unpack_from(f'<{count}f', exported, 20))
 
 

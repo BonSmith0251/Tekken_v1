@@ -1,0 +1,81 @@
+CHARACTER MUSEUM - JIN, KAZUYA AND XIAOYU
+
+The character list includes Jin Kazama, Kazuya Mishima and Ling Xiaoyu.
+
+Select Ling Xiaoyu to view her Default 1P, Classic, Formal and School Uniform
+outfits. Her catalog contains 2,437 original move records, 1,462 distinct body
+clips and 9,020 cancel branches. Her own stance is selected when she loads.
+The Staging category includes five entrances and four victory variants. All
+nine have native hand tracks; eight also have native facial tracks and cameras.
+Enable Original action camera for those eight takes, or leave it off to orbit
+and scrub manually. The paired fu_w01_y variant has no independent face/camera
+event and uses the museum camera and bind face. All four outfits now have adapted
+hair/accessory springs and constrained cloth on garment hems, with body collision
+capsules. Motion responds during playback and settles when paused. Seeking clears
+stale inertia. These are Unity simulation settings rather than the original
+Unreal physics. Combat finger/facial events, attachments and synchronized throw
+partners are not integrated. The four outfits are complete imported sets, not
+every customization.
+
+Kazuya includes
+eight complete installed outfits, with Karate Gi first for a clear body preview:
+Karate Gi, Default 1P Silver Coat, Battle Damaged Gi, Tekken 4 Gi, Gilet,
+Kamikaze, Tattoo Shirt, and Wagara. His silver coat intentionally hangs from
+his shoulders with empty sleeves behind his fighting arms. He has 2,333
+extracted move records, covering
+1,378 distinct body clips and 9,683 cancel/transition entries. Select Kazuya in
+the CHARACTERS list, then use the same search, playback, scrub and branch tools.
+
+Launch Open Character Museum.cmd or open CharacterMuseum.unity and press Play.
+Jin now has all 2,227 extracted move records, including transitions, variants,
+shared reactions, item actions, throws, intros and outros. These reference
+1,361 distinct body animations; shared animations remain separate move records.
+
+Use the COSTUMES list to switch among Jin's seven complete installed outfit sets:
+Default 1P, Karate Gi, Emperor, School Uniform, Long Coat, Regulus, and
+Tattered / Devil. Costume changes keep the selected action and timeline frame,
+so the same pose can be compared across every outfit. These are Jin-specific
+full-body sets; the game's separate generic customization accessories are not
+treated as complete costumes in this selector.
+
+Search by original internal move name, animation name or numeric move ID.
+Use the CATEGORY control to filter each character's records into Staging, Entrance,
+Ready, Idle, Movement, Fighting, Throws, Reactions, Transitions, Victory, and
+Other. The arrows move backward or forward through the categories; clicking
+the category name also advances to the next one. Search applies inside the
+selected category, while All searches the full character catalog.
+Use the page arrows to browse all results, 100 records per page.
+Space plays/pauses. Arrow keys step. Drag the timeline to scrub.
+Right-drag orbits; mouse wheel zooms. Speed and looping are adjustable.
+Source travel restores the clip's horizontal movement and makes the camera follow.
+
+Transitions / original record opens the selected move's default transition,
+all cancel branches, their input/window labels, and the full source record.
+Click a branch to inspect its target. Branches are manual previews: the museum
+does not evaluate original-game conditions or recreate its combat engine.
+
+Jin's 8,553 cancel entries and the source conditions/properties are preserved.
+The 124 player-facing movelist entries and input demos are available separately
+in References/OriginalJinMotion/movelist.json; they do not supply direct animation IDs.
+
+Coverage: all referenced body motions converted with mapping v3. Clips with
+additional attachment channels display their body motion only. Object animation,
+combat finger/facial animation, effects, and synchronized second-character throw
+playback are not reconstructed here. Xiaoyu's staged hand/face tracks are the
+exception described above. Numerical/frame validation is not a visual comparison
+of every move against the original game.
+
+Each MuseumCharacter asset owns its model, bone mapping and actions. Add other
+characters after importing their models and converting their own motion libraries.
+
+Use STAGE above the playback controls to cycle through the gallery and the 34
+imported original geometry layouts. Stage materials, lighting and effects remain
+neutral previews. Changing stages keeps the current character, costume and pose.
+
+Xiaoyu skirt repair: School and Formal use a live waist suspension so thigh
+helper rotations do not pull their hems sideways. Original imported meshes and
+skin weights remain saved intact; only the live garment weights are adapted.
+Waistband panels stay pinned, lower fabric has outfit-specific drape and thigh
+collision clearance, and short-skirt materials render both sides. This is adapted
+Unity cloth, not the original Unreal simulation. Dynamics checks run at 60 fps
+across all four outfits, including attacks and timeline seeks.

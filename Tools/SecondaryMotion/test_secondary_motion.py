@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[2]
 class SecondaryMotionTests(unittest.TestCase):
  def test_tracks(self):
   for ch,move,frames in [('jin',2220,301),('kaz',2326,217)]:
-   data=(ROOT/f'Assets/Remaster/Resources/SecondaryMotion/{ch}_{move}.bytes').read_bytes()
+   data=(ROOT/f'Assets/_Project/Resources/SecondaryMotion/{ch}_{move}.bytes').read_bytes()
    magic,n,count,rate=struct.unpack_from('<4sIII',data);self.assertEqual((magic,n,count,rate),(b'SMT1',frames,81,60))
    p=16;names=[]
    for _ in range(count):
@@ -21,7 +21,7 @@ class SecondaryMotionTests(unittest.TestCase):
    if ch=='jin':self.assertTrue(np.array_equal(a[:,names.index('L_Index1')],np.repeat(a[:1,names.index('L_Index1')],n,axis=0)))
  def test_kazuya_skin_weights(self):
   for piece,part in [('kaz_fac','Lip'),('kaz_bdu_dougi_org','Index')]:
-   data=json.loads((ROOT/f'Assets/Remaster/Editor/KazuyaSource/{piece}.json').read_text())
+   data=json.loads((ROOT/f'Assets/_Project/Characters/Kazuya/Source/Base/{piece}.json').read_text())
    ids={i for i,b in enumerate(data['bones']) if part.lower() in b['name'].lower()}
    influenced=0
    for w in data['weights']:

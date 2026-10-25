@@ -28,10 +28,10 @@ def hand_rotation(euler, side):
                     else [q[0],-q[2],q[1],q[3]])
 
 def bake():
- output=PROJECT/'Assets/Remaster/Resources/SecondaryMotion';output.mkdir(parents=True,exist_ok=True)
+ output=PROJECT/'Assets/_Project/Resources/SecondaryMotion';output.mkdir(parents=True,exist_ok=True)
  report=[]
- for ch,mid,source in [('jin',2220,'JinSource/SK_CH_jin_fac.json'),('kaz',2326,'KazuyaSource/kaz_fac.json')]:
-  rig={b['name']:b for b in json.loads((PROJECT/'Assets/Remaster/Editor'/source).read_text())['bones']}
+ for ch,mid,source in [('jin',2220,'Jin/Source/Base/SK_CH_jin_fac.json'),('kaz',2326,'Kazuya/Source/Base/kaz_fac.json')]:
+  rig={b['name']:b for b in json.loads((PROJECT/'Assets/_Project/Characters'/source).read_text())['bones']}
   entries=[];frames=None
   for kind,side in [('left_hand','L'),('right_hand','R'),('face',None)]:
    motion=decode_motion((PROJECT/f'Validation/SecondaryMotion/{ch}_{mid}_{kind}.c8').read_bytes())

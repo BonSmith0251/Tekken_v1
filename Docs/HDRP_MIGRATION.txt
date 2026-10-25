@@ -1,0 +1,34 @@
+HDRP MIGRATION
+==============
+Unity: 2023.2.22f1. Render pipeline: HDRP 16.0.6 (package and dependencies pinned).
+
+Project settings
+- Assets/_Project/Rendering/RemasterHDRP.asset is assigned globally and to all six quality levels.
+- Linear color space, linear light intensity, HDRP global resources, unlimited skin weights.
+- Runtime cameras use SMAA. Camera transforms, physical lens/FOV and authored entrance timelines remain unchanged.
+- Resources/RemasterEnvironment supplies fixed exposure, gradient ambient lighting and height fog.
+- HdrpSceneLighting configures cameras/lights created by versus and museum scenes before rendering.
+  Existing directional intensities are converted to lux (legacy intensity * PI), with fixed exposure 0.
+
+Materials
+- Standard/Standard Specular materials use HDRP/Lit, retaining their asset GUIDs.
+- Unity's HDRP upgrader maps base color, normal, specular, emission and alpha-test settings.
+- Packed HDRP mask maps: R metallic, G occlusion, B detail mask, A smoothness.
+- Importers finish with HdrpProjectSetup.ConvertMaterial. The converter reads mask inputs directly
+  from source images to avoid Unity's temporary CopyAsset failure with this asset library.
+- Runtime arena, hit effects and museum pedestal use the converted PrototypeSurface resource.
+
+Maintenance
+- Remaster > Rendering > Configure HDRP and convert materials can be rerun after legacy imports.
+- Remaster > Rendering > Validate HDRP in current versus scene captures both entrances and combat.
+- Keep Unity-generated HDRPDefaultResources, Rendering assets, volume profile, generated mask maps,
+  and their .meta files under version control.
+- HDRP requires a supported desktop/console GPU. This migration targets the existing Windows project;
+  mobile/WebGL are not validated.
+
+Verification
+- Unity compiled the runtime/editor assemblies successfully.
+- All 135 project materials use HDRP/Lit; direct-input conversion check passed.
+- Live LocalVersus2 playback captured Kazuya, Jin and combat with HDRP active
+  and zero non-HDRP renderer materials. See Validation/HDRP.
+- Windows standalone build and GPU performance benchmarking were not run.

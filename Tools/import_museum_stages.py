@@ -11,7 +11,7 @@ from t7extract.mesh import extract_mesh
 from extract_stage_lighting import properties
 
 def main():
- out=PROJECT/'Assets/Remaster/Editor/StageSource';out.mkdir(parents=True,exist_ok=True)
+ out=PROJECT/'Assets/_Project/Stages/Source';out.mkdir(parents=True,exist_ok=True)
  source=Source(str(ROOT/'TEKKEN.7'),TEKKEN_ASSET_KEY)
  inventory={i.path.lower():i for i in source.items()}
  cache={}; stages=[]; failures=[]

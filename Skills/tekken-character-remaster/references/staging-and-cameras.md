@@ -12,11 +12,11 @@ Camera extraction rules that held for Jin, Kazuya and Xiaoyu:
 - Assert C8 format, four descriptors, and a sample count equal to the move's frames.
 - Secondary properties are 33838 (left hand), 33839 (right hand) and 33986 (face).
 
-`StagingCatalog.json` and `StagingCatalog.cs` connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. The catalog holds jin 9, kaz 10 and xia 9 takes. `bake_staging_tracks.py` bakes only Jin and Kazuya itself, assumes synchronized single events, and then appends the entries from `Assets/Remaster/Editor/XiaoyuSource/staging.json`, so a re-bake keeps Xiaoyu.
+`StagingCatalog.json` and `StagingCatalog.cs` connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. The catalog holds jin 9, kaz 10 and xia 9 takes. `bake_staging_tracks.py` bakes only Jin and Kazuya itself, assumes synchronized single events, and then appends the entries from `Assets/_Project/Characters/Xiaoyu/Source/Base/staging.json`, so a re-bake keeps Xiaoyu.
 
 ## Adding a fighter to staging_test
 
-1. Bake the fighter's tracks with a per-character script, for example `UnityRemaster/prepare_xiaoyu_staging.py`. It writes `<Char>Source/staging.json`, `Resources/EntranceCameras/<code>_staging_<move>.bytes` (T7C1) and the SMT1 secondary resources.
+1. Bake the fighter's tracks with a per-character script, for example `UnityRemaster/prepare_xiaoyu_staging.py`. It writes `Characters/<Name>/Source/Base/staging.json`, `Resources/EntranceCameras/<code>_staging_<move>.bytes` (T7C1) and the SMT1 secondary resources.
 2. Add a merge hook for that `staging.json` to `bake_staging_tracks.py`.
 3. Add the `MuseumCharacter` asset's GUID to the `characters:` list in `staging_test.unity`. Edit the file on disk only when that scene is not open in the editor; check the Unity window title.
 4. Make sure `StagingTestPlayer.Code()` resolves the fighter through `characterCode`, and that its bone dictionary ignores case.

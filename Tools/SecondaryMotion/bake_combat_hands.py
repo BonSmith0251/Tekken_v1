@@ -8,11 +8,11 @@ PROJECT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(PROJECT/'Tools/CombatPoseConverter/vendor'))
 from t7extract.motion import decode_motion
 report=[]
-for ch,folder,mid,rigfile in [('jin','jin_motion',1442,'JinSource/SK_CH_jin_fac.json'),('kaz','kazuya_motion',1435,'KazuyaSource/kaz_fac.json')]:
+for ch,folder,mid,rigfile in [('jin','jin_motion',1442,'Jin/Source/Base/SK_CH_jin_fac.json'),('kaz','kazuya_motion',1435,'Kazuya/Source/Base/kaz_fac.json')]:
     workspace=PROJECT.parents[1]
     move=next(m for m in json.loads((workspace/f'decrypted/{folder}/{ch}/moveset.json').read_text())['moves'] if m['id']==mid)
     raw=(workspace/f'decrypted/tkdata/mothead/mask/{ch}rotsm.arc').read_bytes()
-    rig={b['name']:b for b in json.loads((PROJECT/'Assets/Remaster/Editor'/rigfile).read_text())['bones']}
+    rig={b['name']:b for b in json.loads((PROJECT/'Assets/_Project/Characters'/rigfile).read_text())['bones']}
     entries=[];sources=[]
     for side,pid in [('L',0x842e),('R',0x842f)]:
         prop=next(p for p in move['properties'] if p['id']==pid)
@@ -48,7 +48,7 @@ for ch,folder,mid,rigfile in [('jin','jin_motion',1442,'JinSource/SK_CH_jin_fac.
     for name,_ in entries:
         b=name.encode();data+=struct.pack('<I',len(b))+b
     data+=samples.tobytes()
-    (PROJECT/f'Assets/Remaster/Resources/SecondaryMotion/{ch}_combat_hands.bytes').write_bytes(data)
+    (PROJECT/f'Assets/_Project/Resources/SecondaryMotion/{ch}_combat_hands.bytes').write_bytes(data)
     report.append(dict(character=ch,moveId=mid,animation=move['animation'],archiveSha256=hashlib.sha256(raw).hexdigest(),tracks=sources,bones=len(entries),frames=frames))
 output=PROJECT/'Validation/CombatHands';output.mkdir(exist_ok=True,parents=True)
 (output/'source.json').write_text(json.dumps(report,indent=2)+'\n')

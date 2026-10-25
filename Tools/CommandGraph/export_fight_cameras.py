@@ -2,7 +2,7 @@
 
 Move properties 0x8435-0x8438, 0x8439/0x843A (left/right screen side) and 0x8445-0x8449 name a
 track in bank 4 of mask/<chr>rotsm.arc when (value & 0xC000) == 0x4000. Tracks are 0xC8 MOTA
-(big-endian floats). Written to Assets/Remaster/Resources/FightCameras/<chr>_<track>.bytes as
+(big-endian floats). Written to Assets/_Project/Resources/FightCameras/<chr>_<track>.bytes as
 "T7CF", frames, channels, channel descriptors, then frames x channels x 3 little-endian floats in
 native units (millimetres, radians). Rage Art tracks use descriptors (11, 11, 15, 3, 21): look-at
 point, camera position, lens (horizontal FOV), and a blend back to the gameplay camera.

@@ -1,0 +1,15 @@
+LocalVersus: Jin original combat animations (mapping v3)
+
+Open Assets/_Project/Scenes/LocalVersus.unity and press Play, then Enter.
+P1: WASD move, F left punch, G right punch, H left kick, J right kick.
+R guard, T crouch. P2 controls remain unchanged.
+
+Jin uses eight corrected source clips: idle, forward/back walk, crouch,
+left/right punches and left/right kicks. Attack playback is time-scaled
+to the existing prototype startup and recovery; source strike frames
+10/10/14/13 coincide with the simulated hit window. Prototype damage,
+hit heights and ranges remain unchanged (H still uses low-hit rules).
+Guard, hit stun and KO use procedural poses. Sidesteps reuse walking.
+Battle controls translation/facing; clips do not add horizontal root motion.
+
+Run Play Jin Prototype.cmd for the rebuilt standalone player.

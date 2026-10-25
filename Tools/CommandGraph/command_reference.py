@@ -1,6 +1,6 @@
 """Reference command interpreter for an exported Tekken 7 command graph.
 
-Mirrors Assets/Remaster/Scripts/CommandInterpreter.cs so the runtime can be
+Mirrors Assets/_Project/Scripts/Runtime/CommandInterpreter.cs so the runtime can be
 checked against the original movelist demo inputs outside Unity. Semantics:
   * Inputs are relative to facing: numpad directions as bit flags (1 d/b ... 9 u/f)
     and buttons 1-4 as bits 1, 2, 4, 8.

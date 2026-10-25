@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "Assets/Remaster/Resources/HitEffects"
+OUT = ROOT / "Assets/_Project/Resources/HitEffects"
 MANAGER = "TekkenGame/Content/Effect/TK75/Common/BP_CommonEffectManager.uasset"
 # Roles the remaster drives; the manager holds the system for each.
 ROLES = ["HitFX", "CriticalHit3FX", "GuardFX", "PierceFX", "BlastFX", "SmokeFX", "RageFX", "RageAuraFX"]

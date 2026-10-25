@@ -9,13 +9,13 @@ ROOT = Path(__file__).resolve().parents[2]
 
 class LandingStitchTests(unittest.TestCase):
     def test_descent_never_rewinds_at_either_join(self):
-        code = (ROOT / 'Assets/Remaster/Scripts/LocalVersusEntrance.cs').read_text()
+        code = (ROOT / 'Assets/_Project/Scripts/Runtime/LocalVersusEntrance.cs').read_text()
         values = {name: int(re.search(r'\b' + name + r' = (\d+)', code)[1])
                   for name in ('FirstCut', 'FirstOverlap', 'SecondCut', 'SecondOverlap')}
         def source(frame):
             return (frame + (values['FirstOverlap'] if frame >= values['FirstCut'] else 0)
                     + (values['SecondOverlap'] if frame >= values['SecondCut'] else 0))
-        data = (ROOT / 'Assets/Remaster/Museum/KazuyaFull/character_0714.bytes').read_bytes()
+        data = (ROOT / 'Assets/_Project/Museum/KazuyaFull/character_0714.bytes').read_bytes()
         frames, bones, rate = struct.unpack_from('<3i', data, 4)
         roots = [struct.unpack_from('<3f', data, 16 + f * (3 + bones * 4) * 4)
                  for f in range(frames)]

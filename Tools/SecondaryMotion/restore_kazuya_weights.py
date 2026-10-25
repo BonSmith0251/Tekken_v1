@@ -14,7 +14,7 @@ from bake_entrance_tracks import hand_names,face_names
 keep=set(hand_names['L']+hand_names['R']+face_names)
 keep.update(['BASE','Spine1','Hip','Neck','Head','R_Shoulder','R_Arm','R_ForeArm','R_Hand','L_Shoulder','L_Arm','L_ForeArm','L_Hand','R_UpLeg','R_Leg','R_Foot','L_UpLeg','L_Leg','L_Foot'])
 keep={n.lower() for n in keep}
-manifest=json.loads((PROJECT/'Assets/Remaster/Editor/KazuyaSource/manifest.json').read_text());report=[]
+manifest=json.loads((PROJECT/'Assets/_Project/Characters/Kazuya/Source/Base/manifest.json').read_text());report=[]
 with Source(str(WORKSPACE/'TEKKEN.7'),TEKKEN_ASSET_KEY) as source:
  items={i.path.lower():i for i in source.items()}
  for name,entry in manifest['pieces'].items():

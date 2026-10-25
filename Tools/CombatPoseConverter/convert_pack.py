@@ -5,7 +5,7 @@ from combat_pose_converter import BONES,convert,read_motion,write_clip,digest,va
 
 tools=Path(__file__).resolve().parent
 project=tools.parent.parent
-out=project/'Assets/Remaster/Editor/CombatPoseLab'
+out=project/'Assets/_Project/Characters/Jin/Motion/CombatPoseLab'
 profile_bytes=(out/'calibration-v3.json').read_bytes();profile=json.loads(profile_bytes)
 validate_profile(profile)
 manifest=json.loads((tools/'sources/index.json').read_text())

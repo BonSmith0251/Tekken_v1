@@ -1,0 +1,56 @@
+JIN RETARGETING PREVIEW — EXPERIMENTAL
+
+Mapping v2: corrected an unintended front/back reversal. Both rigs point
+their toes toward +Z; only the X coordinate changes sign between them.
+All 194 preview clips were regenerated. Re-export clips created with v1;
+existing user-created .anim files are preserved. New exports include v2
+in their filenames. See Validation/retarget-axes.json for landmark checks.
+
+Open this project in Unity, then choose:
+  Remaster > Jin retarget preview
+
+Select a source clip, press Play, or drag the Frame slider.
+View angle rotates the camera. Create Unity AnimationClip saves a new generic
+AnimationClip under Assets/_Project/Characters/Jin/Motion/Retargeted. These clips target
+the JinPlayable prefab hierarchy; they are not Humanoid clips.
+
+Remaster > Original Jin motions also has a 3D preview button beside supported
+clips. Search character/0040 for one of the visually checked examples.
+
+Current scope:
+  194 original C8 clips with 23 channels / 18,124 sampled frames.
+  Original sample timing: 60 frames per second.
+  19 named body bones mapped through a reference rig's bind rotations.
+  Horizontal root movement removed for in-place inspection.
+  Original pelvis height retained.
+  Fingers, facial motion, helper-bone drivers, and cloth are not retargeted.
+
+The compressed 64 clips, including Jin's fighting stance and normal combat
+motions, still produce invalid poses with this convention. Their decompressed
+numbers are available in the source library, but a correct interpretation and
+bone mapping is still unresolved. Two C8 clips with different channel counts
+are also excluded. This is NOT a completed original fighting animation system.
+
+LocalVersus and the Windows prototype now use corrected common/0462 (Jin's
+inter-round pose) as a prototype idle stance. The source's 90-degree heading
+is removed so Jin faces his opponent. Playback interpolates at 60 source
+frames per second and blends with procedural walking, attacks, guard,
+crouch and reactions. Authentic compressed combat animations remain unresolved.
+
+Validation:
+  All 194 generated files checked for size, finite samples, SHA-256, and
+  normalized quaternions. All clips sampled at first and final frames in Unity.
+  Six rendered frames from character/0039 and character/0040 visually inspected.
+  Exported AnimationClip sampling compared against preview rotations and root
+  position at frame 30. Passed.
+  No comparison against original game playback has established exact fidelity.
+  See Validation/retarget-preview.json and Validation/Retarget/*.png.
+
+Research provenance:
+  Reference conversion: Kiloutre/BlenderTekkenDirect, TekkenAnimHelper.py
+  https://github.com/Kiloutre/BlenderTekkenDirect
+  Reference rig: TekkenMannequin_no_ik.blend linked by that repository.
+  SHA-256: ce8171083d0c6da57ec2a938a1fdaf2f2b38a98e6fb31c2b6e71a4d38c1b2321
+  The rig was read as data; its embedded scripts were not executed.
+  Source research and reproducible bake script are in the game workspace:
+  UnityRemaster/AnimationResearch/bake_retarget.py
