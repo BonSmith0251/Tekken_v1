@@ -93,6 +93,17 @@ namespace Versus.Remaster
             Reset();
         }
 
+        /// <summary>
+        /// Forgets every press and direction read so far and drops a queued input cancel (automatic
+        /// cancels stay). A knocked-out fighter no longer reads input; without this a press made just
+        /// before the KO stays buffered and fires a tech roll or getup during the death fall.
+        /// </summary>
+        public void DropInput()
+        {
+            historyCount = historyHead = 0; pressButtons = 0; pressDirection = 5; pressAge = 99;
+            if (hasPending && pendingByInput) hasPending = false;
+        }
+
         public void Reset()
         {
             Move = graph.stance; Active = graph; Frame = 0; EnteredByInput = false;

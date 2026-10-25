@@ -19,10 +19,11 @@ namespace Versus.Remaster
         [Serializable] class SlotData { public string slot; public string[] pieces; }
         // A picked item color: piece, color slot (0-3 for Color01..04) and sRGB hex.
         [Serializable] class ColorData { public string piece; public int slot; public string color; }
-        [Serializable] class Data { public SlotData[] slots; public ColorData[] colors; }
+        // breast: female fighters' breast flexibility (0-1); breastSet tells it apart from older files.
+        [Serializable] class Data { public SlotData[] slots; public ColorData[] colors; public bool breastSet; public float breast; }
 
         static string ResourcePath(string code)=>"FightWardrobe/"+code;
-        static string ProjectFile(string code)=>Path.Combine(Application.dataPath,"Remaster/Resources/FightWardrobe",code+".json");
+        static string ProjectFile(string code)=>Path.Combine(Application.dataPath,"_Project/Resources/FightWardrobe",code+".json");
         static string PlayerFile(string code)=>Path.Combine(Application.persistentDataPath,"FightWardrobe",code+".json");
 
         public static string Code(CharacterWardrobe wardrobe)=>!string.IsNullOrEmpty(wardrobe.character.characterCode)?wardrobe.character.characterCode:wardrobe.name.Replace("Wardrobe","").ToLowerInvariant();
@@ -73,9 +74,23 @@ namespace Versus.Remaster
             return result;
         }
 
-        public static void Save(string code,Dictionary<string,HashSet<string>> selection,Dictionary<string,Color?[]> colors)
+        // Saved breast flexibility, or the default when none was saved.
+        public static float LoadBreast(string code)
         {
-            var data=new Data {slots=selection.OrderBy(p=>p.Key).Select(p=>new SlotData {slot=p.Key,pieces=p.Value.OrderBy(x=>x).ToArray()}).ToArray(),
+            var data=Read(code);
+            return data!=null && data.breastSet?Mathf.Clamp01(data.breast):BustDynamics.DefaultFlexibility;
+        }
+
+        // The breast setting of a character's wardrobe (the default when it has no wardrobe).
+        public static float BreastFor(MuseumCharacter character)
+        {
+            var wardrobe=ForCharacter(character);
+            return wardrobe?LoadBreast(Code(wardrobe)):BustDynamics.DefaultFlexibility;
+        }
+
+        public static void Save(string code,Dictionary<string,HashSet<string>> selection,Dictionary<string,Color?[]> colors,float breast)
+        {
+            var data=new Data {breastSet=true,breast=Mathf.Clamp01(breast),slots=selection.OrderBy(p=>p.Key).Select(p=>new SlotData {slot=p.Key,pieces=p.Value.OrderBy(x=>x).ToArray()}).ToArray(),
                 colors=colors.OrderBy(p=>p.Key).SelectMany(p=>p.Value.Select((c,s)=>c.HasValue?new ColorData {piece=p.Key,slot=s,color=ColorUtility.ToHtmlStringRGB(c.Value)}:null)).Where(c=>c!=null).ToArray()};
             string file=Application.isEditor?ProjectFile(code):PlayerFile(code);
             Directory.CreateDirectory(Path.GetDirectoryName(file));

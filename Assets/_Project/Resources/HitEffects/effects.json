@@ -32,6 +32,26 @@
   {
    "role": "RageAuraFX",
    "system": "PS_EF_cmnrageaura_ts"
+  },
+  {
+   "role": "PracticePunishNoticeHiFX",
+   "system": "PS_EF_PunishNotice_hi1"
+  },
+  {
+   "role": "PracticePunishNoticeMidFX",
+   "system": "PS_EF_PunishNotice_Mid"
+  },
+  {
+   "role": "PracticePunishNoticeMidSpFX",
+   "system": "PS_EF_PunishNotice_MidSP1"
+  },
+  {
+   "role": "PracticePunishNoticeLoFX",
+   "system": "PS_EF_PunishNotice_low"
+  },
+  {
+   "role": "KOFX",
+   "system": "PS_EF_SpecialKO"
   }
  ],
  "systems": [
@@ -71,14 +91,14 @@
       0.0
      ],
      "sizeMin": [
-      0.5,
-      0.5,
-      0.5
+      0.25,
+      0.25,
+      0.25
      ],
      "sizeMax": [
-      0.5,
-      0.5,
-      0.5
+      0.25,
+      0.25,
+      0.25
      ],
      "colorLife": [
       0.0,
@@ -179,14 +199,14 @@
       0.0
      ],
      "sizeMin": [
-      0.4,
-      0.4,
-      0.4
+      0.2,
+      0.2,
+      0.2
      ],
      "sizeMax": [
-      0.4,
-      0.4,
-      0.4
+      0.2,
+      0.2,
+      0.2
      ],
      "sizeLife": [
       0.0,
@@ -304,14 +324,14 @@
       0.0
      ],
      "sizeMin": [
-      0.02,
-      0.1,
-      0.02
+      0.01,
+      0.05,
+      0.01
      ],
      "sizeMax": [
-      0.03,
-      0.2,
-      0.02
+      0.015,
+      0.1,
+      0.01
      ],
      "sizeLife": [
       0.0,
@@ -410,7 +430,8 @@
       0.0
      ],
      "shapeVelocity": false,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": false
     },
     {
      "name": "par",
@@ -451,14 +472,14 @@
       0.0
      ],
      "sizeMin": [
-      0.016,
-      0.06,
-      0.06
+      0.008,
+      0.03,
+      0.03
      ],
      "sizeMax": [
-      0.02,
-      0.1,
-      0.1
+      0.01,
+      0.05,
+      0.05
      ],
      "sizeLife": [
       0.0,
@@ -557,7 +578,8 @@
       0.0
      ],
      "shapeVelocity": true,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": false
     },
     {
      "name": "par",
@@ -598,14 +620,14 @@
       0.0
      ],
      "sizeMin": [
-      0.02,
-      0.12,
-      0.12
+      0.01,
+      0.06,
+      0.06
      ],
      "sizeMax": [
-      0.03,
-      0.16,
-      0.16
+      0.015,
+      0.08,
+      0.08
      ],
      "sizeLife": [
       0.0,
@@ -704,7 +726,8 @@
       0.0
      ],
      "shapeVelocity": true,
-     "shapeVelocityScale": 40.0
+     "shapeVelocityScale": 40.0,
+     "shapeSurface": false
     },
     {
      "name": "model_par",
@@ -748,14 +771,14 @@
       0.0
      ],
      "sizeMin": [
-      0.24,
-      0.24,
-      0.24
+      0.12,
+      0.12,
+      0.12
      ],
      "sizeMax": [
-      0.3,
-      0.3,
-      0.3
+      0.15,
+      0.15,
+      0.15
      ],
      "sizeLife": [
       0.0,
@@ -915,14 +938,14 @@
       0.0
      ],
      "sizeMin": [
-      0.5,
-      0.5,
-      0.5
+      0.25,
+      0.25,
+      0.25
      ],
      "sizeMax": [
-      0.5,
-      0.5,
-      0.5
+      0.25,
+      0.25,
+      0.25
      ],
      "colorLife": [
       0.0,
@@ -1716,14 +1739,14 @@
       0.0
      ],
      "sizeMin": [
+      0.005,
+      0.005,
+      0.005
+     ],
+     "sizeMax": [
       0.01,
       0.01,
       0.01
-     ],
-     "sizeMax": [
-      0.02,
-      0.02,
-      0.02
      ],
      "sizeLife": [
       0.0,
@@ -1811,6 +1834,7 @@
      ],
      "shapeVelocity": true,
      "shapeVelocityScale": 2.0,
+     "shapeSurface": false,
      "sizeBySpeed": [
       1.0,
       1.0,
@@ -1857,14 +1881,14 @@
       0.0
      ],
      "sizeMin": [
+      0.01,
+      0.01,
+      0.01
+     ],
+     "sizeMax": [
       0.02,
       0.02,
       0.02
-     ],
-     "sizeMax": [
-      0.04,
-      0.04,
-      0.04
      ],
      "sizeLife": [
       0.0,
@@ -1977,6 +2001,7 @@
      ],
      "shapeVelocity": true,
      "shapeVelocityScale": 2.0,
+     "shapeSurface": false,
      "locationMin": [
       0.0,
       0.0,
@@ -2038,14 +2063,14 @@
       0.0
      ],
      "sizeMin": [
+      0.01,
+      0.01,
+      0.01
+     ],
+     "sizeMax": [
       0.02,
       0.02,
       0.02
-     ],
-     "sizeMax": [
-      0.04,
-      0.04,
-      0.04
      ],
      "sizeLife": [
       0.0,
@@ -2158,6 +2183,7 @@
      ],
      "shapeVelocity": true,
      "shapeVelocityScale": 2.0,
+     "shapeSurface": false,
      "locationMin": [
       0.0,
       0.0,
@@ -2214,14 +2240,14 @@
       0.0
      ],
      "sizeMin": [
-      0.04,
-      0.04,
-      0.04
+      0.02,
+      0.02,
+      0.02
      ],
      "sizeMax": [
-      0.06,
-      0.06,
-      0.06
+      0.03,
+      0.03,
+      0.03
      ],
      "sizeLife": [
       0.0,
@@ -2321,6 +2347,7 @@
      ],
      "shapeVelocity": false,
      "shapeVelocityScale": 1.0,
+     "shapeSurface": false,
      "locationMin": [
       0.0,
       0.0,
@@ -2381,14 +2408,14 @@
       0.0
      ],
      "sizeMin": [
-      0.006,
-      0.006,
-      0.006
+      0.003,
+      0.003,
+      0.003
      ],
      "sizeMax": [
-      0.016,
-      0.016,
-      0.016
+      0.008,
+      0.008,
+      0.008
      ],
      "sizeLife": [
       0.0,
@@ -2501,6 +2528,7 @@
      ],
      "shapeVelocity": false,
      "shapeVelocityScale": 2.0,
+     "shapeSurface": false,
      "sizeBySpeed": [
       1.0,
       1.0,
@@ -2543,14 +2571,14 @@
       0.0
      ],
      "sizeMin": [
-      0.008,
-      0.12,
-      0.12
+      0.004,
+      0.06,
+      0.06
      ],
      "sizeMax": [
-      0.012,
-      0.16,
-      0.16
+      0.006,
+      0.08,
+      0.08
      ],
      "sizeLife": [
       0.0,
@@ -2662,7 +2690,8 @@
       0.0
      ],
      "shapeVelocity": false,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": false
     },
     {
      "name": "line",
@@ -2704,14 +2733,14 @@
       0.0
      ],
      "sizeMin": [
-      0.002,
-      0.06,
-      0.5
+      0.001,
+      0.03,
+      0.25
      ],
      "sizeMax": [
-      0.03,
-      1.0,
-      0.5
+      0.015,
+      0.5,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -2861,14 +2890,14 @@
       0.0
      ],
      "sizeMin": [
-      0.002,
-      0.06,
-      0.5
+      0.001,
+      0.03,
+      0.25
      ],
      "sizeMax": [
-      0.03,
-      0.8,
-      0.5
+      0.015,
+      0.4,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -3018,14 +3047,14 @@
       0.0
      ],
      "sizeMin": [
-      0.002,
-      0.06,
-      0.5
+      0.001,
+      0.03,
+      0.25
      ],
      "sizeMax": [
-      0.03,
-      0.5,
-      0.5
+      0.015,
+      0.25,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -3175,14 +3204,14 @@
       0.0
      ],
      "sizeMin": [
-      0.002,
-      0.06,
-      0.5
+      0.001,
+      0.03,
+      0.25
      ],
      "sizeMax": [
-      0.03,
-      0.5,
-      0.5
+      0.015,
+      0.25,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -3481,14 +3510,14 @@
       0.0
      ],
      "sizeMin": [
-      1.0,
-      1.0,
-      1.0
+      0.5,
+      0.5,
+      0.5
      ],
      "sizeMax": [
-      1.0,
-      1.0,
-      1.0
+      0.5,
+      0.5,
+      0.5
      ],
      "sizeLife": [
       0.0,
@@ -3601,14 +3630,14 @@
       0.0
      ],
      "sizeMin": [
-      0.004,
-      0.1,
-      0.02
+      0.002,
+      0.05,
+      0.01
      ],
      "sizeMax": [
-      0.01,
-      0.2,
-      0.02
+      0.005,
+      0.1,
+      0.01
      ],
      "sizeLife": [
       0.0,
@@ -3738,14 +3767,14 @@
       0.0
      ],
      "sizeMin": [
-      0.01,
-      0.04,
-      0.5
+      0.005,
+      0.02,
+      0.25
      ],
      "sizeMax": [
-      0.02,
-      0.06,
-      0.5
+      0.01,
+      0.03,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -3863,7 +3892,8 @@
       0.0
      ],
      "shapeVelocity": false,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": false
     },
     {
      "name": "iga_big_ring",
@@ -4030,14 +4060,14 @@
       0.0
      ],
      "sizeMin": [
-      0.02,
-      0.1,
-      0.5
+      0.01,
+      0.05,
+      0.25
      ],
      "sizeMax": [
-      0.04,
-      0.2,
-      0.5
+      0.02,
+      0.1,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -4185,14 +4215,14 @@
       0.0
      ],
      "sizeMin": [
-      0.01,
-      0.04,
-      0.5
+      0.005,
+      0.02,
+      0.25
      ],
      "sizeMax": [
-      0.02,
-      0.06,
-      0.5
+      0.01,
+      0.03,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -4310,7 +4340,8 @@
       0.0
      ],
      "shapeVelocity": false,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": false
     },
     {
      "name": "outline",
@@ -4346,14 +4377,14 @@
       0.0
      ],
      "sizeMin": [
-      0.004,
-      0.1,
-      0.02
+      0.002,
+      0.05,
+      0.01
      ],
      "sizeMax": [
-      0.01,
-      0.2,
-      0.02
+      0.005,
+      0.1,
+      0.01
      ],
      "sizeLife": [
       0.0,
@@ -4479,14 +4510,14 @@
       0.0
      ],
      "sizeMin": [
-      0.02,
-      0.1,
-      0.5
+      0.01,
+      0.05,
+      0.25
      ],
      "sizeMax": [
-      0.04,
-      0.2,
-      0.5
+      0.02,
+      0.1,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -4934,14 +4965,14 @@
       0.0
      ],
      "sizeMin": [
-      0.01,
-      0.8,
-      0.5
+      0.005,
+      0.4,
+      0.25
      ],
      "sizeMax": [
-      0.02,
-      1.2,
-      0.5
+      0.01,
+      0.6,
+      0.25
      ],
      "sizeLife": [
       0.0,
@@ -5419,14 +5450,14 @@
       0.0
      ],
      "sizeMin": [
-      10.0,
-      10.0,
-      10.0
+      5.0,
+      5.0,
+      5.0
      ],
      "sizeMax": [
-      10.0,
-      10.0,
-      10.0
+      5.0,
+      5.0,
+      5.0
      ],
      "sizeLife": [
       0.0,
@@ -5548,14 +5579,14 @@
       0.0
      ],
      "sizeMin": [
-      1.0,
-      1.0,
-      1.0
+      0.5,
+      0.5,
+      0.5
      ],
      "sizeMax": [
-      1.2,
-      1.2,
-      1.2
+      0.6,
+      0.6,
+      0.6
      ],
      "colorScale": [
       0.0,
@@ -5620,7 +5651,8 @@
       0.0
      ],
      "shapeVelocity": true,
-     "shapeVelocityScale": 1.0
+     "shapeVelocityScale": 1.0,
+     "shapeSurface": true
     }
    ]
   },
@@ -6120,6 +6152,7 @@
      ],
      "shapeVelocity": true,
      "shapeVelocityScale": 1.0,
+     "shapeSurface": false,
      "locationMin": [
       0.0,
       0.0,
@@ -6559,7 +6592,8 @@
       0.0
      ],
      "shapeVelocity": true,
-     "shapeVelocityScale": 0.30000000447034836
+     "shapeVelocityScale": 0.30000000447034836,
+     "shapeSurface": false
     },
     {
      "name": "AuraRibbon_A",
@@ -6723,6 +6757,7 @@
      ],
      "shapeVelocity": true,
      "shapeVelocityScale": 1.0,
+     "shapeSurface": false,
      "locationMin": [
       0.0,
       -0.25,
@@ -6745,12 +6780,2596 @@
      ]
     }
    ]
+  },
+  {
+   "name": "PS_EF_PunishNotice_hi1",
+   "sha256": "ef1110d8ac62a8e55b5522713190b2af6894eff5a17f9feee3112e656c111ec5",
+   "emitters": [
+    {
+     "name": "CrossHair_a",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02a",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      3.07143,
+      1.71429,
+      2.05357,
+      1.0,
+      0.7143,
+      5.21429,
+      1.14286,
+      2.16071,
+      1.0,
+      0.8571,
+      7.35714,
+      0.57143,
+      2.26785,
+      1.0,
+      1.0,
+      8.0,
+      0.4,
+      2.3,
+      1.0
+     ]
+    },
+    {
+     "name": "CrossHair_b",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02b",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.05000000074505806,
+     "rate": 0.0,
+     "life": [
+      0.949999988079071,
+      0.949999988079071
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      3.07143,
+      1.71429,
+      2.05357,
+      1.0,
+      0.7143,
+      5.21429,
+      1.14286,
+      2.16071,
+      1.0,
+      0.8571,
+      7.35714,
+      0.57143,
+      2.26785,
+      1.0,
+      1.0,
+      8.0,
+      0.4,
+      2.3,
+      1.0
+     ]
+    },
+    {
+     "name": "Center",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairCenter01_Outline",
+     "texture": "T_EF_CrossHairs03center",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "sizeMax": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      3.07143,
+      1.71429,
+      2.05357,
+      1.0,
+      0.7143,
+      5.21429,
+      1.14286,
+      2.16071,
+      1.0,
+      0.8571,
+      7.35714,
+      0.57143,
+      2.26785,
+      1.0,
+      1.0,
+      8.0,
+      0.4,
+      2.3,
+      1.0
+     ]
+    },
+    {
+     "name": "Glare",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairGlare01",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 0.97,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "sizeMax": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "colorLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.1429,
+      0.0,
+      0.0,
+      0.0,
+      0.85714,
+      0.2857,
+      0.0,
+      0.0,
+      0.0,
+      0.71429,
+      0.4286,
+      0.0,
+      0.0,
+      0.0,
+      0.57143,
+      0.5714,
+      1.42857,
+      0.07143,
+      0.41071,
+      0.42857,
+      0.7143,
+      4.28571,
+      0.21429,
+      1.23214,
+      0.28571,
+      0.8571,
+      7.14286,
+      0.35714,
+      2.05357,
+      0.14286,
+      1.0,
+      8.0,
+      0.4,
+      2.3,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PS_EF_PunishNotice_Mid",
+   "sha256": "0463078bbd6d8c435992d97b9f60d2a89e1d789b3c20b323abf2a155406644ed",
+   "emitters": [
+    {
+     "name": "CrossHair_a",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02a",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      2.35714,
+      2.25,
+      1.71429,
+      1.0,
+      0.7143,
+      3.07143,
+      2.75,
+      1.14286,
+      1.0,
+      0.8571,
+      3.78571,
+      3.25,
+      0.57143,
+      1.0,
+      1.0,
+      4.0,
+      3.4,
+      0.4,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "CrossHair_b",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02b",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.05000000074505806,
+     "rate": 0.0,
+     "life": [
+      0.949999988079071,
+      0.949999988079071
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      2.35714,
+      2.25,
+      1.71429,
+      1.0,
+      0.7143,
+      3.07143,
+      2.75,
+      1.14286,
+      1.0,
+      0.8571,
+      3.78571,
+      3.25,
+      0.57143,
+      1.0,
+      1.0,
+      4.0,
+      3.4,
+      0.4,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "Center",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairCenter01_Outline",
+     "texture": "T_EF_CrossHairs03center",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "sizeMax": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      2.35714,
+      2.25,
+      1.71429,
+      1.0,
+      0.7143,
+      3.07143,
+      2.75,
+      1.14286,
+      1.0,
+      0.8571,
+      3.78571,
+      3.25,
+      0.57143,
+      1.0,
+      1.0,
+      4.0,
+      3.4,
+      0.4,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "Glare",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairGlare01",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 0.97,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "sizeMax": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "colorLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.1429,
+      0.0,
+      0.0,
+      0.0,
+      0.85714,
+      0.2857,
+      0.0,
+      0.0,
+      0.0,
+      0.71429,
+      0.4286,
+      0.0,
+      0.0,
+      0.0,
+      0.57143,
+      0.5714,
+      0.35714,
+      0.3006,
+      0.01786,
+      0.42857,
+      0.7143,
+      1.07143,
+      0.90179,
+      0.05357,
+      0.28571,
+      0.8571,
+      1.78571,
+      1.50298,
+      0.08929,
+      0.14286,
+      1.0,
+      2.0,
+      1.68333,
+      0.1,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PS_EF_PunishNotice_MidSP1",
+   "sha256": "27efd6429369b0f96bf59817c7f5ddbefb204c6845400cd66956a24b17d8fccb",
+   "emitters": [
+    {
+     "name": "CrossHair_a",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02a",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.78571,
+      2.35714,
+      1.97619,
+      1.0,
+      0.7143,
+      1.35714,
+      3.07143,
+      1.92857,
+      1.0,
+      0.8571,
+      0.92857,
+      3.78571,
+      1.88095,
+      1.0,
+      1.0,
+      0.8,
+      4.0,
+      1.86667,
+      1.0
+     ]
+    },
+    {
+     "name": "CrossHair_b",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02b",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.05000000074505806,
+     "rate": 0.0,
+     "life": [
+      0.949999988079071,
+      0.949999988079071
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.78571,
+      2.35714,
+      1.97619,
+      1.0,
+      0.7143,
+      1.35714,
+      3.07143,
+      1.92857,
+      1.0,
+      0.8571,
+      0.92857,
+      3.78571,
+      1.88095,
+      1.0,
+      1.0,
+      0.8,
+      4.0,
+      1.86667,
+      1.0
+     ]
+    },
+    {
+     "name": "Center",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairCenter01_Outline",
+     "texture": "T_EF_CrossHairs03center",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "sizeMax": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.78571,
+      2.35714,
+      1.97619,
+      1.0,
+      0.7143,
+      1.35714,
+      3.07143,
+      1.92857,
+      1.0,
+      0.8571,
+      0.92857,
+      3.78571,
+      1.88095,
+      1.0,
+      1.0,
+      0.8,
+      4.0,
+      1.86667,
+      1.0
+     ]
+    },
+    {
+     "name": "Glare",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairGlare01",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 0.97,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "sizeMax": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "colorLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.1429,
+      0.0,
+      0.0,
+      0.0,
+      0.85714,
+      0.2857,
+      0.0,
+      0.0,
+      0.0,
+      0.71429,
+      0.4286,
+      0.0,
+      0.0,
+      0.0,
+      0.57143,
+      0.5714,
+      0.01786,
+      0.35714,
+      0.10268,
+      0.42857,
+      0.7143,
+      0.05357,
+      1.07143,
+      0.30804,
+      0.28571,
+      0.8571,
+      0.08929,
+      1.78571,
+      0.51339,
+      0.14286,
+      1.0,
+      0.1,
+      2.0,
+      0.575,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PS_EF_PunishNotice_low",
+   "sha256": "d7af9d2455dd779125e44fb2941f9fa0692a866d6cf2b448c442677afaa86e95",
+   "emitters": [
+    {
+     "name": "CrossHair_a",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02a",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.67857,
+      1.79167,
+      2.35714,
+      1.0,
+      0.7143,
+      1.03571,
+      1.375,
+      3.07143,
+      1.0,
+      0.8571,
+      0.39286,
+      0.95833,
+      3.78571,
+      1.0,
+      1.0,
+      0.2,
+      0.83333,
+      4.0,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "CrossHair_b",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_Crosshair02b",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.05000000074505806,
+     "rate": 0.0,
+     "life": [
+      0.949999988079071,
+      0.949999988079071
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "tint": [
+      0.55,
+      0.8,
+      1.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "sizeMax": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.67857,
+      1.79167,
+      2.35714,
+      1.0,
+      0.7143,
+      1.03571,
+      1.375,
+      3.07143,
+      1.0,
+      0.8571,
+      0.39286,
+      0.95833,
+      3.78571,
+      1.0,
+      1.0,
+      0.2,
+      0.83333,
+      4.0,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "Center",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairCenter01_Outline",
+     "texture": "T_EF_CrossHairs03center",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 1.0,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "sizeMax": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "colorLife": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      0.1429,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.2857,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.4286,
+      2.0,
+      2.0,
+      2.0,
+      1.0,
+      0.5714,
+      1.67857,
+      1.79167,
+      2.35714,
+      1.0,
+      0.7143,
+      1.03571,
+      1.375,
+      3.07143,
+      1.0,
+      0.8571,
+      0.39286,
+      0.95833,
+      3.78571,
+      1.0,
+      1.0,
+      0.2,
+      0.83333,
+      4.0,
+      1.0
+     ],
+     "colorMin": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "Glare",
+     "kind": "sprite",
+     "align": "view",
+     "material": "M_EF_CrosshairGlare01",
+     "texture": "T_EF_CrossHairs02Glare",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      1.0,
+      1.0
+     ],
+     "cameraOffset": 0.97,
+     "bones": true,
+     "axisLock": "",
+     "bursts": [
+      1,
+      -1,
+      0.0
+     ],
+     "sizeMin": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "sizeMax": [
+      0.38,
+      0.38,
+      0.38
+     ],
+     "colorLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.1429,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.2857,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.4286,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.5714,
+      0.07143,
+      0.29762,
+      1.42857,
+      1.0,
+      0.7143,
+      0.21429,
+      0.89286,
+      4.28571,
+      1.0,
+      0.8571,
+      0.35714,
+      1.48809,
+      7.14286,
+      1.0,
+      1.0,
+      0.4,
+      1.66666,
+      8.0,
+      1.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PS_EF_SpecialKO",
+   "sha256": "30b6139ea78839163f888ae094fc5c59d41f67a1b799b8214d62334de6774e9b",
+   "emitters": [
+    {
+     "name": "tube_distotion",
+     "kind": "mesh",
+     "align": "view",
+     "material": "MI_EF_groundring",
+     "texture": "T_EF_MSK_ring02_ss",
+     "mesh": "SM_EF_impactring_mss",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      3.0,
+      3.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      1,
+      0.0
+     ],
+     "sizeMin": [
+      8.0,
+      8.0,
+      8.0
+     ],
+     "sizeMax": [
+      8.0,
+      8.0,
+      8.0
+     ],
+     "sizeLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1429,
+      3.57143,
+      3.57143,
+      3.57143,
+      0.2857,
+      7.14286,
+      7.14286,
+      7.14286,
+      0.4286,
+      10.71429,
+      10.71429,
+      10.71429,
+      0.5714,
+      14.28571,
+      14.28571,
+      14.28571,
+      0.7143,
+      17.85714,
+      17.85714,
+      17.85714,
+      0.8571,
+      21.42857,
+      21.42857,
+      21.42857,
+      1.0,
+      25.0,
+      25.0,
+      25.0
+     ],
+     "colorLife": [
+      0.0,
+      5.0,
+      1.0,
+      0.5,
+      0.3,
+      0.1429,
+      5.0,
+      1.0,
+      0.5,
+      0.25714,
+      0.2857,
+      5.0,
+      1.0,
+      0.5,
+      0.21429,
+      0.4286,
+      5.0,
+      1.0,
+      0.5,
+      0.17143,
+      0.5714,
+      5.0,
+      1.0,
+      0.5,
+      0.12857,
+      0.7143,
+      5.0,
+      1.0,
+      0.5,
+      0.08571,
+      0.8571,
+      5.0,
+      1.0,
+      0.5,
+      0.04286,
+      1.0,
+      5.0,
+      1.0,
+      0.5,
+      0.0
+     ]
+    },
+    {
+     "name": "fragment_a",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_hokori_ss_Inst2_fm",
+     "texture": "T_EF_MSK_hokori00_ss",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 600,
+     "life": [
+      0.699999988079071,
+      1.0
+     ],
+     "rotation": [
+      0.0,
+      1.0
+     ],
+     "accel": [
+      0.0,
+      -3.0,
+      0.0
+     ],
+     "floor": true,
+     "gpu": true,
+     "axisLock": "",
+     "bursts": [],
+     "sizeMin": [
+      0.02,
+      0.02,
+      0.02
+     ],
+     "sizeMax": [
+      0.05,
+      0.05,
+      0.05
+     ],
+     "colorLife": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1429,
+      1.0,
+      1.0,
+      1.0,
+      0.85714,
+      0.2857,
+      1.0,
+      1.0,
+      1.0,
+      0.71429,
+      0.4286,
+      1.0,
+      1.0,
+      1.0,
+      0.57143,
+      0.5714,
+      1.0,
+      1.0,
+      1.0,
+      0.42857,
+      0.7143,
+      1.0,
+      1.0,
+      1.0,
+      0.28571,
+      0.8571,
+      1.0,
+      1.0,
+      1.0,
+      0.14286,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "velocityMin": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "velocityMax": [
+      0.0,
+      2.0,
+      0.0
+     ],
+     "radial": [
+      0.0,
+      0.0
+     ],
+     "shape": "cylinder",
+     "shapeRadius": 1.0,
+     "shapeHeight": 0.0010000000149011613,
+     "shapeOffset": [
+      0.0,
+      0.05,
+      0.0
+     ],
+     "shapeVelocity": true,
+     "shapeVelocityScale": 2.0,
+     "shapeSurface": false
+    },
+    {
+     "name": "smoke_light",
+     "kind": "sprite",
+     "align": "view",
+     "material": "MI_EF_BLD_smoke_light",
+     "texture": "T_EF_MSK_smoke00_fm",
+     "blend": "alpha",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": false,
+     "duration": 1.0,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 60,
+     "life": [
+      0.699999988079071,
+      1.0
+     ],
+     "rotation": [
+      0.0,
+      1.0
+     ],
+     "floor": true,
+     "axisLock": "",
+     "bursts": [],
+     "sizeMin": [
+      1.5,
+      1.5,
+      1.5
+     ],
+     "sizeMax": [
+      2.0,
+      2.0,
+      2.0
+     ],
+     "sizeLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1429,
+      0.47619,
+      0.47619,
+      0.47619,
+      0.2857,
+      0.95238,
+      0.95238,
+      0.95238,
+      0.4286,
+      1.03673,
+      1.03673,
+      1.03673,
+      0.5714,
+      1.07755,
+      1.07755,
+      1.07755,
+      0.7143,
+      1.11837,
+      1.11837,
+      1.11837,
+      0.8571,
+      1.15918,
+      1.15918,
+      1.15918,
+      1.0,
+      1.2,
+      1.2,
+      1.2
+     ],
+     "colorScale": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.15,
+      0.1429,
+      0.87143,
+      0.87143,
+      0.87143,
+      0.12857,
+      0.2857,
+      0.74286,
+      0.74286,
+      0.74286,
+      0.10714,
+      0.4286,
+      0.61429,
+      0.61429,
+      0.61429,
+      0.08571,
+      0.5714,
+      0.48571,
+      0.48571,
+      0.48571,
+      0.06429,
+      0.7143,
+      0.35714,
+      0.35714,
+      0.35714,
+      0.04286,
+      0.8571,
+      0.22857,
+      0.22857,
+      0.22857,
+      0.02143,
+      1.0,
+      0.1,
+      0.1,
+      0.1,
+      0.0
+     ],
+     "colorMin": [
+      0.4000000059604645,
+      0.4000000059604645,
+      0.4000000059604645,
+      1.0
+     ],
+     "colorMax": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "velocityMin": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "velocityMax": [
+      0.0,
+      0.1,
+      0.0
+     ],
+     "radial": [
+      0.0,
+      0.0
+     ],
+     "shape": "cylinder",
+     "shapeRadius": 1.0,
+     "shapeHeight": 0.04,
+     "shapeOffset": [
+      0.0,
+      0.1,
+      0.0
+     ],
+     "shapeVelocity": true,
+     "shapeVelocityScale": 0.3500000014901161,
+     "shapeSurface": false
+    },
+    {
+     "name": "groundring",
+     "kind": "mesh",
+     "align": "view",
+     "material": "MI_EF_ADD_flashline_00",
+     "texture": null,
+     "mesh": "SM_EF_KOline_00_mss",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      0.10000000149011612,
+      0.30000001192092896
+     ],
+     "axisLock": "",
+     "bursts": [
+      100,
+      100,
+      0.0
+     ],
+     "sizeMin": [
+      20.0,
+      1.6,
+      1.6
+     ],
+     "sizeMax": [
+      200.0,
+      1.6,
+      1.6
+     ],
+     "sizeLife": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1429,
+      1.14286,
+      0.85714,
+      0.85714,
+      0.2857,
+      1.28571,
+      0.71429,
+      0.71429,
+      0.4286,
+      1.42857,
+      0.57143,
+      0.57143,
+      0.5714,
+      1.57143,
+      0.42857,
+      0.42857,
+      0.7143,
+      1.71429,
+      0.28571,
+      0.28571,
+      0.8571,
+      1.85714,
+      0.14286,
+      0.14286,
+      1.0,
+      2.0,
+      0.0,
+      0.0
+     ],
+     "colorLife": [
+      0.0,
+      8.0,
+      3.0,
+      1.0,
+      1.0,
+      0.1429,
+      7.14286,
+      2.64286,
+      0.87143,
+      0.85714,
+      0.2857,
+      6.28571,
+      2.28571,
+      0.74286,
+      0.71429,
+      0.4286,
+      5.42857,
+      1.92857,
+      0.61429,
+      0.57143,
+      0.5714,
+      4.57143,
+      1.57143,
+      0.48571,
+      0.42857,
+      0.7143,
+      3.71429,
+      1.21429,
+      0.35714,
+      0.28571,
+      0.8571,
+      2.85714,
+      0.85714,
+      0.22857,
+      0.14286,
+      1.0,
+      2.0,
+      0.5,
+      0.1,
+      0.0
+     ],
+     "meshRotationMin": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "meshRotationMax": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "name": "hitring",
+     "kind": "mesh",
+     "align": "view",
+     "material": "MI_EF_groundring",
+     "texture": "T_EF_MSK_ring02_ss",
+     "mesh": "SM_EF_impactring_mss",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      3.0,
+      3.0
+     ],
+     "axisLock": "",
+     "bursts": [
+      1,
+      1,
+      0.0
+     ],
+     "sizeMin": [
+      8.0,
+      8.0,
+      8.0
+     ],
+     "sizeMax": [
+      8.0,
+      8.0,
+      8.0
+     ],
+     "sizeLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1429,
+      3.57143,
+      3.57143,
+      3.57143,
+      0.2857,
+      7.14286,
+      7.14286,
+      7.14286,
+      0.4286,
+      10.71429,
+      10.71429,
+      10.71429,
+      0.5714,
+      14.28571,
+      14.28571,
+      14.28571,
+      0.7143,
+      17.85714,
+      17.85714,
+      17.85714,
+      0.8571,
+      21.42857,
+      21.42857,
+      21.42857,
+      1.0,
+      25.0,
+      25.0,
+      25.0
+     ],
+     "colorLife": [
+      0.0,
+      5.0,
+      1.0,
+      0.5,
+      0.3,
+      0.1429,
+      5.0,
+      1.0,
+      0.5,
+      0.25714,
+      0.2857,
+      5.0,
+      1.0,
+      0.5,
+      0.21429,
+      0.4286,
+      5.0,
+      1.0,
+      0.5,
+      0.17143,
+      0.5714,
+      5.0,
+      1.0,
+      0.5,
+      0.12857,
+      0.7143,
+      5.0,
+      1.0,
+      0.5,
+      0.08571,
+      0.8571,
+      5.0,
+      1.0,
+      0.5,
+      0.04286,
+      1.0,
+      5.0,
+      1.0,
+      0.5,
+      0.0
+     ]
+    },
+    {
+     "name": "Light",
+     "kind": "sprite",
+     "align": "velocity",
+     "material": "MI_EF_ADD_powder2",
+     "texture": "T_EF_MSK_tss_testlight01",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      0.699999988079071,
+      1.5
+     ],
+     "accel": [
+      0.0,
+      -3.0,
+      0.0
+     ],
+     "bones": true,
+     "gpu": true,
+     "axisLock": "",
+     "bursts": [
+      600,
+      700,
+      0.0
+     ],
+     "sizeMin": [
+      0.01,
+      0.1,
+      0.25
+     ],
+     "sizeMax": [
+      0.02,
+      0.25,
+      0.25
+     ],
+     "sizeLife": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.1429,
+      0.71429,
+      1.0,
+      1.0,
+      0.2857,
+      0.89286,
+      1.0,
+      1.0,
+      0.4286,
+      0.71429,
+      1.0,
+      1.0,
+      0.5714,
+      0.53571,
+      1.0,
+      1.0,
+      0.7143,
+      0.35714,
+      1.0,
+      1.0,
+      0.8571,
+      0.17857,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "colorLife": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1429,
+      1.0,
+      1.0,
+      1.0,
+      0.85714,
+      0.2857,
+      1.0,
+      1.0,
+      1.0,
+      0.71429,
+      0.4286,
+      1.0,
+      1.0,
+      1.0,
+      0.57143,
+      0.5714,
+      1.0,
+      1.0,
+      1.0,
+      0.42857,
+      0.7143,
+      1.0,
+      1.0,
+      1.0,
+      0.28571,
+      0.8571,
+      1.0,
+      1.0,
+      1.0,
+      0.14286,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "shape": "sphere",
+     "shapeRadius": 0.7000000000000001,
+     "shapeHeight": 0,
+     "shapeOffset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "shapeVelocity": true,
+     "shapeVelocityScale": 55.0,
+     "shapeSurface": true
+    },
+    {
+     "name": "powder_test",
+     "kind": "sprite",
+     "align": "velocity",
+     "material": "MI_EF_ADD_powder2",
+     "texture": "T_EF_MSK_tss_testlight01",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "mask": true,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      0.699999988079071,
+      1.5
+     ],
+     "accel": [
+      0.0,
+      -3.0,
+      0.0
+     ],
+     "bones": true,
+     "gpu": true,
+     "axisLock": "",
+     "bursts": [
+      600,
+      700,
+      0.0
+     ],
+     "sizeMin": [
+      0.01,
+      0.1,
+      0.25
+     ],
+     "sizeMax": [
+      0.02,
+      0.25,
+      0.25
+     ],
+     "sizeLife": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.1429,
+      0.71429,
+      1.0,
+      1.0,
+      0.2857,
+      0.89286,
+      1.0,
+      1.0,
+      0.4286,
+      0.71429,
+      1.0,
+      1.0,
+      0.5714,
+      0.53571,
+      1.0,
+      1.0,
+      0.7143,
+      0.35714,
+      1.0,
+      1.0,
+      0.8571,
+      0.17857,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "colorLife": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1429,
+      1.0,
+      1.0,
+      1.0,
+      0.85714,
+      0.2857,
+      1.0,
+      1.0,
+      1.0,
+      0.71429,
+      0.4286,
+      1.0,
+      1.0,
+      1.0,
+      0.57143,
+      0.5714,
+      1.0,
+      1.0,
+      1.0,
+      0.42857,
+      0.7143,
+      1.0,
+      1.0,
+      1.0,
+      0.28571,
+      0.8571,
+      1.0,
+      1.0,
+      1.0,
+      0.14286,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "shape": "sphere",
+     "shapeRadius": 0.7000000000000001,
+     "shapeHeight": 0,
+     "shapeOffset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "shapeVelocity": true,
+     "shapeVelocityScale": 55.0,
+     "shapeSurface": true
+    },
+    {
+     "name": "flashline",
+     "kind": "mesh",
+     "align": "view",
+     "material": "MI_EF_ADD_flashline_00",
+     "texture": null,
+     "mesh": "SM_EF_KOline_00_mss",
+     "blend": "add",
+     "intensity": 1.0,
+     "scroll": [
+      0,
+      0
+     ],
+     "tiling": [
+      1,
+      1
+     ],
+     "distortion": false,
+     "duration": 0.10000000149011612,
+     "loops": 1,
+     "delay": 0.0,
+     "rate": 0.0,
+     "life": [
+      0.10000000149011612,
+      0.30000001192092896
+     ],
+     "axisLock": "",
+     "bursts": [
+      100,
+      100,
+      0.0
+     ],
+     "sizeMin": [
+      20.0,
+      1.6,
+      1.6
+     ],
+     "sizeMax": [
+      200.0,
+      1.6,
+      1.6
+     ],
+     "sizeLife": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1429,
+      1.14286,
+      0.85714,
+      0.85714,
+      0.2857,
+      1.28571,
+      0.71429,
+      0.71429,
+      0.4286,
+      1.42857,
+      0.57143,
+      0.57143,
+      0.5714,
+      1.57143,
+      0.42857,
+      0.42857,
+      0.7143,
+      1.71429,
+      0.28571,
+      0.28571,
+      0.8571,
+      1.85714,
+      0.14286,
+      0.14286,
+      1.0,
+      2.0,
+      0.0,
+      0.0
+     ],
+     "colorLife": [
+      0.0,
+      8.0,
+      3.0,
+      1.0,
+      1.0,
+      0.1429,
+      7.14286,
+      2.64286,
+      0.87143,
+      0.85714,
+      0.2857,
+      6.28571,
+      2.28571,
+      0.74286,
+      0.71429,
+      0.4286,
+      5.42857,
+      1.92857,
+      0.61429,
+      0.57143,
+      0.5714,
+      4.57143,
+      1.57143,
+      0.48571,
+      0.42857,
+      0.7143,
+      3.71429,
+      1.21429,
+      0.35714,
+      0.28571,
+      0.8571,
+      2.85714,
+      0.85714,
+      0.22857,
+      0.14286,
+      1.0,
+      2.0,
+      0.5,
+      0.1,
+      0.0
+     ],
+     "meshRotationMin": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "meshRotationMax": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   ]
   }
  ],
  "limitations": [
+  "GPU floor collision of KO debris is not reproduced (debris passes the floor)",
+  "KO flash lines are widened from 4 mm to about 3 cm (the source material's thickening is not decoded)",
   "bursts above 600 particles are capped (GPU emitters spawn up to 2000)",
   "dynamic material parameters other than AlphaClip (scroll, distortion) are not reproduced",
+  "large smoke sprites are capped at 60/s",
   "refraction-only emitters (normal-map distortion) are skipped",
+  "spawn rates above 600/s are capped",
   "vector fields are approximated: tightness as drag, intensity as noise (field shapes not decoded)"
  ]
 }

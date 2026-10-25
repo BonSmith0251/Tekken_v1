@@ -1,0 +1,4095 @@
+{
+  "schema": "katarina/1",
+  "characterCode": "ltn",
+  "costumes": [
+    {
+      "name": "Default 1P",
+      "pieces": [
+        "ltn_face",
+        "ltn_har_1p",
+        "ltn_bdu_1P",
+        "ltn_bdl_1P"
+      ]
+    },
+    {
+      "name": "Army",
+      "pieces": [
+        "ltn_face",
+        "ltn_har_1p",
+        "ltn_bdu_army",
+        "ltn_bdl_army"
+      ]
+    },
+    {
+      "name": "Hotpants",
+      "pieces": [
+        "ltn_face",
+        "ltn_har_1p",
+        "ltn_bdu_hotpants",
+        "ltn_bdl_hotpants"
+      ]
+    },
+    {
+      "name": "Loose",
+      "pieces": [
+        "ltn_face",
+        "ltn_har_1p",
+        "ltn_bdu_loose",
+        "ltn_bdl_loose"
+      ]
+    }
+  ],
+  "pieces": {
+    "ltn_face": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_face.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Meshes/SK_CH_ltn_face.uasset",
+      "sha256": "46cc45cb7c85ed80c4cfae5d06407eb90bcbdf2743d98a773c6405a0424b1c6f",
+      "materials": [
+        "MI_CH_ltn_Eye_ADD",
+        "MI_CH_ltn_Eyes",
+        "MI_CH_ltn_lip",
+        "MI_CH_ltn_matuge",
+        "MI_CH_ltn_mouth",
+        "MI_CH_ltn_skin_face",
+        "MI_CH_ltn_tear",
+        "MI_CH_ltn_teeth",
+        "MI_CH_xia_blow2",
+        "MI_CH_xia_blow22"
+      ]
+    },
+    "ltn_har_1p": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Meshes/SK_CH_ltn_har_1p.uasset",
+      "sha256": "ad96581aa2dc064e0592cb0083f4919dc882fe50b0e5d7f399af2399d003fc6f",
+      "materials": [
+        "MI_CH_ltn_har_1p_Pass1",
+        "MI_CH_ltn_har_1p_Pass2"
+      ]
+    },
+    "ltn_bdu_1P": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_1P.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Meshes/SK_CH_ltn_bdu_1P.uasset",
+      "sha256": "f6430999b8e7054d4bc13ea9febcc7e6a064451a6d34018f749715a3a1899d2a",
+      "materials": [
+        "MI_CH_ltn_bdl_1P_bra",
+        "MI_CH_ltn_bdl_1P_coat",
+        "MI_CH_ltn_skin_arm_Inst",
+        "MI_CH_ltn_skin_body_Inst",
+        "MI_CH_ltn_skin_hand_Inst",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    "ltn_bdl_1P": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_1P.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Meshes/SK_CH_ltn_bdl_1P.uasset",
+      "sha256": "f9d7d66af2b077567e9a5632194d282661cc70af2896f3da216320422a59edbb",
+      "materials": [
+        "MI_CH_ltn_bdl_1P_shoes",
+        "MI_CH_ltn_bdl_1P_trousers",
+        "MI_CH_ltn_skin_foot_Inst",
+        "MI_CH_ltn_skin_leg_Inst"
+      ]
+    },
+    "ltn_bdu_army": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_army.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Meshes/SK_CH_ltn_bdu_army.uasset",
+      "sha256": "04419c0604e8d9b06925fb2d663bcc62c582e0e32e2d7dc60f8415ecaaeca05f",
+      "materials": [
+        "MI_CH_ltn_bdu_army_1",
+        "MI_CH_ltn_bdu_army_2",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    "ltn_bdl_army": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_army.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Meshes/SK_CH_ltn_bdl_army.uasset",
+      "sha256": "03de48bcf06fd3ef2858adf52161534dcd0bbfa2d38693c92a30b93ef742aeba",
+      "materials": [
+        "MI_CH_ltn_bdl_army_1",
+        "MI_CH_ltn_bdl_army_2",
+        "MI_CH_ltn_skin_leg"
+      ]
+    },
+    "ltn_bdu_hotpants": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_hotpants.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_hotpants/Meshes/SK_CH_ltn_bdu_hotpants.uasset",
+      "sha256": "d8e76fd42f8b4fa3a78382b364da802571e23c391a8b5ce21f312f23c18e3bb2",
+      "materials": [
+        "MI_CH_ltn_bdu_hotpants_shirts",
+        "MI_CH_ltn_skin_arm",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_hand",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    "ltn_bdl_hotpants": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_hotpants.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Meshes/SK_CH_ltn_bdl_hotpants.uasset",
+      "sha256": "86f9d08a2f0fd8229b3eaba340d5fe5c6378f6a6254d0d23b31c1cda3b3cb938",
+      "materials": [
+        "MI_CH_ltn_bdl_hotpants_shoes",
+        "MI_CH_ltn_bdl_hotpants_trousers",
+        "MI_CH_ltn_skin_foot",
+        "MI_CH_ltn_skin_leg"
+      ]
+    },
+    "ltn_bdu_loose": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_loose.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Meshes/SK_CH_ltn_bdu_loose.uasset",
+      "sha256": "7456e8e983278f6c01d4a77634ca85799c2f6f026f9544f2f777e0dee111941b",
+      "materials": [
+        "MI_CH_ltn_bdl_loose_necklace",
+        "MI_CH_ltn_bdu_loose_jacket",
+        "MI_CH_ltn_skin_arm",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_hand",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    "ltn_bdl_loose": {
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_loose.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Meshes/SK_CH_ltn_bdl_loose.uasset",
+      "sha256": "6a5cd64dad5296054a3f1909447213e7c7103c0fbdbb2b959850fcdf98431470",
+      "materials": [
+        "MI_CH_ltn_bdl_loose_shoes",
+        "MI_CH_ltn_bdu_loose_shorts",
+        "MI_CH_ltn_skin_foot",
+        "MI_CH_ltn_skin_leg"
+      ]
+    }
+  },
+  "materials": {
+    "MI_CH_ltn_Eye_ADD": {
+      "diffuse": "",
+      "normal": "T_CH_Eye_outer_N",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.30000001192092896,
+        "REF_Tex_Scale": 1.4318770170211792,
+        "Ref_TexU": -0.017698999494314194,
+        "Ref_TexV": -0.17699100077152252,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eye_ADD_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eye_ADD_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_Eyes": {
+      "diffuse": "T_CH_ltn_eye_D",
+      "normal": "",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.07123900204896927,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_eye_D",
+        "Color01": [
+          0.29499998688697815,
+          0.19847999513149261,
+          0.11953099817037582,
+          1.0
+        ],
+        "Color02": [
+          0.7149999737739563,
+          0.7042999863624573,
+          0.633476972579956,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eyes_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_bdl_1P_bra": {
+      "diffuse": "T_CH_ltn_bdu_1P_bra_D",
+      "normal": "T_CH_ltn_bdu_1P_bra_N",
+      "mask": "T_CH_ltn_bdu_1P_bra_M",
+      "specular": "T_CH_ltn_bdu_1P_bra_D",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_1P_bra_D",
+        "MaskMap": "T_CH_ltn_bdu_1P_bra_M",
+        "Normal": "T_CH_ltn_bdu_1P_bra_N",
+        "specluar": "T_CH_ltn_bdu_1P_bra_D",
+        "Color01": [
+          0.24500000476837158,
+          0.08874999731779099,
+          0.018130000680685043,
+          1.0
+        ],
+        "Color02": [
+          0.1599999964237213,
+          0.07791999727487564,
+          0.09707199782133102,
+          1.0
+        ],
+        "Color03": [
+          0.07000000029802322,
+          0.05040000006556511,
+          0.05040000006556511,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          0.7517669796943665,
+          0.3230000138282776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_bdl_1P_bra.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_bra_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_bra_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.08874999731779099,
+            0.018130000680685043,
+            0.1599999964237213,
+            0.07791999727487564,
+            0.09707199782133102,
+            0.07000000029802322,
+            0.05040000006556511,
+            0.05040000006556511,
+            1.0,
+            0.7517669796943665,
+            0.3230000138282776
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_1P_coat": {
+      "diffuse": "T_CH_ltn_bdu_1P_coat_D",
+      "normal": "T_CH_ltn_bdu_1P_coat_N",
+      "mask": "T_CH_ltn_bdu_1P_coat_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.75,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.6499999761581421,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_1P_coat_D",
+        "MaskMap": "T_CH_ltn_bdu_1P_coat_M",
+        "Normal": "T_CH_ltn_bdu_1P_coat_N",
+        "Color01": [
+          0.8399999737739563,
+          0.6518399715423584,
+          0.4368000030517578,
+          1.0
+        ],
+        "Color02": [
+          0.25624600052833557,
+          0.47999998927116394,
+          0.2763639986515045,
+          1.0
+        ],
+        "Color03": [
+          0.36500000953674316,
+          0.1600240021944046,
+          0.1368750035762787,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_bdl_1P_coat.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_coat_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_coat_M.png",
+          "colors": [
+            0.8399999737739563,
+            0.6518399715423584,
+            0.4368000030517578,
+            0.25624600052833557,
+            0.47999998927116394,
+            0.2763639986515045,
+            0.36500000953674316,
+            0.1600240021944046,
+            0.1368750035762787,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_ltn_bdl_1P_shoes": {
+      "diffuse": "T_CH_ltn_bdl_1P_shoes_D",
+      "normal": "T_CH_ltn_bdl_1P_shoes_N",
+      "mask": "T_CH_ltn_bdl_1P_shoes_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_1P_shoes_D",
+        "MaskMap": "T_CH_ltn_bdl_1P_shoes_M",
+        "Normal": "T_CH_ltn_bdl_1P_shoes_N",
+        "Color01": [
+          0.9414880275726318,
+          0.949999988079071,
+          0.8013020157814026,
+          1.0
+        ],
+        "Color02": [
+          0.3499999940395355,
+          0.19557499885559082,
+          0.16134999692440033,
+          1.0
+        ],
+        "Color03": [
+          0.2240000069141388,
+          0.17677299678325653,
+          0.1106560006737709,
+          1.0
+        ],
+        "Color04": [
+          0.7806829810142517,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_bdl_1P_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_shoes_M.png",
+          "colors": [
+            0.9414880275726318,
+            0.949999988079071,
+            0.8013020157814026,
+            0.3499999940395355,
+            0.19557499885559082,
+            0.16134999692440033,
+            0.2240000069141388,
+            0.17677299678325653,
+            0.1106560006737709,
+            0.7806829810142517,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_1P_trousers": {
+      "diffuse": "T_CH_ltn_bdl_1P_trousers_D",
+      "normal": "T_CH_ltn_bdl_1P_trousers_N",
+      "mask": "T_CH_ltn_bdl_1P_trousers_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.2605209946632385,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_ltn_bdl_1P_trousers_M",
+        "Normal": "T_CH_ltn_bdl_1P_trousers_N",
+        "Color01": [
+          0.24500000476837158,
+          0.08874999731779099,
+          0.018130000680685043,
+          1.0
+        ],
+        "Color02": [
+          0.9389510154724121,
+          0.9449999928474426,
+          0.8393459916114807,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          0.7517669796943665,
+          0.3230000138282776,
+          1.0
+        ],
+        "Color04": [
+          0.020145000889897346,
+          0.3553889989852905,
+          0.39500001072883606,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_bdl_1P_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_trousers_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.08874999731779099,
+            0.018130000680685043,
+            0.9389510154724121,
+            0.9449999928474426,
+            0.8393459916114807,
+            1.0,
+            0.7517669796943665,
+            0.3230000138282776,
+            0.020145000889897346,
+            0.3553889989852905,
+            0.39500001072883606
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_army_1": {
+      "diffuse": "T_CH_ltn_bdl_army_1_D",
+      "normal": "T_CH_ltn_bdl_army_1_N",
+      "mask": "T_CH_ltn_bdl_army_1_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.10000000149011612,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_army_1_D",
+        "MaskMap": "T_CH_ltn_bdl_army_1_M",
+        "Normal": "T_CH_ltn_bdl_army_1_N",
+        "Color01": [
+          0.06499999761581421,
+          0.05700000002980232,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.35499998927116394,
+          0.35499998927116394,
+          0.35499998927116394,
+          1.0
+        ],
+        "Color04": [
+          0.75,
+          0.75,
+          0.75,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Material/MI_CH_ltn_bdl_army_1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_1_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_1_M.png",
+          "colors": [
+            0.06499999761581421,
+            0.05700000002980232,
+            0.125,
+            1.0,
+            1.0,
+            1.0,
+            0.35499998927116394,
+            0.35499998927116394,
+            0.35499998927116394,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_army_2": {
+      "diffuse": "T_CH_ltn_bdl_army_2_D",
+      "normal": "T_CH_ltn_bdl_army_2_N",
+      "mask": "T_CH_ltn_bdl_army_2_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_army_2_D",
+        "MaskMap": "T_CH_ltn_bdl_army_2_M",
+        "Normal": "T_CH_ltn_bdl_army_2_N",
+        "Color01": [
+          0.2750000059604645,
+          0.0742499977350235,
+          0.08736000210046768,
+          1.0
+        ],
+        "Color02": [
+          0.5799999833106995,
+          0.121799997985363,
+          0.1853799968957901,
+          1.0
+        ],
+        "Color03": [
+          0.11900000274181366,
+          0.23499999940395355,
+          0.04800000041723251,
+          1.0
+        ],
+        "Color04": [
+          0.20499999821186066,
+          0.20499999821186066,
+          0.20499999821186066,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Material/MI_CH_ltn_bdl_army_2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_2_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_2_M.png",
+          "colors": [
+            0.2750000059604645,
+            0.0742499977350235,
+            0.08736000210046768,
+            0.5799999833106995,
+            0.121799997985363,
+            0.1853799968957901,
+            0.11900000274181366,
+            0.23499999940395355,
+            0.04800000041723251,
+            0.20499999821186066,
+            0.20499999821186066,
+            0.20499999821186066
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_hotpants_shoes": {
+      "diffuse": "T_CH_ltn_hotpants_shoes_D",
+      "normal": "T_CH_ltn_hotpants_shoes_N",
+      "mask": "T_CH_ltn_hotpants_shoes_M",
+      "specular": "T_CH_ltn_hotpants_shoes_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_shoes_D",
+        "MaskMap": "T_CH_ltn_hotpants_shoes_M",
+        "Normal": "T_CH_ltn_hotpants_shoes_N",
+        "specluar": "T_CH_ltn_hotpants_shoes_D",
+        "Color01": [
+          0.11407899856567383,
+          0.11500000208616257,
+          0.09889999777078629,
+          1.0
+        ],
+        "Color02": [
+          0.11892600357532501,
+          0.11999999731779099,
+          0.10121700167655945,
+          1.0
+        ],
+        "Color03": [
+          0.6299999952316284,
+          0.08578400313854218,
+          0.06300000101327896,
+          1.0
+        ],
+        "Color04": [
+          0.5799999833106995,
+          0.3088650107383728,
+          0.08455000072717667,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Material/MI_CH_ltn_bdl_hotpants_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shoes_M.png",
+          "colors": [
+            0.11407899856567383,
+            0.11500000208616257,
+            0.09889999777078629,
+            0.11892600357532501,
+            0.11999999731779099,
+            0.10121700167655945,
+            0.6299999952316284,
+            0.08578400313854218,
+            0.06300000101327896,
+            0.5799999833106995,
+            0.3088650107383728,
+            0.08455000072717667
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_hotpants_trousers": {
+      "diffuse": "T_CH_ltn_hotpants_hotpants_D",
+      "normal": "T_CH_ltn_hotpants_hotpants_N",
+      "mask": "T_CH_ltn_hotpants_hotpants_M",
+      "specular": "T_CH_ltn_hotpants_hotpants_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_ltn_hotpants_hotpants_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_hotpants_D",
+        "MaskMap": "T_CH_ltn_hotpants_hotpants_M",
+        "Normal": "T_CH_ltn_hotpants_hotpants_N",
+        "Color01": [
+          0.9049999713897705,
+          0.828387975692749,
+          0.7466899752616882,
+          1.0
+        ],
+        "Color02": [
+          0.10930799692869186,
+          0.10999999940395355,
+          0.09790000319480896,
+          1.0
+        ],
+        "Color03": [
+          0.3799999952316284,
+          0.23131200671195984,
+          0.10830000042915344,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Material/MI_CH_ltn_bdl_hotpants_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_hotpants_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_hotpants_M.png",
+          "colors": [
+            0.9049999713897705,
+            0.828387975692749,
+            0.7466899752616882,
+            0.10930799692869186,
+            0.10999999940395355,
+            0.09790000319480896,
+            0.3799999952316284,
+            0.23131200671195984,
+            0.10830000042915344,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_ltn_bdl_loose_necklace": {
+      "diffuse": "T_CH_ltn_bdu_loose_necklace_D",
+      "normal": "T_CH_ltn_bdu_loose_necklace_N",
+      "mask": "T_CH_ltn_bdu_loose_necklace_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_loose_necklace_D",
+        "MaskMap": "T_CH_ltn_bdu_loose_necklace_M",
+        "Normal": "T_CH_ltn_bdu_loose_necklace_N",
+        "Color01": [
+          0.4300000071525574,
+          0.3151710033416748,
+          0.14835000038146973,
+          1.0
+        ],
+        "Color02": [
+          0.5233200192451477,
+          0.3737249970436096,
+          0.7549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.1815059930086136,
+          0.10890000313520432,
+          0.2199999988079071,
+          1.0
+        ],
+        "Color04": [
+          0.9300000071525574,
+          0.7185810208320618,
+          0.35339999198913574,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Material/MI_CH_ltn_bdl_loose_necklace.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_necklace_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_necklace_M.png",
+          "colors": [
+            0.4300000071525574,
+            0.3151710033416748,
+            0.14835000038146973,
+            0.5233200192451477,
+            0.3737249970436096,
+            0.7549999952316284,
+            0.1815059930086136,
+            0.10890000313520432,
+            0.2199999988079071,
+            0.9300000071525574,
+            0.7185810208320618,
+            0.35339999198913574
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdl_loose_shoes": {
+      "diffuse": "T_CH_ltn_bdl_loose_shoes_D",
+      "normal": "T_CH_ltn_bdl_loose_shoes_N",
+      "mask": "T_CH_ltn_bdl_loose_shoes_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.4000000059604645,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_loose_shoes_D",
+        "MaskMap": "T_CH_ltn_bdl_loose_shoes_M",
+        "Normal": "T_CH_ltn_bdl_loose_shoes_N",
+        "Color01": [
+          0.8500000238418579,
+          0.8103269934654236,
+          0.6672499775886536,
+          1.0
+        ],
+        "Color02": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ],
+        "Color03": [
+          0.1550000011920929,
+          0.10867500305175781,
+          0.07662100344896317,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Material/MI_CH_ltn_bdl_loose_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shoes_M.png",
+          "colors": [
+            0.8500000238418579,
+            0.8103269934654236,
+            0.6672499775886536,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714,
+            0.1550000011920929,
+            0.10867500305175781,
+            0.07662100344896317,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_ltn_bdu_army_1": {
+      "diffuse": "T_CH_ltn_bdu_army_1_D",
+      "normal": "T_CH_ltn_bdu_army_1_N",
+      "mask": "T_CH_ltn_bdu_army_1_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_army_1_D",
+        "MaskMap": "T_CH_ltn_bdu_army_1_M",
+        "Normal": "T_CH_ltn_bdu_army_1_N",
+        "Color01": [
+          0.5699999928474426,
+          0.07205499708652496,
+          0.044826000928878784,
+          1.0
+        ],
+        "Color02": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.4000000059604645,
+          1.0
+        ],
+        "Color03": [
+          0.30000001192092896,
+          0.30000001192092896,
+          0.30000001192092896,
+          1.0
+        ],
+        "Color04": [
+          0.21055400371551514,
+          0.21044999361038208,
+          0.3449999988079071,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Material/MI_CH_ltn_bdu_army_1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_1_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_1_M.png",
+          "colors": [
+            0.5699999928474426,
+            0.07205499708652496,
+            0.044826000928878784,
+            0.4000000059604645,
+            0.4000000059604645,
+            0.4000000059604645,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.21055400371551514,
+            0.21044999361038208,
+            0.3449999988079071
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdu_army_2": {
+      "diffuse": "T_CH_ltn_bdu_army_2_D",
+      "normal": "T_CH_ltn_bdu_army_2_N",
+      "mask": "T_CH_ltn_bdu_army_2_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.15000000596046448,
+        "Metallic": 0.5,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_army_2_D",
+        "MaskMap": "T_CH_ltn_bdu_army_2_M",
+        "Normal": "T_CH_ltn_bdu_army_2_N",
+        "Color01": [
+          0.11940199881792068,
+          0.23499999940395355,
+          0.04817499965429306,
+          1.0
+        ],
+        "Color02": [
+          0.1850000023841858,
+          0.09342200309038162,
+          0.02775000035762787,
+          1.0
+        ],
+        "Color03": [
+          0.0653659999370575,
+          0.057211000472307205,
+          0.125,
+          1.0
+        ],
+        "Color04": [
+          0.6100000143051147,
+          0.6100000143051147,
+          0.6100000143051147,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Material/MI_CH_ltn_bdu_army_2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_2_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_2_M.png",
+          "colors": [
+            0.11940199881792068,
+            0.23499999940395355,
+            0.04817499965429306,
+            0.1850000023841858,
+            0.09342200309038162,
+            0.02775000035762787,
+            0.0653659999370575,
+            0.057211000472307205,
+            0.125,
+            0.6100000143051147,
+            0.6100000143051147,
+            0.6100000143051147
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdu_hotpants_shirts": {
+      "diffuse": "T_CH_ltn_hotpants_shirts_D",
+      "normal": "T_CH_ltn_hotpants_shirts_N",
+      "mask": "T_CH_ltn_hotpants_shirts_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.75,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_shirts_D",
+        "MaskMap": "T_CH_ltn_hotpants_shirts_M",
+        "Normal": "T_CH_ltn_hotpants_shirts_N",
+        "Color01": [
+          0.15985000133514404,
+          0.2936370074748993,
+          0.6949999928474426,
+          1.0
+        ],
+        "Color02": [
+          0.549049973487854,
+          0.6191419959068298,
+          0.6949999928474426,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_hotpants/Material/MI_CH_ltn_bdu_hotpants_shirts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shirts_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shirts_M.png",
+          "colors": [
+            0.15985000133514404,
+            0.2936370074748993,
+            0.6949999928474426,
+            0.549049973487854,
+            0.6191419959068298,
+            0.6949999928474426,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_ltn_bdu_loose_jacket": {
+      "diffuse": "T_CH_ltn_bdu_loose_jacket_D",
+      "normal": "T_CH_ltn_bdu_loose_jacket_N",
+      "mask": "T_CH_ltn_bdu_loose_jacket_M",
+      "specular": "T_CH_ltn_bdu_loose_jacket_D",
+      "params": {
+        "Anisotropic": 0.20000000298023224,
+        "Metallic": 0.8500000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_loose_jacket_D",
+        "MaskMap": "T_CH_ltn_bdu_loose_jacket_M",
+        "Normal": "T_CH_ltn_bdu_loose_jacket_N",
+        "specluar": "T_CH_ltn_bdu_loose_jacket_D",
+        "Color01": [
+          0.012374999932944775,
+          0.05877799913287163,
+          0.2750000059604645,
+          1.0
+        ],
+        "Color02": [
+          0.0,
+          0.8008829951286316,
+          0.8650000095367432,
+          1.0
+        ],
+        "Color03": [
+          0.8849470019340515,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          0.05739700049161911,
+          0.12430399656295776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Material/MI_CH_ltn_bdu_loose_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_jacket_M.png",
+          "colors": [
+            0.012374999932944775,
+            0.05877799913287163,
+            0.2750000059604645,
+            0.0,
+            0.8008829951286316,
+            0.8650000095367432,
+            0.8849470019340515,
+            1.0,
+            0.0,
+            1.0,
+            0.05739700049161911,
+            0.12430399656295776
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_bdu_loose_shorts": {
+      "diffuse": "T_CH_ltn_bdl_loose_shorts_D",
+      "normal": "T_CH_ltn_bdl_loose_shorts_N",
+      "mask": "T_CH_ltn_bdl_loose_shorts_M",
+      "specular": "T_CH_ltn_bdl_loose_shorts_D",
+      "params": {
+        "Metallic": 0.4000000059604645,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_loose_shorts_D",
+        "MaskMap": "T_CH_ltn_bdl_loose_shorts_M",
+        "Normal": "T_CH_ltn_bdl_loose_shorts_N",
+        "specluar": "T_CH_ltn_bdl_loose_shorts_D",
+        "Color01": [
+          0.03004400059580803,
+          0.4399999976158142,
+          0.355307012796402,
+          1.0
+        ],
+        "Color02": [
+          0.8700000047683716,
+          0.7304149866104126,
+          0.6481500267982483,
+          1.0
+        ],
+        "Color03": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ],
+        "Color04": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Material/MI_CH_ltn_bdu_loose_shorts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shorts_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shorts_M.png",
+          "colors": [
+            0.03004400059580803,
+            0.4399999976158142,
+            0.355307012796402,
+            0.8700000047683716,
+            0.7304149866104126,
+            0.6481500267982483,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_har_1p_Pass1": {
+      "diffuse": "T_CH_ltn_hair_D",
+      "normal": "T_CH_hair_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": -0.25,
+        "BaseUpperContrast": 0.0,
+        "SpecularLowerContrast": 0.10000000149011612,
+        "SpecularUpperContrast": 0.0,
+        "AlphaThreshold": 0.699999988079071,
+        "Anisotropic": 0.20000000298023224,
+        "Metallic": 0.699999988079071,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_ltn_hair_D",
+        "SpecularTexture": "T_CH_ltn_hair_D",
+        "Color01": [
+          0.3799999952316284,
+          0.09865199774503708,
+          0.05510000139474869,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Material/MI_CH_ltn_har_1p_Pass1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_har_1p_Pass2": {
+      "diffuse": "T_CH_ltn_hair_D",
+      "normal": "T_CH_hair_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "",
+      "params": {
+        "SpecularLowerContrast": 0.0,
+        "SpecularUpperContrast": 0.0,
+        "AlphaThreshold": 0.699999988079071,
+        "Anisotropic": 0.0,
+        "Metallic": 0.800000011920929,
+        "Normalize": 0.0,
+        "Roughness": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_ltn_hair_D",
+        "SpecularTexture": "T_CH_ltn_hair_D",
+        "Color01": [
+          0.3499999940395355,
+          0.0984409973025322,
+          0.05950000137090683,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Material/MI_CH_ltn_har_1p_Pass2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_ltn_lip": {
+      "diffuse": "T_CH_xia_lip_D",
+      "normal": "T_CH_lip_N",
+      "mask": "",
+      "specular": "T_CH_lip_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Color": "T_CH_xia_lip_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_lip.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_matuge": {
+      "diffuse": "T_CH_ltn_matuge_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_matuge_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_matuge.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_matuge_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_matuge_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_mouth": {
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {
+        "Metallic": 0.5,
+        "Roughness": "T_CH_mouth_inner_R",
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_mouth_inner_D",
+        "Normal": "T_CH_mouth_inner_N",
+        "SubSurfaceScatterColor": [
+          0.4399999976158142,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_mouth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_arm": {
+      "diffuse": "T_CH_female_arm_D",
+      "normal": "T_CH_female_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_arm_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_arm_D",
+        "Normal": "T_CH_female_arm_N",
+        "Specular": "T_CH_female_arm_S",
+        "WetDiffuse": "T_CH_female_arm_wet_D",
+        "WetNormal": "T_CH_female_arm_wet_N",
+        "wetSpec": "T_CH_female_arm_wet_S",
+        "WetMask": "T_CH_female_arm_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_arm.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_arm_Inst": {
+      "diffuse": "T_CH_ltn_arm_skin_1p_D",
+      "normal": "T_CH_female_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_arm_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_arm_skin_1p_D",
+        "Normal": "T_CH_female_arm_N",
+        "Specular": "T_CH_female_arm_S",
+        "WetDiffuse": "T_CH_female_arm_wet_D",
+        "WetNormal": "T_CH_female_arm_wet_N",
+        "wetSpec": "T_CH_female_arm_wet_S",
+        "WetMask": "T_CH_female_arm_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_arm_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_body": {
+      "diffuse": "T_CH_ltn_body_skin_1p_D",
+      "normal": "T_CH_female_body_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_body_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_body_skin_1p_D",
+        "Normal": "T_CH_female_body_N",
+        "Specular": "T_CH_female_body_S",
+        "WetDiffuse": "T_CH_female_body_wet_D",
+        "WetNormal": "T_CH_female_body_wet_N",
+        "wetSpec": "T_CH_female_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_body.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_body_Inst": {
+      "diffuse": "T_CH_ltn_body_skin_1p_D",
+      "normal": "T_CH_ltn_body_skin_1p_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_body_skin_1p_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_body_skin_1p_D",
+        "Normal": "T_CH_ltn_body_skin_1p_N",
+        "Specular": "T_CH_ltn_body_skin_1p_S",
+        "WetDiffuse": "T_CH_female_body_wet_D",
+        "WetNormal": "T_CH_female_body_wet_N",
+        "wetSpec": "T_CH_female_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_body_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_face": {
+      "diffuse": "T_CH_ltn_face_D",
+      "normal": "T_CH_ltn_face_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_face_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_face_D",
+        "Normal": "T_CH_ltn_face_N",
+        "Specular": "T_CH_ltn_face_S",
+        "WetDiffuse": "T_CH_female_head_wet_D",
+        "WetNormal": "T_CH_female_head_wet_N",
+        "wetSpec": "T_CH_female_head_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_face.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_foot": {
+      "diffuse": "T_CH_female_foot_D",
+      "normal": "T_CH_female_foot_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_foot_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_foot_D",
+        "Normal": "T_CH_female_foot_N",
+        "Specular": "T_CH_female_foot_S",
+        "WetDiffuse": "T_CH_female_foot_wet_D",
+        "WetNormal": "T_CH_female_foot_wet_N",
+        "wetSpec": "T_CH_female_foot_wet_S",
+        "WetMask": "T_CH_female_foot_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_foot.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_foot_Inst": {
+      "diffuse": "T_CH_ltn_foot_skin_1p_D",
+      "normal": "T_CH_female_foot_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_foot_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_foot_skin_1p_D",
+        "Normal": "T_CH_female_foot_N",
+        "Specular": "T_CH_female_foot_S",
+        "WetDiffuse": "T_CH_female_foot_wet_D",
+        "WetNormal": "T_CH_female_foot_wet_N",
+        "wetSpec": "T_CH_female_foot_wet_S",
+        "WetMask": "T_CH_female_foot_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_skin_foot_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_hand": {
+      "diffuse": "T_CH_female_hand_D",
+      "normal": "T_CH_female_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_hand_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_hand_D",
+        "Normal": "T_CH_female_hand_N",
+        "Specular": "T_CH_female_hand_S",
+        "WetDiffuse": "T_CH_female_hand_wet_D",
+        "WetNormal": "T_CH_female_hand_wet_N",
+        "wetSpec": "T_CH_female_hand_wet_S",
+        "WetMask": "T_CH_female_hand_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_hand.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_hand_Inst": {
+      "diffuse": "T_CH_ltn_hand_skin_1p_D",
+      "normal": "T_CH_female_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_hand_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_hand_skin_1p_D",
+        "Normal": "T_CH_female_hand_N",
+        "Specular": "T_CH_female_hand_S",
+        "WetDiffuse": "T_CH_female_hand_wet_D",
+        "WetNormal": "T_CH_female_hand_wet_N",
+        "wetSpec": "T_CH_female_hand_wet_S",
+        "WetMask": "T_CH_female_hand_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_hand_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_leg": {
+      "diffuse": "T_CH_female_leg_D",
+      "normal": "T_CH_female_leg_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_leg_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_leg_D",
+        "Normal": "T_CH_female_leg_N",
+        "Specular": "T_CH_female_leg_S",
+        "WetDiffuse": "T_CH_female_leg_wet_D",
+        "WetNormal": "T_CH_female_leg_wet_N",
+        "wetSpec": "T_CH_female_leg_wet_S",
+        "WetMask": "T_CH_female_leg_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_leg_Inst": {
+      "diffuse": "T_CH_ltn_leg_skin_1p_D",
+      "normal": "T_CH_ltn_leg_skin_1p_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_leg_skin_1p_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_leg_skin_1p_D",
+        "Normal": "T_CH_ltn_leg_skin_1p_N",
+        "Specular": "T_CH_ltn_leg_skin_1p_S",
+        "WetDiffuse": "T_CH_female_leg_wet_D",
+        "WetNormal": "T_CH_female_leg_wet_N",
+        "wetSpec": "T_CH_female_leg_wet_S",
+        "WetMask": "T_CH_female_leg_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_skin_leg_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_skin_neck": {
+      "diffuse": "T_CH_female_neck_D",
+      "normal": "T_CH_female_neck_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_neck_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_neck_D",
+        "Normal": "T_CH_female_neck_N",
+        "Specular": "T_CH_female_neck_S",
+        "WetDiffuse": "T_CH_female_neck_wet_D",
+        "WetNormal": "T_CH_female_neck_wet_N",
+        "wetSpec": "T_CH_female_neck_wet_S",
+        "WetMask": "T_CH_female_neck_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_neck.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_tear": {
+      "diffuse": "T_CH_tear_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_tear.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_tear_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_tear_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_ltn_teeth": {
+      "diffuse": "T_CH_teeth_D",
+      "normal": "T_CH_teeth_N",
+      "mask": "",
+      "specular": "T_CH_teeth_R",
+      "params": {
+        "RefractionDepthBias": 0.0
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_xia_blow2": {
+      "diffuse": "T_CH_ltn_mayuge_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_mayuge_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_xia_blow2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow2_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_xia_blow22": {
+      "diffuse": "T_CH_ltn_eyekage_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameter2D_0": "T_CH_ltn_eyekage_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_xia_blow22.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow22_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow22_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    }
+  },
+  "gaps": [],
+  "pieceEntries": [
+    {
+      "name": "ltn_face",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_face.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Meshes/SK_CH_ltn_face.uasset",
+      "sha256": "46cc45cb7c85ed80c4cfae5d06407eb90bcbdf2743d98a773c6405a0424b1c6f",
+      "materials": [
+        "MI_CH_ltn_Eye_ADD",
+        "MI_CH_ltn_Eyes",
+        "MI_CH_ltn_lip",
+        "MI_CH_ltn_matuge",
+        "MI_CH_ltn_mouth",
+        "MI_CH_ltn_skin_face",
+        "MI_CH_ltn_tear",
+        "MI_CH_ltn_teeth",
+        "MI_CH_xia_blow2",
+        "MI_CH_xia_blow22"
+      ]
+    },
+    {
+      "name": "ltn_har_1p",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Meshes/SK_CH_ltn_har_1p.uasset",
+      "sha256": "ad96581aa2dc064e0592cb0083f4919dc882fe50b0e5d7f399af2399d003fc6f",
+      "materials": [
+        "MI_CH_ltn_har_1p_Pass1",
+        "MI_CH_ltn_har_1p_Pass2"
+      ]
+    },
+    {
+      "name": "ltn_bdu_1P",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_1P.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Meshes/SK_CH_ltn_bdu_1P.uasset",
+      "sha256": "f6430999b8e7054d4bc13ea9febcc7e6a064451a6d34018f749715a3a1899d2a",
+      "materials": [
+        "MI_CH_ltn_bdl_1P_bra",
+        "MI_CH_ltn_bdl_1P_coat",
+        "MI_CH_ltn_skin_arm_Inst",
+        "MI_CH_ltn_skin_body_Inst",
+        "MI_CH_ltn_skin_hand_Inst",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    {
+      "name": "ltn_bdl_1P",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_1P.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Meshes/SK_CH_ltn_bdl_1P.uasset",
+      "sha256": "f9d7d66af2b077567e9a5632194d282661cc70af2896f3da216320422a59edbb",
+      "materials": [
+        "MI_CH_ltn_bdl_1P_shoes",
+        "MI_CH_ltn_bdl_1P_trousers",
+        "MI_CH_ltn_skin_foot_Inst",
+        "MI_CH_ltn_skin_leg_Inst"
+      ]
+    },
+    {
+      "name": "ltn_bdu_army",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_army.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Meshes/SK_CH_ltn_bdu_army.uasset",
+      "sha256": "04419c0604e8d9b06925fb2d663bcc62c582e0e32e2d7dc60f8415ecaaeca05f",
+      "materials": [
+        "MI_CH_ltn_bdu_army_1",
+        "MI_CH_ltn_bdu_army_2",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    {
+      "name": "ltn_bdl_army",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_army.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Meshes/SK_CH_ltn_bdl_army.uasset",
+      "sha256": "03de48bcf06fd3ef2858adf52161534dcd0bbfa2d38693c92a30b93ef742aeba",
+      "materials": [
+        "MI_CH_ltn_bdl_army_1",
+        "MI_CH_ltn_bdl_army_2",
+        "MI_CH_ltn_skin_leg"
+      ]
+    },
+    {
+      "name": "ltn_bdu_hotpants",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_hotpants.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_hotpants/Meshes/SK_CH_ltn_bdu_hotpants.uasset",
+      "sha256": "d8e76fd42f8b4fa3a78382b364da802571e23c391a8b5ce21f312f23c18e3bb2",
+      "materials": [
+        "MI_CH_ltn_bdu_hotpants_shirts",
+        "MI_CH_ltn_skin_arm",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_hand",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    {
+      "name": "ltn_bdl_hotpants",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_hotpants.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Meshes/SK_CH_ltn_bdl_hotpants.uasset",
+      "sha256": "86f9d08a2f0fd8229b3eaba340d5fe5c6378f6a6254d0d23b31c1cda3b3cb938",
+      "materials": [
+        "MI_CH_ltn_bdl_hotpants_shoes",
+        "MI_CH_ltn_bdl_hotpants_trousers",
+        "MI_CH_ltn_skin_foot",
+        "MI_CH_ltn_skin_leg"
+      ]
+    },
+    {
+      "name": "ltn_bdu_loose",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdu_loose.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Meshes/SK_CH_ltn_bdu_loose.uasset",
+      "sha256": "7456e8e983278f6c01d4a77634ca85799c2f6f026f9544f2f777e0dee111941b",
+      "materials": [
+        "MI_CH_ltn_bdl_loose_necklace",
+        "MI_CH_ltn_bdu_loose_jacket",
+        "MI_CH_ltn_skin_arm",
+        "MI_CH_ltn_skin_body",
+        "MI_CH_ltn_skin_hand",
+        "MI_CH_ltn_skin_neck"
+      ]
+    },
+    {
+      "name": "ltn_bdl_loose",
+      "path": "Assets/_Project/Characters/Katarina/Source/Base/ltn_bdl_loose.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Meshes/SK_CH_ltn_bdl_loose.uasset",
+      "sha256": "6a5cd64dad5296054a3f1909447213e7c7103c0fbdbb2b959850fcdf98431470",
+      "materials": [
+        "MI_CH_ltn_bdl_loose_shoes",
+        "MI_CH_ltn_bdu_loose_shorts",
+        "MI_CH_ltn_skin_foot",
+        "MI_CH_ltn_skin_leg"
+      ]
+    }
+  ],
+  "materialEntries": [
+    {
+      "name": "MI_CH_ltn_Eye_ADD",
+      "diffuse": "",
+      "normal": "T_CH_Eye_outer_N",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.30000001192092896,
+        "REF_Tex_Scale": 1.4318770170211792,
+        "Ref_TexU": -0.017698999494314194,
+        "Ref_TexV": -0.17699100077152252,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eye_ADD_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eye_ADD_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_Eyes",
+      "diffuse": "T_CH_ltn_eye_D",
+      "normal": "",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.07123900204896927,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_eye_D",
+        "Color01": [
+          0.29499998688697815,
+          0.19847999513149261,
+          0.11953099817037582,
+          1.0
+        ],
+        "Color02": [
+          0.7149999737739563,
+          0.7042999863624573,
+          0.633476972579956,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eyes_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_1P_bra",
+      "diffuse": "T_CH_ltn_bdu_1P_bra_D",
+      "normal": "T_CH_ltn_bdu_1P_bra_N",
+      "mask": "T_CH_ltn_bdu_1P_bra_M",
+      "specular": "T_CH_ltn_bdu_1P_bra_D",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_1P_bra_D",
+        "MaskMap": "T_CH_ltn_bdu_1P_bra_M",
+        "Normal": "T_CH_ltn_bdu_1P_bra_N",
+        "specluar": "T_CH_ltn_bdu_1P_bra_D",
+        "Color01": [
+          0.24500000476837158,
+          0.08874999731779099,
+          0.018130000680685043,
+          1.0
+        ],
+        "Color02": [
+          0.1599999964237213,
+          0.07791999727487564,
+          0.09707199782133102,
+          1.0
+        ],
+        "Color03": [
+          0.07000000029802322,
+          0.05040000006556511,
+          0.05040000006556511,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          0.7517669796943665,
+          0.3230000138282776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_bdl_1P_bra.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_bra_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_bra_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_bra_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.08874999731779099,
+            0.018130000680685043,
+            0.1599999964237213,
+            0.07791999727487564,
+            0.09707199782133102,
+            0.07000000029802322,
+            0.05040000006556511,
+            0.05040000006556511,
+            1.0,
+            0.7517669796943665,
+            0.3230000138282776
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_1P_coat",
+      "diffuse": "T_CH_ltn_bdu_1P_coat_D",
+      "normal": "T_CH_ltn_bdu_1P_coat_N",
+      "mask": "T_CH_ltn_bdu_1P_coat_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.75,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.6499999761581421,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_1P_coat_D",
+        "MaskMap": "T_CH_ltn_bdu_1P_coat_M",
+        "Normal": "T_CH_ltn_bdu_1P_coat_N",
+        "Color01": [
+          0.8399999737739563,
+          0.6518399715423584,
+          0.4368000030517578,
+          1.0
+        ],
+        "Color02": [
+          0.25624600052833557,
+          0.47999998927116394,
+          0.2763639986515045,
+          1.0
+        ],
+        "Color03": [
+          0.36500000953674316,
+          0.1600240021944046,
+          0.1368750035762787,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_bdl_1P_coat.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_coat_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_coat_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_1P_coat_M.png",
+          "colors": [
+            0.8399999737739563,
+            0.6518399715423584,
+            0.4368000030517578,
+            0.25624600052833557,
+            0.47999998927116394,
+            0.2763639986515045,
+            0.36500000953674316,
+            0.1600240021944046,
+            0.1368750035762787,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_ltn_bdl_1P_shoes",
+      "diffuse": "T_CH_ltn_bdl_1P_shoes_D",
+      "normal": "T_CH_ltn_bdl_1P_shoes_N",
+      "mask": "T_CH_ltn_bdl_1P_shoes_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_1P_shoes_D",
+        "MaskMap": "T_CH_ltn_bdl_1P_shoes_M",
+        "Normal": "T_CH_ltn_bdl_1P_shoes_N",
+        "Color01": [
+          0.9414880275726318,
+          0.949999988079071,
+          0.8013020157814026,
+          1.0
+        ],
+        "Color02": [
+          0.3499999940395355,
+          0.19557499885559082,
+          0.16134999692440033,
+          1.0
+        ],
+        "Color03": [
+          0.2240000069141388,
+          0.17677299678325653,
+          0.1106560006737709,
+          1.0
+        ],
+        "Color04": [
+          0.7806829810142517,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_bdl_1P_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_shoes_M.png",
+          "colors": [
+            0.9414880275726318,
+            0.949999988079071,
+            0.8013020157814026,
+            0.3499999940395355,
+            0.19557499885559082,
+            0.16134999692440033,
+            0.2240000069141388,
+            0.17677299678325653,
+            0.1106560006737709,
+            0.7806829810142517,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_1P_trousers",
+      "diffuse": "T_CH_ltn_bdl_1P_trousers_D",
+      "normal": "T_CH_ltn_bdl_1P_trousers_N",
+      "mask": "T_CH_ltn_bdl_1P_trousers_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.2605209946632385,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_ltn_bdl_1P_trousers_M",
+        "Normal": "T_CH_ltn_bdl_1P_trousers_N",
+        "Color01": [
+          0.24500000476837158,
+          0.08874999731779099,
+          0.018130000680685043,
+          1.0
+        ],
+        "Color02": [
+          0.9389510154724121,
+          0.9449999928474426,
+          0.8393459916114807,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          0.7517669796943665,
+          0.3230000138282776,
+          1.0
+        ],
+        "Color04": [
+          0.020145000889897346,
+          0.3553889989852905,
+          0.39500001072883606,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_bdl_1P_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_1P_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_1P_trousers_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.08874999731779099,
+            0.018130000680685043,
+            0.9389510154724121,
+            0.9449999928474426,
+            0.8393459916114807,
+            1.0,
+            0.7517669796943665,
+            0.3230000138282776,
+            0.020145000889897346,
+            0.3553889989852905,
+            0.39500001072883606
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_army_1",
+      "diffuse": "T_CH_ltn_bdl_army_1_D",
+      "normal": "T_CH_ltn_bdl_army_1_N",
+      "mask": "T_CH_ltn_bdl_army_1_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.10000000149011612,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_army_1_D",
+        "MaskMap": "T_CH_ltn_bdl_army_1_M",
+        "Normal": "T_CH_ltn_bdl_army_1_N",
+        "Color01": [
+          0.06499999761581421,
+          0.05700000002980232,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.35499998927116394,
+          0.35499998927116394,
+          0.35499998927116394,
+          1.0
+        ],
+        "Color04": [
+          0.75,
+          0.75,
+          0.75,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Material/MI_CH_ltn_bdl_army_1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_1_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_1_M.png",
+          "colors": [
+            0.06499999761581421,
+            0.05700000002980232,
+            0.125,
+            1.0,
+            1.0,
+            1.0,
+            0.35499998927116394,
+            0.35499998927116394,
+            0.35499998927116394,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_army_2",
+      "diffuse": "T_CH_ltn_bdl_army_2_D",
+      "normal": "T_CH_ltn_bdl_army_2_N",
+      "mask": "T_CH_ltn_bdl_army_2_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_army_2_D",
+        "MaskMap": "T_CH_ltn_bdl_army_2_M",
+        "Normal": "T_CH_ltn_bdl_army_2_N",
+        "Color01": [
+          0.2750000059604645,
+          0.0742499977350235,
+          0.08736000210046768,
+          1.0
+        ],
+        "Color02": [
+          0.5799999833106995,
+          0.121799997985363,
+          0.1853799968957901,
+          1.0
+        ],
+        "Color03": [
+          0.11900000274181366,
+          0.23499999940395355,
+          0.04800000041723251,
+          1.0
+        ],
+        "Color04": [
+          0.20499999821186066,
+          0.20499999821186066,
+          0.20499999821186066,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_army/Material/MI_CH_ltn_bdl_army_2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_army_2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_2_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_army_2_M.png",
+          "colors": [
+            0.2750000059604645,
+            0.0742499977350235,
+            0.08736000210046768,
+            0.5799999833106995,
+            0.121799997985363,
+            0.1853799968957901,
+            0.11900000274181366,
+            0.23499999940395355,
+            0.04800000041723251,
+            0.20499999821186066,
+            0.20499999821186066,
+            0.20499999821186066
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_hotpants_shoes",
+      "diffuse": "T_CH_ltn_hotpants_shoes_D",
+      "normal": "T_CH_ltn_hotpants_shoes_N",
+      "mask": "T_CH_ltn_hotpants_shoes_M",
+      "specular": "T_CH_ltn_hotpants_shoes_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_shoes_D",
+        "MaskMap": "T_CH_ltn_hotpants_shoes_M",
+        "Normal": "T_CH_ltn_hotpants_shoes_N",
+        "specluar": "T_CH_ltn_hotpants_shoes_D",
+        "Color01": [
+          0.11407899856567383,
+          0.11500000208616257,
+          0.09889999777078629,
+          1.0
+        ],
+        "Color02": [
+          0.11892600357532501,
+          0.11999999731779099,
+          0.10121700167655945,
+          1.0
+        ],
+        "Color03": [
+          0.6299999952316284,
+          0.08578400313854218,
+          0.06300000101327896,
+          1.0
+        ],
+        "Color04": [
+          0.5799999833106995,
+          0.3088650107383728,
+          0.08455000072717667,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Material/MI_CH_ltn_bdl_hotpants_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shoes_M.png",
+          "colors": [
+            0.11407899856567383,
+            0.11500000208616257,
+            0.09889999777078629,
+            0.11892600357532501,
+            0.11999999731779099,
+            0.10121700167655945,
+            0.6299999952316284,
+            0.08578400313854218,
+            0.06300000101327896,
+            0.5799999833106995,
+            0.3088650107383728,
+            0.08455000072717667
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_hotpants_trousers",
+      "diffuse": "T_CH_ltn_hotpants_hotpants_D",
+      "normal": "T_CH_ltn_hotpants_hotpants_N",
+      "mask": "T_CH_ltn_hotpants_hotpants_M",
+      "specular": "T_CH_ltn_hotpants_hotpants_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_ltn_hotpants_hotpants_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_hotpants_D",
+        "MaskMap": "T_CH_ltn_hotpants_hotpants_M",
+        "Normal": "T_CH_ltn_hotpants_hotpants_N",
+        "Color01": [
+          0.9049999713897705,
+          0.828387975692749,
+          0.7466899752616882,
+          1.0
+        ],
+        "Color02": [
+          0.10930799692869186,
+          0.10999999940395355,
+          0.09790000319480896,
+          1.0
+        ],
+        "Color03": [
+          0.3799999952316284,
+          0.23131200671195984,
+          0.10830000042915344,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_hotpants/Material/MI_CH_ltn_bdl_hotpants_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_hotpants_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_hotpants_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_hotpants_M.png",
+          "colors": [
+            0.9049999713897705,
+            0.828387975692749,
+            0.7466899752616882,
+            0.10930799692869186,
+            0.10999999940395355,
+            0.09790000319480896,
+            0.3799999952316284,
+            0.23131200671195984,
+            0.10830000042915344,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_ltn_bdl_loose_necklace",
+      "diffuse": "T_CH_ltn_bdu_loose_necklace_D",
+      "normal": "T_CH_ltn_bdu_loose_necklace_N",
+      "mask": "T_CH_ltn_bdu_loose_necklace_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_loose_necklace_D",
+        "MaskMap": "T_CH_ltn_bdu_loose_necklace_M",
+        "Normal": "T_CH_ltn_bdu_loose_necklace_N",
+        "Color01": [
+          0.4300000071525574,
+          0.3151710033416748,
+          0.14835000038146973,
+          1.0
+        ],
+        "Color02": [
+          0.5233200192451477,
+          0.3737249970436096,
+          0.7549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.1815059930086136,
+          0.10890000313520432,
+          0.2199999988079071,
+          1.0
+        ],
+        "Color04": [
+          0.9300000071525574,
+          0.7185810208320618,
+          0.35339999198913574,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Material/MI_CH_ltn_bdl_loose_necklace.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_necklace_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_necklace_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_necklace_M.png",
+          "colors": [
+            0.4300000071525574,
+            0.3151710033416748,
+            0.14835000038146973,
+            0.5233200192451477,
+            0.3737249970436096,
+            0.7549999952316284,
+            0.1815059930086136,
+            0.10890000313520432,
+            0.2199999988079071,
+            0.9300000071525574,
+            0.7185810208320618,
+            0.35339999198913574
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdl_loose_shoes",
+      "diffuse": "T_CH_ltn_bdl_loose_shoes_D",
+      "normal": "T_CH_ltn_bdl_loose_shoes_N",
+      "mask": "T_CH_ltn_bdl_loose_shoes_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.4000000059604645,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_loose_shoes_D",
+        "MaskMap": "T_CH_ltn_bdl_loose_shoes_M",
+        "Normal": "T_CH_ltn_bdl_loose_shoes_N",
+        "Color01": [
+          0.8500000238418579,
+          0.8103269934654236,
+          0.6672499775886536,
+          1.0
+        ],
+        "Color02": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ],
+        "Color03": [
+          0.1550000011920929,
+          0.10867500305175781,
+          0.07662100344896317,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Material/MI_CH_ltn_bdl_loose_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdl_loose_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shoes_M.png",
+          "colors": [
+            0.8500000238418579,
+            0.8103269934654236,
+            0.6672499775886536,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714,
+            0.1550000011920929,
+            0.10867500305175781,
+            0.07662100344896317,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_ltn_bdu_army_1",
+      "diffuse": "T_CH_ltn_bdu_army_1_D",
+      "normal": "T_CH_ltn_bdu_army_1_N",
+      "mask": "T_CH_ltn_bdu_army_1_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.800000011920929,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_army_1_D",
+        "MaskMap": "T_CH_ltn_bdu_army_1_M",
+        "Normal": "T_CH_ltn_bdu_army_1_N",
+        "Color01": [
+          0.5699999928474426,
+          0.07205499708652496,
+          0.044826000928878784,
+          1.0
+        ],
+        "Color02": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.4000000059604645,
+          1.0
+        ],
+        "Color03": [
+          0.30000001192092896,
+          0.30000001192092896,
+          0.30000001192092896,
+          1.0
+        ],
+        "Color04": [
+          0.21055400371551514,
+          0.21044999361038208,
+          0.3449999988079071,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Material/MI_CH_ltn_bdu_army_1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_1_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_1_M.png",
+          "colors": [
+            0.5699999928474426,
+            0.07205499708652496,
+            0.044826000928878784,
+            0.4000000059604645,
+            0.4000000059604645,
+            0.4000000059604645,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.21055400371551514,
+            0.21044999361038208,
+            0.3449999988079071
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdu_army_2",
+      "diffuse": "T_CH_ltn_bdu_army_2_D",
+      "normal": "T_CH_ltn_bdu_army_2_N",
+      "mask": "T_CH_ltn_bdu_army_2_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.15000000596046448,
+        "Metallic": 0.5,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_army_2_D",
+        "MaskMap": "T_CH_ltn_bdu_army_2_M",
+        "Normal": "T_CH_ltn_bdu_army_2_N",
+        "Color01": [
+          0.11940199881792068,
+          0.23499999940395355,
+          0.04817499965429306,
+          1.0
+        ],
+        "Color02": [
+          0.1850000023841858,
+          0.09342200309038162,
+          0.02775000035762787,
+          1.0
+        ],
+        "Color03": [
+          0.0653659999370575,
+          0.057211000472307205,
+          0.125,
+          1.0
+        ],
+        "Color04": [
+          0.6100000143051147,
+          0.6100000143051147,
+          0.6100000143051147,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_army/Material/MI_CH_ltn_bdu_army_2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_army_2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_2_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_army_2_M.png",
+          "colors": [
+            0.11940199881792068,
+            0.23499999940395355,
+            0.04817499965429306,
+            0.1850000023841858,
+            0.09342200309038162,
+            0.02775000035762787,
+            0.0653659999370575,
+            0.057211000472307205,
+            0.125,
+            0.6100000143051147,
+            0.6100000143051147,
+            0.6100000143051147
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdu_hotpants_shirts",
+      "diffuse": "T_CH_ltn_hotpants_shirts_D",
+      "normal": "T_CH_ltn_hotpants_shirts_N",
+      "mask": "T_CH_ltn_hotpants_shirts_M",
+      "specular": "",
+      "params": {
+        "Anisotropic": 0.75,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.5,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_hotpants_shirts_D",
+        "MaskMap": "T_CH_ltn_hotpants_shirts_M",
+        "Normal": "T_CH_ltn_hotpants_shirts_N",
+        "Color01": [
+          0.15985000133514404,
+          0.2936370074748993,
+          0.6949999928474426,
+          1.0
+        ],
+        "Color02": [
+          0.549049973487854,
+          0.6191419959068298,
+          0.6949999928474426,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_hotpants/Material/MI_CH_ltn_bdu_hotpants_shirts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_hotpants_shirts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shirts_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hotpants_shirts_M.png",
+          "colors": [
+            0.15985000133514404,
+            0.2936370074748993,
+            0.6949999928474426,
+            0.549049973487854,
+            0.6191419959068298,
+            0.6949999928474426,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_ltn_bdu_loose_jacket",
+      "diffuse": "T_CH_ltn_bdu_loose_jacket_D",
+      "normal": "T_CH_ltn_bdu_loose_jacket_N",
+      "mask": "T_CH_ltn_bdu_loose_jacket_M",
+      "specular": "T_CH_ltn_bdu_loose_jacket_D",
+      "params": {
+        "Anisotropic": 0.20000000298023224,
+        "Metallic": 0.8500000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdu_loose_jacket_D",
+        "MaskMap": "T_CH_ltn_bdu_loose_jacket_M",
+        "Normal": "T_CH_ltn_bdu_loose_jacket_N",
+        "specluar": "T_CH_ltn_bdu_loose_jacket_D",
+        "Color01": [
+          0.012374999932944775,
+          0.05877799913287163,
+          0.2750000059604645,
+          1.0
+        ],
+        "Color02": [
+          0.0,
+          0.8008829951286316,
+          0.8650000095367432,
+          1.0
+        ],
+        "Color03": [
+          0.8849470019340515,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          0.05739700049161911,
+          0.12430399656295776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_loose/Material/MI_CH_ltn_bdu_loose_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdu_loose_jacket_M.png",
+          "colors": [
+            0.012374999932944775,
+            0.05877799913287163,
+            0.2750000059604645,
+            0.0,
+            0.8008829951286316,
+            0.8650000095367432,
+            0.8849470019340515,
+            1.0,
+            0.0,
+            1.0,
+            0.05739700049161911,
+            0.12430399656295776
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_bdu_loose_shorts",
+      "diffuse": "T_CH_ltn_bdl_loose_shorts_D",
+      "normal": "T_CH_ltn_bdl_loose_shorts_N",
+      "mask": "T_CH_ltn_bdl_loose_shorts_M",
+      "specular": "T_CH_ltn_bdl_loose_shorts_D",
+      "params": {
+        "Metallic": 0.4000000059604645,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_ltn_bdl_loose_shorts_D",
+        "MaskMap": "T_CH_ltn_bdl_loose_shorts_M",
+        "Normal": "T_CH_ltn_bdl_loose_shorts_N",
+        "specluar": "T_CH_ltn_bdl_loose_shorts_D",
+        "Color01": [
+          0.03004400059580803,
+          0.4399999976158142,
+          0.355307012796402,
+          1.0
+        ],
+        "Color02": [
+          0.8700000047683716,
+          0.7304149866104126,
+          0.6481500267982483,
+          1.0
+        ],
+        "Color03": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ],
+        "Color04": [
+          0.46000000834465027,
+          0.26805299520492554,
+          0.12259700149297714,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_loose/Material/MI_CH_ltn_bdu_loose_shorts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_bdu_loose_shorts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shorts_D.png",
+          "mask": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_bdl_loose_shorts_M.png",
+          "colors": [
+            0.03004400059580803,
+            0.4399999976158142,
+            0.355307012796402,
+            0.8700000047683716,
+            0.7304149866104126,
+            0.6481500267982483,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714,
+            0.46000000834465027,
+            0.26805299520492554,
+            0.12259700149297714
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_har_1p_Pass1",
+      "diffuse": "T_CH_ltn_hair_D",
+      "normal": "T_CH_hair_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "",
+      "params": {
+        "BaseLowerContrast": -0.25,
+        "BaseUpperContrast": 0.0,
+        "SpecularLowerContrast": 0.10000000149011612,
+        "SpecularUpperContrast": 0.0,
+        "AlphaThreshold": 0.699999988079071,
+        "Anisotropic": 0.20000000298023224,
+        "Metallic": 0.699999988079071,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_ltn_hair_D",
+        "SpecularTexture": "T_CH_ltn_hair_D",
+        "Color01": [
+          0.3799999952316284,
+          0.09865199774503708,
+          0.05510000139474869,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Material/MI_CH_ltn_har_1p_Pass1.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass1_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_har_1p_Pass2",
+      "diffuse": "T_CH_ltn_hair_D",
+      "normal": "T_CH_hair_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "",
+      "params": {
+        "SpecularLowerContrast": 0.0,
+        "SpecularUpperContrast": 0.0,
+        "AlphaThreshold": 0.699999988079071,
+        "Anisotropic": 0.0,
+        "Metallic": 0.800000011920929,
+        "Normalize": 0.0,
+        "Roughness": 0.4000000059604645,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_ltn_hair_D",
+        "SpecularTexture": "T_CH_ltn_hair_D",
+        "Color01": [
+          0.3499999940395355,
+          0.0984409973025322,
+          0.05950000137090683,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Hair/ltn_har_1p/Material/MI_CH_ltn_har_1p_Pass2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_har_1p_Pass2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Katarina/Source/Base/Textures/T_CH_ltn_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_ltn_lip",
+      "diffuse": "T_CH_xia_lip_D",
+      "normal": "T_CH_lip_N",
+      "mask": "",
+      "specular": "T_CH_lip_S",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Color": "T_CH_xia_lip_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_lip.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_lip_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_matuge",
+      "diffuse": "T_CH_ltn_matuge_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_matuge_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_matuge.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_matuge_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_matuge_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_mouth",
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {
+        "Metallic": 0.5,
+        "Roughness": "T_CH_mouth_inner_R",
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_mouth_inner_D",
+        "Normal": "T_CH_mouth_inner_N",
+        "SubSurfaceScatterColor": [
+          0.4399999976158142,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_mouth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_arm",
+      "diffuse": "T_CH_female_arm_D",
+      "normal": "T_CH_female_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_arm_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_arm_D",
+        "Normal": "T_CH_female_arm_N",
+        "Specular": "T_CH_female_arm_S",
+        "WetDiffuse": "T_CH_female_arm_wet_D",
+        "WetNormal": "T_CH_female_arm_wet_N",
+        "wetSpec": "T_CH_female_arm_wet_S",
+        "WetMask": "T_CH_female_arm_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_arm.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_arm_Inst",
+      "diffuse": "T_CH_ltn_arm_skin_1p_D",
+      "normal": "T_CH_female_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_arm_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_arm_skin_1p_D",
+        "Normal": "T_CH_female_arm_N",
+        "Specular": "T_CH_female_arm_S",
+        "WetDiffuse": "T_CH_female_arm_wet_D",
+        "WetNormal": "T_CH_female_arm_wet_N",
+        "wetSpec": "T_CH_female_arm_wet_S",
+        "WetMask": "T_CH_female_arm_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_arm_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_arm_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_body",
+      "diffuse": "T_CH_ltn_body_skin_1p_D",
+      "normal": "T_CH_female_body_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_body_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_body_skin_1p_D",
+        "Normal": "T_CH_female_body_N",
+        "Specular": "T_CH_female_body_S",
+        "WetDiffuse": "T_CH_female_body_wet_D",
+        "WetNormal": "T_CH_female_body_wet_N",
+        "wetSpec": "T_CH_female_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_body.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_body_Inst",
+      "diffuse": "T_CH_ltn_body_skin_1p_D",
+      "normal": "T_CH_ltn_body_skin_1p_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_body_skin_1p_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_body_skin_1p_D",
+        "Normal": "T_CH_ltn_body_skin_1p_N",
+        "Specular": "T_CH_ltn_body_skin_1p_S",
+        "WetDiffuse": "T_CH_female_body_wet_D",
+        "WetNormal": "T_CH_female_body_wet_N",
+        "wetSpec": "T_CH_female_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_body_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_body_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_face",
+      "diffuse": "T_CH_ltn_face_D",
+      "normal": "T_CH_ltn_face_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_face_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_face_D",
+        "Normal": "T_CH_ltn_face_N",
+        "Specular": "T_CH_ltn_face_S",
+        "WetDiffuse": "T_CH_female_head_wet_D",
+        "WetNormal": "T_CH_female_head_wet_N",
+        "wetSpec": "T_CH_female_head_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_face.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_face_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_foot",
+      "diffuse": "T_CH_female_foot_D",
+      "normal": "T_CH_female_foot_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_foot_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_foot_D",
+        "Normal": "T_CH_female_foot_N",
+        "Specular": "T_CH_female_foot_S",
+        "WetDiffuse": "T_CH_female_foot_wet_D",
+        "WetNormal": "T_CH_female_foot_wet_N",
+        "wetSpec": "T_CH_female_foot_wet_S",
+        "WetMask": "T_CH_female_foot_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_foot.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_foot_Inst",
+      "diffuse": "T_CH_ltn_foot_skin_1p_D",
+      "normal": "T_CH_female_foot_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_foot_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_foot_skin_1p_D",
+        "Normal": "T_CH_female_foot_N",
+        "Specular": "T_CH_female_foot_S",
+        "WetDiffuse": "T_CH_female_foot_wet_D",
+        "WetNormal": "T_CH_female_foot_wet_N",
+        "wetSpec": "T_CH_female_foot_wet_S",
+        "WetMask": "T_CH_female_foot_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_skin_foot_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_foot_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_hand",
+      "diffuse": "T_CH_female_hand_D",
+      "normal": "T_CH_female_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_hand_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_hand_D",
+        "Normal": "T_CH_female_hand_N",
+        "Specular": "T_CH_female_hand_S",
+        "WetDiffuse": "T_CH_female_hand_wet_D",
+        "WetNormal": "T_CH_female_hand_wet_N",
+        "wetSpec": "T_CH_female_hand_wet_S",
+        "WetMask": "T_CH_female_hand_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_hand.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_hand_Inst",
+      "diffuse": "T_CH_ltn_hand_skin_1p_D",
+      "normal": "T_CH_female_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_hand_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_hand_skin_1p_D",
+        "Normal": "T_CH_female_hand_N",
+        "Specular": "T_CH_female_hand_S",
+        "WetDiffuse": "T_CH_female_hand_wet_D",
+        "WetNormal": "T_CH_female_hand_wet_N",
+        "wetSpec": "T_CH_female_hand_wet_S",
+        "WetMask": "T_CH_female_hand_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Upper/ltn_bdu_1P/Material/MI_CH_ltn_skin_hand_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_hand_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_leg",
+      "diffuse": "T_CH_female_leg_D",
+      "normal": "T_CH_female_leg_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_leg_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_leg_D",
+        "Normal": "T_CH_female_leg_N",
+        "Specular": "T_CH_female_leg_S",
+        "WetDiffuse": "T_CH_female_leg_wet_D",
+        "WetNormal": "T_CH_female_leg_wet_N",
+        "wetSpec": "T_CH_female_leg_wet_S",
+        "WetMask": "T_CH_female_leg_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_leg_Inst",
+      "diffuse": "T_CH_ltn_leg_skin_1p_D",
+      "normal": "T_CH_ltn_leg_skin_1p_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_ltn_leg_skin_1p_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_leg_skin_1p_D",
+        "Normal": "T_CH_ltn_leg_skin_1p_N",
+        "Specular": "T_CH_ltn_leg_skin_1p_S",
+        "WetDiffuse": "T_CH_female_leg_wet_D",
+        "WetNormal": "T_CH_female_leg_wet_N",
+        "wetSpec": "T_CH_female_leg_wet_S",
+        "WetMask": "T_CH_female_leg_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Lower/ltn_bdl_1P/Material/MI_CH_ltn_skin_leg_Inst.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_leg_Inst_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_skin_neck",
+      "diffuse": "T_CH_female_neck_D",
+      "normal": "T_CH_female_neck_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_female_neck_S",
+      "params": {
+        "After Desaturation": -0.5,
+        "After Hue": -0.009999999776482582,
+        "After Multiply": 0.3499999940395355,
+        "After RoughnessMax": 0.6000000238418579,
+        "After RoughnessMin": 0.20000000298023224,
+        "Desaturation": -0.30000001192092896,
+        "detail_normal_pow": 0.09000000357627869,
+        "Detail_Normal_Scale": 36.0,
+        "Metallic": 0.0,
+        "Multiply": 0.5,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_female_neck_D",
+        "Normal": "T_CH_female_neck_N",
+        "Specular": "T_CH_female_neck_S",
+        "WetDiffuse": "T_CH_female_neck_wet_D",
+        "WetNormal": "T_CH_female_neck_wet_N",
+        "wetSpec": "T_CH_female_neck_wet_S",
+        "WetMask": "T_CH_female_neck_wet_D"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/ltn/MI_CH_ltn_skin_neck.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_skin_neck_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_tear",
+      "diffuse": "T_CH_tear_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {},
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_tear.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_tear_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_tear_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_ltn_teeth",
+      "diffuse": "T_CH_teeth_D",
+      "normal": "T_CH_teeth_N",
+      "mask": "",
+      "specular": "T_CH_teeth_R",
+      "params": {
+        "RefractionDepthBias": 0.0
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_ltn_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Normal.png",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_ltn_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_xia_blow2",
+      "diffuse": "T_CH_ltn_mayuge_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_ltn_mayuge_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_xia_blow2.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow2_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow2_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_xia_blow22",
+      "diffuse": "T_CH_ltn_eyekage_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameter2D_0": "T_CH_ltn_eyekage_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/ltn/Face/ltn_fac/Material/MI_CH_xia_blow22.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow22_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Katarina/Costumes/Textures/MI_CH_xia_blow22_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    }
+  ]
+}

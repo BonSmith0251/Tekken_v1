@@ -17,9 +17,13 @@ namespace Versus.Remaster
         public GameObject xiaoyuPrefab;
         public MuseumCharacter alisaActions;
         public GameObject alisaPrefab;
-        public enum Fighter { Kazuya, Jin, Xiaoyu, Alisa }
+        public MuseumCharacter katarinaActions;
+        public GameObject katarinaPrefab;
+        public enum Fighter { Kazuya, Jin, Xiaoyu, Alisa, Katarina }
         [Tooltip("Fighters for this match. Each runs its original moveset, entrance and victory takes.")]
         public Fighter playerOneFighter = Fighter.Jin, playerTwoFighter = Fighter.Xiaoyu;
+        // Show the character select before the match; off, the fighters above play directly.
+        public bool characterSelect = true;
         public Camera sceneCamera;
         public bool automaticFight = true;
         public bool playEntrance;
@@ -67,6 +71,8 @@ namespace Versus.Remaster
         // Original life gauges, timer, round counters and centre calls.
         BattleHud hud;
         readonly XiaoyuSecondaryDynamics[] flexibleMotion = new XiaoyuSecondaryDynamics[2];
+        // Breasts of a female fighter without a wardrobe (the wardrobe's dynamics include them).
+        readonly BustDynamics[] breastMotion = new BustDynamics[2];
         readonly WardrobeDynamics[] wardrobeMotion = new WardrobeDynamics[2];
         float impactShake, zoomHold, koSlowTime;
         // Real seconds since the round ended: the K.O. call shows first, then the result panel;
@@ -104,7 +110,9 @@ namespace Versus.Remaster
         // Not recovered: the original picks PierceFX natively; heavy clean hits use it here.
         const int PierceDamage = 20;
         readonly bool[] wasDowned = new bool[2], wasAirborne = new bool[2], wasRage = new bool[2];
-        readonly CascadeInstance[] rageAura = new CascadeInstance[2];
+        readonly CascadeInstance[] rageAura = new CascadeInstance[2], rageStart = new CascadeInstance[2];
+        // The last blow's contact, for the knockout flash (BP_EF_KO plays it where the KO hit landed).
+        Vector3 lastHitPoint; Quaternion lastHitRotation = Quaternion.identity;
         static readonly Color Ink = new Color(.025f, .035f, .055f, .96f);
         static readonly Color Muted = new Color(.58f, .66f, .75f);
         static readonly Color Accent = new Color(.95f, .78f, .35f);
@@ -114,6 +122,14 @@ namespace Versus.Remaster
                          Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0;
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0) automaticFight = true;
             if (diagnostic) Application.runInBackground = true;
+            // The original character select comes first; it reloads the scene with both picks.
+            if (characterSelect && !diagnostic && !CharacterSelect.Chosen)
+            {
+                enabled = false;
+                gameObject.AddComponent<CharacterSelect>();
+                return;
+            }
+            if (CharacterSelect.Chosen) { playerOneFighter = CharacterSelect.PlayerOne; playerTwoFighter = CharacterSelect.PlayerTwo; }
             if (!config) config = ScriptableObject.CreateInstance<RemasterConfig>();
             var setups = new[] { Setup(playerOneFighter), Setup(playerTwoFighter) };
             codes = new[] { setups[0].code, setups[1].code };
@@ -154,6 +170,7 @@ namespace Versus.Remaster
                 var wardrobe = FightWardrobe.ForCharacter(setups[i].actions);
                 if (wardrobe) wardrobeMotion[i] = new WardrobeDynamics(objects[i].transform, wardrobe);
                 else if (setups[i].code == "xia") flexibleMotion[i] = new XiaoyuSecondaryDynamics(objects[i].transform);
+                if (!wardrobe) breastMotion[i] = BustDynamics.Create(objects[i].transform, setups[i].actions, BustDynamics.DefaultFlexibility);
                 objects[i].name = setups[i].actions.displayName + " - Player " + (i + 1);
             }
             framingBones = new Transform[2][];
@@ -192,6 +209,7 @@ namespace Versus.Remaster
                 Invoke(nameof(SmokeCapture), introTime + 8); Invoke(nameof(SmokeExit), introTime + 10); }
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
+            VersusLoadingScreen.MatchReady();
         }
         struct FighterSetup { public string code, prefix; public MuseumCharacter actions; public Fighter fighter; }
 
@@ -214,18 +232,20 @@ namespace Versus.Remaster
             if (!jinActions) jinActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/_Project/Museum/Jin.asset");
             if (!kazuyaActions) kazuyaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/_Project/Museum/Kazuya.asset");
             if (!xiaoyuActions) xiaoyuActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/_Project/Museum/Xiaoyu.asset");
+            if (!katarinaActions) katarinaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/_Project/Museum/Katarina.asset");
             if (!alisaActions) alisaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/_Project/Museum/Alisa.asset");
 #endif
             var setup = fighter == Fighter.Jin ? new FighterSetup { code = "jin", prefix = "Jz_", actions = jinActions } :
                         fighter == Fighter.Kazuya ? new FighterSetup { code = "kaz", prefix = "Kz_", actions = kazuyaActions } :
                         fighter == Fighter.Alisa ? new FighterSetup { code = "asa", prefix = "Aa_", actions = alisaActions } :
+                        fighter == Fighter.Katarina ? new FighterSetup { code = "ltn", prefix = "Ln_", actions = katarinaActions } :
                         new FighterSetup { code = "xia", prefix = "Fu_", actions = xiaoyuActions };
             setup.fighter = fighter;
             if (!setup.actions) throw new InvalidOperationException("Assign the " + fighter + " move catalog in LocalVersus.");
             return setup;
         }
 
-        // Scene-placed fighters are used once; a second copy (mirror match), Xiaoyu or Alisa comes from the prefab.
+        // Scene-placed fighters are used once; a second copy (mirror match), Xiaoyu, Alisa or Katarina comes from the prefab.
         GameObject Spawn(FighterSetup setup, int player)
         {
             if (setup.fighter == Fighter.Jin)
@@ -242,6 +262,14 @@ namespace Versus.Remaster
 #endif
                 if (!kazuyaPrefab) throw new InvalidOperationException("Assign the Kazuya Karate Gi prefab in LocalVersus.");
                 return Instantiate(kazuyaPrefab, transform);
+            }
+            if (setup.fighter == Fighter.Katarina)
+            {
+#if UNITY_EDITOR
+                if (!katarinaPrefab) katarinaPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/_Project/Characters/Katarina/Costumes/Prefabs/Default_1P.prefab");
+#endif
+                if (!katarinaPrefab) throw new InvalidOperationException("Assign the Katarina Default 1P prefab in LocalVersus.");
+                return Instantiate(katarinaPrefab, transform);
             }
             if (setup.fighter == Fighter.Alisa)
             {
@@ -350,6 +378,8 @@ namespace Versus.Remaster
         }
         void Update()
         {
+            // Nothing starts behind the VS screen; LateUpdate still poses the fighters for the first shot.
+            if (VersusLoadingScreen.Holding) return;
             float realDelta = Time.unscaledDeltaTime;
             if (battle != null && (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && !paused)
                 roundEndClock += realDelta;
@@ -385,6 +415,7 @@ namespace Versus.Remaster
         }
         void FixedUpdate()
         {
+            if (VersusLoadingScreen.Holding) return;
             if (entrance != null && entrance.Active) return;
             if (menu || paused) return;
             if (automaticFight)
@@ -454,7 +485,7 @@ namespace Versus.Remaster
                 shown[i] = victory != null && i == victoryPlayer && victoryAnchor != null ? victoryAnchor : Interpolated(i);
                 views[i].Render(shown[i], config.rules, visualTime,
                     !menu && !paused && battle.phase == MatchPhase.Fight && commands[i].stick != 5);
-                if (!paused) { flexibleMotion[i]?.Tick(Time.deltaTime); wardrobeMotion[i]?.Tick(Time.deltaTime); }
+                if (!paused) { flexibleMotion[i]?.Tick(Time.deltaTime); wardrobeMotion[i]?.Tick(Time.deltaTime); breastMotion[i]?.Tick(Time.deltaTime); }
             }
             if (entrance != null && entrance.Active) { entrance.Present(); return; }
             if (victory != null) { victory.Present(cameraRig, gameplayLens); return; }
@@ -676,6 +707,8 @@ namespace Versus.Remaster
                 koSlowStart = koSlowTime;
                 koFocus = battle.winner >= 0 ? 1 - battle.winner : 0;
                 Impact(.06f);
+                // The original's knockout flash (radial lines, powder, floor ring and dust) on the last blow.
+                if (effects && effects.Has(CascadeEffects.KO)) effects.Play(CascadeEffects.KO, lastHitPoint, lastHitRotation);
             }
             lastPhase = battle.phase;
             UpdateBattleEffects();
@@ -705,7 +738,13 @@ namespace Versus.Remaster
                 Contact(hit.attacker, hit.defender, out var point, out var direction);
                 var rotation = Quaternion.LookRotation(direction, Vector3.up);
                 effects.Play(role, point, rotation);
+                lastHitPoint = point; lastHitRotation = rotation;
                 if (!hit.blocked && hit.damage >= PierceDamage) effects.Play(CascadeEffects.Pierce, point, rotation);
+                // The reference matches show the blue punish reticle on hits that land in the opponent's
+                // recovery, by hit level; it stays where the blow landed.
+                if (hit.punish)
+                    effects.Play(hit.height == HitHeight.High ? CascadeEffects.PunishHigh :
+                                 hit.height == HitHeight.Mid ? CascadeEffects.PunishMid : CascadeEffects.PunishLow, point, rotation);
                 return;
             }
             var f = battle.fighters[hit.defender];
@@ -774,16 +813,21 @@ namespace Versus.Remaster
                     // The source effects are authored in the character's frame: X along its facing.
                     var heading = new Vector3(f.dirX, 0, f.dirZ);
                     var facing = Quaternion.LookRotation(heading.sqrMagnitude > 1e-6f ? heading : Vector3.forward);
-                    effects.Play(CascadeEffects.Rage, center, facing, 1, auraBones[i]);
+                    rageStart[i] = effects.Play(CascadeEffects.Rage, center, facing, 1, auraBones[i]);
                     rageAura[i] = effects.Play(CascadeEffects.RageAura, center, facing, 1, auraBones[i]);
                 }
                 else if (!rage && wasRage[i]) StopAura(i);
                 wasRage[i] = rage;
-                if (rageAura[i] && bodyBones[i].Length > 1) rageAura[i].transform.position = bodyBones[i][1].position;
+                // Both Rage effects are attached to the character in the original: they travel with the body.
+                if (bodyBones[i].Length > 1)
+                {
+                    if (rageAura[i]) rageAura[i].transform.position = bodyBones[i][1].position;
+                    if (rageStart[i]) rageStart[i].transform.position = bodyBones[i][1].position;
+                }
             }
         }
 
-        void StopAura(int i) { if (rageAura[i]) rageAura[i].Stop(); rageAura[i] = null; }
+        void StopAura(int i) { if (rageAura[i]) rageAura[i].Stop(); rageAura[i] = null; rageStart[i] = null; }
         void Styles()
         {
             if (text != null) return;
@@ -851,16 +895,18 @@ namespace Versus.Remaster
                 Panel(new Rect(260, 250, 760, 200), Ink);
                 string result = battle.winner < 0 ? "DRAW" : (battle.winner == 0 ? config.playerOne : config.playerTwo) + "  WINS THE MATCH";
                 Label(new Rect(280, 270, 720, 60), result, new GUIStyle(title) { fontSize = 36 }, Accent);
-                if (GUI.Button(new Rect(470, 365, 340, 52), "REMATCH   /   ENTER", button)) StartMatch();
+                if (GUI.Button(new Rect(300, 365, 330, 52), "REMATCH   /   ENTER", button)) StartMatch();
+                if (GUI.Button(new Rect(650, 365, 330, 52), "CHARACTER SELECT", button)) CharacterSelect.Return();
             }
             if (help) DrawHelp();
             if (paused)
             {
                 Panel(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .65f));
-                Panel(new Rect(440, 180, 400, 340), Ink); Label(new Rect(440, 195, 400, 80), "PAUSED", title);
-                if (GUI.Button(new Rect(490, 290, 300, 48), "RESUME", button)) paused = false;
-                if (GUI.Button(new Rect(490, 350, 300, 48), "RESTART MATCH", button)) StartMatch();
-                if (GUI.Button(new Rect(490, 410, 300, 48), "MAIN MENU", button)) { menu = true; paused = false; ClearInputs(); ResetImpactEffects(); }
+                Panel(new Rect(440, 160, 400, 400), Ink); Label(new Rect(440, 175, 400, 80), "PAUSED", title);
+                if (GUI.Button(new Rect(490, 270, 300, 48), "RESUME", button)) paused = false;
+                if (GUI.Button(new Rect(490, 330, 300, 48), "RESTART MATCH", button)) StartMatch();
+                if (GUI.Button(new Rect(490, 390, 300, 48), "CHARACTER SELECT", button)) { paused = false; CharacterSelect.Return(); }
+                if (GUI.Button(new Rect(490, 450, 300, 48), "MAIN MENU", button)) { menu = true; paused = false; ClearInputs(); ResetImpactEffects(); }
             }
         }
         void DrawMenu()

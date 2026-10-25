@@ -37,8 +37,11 @@ namespace Versus.Remaster
         public int SpringCount=>springs.Count;
         public int GarmentCount=>garments.Count;
         public int FreeClothVertices {get;private set;}
+        // Female fighters' breasts, with their own flexibility setting (null when none are worn).
+        public BustDynamics Breasts {get;private set;}
 
-        public WardrobeDynamics(Transform model,CharacterWardrobe wardrobe)
+        // breast: flexibility 0-1; null uses the character's saved setting.
+        public WardrobeDynamics(Transform model,CharacterWardrobe wardrobe,float? breast=null)
         {
             actor=model;
             var bones=new Dictionary<string,Transform>(StringComparer.OrdinalIgnoreCase);
@@ -47,6 +50,8 @@ namespace Versus.Remaster
             foreach(var bone in bones.Values)
             {
                 if(bone.name.IndexOf("_OPT",StringComparison.OrdinalIgnoreCase)<0)continue;
+                // Bust chains (SWG_OPT*_bust*__swing) follow the breast setting instead.
+                if(BustDynamics.IsBustBone(bone.name))continue;
                 var child=bone.Cast<Transform>().FirstOrDefault(t=>t.name.IndexOf("_OPT",StringComparison.OrdinalIgnoreCase)>=0);if(!child)continue;
                 // Helpers copied per piece carry the piece name as a prefix (xia_har_pony_Hair_...).
                 bool hair=bone.name.IndexOf("hair",StringComparison.OrdinalIgnoreCase)>=0||bone.name.IndexOf("Head_",StringComparison.OrdinalIgnoreCase)>=0;
@@ -65,6 +70,7 @@ namespace Versus.Remaster
                 AddCapsule(bones[side+"_Arm"],bones[side+"_ForeArm"],.06f);
             }
             UpdateCapsules();
+            Breasts=BustDynamics.Create(model,wardrobe.character,breast??FightWardrobe.LoadBreast(FightWardrobe.Code(wardrobe)));
             var cloth=wardrobe.slots.SelectMany(s=>s.pieces).Where(p=>p.cloth!=null && p.cloth.Length>0)
                 .GroupBy(p=>p.piece,StringComparer.OrdinalIgnoreCase).ToDictionary(g=>g.Key,g=>new HashSet<string>(g.First().cloth.Select(Key)),StringComparer.OrdinalIgnoreCase);
             float waist=bones["Hip"].position.y;
@@ -180,6 +186,7 @@ namespace Versus.Remaster
             foreach(var spring in springs)spring.bone.localRotation=spring.rest;
             foreach(var spring in springs){spring.tip=spring.previous=spring.child.position;spring.origin=spring.bone.position;}
             foreach(var cloth in garments)cloth.ClearTransformMotion();
+            Breasts?.Reset();
             lastRoot=actor.position;lastStep=1f/120;initialized=true;
         }
 
@@ -205,6 +212,7 @@ namespace Versus.Remaster
                 spring.tip+=moved;spring.previous+=moved;spring.origin=spring.bone.position;
             }
             for(int i=0;i<count;i++)Simulate(time/count);
+            Breasts?.Tick(elapsed);
         }
 
         void Simulate(float step)

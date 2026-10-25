@@ -41,7 +41,7 @@ namespace Versus.Remaster
                 int hair=selected.FindIndex(p=>string.Equals(p.piece,head.dependencyBase,StringComparison.OrdinalIgnoreCase));
                 if(hair>=0)prefabs[hair]=head.dependency;
             }
-            var names=new HashSet<string>(wardrobe.slots.SelectMany(s=>s.pieces).SelectMany(p=>new[]{p.piece,p.dependency?p.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name:null}).Where(n=>n!=null),StringComparer.OrdinalIgnoreCase);
+            var names=new HashSet<string>(wardrobe.slots.SelectMany(s=>s.pieces).SelectMany(p=>new[]{p.piece,p.dependency?p.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name:null}.Concat(p.replaces??new string[0])).Where(n=>n!=null),StringComparer.OrdinalIgnoreCase);
             foreach(var renderer in model.GetComponentsInChildren<SkinnedMeshRenderer>(true))
                 if(names.Contains(PieceName(renderer.name))){renderer.gameObject.SetActive(false);Discard(renderer.gameObject);}
             var animated=new HashSet<string>(wardrobe.character.boneNames??new string[0],StringComparer.OrdinalIgnoreCase);

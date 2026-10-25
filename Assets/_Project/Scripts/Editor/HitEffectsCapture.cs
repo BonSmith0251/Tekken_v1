@@ -25,7 +25,8 @@ namespace Versus.Remaster.Editor
         {
             Directory.CreateDirectory("Validation/HitEffects");
             foreach (var role in new[] { CascadeEffects.Hit, CascadeEffects.Counter, CascadeEffects.Guard, CascadeEffects.Pierce,
-                                         CascadeEffects.Blast, CascadeEffects.Smoke, CascadeEffects.Rage, CascadeEffects.RageAura })
+                                         CascadeEffects.Blast, CascadeEffects.Smoke, CascadeEffects.Rage, CascadeEffects.RageAura,
+                                         CascadeEffects.PunishMid, CascadeEffects.KO })
                 Capture(role);
             Debug.Log("Battle effect captures written to Validation/HitEffects");
         }

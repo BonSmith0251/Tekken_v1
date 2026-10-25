@@ -84,7 +84,7 @@ namespace Versus.Remaster.Editor
             // Native staging banks use sNN for entrances and wNN for victory takes.
             // Match the animation stem so story aliases retain the same category.
             string animation=(move.animation??"").ToLowerInvariant();
-            if(System.Text.RegularExpressions.Regex.IsMatch(animation,@"^(jz|kz|fu|aa)_[sw]\d{2}(?:_|\(|$)"))return "Staging";
+            if(System.Text.RegularExpressions.Regex.IsMatch(animation,@"^(jz|kz|fu|aa|ln)_[sw]\d{2}(?:_|\(|$)"))return "Staging";
             bool Has(params string[] terms){foreach(string term in terms)if(value.Contains(term))return true;return false;}
             if(Has("intro","entrance","entry","appear","opening","battle_start"))return "Entrance";
             if(Has("win","victory","outro","result","ending","pose_end"))return "Victory";

@@ -14,6 +14,7 @@ Shader "Remaster/CascadeParticle"
         _Tiling ("UV tiling", Vector) = (1, 1, 0, 0)
         _CameraOffset ("Offset toward the camera (m)", Float) = 0
         _AlphaClip ("Alpha clip (erosion)", Float) = 0
+        _Tint ("Tint", Color) = (1, 1, 1, 1)
         // Premultiplied: One/OneMinusSrcAlpha for translucent emitters, One/One for additive ones.
         [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend ("Source blend", Float) = 1
         [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend ("Destination blend", Float) = 10
@@ -35,7 +36,7 @@ Shader "Remaster/CascadeParticle"
 
             sampler2D _MainTex;
             float _Intensity, _MaskFromRed, _CameraOffset, _CascadeExposure, _AlphaClip;
-            float4 _Scroll, _Tiling;
+            float4 _Scroll, _Tiling, _Tint;
 
             // TEXCOORD0.z is the particle's AlphaClip over its life (Custom1.x stream), zero when unused.
             struct appdata { float4 vertex : POSITION; float4 color : COLOR; float4 uv : TEXCOORD0; };
@@ -67,8 +68,15 @@ Shader "Remaster/CascadeParticle"
                 float3 rgb = _MaskFromRed > .5 ? 1 : t.rgb;
                 float exposure = _CascadeExposure > 0 ? _CascadeExposure : 1;
                 float alpha = saturate(i.color.a * coverage);
-                // Premultiplied output serves both blend modes.
-                return float4(rgb * i.color.rgb * _Intensity * exposure * alpha, alpha);
+                // Premultiplied output serves both blend modes. The original rendered these colours far
+                // above 1 and let bloom and the tonemap whiten them: a spark of (1, .13, .02) x 20 reads as a
+                // white-yellow core with an orange fringe. Whiten the hot part here the same way.
+                float3 c = rgb * _Tint.rgb * i.color.rgb * _Intensity * exposure * alpha;
+                // ACES-like: colour drifts toward white gradually and never fully (a 5x orange ring stays
+                // orange-yellow; 20x sparks go white-yellow), so the rings keep their colour.
+                float hot = max(c.r, max(c.g, c.b));
+                c = lerp(c, hot.xxx, .85 * saturate((hot - 1) / 8));
+                return float4(c, alpha);
             }
             ENDCG
         }

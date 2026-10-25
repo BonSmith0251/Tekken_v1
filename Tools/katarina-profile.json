@@ -1,0 +1,62 @@
+{
+  "characterCode": "ltn",
+  "displayName": "Katarina Alves",
+  "characterId": 21,
+  "characterIdNote": "Roster order; her own moves never test her id, so it only matters for opponents' checks.",
+  "animationPrefix": "ln",
+  "moveNamePrefix": "Ln_",
+  "stanceMoveId": 1419,
+  "stanceAnimation": "lnet_kamae(DVD)",
+  "introMoveId": 2003,
+  "moveset": "decrypted/tkdata/mothead/bin/ltnmot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/ltnrotsm.arc",
+  "archiveSha256": "d2599debd368276693e2a270ab9ccda6af3c222a3ffb8640992ce080ada64ffb",
+  "targetRig": "Assets/_Project/Characters/Katarina/Source/Base/target-rig.json",
+  "targetRigSha256": "0138ddd6e573ac0665e12e912ced021f080b558cc43953c579add3a378dde650",
+  "bodyBoneCount": 19,
+  "bindOrientationDeltaDegreesFromReference": 0.00010585415975826262,
+  "meshPositionBasis": "UE centimeters (x,y,z) -> Unity meters (-x,z,y)",
+  "facePiece": "ltn_face (not *_fac)",
+  "costumes": [
+    "Default 1P",
+    "Army",
+    "Hotpants",
+    "Loose"
+  ],
+  "detachPointBones": "none weighted (unlike Alisa)",
+  "moveRecords": 2091,
+  "uniqueBodyClips": 1314,
+  "cancelBranches": 7549,
+  "entranceMoves": [
+    2083,
+    2084,
+    2085,
+    2086,
+    2087
+  ],
+  "victoryMoves": [
+    2088,
+    2089,
+    2090
+  ],
+  "stagingSecondary": "Native 19-channel hands and 90-channel face on all eight takes; own camera on all eight.",
+  "commandGraph": {
+    "file": "Assets/_Project/Resources/CommandGraph/ltn.json",
+    "plainDemos": "64/65",
+    "setupDemos": "20/24",
+    "failing": [
+      "65 10 Hit Combo (same reference gap as Alisa)"
+    ]
+  },
+  "rageArtCameras": [
+    "ltn_96",
+    "ltn_97"
+  ],
+  "fallbacks": [
+    "Default glasses (static mesh) are not part of the outfit sets; a wardrobe would add them.",
+    "No wardrobe yet: she wears the Default 1P preset and her hair has no springs.",
+    "Combat clips apply body channels only.",
+    "Eye_ADD and tear layers are dropped, as for the other fighters."
+  ],
+  "originalGameVisualComparison": false
+}

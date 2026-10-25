@@ -24,6 +24,8 @@ namespace Versus.Remaster
             public GameObject dependency;
             // Material sections the game simulates as cloth (APEX) on this piece.
             public string[] cloth;
+            // Model renderers this piece also replaces (Alisa's upper items include her forearms).
+            public string[] replaces;
             // Customizable materials (Color01..04 tinted through a mask), for recoloring.
             public Tint[] tints;
         }

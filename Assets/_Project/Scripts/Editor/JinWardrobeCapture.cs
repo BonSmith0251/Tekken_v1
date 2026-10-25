@@ -56,6 +56,11 @@ namespace Versus.Remaster.Editor
                         // Game-default colors that the imported textures do not bake, as every scene shows them.
                         CostumeColors.Apply(model,wardrobe,new Dictionary<string,Color?[]>());
                         var expected=new HashSet<string>{piece.piece};if(piece.dependency)expected.Add(piece.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name);
+                        // A worn head item can swap this hair for its trimmed variant (Alisa's default
+                        // headpiece wears asa_har_1p_H); then the variant is the hair to find.
+                        var cover=wardrobe.slots.Select((x,k)=>k!=s && selection[k]>=0?x.pieces[selection[k]]:null)
+                            .FirstOrDefault(p=>p!=null && p.dependency && string.Equals(p.dependencyBase,piece.piece,StringComparison.OrdinalIgnoreCase));
+                        if(cover!=null){expected.Remove(piece.piece);expected.Add(cover.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name);}
                         var worn=model.GetComponentsInChildren<SkinnedMeshRenderer>().Where(r=>expected.Contains(r.name)).ToArray();
                         // Build the scene's cloth and spring dynamics too, so setup errors surface here.
                         var dynamics=new WardrobeDynamics(model.transform,wardrobe);
@@ -68,7 +73,7 @@ namespace Versus.Remaster.Editor
                         if(problem=="")problem=clothProblem;
                         if(problem!="")failures.Add(slot.name+"/"+piece.piece+": "+problem);
                         report.Add("{\"slot\":\""+slot.name+"\",\"piece\":\""+piece.piece+"\",\"name\":\""+piece.name+"\",\"common\":"+(piece.common?"true":"false")+
-                            ",\"renderers\":"+worn.Length+",\"bones\":"+worn.Sum(r=>r.bones.Length)+",\"cloth\":"+dynamics.GarmentCount+",\"freeClothVertices\":"+dynamics.FreeClothVertices+",\"springs\":"+dynamics.SpringCount+",\"height\":"+bounds.size.y.ToString("0.###")+",\"problem\":\""+problem+"\"}");
+                            ",\"renderers\":"+worn.Length+",\"bones\":"+worn.Sum(r=>r.bones.Length)+",\"cloth\":"+dynamics.GarmentCount+",\"freeClothVertices\":"+dynamics.FreeClothVertices+",\"springs\":"+dynamics.SpringCount+",\"breastChains\":"+(dynamics.Breasts?.ChainCount??0)+",\"height\":"+bounds.size.y.ToString("0.###")+",\"problem\":\""+problem+"\"}");
                         var image=Render(preview,model,slot.name);
                         sheet.SetPixels((i%Columns)*Width,(rows-1-i/Columns)*Height,Width,Height,image.GetPixels());
                         UnityEngine.Object.DestroyImmediate(image);

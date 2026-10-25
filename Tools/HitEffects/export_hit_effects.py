@@ -26,7 +26,11 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Assets/_Project/Resources/HitEffects"
 MANAGER = "TekkenGame/Content/Effect/TK75/Common/BP_CommonEffectManager.uasset"
 # Roles the remaster drives; the manager holds the system for each.
-ROLES = ["HitFX", "CriticalHit3FX", "GuardFX", "PierceFX", "BlastFX", "SmokeFX", "RageFX", "RageAuraFX"]
+ROLES = ["HitFX", "CriticalHit3FX", "GuardFX", "PierceFX", "BlastFX", "SmokeFX", "RageFX", "RageAuraFX",
+         "PracticePunishNoticeHiFX", "PracticePunishNoticeMidFX", "PracticePunishNoticeMidSpFX", "PracticePunishNoticeLoFX"]
+# Systems the native code or other blueprints spawn directly, not through the manager's roles:
+# BP_EF_KO plays PS_EF_SpecialKO on the knockout blow.
+EXTRA_ROLES = {"KOFX": "PS_EF_SpecialKO"}
 SAMPLES = 8          # Unity gradients hold at most eight keys
 MAX_PARTICLES = 600  # GPU emitters burst up to 2000; CPU particles are capped (documented below)
 NATIVE = {"Vector": "<3f", "Vector2D": "<2f", "LinearColor": "<4f", "Rotator": "<3f",
@@ -206,6 +210,20 @@ def metres(v):
 
 
 # ---------------------------------------------------------------- materials, textures, meshes
+class CaseIndex(dict):
+    """Asset stem -> path; cooked references differ from file names in case (CrosshairCenter01_Outline)."""
+    def __init__(self, paths):
+        super().__init__()
+        for p in paths:
+            self.setdefault(p.stem.lower(), p)
+    def get(self, key, default=None):
+        return super().get(str(key).lower(), default)
+    def __contains__(self, key):
+        return super().__contains__(str(key).lower())
+    def __getitem__(self, key):
+        return super().__getitem__(str(key).lower())
+
+
 def material_info(name, index, t7, cache):
     if name in cache:
         return cache[name]
@@ -214,8 +232,12 @@ def material_info(name, index, t7, cache):
     if path is None:
         cache[name] = info
         return info
-    _, objects = load(path, t7)
+    pkg, objects = load(path, t7)
     cls, p = next((c, q) for c, q in objects.values() if c in ("MaterialInstanceConstant", "Material"))
+    if cls == "Material":
+        # A base material's graph is stripped; its sampled textures survive only as imports.
+        p = dict(p, TextureParameterValues=[{"ParameterName": "Base", "ParameterValue": "import:" + i.object_name}
+                                            for i in pkg.imports if i.class_name == "Texture2D"])
     parent = (p.get("Parent") or name).split(":")[-1]
     blend = (p.get("BasePropertyOverrides") or {}).get("BlendMode") if isinstance(p.get("BasePropertyOverrides"), dict) else p.get("BlendMode")
     if blend == "BLEND_Additive" or (blend is None and "_ADD" in parent.upper()):
@@ -237,6 +259,12 @@ def material_info(name, index, t7, cache):
         if v.get("ParameterName") == "BaseTexTilling":
             info["tiling"] = [round(x, 4) for x in v["ParameterValue"][:2]]
     info["parent"] = parent
+    # The crosshair material assembles the reticle from quarter textures with maths that the cooked
+    # build strips (rotated copies do not reproduce it). Draw the complete reticle glyph that its
+    # glare texture holds instead, in the light blue the reference video shows.
+    if parent == "M_EF_Crosshair01_Outline":
+        info["texture"] = "T_EF_CrossHairs02Glare"
+        info["tint"] = [.55, .8, 1.0]
     cache[name] = info
     return info
 
@@ -315,10 +343,12 @@ def emitter(objects, ename, index, t7, materials, notes):
             lo, hi = evaluate(m.get("Lifetime"), objects, 0, 1); out["life"] = [lo[0], hi[0]]
         elif t in ("Size", "Size_Seeded"):
             lo, hi = evaluate(m.get("StartSize"), objects, 0, 3)
-            # Cascade sprite sizes are half extents; mesh sizes are mesh scales.
-            k = 1.0 if out["kind"] == "mesh" else 2.0
-            out["size"] = {"min": [round(x * k * (.01 if out["kind"] != "mesh" else 1), 5) for x in lo],
-                           "max": [round(x * k * (.01 if out["kind"] != "mesh" else 1), 5) for x in hi]}
+            # Cascade sprite sizes are full sizes in cm (the reference video shows the 50-unit punish
+            # reticle about half a metre across); mesh sizes are mesh scales.
+            k = 1 if out["kind"] == "mesh" else .01
+            # Editor-locked axes are stored as zeros (the punish reticle is [50, 0, 0]): they follow X.
+            lo = [x if x else lo[0] for x in lo]; hi = [x if x else hi[0] for x in hi]
+            out["size"] = {"min": [round(x * k, 5) for x in lo], "max": [round(x * k, 5) for x in hi]}
         elif t == "SizeMultiplyLife":
             out["sizeLife"] = sampled(m.get("LifeMultiplier"), objects, 3)
         elif t == "SizeScale":
@@ -335,7 +365,7 @@ def emitter(objects, ename, index, t7, materials, notes):
         elif t == "ColorScaleOverLife":
             rgb = sampled(m.get("ColorScaleOverLife"), objects, 3); a = sampled(m.get("AlphaScaleOverLife"), objects, 1)
             out["colorScale"] = [r + [x[1]] for r, x in zip(rgb, a)]
-        elif t == "Velocity":
+        elif t in ("Velocity", "Velocity_Seeded"):
             lo, hi = evaluate(m.get("StartVelocity"), objects, 0, 3)
             rlo, rhi = evaluate(m.get("StartVelocityRadial"), objects, 0, 1)
             out["velocity"] = {"min": metres(lo), "max": metres(hi), "radial": [rlo[0] * .01, rhi[0] * .01]}
@@ -356,11 +386,11 @@ def emitter(objects, ename, index, t7, materials, notes):
             out["drag"] = [[x[0], x[1]] for x in sampled(m.get("DragCoefficientRaw") or m.get("DragCoefficient"), objects, 1)]
         elif t in ("LocationPrimitiveSphere", "LocationPrimitiveSphere_Seeded"):
             r = mid(m.get("StartRadius"), objects, 0, 1)[0]
-            out["shape"] = {"type": "sphere", "radius": r * .01,
+            out["shape"] = {"type": "sphere", "radius": r * .01, "surface": bool(m.get("SurfaceOnly")),
                             "offset": metres(mid(m.get("StartLocation"), objects, 0, 3)),
                             "velocity": m.get("Velocity", False),
                             "velocityScale": mid(m.get("VelocityScale"), objects, 0, 1)[0]}
-        elif t == "LocationPrimitiveCylinder":
+        elif t in ("LocationPrimitiveCylinder", "LocationPrimitiveCylinder_Seeded"):
             out["shape"] = {"type": "cylinder", "radius": mid(m.get("StartRadius"), objects, 0, 1)[0] * .01,
                             "height": mid(m.get("StartHeight"), objects, 0, 1)[0] * .01,
                             "offset": metres(mid(m.get("StartLocation"), objects, 0, 3)),
@@ -417,8 +447,25 @@ def emitter(objects, ename, index, t7, materials, notes):
             notes.add("dynamic material parameters other than AlphaClip (scroll, distortion) are not reproduced")
         elif t in ("TypeDataGpu", "TypeDataMesh"):
             pass
+        elif t == "CollisionGPU":
+            notes.add("GPU floor collision of KO debris is not reproduced (debris passes the floor)")
         else:
             notes.add(f"module {t} is not reproduced")
+    # The KO flash lines are a 12 x 1.8 unit mesh scaled 20-200 along its length only: 4 mm wide
+    # rays that vanish at this resolution. The original's vertex-mesh material thickens them (graph
+    # stripped); widen them to about 3 cm here.
+    if out.get("mesh") == "SM_EF_KOline_00_mss" and out.get("size"):
+        notes.add("KO flash lines are widened from 4 mm to about 3 cm (the source material's thickening is not decoded)")
+        for key in ("min", "max"):
+            out["size"][key] = [out["size"][key][0], out["size"][key][1] * 8, out["size"][key][2] * 8]
+    # Continuous CPU emitters: the KO dust spawns 3,000 fragments and 1,500 two-metre smoke sprites a
+    # second in the original; both are far beyond a reasonable fill rate here.
+    if out.get("rate", 0) > MAX_PARTICLES:
+        notes.add(f"spawn rates above {MAX_PARTICLES}/s are capped")
+        out["rate"] = MAX_PARTICLES
+    if out.get("rate", 0) > 60 and out.get("size") and max(out["size"]["max"]) > 1 and out["kind"] != "mesh":
+        notes.add("large smoke sprites are capped at 60/s")
+        out["rate"] = 60
     for b in out.get("bursts", []):
         if b[0] > MAX_PARTICLES:
             notes.add(f"bursts above {MAX_PARTICLES} particles are capped (GPU emitters spawn up to 2000)")
@@ -433,7 +480,7 @@ def flatten(x):
     out = {k: x[k] for k in ("name", "kind", "align", "material", "texture", "mesh", "blend", "intensity",
                              "scroll", "tiling", "distortion", "mask", "duration", "loops", "delay", "rate",
                              "life", "rotation", "rotationRate", "accel", "cameraOffset", "floor", "bones",
-                             "gpu", "emitterRotation", "vectorField", "alphaClip") if k in x}
+                             "gpu", "emitterRotation", "vectorField", "alphaClip", "tint") if k in x}
     out["axisLock"] = x.get("axisLock", "")
     out["bursts"] = f(x.get("bursts", []))
     if "size" in x: out["sizeMin"], out["sizeMax"] = x["size"]["min"], x["size"]["max"]
@@ -447,7 +494,8 @@ def flatten(x):
     if "shape" in x:
         s = x["shape"]
         out.update(shape=s["type"], shapeRadius=s["radius"], shapeHeight=s.get("height", 0), shapeOffset=s["offset"],
-                   shapeVelocity=bool(s.get("velocity")), shapeVelocityScale=s.get("velocityScale", 0))
+                   shapeVelocity=bool(s.get("velocity")), shapeVelocityScale=s.get("velocityScale", 0),
+                   shapeSurface=bool(s.get("surface")))
     if "location" in x: out["locationMin"], out["locationMax"] = x["location"]["min"], x["location"]["max"]
     if "meshRotation" in x: out["meshRotationMin"], out["meshRotationMax"] = x["meshRotation"]["min"], x["meshRotation"]["max"]
     if "meshRotationRate" in x:
@@ -471,12 +519,12 @@ def main():
     from t7extract.mesh import extract_mesh
     t7 = types.SimpleNamespace(Package=Package, iter_textures=iter_textures, to_image=to_image, extract_mesh=extract_mesh)
     source = Path(args.source)
-    index = {p.stem: p for p in source.rglob("*.uasset")}
+    index = CaseIndex(source.rglob("*.uasset"))
     _, manager = load(source / MANAGER, t7)
     defaults = next(p for c, p in manager.values() if c.endswith("BP_CommonEffectManager_C"))
     materials, textures, meshes, notes, effects, roles, hashes = {}, {}, {}, set(), {}, {}, {}
-    for role in ROLES:
-        system = (defaults.get(role) or "").split(":")[-1]
+    for role in ROLES + list(EXTRA_ROLES):
+        system = EXTRA_ROLES.get(role) or (defaults.get(role) or "").split(":")[-1]
         roles[role] = system
         if system in effects or system not in index:
             continue

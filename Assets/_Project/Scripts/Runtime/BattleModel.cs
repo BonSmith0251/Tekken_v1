@@ -82,6 +82,9 @@ namespace Versus.Remaster
     {
         public int attacker, defender, damage, stun;
         public bool blocked, counterHit;
+        /// <summary>Landed while the defender was recovering from an attack (Tekken 7's punish notice).</summary>
+        public bool punish;
+        public HitHeight height;
         /// <summary>Original reaction record in the attacker's moveset, or -1 (command graphs only).</summary>
         public int reaction;
     }
@@ -212,6 +215,9 @@ namespace Versus.Remaster
                 winner = a.health == b.health ? -1 : a.health > b.health ? 0 : 1;
                 result = ticksLeft <= 0 ? "TIME UP" : winner < 0 ? "DOUBLE KO" : "KNOCKOUT";
                 if (winner >= 0) fighters[winner].wins++;
+                // The knocked-out fighter stops reading input, including presses still buffered.
+                if (UsesCommandGraphs)
+                    for (int i = 0; i < 2; i++) if (fighters[i].health <= 0) interpreters[i].DropInput();
                 phase = winner >= 0 && fighters[winner].wins >= rules.roundsToWin ? MatchPhase.MatchOver : MatchPhase.RoundOver;
                 // Command battles let the original death fall (about 70 frames) finish before the next round.
                 phaseTicks = UsesCommandGraphs ? 240 : 150;
@@ -425,13 +431,18 @@ namespace Versus.Remaster
             if (d.airborne && !d.reacting && low) return null;
             if (height == HitHeight.High && d.crouch) return null;
             bool blocked = d.guard && (height == HitHeight.Low ? d.crouch : height == HitHeight.Mid ? !d.crouch : true);
-            bool counter = !blocked && Attacking(interpreters[1 - i].Current) && !d.reacting;
+            // Tekken 7: a counter hit lands during the defender's startup or active frames; a hit in
+            // the recovery is a normal hit, a punish.
+            var defending = interpreters[1 - i].Current;
+            bool defenderAttacking = !blocked && Attacking(defending) && !d.reacting;
+            bool counter = defenderAttacking && d.moveFrame <= Math.Max(defending.firstActive, defending.lastActive);
+            bool punish = defenderAttacking && !counter;
             contexts[i].counterHit = counter;
             // Juggle (614) and opponent-downed (126) hit conditions read the defender's state.
             contexts[i].opponentAirborne = d.airborne; contexts[i].opponentDown = d.downed;
             var condition = HitConditionFor(interpreters[i].ActedGraph, i, move);
             return new HitEvent { attacker = i, defender = 1 - i, damage = blocked ? 0 : condition?.damage ?? move.damage,
-                reaction = condition?.reaction ?? -1, blocked = blocked, counterHit = counter };
+                reaction = condition?.reaction ?? -1, blocked = blocked, counterHit = counter, punish = punish, height = height };
         }
 
         CommandGraph.HitCondition HitConditionFor(CommandGraph graph, int player, CommandGraph.Move move)
@@ -537,7 +548,7 @@ namespace Versus.Remaster
             if (move.height == HitHeight.High && d.crouch) return null;
             bool blocked = d.guard && d.stun == 0 && d.attack < 0 && (move.height == HitHeight.Low ? d.crouch : !d.crouch);
             return new HitEvent { attacker = i, defender = 1 - i, damage = blocked ? 0 : move.damage,
-                stun = blocked ? 9 : move.stun, blocked = blocked, reaction = -1 };
+                stun = blocked ? 9 : move.stun, blocked = blocked, reaction = -1, height = move.height };
         }
         void Apply(HitEvent hit)
         {

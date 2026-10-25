@@ -29,6 +29,9 @@ namespace Versus.Remaster
         // Picked item colors per character code: piece -> four optional sRGB colors.
         readonly Dictionary<string,Dictionary<string,Color?[]>> allColors=new Dictionary<string,Dictionary<string,Color?[]>>();
         Dictionary<string,Color?[]> colors;
+        // Breast flexibility (0-1) per character code, saved with the items.
+        readonly Dictionary<string,float> allBreast=new Dictionary<string,float>();
+        bool hasBreasts;
         int editColor=-1;
         static readonly Color[] Palette={
             new Color(.05f,.05f,.05f),new Color(.25f,.25f,.26f),new Color(.5f,.5f,.52f),new Color(.75f,.75f,.76f),new Color(.97f,.97f,.96f),new Color(.86f,.12f,.12f),
@@ -94,7 +97,8 @@ namespace Versus.Remaster
                 positions[f]=new Vector3(BitConverter.ToSingle(data,offset),BitConverter.ToSingle(data,offset+4),BitConverter.ToSingle(data,offset+8));
                 for(int c=0;c<count;c++){int p=offset+12+c*16;rotations[f,c]=new Quaternion(BitConverter.ToSingle(data,p),BitConverter.ToSingle(data,p+4),BitConverter.ToSingle(data,p+8),BitConverter.ToSingle(data,p+12));}
             }
-            frameCount=frames;
+            // A new character's stance can be shorter than the last one's (Alisa's is 550 frames).
+            frameCount=frames;frame=0;
         }
 
         // Switches the try-on character; ticks made for other characters are kept until saved.
@@ -103,6 +107,7 @@ namespace Versus.Remaster
             characterIndex=index;wardrobe=wardrobes[index];slotIndex=0;itemScroll=presetScroll=Vector2.zero;
             if(!allPicks.TryGetValue(Code,out fightPicks))allPicks[Code]=fightPicks=FightWardrobe.Load(Code);
             if(!allColors.TryGetValue(Code,out colors))allColors[Code]=colors=FightWardrobe.LoadColors(Code);
+            if(!allBreast.ContainsKey(Code))allBreast[Code]=FightWardrobe.LoadBreast(Code);
             editColor=-1;
             LoadStance();WearPreset(0);
         }
@@ -136,7 +141,9 @@ namespace Versus.Remaster
             bones=wardrobe.character.boneNames.Select(n=>map.TryGetValue(n,out var bone)?bone:throw new InvalidOperationException("Missing bone: "+n)).ToArray();
             head=map.TryGetValue("Head",out var h)?h:bones[0];
             Pose();
-            if(physics)dynamics=new WardrobeDynamics(model.transform,wardrobe);
+            if(physics)dynamics=new WardrobeDynamics(model.transform,wardrobe,allBreast[Code]);
+            // With physics off the slider still shows for characters whose outfit uses the bust chains.
+            hasBreasts=dynamics!=null?dynamics.Breasts!=null:BustDynamics.Create(model.transform,wardrobe.character,0)!=null;
         }
 
         void Pose()
@@ -225,11 +232,23 @@ namespace Versus.Remaster
             GUILayout.Label("Saved items: "+fightPicks.Values.Sum(v=>v.Count)+" ticked"+(unsaved.Contains(Code)?"  (unsaved)":"  (saved)"),GUILayout.Width(180));
             GUI.enabled=picksChanged;
             // Saves every character with unsaved ticks, so switching characters never loses work.
-            if(GUILayout.Button("Save items")){foreach(string code in unsaved.ToArray())FightWardrobe.Save(code,allPicks[code],allColors.TryGetValue(code,out var saved)?saved:FightWardrobe.LoadColors(code));unsaved.Clear();}
+            if(GUILayout.Button("Save items")){foreach(string code in unsaved.ToArray())FightWardrobe.Save(code,allPicks[code],allColors.TryGetValue(code,out var saved)?saved:FightWardrobe.LoadColors(code),allBreast.TryGetValue(code,out var breastSaved)?breastSaved:FightWardrobe.LoadBreast(code));unsaved.Clear();}
             GUI.enabled=true;
             GUILayout.EndHorizontal();
             bool simulate=GUILayout.Toggle(physics,dynamics!=null?"Cloth & hair physics  ("+dynamics.GarmentCount+" cloth, "+dynamics.SpringCount+" springs)":"Cloth & hair physics");
             if(simulate!=physics)SetPhysics(simulate);
+            if(hasBreasts)
+            {
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("Breast flexibility  "+Mathf.RoundToInt(allBreast[Code]*100)+"%",GUILayout.Width(150));
+                float breast=GUILayout.HorizontalSlider(allBreast[Code],0,1);
+                GUILayout.EndHorizontal();
+                if(Mathf.Abs(breast-allBreast[Code])>.001f)
+                {
+                    allBreast[Code]=breast;unsaved.Add(Code);
+                    if(dynamics?.Breasts!=null)dynamics.Breasts.Flexibility=breast;
+                }
+            }
             GUILayout.BeginHorizontal();
             if(GUILayout.Button(closeUp?"Full body":"Close-up"))closeUp=!closeUp;
             if(GUILayout.Button(playing?"Pause stance":"Play stance"))playing=!playing;

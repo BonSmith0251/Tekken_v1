@@ -15,11 +15,11 @@ namespace Versus.Remaster
         public string name, kind, align, texture, mesh, blend, axisLock, shape;
         public float intensity = 1, duration = 1, delay, rate, cameraOffset, shapeRadius, shapeHeight, shapeVelocityScale, alphaClip;
         public int loops = 1;
-        public bool distortion, mask, floor, bones, gpu, shapeVelocity, hasLight;
+        public bool distortion, mask, floor, bones, gpu, shapeVelocity, shapeSurface, hasLight;
         public float[] scroll, tiling, life, bursts, sizeMin, sizeMax, sizeLife, colorMin, colorMax, colorLife, colorScale,
             velocityMin, velocityMax, radial, coneAngle, coneSpeed, coneDir, velocityLife, accel, drag, shapeOffset,
             locationMin, locationMax, rotation, rotationRate, meshRotationMin, meshRotationMax, meshRotationRateMin,
-            meshRotationRateMax, emitterRotation, lightColor, vectorField, alphaClipLife;
+            meshRotationRateMax, emitterRotation, lightColor, vectorField, alphaClipLife, tint;
         public float lightBrightness, lightRadiusScale;
     }
     [Serializable] public sealed class CascadeSystemData { public string name; public CascadeEmitterData[] emitters; }
@@ -36,7 +36,9 @@ namespace Versus.Remaster
     public sealed class CascadeEffects : MonoBehaviour
     {
         public const string Hit = "HitFX", Counter = "CriticalHit3FX", Guard = "GuardFX", Pierce = "PierceFX",
-            Blast = "BlastFX", Smoke = "SmokeFX", Rage = "RageFX", RageAura = "RageAuraFX";
+            Blast = "BlastFX", Smoke = "SmokeFX", Rage = "RageFX", RageAura = "RageAuraFX",
+            PunishHigh = "PracticePunishNoticeHiFX", PunishMid = "PracticePunishNoticeMidFX", PunishLow = "PracticePunishNoticeLoFX",
+            KO = "KOFX";
         // Not recovered: how strongly the original glare power fed its bloom. Tuned by eye.
         public float glareGain = 1;
         readonly Dictionary<string, CascadeSystemData> roles = new Dictionary<string, CascadeSystemData>();
@@ -94,14 +96,17 @@ namespace Versus.Remaster
 
         internal Material MaterialFor(CascadeEmitterData e, float peak)
         {
-            // The original materials push glare power (1..100) through bloom; keep it as a gentle boost.
-            float intensity = peak * (1 + Mathf.Log10(Mathf.Max(1, e.intensity))) * glareGain;
+            // The original materials multiply by a glare power (1..100) and let bloom and the tonemap
+            // whiten the core. Without bloom here, the shader whitens hot colour itself; the square
+            // root keeps a glare of 20 at about 4.5x (the reference video's sparks read white-yellow).
+            float intensity = peak * Mathf.Sqrt(Mathf.Max(1, e.intensity)) * glareGain;
             string key = e.texture + "|" + e.blend + "|" + e.mask + "|" + intensity.ToString("0.###") + "|" + e.cameraOffset + "|" +
-                         Vec(e.scroll) + "|" + Vec(e.tiling) + "|" + e.alphaClip;
+                         Vec(e.scroll) + "|" + Vec(e.tiling) + "|" + e.alphaClip + "|" + Vec(e.tint);
             if (materials.TryGetValue(key, out var m)) return m;
             m = new Material(shader) { name = e.name, renderQueue = (int)RenderQueue.Transparent };
             if (!string.IsNullOrEmpty(e.texture)) m.mainTexture = TextureFor(e.texture);
             m.SetFloat("_Intensity", intensity);
+            if (e.tint != null && e.tint.Length == 3) m.SetColor("_Tint", new Color(e.tint[0], e.tint[1], e.tint[2]));
             m.SetFloat("_MaskFromRed", e.mask ? 1 : 0);
             m.SetFloat("_CameraOffset", e.cameraOffset);
             m.SetFloat("_AlphaClip", e.alphaClip);
@@ -407,7 +412,7 @@ namespace Versus.Remaster
             {
                 // Spawn location in the effect's local space (metres, Unity axes).
                 Vector3 local = V(d.shapeOffset), offset = Vector3.zero;
-                if (d.shape == "sphere") offset = UnityEngine.Random.insideUnitSphere * d.shapeRadius;
+                if (d.shape == "sphere") offset = (d.shapeSurface ? UnityEngine.Random.onUnitSphere : UnityEngine.Random.insideUnitSphere) * d.shapeRadius;
                 else if (d.shape == "cylinder")
                 {
                     var disk = UnityEngine.Random.insideUnitCircle * d.shapeRadius;

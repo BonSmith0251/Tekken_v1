@@ -38,6 +38,8 @@ namespace Versus.Remaster
         int categoryIndex;
         SecondaryMotionTrack secondaryMotion;
         XiaoyuSecondaryDynamics flexibleMotion;
+        // Female fighters' breasts, at the flexibility saved in the Wardrobe scene.
+        BustDynamics breasts;
         EntranceCameraTrack actionCamera;
         EntranceCameraLens actionLens;
         bool useOriginalCamera;
@@ -134,7 +136,7 @@ namespace Versus.Remaster
             if(!prefab)throw new InvalidOperationException("Costume has no model prefab.");
             secondaryMotion?.Restore();secondaryMotion=null;actionCamera=null;
             if(model){model.SetActive(false);Destroy(model);}
-            flexibleMotion=null;
+            flexibleMotion=null;breasts=null;
             model=Instantiate(prefab,transform);
             // Give each character a stable exhibit slot. This also keeps models
             // separated during the frame in which Unity retires a previous instance.
@@ -148,6 +150,7 @@ namespace Versus.Remaster
             // Saved wardrobe items replace the preset's pieces before any cloth/spring setup reads them.
             savedOutfit=FightWardrobe.DressSaved(model,characters[CharacterIndex],outfitRandom);
             if(Application.isPlaying && characters[CharacterIndex].characterCode=="xia")flexibleMotion=new XiaoyuSecondaryDynamics(model.transform);
+            if(Application.isPlaying)breasts=BustDynamics.Create(model.transform,characters[CharacterIndex],FightWardrobe.BreastFor(characters[CharacterIndex]));
         }
         public void SelectCostume(int index)
         {
@@ -183,7 +186,7 @@ namespace Versus.Remaster
             if(!string.IsNullOrEmpty(action.secondaryResource))secondaryMotion=new SecondaryMotionTrack(model.transform,action.secondaryResource,frames);
             if(!string.IsNullOrEmpty(action.cameraResource))actionCamera=new EntranceCameraTrack(action.cameraResource,action.moveId,frames);
             SetFrame(0);
-            flexibleMotion?.Reset();
+            flexibleMotion?.Reset();breasts?.Reset();
         }
         public void SetFrame(float frame)
         {
@@ -195,7 +198,7 @@ namespace Versus.Remaster
             bones[0].localPosition=root;
             for(int i=0;i<bones.Length;i++)bones[i].localRotation=Quaternion.Slerp(rotations[a,i],rotations[b,i],t);
             secondaryMotion?.Apply(Frame);
-            if(seek)flexibleMotion?.Reset();
+            if(seek){flexibleMotion?.Reset();breasts?.Reset();}
         }
         void Update()
         {
@@ -217,7 +220,7 @@ namespace Versus.Remaster
         }
         void LateUpdate()
         {
-            flexibleMotion?.Tick(Time.deltaTime);
+            flexibleMotion?.Tick(Time.deltaTime);breasts?.Tick(Time.deltaTime);
             if(!cameraRig)return;
             // Re-applied so color edits on the Render Settings object show live during Play.
             if(renderSettings)renderSettings.Apply(cameraRig,galleryFloor?galleryFloor.GetComponent<Renderer>():null);

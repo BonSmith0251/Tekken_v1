@@ -134,7 +134,7 @@ namespace Versus.Remaster.Editor
             ("ATH_L_Arm_Btm_Btop","L_Arm"),("ATH_R_Arm_Btm_Btop","R_Arm"),
             ("ATH_Spine1_Btop","Hip"),("ATH_Hip_Btop","Spine1"),
         };
-        static void AttachDetachPoints(Dictionary<string,Transform> bones)
+        public static void AttachDetachPoints(Dictionary<string,Transform> bones)
         {
             foreach(var (bone,follows) in DetachPoints)
                 if(bones.TryGetValue(bone,out var child) && bones.TryGetValue(follows,out var parent))child.SetParent(parent,true);

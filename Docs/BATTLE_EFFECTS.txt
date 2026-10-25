@@ -1,42 +1,60 @@
 BATTLE EFFECTS (LocalVersus / LocalVersus2)
 
-The fight now plays Tekken 7's own common battle effects. The original keeps them in
-Effect/TK75/Common; BP_CommonEffectManager names the particle system for each role, and the
-game's native code decides when each plays. The remaster triggers them from its own events:
+The fight plays Tekken 7's own common battle effects. The original keeps them in
+Effect/TK75/Common; BP_CommonEffectManager names the particle system for each role (BP_EF_KO the
+knockout one), and the game's native code decides when each plays. The remaster triggers them from
+its own events, matched against the reference captures (Videos/Captures, TEKKEN 7 2026-10-23):
 
-  Clean hit                 HitFX           PS_EF_cmnhit00_ts       sparks, glow, orange light flash
-  Counter hit               CriticalHit3FX  PS_EF_cmncritical00_ts  rings, spark burst, speed lines
+  Clean hit                 HitFX           PS_EF_cmnhit00_ts       small orange glow and sparks
+  Counter hit               CriticalHit3FX  PS_EF_cmncritical00_ts  orange rings, spark burst, lines
+  Punish (hit in recovery)  PunishNotice    PS_EF_PunishNotice_*    blue-white reticle, by hit level (**)
   Guarded hit               GuardFX         PS_EF_cmnguard01_ts     guard flash, lines, smoke puff
   Clean hit, 20+ damage     PierceFX        PS_EF_cmnhit_line00     directional speed lines (*)
+  Knockout blow             KOFX            PS_EF_SpecialKO         radial flash lines, powder, floor ring, dust
   Body lands from the air   BlastFX         PS_EF_cmndown00_ts      floor rings and wind circle
   Any fall to the floor     SmokeFX         PS_EF_cmnsmoke00        dust
   Rage begins (25% health)  RageFX          PS_EF_cmnragestart00_ss rings and ribbons around the body
   While in Rage             RageAuraFX      PS_EF_cmnrageaura_ts    looping red aura on the body bones
 
 (*) The original chooses PierceFX in native code; using it for heavy hits is this project's choice.
+(**) The reference matches show the practice-mode punish reticle in normal play, on hits that land
+while the opponent recovers from an attack. Tekken 7 counts a hit during the opponent's startup or
+active frames as a counter hit and a hit in the recovery as a normal hit (the punish); the battle
+model follows that (BattleModel.CommandContact). Its colour follows the reference video (light
+blue); the data tints the mid variant yellow-white, which the stripped material may have changed.
 The model does not spend Rage (no Rage Art consumption), so the aura stays while health is at a
-quarter or less, and ends with the round.
+quarter or less, and ends with the round. Both Rage effects travel with the fighter's spine.
 
 Where the effect plays: the data has no hitbox positions for effects, so the struck point is where
 the attacker's nearest striking bone (hand, elbow, knee, foot, head) meets the defender's hip-to-head
-line, and the effect faces along the blow. Effects run on game time, so they slow with the KO.
+line, and the effect faces along the blow. The knockout flash plays where the last blow landed.
+Effects run on game time, so they slow with the KO.
 
 Conversion (Tools/HitEffects/export_hit_effects.py): every emitter's spawn bursts and rate, lifetime,
 size and size-over-life, colour and colour-over-life (HDR peak -> material intensity), velocity,
 cone, drag, acceleration, spawn shape, rotation, mesh particles, camera offset, floor placement,
 point-light flashes and character-bone spawning are decoded from the original lookup tables and
-curves (centimetres -> metres, UE axes -> Unity).
+curves (centimetres -> metres, UE axes -> Unity). Cascade sprite sizes are full sizes: the 50-unit
+punish reticle is about half a metre in the reference video. Size axes the editor locked are stored
+as zeros and follow X.
 
 Approximated (not recovered):
+- Brightness: the original multiplies effect colour by a glare power (1..100) and lets bloom and the
+  tonemap whiten the core. The versus scene has neither, so the material intensity is the colour
+  peak times the square root of the glare, and the particle shader whitens hot colour itself
+  (85% toward white by 9x). CascadeEffects.glareGain scales it.
 - GPU vector fields: their tightness becomes drag and their strength becomes noise, which keeps
   sparks compact around the impact; the field shapes themselves are not decoded.
 - AlphaClip: the cooked effect materials keep only parameter names, not their maths. The spark
   material's static "Alpha Clip" sharpens coverage to its core, saturate(a * (1 + c) - c); the
   distortion material's per-particle AlphaClip curve erodes it, a ^ max(1, c). Both were fitted
   against the captures.
-- Glare/bloom strength (CascadeEffects.glareGain).
-Not reproduced: texture scroll/distortion dynamic parameters, refraction-only emitters, and bursts
-above 600 particles (capped).
+- The punish reticle: the stripped crosshair material assembles it from quarter textures, so the
+  complete glyph in its glare texture is drawn instead, tinted the light blue of the reference video.
+- KO flash lines are widened from 4 mm to about 3 cm; KO dust is capped at 600 fragments/s and 60
+  smoke sprites/s (the original spawns 3,000 and 1,500).
+Not reproduced: texture scroll/distortion dynamic parameters, refraction-only emitters, GPU floor
+collision of KO debris, and bursts above 600 particles (capped).
 
 Regenerate:
   python -m t7extract unpack <game> "*/Effect/TK75/Common/*" -o <src>

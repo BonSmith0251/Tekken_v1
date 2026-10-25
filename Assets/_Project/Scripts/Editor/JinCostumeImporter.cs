@@ -37,6 +37,8 @@ namespace Versus.Remaster.Editor
         {
             public string code,costumeSource,costumeMaterials,face,wardrobeSource,output,asset,museum;
             public bool weldTriangleSoup,localAnonymousBones;
+            // Alisa: re-hang her ATH_*_Btop detach points (AlisaImporter) so items share her model's bones.
+            public bool detachPoints;
             public string[] doubleSided={"har_","cloth"};
         }
         public static readonly WardrobeCharacter[] Wardrobes={
@@ -49,6 +51,14 @@ namespace Versus.Remaster.Editor
             new WardrobeCharacter {code="xia",costumeSource="Assets/_Project/Characters/Xiaoyu/Source/Base",costumeMaterials="Assets/_Project/Characters/Xiaoyu/Costumes/Materials",face="xia_fac.json",
                 wardrobeSource="Assets/_Project/Characters/Xiaoyu/Source/Wardrobe",output="Assets/_Project/Characters/Xiaoyu/Wardrobe",asset="Assets/_Project/Wardrobe/XiaoyuWardrobe.asset",museum="Assets/_Project/Museum/Xiaoyu.asset",
                 weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash","feather"}},
+            // Alisa's upper items carry her forearms and hands (export_wardrobe.py merges exp_*_parmL/R in).
+            new WardrobeCharacter {code="asa",costumeSource="Assets/_Project/Characters/Alisa/Source/Base",costumeMaterials="Assets/_Project/Characters/Alisa/Costumes/Materials",face="asa_fac.json",
+                wardrobeSource="Assets/_Project/Characters/Alisa/Source/Wardrobe",output="Assets/_Project/Characters/Alisa/Wardrobe",asset="Assets/_Project/Wardrobe/AlisaWardrobe.asset",museum="Assets/_Project/Museum/Alisa.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,detachPoints=true,doubleSided=new[]{"har_","cloth","eyelash"}},
+            // Katarina's own importer welds triangle soup (her Loose shorts) like Xiaoyu's and Alisa's.
+            new WardrobeCharacter {code="ltn",costumeSource="Assets/_Project/Characters/Katarina/Source/Base",costumeMaterials="Assets/_Project/Characters/Katarina/Costumes/Materials",face="ltn_face.json",
+                wardrobeSource="Assets/_Project/Characters/Katarina/Source/Wardrobe",output="Assets/_Project/Characters/Katarina/Wardrobe",asset="Assets/_Project/Wardrobe/KatarinaWardrobe.asset",museum="Assets/_Project/Museum/Katarina.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash"}},
         };
         [Serializable] class Bone { public string name; public int parent; public Vector3 position,scale; public Quaternion rotation; }
         [Serializable] class Section { public string material; public int[] triangles; }
@@ -187,6 +197,8 @@ namespace Versus.Remaster.Editor
         [MenuItem("Remaster/Rebuild Jin wardrobe")]static void ImportJinWardrobe()=>ImportWardrobe(Wardrobes[0]);
         [MenuItem("Remaster/Rebuild Kazuya wardrobe")]static void ImportKazuyaWardrobe()=>ImportWardrobe(Wardrobes[1]);
         [MenuItem("Remaster/Rebuild Xiaoyu wardrobe")]static void ImportXiaoyuWardrobe()=>ImportWardrobe(Wardrobes[2]);
+        [MenuItem("Remaster/Rebuild Alisa wardrobe")]static void ImportAlisaWardrobe()=>ImportWardrobe(Wardrobes[3]);
+        [MenuItem("Remaster/Rebuild Katarina wardrobe")]static void ImportKatarinaWardrobe()=>ImportWardrobe(Wardrobes[4]);
         // One prefab per wearable piece; the wardrobe scene dresses the skeleton with them by bone name.
         public static void ImportWardrobe(WardrobeCharacter character)
         {
@@ -221,6 +233,7 @@ namespace Versus.Remaster.Editor
                     // Common items spell shared bones in other cases (Base, HEAD); Unreal matches them case-insensitively.
                     var bones=new Dictionary<string,Transform>(StringComparer.OrdinalIgnoreCase);AddBones(skeleton,bones,faceSkeleton,character.localAnonymousBones?Path.GetFileNameWithoutExtension(character.face):null);
                     AddPart(root,skeleton,bones,piece,materials,"wardrobe",WardrobeOutput,character);
+                    if(character.detachPoints)AlisaImporter.AttachDetachPoints(bones);
                     PrefabUtility.SaveAsPrefabAsset(root,WardrobeOutput+"/Prefabs/"+Safe(item.piece)+".prefab");built++;
                 }
                 finally{UnityEngine.Object.DestroyImmediate(root);}
@@ -230,7 +243,11 @@ namespace Versus.Remaster.Editor
             var wardrobe=AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(WardrobeAsset);
             if(!wardrobe){wardrobe=ScriptableObject.CreateInstance<CharacterWardrobe>();AssetDatabase.CreateAsset(wardrobe,WardrobeAsset);}
             wardrobe.character=AssetDatabase.LoadAssetAtPath<MuseumCharacter>(character.museum);
-            wardrobe.slots=LoadWardrobe(manifest,manifest.pieceEntries.ToDictionary(x=>x.name),WardrobeOutput,TintMaterials(character,manifest));EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
+            // Alisa's outfit sets keep her forearms as separate pieces; her upper items carry their own,
+            // so wearing one must also hide those (Directory names match the model's renderer names).
+            var forearms=Directory.GetFiles(character.costumeSource,"*.json").Select(Path.GetFileNameWithoutExtension)
+                .Where(n=>System.Text.RegularExpressions.Regex.IsMatch(n,@"_exp_.+_parm[LR]$",System.Text.RegularExpressions.RegexOptions.IgnoreCase)).ToArray();
+            wardrobe.slots=LoadWardrobe(manifest,manifest.pieceEntries.ToDictionary(x=>x.name),WardrobeOutput,TintMaterials(character,manifest),forearms);EditorUtility.SetDirty(wardrobe);AssetDatabase.SaveAssets();
             var counts=WardrobeSlots.Concat(new[]{"variant"}).Select(s=>"\""+s+"\":"+manifest.wardrobe.Count(w=>w.slot==s));
             File.WriteAllText("Validation/"+character.code+"-wardrobe.json","{\"passed\":true,\"pieces\":"+built+","+string.Join(",",counts)+",\"materials\":"+manifest.materialEntries.Length+",\"wardrobeAsset\":\""+WardrobeAsset+"\"}");
             Debug.Log(character.code+" wardrobe imported: "+built+" pieces");
@@ -270,7 +287,7 @@ namespace Versus.Remaster.Editor
             File.WriteAllText("Validation/"+character.code+"-wardrobe-colors.json","{\"passed\":true,\"recolorablePieces\":"+count+",\"tintMaterials\":"+materials.Count+"}");
             Debug.Log(character.code+" wardrobe colors: "+count+" recolorable pieces");
         }
-        static CharacterWardrobe.Slot[] LoadWardrobe(WardrobeManifest manifest,Dictionary<string,PieceEntry> pieces,string WardrobeOutput,Dictionary<string,MaterialEntry> tintMaterials)
+        static CharacterWardrobe.Slot[] LoadWardrobe(WardrobeManifest manifest,Dictionary<string,PieceEntry> pieces,string WardrobeOutput,Dictionary<string,MaterialEntry> tintMaterials,string[] forearms)
         {
             GameObject Prefab(string piece)=>string.IsNullOrEmpty(piece)?null:AssetDatabase.LoadAssetAtPath<GameObject>(WardrobeOutput+"/Prefabs/"+Safe(piece)+".prefab");
             // The character's own items first, then the common customization items, each alphabetical.
@@ -278,7 +295,8 @@ namespace Versus.Remaster.Editor
             return WardrobeSlots.Select(slot=>new CharacterWardrobe.Slot {name=slot,optional=slot=="head"||slot=="glasses",pieces=manifest.wardrobe.Where(w=>w.slot==slot)
                 .OrderBy(w=>w.owner=="cmn"?1:0).ThenBy(w=>w.name,StringComparer.OrdinalIgnoreCase)
                 .Select(w=>new CharacterWardrobe.Piece {name=w.name,piece=w.piece,common=w.owner=="cmn",prefab=Prefab(w.piece),
-                    dependencyBase=w.dependencyBase,dependency=Prefab(w.dependency),cloth=pieces[w.piece].cloth??new string[0],tints=Tints(pieces[w.piece],tintMaterials)}).ToArray()}).ToArray();
+                    dependencyBase=w.dependencyBase,dependency=Prefab(w.dependency),cloth=pieces[w.piece].cloth??new string[0],tints=Tints(pieces[w.piece],tintMaterials),
+                    replaces=slot=="upper"?forearms:new string[0]}).ToArray()}).ToArray();
         }
         public static MuseumCharacter.Costume[] LoadCostumes()
         {

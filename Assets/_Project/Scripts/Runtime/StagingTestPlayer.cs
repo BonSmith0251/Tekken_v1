@@ -37,6 +37,8 @@ namespace Versus.Remaster
         Vector3 faceAxis;
         SecondaryMotionTrack secondary;
         XiaoyuSecondaryDynamics flexibleMotion;
+        // Female fighters' breasts, at the flexibility saved in the Wardrobe scene.
+        BustDynamics breasts;
         EntranceCameraTrack cameraTrack;
         Take current;
         int index, frames;
@@ -115,7 +117,7 @@ namespace Versus.Remaster
         {
             if (secondary != null) secondary.Restore();
             secondary = null;
-            flexibleMotion = null;
+            flexibleMotion = null; breasts = null;
             if (actor) { actor.SetActive(false); Destroy(actor); }
             index = next;
             current = playlist[index];
@@ -147,8 +149,9 @@ namespace Versus.Remaster
             frame = 0; gap = 0; started = false;
             // Xiaoyu's hair and garments use the museum's adapted springs and cloth.
             if (Code(current.character) == "xia") flexibleMotion = new XiaoyuSecondaryDynamics(actor.transform);
+            breasts = BustDynamics.Create(actor.transform, current.character, FightWardrobe.BreastFor(current.character));
             Present();
-            flexibleMotion?.Reset();
+            flexibleMotion?.Reset(); breasts?.Reset();
             Debug.Log("Staging test playing " + current.character.displayName + " " + current.action.kind + " " + current.action.animation);
         }
 
@@ -208,7 +211,7 @@ namespace Versus.Remaster
         {
             ApplyRenderSettings();
             if (error != null || current == null) return;
-            try { Present(); if (!paused) flexibleMotion?.Tick(Time.unscaledDeltaTime); }
+            try { Present(); if (!paused) { flexibleMotion?.Tick(Time.unscaledDeltaTime); breasts?.Tick(Time.unscaledDeltaTime); } }
             catch (Exception exception) { Fail(exception); }
         }
 
