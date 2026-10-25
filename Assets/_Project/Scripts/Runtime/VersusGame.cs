@@ -64,6 +64,8 @@ namespace Versus.Remaster
         // Impact presentation. Shake levels, the airborne preset zoom and Rage Art cameras come from
         // the original move properties; their magnitudes and the KO slow-motion are approximations.
         string[] codes;
+        // Original life gauges, timer, round counters and centre calls.
+        BattleHud hud;
         readonly XiaoyuSecondaryDynamics[] flexibleMotion = new XiaoyuSecondaryDynamics[2];
         readonly WardrobeDynamics[] wardrobeMotion = new WardrobeDynamics[2];
         float impactShake, zoomHold, koSlowTime;
@@ -83,7 +85,6 @@ namespace Versus.Remaster
         Vector3 cinematicAnchor, cinematicForward;
         int rematchTicks;
         int hitsResolved;
-        string hitLabel = "";
         float hitLabelTime, shake, visualTime;
         AudioSource audioSource;
         AudioClip strikeSound, guardSound;
@@ -116,6 +117,7 @@ namespace Versus.Remaster
             if (!config) config = ScriptableObject.CreateInstance<RemasterConfig>();
             var setups = new[] { Setup(playerOneFighter), Setup(playerTwoFighter) };
             codes = new[] { setups[0].code, setups[1].code };
+            hud = new BattleHud(codes[0], codes[1]);
             catalogs = new FighterActionCatalog[2];
             graphs = new CommandGraph[2];
             for (int i = 0; i < 2; i++)
@@ -695,7 +697,6 @@ namespace Versus.Remaster
         void OnHit(HitEvent hit)
         {
             hitsResolved++;
-            hitLabel = hit.blocked ? "GUARD" : "P" + (hit.attacker + 1) + "   /   " + hit.damage + " DAMAGE";
             hitLabelTime = .65f; shake = hit.blocked ? .12f : .4f;
             audioSource.PlayOneShot(hit.blocked ? guardSound : strikeSound);
             string role = hit.blocked ? CascadeEffects.Guard : hit.counterHit ? CascadeEffects.Counter : CascadeEffects.Hit;
@@ -798,6 +799,7 @@ namespace Versus.Remaster
         void OnGUI()
         {
             Styles();
+            if (Event.current.type == EventType.Repaint && battle != null) hud.Advance(battle, Time.unscaledDeltaTime);
             if (entrance != null && entrance.Active && !entrance.ShowsBattleHud) { entrance.Draw(); return; }
             if (!cameraRig) return;
             var previousMatrix = GUI.matrix;
@@ -816,29 +818,23 @@ namespace Versus.Remaster
         void DrawGameplayGUI()
         {
             if (menu) { DrawMenu(); return; }
-            Panel(new Rect(0, 0, 1280, 115), Ink);
-            for (int i = 0; i < 2; i++)
-            {
-                float x = i == 0 ? 40 : 740; var f = battle.fighters[i];
-                Label(new Rect(x, 14, 470, 30), "P" + (i + 1) + "   " + (i == 0 ? config.playerOne : config.playerTwo), text);
-                Panel(new Rect(x, 50, 500, 18), new Color(.2f, .22f, .27f));
-                float width = 500f * f.health / battle.rules.health;
-                Panel(new Rect(i == 0 ? x : x + 500 - width, 50, width, 18), i == 0 ? config.colorOne : config.colorTwo);
-                Label(new Rect(x, 73, 360, 25), f.health + " HP    /    " + f.wins + " ROUND" + (f.wins == 1 ? "" : "S"), small);
-            }
-            Label(new Rect(550, 20, 180, 60), Mathf.CeilToInt(battle.ticksLeft / 60f).ToString("00"), title, Accent);
-            Label(new Rect(581, 78, 150, 25), "FIRST TO " + config.rules.roundsToWin, small);
-            Label(new Rect(40, 128, 650, 25), (automaticFight ? "AUTO FIGHT" : "LOCAL VERSUS") + "   /   ROUND " + battle.round + "   /   NEON DECK", small);
-            if (hitLabelTime > 0) Label(new Rect(440, 150, 400, 40), hitLabel, new GUIStyle(text) { alignment = TextAnchor.MiddleCenter }, Accent);
-            if (battle.phase == MatchPhase.Intro && (entrance == null || !entrance.Active))
-                Label(new Rect(250, 240, 780, 90), battle.phaseTicks > 45 ? "ROUND " + battle.round : "FIGHT", title);
+            // The gauges leave the screen while the match winner's victory take plays.
+            bool victoryTake = battle.phase == MatchPhase.MatchOver && victory != null && victory.Active;
+            if (!victoryTake) hud.DrawGauges(battle, Time.unscaledTime);
+            bool finalRound = battle.round > 1 && battle.fighters[0].wins == battle.rules.roundsToWin - 1 && battle.fighters[1].wins == battle.rules.roundsToWin - 1;
+            if (entrance != null && entrance.Active && entrance.ShowsBattleHud)
+                hud.DrawCall(entrance.Cue, 1, false, entrance.CueSeconds);
+            else if (battle.phase == MatchPhase.Intro)
+                // The round call, then FIGHT for the last 45 ticks before control.
+                hud.DrawCall(battle.phaseTicks > 45 ? BattleHud.Call.Round : BattleHud.Call.Fight, battle.round, finalRound,
+                    battle.phaseTicks > 45 ? (150 - battle.phaseTicks) / 60f : (45 - battle.phaseTicks) / 60f);
+            if (automaticFight) Label(new Rect(24, 684, 300, 24), "AUTO FIGHT   /   F2", small);
             if ((battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && battle.UsesCommandGraphs && roundEndClock < KoCallSeconds)
             {
-                // The round call first, over the slow-motion fall.
-                string call = battle.result == "KNOCKOUT" ? "K.O." : battle.result == "DOUBLE KO" ? "DOUBLE K.O." : battle.result;
-                float pop = Mathf.SmoothStep(1.35f, 1, Mathf.Clamp01(roundEndClock / .25f));
-                var callStyle = new GUIStyle(title) { fontSize = Mathf.RoundToInt(120 * pop) };
-                Label(new Rect(140, 210, 1000, 200), call, callStyle, Accent);
+                // The round call over the slow-motion fall; PERFECT follows when the winner took no damage.
+                var call = battle.result == "TIME UP" ? BattleHud.Call.TimeUp : battle.result == "DOUBLE KO" ? BattleHud.Call.DoubleKO : BattleHud.Call.KO;
+                hud.DrawCall(call, battle.round, false, roundEndClock);
+                if (battle.winner >= 0 && battle.fighters[battle.winner].health == battle.rules.health) hud.DrawPerfect(roundEndClock - .5f);
             }
             else if (battle.phase == MatchPhase.MatchOver && victory != null && !victory.Complete)
             {
@@ -846,17 +842,17 @@ namespace Versus.Remaster
                 Panel(new Rect(0, 560, 1280, 70), Ink);
                 Label(new Rect(0, 565, 1280, 60), (battle.winner == 0 ? config.playerOne : config.playerTwo) + "  WINS", new GUIStyle(title) { fontSize = 40 }, Accent);
             }
-            else if (battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver)
+            else if (battle.phase == MatchPhase.RoundOver && battle.winner < 0 && battle.result != "TIME UP")
+                // A double KO replays the round without a point.
+                hud.DrawCall(BattleHud.Call.Draw, battle.round, false, roundEndClock - KoCallSeconds);
+            else if (battle.phase == MatchPhase.MatchOver)
             {
-                Panel(new Rect(260, 220, 760, 250), Ink);
-                Label(new Rect(280, 235, 720, 80), battle.result == "KNOCKOUT" ? "K.O." : battle.result == "DOUBLE KO" ? "DOUBLE K.O." : battle.result, title, Accent);
-                string result = battle.winner < 0 ? "DRAW - ROUND REPLAY" : "PLAYER " + (battle.winner + 1) + (battle.phase == MatchPhase.MatchOver ? " WINS THE MATCH" : " WINS THE ROUND");
-                Label(new Rect(280, 315, 720, 45), result, new GUIStyle(text) { alignment = TextAnchor.MiddleCenter });
-                if (battle.phase == MatchPhase.MatchOver && GUI.Button(new Rect(470, 390, 340, 52), "REMATCH   /   ENTER", button)) StartMatch();
+                // After the victory take: the match result and the rematch prompt.
+                Panel(new Rect(260, 250, 760, 200), Ink);
+                string result = battle.winner < 0 ? "DRAW" : (battle.winner == 0 ? config.playerOne : config.playerTwo) + "  WINS THE MATCH";
+                Label(new Rect(280, 270, 720, 60), result, new GUIStyle(title) { fontSize = 36 }, Accent);
+                if (GUI.Button(new Rect(470, 365, 340, 52), "REMATCH   /   ENTER", button)) StartMatch();
             }
-            Panel(new Rect(0, 650, 1280, 70), Ink);
-            Label(new Rect(30, 657, 1200, 23), "P1  W A S D  /  U I J K = 1 2 3 4        P2  ARROWS  /  NUM 4 5 1 2 (or O P L ;) = 1 2 3 4        Hold back to guard", small);
-            Label(new Rect(30, 682, 1200, 23), "F1 command list   /   F2 auto/manual   /   ESC pause       Original " + config.playerOne + " and " + config.playerTwo + " movesets.", small);
             if (help) DrawHelp();
             if (paused)
             {

@@ -25,6 +25,10 @@ namespace Versus.Remaster
         public int Frame { get; private set; }
         public float SampleFrame => Frame + frameRemainder;
         public bool ShowsBattleHud => Current == Shot.RoundStart || Current == Shot.Ready || Current == Shot.Fight;
+        // The centre call during those shots: ROUND 1 on reveal frames 15-65, then READY and FIGHT.
+        public BattleHud.Call Cue => Current == Shot.RoundStart ? (Frame >= 15 && Frame < 66 ? BattleHud.Call.Round : BattleHud.Call.None) :
+            Current == Shot.Ready ? BattleHud.Call.Ready : Current == Shot.Fight ? BattleHud.Call.Fight : BattleHud.Call.None;
+        public float CueSeconds => (Current == Shot.RoundStart ? SampleFrame - 15 : SampleFrame) / 60f;
         public float DurationSeconds => (twoIntroFrames + oneIntroFrames + 2 * CutFrames + RoundFrames + ReadyFrames + FightFrames) / 60f;
         const int CutFrames = 2, RoundFrames = 90, ReadyFrames = 45, FightFrames = 45;
         const int CameraSettleFrames = 24;
@@ -259,13 +263,8 @@ namespace Versus.Remaster
                 GUI.DrawTexture(new Rect(0, 0, 1280, 720), Texture2D.whiteTexture);
                 GUI.color = color; return;
             }
-            if (ShowsBattleHud)
-            {
-                string cue = Current == Shot.RoundStart ? (Frame >= 15 && Frame < 66 ? "ROUND 1" : "") :
-                    Current == Shot.Ready ? "READY" : "FIGHT";
-                GUI.Label(new Rect(90, 270, 1100, 150), cue, heading);
-                return;
-            }
+            // VersusGame draws the battle HUD and these cues (Cue) with the original lettering.
+            if (ShowsBattleHud) return;
             var old = GUI.color;
             GUI.color = new Color(.025f, .035f, .055f, .82f);
             GUI.DrawTexture(new Rect(0, 0, 1280, 90), Texture2D.whiteTexture);
