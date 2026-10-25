@@ -68,8 +68,9 @@ for ch,folder,rigpath in [('jin','jin_motion','JinSource/SK_CH_jin_fac.json'),('
         payload+=samples.tobytes()
         (PROJECT/f'Assets/Remaster/Resources/SecondaryMotion/{resource}.bytes').write_bytes(payload)
         entries.append(dict(character=ch,moveId=mid,animation=anim,kind=kind,frames=frames,camera=camera,secondary=resource,landingStitch=ch=='kaz' and mid==2326))
-# Xiaoyu's tracks are baked by her own importer; keep her catalog entries.
-for e in json.loads((PROJECT/'Assets/Remaster/Editor/XiaoyuSource/staging.json').read_text())['entries']:
-    entries.append(dict(character='xia',moveId=e['moveId'],animation=e['animation'],kind=e['kind'],frames=e['frames'],camera=e['camera'],secondary=e['secondary'],landingStitch=False))
+# Xiaoyu's and Alisa's tracks are baked by their own prepare scripts; keep their catalog entries.
+for code,folder in [('xia','XiaoyuSource'),('asa','AlisaSource')]:
+    for e in json.loads((PROJECT/f'Assets/Remaster/Editor/{folder}/staging.json').read_text())['entries']:
+        entries.append(dict(character=code,moveId=e['moveId'],animation=e['animation'],kind=e['kind'],frames=e['frames'],camera=e['camera'],secondary=e['secondary'],landingStitch=False))
 output=PROJECT/'Assets/Remaster/Resources/StagingCatalog.json';output.write_text(json.dumps(dict(entries=entries),indent=2)+'\n')
 print(json.dumps(entries,indent=2))

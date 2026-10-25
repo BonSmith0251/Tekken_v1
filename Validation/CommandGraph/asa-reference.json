@@ -1,0 +1,11406 @@
+{
+ "opponent": 9,
+ "demos": [
+  {
+   "index": 0,
+   "name": "Rage Art",
+   "command": "During Rage b+1+2",
+   "setup": false,
+   "rage": true,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 119
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 85
+    },
+    {
+     "input": "n",
+     "frames": 67
+    },
+    {
+     "input": "n",
+     "frames": 253
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_RageArts00"
+   ],
+   "trace": [
+    2329,
+    2330,
+    2331,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 1,
+   "name": "Rage Drive",
+   "command": "During Rage f+2+3,3+4 (or f+3+4)",
+   "setup": false,
+   "rage": true,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+2+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "3+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 104
+    },
+    {
+     "input": "n",
+     "frames": 10
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_66RP_EX",
+    "Aa_TsStep_EX"
+   ],
+   "trace": [
+    1935,
+    1937,
+    1940,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 2,
+   "name": "Stop Bit",
+   "command": "1,1",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lp00F",
+    "Aa_lplp"
+   ],
+   "trace": [
+    1577,
+    1578,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 3,
+   "name": "Stop Bit to Destructive Form",
+   "command": "1,1,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "1+2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_lp00F",
+    "Aa_lplp",
+    "Aa_lplp_R"
+   ],
+   "trace": [
+    1577,
+    1578,
+    1579,
+    1580,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 4,
+   "name": "Coil Punch Combo",
+   "command": "1,2,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 32
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_lp00F",
+    "Aa_lprp",
+    "Aa_lprprp"
+   ],
+   "trace": [
+    1577,
+    1586,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588,
+    1588
+   ],
+   "passed": true
+  },
+  {
+   "index": 5,
+   "name": "Accelerator Combo",
+   "command": "1,2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 59
+    },
+    {
+     "input": "n",
+     "frames": 56
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_lp00F",
+    "Aa_lprp",
+    "Aa_lprprk"
+   ],
+   "trace": [
+    1577,
+    1586,
+    1587,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 6,
+   "name": "Down Time ",
+   "command": "2,3,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rp00",
+    "Aa_rphiza",
+    "Aa_rplklk"
+   ],
+   "trace": [
+    1590,
+    1592,
+    1593,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 7,
+   "name": "Down Link",
+   "command": "2,3,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "n",
+     "frames": 83
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rp00",
+    "Aa_rphiza",
+    "Aa_rplkrk"
+   ],
+   "trace": [
+    1590,
+    1592,
+    1658,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 8,
+   "name": "Right Jab to Accelerator",
+   "command": "2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 39
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rp00",
+    "Aa_rprk"
+   ],
+   "trace": [
+    1590,
+    1591,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 9,
+   "name": "Quick Access",
+   "command": "3,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lk00",
+    "Aa_lkrp"
+   ],
+   "trace": [
+    1599,
+    1601,
+    1602,
+    1603,
+    1604,
+    1605
+   ],
+   "passed": true
+  },
+  {
+   "index": 10,
+   "name": "Accelerator",
+   "command": "4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_rk00"
+   ],
+   "trace": [
+    1614,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 11,
+   "name": "Gigabyte Hammer",
+   "command": "1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 3000,
+   "inputs": [
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 80
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_lrp00"
+   ],
+   "trace": [
+    1596,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 12,
+   "name": "Dual Session",
+   "command": "f+2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 80
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rp00F",
+    "Aa_6rplpy"
+   ],
+   "trace": [
+    1620,
+    1621,
+    1622,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 13,
+   "name": "Session to Destructive Form",
+   "command": "f+2,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rp00F",
+    "Aa_rp00Fchain"
+   ],
+   "trace": [
+    1620,
+    1623,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 14,
+   "name": "Triple Session",
+   "command": "f+2,3,3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rp00F",
+    "Aa_6rplk",
+    "Aa_6rplklk"
+   ],
+   "trace": [
+    1620,
+    1624,
+    1627,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 15,
+   "name": "Lost Access",
+   "command": "f+3,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "2",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_lk00F",
+    "Aa_6lkrp",
+    "Aa_lp00F"
+   ],
+   "trace": [
+    1881,
+    1883,
+    1456,
+    1577,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 16,
+   "name": "Automatic Transmission",
+   "command": "f+3,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 67
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lk00F",
+    "Aa_6lkwp"
+   ],
+   "trace": [
+    1881,
+    1882,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 17,
+   "name": "Logic Bomb",
+   "command": "f+4,1,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rk00F",
+    "Aa_6rklp",
+    "Aa_6rklprk"
+   ],
+   "trace": [
+    1628,
+    1633,
+    1634,
+    1636,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 18,
+   "name": "Overflow",
+   "command": "f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_6wp"
+   ],
+   "trace": [
+    1954,
+    1957,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 19,
+   "name": "Overflow to Boot",
+   "command": "f+1+2,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "3+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 92
+    },
+    {
+     "input": "n",
+     "frames": 14
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_6wp",
+    "Aa_Fvlbo03"
+   ],
+   "trace": [
+    1954,
+    1957,
+    1955,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 20,
+   "name": "Overflow to Dual Boot",
+   "command": "f+1+2,f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "f+3+4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 92
+    },
+    {
+     "input": "n",
+     "frames": 31
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_6wp",
+    "Aa_Fvlbo03_chain"
+   ],
+   "trace": [
+    1954,
+    1957,
+    1956,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 21,
+   "name": "Boot",
+   "command": "f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 88
+    },
+    {
+     "input": "n",
+     "frames": 29
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_TsStep"
+   ],
+   "trace": [
+    1977,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 22,
+   "name": "Abort",
+   "command": "During Boot D (or B)",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "d",
+     "frames": 17
+    },
+    {
+     "input": "d",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 31
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_TsStep"
+   ],
+   "trace": [
+    1977,
+    1978,
+    1979,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 23,
+   "name": "Hard Reset",
+   "command": "During Boot 1,2,1,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "3+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 5,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steLP",
+    "Aa_steLPRP",
+    "Aa_steLPRPLP",
+    "Aa_steLPRPLPLK"
+   ],
+   "trace": [
+    1977,
+    1993,
+    1994,
+    1996,
+    1998,
+    1999,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 24,
+   "name": "Hard Reset to Destructive Form",
+   "command": "During Boot 1,2,1,3+4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "3+4",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steLP",
+    "Aa_steLPRP",
+    "Aa_steLPRPLP",
+    "Aa_steLPRPLPLK",
+    "Aa_com_chain"
+   ],
+   "trace": [
+    1977,
+    1993,
+    1994,
+    1996,
+    1998,
+    1999,
+    2000,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 25,
+   "name": "Linear Elbow",
+   "command": "During Boot 2",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 31
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRP"
+   ],
+   "trace": [
+    1977,
+    1990,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 26,
+   "name": "Linear Elbow to Destructive Form",
+   "command": "During Boot 2,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRP",
+    "Aa_steRP_chain"
+   ],
+   "trace": [
+    1977,
+    1990,
+    1992,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 27,
+   "name": "Eject Slider",
+   "command": "During Boot 3",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 16
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 29
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steLK"
+   ],
+   "trace": [
+    1977,
+    1985,
+    1987,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 28,
+   "name": "Upstream",
+   "command": "During Boot 4",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 71
+    },
+    {
+     "input": "n",
+     "frames": 93
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRK"
+   ],
+   "trace": [
+    1977,
+    1988,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 29,
+   "name": "Wire Clipper",
+   "command": "During Boot 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steWP"
+   ],
+   "trace": [
+    1977,
+    1989,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 30,
+   "name": "Cyclone Mixer",
+   "command": "d/f+1,1,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_t_slpF",
+    "Aa_3lplp",
+    "Aa_3lplprp"
+   ],
+   "trace": [
+    1815,
+    1817,
+    1820,
+    1821,
+    1822,
+    1823,
+    1824,
+    1825
+   ],
+   "passed": true
+  },
+  {
+   "index": 31,
+   "name": "Cyclone Hacker",
+   "command": "d/f+1,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 65
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_t_slpF",
+    "Aa_3lprk"
+   ],
+   "trace": [
+    1815,
+    1818,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 32,
+   "name": "Pickup",
+   "command": "d/f+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_t_srpF"
+   ],
+   "trace": [
+    1827,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 33,
+   "name": "Double Socket",
+   "command": "d/f+3,3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_t_slkF",
+    "Aa_3lklk"
+   ],
+   "trace": [
+    1829,
+    1830,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 34,
+   "name": "Transmission",
+   "command": "d/f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 57
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_3wp"
+   ],
+   "trace": [
+    1952,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 35,
+   "name": "Deadlock",
+   "command": "d+2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 44
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_2rp",
+    "Aa_2rprk"
+   ],
+   "trace": [
+    1680,
+    1682,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 36,
+   "name": "Deadlock to Destructive Form",
+   "command": "d+2,4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_2rp",
+    "Aa_2rprk",
+    "Aa_2rprk_chain"
+   ],
+   "trace": [
+    1680,
+    1682,
+    1683,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 37,
+   "name": "Quick Slider",
+   "command": "d+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 78
+    },
+    {
+     "input": "n",
+     "frames": 29
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_2lk",
+    "Aa_moveK"
+   ],
+   "trace": [
+    1688,
+    2009,
+    2010,
+    1456
+   ],
+   "passed": false
+  },
+  {
+   "index": 38,
+   "name": "Optimizer",
+   "command": "d+4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 77
+    },
+    {
+     "input": "n",
+     "frames": 26
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_t_srk00",
+    "Aa_swinghead"
+   ],
+   "trace": [
+    1692,
+    1695,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 39,
+   "name": "Harpoon Sweep",
+   "command": "d+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_t_slrk00"
+   ],
+   "trace": [
+    1659,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 40,
+   "name": "Harpoon Sweep to Destructive Form",
+   "command": "d+3+4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_t_slrk00",
+    "Aa_lrp00"
+   ],
+   "trace": [
+    1659,
+    1456,
+    1596,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 41,
+   "name": "Backup ",
+   "command": "d/b+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_Fvlbo00"
+   ],
+   "trace": [
+    2008,
+    2013,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 42,
+   "name": "Recovery Hook",
+   "command": "d/b【1,1】",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 43
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_Fvlbo00",
+    "Aa_Fvlbo00atk"
+   ],
+   "trace": [
+    2008,
+    2012,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 43,
+   "name": "Rocket Punch",
+   "command": "d/b【1,2】",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 102
+    },
+    {
+     "input": "n",
+     "frames": 90
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_Fvlbo00",
+    "Aa_s_trp2R"
+   ],
+   "trace": [
+    2008,
+    2014,
+    1855,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 44,
+   "name": "Meteor Kick",
+   "command": "d/b【1,3】",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1",
+     "frames": 1
+    },
+    {
+     "input": "d/b+1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 90
+    },
+    {
+     "input": "n",
+     "frames": 90
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_Fvlbo00",
+    "Aa_moveK"
+   ],
+   "trace": [
+    2008,
+    2009,
+    2010,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 45,
+   "name": "Uplink Knee",
+   "command": "d/b【1,4】",
+   "setup": false,
+   "rage": false,
+   "distance": 1300,
+   "inputs": [
+    {
+     "input": "d/b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 2
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 84
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_Fvlbo00",
+    "Aa_taigar"
+   ],
+   "trace": [
+    2008,
+    2011,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 46,
+   "name": "Daisy Chain",
+   "command": "d/b+2,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 59
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_t_srp00",
+    "Aa_rp00"
+   ],
+   "trace": [
+    1684,
+    1456,
+    1590,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 47,
+   "name": "Daisy Chain to Destructive Form",
+   "command": "d/b+2,2,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_t_srp00",
+    "Aa_rp00",
+    "Aa_lrp00"
+   ],
+   "trace": [
+    1684,
+    1456,
+    1590,
+    1456,
+    1596,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 48,
+   "name": "Deep Link",
+   "command": "d/b+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_t_slk00B"
+   ],
+   "trace": [
+    1689,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 49,
+   "name": "Deep Web ",
+   "command": "d/b+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_t_srkB"
+   ],
+   "trace": [
+    1846,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 50,
+   "name": "Gadget Found",
+   "command": "b+1,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 74
+    },
+    {
+     "input": "n",
+     "frames": 105
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lp00B",
+    "Aa_4lphead0"
+   ],
+   "trace": [
+    1642,
+    1643,
+    1645,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 51,
+   "name": "Trance Hammer",
+   "command": "b+2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rp00B",
+    "Aa_4rplp"
+   ],
+   "trace": [
+    1895,
+    1901,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 52,
+   "name": "Trance Accelerator Kick",
+   "command": "b+2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 39
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rp00B",
+    "Aa_4rprk"
+   ],
+   "trace": [
+    1895,
+    1902,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 53,
+   "name": "Spinning Top",
+   "command": "b+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_lk00B"
+   ],
+   "trace": [
+    1610,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 54,
+   "name": "Double Threading",
+   "command": "b+4,3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rk00B",
+    "Aa_rk00B_R"
+   ],
+   "trace": [
+    1647,
+    1649,
+    1652,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 55,
+   "name": "Double Threading to Destructive Form",
+   "command": "b+4,3,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rk00B",
+    "Aa_rk00B_R",
+    "Aa_4rklk_chain"
+   ],
+   "trace": [
+    1647,
+    1649,
+    1652,
+    1657,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 56,
+   "name": "Double Override",
+   "command": "b+4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 52
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rk00B",
+    "Aa_rkrky"
+   ],
+   "trace": [
+    1647,
+    1648,
+    1653,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 57,
+   "name": "Double Override to Boot",
+   "command": "b+4,4,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 29
+    },
+    {
+     "input": "3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 57
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rk00B",
+    "Aa_rkrky",
+    "Aa_4rkrk_6"
+   ],
+   "trace": [
+    1647,
+    1648,
+    1653,
+    1654,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 58,
+   "name": "Double Override to Dual Boot",
+   "command": "b+4,4,f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 57
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_rk00B",
+    "Aa_rkrky",
+    "Aa_4rkrk_chain"
+   ],
+   "trace": [
+    1647,
+    1648,
+    1653,
+    1655,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 59,
+   "name": "Dynamic Range",
+   "command": "b+3+4,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "3+4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 87
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lrk00B",
+    "Aa_skateboard"
+   ],
+   "trace": [
+    1663,
+    1664,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 60,
+   "name": "Hang-Up",
+   "command": "b+2+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+2+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 65
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_atamasuper"
+   ],
+   "trace": [
+    1931,
+    1933,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 61,
+   "name": "Docking Bay",
+   "command": "u/b+3+4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/b+3+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 76
+    },
+    {
+     "input": "n",
+     "frames": 53
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_bakutyu_Ts",
+    "Aa_Btyuporori"
+   ],
+   "trace": [
+    1617,
+    1618,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 62,
+   "name": "Cradle Star",
+   "command": "u/f+3,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/f+3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_jplk00F",
+    "Aa_jplkActP"
+   ],
+   "trace": [
+    1527,
+    1529,
+    1530,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 63,
+   "name": "Cradle Star to Boot",
+   "command": "u/f+3,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/f+3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3+4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 95
+    },
+    {
+     "input": "n",
+     "frames": 22
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_jplk00F",
+    "Aa_ActTHRU"
+   ],
+   "trace": [
+    1527,
+    1529,
+    1983,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 64,
+   "name": "Cradle Star to Dual Boot",
+   "command": "u/f+3,f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/f+3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+3+4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 95
+    },
+    {
+     "input": "n",
+     "frames": 22
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_jplk00F",
+    "Aa_ActTHRU_chain"
+   ],
+   "trace": [
+    1527,
+    1529,
+    1984,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 65,
+   "name": "Downstream",
+   "command": "u/f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u/f+3+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 75
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_jphumiF"
+   ],
+   "trace": [
+    1963,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 66,
+   "name": "Inbound Kick",
+   "command": "u/f+4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 59
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_jprk00F",
+    "Aa_jprkrk"
+   ],
+   "trace": [
+    1565,
+    1564,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 67,
+   "name": "Jumper Switch",
+   "command": "f,F+2,3",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 33
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_66RP",
+    "Aa_66RPLK"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1934,
+    1936,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 68,
+   "name": "Double Cut to Destructive Form",
+   "command": "f,F+3,4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "n",
+     "frames": 48
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_66LK",
+    "Aa_66lkrk",
+    "Aa_66lkrk_chain"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1915,
+    1916,
+    1917,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 69,
+   "name": "Cutover",
+   "command": "f,F+3,4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_66LK",
+    "Aa_66lkrk",
+    "Aa_66lkrkrk"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1915,
+    1916,
+    1918,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 70,
+   "name": "Cutover to Destructive Form",
+   "command": "f,F+3,4,4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 57
+    },
+    {
+     "input": "n",
+     "frames": 43
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Aa_66LK",
+    "Aa_66lkrk",
+    "Aa_66lkrkrk",
+    "Aa_66lkrkrkchain"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1915,
+    1916,
+    1918,
+    1919,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 71,
+   "name": "Sandbox",
+   "command": "f,F+4 during hit from front f+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "d",
+     "frames": 4
+    },
+    {
+     "input": "d/f",
+     "frames": 4
+    },
+    {
+     "input": "f+1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_66RK",
+    "Aa_lp00F"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1903,
+    1456,
+    1577,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 72,
+   "name": "Worm Virus",
+   "command": "f,F+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 39
+    },
+    {
+     "input": "n",
+     "frames": 47
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_66WP"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1920,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 73,
+   "name": "Killer Worm Virus",
+   "command": "f,F+1+2 during hit 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 46
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_66WP",
+    "Aa_rp00"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1920,
+    1456,
+    1590,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 74,
+   "name": "Overload ",
+   "command": "b,f+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 55
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_46RP"
+   ],
+   "trace": [
+    1462,
+    1463,
+    1942,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 75,
+   "name": "Double Rocket Punch",
+   "command": "b,B+1+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "b",
+     "frames": 1
+    },
+    {
+     "input": "b",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "b",
+     "frames": 1
+    },
+    {
+     "input": "b",
+     "frames": 4
+    },
+    {
+     "input": "b+1+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 95
+    },
+    {
+     "input": "n",
+     "frames": 65
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_spiral"
+   ],
+   "trace": [
+    1462,
+    1463,
+    1465,
+    1965,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 76,
+   "name": "Linear Punch",
+   "command": "f,f,f+2",
+   "setup": false,
+   "rage": false,
+   "distance": 3000,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "f+2",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_runrp00"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1461,
+    53,
+    1876,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 77,
+   "name": "Linear Dropkick",
+   "command": "f,f,f+3,4",
+   "setup": false,
+   "rage": false,
+   "distance": 3000,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "f+3",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Wn_runlk00",
+    "Aa_rk00"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    1461,
+    53,
+    1878,
+    1456,
+    1457,
+    1458,
+    1614,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 78,
+   "name": "Thruster Double Punch",
+   "command": "Run more than 3 steps 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 75
+    },
+    {
+     "input": "n",
+     "frames": 33
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_lrp00"
+   ],
+   "trace": [
+    1457,
+    1458,
+    1460,
+    53,
+    1596,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 79,
+   "name": "Double Spear to Destructive Form",
+   "command": "While rising 1,2,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_stlprpchain"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1847,
+    1848,
+    1849,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 80,
+   "name": "Spear Fishing",
+   "command": "While rising 1,2,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "n",
+     "frames": 57
+    },
+    {
+     "input": "n",
+     "frames": 61
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_stlprplk"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1847,
+    1848,
+    1850,
+    1851,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 81,
+   "name": "Spear Fishing to Destructive Form",
+   "command": "While rising 1,2,3,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_stlprplk",
+    "Aa_stlprplk_chain"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1847,
+    1848,
+    1850,
+    1852,
+    1853,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 82,
+   "name": "Digital Lift",
+   "command": "While rising 2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_s_trp"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 83,
+   "name": "Digital Lift to Boot",
+   "command": "While rising 2,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "3+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 87
+    },
+    {
+     "input": "n",
+     "frames": 28
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_s_trp",
+    "Aa_strpTstep"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1981,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 84,
+   "name": "Digital Lift to Dual Boot",
+   "command": "While rising 2,f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f+3+4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 87
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_s_trp",
+    "Aa_strpstep_chain"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1982,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 85,
+   "name": "Clockwork",
+   "command": "While rising 3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 21
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_s_tlk"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1864,
+    1869,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 86,
+   "name": "Clockwork Spring Middle",
+   "command": "During Clockwork 3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_s_tlk",
+    "Aa_domidK"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1864,
+    1869,
+    1888,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 87,
+   "name": "Clockwork Spring Low",
+   "command": "During Clockwork d+3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "d+3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 41
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_s_tlk",
+    "Aa_doloK"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1864,
+    1869,
+    1887,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 88,
+   "name": "Cute But Deadly",
+   "command": "While rising 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 41
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_s_tlrp"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1665,
+    1666,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 89,
+   "name": "Sad Hound",
+   "command": "While crouching d/f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d/f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_2hitWP"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1958,
+    1960,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 90,
+   "name": "Sad Hound to Destructive Form",
+   "command": "While crouching d/f+1+2{U+E034}1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d/f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 37
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_2hitWP",
+    "Aa_2hitWP_chain"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1958,
+    1959,
+    1961,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 91,
+   "name": "Happy Propeller",
+   "command": "During sidestep 4,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 21
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 36
+    },
+    {
+     "input": "n",
+     "frames": 33
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_rolerk",
+    "Aa_loRKkosi0"
+   ],
+   "trace": [
+    60,
+    2376,
+    1907,
+    1911,
+    1912,
+    1913,
+    1914,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 92,
+   "name": "Goody Two Shoes",
+   "command": "Back towards enemy 4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 36
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_rk00"
+   ],
+   "trace": [
+    1614,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 93,
+   "name": "Reboot",
+   "command": "While down (facing up) 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_lrp00"
+   ],
+   "trace": [
+    1596,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 94,
+   "name": "Reboot Meteor Kick",
+   "command": "While down (facing up) 1+2,3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "3+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 75
+    },
+    {
+     "input": "n",
+     "frames": 86
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_lrp00",
+    "Aa_lk00"
+   ],
+   "trace": [
+    1596,
+    1456,
+    1599,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 95,
+   "name": "Ground Rocket Punch",
+   "command": "(While enemy is down) d/b+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 22
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_Fvlbo00_dw"
+   ],
+   "trace": [
+    2001,
+    2013,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 97,
+   "name": "Destructive Form",
+   "command": "d+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 55
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_chainsaw"
+   ],
+   "trace": [
+    1696,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 98,
+   "name": "Shredder",
+   "command": "During Destructive Form 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 53
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chainLP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1769,
+    1770,
+    1771,
+    1772,
+    1773,
+    1774,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 99,
+   "name": "Shredding Uppercut",
+   "command": "During Destructive Form 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 66
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chainRP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1780,
+    1781,
+    1782,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 100,
+   "name": "Shredding Sky Punch",
+   "command": "During Destructive Form 2 during hit 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 70
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chainRP",
+    "Aa_chainRPy"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1780,
+    1776,
+    1777,
+    1778,
+    1779,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 101,
+   "name": "Idling",
+   "command": "During Destructive Form 3 (or 4)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain_kamC"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1709,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 102,
+   "name": "Death Marionette",
+   "command": "During Destructive Form 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chainWchain"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1801,
+    1802,
+    1803,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 103,
+   "name": "Hertz Blade",
+   "command": "During Destructive Form f+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+1",
+     "frames": 1
+    },
+    {
+     "input": "f+1",
+     "frames": 14
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain6LP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1758,
+    1759,
+    1760,
+    1761,
+    1762,
+    1763,
+    1764,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 104,
+   "name": "Hertz Blade Aegis",
+   "command": "During Destructive Form f+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 21
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain6RP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1753,
+    1754,
+    1755,
+    1756,
+    1757,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 105,
+   "name": "Hertz Blade Diablo",
+   "command": "During Destructive Form f+1+2,1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 64
+    },
+    {
+     "input": "n",
+     "frames": 70
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain6WP",
+    "Aa_chain6WPP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1804,
+    1805,
+    1806,
+    1807,
+    1813,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 106,
+   "name": "Dual Boot",
+   "command": "During Destructive Form f+3+4 (or f,f)",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 79
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 107,
+   "name": "Thruster Left",
+   "command": "During Dual Boot 1",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 23
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_stechaLP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1724,
+    1725,
+    1726,
+    1727,
+    1728
+   ],
+   "passed": true
+  },
+  {
+   "index": 108,
+   "name": "Thruster Right",
+   "command": "During Dual Boot 2",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_stechaRP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1730,
+    1731,
+    1733,
+    1735,
+    1737,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 109,
+   "name": "Thruster Right - Burst",
+   "command": "During Dual Boot 2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 71
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_stechaRP",
+    "Aa_stechaRP2Rv"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1730,
+    1732,
+    1734,
+    1736,
+    1739,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 110,
+   "name": "Eject Slider",
+   "command": "During Dual Boot 3",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_steLK"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1985,
+    1987,
+    1469,
+    1492,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 111,
+   "name": "Upstream",
+   "command": "During Dual Boot 4",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_steRK"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1988,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 112,
+   "name": "Thruster Drill",
+   "command": "During Dual Boot 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 4500,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_TsStep_chain",
+    "Aa_drill"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1716,
+    1719,
+    1720,
+    1721,
+    1722,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 113,
+   "name": "Hertz Blade Scud",
+   "command": "During Destructive Form d+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "d+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 16
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain2LP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1747,
+    1748,
+    1749,
+    1750,
+    1751,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 114,
+   "name": "Clock Setting",
+   "command": "During Destructive Form d+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "d+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 48
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain2RP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1741,
+    1742,
+    1743,
+    1746,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 115,
+   "name": "Hertz Blade - Tomahawk",
+   "command": "During Destructive Form b+2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 16
+    },
+    {
+     "input": "n",
+     "frames": 21
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain4RP",
+    "Aa_chain4RP_R"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1783,
+    1784,
+    1785,
+    1786,
+    1787,
+    1788,
+    1789,
+    1789
+   ],
+   "passed": true
+  },
+  {
+   "index": 116,
+   "name": "Retro Rockets",
+   "command": "During Destructive Form b+3+4 (or b,b or u/b,b)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "sJBAC_W0B_chain"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1711,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 117,
+   "name": "Evasive Action",
+   "command": "During Destructive Form u+3+4 (or d+3+4)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "u+3+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain_Lste"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1705,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 118,
+   "name": "Evasive Slash",
+   "command": "During Destructive Form u+3+4,1 (or d+3+4,1)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "u+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 76
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain_Lste",
+    "Aa_chainsteLP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1705,
+    1707,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 119,
+   "name": "Spindle Slash",
+   "command": "During Destructive Form u/f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "d+1+2",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "u/f+1+2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 23
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Aa_chainsaw",
+    "Aa_chain9WP"
+   ],
+   "trace": [
+    1696,
+    1698,
+    1791,
+    1792,
+    1793,
+    1698
+   ],
+   "passed": true
+  },
+  {
+   "index": 120,
+   "name": "Hertz Blade - Flare",
+   "command": "Back towards enemy, during Destructive Form 1 (or 2)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_lp00F"
+   ],
+   "trace": [
+    1577,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 121,
+   "name": "Taunt 1",
+   "command": "1+2+3",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+2+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 207
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_isu"
+   ],
+   "trace": [
+    1899,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 122,
+   "name": "Taunt 2",
+   "command": "1+2+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+2+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 77
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Aa_kami"
+   ],
+   "trace": [
+    1898,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 123,
+   "name": "10 Hit Combo",
+   "command": "u/b+4,1,1,2,1,1,3+4,3,2,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "u/b+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "1",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "1",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 21
+    },
+    {
+     "input": "3+4",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "3",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "2",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "2",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 16
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 10,
+   "attacks": [
+    "Aa_jprk00B",
+    "Aa_7rklp",
+    "Aa_10com3",
+    "Aa_10com4",
+    "Aa_10com5",
+    "Aa_10com6",
+    "Aa_10com6a7",
+    "Aa_sKAM00_",
+    "Aa_rp00"
+   ],
+   "trace": [
+    1562,
+    1563,
+    2015,
+    2016,
+    2017,
+    2020,
+    2022,
+    2024,
+    2025,
+    1456,
+    1590,
+    1456
+   ],
+   "passed": false
+  },
+  {
+   "index": 124,
+   "name": "Trigger Shuffle",
+   "command": "Approach enemy 1+3",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "1+3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 48
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    2038,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 125,
+   "name": "Trigger Shuffle",
+   "command": "Approach enemy f+1+3",
+   "setup": true,
+   "rage": false,
+   "distance": 2300,
+   "inputs": [
+    {
+     "input": "f+1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 48
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00F"
+   ],
+   "trace": [
+    2039,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 126,
+   "name": "Back Door",
+   "command": "Approach enemy 2+4",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "2+4",
+     "frames": 1
+    },
+    {
+     "input": "2+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvRB2_00"
+   ],
+   "trace": [
+    2040,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 127,
+   "name": "Back Door",
+   "command": "Approach enemy f+2+4",
+   "setup": true,
+   "rage": false,
+   "distance": 2300,
+   "inputs": [
+    {
+     "input": "f+2+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvRB2_00F"
+   ],
+   "trace": [
+    2041,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 128,
+   "name": "Compression",
+   "command": "Approach from left side 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 106
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    2038,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 129,
+   "name": "Hat Trick",
+   "command": "Approach from right side 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "1+3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 195
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    2038,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 130,
+   "name": "Random Typing",
+   "command": "Approach from behind 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 74
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    2038,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 131,
+   "name": "Spam Bomb",
+   "command": "Approach enemy u/f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "u/f+1+2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 181
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Thrmv_atama"
+   ],
+   "trace": [
+    2226,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 132,
+   "name": "Double Bull Shoot",
+   "command": "While crouching d/b+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d/b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 16
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 122
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Thrmv_B1_00"
+   ],
+   "trace": [
+    1491,
+    1469,
+    2044,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 133,
+   "name": "Model Change",
+   "command": "Time with enemy high attack b+1+3 (or b+2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "b+1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "AteN_move_0"
+   ],
+   "trace": [
+    2083,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 135,
+   "name": "Sample Combo 1",
+   "command": "d/f+2  >  4  >  f,F+2,3",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Aa_t_srpF",
+    "Aa_rk00",
+    "Aa_66RP",
+    "Aa_66RPLK"
+   ],
+   "trace": [
+    1827,
+    1456,
+    1614,
+    1456,
+    1460,
+    1934,
+    1936,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 136,
+   "name": "Sample Combo 2",
+   "command": "d/f+2  >  d/f+1,1  >  f+2  >  b+2,4  >  f,f,f+3,4",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "d/f+1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "b+2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "f",
+     "frames": 6
+    },
+    {
+     "input": "f",
+     "frames": 2
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_t_srpF",
+    "Aa_t_slpF",
+    "Aa_3lplp",
+    "Aa_rp00F",
+    "Aa_rp00B",
+    "Aa_4rprk",
+    "Wn_runlk00",
+    "Aa_rk00"
+   ],
+   "trace": [
+    1827,
+    1456,
+    1815,
+    1817,
+    1456,
+    1620,
+    1456,
+    1895,
+    1902,
+    1456,
+    1460,
+    1461,
+    53,
+    1878,
+    1456,
+    1614,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 137,
+   "name": "Sample Combo 3",
+   "command": "d/f+2  >  f+2  >  d/f+1,1  >  d+4,1+2  >  d+3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f+2",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 31
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "d/f+1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+3",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 39
+    },
+    {
+     "input": "1",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_t_srpF",
+    "Aa_rp00F",
+    "Aa_t_slpF",
+    "Aa_3lplp",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_2lk",
+    "Aa_s_tlp00"
+   ],
+   "trace": [
+    1827,
+    1456,
+    1620,
+    1456,
+    1815,
+    1817,
+    1456,
+    1692,
+    1695,
+    1456,
+    1688,
+    2013,
+    1469,
+    1847,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 139,
+   "name": "Sample Combo 4",
+   "command": "b+3+4  >  f+2  >  d+4,1+2  >  u/f+3,2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f+2",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 34
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "d+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "1+2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "u/f+3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 10
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Aa_lrk00B",
+    "Aa_rp00F",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Co_jplk00F",
+    "Aa_jplkActP"
+   ],
+   "trace": [
+    1663,
+    1456,
+    1620,
+    1456,
+    1692,
+    1695,
+    1456,
+    1527,
+    1529,
+    1530,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 140,
+   "name": "Sample Combo 5",
+   "command": "b+3+4  >  f+2  >  4  >  f+3+4  >  During Boot 1,2,1,3+4",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+2",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+3+4",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_lrk00B",
+    "Aa_rp00F",
+    "Aa_rk00",
+    "Aa_TsStep",
+    "Aa_steLP",
+    "Aa_steLPRP",
+    "Aa_steLPRPLP",
+    "Aa_steLPRPLPLK"
+   ],
+   "trace": [
+    1663,
+    1456,
+    1620,
+    1456,
+    1614,
+    1456,
+    1977,
+    1993,
+    1994,
+    1996,
+    1998,
+    1999,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 141,
+   "name": "Sample Combo 6",
+   "command": "b+3+4  >  f+2  >  d/f+1,1  >  d+4,1+2  >  d+3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+2",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "d/f+1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "d+4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "1",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_lrk00B",
+    "Aa_rp00F",
+    "Aa_t_slpF",
+    "Aa_3lplp",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_2lk",
+    "Aa_s_tlp00"
+   ],
+   "trace": [
+    1663,
+    1456,
+    1620,
+    1456,
+    1815,
+    1817,
+    1456,
+    1692,
+    1695,
+    1456,
+    1688,
+    2013,
+    1469,
+    1847,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 143,
+   "name": "Sample Combo 7",
+   "command": "u/f+4,4  >  d+4,1+2  >  f+4,1,4",
+   "setup": true,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 71
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "4",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 7,
+   "attacks": [
+    "Aa_jprk00F",
+    "Aa_jprkrk",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_rk00F",
+    "Aa_6rklp",
+    "Aa_6rklprk"
+   ],
+   "trace": [
+    1565,
+    1564,
+    1456,
+    1692,
+    1695,
+    1456,
+    1628,
+    1633,
+    1634,
+    1636,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 144,
+   "name": "Sample Combo 8",
+   "command": "u/f+4,4  >  b+1  >  While rising 1,2,3  >  4  >  f,f,f+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "b+1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 32
+    },
+    {
+     "input": "1",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 29
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "f",
+     "frames": 10
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_jprk00F",
+    "Aa_jprkrk",
+    "Aa_lp00B",
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_stlprplk",
+    "Aa_rk00",
+    "Aa_rp00F"
+   ],
+   "trace": [
+    1565,
+    1564,
+    1456,
+    1642,
+    1469,
+    1847,
+    1848,
+    1850,
+    1851,
+    1456,
+    1614,
+    1456,
+    1620,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 145,
+   "name": "Sample Combo 9",
+   "command": "u/f+4,4  >  While rising 1,2,3  >  d+4,1+2  >  d+3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Aa_jprk00F",
+    "Aa_jprkrk",
+    "Aa_lp00F",
+    "Aa_rp00",
+    "Aa_rphiza",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_2lk",
+    "Aa_s_tlp00"
+   ],
+   "trace": [
+    1565,
+    1564,
+    1456,
+    1491,
+    2382,
+    1577,
+    1456,
+    1590,
+    1592,
+    1456,
+    1692,
+    1695,
+    1456,
+    1688,
+    2013,
+    1469,
+    1847,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 147,
+   "name": "Sample Combo 10",
+   "command": "While rising 2,3+4  >  During Boot 3  >  While rising 4  >  d+4,1+2  >  b,f+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "1+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "b",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 7,
+   "attacks": [
+    "Aa_s_trp",
+    "Aa_strpTstep",
+    "Aa_steLK",
+    "Aa_s_trk",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_46RP"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1981,
+    1985,
+    1987,
+    1469,
+    1874,
+    1456,
+    1692,
+    1695,
+    1456,
+    1462,
+    1463,
+    1942,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 148,
+   "name": "Sample Combo 11",
+   "command": "While rising 2,3+4  >  During Boot 3  >  While rising 1,2  >  b+2,4  >  f,f,f+3,4",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "b+2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Aa_s_trp",
+    "Aa_strpTstep",
+    "Aa_steLK",
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_rp00B",
+    "Aa_4rprk",
+    "Wn_runlk00",
+    "Aa_rk00"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1981,
+    1985,
+    1987,
+    1469,
+    1847,
+    1848,
+    1456,
+    1895,
+    1902,
+    1456,
+    1460,
+    1461,
+    53,
+    1878,
+    1456,
+    1614,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 149,
+   "name": "Sample Combo 12",
+   "command": "While rising 2,3+4  >  During Boot 3  >  While rising 1,2,3  >  4  >  f,f,f+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3+4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 31
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 10
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 65
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_s_trp",
+    "Aa_strpTstep",
+    "Aa_steLK",
+    "Aa_s_tlp00",
+    "Aa_stlprp",
+    "Aa_stlprplk",
+    "Aa_rk00",
+    "Aa_rp00F"
+   ],
+   "trace": [
+    1491,
+    1469,
+    1492,
+    1854,
+    1981,
+    1985,
+    1987,
+    1469,
+    1847,
+    1848,
+    1850,
+    1851,
+    1456,
+    1614,
+    1456,
+    1620,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 151,
+   "name": "Sample Combo 13",
+   "command": "f+3+4  >  During Boot 4  >  b+3  >  f+2,3,3",
+   "setup": true,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRK",
+    "Aa_lk00B",
+    "Aa_rp00F",
+    "Aa_6rplk",
+    "Aa_6rplklk"
+   ],
+   "trace": [
+    1977,
+    1988,
+    1456,
+    1610,
+    1456,
+    1620,
+    1624,
+    1627,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 152,
+   "name": "Sample Combo 14",
+   "command": "f+3+4  >  During Boot 4  >  While rising 1+2 Hold  >  While rising 1,2  >  b+2,4  >  f,f,f+2",
+   "setup": true,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "d",
+     "frames": 12
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 19
+    },
+    {
+     "input": "1+2",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "b+2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 8,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRK",
+    "Aa_s_tlrp",
+    "Aa_lp00F",
+    "Aa_rp00",
+    "Aa_rp00B",
+    "Aa_4rprk",
+    "Aa_runrp00"
+   ],
+   "trace": [
+    1977,
+    1988,
+    1456,
+    1491,
+    1469,
+    1492,
+    1665,
+    1666,
+    1469,
+    1492,
+    1456,
+    1577,
+    1456,
+    1590,
+    1456,
+    1895,
+    1902,
+    1456,
+    1460,
+    53,
+    1876,
+    1456
+   ],
+   "passed": true
+  },
+  {
+   "index": 153,
+   "name": "Sample Combo 15",
+   "command": "f+3+4  >  During Boot 4  >  U/F+4  >  d/f+1,1  >  d+4,1+2  >  d+3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 4000,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 39
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "u/f",
+     "frames": 21
+    },
+    {
+     "input": "u/f",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d/f+1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1+2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "d+3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "1",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 38
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Aa_TsStep",
+    "Aa_steRK",
+    "Co_jprk01F",
+    "Aa_t_slpF",
+    "Aa_3lplp",
+    "Co_t_srk00",
+    "Aa_swinghead",
+    "Aa_2lk",
+    "Aa_s_tlp00"
+   ],
+   "trace": [
+    1977,
+    1988,
+    1456,
+    62,
+    1545,
+    1456,
+    1815,
+    1817,
+    1456,
+    1692,
+    1695,
+    1456,
+    1688,
+    2013,
+    1469,
+    1847,
+    1456
+   ],
+   "passed": true
+  }
+ ]
+}

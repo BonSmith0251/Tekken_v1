@@ -52,10 +52,12 @@ The JSON output identifies candidates and unresolved references, not semantic pr
 - After every import, audit the materials and meshes against Jin and Kazuya:
   - no all-zero `*_MaskMap.png`;
   - no SpecularColor material ID without a specular map;
-  - every alpha face overlay transparent (`*_eye_shadow`, `*_eye_corner`);
+  - every alpha face overlay transparent (`*_eye_shadow`, `*_eye_corner`, `*_lip`), with its cooked diffuse still carrying alpha (Alisa's lip lost it);
+  - eyebrows and eyelashes alpha-cut (0.25) or transparent, never opaque;
   - eyes tinted two-tone (iris versus sclera) with smoothness around 0.25;
   - roughly 0.55–0.8 vertices per triangle (3.00 means triangle soup and flat shading);
-  - re-imported meshes really updated (the `CopySerialized` trap).
+  - re-imported meshes really updated (the `CopySerialized` trap);
+  - every `ATH_*_Btop` detach bone parented to the limb whose skin it drives, with limbs measured under a bent pose (Alisa's upper arm bowed with each elbow bend).
 
   See [project-and-rendering.md](references/project-and-rendering.md) and [character-pipeline.md](references/character-pipeline.md). After fixing one material, re-check skin separately from clothing: one fix has exposed a hidden mesh defect before ("costumes are ok, but the body skin is not ok now").
 - Where runtime `Cloth` is added, keep skin off the cloth renderer. Check neck and thigh close-ups in the user's museum with dynamics running; captures with cloth disabled hide the defect.

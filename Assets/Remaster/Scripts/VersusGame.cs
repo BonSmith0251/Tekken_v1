@@ -15,7 +15,9 @@ namespace Versus.Remaster
         public GameObject sceneKazuya;
         public MuseumCharacter xiaoyuActions;
         public GameObject xiaoyuPrefab;
-        public enum Fighter { Kazuya, Jin, Xiaoyu }
+        public MuseumCharacter alisaActions;
+        public GameObject alisaPrefab;
+        public enum Fighter { Kazuya, Jin, Xiaoyu, Alisa }
         [Tooltip("Fighters for this match. Each runs its original moveset, entrance and victory takes.")]
         public Fighter playerOneFighter = Fighter.Jin, playerTwoFighter = Fighter.Xiaoyu;
         public Camera sceneCamera;
@@ -210,16 +212,18 @@ namespace Versus.Remaster
             if (!jinActions) jinActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Jin.asset");
             if (!kazuyaActions) kazuyaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Kazuya.asset");
             if (!xiaoyuActions) xiaoyuActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Xiaoyu.asset");
+            if (!alisaActions) alisaActions = UnityEditor.AssetDatabase.LoadAssetAtPath<MuseumCharacter>("Assets/Remaster/Museum/Alisa.asset");
 #endif
             var setup = fighter == Fighter.Jin ? new FighterSetup { code = "jin", prefix = "Jz_", actions = jinActions } :
                         fighter == Fighter.Kazuya ? new FighterSetup { code = "kaz", prefix = "Kz_", actions = kazuyaActions } :
+                        fighter == Fighter.Alisa ? new FighterSetup { code = "asa", prefix = "Aa_", actions = alisaActions } :
                         new FighterSetup { code = "xia", prefix = "Fu_", actions = xiaoyuActions };
             setup.fighter = fighter;
             if (!setup.actions) throw new InvalidOperationException("Assign the " + fighter + " move catalog in LocalVersus.");
             return setup;
         }
 
-        // Scene-placed fighters are used once; a second copy (mirror match) or Xiaoyu comes from the prefab.
+        // Scene-placed fighters are used once; a second copy (mirror match), Xiaoyu or Alisa comes from the prefab.
         GameObject Spawn(FighterSetup setup, int player)
         {
             if (setup.fighter == Fighter.Jin)
@@ -236,6 +240,14 @@ namespace Versus.Remaster
 #endif
                 if (!kazuyaPrefab) throw new InvalidOperationException("Assign the Kazuya Karate Gi prefab in LocalVersus.");
                 return Instantiate(kazuyaPrefab, transform);
+            }
+            if (setup.fighter == Fighter.Alisa)
+            {
+#if UNITY_EDITOR
+                if (!alisaPrefab) alisaPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Alisa/Prefabs/Default_1P.prefab");
+#endif
+                if (!alisaPrefab) throw new InvalidOperationException("Assign the Alisa Default 1P prefab in LocalVersus.");
+                return Instantiate(alisaPrefab, transform);
             }
 #if UNITY_EDITOR
             if (!xiaoyuPrefab) xiaoyuPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Remaster/Xiaoyu/Prefabs/Default_1P.prefab");

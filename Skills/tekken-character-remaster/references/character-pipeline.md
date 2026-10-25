@@ -97,6 +97,13 @@ Importers call `RecalculateNormals`, which averages only across shared vertex in
 
 Seams between mesh pieces (face/upper at the neck, upper/lower at the waist or thigh) should have identical weights on coincident vertices. Measure this before suspecting tearing. Xiaoyu's seams match in every costume.
 
+**Detach-point bones (`ATH_*_Btop`).** Some rigs (Alisa) have them: points where body parts detach. In the source skeleton they can hang from the wrong parent for the skin they drive.
+
+- **Alisa's elbow bone.** `ATH_L/R_Arm_Btm_Btop` sits at the elbow but is parented to the forearm, and on every costume's forearm piece (`exp_*_parmL/R`) it skins the lower 40% of the upper arm. The upper arm therefore bowed 4–7.5 cm with each elbow bend, which the user reported as "the upper arm of alisa is not straight".
+- **The fix.** `AlisaImporter.DetachPoints` re-hangs each detach bone under the limb its skin belongs to: Arm_Top, Arm_Mid and Arm_Btm under `L/R_Arm`, plus the neck, head and waist ones. After it, the upper arm stayed rigid within 0.5 cm from the shoulder to 80% of the way to the elbow.
+- **Check all of them.** For any rig with `ATH_*` bones, measure which vertices every one of them drives in every costume piece and compare that with its parent. Don't stop at the bones on seams: the seam fix had already covered neck, head and waist and still missed the elbow.
+- **Bend-only defects.** This kind of defect appears only when a joint bends. The bind pose looks fine, uniform helper scales, four influences and in-place mesh rebuilds all passed, so measure deviation from a rigid limb under a bent pose.
+
 ## Runtime cloth and helper bones
 
 Tekken rigs shape the body with non-uniformly scaled helper bones. Xiaoyu has `Neck__offset` (1, 1.344, 1.459), collarbone, pectoral and `HLP_*_UpLeg_*`, butt and groin helpers at (1, 0.881, 0.881). Unity's `Cloth` re-skins every vertex of its renderer on the CPU and does not support that scale, so any skin sharing a renderer with simulated fabric balloons (her neck in Default/Classic/School and thighs in Formal/School). `XiaoyuSecondaryDynamics.SeparateGarment` moves only the simulated sections onto a separate renderer before adding `Cloth`. Keep that split when adding cloth to any fighter. Check renderer contents per costume for skin materials (`*_skin_*`) next to fabric sections.

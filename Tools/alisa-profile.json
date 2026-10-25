@@ -1,0 +1,61 @@
+{
+  "characterCode": "asa",
+  "displayName": "Alisa Bosconovitch",
+  "characterId": 19,
+  "animationPrefix": "aa",
+  "moveNamePrefix": "Aa_",
+  "stanceMoveId": 1456,
+  "stanceAnimation": "kmaa_fighting2(DVD)",
+  "introMoveId": 2374,
+  "moveset": "decrypted/tkdata/mothead/bin/asamot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/asarotsm.arc",
+  "archiveSha256": "cd879ae0b2b8acfd4289ec328af7bf15c75b505b6c663dd458221062f648bc92",
+  "targetRig": "Assets/Remaster/Editor/AlisaSource/target-rig.json",
+  "targetRigSha256": "9ba03f226ea59076e7638c227891d87f4b057a8966efd81632c3b04c76be9b05",
+  "bodyBoneCount": 19,
+  "bindOrientationDeltaDegreesFromReference": 4.6918727174267944e-05,
+  "meshPositionBasis": "UE centimeters (x,y,z) -> Unity meters (-x,z,y)",
+  "bodyConversion": "Native 64 spherical axis-angle converted through C8 and the reference rig into Alisa's extracted bind orientations (shared basis, delta under 0.001 degrees).",
+  "costumes": [
+    "Default 1P",
+    "Classic",
+    "Battle",
+    "School Uniform"
+  ],
+  "costumePieces": "fac + har_1p + hed_* + bdu_* + exp_*_parmL/R (forearms and hands, per costume) + bdl_*",
+  "moveRecords": 2464,
+  "uniqueBodyClips": 1448,
+  "cancelBranches": 9531,
+  "entranceMoves": [
+    2457,
+    2458,
+    2459,
+    2460
+  ],
+  "victoryMoves": [
+    2461,
+    2462,
+    2463
+  ],
+  "stagingAliasesSkipped": {
+    "2456": "aa_w00_hd reuses aa_w00's clip and every event"
+  },
+  "stagingSecondary": "Native 19-channel hand tracks and 90-channel facial tracks on all seven takes; own camera on all seven.",
+  "commandGraph": {
+    "file": "Assets/Remaster/Resources/CommandGraph/asa.json",
+    "plainDemos": "121/123",
+    "setupDemos": "25/25",
+    "failing": [
+      "37 Quick Slider d+3",
+      "123 10 Hit Combo"
+    ]
+  },
+  "fallbacks": [
+    "exp_* robot parts (chainsaws, wings, back boosters, beam chainsaw) are not imported; the game shows them during specific moves through ATH_* attachment bones.",
+    "Rage Art cameras use position/Euler tracks (descriptors 11,7,15,21,21,21) that FightCameraTrack does not play; her Rage Art uses the fight camera.",
+    "No wardrobe yet: versus and staging dress her in the Default 1P preset and her hair has no springs.",
+    "Combat clips apply body channels only; no per-attack finger/facial tracks and no combat hand resource.",
+    "Eye_ADD and tear layers are dropped, as for the other fighters."
+  ],
+  "originalGameVisualComparison": false
+}
