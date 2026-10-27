@@ -5,9 +5,9 @@ description: Import, repair, and validate original Tekken character models, body
 
 # Tekken Character Remaster
 
-Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested workflow for Jin, Kazuya and Xiaoyu across the museum, `staging_test` and versus. In `LocalVersus2` Xiaoyu is the default player 2, but she has had less play-testing than the other two. It is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
+Extend the existing project using each requested fighter's own source assets and events. This skill captures the tested workflow for Jin, Kazuya, Xiaoyu, Alisa and Katarina across the museum, `staging_test` and versus. Alisa (`asa`, 2026-10-23 to 25) and Katarina (`ltn`, 2026-10-25, about 20 minutes from request to versus) are the newest. The user has not confirmed either in a scene; only headless matches and preview renders passed. `LocalVersus2` opens on a character select screen; its saved pair is Alisa vs Katarina (the `VersusGame` code default is Jin vs Xiaoyu). Original stages and the `env_scene` selector belong to the Claude skill `tekken-stage-environments` (`~/.claude/skills`); [stages-and-environments.md](references/stages-and-environments.md) is a summary of it. It is not evidence that every fighter uses their skeleton, channel layout, motion IDs, or coordinate mapping.
 
-Two sibling Claude skills in `~/.claude/skills` cover the rest:
+Sibling skills cover the rest. Codex skills in `~/.codex/skills`: `tekken-character-battle-effects` (each fighter's own 0x802E effects), `tekken-versus-common-effects` (the shared hit/guard/rage effects) and `tekken-versus-camera-effects` (shakes, zooms, Rage Art cameras). Claude skills in `~/.claude/skills`, including `tekken-stage-environments` for stages:
 
 - `tekken-costume-wardrobe`: costumes, outfits and worn items (hair, hats, glasses, customization pieces). The wardrobe stays in its own `Wardrobe.unity` scene.
 - `tekken-versus-battle`: the versus scene (command graphs, hits, facing, KO, fight camera, impact effects, CPU) and adding a fighter to it.
@@ -25,7 +25,7 @@ Two sibling Claude skills in `~/.claude/skills` cover the rest:
 
 ## Build a character profile first
 
-Read [character-pipeline.md](references/character-pipeline.md) for body, skin, hand and face conversion. Record source character code, animation prefix (it can differ from the code: Xiaoyu is `xia` with `fu_` animations), moveset/archive paths, skeleton asset, costume assets, proven coordinate conversions, stance move, staging candidates and imported resource locations. Resolve these per fighter. `Tools/xiaoyu-profile.json` in the Unity project is the worked example of a profile.
+Read [character-pipeline.md](references/character-pipeline.md) for body, skin, hand and face conversion. Record source character code, animation prefix (it can differ from the code: Xiaoyu is `xia` with `fu_` animations), moveset/archive paths, skeleton asset, costume assets, proven coordinate conversions, stance move, staging candidates and imported resource locations. Resolve these per fighter. `Tools/xiaoyu-profile.json` and `Tools/alisa-profile.json` in the Unity project are the worked examples of a profile (Alisa's `fallbacks` entry still says she has no wardrobe, which is out of date).
 
 Run the bundled read-only inspector to find candidate staging records and audit their references:
 

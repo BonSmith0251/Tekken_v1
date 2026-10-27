@@ -14,11 +14,13 @@ Where things are:
 
 Record three identifiers per fighter, because they differ:
 
-| Identifier | Xiaoyu | Jin | Kazuya |
-|---|---|---|---|
-| Catalog / character code | `xia` | `jin` | `kaz` |
-| Animation prefix | `fu_` | `jz_` | `kz_` |
-| Versus catalog prefix | — | `Jz_` | `Kz_` |
+| Identifier | Xiaoyu | Jin | Kazuya | Alisa | Katarina |
+|---|---|---|---|---|---|
+| Catalog / character code | `xia` | `jin` | `kaz` | `asa` | `ltn` |
+| Animation prefix | `fu_` | `jz_` | `kz_` | `aa_` | `ln_` |
+| Versus catalog prefix | — | `Jz_` | `Kz_` | `Aa_` | `Ln_` |
+
+Alisa's profile: character id 19, stance move 1456 `kmaa_fighting2(DVD)`, intro move 2374, 19 body bones, bind orientation within 0.00005° of the shared basis. Katarina's profile (`Tools/katarina-profile.json`): display name "Katarina Alves", stance 1419 `lnet_kamae(DVD)`, face piece `SK_CH_ltn_face` (not `_fac`), no `ATH_*_Btop` parts, skeleton on the shared body basis; 2,091 moves, 1,314 clips, 5 entrances and 3 victories, 4 outfits. Find a fighter's character id from a "character is" requirement unique to their moveset; Katarina has none, so her 21 is roster order only. Alisa's code was not obvious: count pak `Character/Item/Meshes/<code>` folders with `t7extract list`, then confirm `mothead/bin/<code>mot.bin` exists.
 
 `MuseumCharacter.characterCode` is the reliable key. Display-name prefix tests break: "Ling Xiaoyu" never matched `StartsWith("Xiaoyu")`. `Tools/xiaoyu-profile.json` is the worked profile example. It records the mesh basis, the stance move (1428 `kmfu_kamae`), the staging move ranges, and the rule to reuse common-bank body clips only when their SHA256 and bind orientations match.
 
@@ -28,9 +30,30 @@ Current project modules to inspect before adding another fighter:
 - `FighterActionCatalog.cs`: currently chooses Jin/Kazuya stance IDs through prefix checks. Replace this with profile data for additional characters; do not fall through to the wrong fighter's stance.
 - `FighterActionMotion.cs`: JRT1 body sampling, a 5-frame SmoothStep crossfade between moves, and presentation overrides. Combat hands load `Resources/SecondaryMotion/<code>_combat_hands` keyed on `characterCode`, otherwise they use the body clip's hands. Jin's and Kazuya's museum assets predate `characterCode`, so a display-name fallback remains for them.
 - `JinRig.cs`: shared presentation class name does not prove skeleton compatibility. Its solver expects particular humanoid bone names and has a generic finger-curl fallback.
-- `VersusGame.cs`: picks fighters per player (`enum Fighter { Kazuya, Jin, Xiaoyu }`, `playerOneFighter`/`playerTwoFighter`, default Jin vs Xiaoyu). It dresses them through `FightWardrobe.DressSaved` and builds `WardrobeDynamics`. Only `Spawn` keeps per-fighter branches. Adding a fighter to versus follows the `tekken-versus-battle` skill (command graph export, demo oracle, `Setup`/`Spawn`).
+- `VersusGame.cs`: picks fighters per player (`enum Fighter { Kazuya, Jin, Xiaoyu, Alisa, Katarina }`, `playerOneFighter`/`playerTwoFighter`, code default Jin vs Xiaoyu; the saved scene has Alisa vs Katarina, but the character select screen overrides it at runtime; set the pair with `Temp/setup-localversus2`). It dresses them through `FightWardrobe.DressSaved` and builds `WardrobeDynamics`. Only `Spawn` keeps per-fighter branches. Adding a fighter to versus follows the `tekken-versus-battle` skill (command graph export, demo oracle, `Setup`/`Spawn`).
 - `StagingTestPlayer.cs`: `Code()` must return `characterCode`, and it attaches character dynamics per take. `StagingValidation.cs` once sent every non-Jin entry to Kazuya; editor validators often assume two fighters.
-- `CharacterMuseum.cs`, `CharacterMuseumSetup.cs`: preserve existing search, categories, scrubbing and manual transition navigation. The preset costume list has been replaced by the saved wardrobe items for characters with a wardrobe. The Staging category comes from the regex `^(jz|kz|fu)_[sw]\d{2}` in `CharacterMuseumSetup.cs`; add each new animation prefix there. The museum camera must frame the model's exhibit x/z, not the gallery origin. Inspect current secondary-motion support; do not assume versus support automatically applies in the museum.
+- `CharacterMuseum.cs`, `CharacterMuseumSetup.cs`: preserve existing search, categories, scrubbing and manual transition navigation. The preset costume list has been replaced by the saved wardrobe items for characters with a wardrobe. The Staging category comes from the regex `^(jz|kz|fu|aa|ln)_[sw]\d{2}` in `CharacterMuseumSetup.cs`; add each new animation prefix there. The museum camera must frame the model's exhibit x/z, not the gallery origin. Inspect current secondary-motion support; do not assume versus support automatically applies in the museum.
+
+## Onboarding recipe (proven on Xiaoyu, then Alisa in about 20 minutes)
+
+1. Clone the previous fighter's top-level scripts in `UnityRemaster/` with renames. Derive them with an asserting string replace that aborts when a token is missing; that is how Katarina's scripts came from Alisa's. Drop Alisa-only parts (her detach-point table, `PrepareLocalVersus2`) when they don't apply. Also add the code to the `bake_staging_tracks.py` loop and the prefix to the Staging regex. The scripts:
+   - `export_<name>.py`, with a hand-written `SETS` list of costume pieces;
+   - `extract_<name>_motion.py`;
+   - `prepare_<name>_materials.py`, `prepare_<name>_moveset.py` and `prepare_<name>_staging.py`.
+2. Write outputs to `Assets/_Project/Characters/<Name>/{Source,Costumes,Wardrobe,Motion}`, never under an `Editor/` folder; Unity strips those from player builds.
+3. Add the editor scripts under `Assets/_Project/Scripts/Editor`:
+   - `<Name>Importer.cs`: a `Temp/import-<name>` flag runs Import, then `<Name>MuseumSetup.Finish`, then `PrepareLocalVersus2`.
+   - `<Name>MuseumSetup.cs`: `BuildCharacter`, setting `characterCode` and `stanceMoveId`. It binds the staging.json takes and throws if body frames ≠ take frames.
+   - `<Name>Capture.cs`: a `capture-<name>` flag writes preview renders to `Validation/<Name>/`.
+4. Have each step write a report JSON (`Validation/<name>-model.json`, `-museum.json`, `-localversus2.json`).
+5. **Edit scenes without touching the user's work.** `AlisaMuseumSetup.EditScene` opens each scene additively, edits it, and saves only if the user had no unsaved edits there; otherwise it only logs a warning. It added Alisa to the museum and `staging_test` this way, so prefer it to hand-editing `.unity` files.
+6. Report coverage gaps plainly:
+   - `<code>_combat_hands` exists only for jin and kaz;
+   - Alisa has no Rage Art camera (Katarina has one);
+   - a face capture can miss the face when the stance turns the head away (Katarina): pick another frame;
+   - in the museum and `staging_test` only `xia` gets character dynamics (`CharacterMuseum.cs`, `StagingTestPlayer.cs`), so Alisa's hair is rigid there.
+7. **Audits miss defects.** Alisa's first post-import audit reported no problems and the contact sheets looked right, yet the user found an opaque lip and a split neck. Stance renders don't reveal these.
+8. **Wait loops.** A 30-minute DLL wait loop can expire while the user is in Play. When they return, re-check the DLL timestamp instead of trusting the failed loop.
 
 ## Body animation
 
@@ -87,7 +110,7 @@ The decoders keep the four strongest normalized influences, and so does `t7extra
 
 Match bone names case-insensitively, as Unreal does. Pieces mix `Base`/`BASE` and `Head`/`HEAD`, and the museum, validators and capture tools all need the same rule. `transform\d+` helpers are piece-local (hair and feathers both have `transform3`), so give each piece its own copy.
 
-**Re-import trap.** When a mesh asset already exists, updating it with `EditorUtility.CopySerialized(newMesh, existing)` refreshes the bounds but keeps the old vertex buffer, so corrected geometry silently never reaches Unity. Kazuya's glasses stayed rotated after the export was fixed. `JinCostumeImporter.cs` now rebuilds in place (`Clear()`, then assign and `SetDirty`). `JinImporter.cs`, `KazuyaImporter.cs` and `XiaoyuImporter.cs` still use `CopySerialized`. Fix the one you touch, or audit by decoding `_typelessdata` from the `.asset` and comparing it with the source JSON.
+**Re-import trap.** When a mesh asset already exists, updating it with `EditorUtility.CopySerialized(newMesh, existing)` refreshes the bounds but keeps the old vertex buffer, so corrected geometry silently never reaches Unity. Kazuya's glasses stayed rotated after the export was fixed. `JinCostumeImporter.cs` now rebuilds in place (`Clear()`, then assign and `SetDirty`). `JinImporter.cs`, `KazuyaImporter.cs` and `XiaoyuImporter.cs` still use `CopySerialized`; `AlisaImporter.cs` rebuilds in place (and also welds triangle soup). Fix the one you touch, or audit by decoding `_typelessdata` from the `.asset` and comparing it with the source JSON.
 
 Verify left/right hands at neutral, curled, open and moving frames, including thumb position and glove intersections. Mouth checks should distinguish lips, jaw, tongue and any blendshape/attachment mechanism. Missing channel layouts or costume rig variants should be reported specifically, not replaced with a permanently folded hand or arbitrary mouth motion.
 
@@ -102,6 +125,8 @@ Seams between mesh pieces (face/upper at the neck, upper/lower at the waist or t
 - **Alisa's elbow bone.** `ATH_L/R_Arm_Btm_Btop` sits at the elbow but is parented to the forearm, and on every costume's forearm piece (`exp_*_parmL/R`) it skins the lower 40% of the upper arm. The upper arm therefore bowed 4–7.5 cm with each elbow bend, which the user reported as "the upper arm of alisa is not straight".
 - **The fix.** `AlisaImporter.DetachPoints` re-hangs each detach bone under the limb its skin belongs to: Arm_Top, Arm_Mid and Arm_Btm under `L/R_Arm`, plus the neck, head and waist ones. After it, the upper arm stayed rigid within 0.5 cm from the shoulder to 80% of the way to the elbow.
 - **Check all of them.** For any rig with `ATH_*` bones, measure which vertices every one of them drives in every costume piece and compare that with its parent. Don't stop at the bones on seams: the seam fix had already covered neck, head and waist and still missed the elbow.
+- **Robot parts (Alisa-specific).** Her `exp_*` parts (chainsaws, wings, boosters, beamchainsaw) appear only in certain moves and are not imported. Because the re-hang keeps parts attached, moves that truly detach her head or arms would need those bones driven separately.
+- **One table for all costumes is a compromise.** Dropping `ATH_Hip_Btop`→Spine1 reopened the Battle costume's waist (2.07 cm), so it stayed, at the cost of 0.87 cm under Default 1P's skirt. Re-parent only under uniformly scaled targets (Head 1.15, Spine1 0.92) so the bind pose survives.
 - **Bend-only defects.** This kind of defect appears only when a joint bends. The bind pose looks fine, uniform helper scales, four influences and in-place mesh rebuilds all passed, so measure deviation from a rigid limb under a bent pose.
 
 ## Runtime cloth and helper bones

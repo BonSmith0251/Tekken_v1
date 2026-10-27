@@ -12,13 +12,13 @@ Camera extraction rules that held for Jin, Kazuya and Xiaoyu:
 - Assert C8 format, four descriptors, and a sample count equal to the move's frames.
 - Secondary properties are 33838 (left hand), 33839 (right hand) and 33986 (face).
 
-`StagingCatalog.json` and `StagingCatalog.cs` connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. The catalog holds jin 9, kaz 10 and xia 9 takes. `bake_staging_tracks.py` bakes only Jin and Kazuya itself, assumes synchronized single events, and then appends the entries from `Assets/_Project/Characters/Xiaoyu/Source/Base/staging.json`, so a re-bake keeps Xiaoyu.
+`StagingCatalog.json` and `StagingCatalog.cs` connect character codes, move IDs, animation names, kinds, native frame lengths, camera resources, secondary resources and the specific landing edit flag. The catalog holds jin 9, kaz 10, xia 9 and asa 7 takes (Alisa: entrances 2457–2460, victories 2461–2463). `bake_staging_tracks.py` bakes only Jin and Kazuya itself, assumes synchronized single events, and then merges each `Characters/<Name>/Source/Base/staging.json` for `xia` and `asa` in one loop, so a re-bake keeps them. Skip alias records that reuse a clip and every event: Alisa's `aa_w00_hd` (move 2456) was dropped so the random pick stays fair.
 
 ## Adding a fighter to staging_test
 
 1. Bake the fighter's tracks with a per-character script, for example `UnityRemaster/prepare_xiaoyu_staging.py`. It writes `Characters/<Name>/Source/Base/staging.json`, `Resources/EntranceCameras/<code>_staging_<move>.bytes` (T7C1) and the SMT1 secondary resources.
 2. Add a merge hook for that `staging.json` to `bake_staging_tracks.py`.
-3. Add the `MuseumCharacter` asset's GUID to the `characters:` list in `staging_test.unity`. Edit the file on disk only when that scene is not open in the editor; check the Unity window title.
+3. Add the `MuseumCharacter` asset's GUID to the `characters:` list in `staging_test.unity`. Prefer the additive `EditScene` pattern from `AlisaMuseumSetup` (it saves only when the scene has no unsaved edits). Otherwise edit the `.unity` file on disk only when that scene is not open in the editor; check the Unity window title.
 4. Make sure `StagingTestPlayer.Code()` resolves the fighter through `characterCode`, and that its bone dictionary ignores case.
 5. Attach character dynamics (for example `XiaoyuSecondaryDynamics`) per take, after dressing. Call `Reset()` after the first `Present()`, tick with unscaled delta time, freeze while paused, and null them on take change.
 6. Filter editor validators to the characters they support. `VictoryStaging.cs` filters by key.
