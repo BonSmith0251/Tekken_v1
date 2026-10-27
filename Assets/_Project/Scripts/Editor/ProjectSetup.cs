@@ -44,7 +44,7 @@ namespace Versus.Remaster.Editor
             PlayerSettings.productName = "Versus Remaster Prototype";
             PlayerSettings.defaultScreenWidth = 1280; PlayerSettings.defaultScreenHeight = 720;
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
-            PlayerSettings.runInBackground = false;
+            PlayerSettings.runInBackground = true;
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
             if (!File.Exists(ScenePath))

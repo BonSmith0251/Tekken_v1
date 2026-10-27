@@ -121,7 +121,6 @@ namespace Versus.Remaster
             diagnostic = Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0 ||
                          Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0;
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0) automaticFight = true;
-            if (diagnostic) Application.runInBackground = true;
             // The original character select comes first; it reloads the scene with both picks.
             if (characterSelect && !diagnostic && !CharacterSelect.Chosen)
             {
@@ -723,7 +722,9 @@ namespace Versus.Remaster
 
         void OnDisable() => Time.timeScale = 1;
 
-        void OnApplicationFocus(bool focus) { if (!focus && !menu && !diagnostic) { paused = true; ClearInputs(); } }
+        // The match keeps running when the window loses focus; only held keys are dropped, since
+        // their release would never arrive.
+        void OnApplicationFocus(bool focus) { if (!focus) ClearInputs(); }
         void ClearInputs() { for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pressedSinceTick[i] = 0; cpu[i]?.Clear(); } }
         void ClearVictory() { if (victory != null) victory.Clear(); victory = null; victoryPlayer = -1; victoryAnchor = null; }
         void StartMatch() { menu = false; paused = false; ClearVictory(); ClearInputs(); ResetImpactEffects(); battle.Restart(); lastPhase = battle.phase; }
