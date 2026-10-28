@@ -78,7 +78,9 @@ namespace Versus.Remaster
         // Real seconds since the round ended: the K.O. call shows first, then the result panel;
         // the match winner's victory take starts once the loser's death fall has played.
         float roundEndClock;
-        const float KoCallSeconds = 1.8f, VictoryDelaySeconds = 2.4f;
+        const int ReadyTick = 68, FightTick = ReadyTick + 40;
+        // KO_mc, WKO_mc and TimeUp_mc are 120-frame clips (2 s at 60 fps), shown whole as in the original.
+        const float KoCallSeconds = 2f, VictoryDelaySeconds = 2.4f;
         int koFocus = -1;
         MatchPhase lastPhase;
         // The winner's pose anchor while the victory take plays: the battle keeps simulating, but the
@@ -870,9 +872,20 @@ namespace Versus.Remaster
             if (entrance != null && entrance.Active && entrance.ShowsBattleHud)
                 hud.DrawCall(entrance.Cue, 1, false, entrance.CueSeconds);
             else if (battle.phase == MatchPhase.Intro)
-                // The round call, then FIGHT for the last 45 ticks before control.
-                hud.DrawCall(battle.phaseTicks > 45 ? BattleHud.Call.Round : BattleHud.Call.Fight, battle.round, finalRound,
-                    battle.phaseTicks > 45 ? (150 - battle.phaseTicks) / 60f : (45 - battle.phaseTicks) / 60f);
+            {
+                // As in the original capture (TEKKEN 7 2026-10-23 08-04-08, 30 fps): READY 68 ticks after ROUND,
+                // FIGHT 40 after READY (the READY clip's own length), then FIGHT runs into the fight.
+                int elapsed = 150 - battle.phaseTicks;
+                if (elapsed < ReadyTick) hud.DrawCall(BattleHud.Call.Round, battle.round, finalRound, elapsed / 60f);
+                else if (elapsed < FightTick) hud.DrawCall(BattleHud.Call.Ready, battle.round, finalRound, (elapsed - ReadyTick) / 60f);
+                else hud.DrawCall(BattleHud.Call.Fight, battle.round, finalRound, (elapsed - FightTick) / 60f);
+            }
+            else if (battle.phase == MatchPhase.Fight)
+            {
+                // The original FIGHT call finishes over the first moments of the fight (it started before control).
+                float fightAge = (150 - FightTick + battle.rules.seconds * 60 - battle.ticksLeft) / 60f;
+                if (fightAge < hud.FightCallSeconds) hud.DrawCall(BattleHud.Call.Fight, battle.round, finalRound, fightAge);
+            }
             if (automaticFight) Label(new Rect(24, 684, 300, 24), "AUTO FIGHT   /   F2", small);
             if ((battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && battle.UsesCommandGraphs && roundEndClock < KoCallSeconds)
             {

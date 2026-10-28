@@ -1,0 +1,99 @@
+BATTLE HUD: LIFE GAUGE EFFECTS (LocalVersus / LocalVersus2)
+
+The life gauge's behaviour is ported from the original Scaleform movie, not estimated from video.
+SW_UI_HUD_Gauge.uasset holds an uncompressed GFX (SWF 12) movie at 60 fps; its sprite timelines
+(frame labels, per-frame placements, colour transforms, blend modes) and its ActionScript 3 (Main:
+SetHealth, StartGaugeAnim, StopGaugeAnim, onRedScale, onDamage, RageOn/RageOff/RageEnd) were decoded
+with Tools/BattleHud/gfx_dump.py and abc_dis.py. BattleHud.cs runs the same logic on a 60 Hz clock.
+
+What the original does, and what the remaster now draws
+- Hit (SetHealth, health fell): the green cuts at once; the red damage stays where it was.
+- Gauge shake (onDamage): the whole gauge jumps to alternate sides, starting at 15 x 5 movie pixels;
+  each jump is perFrame/10 smaller, jumps come every 3 frames, then every 2 (after 4 frames), then
+  every frame (after 7 frames). It fades out over about 40 frames.
+- Damage frame (HUD_GAU_LIFE_FRAME_DAMAGE_Anim): two copies of the gold damage frame rise for two
+  frames and hold (0.33 / 0.6) until the shake's third stage, then peak (frame 3 / frame 7) and fade
+  out by frame 14.
+- Hit glow (GAU_Life_eff_sub): eff_damage on the cut, 49 frames: it widens 25% -> 78% in 8 frames and
+  narrows back, at 20-40% alpha, sheared with the gauge's lean. It ends early when the red finishes.
+- Red trail (StartGaugeAnim + onRedScale): the game holds it natively (StopGaugeAnim/StartGaugeAnim).
+  The remaster holds it while the struck fighter is still in a hit reaction, which matches the
+  reference: a single hit held ~28 frames in TEKKEN 7 2026-10-23 08-04-08.mp4 (75.30 s); the reaction
+  rule gives a median of 30 (HudTrail harness). It then slides linearly to the new level over 24
+  frames whatever the amount (DENOMINATOR_OF_SPEED is set natively; measured 11.5 frames at 30 fps).
+- Red glow (GAU_Life_redgrow, 35%): a thinner red strip under the red that follows the draining edge
+  at 85% of its speed (GLOW_DELAY_MAGNIFICATION), so a faint red tail lags behind.
+- Rage (GAU_Life_Frame 'Rage'): the normal frame stays and the red rage outline pulses over it,
+  0 -> 1 -> 0 over 18 frames, with a second copy at 10-30%. (Before this change the gauge swapped to
+  the rage outline, which has no dark interior.)
+- New round: red and glow snap back to full.
+
+Approximations
+- The native hold (StopGaugeAnim/StartGaugeAnim) is replaced by the hit reaction; after knockdowns the
+  red can hold up to about 3 s, until the fighter recovers.
+- Additive layers: the red's second copy (+20%, +49% as a drain starts), the hit glow and the faint
+  rage outline copy are additive in the movie. IMGUI only alpha-blends, so the red is drawn at its
+  effective 96% opacity and the other two alpha-blended.
+- The damage frame's filter (Scaleform filter on one copy) is not reproduced.
+- Not used: Rage_End (Rage is never spent in the battle model) and Focus_Start (a cyan zoom-in of the
+  frame whose trigger is native and unknown). The back plates (HUD_GAU_LIFE_BACK_*_000) are empty in
+  the default skin.
+
+Regenerate
+  python Tools/BattleHud/export_battle_hud.py --game <TEKKEN.7> --t7extract <asset_workshop> --work <scratch>
+  (adds LifeGrow.png = GAU_Life_redgrow)
+Inspect the movie
+  python -m t7extract unpack <game> "*/flash/SW_UI_HUD_Gauge/SW_UI_HUD_Gauge.uasset" -o <scratch>
+  python Tools/BattleHud/gfx_dump.py <scratch>/.../SW_UI_HUD_Gauge.uasset > gauge.json
+  python Tools/BattleHud/abc_dis.py "<scratch>/**/SW_UI_HUD_Gauge.uasset" "Main\.(SetHealth|onDamage|onRedScale)"
+
+ROUND CALLS: READY, FIGHT, K.O., DOUBLE K.O. (2026-10-27)
+
+These replay the original SW_UI_GameMessage timelines instead of a generic pop-in.
+- Tools/BattleHud/export_game_message.py decodes the movie (gfx_dump.py, now with clip depths,
+  PlaceObject3 blend modes, GFX external images and shape bounds) and writes
+  Resources/BattleHud/GameMessage.json plus the 49 images the call clips place (GameMessage/*.png).
+- Scripts/Runtime/GfxClip.cs replays a clip: Flash goto rebuilds, nested sprites, matrices (with skew),
+  multiply/add colour transforms; named *_mc clips hold on their last frame (their frame scripts call
+  stop()), unnamed ones loop.
+- READY = ReadyFight_mc 'Ready' (frames 1-39, then holds); FIGHT = 'Fight' (40-98), and it keeps
+  playing into the first ~0.25 s of the fight; K.O. = KO_mc (1-120); DOUBLE K.O. = WKO_mc.
+- Round 2+ intros now run ROUND (60 ticks), READY (45), FIGHT (45), as in the original; before, READY
+  only showed during the match entrance.
+Rendering (2026-10-27, second pass, from the movie data only): each image is drawn with
+Resources/BattleHud/GfxLayer.shader through Graphics.DrawTexture: the Flash colour transform (multiply
++ add on gamma-space colour), additive blend mode 8, the BlurFilter (box blur; motion blur on the
+fly-ins) and clip-layer masks. The masks are vector letter outlines (READY, FIGHT, K.O., DOUBLE),
+rasterised by the exporter to GameMessage/Mask_<id>.png, so the highlight sweeps shine inside the
+letters only. If the shader is missing, GfxClip falls back to GUI.DrawTexture (no add/mask/blur).
+ROUND, TIME UP, DRAW and PERFECT still use the older pop-in (Round_mc, TimeUp_mc, Draw_mc and
+Perfect_mc are exported and ready for GfxClip).
+Checked with a Python port of the player rendering from the data (Scratch: gfxmock2.py); the user
+asked to work from the game data rather than the videos. Not yet judged in a match.
+
+ROUND CALLS, THIRD PASS (2026-10-27): the fly-ins are 3D motion tweens
+The "scaling flying in" lives in ActionScript, not in the timeline placements:
+- Each call clip's constructor builds Flash IDE motion tweens (fl.motion MotionBase segments with per-frame
+  x/y/z, rotationX/Y/Z, scale/skew, colour, visibility, blend and blur arrays, plus an initialPosition, e.g.
+  ROUND starts at z -1200 and swings rotationY 39 -> -20). Tools/BattleHud/motion_dump.py extracts them from
+  abc_dis.py's disassembly; export_game_message.py writes them into GameMessage.json ("motions").
+- GfxClip ports the movie's own Animator3D.setTime3D: Initial * T(initialPosition) * T(x,y,z) * Rz*Ry*Rx *
+  ScaleSkew (Initial = the target's placement when it appeared), projected with Main.__setPerspectiveProjection_
+  (fieldOfView 60, centre 960,540) as a homogeneous GUI.matrix.
+- PlaceObject3 visibility (HasVisible) is honoured: most layers are placed hidden and revealed on cue.
+- Looping clips keep their persisting instances (Flash semantics), which keeps the ROUND digit script.
+- Round_mc.ChangeRound(n) is ported (BattleHud.RoundClip), so ROUND n, FINAL ROUND, TIME UP, DRAW and
+  PERFECT now also replay the movie.
+Verified with a Python port of the same player (scratch gfxmock3.py) from the data alone.
+
+Round calls, video check (2026-10-27)
+- Compared the data render against the gameplay capture (TEKKEN 7 2026-10-23 08-04-08.mp4) at 15 fps:
+  READY, FIGHT and K.O. match within ~4 ticks.
+- ROUND: Moji_RoundAll_Mask_mc is a sprite mask (two letter shapes); GfxClip.ClipLayer and GfxLayer.shader
+  now mask with the union of up to two shapes, which removes the white LightEff_03 sheet.
+- ROUND/FINAL ROUND start 12 frames into their timeline (GfxClip.LeadFrames, BattleHud.RoundLead): the game's
+  first visible ROUND frame is data tick ~12. FINAL ROUND shares the lead (no capture to confirm).
+- Timing, 30 fps capture (2 ticks per frame): ROUND visible ~48 ticks, READY starts 68 ticks after ROUND,
+  FIGHT 40 after READY (= the READY clip, ReadyFight_mc frames 1-39), FIGHT visible ~44 (its clip), K.O.
+  ~114 of its 120-frame clip. VersusGame: ReadyTick 68, FightTick 108 (was 60/105), KoCallSeconds 2.0 (was
+  1.8, which cut K.O.'s zoom-out exit). Intro length (150) and control start unchanged; not measurable from video.

@@ -35,6 +35,7 @@ NAMES = {
     "LifeFill": "GAU_Life_green",
     "LifeDamage": "GAU_Life_red",
     "LifeHit": "GAU_Life_eff_damage",
+    "LifeGrow": "GAU_Life_redgrow",
     "RoundOff": "RNDCounter_off",
     "RoundOn": "RNDCounter_on",
     "RoundFlash": "RNDCounter_flash1",

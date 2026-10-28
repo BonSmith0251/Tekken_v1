@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Versus.Remaster
 {
     // Tekken 7's in-fight HUD rebuilt from its original Scaleform textures (Resources/BattleHud,
-    // exported by Tools/BattleHud/export_battle_hud.py). The GFx timelines are compiled, so element
-    // placement was measured from gameplay captures at 1440x810 and is drawn here in the versus
-    // scene's 1280x720 GUI space. Gauges drain from the outer end toward the timer, keep a red
-    // trail of recent damage, flash their frame on a hit and switch to the red frame in Rage.
+    // exported by Tools/BattleHud/export_battle_hud.py). Element placement was measured from gameplay
+    // captures at 1440x810 and is drawn here in the versus scene's 1280x720 GUI space. The life gauge's
+    // behaviour is ported from SW_UI_HUD_Gauge itself (its SWF timelines and ActionScript, decoded
+    // 2026-10-26; see Docs/BATTLE_HUD.txt): Main.SetHealth, StartGaugeAnim, onRedScale and onDamage,
+    // run on the movie's 60 fps clock.
     public sealed class BattleHud
     {
         public enum Call { None, Round, Ready, Fight, KO, DoubleKO, TimeUp, Draw }
@@ -23,20 +25,42 @@ namespace Versus.Remaster
         static readonly Rect Portrait = new Rect(70, 27, 107, 111), Lightning = new Rect(100, 45, 236, 100),
             NamePlate = new Rect(182, 101, 330, 25), Name = new Rect(200, 98.5f, 190, 26);
         const float PipX = 641, PipSpacing = 29, PipY = 113, PipSize = 23;
-        // Measured at 15 fps: the red trail holds ~0.6 s and drains in ~0.45 s; the gold frame burns 0.2 s, fades 0.1 s.
-        const float TrailHold = .6f, TrailRate = .4f, FlashSeconds = .3f, FlashFade = .1f;
+        // The red trail drains linearly over DENOMINATOR_OF_SPEED frames. The game sets it natively
+        // (SetGaugeAnimFrames), so it is measured: 11.5 frames at 30 fps in TEKKEN 7 2026-10-23 08-04-08.mp4.
+        const int RedDrainFrames = 24;
+        const float GlowDelay = .85f;   // Main.GLOW_DELAY_MAGNIFICATION: the redgrow glow trails the red edge.
+        // GAU_Life_red_L_mc is 80% opaque but adds a second, additive copy of the red at 20% (49% as a drain
+        // starts): about 96% of a fully opaque red. IMGUI can't add, so the red is drawn at that opacity.
+        const float RedAlpha = .96f, GrowAlpha = .35f;   // GAU_Life_redgrow_L_mc is 35%.
+        // Shake amplitude in movie (1920-wide stage) pixels and the stage -> reference-capture scale.
+        const float ShakeX = 15, ShakeY = 5;
 
-        readonly Texture2D frameNormal, frameRage, frameDamage, fill, damage, hit, pipOff, pipOn, pipFlash;
+        readonly Texture2D frameNormal, frameRage, frameDamage, fill, damage, hit, grow, pipOff, pipOn, pipFlash;
         readonly Texture2D[] digits = new Texture2D[10], roundNumbers = new Texture2D[10], roundGlows = new Texture2D[10];
         readonly Texture2D[] icons = new Texture2D[2], names = new Texture2D[2], plates = new Texture2D[2], thunder = new Texture2D[2];
-        readonly float[] trail = { 1, 1 }, hold = new float[2], flash = new float[2], shown = { 1, 1 };
+        readonly Gauge[] gauges = { new Gauge(), new Gauge() };
         readonly int[] lastWins = new int[2];
         readonly float[] pipAge = { 9, 9 };
+        float clock;
+        int frameCount;
+
+        // One side's Scaleform state (Main's per-player vectors and the gauge clips' playheads).
+        sealed class Gauge
+        {
+            public float shown = 1, red = 1, glow = 1, redTarget, redSpeed;
+            public bool redAnim, held;
+            // HUD_GAU_LIFE_FRAME_DAMAGE_Anim playhead (0 Off, 1..2 Start then hold, 3..14 End) and
+            // GAU_Life_eff_sub playhead (0 Off, 1..49 playing).
+            public int damageFrame, effFrame, rageFrame;
+            // Main.onDamage: life_damage_frame / perFrame / count and life_damage_pos.
+            public int shakeFrames, shakePerFrame, shakeCount;
+            public float shakeX, shakeY, offsetX, offsetY;
+        }
 
         public BattleHud(string playerOneCode, string playerTwoCode)
         {
             frameNormal = Load("FrameNormal"); frameRage = Load("FrameRage"); frameDamage = Load("FrameDamage");
-            fill = Load("LifeFill"); damage = Load("LifeDamage"); hit = Load("LifeHit");
+            fill = Load("LifeFill"); damage = Load("LifeDamage"); hit = Load("LifeHit"); grow = Load("LifeGrow");
             pipOff = Load("RoundOff"); pipOn = Load("RoundOn"); pipFlash = Load("RoundFlash");
             for (int d = 0; d < 10; d++) { digits[d] = Load("Digit" + d); roundNumbers[d] = Load("RoundNum" + d); roundGlows[d] = Load("RoundNum" + d + "_Glow"); }
             string[] codes = { playerOneCode.ToUpperInvariant(), playerTwoCode.ToUpperInvariant() };
@@ -52,22 +76,93 @@ namespace Versus.Remaster
         static Rect R(float x, float y, float w, float h) => new Rect(x * Ref, y * Ref, w * Ref, h * Ref);
         // Mirror a left-side reference rect onto the right side of the screen.
         static Rect Side(Rect r, int side) => side == 0 ? R(r.x, r.y, r.width, r.height) : R(1440 - r.x - r.width, r.y, r.width, r.height);
+        static Rect Shift(Rect r, Vector2 by) => new Rect(r.x + by.x, r.y + by.y, r.width, r.height);
 
-        // Call once per rendered frame before drawing, with unscaled time so KO slow motion doesn't stall the trail.
+        // Call once per rendered frame before drawing, with unscaled time so KO slow motion doesn't stall
+        // the gauges. The movie runs at 60 fps, so its logic steps on a 60 Hz clock.
         public void Advance(BattleModel battle, float deltaTime)
         {
             for (int i = 0; i < 2; i++)
             {
                 var f = battle.fighters[i];
-                float health = Mathf.Clamp01(f.health / (float)battle.rules.health);
-                if (health < shown[i] - 1e-4f) { hold[i] = TrailHold; flash[i] = FlashSeconds; }
-                if (health > shown[i] + 1e-4f || health >= trail[i]) trail[i] = health; // round reset or refill
-                shown[i] = health;
-                if ((hold[i] -= deltaTime) <= 0) trail[i] = Mathf.MoveTowards(trail[i], health, TrailRate * deltaTime);
-                flash[i] = Mathf.Max(0, flash[i] - deltaTime);
                 if (f.wins != lastWins[i]) { pipAge[i] = f.wins > lastWins[i] ? 0 : 9; lastWins[i] = f.wins; }
                 pipAge[i] += deltaTime;
             }
+            clock = Mathf.Min(clock + deltaTime, .25f);
+            while (clock >= 1f / 60)
+            {
+                clock -= 1f / 60; frameCount++;
+                for (int i = 0; i < 2; i++) Step(gauges[i], battle.fighters[i], battle.rules.health);
+            }
+        }
+
+        void Step(Gauge g, FighterState f, int maxHealth)
+        {
+            // Timeline playheads advance first; the calls below then jump them to a label for this frame.
+            if (g.damageFrame == 1) g.damageFrame = 2;                                // Start plays into its stop()
+            else if (g.damageFrame >= 3 && g.damageFrame < 14) g.damageFrame++;       // End plays to its stop()
+            if (g.effFrame > 0) g.effFrame = g.effFrame < 49 ? g.effFrame + 1 : 0;    // frame 50 ('Wait') is empty
+            bool rage = f.health > 0 && f.health * 4 <= maxHealth;
+            // RageOn plays 'Rage' (frames 1..18; frame 19's script jumps back to 'Rage'); RageOff stops on 'Normal'.
+            g.rageFrame = !rage ? 0 : g.rageFrame == 0 || g.rageFrame >= 18 ? 1 : g.rageFrame + 1;
+
+            float health = Mathf.Clamp01(f.health / (float)maxHealth);
+            if (health < g.shown - 1e-4f)
+            {
+                // Main.SetHealth, health fell: the green cuts at once and the red stays; the gauge starts
+                // its damage frame, its hit glow (unless this was the KO) and the shake (life_damage_enable).
+                g.damageFrame = 1;
+                g.effFrame = health > 0 ? 1 : 0;
+                g.shakeFrames = 10; g.shakePerFrame = 3; g.shakeCount = 0; g.shakeX = ShakeX; g.shakeY = ShakeY;
+            }
+            else if (health > g.shown + 1e-4f)
+            {
+                // Health rose (a new round): red and glow snap to it and the hit glow switches off.
+                g.red = g.glow = health; g.redAnim = false; g.effFrame = 0;
+            }
+            g.shown = health;
+
+            // StopGaugeAnim/StartGaugeAnim come from native code. In the reference captures the red damage
+            // stays while the struck fighter is still reeling and drains once the reaction ends, so the
+            // hit reaction stands in for the native hold. On release the red slides to the new level over
+            // a fixed number of frames whatever the amount (StartGaugeAnim + onRedScale).
+            bool held = f.reacting && f.health > 0;
+            if (!held && health < g.red - 1e-4f && (!g.redAnim || health < g.redTarget - 1e-4f))
+            {
+                g.redTarget = health; g.redSpeed = (g.red - health) / RedDrainFrames; g.redAnim = true;
+            }
+            if (g.redAnim)
+            {
+                g.red -= g.redSpeed; g.glow -= g.redSpeed * GlowDelay;
+                if (g.red <= g.redTarget) { g.red = g.redTarget; g.effFrame = 0; }       // life_eff_mc 'End'
+                if (g.glow <= g.redTarget) { g.glow = g.redTarget; g.redAnim = false; }
+            }
+            Shake(g);
+        }
+
+        // Main.onDamage, called every frame: the gauge jumps to alternate sides on every perFrame-th frame,
+        // each jump perFrame/10 smaller; jumps come every 3 frames, then 2, then every frame, and the third
+        // stage also plays the damage frame's 'End'.
+        void Shake(Gauge g)
+        {
+            if (g.shakeFrames == 0 || g.shakePerFrame == 0) return;
+            if ((int)(g.shakeFrames * .4f) == g.shakeCount) g.shakePerFrame--;
+            else if ((int)(g.shakeFrames * .7f) == g.shakeCount)
+            {
+                g.shakePerFrame--;
+                if (g.damageFrame > 0 && g.damageFrame < 3) g.damageFrame = 3;
+            }
+            if (g.shakePerFrame == 0) g.shakePerFrame = 1;
+            if (frameCount % g.shakePerFrame == 0)
+            {
+                float sign = frameCount % 2 == 0 ? 1 : -1, steps = g.shakeFrames / (float)g.shakePerFrame;
+                if (g.shakeX != 0) { g.offsetX = g.shakeX * sign; g.shakeX -= g.shakeX / steps; }
+                if (g.shakeY != 0) { g.offsetY = g.shakeY * sign; g.shakeY -= g.shakeY / steps; }
+                if (g.shakeX < .3f) { g.shakeX = 0; g.offsetX = 0; }
+                if (g.shakeY < .3f) { g.shakeY = 0; g.offsetY = 0; }
+                if (g.shakeX == 0 && g.shakeY == 0) g.shakeFrames = g.shakePerFrame = 0;
+            }
+            g.shakeCount++;
         }
 
         public void DrawGauges(BattleModel battle, float time)
@@ -106,24 +201,82 @@ namespace Versus.Remaster
             GUI.color = color;
         }
 
+        // Layer alphas from SW_UI_HUD_Gauge's timelines (60 fps frames).
+        // GAU_Life_Frame 'Rage' loop, frames 1..18: the rage outline (depth 3) pulses 0 -> 1 -> 0 and a
+        // second copy (depth 5) 0.1 -> 0.3 -> 0.1; on 'Normal' they rest at 0 and 0.1.
+        static float RageOuter(int frame) => frame == 0 ? 0 : 1 - Mathf.Abs(frame - 10) / 9f;
+        static float RageInner(int frame) => frame == 0 ? .1f : .1f + .2f * (1 - Mathf.Abs(frame - 10) / 9f);
+        // HUD_GAU_LIFE_FRAME_DAMAGE_Anim frames 1..14 for its two copies of the damage frame.
+        static readonly float[] DamageBack = { 0, .2f, .33f, .46f, .6f, .73f, .87f, 1, .86f, .71f, .57f, .43f, .29f, .14f, 0 };
+        static readonly float[] DamageFront = { 0, .2f, .6f, 1, .91f, .82f, .73f, .64f, .55f, .45f, .36f, .27f, .18f, .09f, 0 };
+
         void DrawGauge(int side, bool rage)
         {
-            var frameRect = new Rect(FrameOrigin.x, FrameOrigin.y, 796 * GaugeScale, 124 * GaugeScale);
-            Mirrored(frameRect, 0, 1, rage ? frameRage : frameNormal, side);
-            // The fill is anchored at the timer end: health h shows the inner h of its span.
-            DrawFill(damage, trail[side], shown[side], side);
-            DrawFill(fill, shown[side], 0, side);
-            if (flash[side] <= 0) return;
-            // On a hit the frame burns gold for 0.2 s, then fades over 0.1 s.
+            var g = gauges[side];
+            // The shake moves the whole gauge clip (frame, fills and effects), in movie pixels.
+            var shake = new Vector2(g.offsetX, g.offsetY) * GaugeScale;
+            var frameRect = new Rect(FrameOrigin.x + shake.x, FrameOrigin.y + shake.y, 796 * GaugeScale, 124 * GaugeScale);
             var color = GUI.color;
-            GUI.color = new Color(1, 1, 1, Mathf.Clamp01(flash[side] / FlashFade));
-            Mirrored(frameRect, 0, 1, frameDamage, side);
-            if (hit && shown[side] > 0)
-            {
-                float edge = FillOrigin.x + CutX(shown[side]) * GaugeScale;
-                Mirrored(new Rect(edge - 42 * GaugeScale, FillOrigin.y - 82 * GaugeScale, 84 * GaugeScale, 240 * GaugeScale), 0, 1, hit, side);
-            }
+            // The normal frame (with the gauge's dark interior) always shows; Rage pulses its red outline over it.
+            Mirrored(frameRect, 0, 1, frameNormal, side);
+            DrawLayer(frameRect, frameRage, side, RageOuter(g.rageFrame));
+            DrawLayer(frameRect, frameRage, side, RageInner(g.rageFrame));
+            // The fill is anchored at the timer end: health h shows the inner h of its span. Under the red trail,
+            // a thinner red glow (redgrow, 35%) follows the draining edge at 85% of its speed.
+            DrawGrow(g, side, shake);
+            GUI.color = new Color(1, 1, 1, RedAlpha);
+            DrawFill(damage, g.red, g.shown, side, shake);
             GUI.color = color;
+            DrawFill(fill, g.shown, 0, side, shake);
+            DrawLayer(frameRect, frameDamage, side, DamageBack[g.damageFrame]);
+            DrawLayer(frameRect, frameDamage, side, DamageFront[g.damageFrame]);
+            DrawGlow(g, side, shake);
+            GUI.color = color;
+        }
+
+        void DrawLayer(Rect reference, Texture texture, int side, float alpha)
+        {
+            if (alpha <= 0) return;
+            var color = GUI.color;
+            GUI.color = new Color(color.r, color.g, color.b, color.a * alpha);
+            Mirrored(reference, 0, 1, texture, side);
+            GUI.color = color;
+        }
+
+        // GAU_Life_redgrow: a 640x40 red strip centred on the fill, from the timer end to the glow level.
+        void DrawGrow(Gauge g, int side, Vector2 shake)
+        {
+            if (!grow || g.glow <= g.shown + 1e-4f) return;
+            float x0 = CutX(g.glow), x1 = FillMid1 - 5;
+            var rect = new Rect(FillOrigin.x + x0 * GaugeScale, FillOrigin.y + (FillMidRow - 20) * GaugeScale, (x1 - x0) * GaugeScale, 40 * GaugeScale);
+            var color = GUI.color;
+            GUI.color = new Color(1, 1, 1, GrowAlpha);
+            Mirrored(Shift(rect, shake), 0, 1, grow, side);
+            GUI.color = color;
+        }
+
+        // GAU_Life_eff_sub: the hit glow (eff_damage, 84x240) on the cut, frames 1..49. It widens from 25% to
+        // 78% in 8 frames and narrows back by frame 49, at 20-40% alpha, sheared with the gauge's lean
+        // (skew 0.157) and tilting as it widens (skew -0.81 x width). IMGUI draws the shear through GUI.matrix;
+        // the right side conjugates it by the mirror and flips the texture, so the matrix keeps a positive
+        // determinant.
+        void DrawGlow(Gauge g, int side, Vector2 shake)
+        {
+            if (!hit || g.effFrame < 1 || g.shown <= 0) return;
+            float t = g.effFrame <= 9 ? (g.effFrame - 1) / 8f : 1 - (g.effFrame - 9) / 40f;
+            float sx = Mathf.Lerp(.251f, .777f, t), alpha = Mathf.Lerp(.199f, .398f, t), r0 = -.8095f * sx;
+            const float sy = .194f, r1 = .157f;
+            var center = new Vector2(FillOrigin.x + CutX(g.shown) * GaugeScale, FillOrigin.y + FillMidRow * GaugeScale) + shake;
+            if (side == 1) center.x = 1440 - center.x;
+            float k = GaugeScale * Ref, mirror = side == 0 ? 1 : -1;
+            var matrix = Matrix4x4.identity;
+            matrix.m00 = sx * k; matrix.m01 = r1 * k * mirror; matrix.m03 = center.x * Ref;
+            matrix.m10 = r0 * k * mirror; matrix.m11 = sy * k; matrix.m13 = center.y * Ref;
+            var oldMatrix = GUI.matrix; var color = GUI.color;
+            GUI.matrix = oldMatrix * matrix;
+            GUI.color = new Color(1, 1, 1, alpha);
+            GUI.DrawTextureWithTexCoords(new Rect(-42, -120, 84, 240), hit, side == 0 ? new Rect(0, 0, 1, 1) : new Rect(1, 0, -1, 1));
+            GUI.matrix = oldMatrix; GUI.color = color;
         }
 
         // Fill texture x (pixels, on its middle row) where health h ends; the cut leans with the gauge's ends.
@@ -132,7 +285,7 @@ namespace Versus.Remaster
         // Draws the part of a fill texture between health fractions `outer` and `inner`, with cuts parallel to
         // the gauge's slanted ends. IMGUI only cuts rectangles, so the band is drawn as thin horizontal strips,
         // each cut at its own row's offset (a strip is about one screen pixel tall).
-        void DrawFill(Texture2D texture, float outer, float inner, int side)
+        void DrawFill(Texture2D texture, float outer, float inner, int side, Vector2 shake)
         {
             if (!texture || outer <= inner) return;
             float xo = outer >= 1 ? -60 : CutX(outer), xi = inner <= 0 ? 812 : CutX(inner); // full ends keep their tips
@@ -141,7 +294,7 @@ namespace Versus.Remaster
                 float shift = (y + FillStrip / 2 - FillMidRow) * FillSlant;
                 float x0 = Mathf.Clamp(xo + shift, 0, FillWidth), x1 = Mathf.Clamp(xi + shift, 0, FillWidth);
                 if (x1 <= x0) continue;
-                var strip = new Rect(FillOrigin.x + x0 * GaugeScale, FillOrigin.y + y * GaugeScale, (x1 - x0) * GaugeScale, FillStrip * GaugeScale);
+                var strip = new Rect(FillOrigin.x + x0 * GaugeScale + shake.x, FillOrigin.y + y * GaugeScale + shake.y, (x1 - x0) * GaugeScale, FillStrip * GaugeScale);
                 var uv = new Rect(x0 / FillWidth, 1 - (y + FillStrip) / FillHeight, (x1 - x0) / FillWidth, FillStrip / FillHeight);
                 var rect = Side(strip, side);
                 GUI.DrawTextureWithTexCoords(rect, texture, side == 0 ? uv : new Rect(uv.xMax, uv.y, -uv.width, uv.height));
@@ -173,30 +326,72 @@ namespace Versus.Remaster
             float glow = Mathf.Clamp01(1 - age / .6f);
             switch (call)
             {
-                case Call.Round:
-                    if (finalRound) { Word("Call_Final", 640, 300, pop, alpha, glow); Word("Call_Round", 640, 400, pop, alpha, glow); }
-                    else
-                    {
-                        var word = Load("Call_Round"); var number = roundNumbers[Mathf.Clamp(round, 0, 9)];
-                        float gap = 24, total = word.width + gap + number.width, left = 640 / CallScale - total / 2;
-                        Word("Call_Round", (left + word.width / 2) * CallScale, 345, pop, alpha, glow);
-                        Draw(number, roundGlows[Mathf.Clamp(round, 0, 9)], (left + word.width + gap + number.width / 2) * CallScale, 345, pop, alpha, glow);
-                    }
-                    break;
-                case Call.Ready: Word("Call_Ready", 640, 345, pop, alpha, glow); break;
-                case Call.Fight: Word("Call_Fight", 640, 345, pop, alpha, glow); break;
-                case Call.KO: Word("Call_KO", 640, 345, pop, alpha, glow); break;
-                case Call.DoubleKO: Word("Call_Double", 640, 280, pop, alpha, glow); Word("Call_KO", 640, 400, pop, alpha, glow); break;
-                case Call.TimeUp: Word("Call_TimeUp", 640, 345, pop, alpha, glow); break;
-                case Call.Draw: Word("Call_Draw", 640, 345, pop, alpha, glow); break;
+                case Call.Round: RoundClip(round, finalRound).Draw(age, StageToGui); break;
+                // READY, FIGHT, K.O. and DOUBLE K.O. replay the original SW_UI_GameMessage timelines.
+                case Call.Ready: Message(ref readyClip, "ReadyFight_mc", "Ready", "Fight", -1).Draw(age, StageToGui); break;
+                case Call.Fight: Message(ref fightClip, "ReadyFight_mc", "Fight", null, 0).Draw(age, StageToGui); break;
+                case Call.KO: Message(ref koClip, "KO_mc", "KO", null, 0).Draw(age, StageToGui); break;
+                case Call.DoubleKO: Message(ref doubleKoClip, "WKO_mc", "WKO", null, 0).Draw(age, StageToGui); break;
+                case Call.TimeUp: Message(ref timeUpClip, "TimeUp_mc", "TimeUp", null, 0).Draw(age, StageToGui); break;
+                case Call.Draw: Message(ref drawClip, "Draw_mc", "Draw", null, 0).Draw(age, StageToGui); break;
             }
         }
+
+        GfxClip readyClip, fightClip, koClip, doubleKoClip, timeUpClip, drawClip, perfectClip, finalRoundClip;
+        readonly Dictionary<int, GfxClip> roundClips = new Dictionary<int, GfxClip>();
+
+        // Round_mc.ChangeRound(n), ported from the movie's ActionScript: per last digit d it places the word
+        // and the number (RoundLoc / NumLoc, glow copies RoundGlowLoc / NumGlowLoc), slides each digit strip
+        // to show its numeral (x = d * -200 - 100; glow d * -220 - 110), shows the tens digit from round 10,
+        // stops the digit mask on frame n, then plays from RD_Num. FINAL ROUND plays RD_Final instead.
+        static readonly Vector2[] RoundLoc = { new Vector2(-165, 2), new Vector2(-81, 2), new Vector2(-100, -1), new Vector2(-100, 0), new Vector2(-102, -6),
+            new Vector2(-101, 0), new Vector2(-100, 1), new Vector2(-98, -1), new Vector2(-100, 1), new Vector2(-99, 2) };
+        static readonly Vector2[] NumLoc = { new Vector2(531, 0), new Vector2(485, 0), new Vector2(462, 0), new Vector2(467, 0), new Vector2(465, -4),
+            new Vector2(469, -1), new Vector2(467, 0), new Vector2(469, 1), new Vector2(465, 0), new Vector2(465, 0) };
+        static readonly Vector2[] RoundGlowLoc = { new Vector2(-636, -72), new Vector2(-552, -74), new Vector2(-570, -75), new Vector2(-571, -73), new Vector2(-572, -79),
+            new Vector2(-571, -73), new Vector2(-570, -72), new Vector2(-569, -74), new Vector2(-573, -72), new Vector2(-571, -72) };
+        static readonly Vector2[] NumGlowLoc = { new Vector2(531, 0), new Vector2(485, 0), new Vector2(463, -2), new Vector2(465, 0), new Vector2(464, -5),
+            new Vector2(467, 0), new Vector2(466, 0), new Vector2(470, 0), new Vector2(465, 0), new Vector2(466, 0) };
+
+        GfxClip RoundClip(int round, bool final)
+        {
+            // TEKKEN 7 shows ROUND from the movie's 12th fly-in frame (gameplay capture, 2026-10-23 08-04-08 at 35.9 s).
+            const int RoundLead = 12;
+            if (final) return finalRoundClip ??= new GfxClip("Round_mc", "RD_Final", "RD_Fina_Finl") { LeadFrames = RoundLead };
+            round = Mathf.Clamp(round, 1, 10);
+            if (roundClips.TryGetValue(round, out var clip)) return clip;
+            clip = new GfxClip("Round_mc", "RD_Num", "RD_Num_Fin") { LeadFrames = RoundLead };
+            int d = round % 10, tens = round / 10;
+            const string Anim = "Moji_RoundAll_Anim_mc.";
+            foreach (var word in new[] { Anim + "Moji_RoundAll_mc", Anim + "Moji_RoundAll_Shadow_mc", "Moji_RoundAll_mc" })
+            {
+                clip.SetPosition(word + ".Moji_Round_Base_mc", RoundLoc[d].x, RoundLoc[d].y)
+                    .SetPosition(word + ".Num1", NumLoc[d].x, NumLoc[d].y)
+                    .SetVisible(word + ".Num10", round > 9)
+                    .SetPosition(word + ".Num1.Moji_RoundNum_Base_mc", d * -200 - 100, null)
+                    .SetPosition(word + ".Num10.Moji_RoundNum_Base_mc", tens * -200 - 100, null);
+            }
+            const string Glow = Anim + "Moji_RoundAll_Glow_Anim_mc.Moji_RoundAll_Glow_mc";
+            clip.SetPosition(Glow + ".Moji_Round_Glow_Base_mc", RoundGlowLoc[d].x, RoundGlowLoc[d].y)
+                .SetPosition(Glow + ".Num1", NumGlowLoc[d].x, NumGlowLoc[d].y)
+                .SetVisible(Glow + ".Num10", round > 9)
+                .SetPosition(Glow + ".Num1.Moji_RoundNum_Glow_Base_mc", d * -220 - 110, null)
+                .SetPosition(Glow + ".Num10.Moji_RoundNum_Glow_Base_mc", tens * -220 - 110, null)
+                .GotoAndStop(Anim + "Moji_RoundAll_Mask_mc", round);
+            return roundClips[round] = clip;
+        }
+        // The message movie's 1920x1080 stage in this HUD's 1280x720 GUI space.
+        static Matrix4x4 StageToGui => Matrix4x4.Scale(Vector3.one * (1280f / GfxClip.StageWidth));
+        static GfxClip Message(ref GfxClip clip, string entry, string start, string stop, int stopOffset) =>
+            clip ??= new GfxClip(entry, start, stop, stopOffset);
+        // How long the original FIGHT call runs (its Fight segment), so it can finish after control is given.
+        public float FightCallSeconds => Message(ref fightClip, "ReadyFight_mc", "Fight", null, 0).Length / 60f;
 
         // PERFECT appears under the K.O. call when the winner took no damage.
         public void DrawPerfect(float age)
         {
             if (age < 0) return;
-            Word("Call_Perfect", 640, 470, Mathf.SmoothStep(1.25f, 1, Mathf.Clamp01(age / .15f)), Mathf.Clamp01(age / .08f), Mathf.Clamp01(1 - age / .6f));
+            Message(ref perfectClip, "Perfect_mc", "Perfect", null, 0).Draw(age, StageToGui);
         }
 
         void Word(string name, float cx, float cy, float pop, float alpha, float glow) => Draw(Load(name), Load(name + "_Glow"), cx, cy, pop, alpha, glow);
