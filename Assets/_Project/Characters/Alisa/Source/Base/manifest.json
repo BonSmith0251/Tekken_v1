@@ -409,7 +409,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_1p_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_leg_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_leg_M.png",
+          "colors": [
+            0.9300000071525574,
+            0.8236860036849976,
+            0.7968440055847168,
+            0.5049999952316284,
+            0.4093349874019623,
+            0.38632500171661377,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
       }
     },
     "MI_CH_asa_bdl_1p_shoes": {
@@ -458,7 +483,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_1p_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_shoes_M.png",
+          "colors": [
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.5849999785423279,
+            0.39872899651527405,
+            0.3539249897003174,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_asa_bdl_battle_backle": {
@@ -473,7 +523,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_bdl_battle_backle_D",
         "MaskMap": "T_CH_asa_bdl_battle_backle_M",
-        "Normal": "T_CH_asa_bdl_battle_backle_N"
+        "Normal": "T_CH_asa_bdl_battle_backle_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_backle.uasset",
       "unity": {
@@ -482,8 +556,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_backle_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_backle_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_backle_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_battle_belt": {
       "diffuse": "T_CH_asa_bdl_battle_belt_D",
@@ -506,6 +611,24 @@
           0.1922830045223236,
           0.19706399738788605,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_belt.uasset",
@@ -515,8 +638,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_belt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_belt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_belt_M.png",
+          "colors": [
+            0.25,
+            0.1922830045223236,
+            0.19706399738788605,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_battle_boots": {
       "diffuse": "T_CH_asa_bdl_battle_boots_D",
@@ -548,6 +701,18 @@
           0.1756269931793213,
           0.16394400596618652,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_boots.uasset",
@@ -557,8 +722,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_boots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_boots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_boots_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.20000000298023224,
+            0.1756269931793213,
+            0.16394400596618652,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_battle_cross": {
       "diffuse": "T_CH_asa_bdl_battle_cross_D",
@@ -590,6 +784,18 @@
           0.298799991607666,
           0.23399999737739563,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_cross.uasset",
@@ -599,8 +805,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_cross_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_cross_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_cross_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.44999998807907104,
+            0.298799991607666,
+            0.23399999737739563,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_battle_shoes": {
       "diffuse": "T_CH_asa_bdl_battle_shoes_D",
@@ -627,6 +862,24 @@
           0.7655379772186279,
           0.5752609968185425,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_shoes.uasset",
@@ -636,8 +889,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_shoes_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_school_bv_kutu": {
       "diffuse": "T_CH_asa_bdl_school_bv_kutu_D",
@@ -670,6 +953,18 @@
           0.0723550021648407,
           0.06990800052881241,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_kutu.uasset",
@@ -679,8 +974,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_kutu_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Shared/Textures/T_CH_asa_bdl_school_bv_kutu_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_kutu_M.png",
+          "colors": [
+            0.1599999964237213,
+            0.06218000128865242,
+            0.02160000056028366,
+            0.08500000089406967,
+            0.0723550021648407,
+            0.06990800052881241,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_school_bv_pants": {
       "diffuse": "T_CH_asa_bdl_school_bv_pants_D",
@@ -707,6 +1031,24 @@
           0.10499999672174454,
           0.3499999940395355,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_pants.uasset",
@@ -716,8 +1058,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_pants_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_pants_M.png",
+          "colors": [
+            0.12534800171852112,
+            0.10499999672174454,
+            0.3499999940395355,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_school_bv_skirt": {
       "diffuse": "T_CH_asa_bdl_school_bv_skirt_D",
@@ -744,6 +1116,24 @@
           0.6666669845581055,
           1.0,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_skirt.uasset",
@@ -753,8 +1143,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_skirt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_skirt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_skirt_M.png",
+          "colors": [
+            0.0,
+            0.6666669845581055,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdl_school_bv_socks_RE": {
       "diffuse": "T_CH_asa_bdl_school_bv_socks_RE_D",
@@ -781,6 +1201,24 @@
           0.20459400117397308,
           0.5649999976158142,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_socks_RE.uasset",
@@ -790,8 +1228,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_socks_RE_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_socks_RE_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_socks_RE_M.png",
+          "colors": [
+            0.3031019866466522,
+            0.20459400117397308,
+            0.5649999976158142,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_body": {
       "diffuse": "T_CH_asa_bdu_1P_body_D",
@@ -839,7 +1307,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_body_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_body_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_body_M.png",
+          "colors": [
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_asa_bdu_1p_old_belt": {
@@ -858,6 +1351,24 @@
           0.855400025844574,
           0.9021199941635132,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_belt.uasset",
@@ -867,8 +1378,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_belt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.9100000262260437,
+            0.855400025844574,
+            0.9021199941635132,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_butterfly": {
       "diffuse": "T_CH_asa_bdu_1p_old_butterfly_D",
@@ -888,6 +1429,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_butterfly.uasset",
@@ -897,8 +1456,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_butterfly_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_butterfly_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_butterfly_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_collar": {
       "diffuse": "T_CH_asa_bdu_1p_old_collar_D",
@@ -918,6 +1507,24 @@
           0.8522099852561951,
           0.8073390126228333,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_collar.uasset",
@@ -927,8 +1534,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_collar_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_collar_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8999999761581421,
+            0.8522099852561951,
+            0.8073390126228333,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_dress": {
       "diffuse": "T_CH_asa_bdu_1p_old_dress_D",
@@ -955,6 +1592,18 @@
           0.0860000029206276,
           0.4300000071525574,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_dress.uasset",
@@ -964,8 +1613,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dress_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dress_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dress_M.png",
+          "colors": [
+            0.9300000071525574,
+            0.2618870139122009,
+            0.8321840167045593,
+            0.15479999780654907,
+            0.0860000029206276,
+            0.4300000071525574,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_dresslace": {
       "diffuse": "T_CH_asa_bdu_1p_old_dresslace_D",
@@ -985,6 +1663,24 @@
           0.0860000029206276,
           0.4300000071525574,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_dresslace.uasset",
@@ -994,8 +1690,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dresslace_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dresslace_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.15479999780654907,
+            0.0860000029206276,
+            0.4300000071525574,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_dressskirt": {
       "diffuse": "T_CH_asa_bdl_1p_old_dressskirt_D",
@@ -1022,6 +1748,18 @@
           0.2618870139122009,
           0.8321840167045593,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_dressskirt.uasset",
@@ -1031,8 +1769,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dressskirt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_dressskirt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_dressskirt_M.png",
+          "colors": [
+            0.1523669958114624,
+            0.1379999965429306,
+            1.0,
+            0.9300000071525574,
+            0.2618870139122009,
+            0.8321840167045593,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_glove": {
       "diffuse": "T_CH_asa_bdu_1p_old_glove_D",
@@ -1053,6 +1820,24 @@
           0.8899880051612854,
           0.8716610074043274,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_glove.uasset",
@@ -1062,8 +1847,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_glove_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_glove_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            0.8899880051612854,
+            0.8716610074043274,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_jewel": {
       "diffuse": "T_CH_asa_bdl_1p_old_jewel_D",
@@ -1083,6 +1898,24 @@
           0.9150000214576721,
           0.9150000214576721,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewel.uasset",
@@ -1092,8 +1925,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewel_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.9150000214576721,
+            0.9150000214576721,
+            0.9150000214576721,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_jewel_2": {
       "diffuse": "T_CH_asa_bdl_1p_old_jewel_D",
@@ -1113,6 +1976,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewel_2.uasset",
@@ -1122,8 +2003,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewel_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_jewelsk": {
       "diffuse": "T_CH_asa_bdl_1p_old_jewelsk_D",
@@ -1143,6 +2054,24 @@
           0.7026450037956238,
           0.6011289954185486,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewelsk.uasset",
@@ -1152,8 +2081,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewelsk_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            0.7026450037956238,
+            0.6011289954185486,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_jewelsk_2": {
       "diffuse": "T_CH_asa_bdl_1p_old_jewelsk_D",
@@ -1173,6 +2132,24 @@
           0.7026450037956238,
           0.6011289954185486,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewelsk_2.uasset",
@@ -1182,8 +2159,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewelsk_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            0.7026450037956238,
+            0.6011289954185486,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_maskrose": {
       "diffuse": "T_CH_asa_bdl_1p_old_rose_D",
@@ -1201,6 +2208,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_maskrose.uasset",
@@ -1210,8 +2235,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_maskrose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_pantsboot2": {
       "diffuse": "T_CH_asa_bdl_1p_old_pantsboots_D",
@@ -1244,6 +2299,12 @@
           0.8633700013160706,
           0.8230500221252441,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboot2.uasset",
@@ -1253,8 +2314,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboot2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            0.9300000071525574,
+            0.8633700013160706,
+            0.8230500221252441,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_pantsboots": {
       "diffuse": "T_CH_asa_bdl_1p_old_pantsboots_D",
@@ -1281,6 +2370,18 @@
           0.8633700013160706,
           0.8230500221252441,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboots.uasset",
@@ -1290,8 +2391,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            0.11048399657011032,
+            0.10000000149011612,
+            0.1599999964237213,
+            0.9300000071525574,
+            0.8633700013160706,
+            0.8230500221252441,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_pantsboots_2": {
       "diffuse": "T_CH_asa_bdl_1p_old_pantsboots_D",
@@ -1323,6 +2453,12 @@
           1.0,
           1.0,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboots_2.uasset",
@@ -1332,8 +2468,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboots_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            0.11048399657011032,
+            0.10000000149011612,
+            0.1599999964237213,
+            1.0,
+            0.9283549785614014,
+            0.8849999904632568,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_rose": {
       "diffuse": "T_CH_asa_bdl_1p_old_rose_D",
@@ -1353,6 +2517,24 @@
           0.9035279750823975,
           0.6952049732208252,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_rose.uasset",
@@ -1362,8 +2544,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_rose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9035279750823975,
+            0.6952049732208252,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_sktlace": {
       "diffuse": "T_CH_asa_bdl_1p_old_stklace_D",
@@ -1389,6 +2601,18 @@
           0.16546699404716492,
           0.14212000370025635,
           1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_sktlace.uasset",
@@ -1398,8 +2622,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_sktlace_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stklace_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stklace_M.png",
+          "colors": [
+            0.14499999582767487,
+            0.1337130069732666,
+            0.13092300295829773,
+            0.27000001072883606,
+            0.16546699404716492,
+            0.14212000370025635,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_old_stk": {
       "diffuse": "T_CH_asa_bdl_1p_old_stk_D",
@@ -1424,6 +2677,18 @@
           0.27848899364471436,
           0.8450000286102295,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_stk.uasset",
@@ -1433,8 +2698,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_stk_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stk_M.png",
+          "colors": [
+            0.14499999582767487,
+            0.1337130069732666,
+            0.13092300295829773,
+            0.0,
+            0.27848899364471436,
+            0.8450000286102295,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_1p_skirt1": {
       "diffuse": "T_CH_asa_bdu_1P_skirt1_D",
@@ -1482,7 +2776,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_skirt1_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt1_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt1_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
       }
     },
     "MI_CH_asa_bdu_1p_skirt2": {
@@ -1505,6 +2824,24 @@
           0.9100000262260437,
           0.6488500237464905,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p/Material/MI_CH_asa_bdu_1p_skirt2.uasset",
@@ -1514,8 +2851,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_skirt2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt2_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt2_M.png",
+          "colors": [
+            0.27755001187324524,
+            0.9100000262260437,
+            0.6488500237464905,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_battle_Suit": {
       "diffuse": "T_CH_asa_bdu_battle_Suit_D",
@@ -1568,7 +2935,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_Suit_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_Suit_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_Suit_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.2199999988079071,
+            0.18629199266433716,
+            0.17599999904632568,
+            0.44999998807907104,
+            0.298799991607666,
+            0.23399999737739563,
+            0.9350000023841858,
+            0.6067720055580139,
+            0.25992000102996826
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     "MI_CH_asa_bdu_battle_arm": {
@@ -1596,6 +2988,24 @@
           0.7655379772186279,
           0.5752609968185425,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_arm.uasset",
@@ -1605,8 +3015,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_arm_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_arm_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_arm_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_battle_glove": {
       "diffuse": "T_CH_asa_bdu_battle_glove_D",
@@ -1632,6 +3072,24 @@
           0.18629199266433716,
           0.17599999904632568,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_glove.uasset",
@@ -1641,8 +3099,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_glove_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_glove_M.png",
+          "colors": [
+            0.2199999988079071,
+            0.18629199266433716,
+            0.17599999904632568,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_battle_kote": {
       "diffuse": "T_CH_asa_bdu_battle_kote_D",
@@ -1663,6 +3151,24 @@
           1.0,
           0.7015699744224548,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_kote.uasset",
@@ -1672,8 +3178,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_kote_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_battle_metal": {
       "diffuse": "T_CH_asa_bdu_battle_metal_D",
@@ -1688,7 +3224,31 @@
         "DiffuseMap": "T_CH_asa_bdu_battle_metal_D",
         "MaskMap": "T_CH_asa_bdu_battle_metal_M",
         "Normal": "T_CH_asa_bdu_battle_metal_N",
-        "specluar": "T_CH_asa_bdu_battle_metal_D"
+        "specluar": "T_CH_asa_bdu_battle_metal_D",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_metal.uasset",
       "unity": {
@@ -1697,8 +3257,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_metal_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_metal_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_school_bv_botan": {
       "diffuse": "T_CH_asa_bdu_school_bv_botan_D",
@@ -1713,7 +3304,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_bdu_school_bv_botan_D",
         "MaskMap": "T_CH_asa_bdu_school_bv_botan_M",
-        "Normal": "T_CH_asa_bdu_school_bv_botan_N"
+        "Normal": "T_CH_asa_bdu_school_bv_botan_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_botan.uasset",
       "unity": {
@@ -1722,8 +3337,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_botan_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_school_bv_kousyou": {
       "diffuse": "T_CH_asa_bdu_school_bv_kousyou_D",
@@ -1744,6 +3390,24 @@
           0.8904479742050171,
           0.9850000143051147,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_kousyou.uasset",
@@ -1753,8 +3417,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_kousyou_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_kousyou_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_kousyou_M.png",
+          "colors": [
+            0.42467400431632996,
+            0.8904479742050171,
+            0.9850000143051147,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_school_bv_ribon": {
       "diffuse": "T_CH_asa_bdu_school_bv_ribon_D",
@@ -1782,6 +3476,24 @@
           0.044449999928474426,
           0.05051400139927864,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_ribon.uasset",
@@ -1791,8 +3503,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_ribon_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_ribon_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_ribon_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.6349999904632568,
+            0.044449999928474426,
+            0.05051400139927864,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_school_bv_syatu_RE": {
       "diffuse": "T_CH_asa_bdu_school_bv_syatu_RE_D",
@@ -1832,6 +3574,12 @@
           0.044449999928474426,
           0.05051400139927864,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_syatu_RE.uasset",
@@ -1841,8 +3589,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_syatu_RE_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_syatu_RE_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_syatu_RE_M.png",
+          "colors": [
+            0.09000000357627869,
+            0.6751670241355896,
+            0.8999999761581421,
+            0.889028012752533,
+            0.8999999761581421,
+            0.8430799841880798,
+            0.6349999904632568,
+            0.044449999928474426,
+            0.05051400139927864,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     "MI_CH_asa_bdu_school_bv_watch": {
       "diffuse": "T_CH_asa_bdu_school_bv_watch_D",
@@ -1863,7 +3639,31 @@
         "DetalNormal": "T_CH_metal01_N",
         "DiffuseMap": "T_CH_asa_bdu_school_bv_watch_D",
         "MaskMap": "T_CH_asa_bdu_school_bv_watch_M",
-        "Normal": "T_CH_asa_bdu_school_bv_watch_N"
+        "Normal": "T_CH_asa_bdu_school_bv_watch_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_watch.uasset",
       "unity": {
@@ -1872,8 +3672,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_watch_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_watch_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_burnier_leg": {
       "diffuse": "T_CH_asa_burnier_momo_D",
@@ -1890,6 +3721,24 @@
           1.0,
           1.0,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_burnier_leg.uasset",
@@ -1899,8 +3748,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_burnier_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_burnier_momo": {
       "diffuse": "T_CH_asa_burnier_momo_D",
@@ -1911,7 +3790,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_burnier_momo_D",
         "MaskMap": "T_CH_asa_burnier_momo_M",
-        "Normal": "T_CH_asa_burnier_momo_N"
+        "Normal": "T_CH_asa_burnier_momo_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_nudetest/Material/MI_CH_asa_burnier_momo.uasset",
       "unity": {
@@ -1920,8 +3823,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_burnier_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_eye_shadow": {
       "diffuse": "T_CH_asa_eye_shadow_D",
@@ -2018,7 +3952,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairB_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_asa_har_1p_hair2": {
@@ -2052,7 +4012,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hair2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_asa_har_1p_hairB": {
@@ -2087,7 +4073,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairB_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_asa_har_1p_hairB2": {
@@ -2121,7 +4133,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hair2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     "MI_CH_asa_har_1p_hairleaves": {
@@ -2135,7 +4173,31 @@
         "RoughnessMin": 0.5,
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_har_1p_hairleaves_D",
-        "Normal": "T_CH_asa_har_1p_hairleaves_N"
+        "Normal": "T_CH_asa_har_1p_hairleaves_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Hair/asa_har_1p/Material/MI_CH_asa_har_1p_hairleaves.uasset",
       "unity": {
@@ -2144,8 +4206,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairleaves_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hairleaves_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_FabricBase01_M.png",
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_hed_1p_head": {
       "diffuse": "T_CH_asa_hed_1P_head_D",
@@ -2172,6 +4265,18 @@
           0.16698899865150452,
           0.14822499454021454,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Head/asa_hed_1p/Material/MI_CH_asa_hed_1p_head.uasset",
@@ -2181,8 +4286,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_hed_1p_head_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_1P_head_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_1P_head_M.png",
+          "colors": [
+            0.7149999737739563,
+            0.5059170126914978,
+            0.1859000027179718,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_hed_battle_IA": {
       "diffuse": "T_CH_asa_hed_battle_IA_D",
@@ -2209,6 +4343,24 @@
           0.949999988079071,
           0.949999988079071,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Head/asa_hed_battle_IA/Material/MI_CH_asa_hed_battle_IA.uasset",
@@ -2218,8 +4370,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_hed_battle_IA_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_battle_IA_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_battle_IA_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     "MI_CH_asa_lip": {
       "diffuse": "T_CH_asa_lip_D",
@@ -3092,7 +5274,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_1p_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_leg_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_leg_M.png",
+          "colors": [
+            0.9300000071525574,
+            0.8236860036849976,
+            0.7968440055847168,
+            0.5049999952316284,
+            0.4093349874019623,
+            0.38632500171661377,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
       }
     },
     {
@@ -3142,7 +5349,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_1p_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1P_shoes_M.png",
+          "colors": [
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.5849999785423279,
+            0.39872899651527405,
+            0.3539249897003174,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3158,7 +5390,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_bdl_battle_backle_D",
         "MaskMap": "T_CH_asa_bdl_battle_backle_M",
-        "Normal": "T_CH_asa_bdl_battle_backle_N"
+        "Normal": "T_CH_asa_bdl_battle_backle_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_backle.uasset",
       "unity": {
@@ -3167,8 +5423,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_backle_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_backle_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_backle_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_battle_belt",
@@ -3192,6 +5479,24 @@
           0.1922830045223236,
           0.19706399738788605,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_belt.uasset",
@@ -3201,8 +5506,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_belt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_belt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_belt_M.png",
+          "colors": [
+            0.25,
+            0.1922830045223236,
+            0.19706399738788605,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_battle_boots",
@@ -3235,6 +5570,18 @@
           0.1756269931793213,
           0.16394400596618652,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_boots.uasset",
@@ -3244,8 +5591,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_boots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_boots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_boots_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.20000000298023224,
+            0.1756269931793213,
+            0.16394400596618652,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_battle_cross",
@@ -3278,6 +5654,18 @@
           0.298799991607666,
           0.23399999737739563,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_cross.uasset",
@@ -3287,8 +5675,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_cross_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_cross_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_cross_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.44999998807907104,
+            0.298799991607666,
+            0.23399999737739563,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_battle_shoes",
@@ -3316,6 +5733,24 @@
           0.7655379772186279,
           0.5752609968185425,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_battle/Material/MI_CH_asa_bdl_battle_shoes.uasset",
@@ -3325,8 +5760,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_battle_shoes_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_battle_shoes_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_school_bv_kutu",
@@ -3360,6 +5825,18 @@
           0.0723550021648407,
           0.06990800052881241,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_kutu.uasset",
@@ -3369,8 +5846,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_kutu_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Shared/Textures/T_CH_asa_bdl_school_bv_kutu_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_kutu_M.png",
+          "colors": [
+            0.1599999964237213,
+            0.06218000128865242,
+            0.02160000056028366,
+            0.08500000089406967,
+            0.0723550021648407,
+            0.06990800052881241,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_school_bv_pants",
@@ -3398,6 +5904,24 @@
           0.10499999672174454,
           0.3499999940395355,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_pants.uasset",
@@ -3407,8 +5931,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_pants_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_pants_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_pants_M.png",
+          "colors": [
+            0.12534800171852112,
+            0.10499999672174454,
+            0.3499999940395355,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_school_bv_skirt",
@@ -3436,6 +5990,24 @@
           0.6666669845581055,
           1.0,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_skirt.uasset",
@@ -3445,8 +6017,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_skirt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_skirt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_skirt_M.png",
+          "colors": [
+            0.0,
+            0.6666669845581055,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdl_school_bv_socks_RE",
@@ -3474,6 +6076,24 @@
           0.20459400117397308,
           0.5649999976158142,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_school_bv/Material/MI_CH_asa_bdl_school_bv_socks_RE.uasset",
@@ -3483,8 +6103,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdl_school_bv_socks_RE_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_socks_RE_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_school_bv_socks_RE_M.png",
+          "colors": [
+            0.3031019866466522,
+            0.20459400117397308,
+            0.5649999976158142,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_body",
@@ -3533,7 +6183,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_body_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_body_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_body_M.png",
+          "colors": [
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -3553,6 +6228,24 @@
           0.855400025844574,
           0.9021199941635132,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_belt.uasset",
@@ -3562,8 +6255,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_belt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.9100000262260437,
+            0.855400025844574,
+            0.9021199941635132,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_butterfly",
@@ -3584,6 +6307,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_butterfly.uasset",
@@ -3593,8 +6334,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_butterfly_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_butterfly_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_butterfly_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_collar",
@@ -3615,6 +6386,24 @@
           0.8522099852561951,
           0.8073390126228333,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_collar.uasset",
@@ -3624,8 +6413,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_collar_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_collar_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8999999761581421,
+            0.8522099852561951,
+            0.8073390126228333,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_dress",
@@ -3653,6 +6472,18 @@
           0.0860000029206276,
           0.4300000071525574,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_dress.uasset",
@@ -3662,8 +6493,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dress_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dress_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dress_M.png",
+          "colors": [
+            0.9300000071525574,
+            0.2618870139122009,
+            0.8321840167045593,
+            0.15479999780654907,
+            0.0860000029206276,
+            0.4300000071525574,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_dresslace",
@@ -3684,6 +6544,24 @@
           0.0860000029206276,
           0.4300000071525574,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_dresslace.uasset",
@@ -3693,8 +6571,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dresslace_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_dresslace_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_belt_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.15479999780654907,
+            0.0860000029206276,
+            0.4300000071525574,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_dressskirt",
@@ -3722,6 +6630,18 @@
           0.2618870139122009,
           0.8321840167045593,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_dressskirt.uasset",
@@ -3731,8 +6651,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_dressskirt_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_dressskirt_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_dressskirt_M.png",
+          "colors": [
+            0.1523669958114624,
+            0.1379999965429306,
+            1.0,
+            0.9300000071525574,
+            0.2618870139122009,
+            0.8321840167045593,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_glove",
@@ -3754,6 +6703,24 @@
           0.8899880051612854,
           0.8716610074043274,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_glove.uasset",
@@ -3763,8 +6730,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_glove_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1p_old_glove_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            0.8899880051612854,
+            0.8716610074043274,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_jewel",
@@ -3785,6 +6782,24 @@
           0.9150000214576721,
           0.9150000214576721,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewel.uasset",
@@ -3794,8 +6809,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewel_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.9150000214576721,
+            0.9150000214576721,
+            0.9150000214576721,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_jewel_2",
@@ -3816,6 +6861,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewel_2.uasset",
@@ -3825,8 +6888,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewel_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewel_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_jewelsk",
@@ -3847,6 +6940,24 @@
           0.7026450037956238,
           0.6011289954185486,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewelsk.uasset",
@@ -3856,8 +6967,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewelsk_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            0.7026450037956238,
+            0.6011289954185486,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_jewelsk_2",
@@ -3878,6 +7019,24 @@
           0.7026450037956238,
           0.6011289954185486,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_jewelsk_2.uasset",
@@ -3887,8 +7046,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_jewelsk_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_jewelsk_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            0.7026450037956238,
+            0.6011289954185486,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_maskrose",
@@ -3907,6 +7096,24 @@
           0.7916470170021057,
           0.6772720217704773,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_maskrose.uasset",
@@ -3916,8 +7123,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_maskrose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_pantsboot2",
@@ -3951,6 +7188,12 @@
           0.8633700013160706,
           0.8230500221252441,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboot2.uasset",
@@ -3960,8 +7203,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboot2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.8450000286102295,
+            0.7916470170021057,
+            0.6772720217704773,
+            0.9300000071525574,
+            0.8633700013160706,
+            0.8230500221252441,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_pantsboots",
@@ -3989,6 +7260,18 @@
           0.8633700013160706,
           0.8230500221252441,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboots.uasset",
@@ -3998,8 +7281,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboots_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            0.11048399657011032,
+            0.10000000149011612,
+            0.1599999964237213,
+            0.9300000071525574,
+            0.8633700013160706,
+            0.8230500221252441,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_pantsboots_2",
@@ -4032,6 +7344,12 @@
           1.0,
           1.0,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_pantsboots_2.uasset",
@@ -4041,8 +7359,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_pantsboots_2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_pantsboots_M.png",
+          "colors": [
+            0.11048399657011032,
+            0.10000000149011612,
+            0.1599999964237213,
+            1.0,
+            0.9283549785614014,
+            0.8849999904632568,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_rose",
@@ -4063,6 +7409,24 @@
           0.9035279750823975,
           0.6952049732208252,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p_old/Material/MI_CH_asa_bdu_1p_old_rose.uasset",
@@ -4072,8 +7436,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_rose_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_rose_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9035279750823975,
+            0.6952049732208252,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_sktlace",
@@ -4100,6 +7494,18 @@
           0.16546699404716492,
           0.14212000370025635,
           1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_sktlace.uasset",
@@ -4109,8 +7515,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_sktlace_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stklace_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stklace_M.png",
+          "colors": [
+            0.14499999582767487,
+            0.1337130069732666,
+            0.13092300295829773,
+            0.27000001072883606,
+            0.16546699404716492,
+            0.14212000370025635,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_old_stk",
@@ -4136,6 +7571,18 @@
           0.27848899364471436,
           0.8450000286102295,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_bdu_1p_old_stk.uasset",
@@ -4145,8 +7592,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_old_stk_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stk_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdl_1p_old_stk_M.png",
+          "colors": [
+            0.14499999582767487,
+            0.1337130069732666,
+            0.13092300295829773,
+            0.0,
+            0.27848899364471436,
+            0.8450000286102295,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_1p_skirt1",
@@ -4195,7 +7671,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_skirt1_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt1_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt1_M.png",
+          "colors": [
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            0.9399999976158142,
+            0.8325430154800415,
+            0.8054119944572449,
+            0.9490000009536743,
+            0.3179149925708771,
+            0.6435940265655518,
+            0.10048899799585342,
+            0.09054499864578247,
+            0.19900000095367432
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
       }
     },
     {
@@ -4219,6 +7720,24 @@
           0.9100000262260437,
           0.6488500237464905,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_1p/Material/MI_CH_asa_bdu_1p_skirt2.uasset",
@@ -4228,8 +7747,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_1p_skirt2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt2_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_1P_skirt2_M.png",
+          "colors": [
+            0.27755001187324524,
+            0.9100000262260437,
+            0.6488500237464905,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_battle_Suit",
@@ -4283,7 +7832,32 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_Suit_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_Suit_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_Suit_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.2199999988079071,
+            0.18629199266433716,
+            0.17599999904632568,
+            0.44999998807907104,
+            0.298799991607666,
+            0.23399999737739563,
+            0.9350000023841858,
+            0.6067720055580139,
+            0.25992000102996826
+          ],
+          "baked": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
       }
     },
     {
@@ -4312,6 +7886,24 @@
           0.7655379772186279,
           0.5752609968185425,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_arm.uasset",
@@ -4321,8 +7913,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_arm_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_arm_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_arm_M.png",
+          "colors": [
+            0.949999988079071,
+            0.7655379772186279,
+            0.5752609968185425,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_battle_glove",
@@ -4349,6 +7971,24 @@
           0.18629199266433716,
           0.17599999904632568,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_glove.uasset",
@@ -4358,8 +7998,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_glove_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_glove_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_glove_M.png",
+          "colors": [
+            0.2199999988079071,
+            0.18629199266433716,
+            0.17599999904632568,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_battle_kote",
@@ -4381,6 +8051,24 @@
           1.0,
           0.7015699744224548,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_kote.uasset",
@@ -4390,8 +8078,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_kote_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_battle_metal",
@@ -4407,7 +8125,31 @@
         "DiffuseMap": "T_CH_asa_bdu_battle_metal_D",
         "MaskMap": "T_CH_asa_bdu_battle_metal_M",
         "Normal": "T_CH_asa_bdu_battle_metal_N",
-        "specluar": "T_CH_asa_bdu_battle_metal_D"
+        "specluar": "T_CH_asa_bdu_battle_metal_D",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_battle/Material/MI_CH_asa_bdu_battle_metal.uasset",
       "unity": {
@@ -4416,8 +8158,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_battle_metal_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_metal_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_battle_kote_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_school_bv_botan",
@@ -4433,7 +8206,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_bdu_school_bv_botan_D",
         "MaskMap": "T_CH_asa_bdu_school_bv_botan_M",
-        "Normal": "T_CH_asa_bdu_school_bv_botan_N"
+        "Normal": "T_CH_asa_bdu_school_bv_botan_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_botan.uasset",
       "unity": {
@@ -4442,8 +8239,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_botan_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_school_bv_kousyou",
@@ -4465,6 +8293,24 @@
           0.8904479742050171,
           0.9850000143051147,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_kousyou.uasset",
@@ -4474,8 +8320,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_kousyou_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_kousyou_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_kousyou_M.png",
+          "colors": [
+            0.42467400431632996,
+            0.8904479742050171,
+            0.9850000143051147,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_school_bv_ribon",
@@ -4504,6 +8380,24 @@
           0.044449999928474426,
           0.05051400139927864,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_ribon.uasset",
@@ -4513,8 +8407,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_ribon_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_ribon_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_ribon_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.6349999904632568,
+            0.044449999928474426,
+            0.05051400139927864,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_school_bv_syatu_RE",
@@ -4555,6 +8479,12 @@
           0.044449999928474426,
           0.05051400139927864,
           1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_syatu_RE.uasset",
@@ -4564,8 +8494,36 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_syatu_RE_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_syatu_RE_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_syatu_RE_M.png",
+          "colors": [
+            0.09000000357627869,
+            0.6751670241355896,
+            0.8999999761581421,
+            0.889028012752533,
+            0.8999999761581421,
+            0.8430799841880798,
+            0.6349999904632568,
+            0.044449999928474426,
+            0.05051400139927864,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_bdu_school_bv_watch",
@@ -4587,7 +8545,31 @@
         "DetalNormal": "T_CH_metal01_N",
         "DiffuseMap": "T_CH_asa_bdu_school_bv_watch_D",
         "MaskMap": "T_CH_asa_bdu_school_bv_watch_M",
-        "Normal": "T_CH_asa_bdu_school_bv_watch_N"
+        "Normal": "T_CH_asa_bdu_school_bv_watch_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Upper/asa_bdu_school_bv/Material/MI_CH_asa_bdu_school_bv_watch.uasset",
       "unity": {
@@ -4596,8 +8578,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_bdu_school_bv_watch_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_watch_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_bdu_school_bv_botan_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_burnier_leg",
@@ -4615,6 +8628,24 @@
           1.0,
           1.0,
           1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_1p_old/Material/MI_CH_asa_burnier_leg.uasset",
@@ -4624,8 +8655,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_burnier_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_burnier_momo",
@@ -4637,7 +8698,31 @@
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_burnier_momo_D",
         "MaskMap": "T_CH_asa_burnier_momo_M",
-        "Normal": "T_CH_asa_burnier_momo_N"
+        "Normal": "T_CH_asa_burnier_momo_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Lower/asa_bdl_nudetest/Material/MI_CH_asa_burnier_momo.uasset",
       "unity": {
@@ -4646,8 +8731,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_burnier_leg_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_burnier_momo_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_eye_shadow",
@@ -4748,7 +8864,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairB_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4783,7 +8925,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hair2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4819,7 +8987,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairB_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4854,7 +9048,33 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hair2_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hair_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
       }
     },
     {
@@ -4869,7 +9089,31 @@
         "RoughnessMin": 0.5,
         "RefractionDepthBias": 0.0,
         "DiffuseMap": "T_CH_asa_har_1p_hairleaves_D",
-        "Normal": "T_CH_asa_har_1p_hairleaves_N"
+        "Normal": "T_CH_asa_har_1p_hairleaves_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Hair/asa_har_1p/Material/MI_CH_asa_har_1p_hairleaves.uasset",
       "unity": {
@@ -4878,8 +9122,39 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_har_1p_hairleaves_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": true
-      }
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_har_1p_hairleaves_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_FabricBase01_M.png",
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_hed_1p_head",
@@ -4907,6 +9182,18 @@
           0.16698899865150452,
           0.14822499454021454,
           1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Head/asa_hed_1p/Material/MI_CH_asa_hed_1p_head.uasset",
@@ -4916,8 +9203,37 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_hed_1p_head_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_1P_head_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_1P_head_M.png",
+          "colors": [
+            0.7149999737739563,
+            0.5059170126914978,
+            0.1859000027179718,
+            0.24500000476837158,
+            0.16698899865150452,
+            0.14822499454021454,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            true,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_hed_battle_IA",
@@ -4945,6 +9261,24 @@
           0.949999988079071,
           0.949999988079071,
           1.0
+        ],
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "source": "TekkenGame/Content/Character/Item/Meshes/asa/Head/asa_hed_battle_IA/Material/MI_CH_asa_hed_battle_IA.uasset",
@@ -4954,8 +9288,38 @@
         "surface": "Assets/_Project/Characters/Alisa/Costumes/Textures/MI_CH_asa_hed_battle_IA_Surface.png",
         "occlusion": "",
         "specular": false,
-        "cutout": false
-      }
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_battle_IA_D.png",
+          "mask": "Assets/_Project/Characters/Alisa/Source/Base/Textures/T_CH_asa_hed_battle_IA_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "slots": [
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color03",
+        "Color04"
+      ]
     },
     {
       "name": "MI_CH_asa_lip",
