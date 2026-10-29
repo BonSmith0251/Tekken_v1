@@ -1,0 +1,67 @@
+Battle sound and music in LocalVersus2
+======================================
+
+Source: Tekken 7's Wwise banks (bank version 118): AkBankBattle, AkBankFoot, AkBankBGM and AkBankVoice<fighter>;
+its sound managers BP_TekkenCommonSoundManager and BP_<code>CharacterSoundManager; the movesets
+(decrypted/tkdata/mothead/bin/<code>mot.bin); the US subtitles (decrypted/tkdata/subtitles/<CODE>/us).
+Exporters: Tools/BattleSound/export_battle_sound.py -> Assets/_Project/Resources/BattleSound (one WAV per media file,
+sounds.json, moves_<code>.json); Tools/BattleSound/export_battle_music.py -> Resources/BattleMusic (OGG, music.json).
+Players: Scripts/Runtime/BattleSound.cs (sounds, per scene), BattleMusic.cs (music, survives scene reloads).
+Validation: Temp/validate-battle-sound (Scripts/Editor/BattleSoundValidation.cs) -> Validation/BattleSound/validation.json.
+
+Regenerate (from the workspace root; <src>, <wav>, <bgm>, <ogg> = scratch folders; P = this project):
+  cd t7extract
+  python -m t7extract unpack ../TEKKEN.7 "*/WwiseAudio/Windows/AkBankBattle.bnk" "*/WwiseAudio/Windows/AkBankFoot.bnk"
+      "*/WwiseAudio/Windows/AkBankBGM.bnk" "*/WwiseAudio/Windows/AkBankVoice<Code>.bnk" (one per fighter)
+      "*/Content/Sound/Common/*" "*/Content/Sound/Character/*" -o <src> --tekken-key
+  python -m t7extract audio <src> -o <wav> --format wav
+  python P/Tools/BattleSound/export_battle_sound.py --source <src> --wav <wav> --t7extract . \
+      --movesets ../decrypted/tkdata/mothead/bin --subtitles ../decrypted/tkdata/subtitles
+  python P/Tools/BattleSound/export_battle_music.py --t7extract . --source <src> --list-media > media.txt
+  python -m t7extract unpack ../TEKKEN.7 --paths-file media.txt -o <bgm> --tekken-key   (stg23/stg24 are encrypted)
+  python -m t7extract audio <bgm> -o <ogg>
+  python P/Tools/BattleSound/export_battle_music.py --t7extract . --source <src> --audio <ogg>
+Unpack patterns go before -o. Both exporters replace files in place and prune stale ones with their .meta.
+
+What comes from the original data
+- Event names and IDs: an event / switch / state ID is the FNV-1 hash of the lower-case name. Names come from the
+  managers' imports, the UE Sound/ asset names, and (for BGM_Selector values) strings in the executable and tkdata.
+- Fighter voices: each fighter's manager lists Sounds (SoundID + event) and Streams (entrance xx_s## / victory xx_w##).
+- Move sound properties 0x84C4 (own) / 0x84C6 (opponent), value = category << 24 | index:
+    2 / 3 / 4  n-th attack shout / pain cry / death cry of the fighter's list (SE_KIAI_n, SE_YARARE_n, SE_DEAD_n)
+    1, 6, 7, 8 index the common battle table ("tones" in sounds.json): the executable's static list of
+               /Game/Sound/Battle references in order (Hit01, SYVO_*, PCH_*, KCK_*, GRD, DWN, BNE_BRK, WND, SPK, FX_HIT_*).
+               6 is only ever WND_MD01/02 on attack startups; 7 the impacts on reaction moves' first frame.
+    15         BattleSysTones of the common manager ("systemTones"): Rage Art start, Devil Kazuya's beam and Rage Art,
+               Lidia's Rage Art, Asuka's thrusters ...
+    12         index 0x2000 + n: the fighter's <...>_item<nn> line (Alisa's chainsaws)
+    9          body hitting the floor (played with RES_BANK_DWN_HVY0x, see below)
+- Each move's own sound list (voiceclip block, move +0x78), same encoding: an attack's contact set, played when it
+  connects (swing 6 + impact 7 + shout 2:n, 999 = any); guard reactions list 1:26 = RES_BANK_GRD_MD01, played on a block.
+  93% of clean hits in CPU matches take their impact from it (harness Sounds).
+- Footsteps: property 0x8193 plays PlayerOne_FootSteps (first 6 surface variations).
+- Entrance and victory takes speak the line named like the take (jz_s00; jz_w00 for jz_w00_n), with the game's
+  English subtitle shown while it is spoken ("lines" in sounds.json).
+- Announcer: Play_Round1..9 / Play_FinalRound, Play_Fight, Play_KO, Play_DoubleKO, Play_TimeUp, Play_Perfect, Play_Draw;
+  the winner's name call (voices[].name: syvo_name_<code>, Leo's is syvo_name_uni) + Play_Wins after the deciding K.O.
+- Rage: se_rage when Rage starts; SE_RageArts_Start with the Rage Art camera (0x8439/0x843A).
+- Music: BGM_Container switches on BGM_Selector (373 values: stgNN_<name> per stage, CharaSelect, MainMenu, the older
+  games' T1..TT2 jukebox) and then on FinalRound (Normal / Final). Each stage plays its own track and changes to the
+  Final arrangement with the final-round call; the select screen plays CharaSelect. stg21/stg22 have one arrangement.
+- Select screen: the announcer names each pick (syvo_name_*).
+
+Remaster choices (the original decides these in native code)
+- Clean hits whose attack lists no impact: RES_BANK_PCH_WK02 / MD01 / SG01 (punch) or KCK_WK01 / LT01 / SG01 (kick)
+  by damage (<10, <20, >=20), the limb being the attacker's striking bone nearest the defender.
+- The struck fighter cries out: a pain cry from the light/medium/heavy third of its damage list, a death cry on the
+  knock-out blow. A list shout plays only when the attacker isn't already speaking.
+- Power-crush absorbs play Guard01. Category 9 plays RES_BANK_DWN_HVY01-03.
+- Music for the generated arena and the stages without a track (stg17, stg25, stg90): stg11_arena; stg08a uses stg08.
+  1.5 s crossfades; music volume 0.5.
+- Select screen tones: SE_Select (cursor), SE_Decide (confirm), SE_Cancel (back); SE_VS1 when the VS screen shows.
+  The game preloads SE_ChrSel1/2 and SE_VS1-3 there, but their exact use is native.
+
+Not played
+- Category 10 of the move properties (indices 0/1, ~120 plays per 68 CPU minutes): not identified.
+- Stage ambience and crowds (AkBankstgNN), destructible floors and walls, story-mode drama lines, the older-game
+  jukebox (other banks), other voice languages, Wwise loop points and bus mixing (whole files loop; no ducking).
