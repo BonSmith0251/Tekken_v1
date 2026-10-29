@@ -1,0 +1,7470 @@
+{
+ "opponent": 9,
+ "demos": [
+  {
+   "index": 0,
+   "name": "Rage Art",
+   "command": "During Rage d+1+2",
+   "setup": false,
+   "rage": true,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 119
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 151
+    },
+    {
+     "input": "n",
+     "frames": 254
+    },
+    {
+     "input": "n",
+     "frames": 200
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_RageArts00"
+   ],
+   "trace": [
+    2179,
+    2180,
+    2181,
+    1422,
+    1422,
+    1422,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 1,
+   "name": "Rage Drive 1",
+   "command": "During Rage f,F+2+3",
+   "setup": false,
+   "rage": true,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+2+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 95
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_RageD_EX"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    2167,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 2,
+   "name": "Rage Drive 2",
+   "command": "During Rage During Pouncing Tiger, Stalking Wolf 4,2",
+   "setup": false,
+   "rage": true,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 83
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_steprk",
+    "Nd_RageD_steprk"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1757,
+    2174,
+    2176,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 3,
+   "name": "Cat Foot Stance I",
+   "command": "f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_6lrk"
+   ],
+   "trace": [
+    1691,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 4,
+   "name": "Sashi-te",
+   "command": "During Cat Foot Stance I 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 95
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rphlp"
+   ],
+   "trace": [
+    1691,
+    1571,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 5,
+   "name": "Mid Chop",
+   "command": "During Cat Foot Stance I 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 65
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rphrp"
+   ],
+   "trace": [
+    1691,
+    1573,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 6,
+   "name": "High Left Reverse Roundhouse Kick",
+   "command": "During Cat Foot Stance I 3",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 35
+    },
+    {
+     "input": "n",
+     "frames": 95
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rphlk"
+   ],
+   "trace": [
+    1691,
+    1567,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 7,
+   "name": "Muramasa",
+   "command": "During Cat Foot Stance I 4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 95
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rphrk"
+   ],
+   "trace": [
+    1691,
+    1569,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 8,
+   "name": "Vacuity to Swift High Jab",
+   "command": "During Cat Foot Stance I {U+E034}B+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "b",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 65
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_666lpsp"
+   ],
+   "trace": [
+    1691,
+    1564,
+    1566,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 9,
+   "name": "Heaven and Earth",
+   "command": "During Cat Foot Stance I {U+E034}F",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "f",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_6lrk"
+   ],
+   "trace": [
+    1691,
+    1576,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 10,
+   "name": "Magpie Strike",
+   "command": "During Heaven and Earth 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 90
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rph3lp"
+   ],
+   "trace": [
+    1691,
+    1576,
+    1577,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 11,
+   "name": "Low Chop",
+   "command": "During Heaven and Earth 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rph3rp"
+   ],
+   "trace": [
+    1691,
+    1576,
+    1578,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 12,
+   "name": "Morote-zuki",
+   "command": "During Heaven and Earth 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1+2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6lrk",
+    "Nd_66rph3lrp"
+   ],
+   "trace": [
+    1691,
+    1576,
+    1579,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 13,
+   "name": "Flurry to Mid Chaser to Cat Foot Stance II",
+   "command": "1,2,2 (must hit)",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 74
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_lp00F",
+    "Nd_lprp",
+    "Nd_lprprp"
+   ],
+   "trace": [
+    1646,
+    1649,
+    1655,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 14,
+   "name": "Cat Foot Stance II",
+   "command": "b+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_4lrk"
+   ],
+   "trace": [
+    1731,
+    1565,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 15,
+   "name": "Mid Left Jab",
+   "command": "During Cat Foot Stance II 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_4lrklp"
+   ],
+   "trace": [
+    1731,
+    1732,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 16,
+   "name": "Enlightenment",
+   "command": "During Cat Foot Stance II 2,3,1",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 48
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_4lrkrp",
+    "Nd_4lrkrplk",
+    "Nd_4lrkrplklp"
+   ],
+   "trace": [
+    1731,
+    1733,
+    1734,
+    1738,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 17,
+   "name": "High Left Reverse Hook Kick",
+   "command": "During Cat Foot Stance II 3",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_4lrklk"
+   ],
+   "trace": [
+    1731,
+    1741,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 18,
+   "name": "Crouching Tiger, Rising Dragon",
+   "command": "During Cat Foot Stance II 4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_4lrkrk",
+    "Nd_rk00"
+   ],
+   "trace": [
+    1731,
+    1742,
+    1422,
+    1625,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 19,
+   "name": "Gojushiho",
+   "command": "During Cat Foot Stance II 1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_4lrklrp"
+   ],
+   "trace": [
+    1731,
+    1744,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 20,
+   "name": "Vacuity to Swift High Jab",
+   "command": "During Cat Foot Stance II {U+E034}B+1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "b",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_666lpsp"
+   ],
+   "trace": [
+    1731,
+    1565,
+    1566,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 21,
+   "name": "Pouncing Tiger, Stalking Wolf",
+   "command": "During Cat Foot Stance II {U+E034}F",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "f",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_4lrk"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 22,
+   "name": "Bassai-zuki",
+   "command": "During Pouncing Tiger, Stalking Wolf 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_steplp"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1746,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 23,
+   "name": "Jion Upward Thrust",
+   "command": "During Pouncing Tiger, Stalking Wolf 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 52
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_steprp"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1747,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 24,
+   "name": "Mid Left Kick to Nimble Thrust",
+   "command": "During Pouncing Tiger, Stalking Wolf 3,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 28
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_steplk",
+    "Nd_steplklp"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1748,
+    1752,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 25,
+   "name": "Pale Rain",
+   "command": "During Pouncing Tiger, Stalking Wolf 4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 72
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lrk",
+    "Nd_steprk"
+   ],
+   "trace": [
+    1731,
+    1745,
+    1757,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 26,
+   "name": "High Jab to Mid Four-Finger Jab",
+   "command": "1,1",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_lp00F",
+    "Nd_lplp"
+   ],
+   "trace": [
+    1646,
+    1648,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 27,
+   "name": "Flurry to Gale Kick",
+   "command": "1,2,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "n",
+     "frames": 36
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_lp00F",
+    "Nd_lprp",
+    "Nd_lprplk"
+   ],
+   "trace": [
+    1646,
+    1649,
+    1658,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 28,
+   "name": "Flurry to Low Right Kick to Triangle Kick",
+   "command": "1,2,4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 43
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_lp00F",
+    "Nd_lprp",
+    "Nd_lprprk",
+    "Nd_lprprky"
+   ],
+   "trace": [
+    1646,
+    1649,
+    1661,
+    1662,
+    1663,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 29,
+   "name": "High Jab to High Right Kick",
+   "command": "1,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_lp00F",
+    "Nd_lprk"
+   ],
+   "trace": [
+    1646,
+    1647,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 30,
+   "name": "High Right Reverse Jab to Mid Right Front Kick",
+   "command": "2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "4",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 28
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_rp00",
+    "Nd_rprk"
+   ],
+   "trace": [
+    1538,
+    1539,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 31,
+   "name": "Gankaku",
+   "command": "3,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 96
+    },
+    {
+     "input": "n",
+     "frames": 42
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_lk00",
+    "Nd_lkrp"
+   ],
+   "trace": [
+    1606,
+    1611,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 32,
+   "name": "High Right Roundhouse Kick to High Reverse Thrust",
+   "command": "4,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 64
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_rk00",
+    "Nd_rp00"
+   ],
+   "trace": [
+    1625,
+    1422,
+    1538,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 33,
+   "name": "High Right Roundhouse Kick to Jumping Back Spin Kick",
+   "command": "4,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 65
+    },
+    {
+     "input": "n",
+     "frames": 39
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_rk00",
+    "Nd_lk00"
+   ],
+   "trace": [
+    1625,
+    1422,
+    1606,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 34,
+   "name": "Heian Shodan",
+   "command": "1+2 Hold",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1+2",
+     "frames": 100
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 15
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_lrp"
+   ],
+   "trace": [
+    1587,
+    1588,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 35,
+   "name": "Horned Lark",
+   "command": "f+2,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_6rp",
+    "Nd_6rprk"
+   ],
+   "trace": [
+    1548,
+    1549,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 36,
+   "name": "Jumping Mid Front Kick",
+   "command": "f+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2300,
+   "inputs": [
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_6lk"
+   ],
+   "trace": [
+    1620,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 37,
+   "name": "Kusanku Double Kick to Uraken-uchi",
+   "command": "f+4,3,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2100,
+   "inputs": [
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklklp"
+   ],
+   "trace": [
+    1668,
+    1673,
+    1678,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 38,
+   "name": "Kusanku Double Kick to Jumping Back Roundhouse Kick",
+   "command": "f+4,3,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklkrk"
+   ],
+   "trace": [
+    1668,
+    1673,
+    1681,
+    1682,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 39,
+   "name": "Political Storm",
+   "command": "f+1+2,3,2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_6lrp",
+    "Nd_6lrplk",
+    "Nd_6lrplkrp",
+    "Nd_6lrplkrplp"
+   ],
+   "trace": [
+    1591,
+    1592,
+    1597,
+    1598,
+    1599,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 40,
+   "name": "Mid Left Hook Thrust to Reverse Chop",
+   "command": "d/f+1,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_t_slpF",
+    "Nd_3lprpy"
+   ],
+   "trace": [
+    1808,
+    1812,
+    1822,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 41,
+   "name": "Mid Left Hook Thrust to Mid Left Sidekick",
+   "command": "d/f+1,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "d/f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 29
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_t_slpF",
+    "Nd_3lplk"
+   ],
+   "trace": [
+    1808,
+    1821,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 42,
+   "name": "Shadowless Fist to Cat Foot Stance II",
+   "command": "d/f+2 (must hit)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_t_srpF"
+   ],
+   "trace": [
+    1834,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 43,
+   "name": "Mid Left Knee to Mid Right Sidekick",
+   "command": "d/f+3,4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_3lk",
+    "Nd_3lkrk"
+   ],
+   "trace": [
+    1836,
+    1845,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 44,
+   "name": "Majority Rules",
+   "command": "d/f【3,1】2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_3lk",
+    "Nd_3lklp",
+    "Nd_3lklprp"
+   ],
+   "trace": [
+    1836,
+    1842,
+    1843,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 45,
+   "name": "Crescent Kick to High Elbow Strike",
+   "command": "d/f+4,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 73
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_3rk",
+    "Nd_rp00"
+   ],
+   "trace": [
+    1848,
+    1422,
+    1538,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 46,
+   "name": "Crescent Kick to Jumping Spinning Back Kick",
+   "command": "d/f+4,3",
+   "setup": false,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "d/f+4",
+     "frames": 1
+    },
+    {
+     "input": "d/f+4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 71
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_3rk",
+    "Nd_lk00"
+   ],
+   "trace": [
+    1848,
+    1422,
+    1606,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 47,
+   "name": "Triangle Kick",
+   "command": "d/f【4,4】",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 33
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_3rk",
+    "Nd_rk00"
+   ],
+   "trace": [
+    1848,
+    1422,
+    1625,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 48,
+   "name": "Gyre",
+   "command": "d/f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 33
+    },
+    {
+     "input": "n",
+     "frames": 41
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_3lrp"
+   ],
+   "trace": [
+    1824,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 49,
+   "name": "Vortex",
+   "command": "d/f+1+2 when parrying a right punch 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_3lrp",
+    "Nd_rp00"
+   ],
+   "trace": [
+    1824,
+    1422,
+    1538,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 50,
+   "name": "Tourbillion",
+   "command": "d/f+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_3lrk"
+   ],
+   "trace": [
+    1846,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 51,
+   "name": "Chop",
+   "command": "d+1",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_2lp"
+   ],
+   "trace": [
+    1776,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 52,
+   "name": "Kansetsu-geri to High Left Jab",
+   "command": "d+3,1",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_2lk",
+    "Nd_2lklp"
+   ],
+   "trace": [
+    1788,
+    1795,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 53,
+   "name": "Kansetsu-geri to Back Spin Kick",
+   "command": "d+3,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_2lk",
+    "Nd_2lkrk"
+   ],
+   "trace": [
+    1788,
+    1794,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 54,
+   "name": "Kansetsu-geri to Back Spin Kick to Crouching Tiger, Rising Dragon",
+   "command": "d+3,4,4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "4",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_2lk",
+    "Nd_2lkrk",
+    "Nd_4rkrk",
+    "Nd_4rkrky"
+   ],
+   "trace": [
+    1788,
+    1794,
+    1724,
+    1725,
+    1729,
+    1438,
+    1460,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 55,
+   "name": "Lame Duck",
+   "command": "d/b+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_1rp"
+   ],
+   "trace": [
+    1780,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 56,
+   "name": "Red Tape",
+   "command": "d/b+3 during a clean hit from the front 2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "d/b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 14
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 24
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 10
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_1lk",
+    "Nd_1lky"
+   ],
+   "trace": [
+    1868,
+    1870,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 57,
+   "name": "Low Right Roundhouse Kick",
+   "command": "d/b+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 58
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_1rk"
+   ],
+   "trace": [
+    1798,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 58,
+   "name": "Iron Lady",
+   "command": "d/b+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d/b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 37
+    },
+    {
+     "input": "n",
+     "frames": 65
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_tukirpsp"
+   ],
+   "trace": [
+    1865,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 59,
+   "name": "For the People",
+   "command": "d/b+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d/b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_1lrk"
+   ],
+   "trace": [
+    1636,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 60,
+   "name": "For the Nation",
+   "command": "d/b+3+4 when parrying a low attack 1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "d/b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_1lrk",
+    "Nd_lp00F"
+   ],
+   "trace": [
+    1636,
+    1422,
+    1646,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 61,
+   "name": "High Left Hook Thrust to Neck Chop",
+   "command": "b+1,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "2",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lp",
+    "Nd_4lprp"
+   ],
+   "trace": [
+    1692,
+    1697,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 62,
+   "name": "Ruling Party to High Left Reverse Jab",
+   "command": "b+2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 19
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4rp",
+    "Nd_4rplp"
+   ],
+   "trace": [
+    1700,
+    1705,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 63,
+   "name": "Ruling Party to Crushing Left Knee",
+   "command": "b+2,3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4rp",
+    "Nd_4rplk"
+   ],
+   "trace": [
+    1700,
+    1709,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 64,
+   "name": "Birds of Prey",
+   "command": "b+3,1",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "1",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 63
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_4lk",
+    "Nd_4lklp"
+   ],
+   "trace": [
+    1714,
+    1715,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 65,
+   "name": "Birds and Beasts",
+   "command": "b+3,4,d,d/f,f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 32
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst",
+    "Nd_rk00"
+   ],
+   "trace": [
+    1714,
+    1717,
+    1722,
+    1422,
+    1625,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 66,
+   "name": "Back Spin Kick to Crouching Tiger, Rising Dragon",
+   "command": "b+4,4,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "b+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 74
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_rk00B",
+    "Nd_4rkrk",
+    "Nd_4rkrky"
+   ],
+   "trace": [
+    1723,
+    1724,
+    1725,
+    1729,
+    1438,
+    1460,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 67,
+   "name": "Valley Breeze",
+   "command": "b+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 48
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_4lrp"
+   ],
+   "trace": [
+    1553,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 68,
+   "name": "Counter Reverse Strike",
+   "command": "b+1+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "b+1+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 116
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_ohgawara"
+   ],
+   "trace": [
+    2057,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 69,
+   "name": "Spring Mist",
+   "command": "u/b+1",
+   "setup": false,
+   "rage": false,
+   "distance": 1300,
+   "inputs": [
+    {
+     "input": "u/b+1",
+     "frames": 1
+    },
+    {
+     "input": "u/b+1",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 41
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_7lp"
+   ],
+   "trace": [
+    1481,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 70,
+   "name": "Willow Branch",
+   "command": "u/f+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_9lk"
+   ],
+   "trace": [
+    1502,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 71,
+   "name": "Cleaving Spirit to Cat Foot Stance II",
+   "command": "u/f+4 (must hit)",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "d/f",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_jprk00F"
+   ],
+   "trace": [
+    1503,
+    1505,
+    1508,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 72,
+   "name": "Lightning Thrust to Cat Foot Stance I",
+   "command": "f,F+2 (must hit)",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 51
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_66rp"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1558,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 73,
+   "name": "Flying Forward Kick",
+   "command": "f,F+3",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_66lk"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1689,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 74,
+   "name": "Mid Right Roundhouse Kick",
+   "command": "f,F+4",
+   "setup": false,
+   "rage": false,
+   "distance": 3000,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 27
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_66rk"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1684,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 75,
+   "name": "Rapture",
+   "command": "f,F【4,3】",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "3",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 80
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Nd_66rk",
+    "Nd_66rkslk"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1684,
+    1685,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 76,
+   "name": "White Whale",
+   "command": "f,F+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 59
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_66lrp"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1604,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 77,
+   "name": "Flying Blade",
+   "command": "f,F+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 2500,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 59
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 20
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_66lrk"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1622,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 78,
+   "name": "Blossom Fury",
+   "command": "d,d/f,f+2,2,b,f,f+1+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 2
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "b",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "n",
+     "frames": 70
+    }
+   ],
+   "expected": 3,
+   "attacks": [
+    "Nd_64rp",
+    "Nd_64rprp",
+    "Nd_64rprplrpjst"
+   ],
+   "trace": [
+    1459,
+    1710,
+    1711,
+    1713,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 79,
+   "name": "Swift High Jab",
+   "command": "f,f,f+1",
+   "setup": false,
+   "rage": false,
+   "distance": 3000,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 60
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_666lp"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1427,
+    50,
+    1623,
+    1624,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 80,
+   "name": "White-tailed Eagle",
+   "command": "While rising 1,2",
+   "setup": false,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 49
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_s_tlp00",
+    "Nd_s_lprp"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1884,
+    1885,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 81,
+   "name": "Wild Eagle",
+   "command": "While rising 1,4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 55
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_s_tlp00",
+    "Nd_s_lprk"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1884,
+    1886,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 82,
+   "name": "Upward Thrust",
+   "command": "While rising 2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_s_trp00"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1888,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 83,
+   "name": "Izumo",
+   "command": "While rising 3,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "3",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_s_tlk00",
+    "Nd_s_tlkrp"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1890,
+    1891,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 84,
+   "name": "Forward Kick to High Jab",
+   "command": "While rising 4,2",
+   "setup": false,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_s_trk00",
+    "Nd_s_trkrp"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1892,
+    1893,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 85,
+   "name": "Flash Elbow",
+   "command": "While crouching d/f+2",
+   "setup": false,
+   "rage": false,
+   "distance": 2100,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 41
+    },
+    {
+     "input": "n",
+     "frames": 13
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_s_trp00"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1889,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 86,
+   "name": "Odd-tooth Snake",
+   "command": "While crouching d/f+3",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d/f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 13
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "n",
+     "frames": 45
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_syalkF"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1771,
+    1438,
+    1460,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 87,
+   "name": "Monkey Strike",
+   "command": "During sidestep 2",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 15
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 25
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_yokorp"
+   ],
+   "trace": [
+    57,
+    2189,
+    1582,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 88,
+   "name": "Evasive High Right Back Kick",
+   "command": "During sidestep 4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "4",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 81
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_yokork"
+   ],
+   "trace": [
+    57,
+    2189,
+    1643,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 89,
+   "name": "Veto",
+   "command": "(While enemy is down) d+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1300,
+   "inputs": [
+    {
+     "input": "d+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 9
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 42
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Co_t_srp00"
+   ],
+   "trace": [
+    1779,
+    1438,
+    1460,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 90,
+   "name": "Bow",
+   "command": "1+3+4",
+   "setup": false,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 88
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_sFUN01_"
+   ],
+   "trace": [
+    2166,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 91,
+   "name": "10 Hit Combo",
+   "command": "2,1,4,4,1,2,1,3,2,1",
+   "setup": false,
+   "rage": false,
+   "distance": 1600,
+   "inputs": [
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 20
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 97
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 10,
+   "attacks": [
+    "Nd_rp00",
+    "Nd_10com2",
+    "Nd_10com3",
+    "Nd_10com4",
+    "Nd_10com5",
+    "Nd_10com6",
+    "Nd_10com7",
+    "Nd_10com8",
+    "Nd_10com9",
+    "Nd_10com10"
+   ],
+   "trace": [
+    1538,
+    2061,
+    2065,
+    2069,
+    2073,
+    2076,
+    2077,
+    2078,
+    2079,
+    2080,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 92,
+   "name": "Moonlit Frost",
+   "command": "Approach enemy 1+3",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 110
+    },
+    {
+     "input": "n",
+     "frames": 75
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    1903,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 93,
+   "name": "Moonlit Frost",
+   "command": "Approach enemy f+1+3",
+   "setup": true,
+   "rage": false,
+   "distance": 2200,
+   "inputs": [
+    {
+     "input": "f+1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "n",
+     "frames": 110
+    },
+    {
+     "input": "n",
+     "frames": 75
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00F"
+   ],
+   "trace": [
+    1904,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 94,
+   "name": "Parched Valley",
+   "command": "Approach enemy 2+4",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "2+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvRB2_00"
+   ],
+   "trace": [
+    1905,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 95,
+   "name": "Parched Valley",
+   "command": "Approach enemy f+2+4",
+   "setup": true,
+   "rage": false,
+   "distance": 2200,
+   "inputs": [
+    {
+     "input": "f+2+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 4
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvRB2_00F"
+   ],
+   "trace": [
+    1906,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 96,
+   "name": "Moonlit Frost",
+   "command": "Approach from left side 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 72
+    },
+    {
+     "input": "n",
+     "frames": 77
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    1903,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 97,
+   "name": "Parched Valley",
+   "command": "Approach from right side 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 11
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 69
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    1903,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 98,
+   "name": "Smear Campaign",
+   "command": "Approach from behind 1+3 (or 2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 118
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "ThrmvLB2_00"
+   ],
+   "trace": [
+    1903,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 99,
+   "name": "Trifecta",
+   "command": "Approach enemy u/f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1500,
+   "inputs": [
+    {
+     "input": "u/f+1+2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 8
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 177
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Thrmv_B2_00"
+   ],
+   "trace": [
+    1909,
+    1422,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 100,
+   "name": "Upper Parry",
+   "command": "Time with enemy punch b+1+3 (or b+2+4)",
+   "setup": true,
+   "rage": false,
+   "distance": 2200,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "b+1+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 26
+    },
+    {
+     "input": "n",
+     "frames": 55
+    }
+   ],
+   "expected": 1,
+   "attacks": [
+    "Nd_sabaki"
+   ],
+   "trace": [
+    2047,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 101,
+   "name": "Law of the Land",
+   "command": "After Upper Parry succeeds 2,1 during hit 2",
+   "setup": false,
+   "rage": false,
+   "distance": 2200,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 5
+    },
+    {
+     "input": "b+1+3",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "2",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 7
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "n",
+     "frames": 35
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Nd_sabaki",
+    "Nd_lp00F",
+    "Nd_rp00"
+   ],
+   "trace": [
+    2047,
+    1422,
+    1646,
+    1422,
+    1538,
+    1422,
+    1422
+   ],
+   "passed": false
+  },
+  {
+   "index": 103,
+   "name": "Sample Combo 1",
+   "command": "3,2  >  d+3,4,4,4",
+   "setup": true,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 72
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Nd_lk00",
+    "Nd_lkrp",
+    "Nd_2lk",
+    "Nd_rk00",
+    "Nd_rk00"
+   ],
+   "trace": [
+    1606,
+    1611,
+    1422,
+    1788,
+    1422,
+    1625,
+    1422,
+    1625,
+    1422,
+    1422
+   ],
+   "passed": false
+  },
+  {
+   "index": 104,
+   "name": "Sample Combo 2",
+   "command": "3,2  >  d/f+3+4  >  f+4,3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "d/f+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "f",
+     "frames": 15
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 72
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Nd_lk00",
+    "Nd_lkrp",
+    "Nd_3lrk",
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklklp"
+   ],
+   "trace": [
+    1606,
+    1611,
+    1422,
+    1846,
+    1422,
+    1423,
+    1668,
+    1673,
+    1678,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 105,
+   "name": "Sample Combo 3",
+   "command": "3,2  >  b+3+4  > During Cat Foot Stance II {U+E034}F  >  During Pouncing Tiger, Stalking Wolf 2  >  4,2  >  4,3  >  b+3,4,d,d/f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 2000,
+   "inputs": [
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "f",
+     "frames": 20
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 65
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 11
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 72
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 11,
+   "attacks": [
+    "Nd_lk00",
+    "Nd_lkrp",
+    "Nd_4lrk",
+    "Nd_steprp",
+    "Nd_rk00",
+    "Nd_rp00",
+    "Nd_rk00",
+    "Nd_lk00",
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst"
+   ],
+   "trace": [
+    1606,
+    1611,
+    1422,
+    1731,
+    1745,
+    1747,
+    1422,
+    1625,
+    1422,
+    1538,
+    1422,
+    1625,
+    1422,
+    1606,
+    1422,
+    1714,
+    1717,
+    1722,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 107,
+   "name": "Sample Combo 4",
+   "command": "4 (Counter Hit) 2  >  d+3,4,4,4",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "d+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 22
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 62
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Nd_rk00",
+    "Nd_rp00",
+    "Nd_rk00",
+    "Nd_rk00",
+    "Nd_rk00"
+   ],
+   "trace": [
+    1625,
+    1422,
+    1538,
+    1422,
+    1625,
+    1422,
+    1625,
+    1422,
+    1625,
+    1422,
+    1422
+   ],
+   "passed": false
+  },
+  {
+   "index": 108,
+   "name": "Sample Combo 5",
+   "command": "4 (Counter Hit) 2  >  b+1+2  >  1,2,3  >  f,F+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 11
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 7,
+   "attacks": [
+    "Nd_rk00",
+    "Nd_rp00",
+    "Nd_4lrp",
+    "Nd_lp00F",
+    "Nd_lprp",
+    "Nd_lprplk",
+    "Nd_66lrp"
+   ],
+   "trace": [
+    1625,
+    1422,
+    1538,
+    1422,
+    1553,
+    1422,
+    1646,
+    1649,
+    1658,
+    1422,
+    1426,
+    1604,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 109,
+   "name": "Sample Combo 6",
+   "command": "4 (Counter Hit) 2  >  d/f+1,2  >  4,3  >  b+3,4,d,d/f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 6
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 54
+    },
+    {
+     "input": "d/f+1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 70
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 10
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 3
+    },
+    {
+     "input": "n",
+     "frames": 82
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Nd_rk00",
+    "Nd_rp00",
+    "Nd_rp00",
+    "Nd_rk00",
+    "Nd_lk00",
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst"
+   ],
+   "trace": [
+    1625,
+    1422,
+    1538,
+    1422,
+    1538,
+    1422,
+    1625,
+    1422,
+    1606,
+    1422,
+    1423,
+    1714,
+    1717,
+    1722,
+    1422,
+    1422
+   ],
+   "passed": false
+  },
+  {
+   "index": 111,
+   "name": "Sample Combo 7",
+   "command": "u/f+4  >  During Cat Foot Stance II {U+E034}F  >  During Pouncing Tiger, Stalking Wolf 1",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "f",
+     "frames": 25
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 2,
+   "attacks": [
+    "Co_jprk00F",
+    "Nd_steplp"
+   ],
+   "trace": [
+    1503,
+    1505,
+    1508,
+    1745,
+    1746,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 112,
+   "name": "Sample Combo 8",
+   "command": "u/f+4  >  During Cat Foot Stance II {U+E034}F  >  During Pouncing Tiger, Stalking Wolf 2  >  d/f+4,2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "f",
+     "frames": 26
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "d/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 76
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 4,
+   "attacks": [
+    "Co_jprk00F",
+    "Nd_steprp",
+    "Nd_3rk",
+    "Nd_rp00"
+   ],
+   "trace": [
+    1503,
+    1505,
+    1508,
+    1745,
+    1747,
+    1422,
+    1848,
+    1422,
+    1538,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 113,
+   "name": "Sample Combo 9",
+   "command": "u/f+4  >  During Cat Foot Stance II {U+E034}F  >  During Pouncing Tiger, Stalking Wolf 2  >  2  >  b+3,4,d,d/f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "u/f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "f",
+     "frames": 26
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 61
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Co_jprk00F",
+    "Nd_steprp",
+    "Nd_rp00",
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst"
+   ],
+   "trace": [
+    1503,
+    1505,
+    1508,
+    1745,
+    1747,
+    1422,
+    1538,
+    1422,
+    1714,
+    1717,
+    1722,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 115,
+   "name": "Sample Combo 10",
+   "command": "f,F+3  >  4,3  >  f+4,3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 60
+    },
+    {
+     "input": "f",
+     "frames": 6
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Nd_66lk",
+    "Nd_rk00",
+    "Nd_lk00",
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklklp"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1689,
+    1422,
+    1625,
+    1422,
+    1606,
+    1422,
+    1668,
+    1673,
+    1678,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 116,
+   "name": "Sample Combo 11",
+   "command": "f,F+3  >  3,2  >  f+4,3,4  >  b+3,4,d,d/f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 50
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 57
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 25
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 2
+    },
+    {
+     "input": "n",
+     "frames": 68
+    },
+    {
+     "input": "n",
+     "frames": 50
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Nd_66lk",
+    "Nd_lk00",
+    "Nd_lkrp",
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklkrk",
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1689,
+    1422,
+    1606,
+    1611,
+    1422,
+    1668,
+    1673,
+    1681,
+    1682,
+    1422,
+    1423,
+    1714,
+    1717,
+    1722,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 117,
+   "name": "Sample Combo 12",
+   "command": "f,F+3  >  b+3,1  >  d/b+3+4  >  d/f+2 (must hit)  >  During Cat Foot Stance II 3  >  d,d/f,f+2,2,b,f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "f+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 47
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 55
+    },
+    {
+     "input": "d/b+3+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 45
+    },
+    {
+     "input": "d/f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 30
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 53
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 17
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 2
+    },
+    {
+     "input": "f+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "b",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 99
+    },
+    {
+     "input": "n",
+     "frames": 30
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Nd_66lk",
+    "Nd_4lk",
+    "Nd_4lklp",
+    "Nd_1lrk",
+    "Co_t_srpF",
+    "Nd_lk00",
+    "Nd_64rp",
+    "Nd_64rprp",
+    "Nd_64rprplrpjst"
+   ],
+   "trace": [
+    1423,
+    1424,
+    1426,
+    1689,
+    1422,
+    1714,
+    1715,
+    1422,
+    1636,
+    1422,
+    1834,
+    1422,
+    1606,
+    1422,
+    1423,
+    1459,
+    1457,
+    1710,
+    1711,
+    1713,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 119,
+   "name": "Sample Combo 13",
+   "command": "While rising 2  >  1,2,4,4  >  f,F+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 25
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 46
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 10
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Co_s_trp00",
+    "Nd_lp00F",
+    "Nd_lprp",
+    "Nd_lprprk",
+    "Nd_lprprky",
+    "Nd_6lrp"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1888,
+    1422,
+    1646,
+    1649,
+    1661,
+    1662,
+    1663,
+    1422,
+    1591,
+    1592,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 120,
+   "name": "Sample Combo 14",
+   "command": "While rising 2  >  4,3  >  f+4,3,1",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 40
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 15
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 56
+    },
+    {
+     "input": "f",
+     "frames": 13
+    },
+    {
+     "input": "f+4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 10
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "1",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 6,
+   "attacks": [
+    "Co_s_trp00",
+    "Nd_rk00",
+    "Nd_lk00",
+    "Nd_rk00F",
+    "Nd_6rklk",
+    "Nd_6rklklp"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1888,
+    1422,
+    1625,
+    1422,
+    1606,
+    1422,
+    1668,
+    1673,
+    1678,
+    1422,
+    1422
+   ],
+   "passed": true
+  },
+  {
+   "index": 121,
+   "name": "Sample Combo 15",
+   "command": "While rising 2  >  b+1+2  >  b+2,3  >  4,3  >  b+3,4,d,d/f,f+1+2",
+   "setup": true,
+   "rage": false,
+   "distance": 1800,
+   "inputs": [
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "d",
+     "frames": 10
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 38
+    },
+    {
+     "input": "b+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 44
+    },
+    {
+     "input": "b+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 43
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 17
+    },
+    {
+     "input": "3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 66
+    },
+    {
+     "input": "f",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "f",
+     "frames": 11
+    },
+    {
+     "input": "b+3",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 12
+    },
+    {
+     "input": "4",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 18
+    },
+    {
+     "input": "d",
+     "frames": 1
+    },
+    {
+     "input": "d/f",
+     "frames": 1
+    },
+    {
+     "input": "f+1+2",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 1
+    },
+    {
+     "input": "n",
+     "frames": 52
+    },
+    {
+     "input": "n",
+     "frames": 40
+    }
+   ],
+   "expected": 9,
+   "attacks": [
+    "Co_s_trp00",
+    "Nd_4lrp",
+    "Nd_4rp",
+    "Nd_lk00",
+    "Nd_lk00",
+    "Nd_4lk",
+    "Nd_4lkrk",
+    "Nd_4lkrklrpjst"
+   ],
+   "trace": [
+    1459,
+    1438,
+    1460,
+    1888,
+    1422,
+    1553,
+    1422,
+    1700,
+    1422,
+    1606,
+    1422,
+    1606,
+    1422,
+    1423,
+    1424,
+    1426,
+    1714,
+    1717,
+    1722,
+    1422,
+    1422
+   ],
+   "passed": false
+  }
+ ]
+}

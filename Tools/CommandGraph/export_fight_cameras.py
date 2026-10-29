@@ -1,7 +1,9 @@
 """Export the cinematic camera tracks a fighter's moves reference (Rage Art cameras).
 
 Move properties 0x8435-0x8438, 0x8439/0x843A (left/right screen side) and 0x8445-0x8449 name a
-track in bank 4 of mask/<chr>rotsm.arc when (value & 0xC000) == 0x4000. Tracks are 0xC8 MOTA
+track in bank 4 of mask/<chr>rotsm.arc when (value & 0xC000) == 0x4000, or (DLC fighters such as
+Lidia, value & 0xC000 == 0) in MOTA bank 4 inside the moveset (--moveset); those are written as
+<chr>_m<track>.bytes so the two numberings never collide. Tracks are 0xC8 MOTA
 (big-endian floats). Written to Assets/_Project/Resources/FightCameras/<chr>_<track>.bytes as
 "T7CF", frames, channels, channel descriptors, then frames x channels x 3 little-endian floats in
 native units (millimetres, radians). Rage Art tracks use descriptors (11, 11, 15, 3, 21): look-at
@@ -24,6 +26,7 @@ def main():
     p.add_argument("--archive", required=True, help="mask/<chr>rotsm.arc")
     p.add_argument("--code", required=True)
     p.add_argument("--out", required=True)
+    p.add_argument("--moveset", help="bin/<chr>mot.bin, for tracks inside the moveset (reference kind 0)")
     a = p.parse_args()
     graph = json.loads(Path(a.graph).read_text(encoding="utf-8"))
     raw = Path(a.archive).read_bytes()
@@ -31,14 +34,33 @@ def main():
     if raw[offset:offset + 4] != b"MOTA":
         raise SystemExit("bank 4 is not a MOTA bank")
     count = struct.unpack_from(">I", raw, offset + 12)[0]
-    tracks = set()
+    tracks, own = set(), set()
     for move in graph["moves"]:
         props = move["properties"]
         for i in range(0, len(props), 3):
             if props[i + 1] in CAMERA_PROPERTIES and props[i + 2] & 0xC000 == 0x4000:
                 tracks.add(props[i + 2] & 0x3FFF)
+            elif props[i + 1] in CAMERA_PROPERTIES and props[i + 2] & 0xC000 == 0 and a.moveset:
+                own.add(props[i + 2] & 0x3FFF)
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
+    if own:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "t7extract"))
+        from t7extract.moveset import parse_moveset, MotaBank, DATA_BASE
+        ms = parse_moveset(Path(a.moveset).read_bytes())
+        bank = MotaBank(ms.data, DATA_BASE + ms.motas[4])
+        for index in sorted(own):
+            data = bank.raw(index)
+            kind, channels, frames = struct.unpack_from(">HHI", data, 0)
+            descriptors = struct.unpack_from(f">{channels}I", data, 8)
+            if kind != 0xC8 or descriptors != LOOK_AT:
+                continue
+            values = struct.unpack_from(f">{frames * channels * 3}f", data, 8 + channels * 4)
+            target = out / f"{a.code}_m{index}.bytes"
+            target.write_bytes(struct.pack("<4sII", b"T7CF", frames, channels) + struct.pack(f"<{channels}I", *descriptors)
+                               + struct.pack(f"<{len(values)}f", *values))
+            print(f"{target.name}: {frames} frames, descriptors {descriptors} (moveset bank)")
     for index in sorted(tracks):
         if index >= count:
             raise SystemExit(f"track {index} beyond bank count {count}")

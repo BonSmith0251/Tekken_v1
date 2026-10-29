@@ -17,6 +17,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "CombatPoseConverter" / "vendor"))
 from t7extract.moveset import NONE, REQ_END, parse_moveset  # noqa: E402
+import pushbacks  # noqa: E402
+import add_rage_art_demo  # Rage Art input conversion (same folder)
 
 
 def main():
@@ -71,6 +73,8 @@ def main():
     # Reaction move ids, in moveset.py's order: standing, default, crouch, counterhit,
     # crouch_counterhit, left/right side (+crouch), backturned (+crouch), block,
     # crouch_block, wallslump, downed.
+    # Knockback travel of each reaction (front, backturned, left, right, counter hit, downed, block).
+    pushback_table, pushback_refs = pushbacks.export(ms)
     reactions = [[ms.resolve_move(m) for m in struct.unpack_from("<16H", ms.record("reactions", i), 0x4E)]
                  for i in range(ms.count("reactions"))]
     # Root travel per converted clip, cumulative millimetres from the clip's first frame.
@@ -147,10 +151,13 @@ def main():
             inputs.append(value & 0x7FFFFFFFFFFFFFFF)
             input_flags.append(value >> 63)
 
-    demos = []
+    demos, rage_art = [], None
     if a.movelist:
         names = {"d/b": 1, "d": 2, "d/f": 3, "b": 4, "n": 5, "f": 6, "u/b": 7, "u": 8, "u/f": 9}
         for e in json.loads(Path(a.movelist).read_text(encoding="utf-8")):
+            if e.get("name") == "Rage Art" and e.get("demo"):
+                # Kept apart from the CPU's random demos (it needs Rage): the Rage Art button replays it.
+                rage_art = add_rage_art_demo.rage_art([e])
             setup = any(t in e["command"] for t in ("Approach", "Time with", "enemy is down", ">", "During Rage"))
             if not e.get("demo") or setup or e["type"] not in ("move", "0x20000"):
                 continue
@@ -171,8 +178,11 @@ def main():
              # character's own equivalent, which is how a borrowed reaction returns home.
              "aliases": [m if m != 0xFFFF else -1 for m in ms.aliases],
              "moves": moves, "cancels": cancels, "groupCancels": group_cancels,
-             "hitConditions": hit_conditions, "clips": clip_rows, "reactions": [{"moves": r} for r in reactions],
+             "hitConditions": hit_conditions, "clips": clip_rows, "reactions": [{"moves": r, "pushbacks": pb} for r, pb in zip(reactions, pushback_refs)],
+             "pushbacks": pushback_table,
              "requirements": requirements, "sequences": sequences, "inputs": inputs, "inputFlags": input_flags, "demos": demos}
+    if rage_art:
+        graph["rageArt"] = rage_art
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(graph, separators=(",", ":")), encoding="utf-8")
     print(f"{a.out}: {len(moves)} moves, {len(cancels)} cancels, "
