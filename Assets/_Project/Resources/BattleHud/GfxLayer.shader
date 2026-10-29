@@ -22,7 +22,7 @@ Shader "Hidden/BattleHud/GfxLayer"
         _ProjY ("Transform row y", Vector) = (0,1,0,0)
         _ProjW ("Transform row w", Vector) = (0,0,0,1)
         _UseMask ("Use mask", Float) = 0
-        _SrcBlend ("Src blend", Float) = 5
+        _SrcBlend ("Src blend", Float) = 1
         _DstBlend ("Dst blend", Float) = 10
     }
     SubShader
@@ -97,10 +97,15 @@ Shader "Hidden/BattleHud/GfxLayer"
                 c.rgb = LinearToGammaSpace(c.rgb);
                 #endif
                 c = saturate(c * _Mul + _Add);
+                c.a *= coverage;
+                // Scaleform's source contribution is alpha-weighted in display (gamma) space.
+                // Weighting AFTER GammaToLinearSpace makes its 5-8% red echo copies ~25-31%
+                // bright in this linear project. Emit premultiplied source colour instead.
+                // Destination attenuation remains Unity's linear blend (see BATTLE_HUD.txt).
+                c.rgb *= c.a;
                 #ifndef UNITY_COLORSPACE_GAMMA
                 c.rgb = GammaToLinearSpace(c.rgb);
                 #endif
-                c.a *= coverage;
                 return c;
             }
             ENDCG

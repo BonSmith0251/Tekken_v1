@@ -6,8 +6,7 @@ copy, a pulsing glow, flares, sparks, highlight sweeps) animated per frame at 60
 stage. This tool decodes the movie with gfx_dump.py and writes, for the call clips only:
   Resources/BattleHud/GameMessage.json   images (id, name, size), mask rectangles, and each reachable
                                          sprite's frame events (placements, matrices, colour transforms,
-                                         blend modes, clip depths), plus which sprites stop on their last
-                                         frame (the named *_mc classes call stop() there; the others loop)
+                                         blend modes, clip depths), plus decoded stop/play/goto frame scripts
   Resources/BattleHud/GameMessage/*.png  the images those sprites place
 BattleHud's GfxClip replays it with Resources/BattleHud/GfxLayer.shader (colour transform, additive blend,
 blur and letter-shaped masks, rasterised here to GameMessage/Mask_<id>.png); see
@@ -18,6 +17,8 @@ Usage (from the project root):
 """
 import argparse
 import json
+import hashlib
+import re
 import shutil
 import struct
 import subprocess
@@ -30,6 +31,7 @@ from PIL import Image, ImageDraw
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gfx_dump  # noqa: E402
 import motion_dump  # noqa: E402
+import abc_dis  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Assets/_Project/Resources/BattleHud"
@@ -42,12 +44,49 @@ def matrix(m):
     return [m["sx"], m["r0"], m["r1"], m["sy"], m["tx"], m["ty"]]
 
 
+def frame_scripts(movie, body):
+    """Recover the small playback-command subset used by the announcement frame scripts.
+
+    Round.ChangeRound's number layout remains the explicit port in BattleHud.RoundClip.
+    No class-name heuristic is used to decide where a child stops.
+    """
+    p, length = movie["abc"][0]
+    start = body.index(0, p + 4) + 1
+    abc = abc_dis.parse(body[start:p + length])
+    by_class = {name.split(".")[-1]: sid for sid, name in movie["symbols"].items()}
+    result = {}
+    for index, method in enumerate(abc["methods"]):
+        match = re.fullmatch(r"(.+)\.frame(\d+)", method.get("full", method["name"]))
+        if not match or index not in abc["bodies"] or match[1] not in by_class:
+            continue
+        lines = [re.sub(r"^\s*\d+\s+", "", line).strip() for line in abc_dis.disasm(abc, abc["bodies"][index])]
+        actions, target, label = [], "", ""
+        for line in lines:
+            if line == "getlocal_0" or line.startswith("findpropstrict "):
+                target, label = "", ""
+            elif line.startswith("getproperty "):
+                target = line.split(" ", 1)[1]
+            elif line.startswith("pushstring "):
+                label = line.split(" ", 1)[1].strip("'")
+            elif line in ("callpropvoid stop 0", "callpropvoid play 0"):
+                actions.append({"target": target, "command": line.split()[1], "label": ""})
+            elif line in ("callpropvoid gotoAndStop 1", "callpropvoid gotoAndPlay 1"):
+                if not target or not label:
+                    raise ValueError("Unresolved announcement playback script: " + match[0])
+                actions.append({"target": target, "command": line.split()[1], "label": label})
+        if actions:
+            result.setdefault(by_class[match[1]], []).append({"frame": int(match[2]) - 1, "actions": actions})
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--game", required=True, type=Path)
     parser.add_argument("--t7extract", required=True, type=Path)
     parser.add_argument("--work", required=True, type=Path)
+    parser.add_argument("--out", type=Path, default=OUT, help="Resource directory (defaults to the Unity BattleHud directory)")
     args = parser.parse_args()
+    out = args.out.resolve()
     work = (args.work / "game_message").resolve()
     game = str(args.game.resolve())
     subprocess.run([sys.executable, "-m", "t7extract", "unpack", game, MOVIE, "-o", str(work / "raw")], cwd=args.t7extract, check=True)
@@ -56,6 +95,7 @@ def main():
     movie, body = gfx_dump.dump(str(next((work / "raw").rglob("SW_UI_GameMessage.uasset"))))
     start = gfx_dump.rect(body, 8)[1] + 4
     sprites, symbols = movie["sprites"], movie["symbols"]
+    scripts = frame_scripts(movie, body)
     roots = {e["name"]: e["char"] for e in movie["root"]["events"][0] if e.get("name") in ENTRIES}
 
     reachable, todo = set(), list(roots.values())
@@ -93,17 +133,16 @@ def main():
                     used_masks.add(c)
                 evs.append(ev)
             frames.append({"frame": int(frame), "events": evs})
-        # Named timeline classes stop on their last frame (frame scripts call stop()); the rest loop.
-        out_sprites.append({"id": sid, "frames": s["frames"], "stops": symbols.get(sid, "").endswith(tuple(f"_{n}" for n in range(1000))) and "_mc_" in symbols.get(sid, ""),
+        out_sprites.append({"id": sid, "frames": s["frames"], "scripts": scripts.get(sid, []),
                             "labels": [{"name": k, "frame": v} for k, v in s["labels"].items()], "frameEvents": frames})
 
     pngs = {p.stem: p for p in (work / "png").rglob("*.png")}
     missing = [movie["images"][i]["name"] for i in used_images if movie["images"][i]["name"] not in pngs]
     if missing:
         sys.exit("Missing images: " + ", ".join(missing))
-    (OUT / "GameMessage").mkdir(parents=True, exist_ok=True)
+    (out / "GameMessage").mkdir(parents=True, exist_ok=True)
     for i in used_images:
-        shutil.copyfile(pngs[movie["images"][i]["name"]], OUT / "GameMessage" / (movie["images"][i]["name"] + ".png"))
+        shutil.copyfile(pngs[movie["images"][i]["name"]], out / "GameMessage" / (movie["images"][i]["name"] + ".png"))
     # Masks are the letter outlines (vector shapes); rasterise each at stage resolution, even-odd.
     shape_tags = {struct.unpack_from("<H", body, p)[0]: (p, code) for code, p, _ in gfx_dump.tags(body, start, len(body))
                   if code in (2, 22, 32, 83)}
@@ -117,7 +156,7 @@ def main():
             ImageDraw.Draw(layer).polygon([(x - x0, y - y0) for x, y in path], fill=255)
             acc ^= np.asarray(layer) > 0
         rgba = np.zeros((h, w, 4), np.uint8); rgba[..., :3] = 255; rgba[..., 3] = acc * 255
-        Image.fromarray(rgba, "RGBA").save(OUT / "GameMessage" / f"Mask_{i}.png")
+        Image.fromarray(rgba, "RGBA").save(out / "GameMessage" / f"Mask_{i}.png")
     # Motion tweens the Flash IDE exported as ActionScript (fl.motion MotionBase + AnimatorFactory3D in each
     # timeline class's constructor): they drive named children's 3D transform, colour, visibility, blend and blur.
     motions = []
@@ -145,9 +184,11 @@ def main():
                 segments.append({"spanStart": seg["spanStart"], "duration": seg["duration"], "is3D": seg["is3D"],
                                  "hasInitialPosition": seg["initialPosition"] is not None,
                                  "initialPosition": [float(v) for v in (seg["initialPosition"] or [0, 0, 0])],
+                                 "pivot": [float(v) for v in seg["transformationPoint"]] + [float(seg["transformationPointZ"])],
                                  "hasMatrix3D": mat3d is not None, "matrix3D": mat3d or [], "props": props})
             motions.append({"sprite": sid, "target": motion["target"], "segments": segments})
     data = {
+        "sourceSha256": hashlib.sha256(next((work / "raw").rglob("SW_UI_GameMessage.uasset")).read_bytes()).hexdigest(),
         "stageWidth": movie["rect"][1], "stageHeight": movie["rect"][3], "fps": movie["fps"],
         "motions": motions,
         "entries": [{"name": n, "sprite": c} for n, c in roots.items()],
@@ -156,8 +197,8 @@ def main():
                   for i in sorted(used_masks)],
         "sprites": out_sprites,
     }
-    (OUT / "GameMessage.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
-    print(f"{len(roots)} calls, {len(out_sprites)} sprites, {len(used_images)} images, {len(used_masks)} masks -> {OUT}")
+    (out / "GameMessage.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
+    print(f"{len(roots)} calls, {len(out_sprites)} sprites, {len(used_images)} images, {len(used_masks)} masks -> {out}")
 
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Assets/_Project/Resources/BattleHud"
-CHARACTERS = ["JIN", "KAZ", "XIA", "ASA", "LTN"]
+CHARACTERS = ["JIN", "KAZ", "XIA", "ASA", "LTN", "NSD", "BOB", "LEO"]
 PATTERNS = [
     "*/flash/SW_UI_HUD/*", "*/flash/SW_UI_HUD_Gauge/*", "*/flash/SW_UI_GameMessage/*",
     "*/ReplaceImages/HUD_GAU_LIFE/*", "*/ReplaceImages/HUD_GAU_TIMER/*",

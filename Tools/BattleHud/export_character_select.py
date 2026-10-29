@@ -20,10 +20,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Assets/_Project/Resources/CharacterSelect"
-CHARACTERS = ["JIN", "KAZ", "XIA", "ASA", "LTN"]
+CHARACTERS = ["JIN", "KAZ", "XIA", "ASA", "LTN", "NSD", "BOB", "LEO"]
+# VS art suffix: TK7_DEF for the original roster; Bob (from Fated Retribution) and DLC fighters (Lidia) only have 7FR_DEF.
+VS_ART = {"NSD": "7FR_DEF", "BOB": "7FR_DEF"}
+def vs_art(c): return VS_ART.get(c, "TK7_DEF")
 PATTERNS = ["*/flash/SW_UI_CharacterSelect/*", "*/flash/SW_UI_Makuai/*"] + [
     f"*/ReplaceImages/{kind}/{kind}_{c}.uasset" for c in CHARACTERS for kind in ("CS_CH_PANEL", "CS_CH_L", "CS_CH_R", "CS_CH_NAME")] + [
-    f"*/ReplaceImages/{kind}/{kind}_{c}_TK7_DEF.uasset" for c in CHARACTERS for kind in ("VS_CH_L", "VS_CH_R")]
+    f"*/ReplaceImages/{kind}/{kind}_{c}_{vs_art(c)}.uasset" for c in CHARACTERS for kind in ("VS_CH_L", "VS_CH_R")]
 
 # Remaster name -> source texture name.
 NAMES = {
@@ -37,7 +40,7 @@ NAMES = {
     "FlareRed": "GlassFlare_Red_Base", "FlareBlue": "GlassFlare_Blue_Base",
     "FlareRedVolume": "GlassFlare_Red_Volume", "FlareBlueVolume": "GlassFlare_Blue_Volume",
     "Arrow": "Arrow",
-    # The VS (loading) screen, SW_UI_Makuai; character art is VS_CH_L/R_<code>_TK7_DEF.
+    # The VS (loading) screen, SW_UI_Makuai; character art is VS_CH_L/R_<code>_TK7_DEF (DLC: _7FR_DEF).
     "VsBaseL": "BaseL", "VsBaseR": "BaseR", "VsFrameL": "frameL", "VsFrameR": "frameR",
     "VsLogo": "VS", "VsGlow": "VS_ADD", "VsLightning": "Lightning_01", "VsLightningFlare": "Lightning_Flare",
 }
@@ -46,8 +49,8 @@ for c in CHARACTERS:
     NAMES[f"Art_L_{c}"] = f"CS_CH_L_{c}"
     NAMES[f"Art_R_{c}"] = f"CS_CH_R_{c}"
     NAMES[f"Name_{c}"] = f"CS_CH_NAME_{c}"
-    NAMES[f"VsArt_L_{c}"] = f"VS_CH_L_{c}_TK7_DEF"
-    NAMES[f"VsArt_R_{c}"] = f"VS_CH_R_{c}_TK7_DEF"
+    NAMES[f"VsArt_L_{c}"] = f"VS_CH_L_{c}_{vs_art(c)}"
+    NAMES[f"VsArt_R_{c}"] = f"VS_CH_R_{c}_{vs_art(c)}"
 
 
 def main():

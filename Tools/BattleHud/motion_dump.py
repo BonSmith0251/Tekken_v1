@@ -41,7 +41,8 @@ def parse(lines):
             target = re.match(r"initproperty __motion_(.+?)af\d+", s).group(1)
             if current is None or current["target"] != target:
                 current = {"target": target, "segments": []}; motions.append(current)
-            segment = {"spanStart": 0, "duration": 0, "props": {}, "matrix3D": None, "is3D": False, "initialPosition": None}
+            segment = {"spanStart": 0, "duration": 0, "props": {}, "matrix3D": None, "is3D": False, "initialPosition": None,
+                       "transformationPoint": [0, 0], "transformationPointZ": 0}
             current["segments"].append(segment); stack = []
         elif s.startswith("setproperty duration") and segment is not None and stack:
             segment["duration"] = stack[-1]; stack = []
@@ -55,6 +56,8 @@ def parse(lines):
             stack = stack[:-2]
         elif s.startswith("constructprop Matrix3D"):
             stack.append(("M3", list(mat_vec)))
+        elif s.startswith("constructprop Point 2"):
+            point = stack[-2:]; stack = stack[:-2]; stack.append(point)
         elif s.startswith("callpropvoid push 1") and stack and segment is not None:
             item = stack.pop()
             if isinstance(item, tuple) or item is None:
@@ -75,6 +78,10 @@ def parse(lines):
             stack = []
         elif s.startswith("setproperty initialPosition") and stack and isinstance(stack[-1], list):
             segment["initialPosition"] = stack[-1]; stack = []
+        elif s.startswith("setproperty transformationPointZ") and stack:
+            segment["transformationPointZ"] = stack[-1]; stack = []
+        elif s.startswith("setproperty transformationPoint") and stack and isinstance(stack[-1], list):
+            segment["transformationPoint"] = stack[-1]; stack = []
         elif s.startswith("setproperty is3D") and stack:
             segment["is3D"] = bool(stack[-1]); stack = []
         elif s.startswith("callpropvoid addTargetInfo"):
