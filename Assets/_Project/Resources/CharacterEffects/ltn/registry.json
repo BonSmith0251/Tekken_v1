@@ -1,0 +1,104 @@
+{
+  "schema": "tekken-character-effect-registry/1",
+  "characterCode": "ltn",
+  "bindings": [
+    {
+      "effectId": 0,
+      "role": "PS_EF_CHR_LTN_nomal",
+      "system": "PS_EF_CHR_LTN_nomal",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_nomal.uasset",
+      "sourceSha256": "3cfc019aefc2f2b837a9336e8033e006f77ab0ee4502d9ad7e171e039faef1c5",
+      "managerPackage": "TekkenGame/Content/Effect/TK75/Character/ltn/BP_LtnEffectManager.uasset",
+      "managerSha256": "2a9c5a74adc371ecfde83503b350d506d44a2ce3bb5cedd7eac51bbefb1d5404",
+      "bindingStatus": "original manager binding; native timed property 0x802E verified in native-dispatch.json"
+    }
+  ],
+  "unconvertedBindings": [],
+  "candidates": [
+    {
+      "role": "PS_EF_CHR_LTN_nomal",
+      "system": "PS_EF_CHR_LTN_nomal",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_nomal.uasset",
+      "sourceSha256": "3cfc019aefc2f2b837a9336e8033e006f77ab0ee4502d9ad7e171e039faef1c5",
+      "managerBound": true,
+      "previewOnly": false
+    },
+    {
+      "role": "PS_EF_CHR_LTN_unique1",
+      "system": "PS_EF_CHR_LTN_unique1",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_unique1.uasset",
+      "sourceSha256": "5e0b4312681e40c25569af8105dbe318b089457614b3578d0d4fe443f3ab1f51",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_CHR_LTN_unique2",
+      "system": "PS_EF_CHR_LTN_unique2",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_unique2.uasset",
+      "sourceSha256": "95ebf7c7c65e8b3f84a2ad1007e5aed35e18b91923e4620e10cacb6920373d91",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_CHR_LTN_unique3",
+      "system": "PS_EF_CHR_LTN_unique3",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_unique3.uasset",
+      "sourceSha256": "6503ef2c8eef8db96044254bfecd80856c23a0bf2adcaedd522558dd05cda99c",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_CHR_LTN_unique4",
+      "system": "PS_EF_CHR_LTN_unique4",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_CHR_LTN_unique4.uasset",
+      "sourceSha256": "d897b1370f206fc3671c02eba245535c1e063d49c62edcc135da7a28e7d8940b",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_ITM_LTN_BazookaMuzzle",
+      "system": "PS_EF_ITM_LTN_BazookaMuzzle",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_ITM_LTN_BazookaMuzzle.uasset",
+      "sourceSha256": "94205f7e5ee0d636e8d9c8d212518824a7af061ccfeb8c07f006273d48a487db",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_ITM_LTN_BazookaSmoke",
+      "system": "PS_EF_ITM_LTN_BazookaSmoke",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_ITM_LTN_BazookaSmoke.uasset",
+      "sourceSha256": "b4160d97ea04c2330dee30d7c726303a95cee172c20baa3d3513a8f849ae1b5d",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_ITM_Ltn_PatoLight",
+      "system": "PS_EF_ITM_Ltn_PatoLight",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/ltn/Particle/PS_EF_ITM_Ltn_PatoLight.uasset",
+      "sourceSha256": "c0d7f1a8504594e3cbd3c4124a173c44a59f4b8c3919cb11d2230d08c053fade",
+      "managerBound": false,
+      "previewOnly": true
+    }
+  ],
+  "nativeTriggerMappings": [
+    {
+      "propertyId": 32814,
+      "effectId": 0,
+      "manifest": "native-dispatch.json",
+      "timedEvents": 123,
+      "moves": 41
+    }
+  ],
+  "limitations": [
+    "Cooked shader expressions/native behavior are not recovered; shared shader brightness, alpha erosion and material selection remain approximations.",
+    "Native move/impact triggers, attachment dispatch and stop rules are not inferred by this export; roles are manual-preview identifiers.",
+    "Original raw properties and hashes remain the authority; runtime JSON is a unit/basis-converted rendering adaptation.",
+    "PM_CharacterBone native rotation, selection and nonzero bone-local offset semantics are unresolved; only exact named-bone spawn placement is supported",
+    "PM_CharacterBone source names/offsets are preserved; original native selection and rotation semantics require runtime validation",
+    "PM_CharacterBone update-each-frame is not implemented; PatoLight's missing Head_Socket is skipped, not replaced by a guessed head bone",
+    "Shared Cascade conversion samples distributions/curves, applies its documented caps and supplies rendering defaults for absent properties; these are adaptations, not original serialized values.",
+    "Unity renders the first stored LOD only; all original LOD/module records remain in conversion-report.json and hashed evidence.",
+    "dynamic material parameters other than AlphaClip (scroll, distortion) are not reproduced",
+    "spawn rates above 600/s are capped"
+  ]
+}

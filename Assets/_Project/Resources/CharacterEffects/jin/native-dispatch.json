@@ -1,0 +1,3225 @@
+{
+  "schema": "tekken-native-character-effects/1",
+  "characterCode": "jin",
+  "propertyId": 32814,
+  "effectId": 0,
+  "boneIndexOverridesSourceLocations": true,
+  "rotation": "actor",
+  "worldSpawnOffset": [
+    0,
+    0.1,
+    0
+  ],
+  "existingParticlesFollowBone": false,
+  "bones": [
+    {
+      "id": 0,
+      "name": "BASE"
+    },
+    {
+      "id": 1,
+      "name": "Spine1"
+    },
+    {
+      "id": 2,
+      "name": "Spine2"
+    },
+    {
+      "id": 3,
+      "name": "Hip"
+    },
+    {
+      "id": 4,
+      "name": "Neck"
+    },
+    {
+      "id": 5,
+      "name": "Head"
+    },
+    {
+      "id": 6,
+      "name": "R_Shoulder"
+    },
+    {
+      "id": 7,
+      "name": "R_Arm"
+    },
+    {
+      "id": 8,
+      "name": "R_ForeArm"
+    },
+    {
+      "id": 9,
+      "name": "R_Hand"
+    },
+    {
+      "id": 10,
+      "name": "L_Shoulder"
+    },
+    {
+      "id": 11,
+      "name": "L_Arm"
+    },
+    {
+      "id": 12,
+      "name": "L_ForeArm"
+    },
+    {
+      "id": 13,
+      "name": "L_Hand"
+    },
+    {
+      "id": 14,
+      "name": "R_UpLeg"
+    },
+    {
+      "id": 15,
+      "name": "R_Leg"
+    },
+    {
+      "id": 16,
+      "name": "R_Foot"
+    },
+    {
+      "id": 17,
+      "name": "L_UpLeg"
+    },
+    {
+      "id": 18,
+      "name": "L_Leg"
+    },
+    {
+      "id": 19,
+      "name": "L_Foot"
+    },
+    {
+      "id": 20,
+      "name": "R_Toe"
+    },
+    {
+      "id": 21,
+      "name": "L_Toe"
+    },
+    {
+      "id": 22,
+      "name": "R_FingerBase"
+    },
+    {
+      "id": 23,
+      "name": "R_Thumb1"
+    },
+    {
+      "id": 24,
+      "name": "R_Thumb2"
+    },
+    {
+      "id": 25,
+      "name": "R_Thumb3"
+    },
+    {
+      "id": 26,
+      "name": "R_Index1"
+    },
+    {
+      "id": 27,
+      "name": "R_Index2"
+    },
+    {
+      "id": 28,
+      "name": "R_Index3"
+    },
+    {
+      "id": 29,
+      "name": "R_Middle"
+    },
+    {
+      "id": 30,
+      "name": "R_Middle1"
+    },
+    {
+      "id": 31,
+      "name": "R_Middle2"
+    },
+    {
+      "id": 32,
+      "name": "R_Middle3"
+    },
+    {
+      "id": 33,
+      "name": "R_Ring"
+    },
+    {
+      "id": 34,
+      "name": "R_Ring1"
+    },
+    {
+      "id": 35,
+      "name": "R_Ring2"
+    },
+    {
+      "id": 36,
+      "name": "R_Ring3"
+    },
+    {
+      "id": 37,
+      "name": "R_Pinky"
+    },
+    {
+      "id": 38,
+      "name": "R_Pinky1"
+    },
+    {
+      "id": 39,
+      "name": "R_Pinky2"
+    },
+    {
+      "id": 40,
+      "name": "R_Pinky3"
+    },
+    {
+      "id": 41,
+      "name": "L_FingerBase"
+    },
+    {
+      "id": 42,
+      "name": "L_Thumb1"
+    },
+    {
+      "id": 43,
+      "name": "L_Thumb2"
+    },
+    {
+      "id": 44,
+      "name": "L_Thumb3"
+    },
+    {
+      "id": 45,
+      "name": "L_Index1"
+    },
+    {
+      "id": 46,
+      "name": "L_Index2"
+    },
+    {
+      "id": 47,
+      "name": "L_Index3"
+    },
+    {
+      "id": 48,
+      "name": "L_Middle"
+    },
+    {
+      "id": 49,
+      "name": "L_Middle1"
+    },
+    {
+      "id": 50,
+      "name": "L_Middle2"
+    },
+    {
+      "id": 51,
+      "name": "L_Middle3"
+    },
+    {
+      "id": 52,
+      "name": "L_Ring"
+    },
+    {
+      "id": 53,
+      "name": "L_Ring1"
+    },
+    {
+      "id": 54,
+      "name": "L_Ring2"
+    },
+    {
+      "id": 55,
+      "name": "L_Ring3"
+    },
+    {
+      "id": 56,
+      "name": "L_Pinky"
+    },
+    {
+      "id": 57,
+      "name": "L_Pinky1"
+    },
+    {
+      "id": 58,
+      "name": "L_Pinky2"
+    },
+    {
+      "id": 59,
+      "name": "L_Pinky3"
+    },
+    {
+      "id": 60,
+      "name": "L_Mayu1_Joint"
+    },
+    {
+      "id": 61,
+      "name": "L_Mayu2_Joint"
+    },
+    {
+      "id": 62,
+      "name": "L_Mayu3_Joint"
+    },
+    {
+      "id": 63,
+      "name": "R_Mayu1_Joint"
+    },
+    {
+      "id": 64,
+      "name": "R_Mayu2_Joint"
+    },
+    {
+      "id": 65,
+      "name": "R_Mayu3_Joint"
+    },
+    {
+      "id": 66,
+      "name": "L_Eyecorner"
+    },
+    {
+      "id": 67,
+      "name": "R_Eyecorner"
+    },
+    {
+      "id": 68,
+      "name": "L_UwaMabuta_Joint"
+    },
+    {
+      "id": 69,
+      "name": "L_UpEyelid1"
+    },
+    {
+      "id": 70,
+      "name": "L_UpEyelid2"
+    },
+    {
+      "id": 71,
+      "name": "R_UwaMabuta_Joint"
+    },
+    {
+      "id": 72,
+      "name": "R_UpEyelid1"
+    },
+    {
+      "id": 73,
+      "name": "R_UpEyelid2"
+    },
+    {
+      "id": 74,
+      "name": "L_Eye_Joint"
+    },
+    {
+      "id": 75,
+      "name": "R_Eye_Joint"
+    },
+    {
+      "id": 76,
+      "name": "L_SitaMabuta_Joint"
+    },
+    {
+      "id": 77,
+      "name": "L_LowEyelid1"
+    },
+    {
+      "id": 78,
+      "name": "L_LowEyelid2"
+    },
+    {
+      "id": 79,
+      "name": "R_SitaMabuta_Joint"
+    },
+    {
+      "id": 80,
+      "name": "R_LowEyelid1"
+    },
+    {
+      "id": 81,
+      "name": "R_LowEyelid2"
+    },
+    {
+      "id": 82,
+      "name": "L_Hoho_Joint"
+    },
+    {
+      "id": 83,
+      "name": "L_Hana_Joint"
+    },
+    {
+      "id": 84,
+      "name": "L_Kobana_Joint"
+    },
+    {
+      "id": 85,
+      "name": "L_Chobo_Joint"
+    },
+    {
+      "id": 86,
+      "name": "R_Hoho_Joint"
+    },
+    {
+      "id": 87,
+      "name": "R_Hana_Joint"
+    },
+    {
+      "id": 88,
+      "name": "R_Kobana_Joint"
+    },
+    {
+      "id": 89,
+      "name": "R_Chobo_Joint"
+    },
+    {
+      "id": 90,
+      "name": "L_LipU_Joint"
+    },
+    {
+      "id": 91,
+      "name": "R_LipU_Joint"
+    },
+    {
+      "id": 92,
+      "name": "M_LipU_Joint"
+    },
+    {
+      "id": 93,
+      "name": "Jaw_Joint"
+    },
+    {
+      "id": 94,
+      "name": "L_LipD_Joint"
+    },
+    {
+      "id": 95,
+      "name": "R_LipD_Joint"
+    },
+    {
+      "id": 96,
+      "name": "M_LipD_Joint"
+    },
+    {
+      "id": 97,
+      "name": "L_LipE_Joint"
+    },
+    {
+      "id": 98,
+      "name": "R_LipE_Joint"
+    },
+    {
+      "id": 99,
+      "name": "Bero1_Joint"
+    },
+    {
+      "id": 100,
+      "name": "Bero1_Joint_pos"
+    },
+    {
+      "id": 101,
+      "name": "Bero2_Joint"
+    },
+    {
+      "id": 102,
+      "name": "Bero3_Joint"
+    },
+    {
+      "id": 103,
+      "name": "Spine1__offset"
+    },
+    {
+      "id": 104,
+      "name": "Spine1_front__offset"
+    },
+    {
+      "id": 105,
+      "name": "Spine2__offset"
+    },
+    {
+      "id": 106,
+      "name": "Spine2_breast__offset"
+    },
+    {
+      "id": 107,
+      "name": "Spine2up__offset"
+    },
+    {
+      "id": 108,
+      "name": "Spine2side__offset"
+    },
+    {
+      "id": 109,
+      "name": "Neck__offset"
+    },
+    {
+      "id": 110,
+      "name": "Neck_back__offset"
+    },
+    {
+      "id": 111,
+      "name": "Head__offset"
+    },
+    {
+      "id": 112,
+      "name": "L_ForeArm_Slide__offset"
+    },
+    {
+      "id": 113,
+      "name": "L_ForeArm__offset"
+    },
+    {
+      "id": 114,
+      "name": "L_Bicep_Slide__offset"
+    },
+    {
+      "id": 115,
+      "name": "L_Tricep_Slide__offset"
+    },
+    {
+      "id": 116,
+      "name": "L_Arm_Btm__offset"
+    },
+    {
+      "id": 117,
+      "name": "R_ForeArm_Slide__offset"
+    },
+    {
+      "id": 118,
+      "name": "R_ForeArm__offset"
+    },
+    {
+      "id": 119,
+      "name": "R_Bicep_Slide__offset"
+    },
+    {
+      "id": 120,
+      "name": "R_Tricep_Slide__offset"
+    },
+    {
+      "id": 121,
+      "name": "R_Arm_Btm__offset"
+    },
+    {
+      "id": 122,
+      "name": "Hip__offset"
+    },
+    {
+      "id": 123,
+      "name": "Hip_front__offset"
+    },
+    {
+      "id": 124,
+      "name": "L_Thigh_Slide__offset"
+    },
+    {
+      "id": 125,
+      "name": "L_UpLeg__offset"
+    },
+    {
+      "id": 126,
+      "name": "L_Calf_Slide__offset"
+    },
+    {
+      "id": 127,
+      "name": "L_Leg__offset"
+    },
+    {
+      "id": 128,
+      "name": "L_Foot__offset"
+    },
+    {
+      "id": 129,
+      "name": "L_Ankle__offset"
+    },
+    {
+      "id": 130,
+      "name": "L_Toe__offset"
+    },
+    {
+      "id": 131,
+      "name": "R_Thigh_Slide__offset"
+    },
+    {
+      "id": 132,
+      "name": "R_UpLeg__offset"
+    },
+    {
+      "id": 133,
+      "name": "R_Calf_Slide__offset"
+    },
+    {
+      "id": 134,
+      "name": "R_Leg__offset"
+    },
+    {
+      "id": 135,
+      "name": "R_Foot__offset"
+    },
+    {
+      "id": 136,
+      "name": "R_Ankle__offset"
+    },
+    {
+      "id": 137,
+      "name": "R_Toe__offset"
+    },
+    {
+      "id": 138,
+      "name": "ATH_Head_Top"
+    },
+    {
+      "id": 139,
+      "name": "ATH_L_Foot_Btm"
+    },
+    {
+      "id": 140,
+      "name": "ATH_L_Toe_Btm"
+    },
+    {
+      "id": 141,
+      "name": "ATH_R_Foot_Btm"
+    },
+    {
+      "id": 142,
+      "name": "ATH_R_Toe_Btm"
+    },
+    {
+      "id": 143,
+      "name": "HLP_L_CollarBone__offset"
+    },
+    {
+      "id": 144,
+      "name": "HLP_L_Shldr_F__offset"
+    },
+    {
+      "id": 145,
+      "name": "HLP_L_CollarBone_up__offset"
+    },
+    {
+      "id": 146,
+      "name": "HLP_L_Pectoral__offset"
+    },
+    {
+      "id": 147,
+      "name": "HLP_L_Pectoral_side__offset"
+    },
+    {
+      "id": 148,
+      "name": "HLP_R_CollarBone__offset"
+    },
+    {
+      "id": 149,
+      "name": "HLP_R_Shldr_F__offset"
+    },
+    {
+      "id": 150,
+      "name": "HLP_R_CollarBone_up__offset"
+    },
+    {
+      "id": 151,
+      "name": "HLP_R_Pectoral__offset"
+    },
+    {
+      "id": 152,
+      "name": "HLP_R_Pectoral_side__offset"
+    },
+    {
+      "id": 153,
+      "name": "HLP_L_ForeArm_Mid__offset"
+    },
+    {
+      "id": 154,
+      "name": "HLP_L_ForeArm_Btm__offset"
+    },
+    {
+      "id": 155,
+      "name": "HLP_L_Elbow__offset"
+    },
+    {
+      "id": 156,
+      "name": "HLP_L_Arm_Top__offset"
+    },
+    {
+      "id": 157,
+      "name": "HLP_L_Arm_Mid__offset"
+    },
+    {
+      "id": 158,
+      "name": "HLP_L_ShldrBlade__offset"
+    },
+    {
+      "id": 159,
+      "name": "HLP_L_Shldr_B__offset"
+    },
+    {
+      "id": 160,
+      "name": "HLP_R_ForeArm_Mid__offset"
+    },
+    {
+      "id": 161,
+      "name": "HLP_R_ForeArm_Btm__offset"
+    },
+    {
+      "id": 162,
+      "name": "HLP_R_Elbow__offset"
+    },
+    {
+      "id": 163,
+      "name": "HLP_R_Arm_Top__offset"
+    },
+    {
+      "id": 164,
+      "name": "HLP_R_Arm_Mid__offset"
+    },
+    {
+      "id": 165,
+      "name": "HLP_R_ShldrBlade__offset"
+    },
+    {
+      "id": 166,
+      "name": "HLP_R_Shldr_B__offset"
+    },
+    {
+      "id": 167,
+      "name": "HLP_L_Butt__offset"
+    },
+    {
+      "id": 168,
+      "name": "HLP_R_Butt__offset"
+    },
+    {
+      "id": 169,
+      "name": "HLP_L_Inguinal__offset"
+    },
+    {
+      "id": 170,
+      "name": "HLP_R_Inguinal__offset"
+    },
+    {
+      "id": 171,
+      "name": "HLP_L_Knee__offset"
+    },
+    {
+      "id": 172,
+      "name": "HLP_L_UpLeg_Top__offset"
+    },
+    {
+      "id": 173,
+      "name": "HLP_L_UpLeg_Mid__offset"
+    },
+    {
+      "id": 174,
+      "name": "HLP_R_Knee__offset"
+    },
+    {
+      "id": 175,
+      "name": "HLP_R_UpLeg_Top__offset"
+    },
+    {
+      "id": 176,
+      "name": "HLP_R_UpLeg_Mid__offset"
+    }
+  ],
+  "events": [
+    {
+      "moveId": 670,
+      "moveName": "Wi_IFire",
+      "animation": "axyo_it_fire(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2488,
+      "propertyPackageOffset": 749544,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 670,
+      "moveName": "Wi_IFire",
+      "animation": "axyo_it_fire(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2489,
+      "propertyPackageOffset": 749556,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 670,
+      "moveName": "Wi_IFire",
+      "animation": "axyo_it_fire(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2490,
+      "propertyPackageOffset": 749568,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 677,
+      "moveName": "Co_INaginata",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2553,
+      "propertyPackageOffset": 750324,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 677,
+      "moveName": "Co_INaginata",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2554,
+      "propertyPackageOffset": 750336,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 677,
+      "moveName": "Co_INaginata",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2555,
+      "propertyPackageOffset": 750348,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 678,
+      "moveName": "Co_IBeamSpear",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2585,
+      "propertyPackageOffset": 750708,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 678,
+      "moveName": "Co_IBeamSpear",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2586,
+      "propertyPackageOffset": 750720,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 678,
+      "moveName": "Co_IBeamSpear",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2587,
+      "propertyPackageOffset": 750732,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 679,
+      "moveName": "Co_IHude_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2621,
+      "propertyPackageOffset": 751140,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 679,
+      "moveName": "Co_IHude_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2622,
+      "propertyPackageOffset": 751152,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 679,
+      "moveName": "Co_IHude_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2623,
+      "propertyPackageOffset": 751164,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 680,
+      "moveName": "Co_ISRed_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2658,
+      "propertyPackageOffset": 751584,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 680,
+      "moveName": "Co_ISRed_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2659,
+      "propertyPackageOffset": 751596,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 680,
+      "moveName": "Co_ISRed_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2660,
+      "propertyPackageOffset": 751608,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 681,
+      "moveName": "Co_ISGreen_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2695,
+      "propertyPackageOffset": 752028,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 681,
+      "moveName": "Co_ISGreen_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2696,
+      "propertyPackageOffset": 752040,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 681,
+      "moveName": "Co_ISGreen_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2697,
+      "propertyPackageOffset": 752052,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 682,
+      "moveName": "Co_ISBlue_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2732,
+      "propertyPackageOffset": 752472,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 682,
+      "moveName": "Co_ISBlue_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2733,
+      "propertyPackageOffset": 752484,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 682,
+      "moveName": "Co_ISBlue_P",
+      "animation": "yoco_it_naginata2(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2734,
+      "propertyPackageOffset": 752496,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 683,
+      "moveName": "Co_IKugibat",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2756,
+      "propertyPackageOffset": 752760,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 683,
+      "moveName": "Co_IKugibat",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2757,
+      "propertyPackageOffset": 752772,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 683,
+      "moveName": "Co_IKugibat",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2758,
+      "propertyPackageOffset": 752784,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 684,
+      "moveName": "Co_IPac_Man",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2779,
+      "propertyPackageOffset": 753036,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 684,
+      "moveName": "Co_IPac_Man",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2780,
+      "propertyPackageOffset": 753048,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 684,
+      "moveName": "Co_IPac_Man",
+      "animation": "yoco_it_kugibat(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2781,
+      "propertyPackageOffset": 753060,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 685,
+      "moveName": "Co_IHomeRun",
+      "animation": "yoco_it_homerunbat(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2799,
+      "propertyPackageOffset": 753276,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 685,
+      "moveName": "Co_IHomeRun",
+      "animation": "yoco_it_homerunbat(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2800,
+      "propertyPackageOffset": 753288,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 685,
+      "moveName": "Co_IHomeRun",
+      "animation": "yoco_it_homerunbat(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2801,
+      "propertyPackageOffset": 753300,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 686,
+      "moveName": "Co_IPikoHan",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2822,
+      "propertyPackageOffset": 753552,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 686,
+      "moveName": "Co_IPikoHan",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2823,
+      "propertyPackageOffset": 753564,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 686,
+      "moveName": "Co_IPikoHan",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2824,
+      "propertyPackageOffset": 753576,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 687,
+      "moveName": "Co_IUchide",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2843,
+      "propertyPackageOffset": 753804,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 687,
+      "moveName": "Co_IUchide",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2844,
+      "propertyPackageOffset": 753816,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 687,
+      "moveName": "Co_IUchide",
+      "animation": "yoco_it_picohammer(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2845,
+      "propertyPackageOffset": 753828,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 690,
+      "moveName": "Co_IOgre",
+      "animation": "yoco_it_onibou(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 2902,
+      "propertyPackageOffset": 754512,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 690,
+      "moveName": "Co_IOgre",
+      "animation": "yoco_it_onibou(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 2903,
+      "propertyPackageOffset": 754524,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 690,
+      "moveName": "Co_IOgre",
+      "animation": "yoco_it_onibou(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 2904,
+      "propertyPackageOffset": 754536,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 699,
+      "moveName": "Co_IHandGun",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3054,
+      "propertyPackageOffset": 756336,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 699,
+      "moveName": "Co_IHandGun",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3055,
+      "propertyPackageOffset": 756348,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 699,
+      "moveName": "Co_IHandGun",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3056,
+      "propertyPackageOffset": 756360,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 706,
+      "moveName": "Co_IModelGun_P",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3285,
+      "propertyPackageOffset": 759108,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 706,
+      "moveName": "Co_IModelGun_P",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3286,
+      "propertyPackageOffset": 759120,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 706,
+      "moveName": "Co_IModelGun_P",
+      "animation": "yoco_it_handgun_st(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3287,
+      "propertyPackageOffset": 759132,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 713,
+      "moveName": "Co_IRevolver",
+      "animation": "yoco_it_revolver(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3553,
+      "propertyPackageOffset": 762324,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 713,
+      "moveName": "Co_IRevolver",
+      "animation": "yoco_it_revolver(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3554,
+      "propertyPackageOffset": 762336,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 713,
+      "moveName": "Co_IRevolver",
+      "animation": "yoco_it_revolver(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3555,
+      "propertyPackageOffset": 762348,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 716,
+      "moveName": "Co_IRaygun",
+      "animation": "yoco_it_raygun(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3690,
+      "propertyPackageOffset": 763968,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 716,
+      "moveName": "Co_IRaygun",
+      "animation": "yoco_it_raygun(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3691,
+      "propertyPackageOffset": 763980,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 716,
+      "moveName": "Co_IRaygun",
+      "animation": "yoco_it_raygun(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3692,
+      "propertyPackageOffset": 763992,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 719,
+      "moveName": "Co_IGrenade",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3751,
+      "propertyPackageOffset": 764700,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 719,
+      "moveName": "Co_IGrenade",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3752,
+      "propertyPackageOffset": 764712,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 719,
+      "moveName": "Co_IGrenade",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3753,
+      "propertyPackageOffset": 764724,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 722,
+      "moveName": "Co_IMedical_P",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3786,
+      "propertyPackageOffset": 765120,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 722,
+      "moveName": "Co_IMedical_P",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3787,
+      "propertyPackageOffset": 765132,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 722,
+      "moveName": "Co_IMedical_P",
+      "animation": "yoco_it_grenade(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3788,
+      "propertyPackageOffset": 765144,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 725,
+      "moveName": "Co_IJSword",
+      "animation": "yoco_it_nihontou_tuki(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3830,
+      "propertyPackageOffset": 765648,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 725,
+      "moveName": "Co_IJSword",
+      "animation": "yoco_it_nihontou_tuki(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3831,
+      "propertyPackageOffset": 765660,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 725,
+      "moveName": "Co_IJSword",
+      "animation": "yoco_it_nihontou_tuki(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3832,
+      "propertyPackageOffset": 765672,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 726,
+      "moveName": "Co_IJSword2",
+      "animation": "yoco_it_nihontou_kesa(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3855,
+      "propertyPackageOffset": 765948,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 726,
+      "moveName": "Co_IJSword2",
+      "animation": "yoco_it_nihontou_kesa(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3856,
+      "propertyPackageOffset": 765960,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 726,
+      "moveName": "Co_IJSword2",
+      "animation": "yoco_it_nihontou_kesa(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3857,
+      "propertyPackageOffset": 765972,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 728,
+      "moveName": "Co_IESword",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3889,
+      "propertyPackageOffset": 766356,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 728,
+      "moveName": "Co_IESword",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3890,
+      "propertyPackageOffset": 766368,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 728,
+      "moveName": "Co_IESword",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3891,
+      "propertyPackageOffset": 766380,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 729,
+      "moveName": "Co_IBeamSaber",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3913,
+      "propertyPackageOffset": 766644,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 729,
+      "moveName": "Co_IBeamSaber",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3914,
+      "propertyPackageOffset": 766656,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 729,
+      "moveName": "Co_IBeamSaber",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3915,
+      "propertyPackageOffset": 766668,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 730,
+      "moveName": "Co_IBRed_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3941,
+      "propertyPackageOffset": 766980,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 730,
+      "moveName": "Co_IBRed_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3942,
+      "propertyPackageOffset": 766992,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 730,
+      "moveName": "Co_IBRed_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3943,
+      "propertyPackageOffset": 767004,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 731,
+      "moveName": "Co_IBGreen_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3967,
+      "propertyPackageOffset": 767292,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 731,
+      "moveName": "Co_IBGreen_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3968,
+      "propertyPackageOffset": 767304,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 731,
+      "moveName": "Co_IBGreen_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3969,
+      "propertyPackageOffset": 767316,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 732,
+      "moveName": "Co_IBBlue_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 3993,
+      "propertyPackageOffset": 767604,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 732,
+      "moveName": "Co_IBBlue_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 3994,
+      "propertyPackageOffset": 767616,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 732,
+      "moveName": "Co_IBBlue_P",
+      "animation": "yoco_it_silversword(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 3995,
+      "propertyPackageOffset": 767628,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 733,
+      "moveName": "Co_ICSword",
+      "animation": "yoco_it_seiryutou(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4015,
+      "propertyPackageOffset": 767868,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 733,
+      "moveName": "Co_ICSword",
+      "animation": "yoco_it_seiryutou(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4016,
+      "propertyPackageOffset": 767880,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 733,
+      "moveName": "Co_ICSword",
+      "animation": "yoco_it_seiryutou(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4017,
+      "propertyPackageOffset": 767892,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 734,
+      "moveName": "Co_IStunRod",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 9,
+      "propertyRecordIndex": 4036,
+      "propertyPackageOffset": 768120,
+      "effectId": 0,
+      "boneId": 9,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 734,
+      "moveName": "Co_IStunRod",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 11,
+      "propertyRecordIndex": 4037,
+      "propertyPackageOffset": 768132,
+      "effectId": 0,
+      "boneId": 11,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 734,
+      "moveName": "Co_IStunRod",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 15,
+      "propertyRecordIndex": 4038,
+      "propertyPackageOffset": 768144,
+      "effectId": 0,
+      "boneId": 15,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 735,
+      "moveName": "Co_ISoftCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4059,
+      "propertyPackageOffset": 768396,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 735,
+      "moveName": "Co_ISoftCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4060,
+      "propertyPackageOffset": 768408,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 735,
+      "moveName": "Co_ISoftCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4061,
+      "propertyPackageOffset": 768420,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 736,
+      "moveName": "Co_IChocoVanilla",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4082,
+      "propertyPackageOffset": 768672,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 736,
+      "moveName": "Co_IChocoVanilla",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4083,
+      "propertyPackageOffset": 768684,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 736,
+      "moveName": "Co_IChocoVanilla",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4084,
+      "propertyPackageOffset": 768696,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 737,
+      "moveName": "Co_I3xIceCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4105,
+      "propertyPackageOffset": 768948,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 737,
+      "moveName": "Co_I3xIceCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4106,
+      "propertyPackageOffset": 768960,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 737,
+      "moveName": "Co_I3xIceCream",
+      "animation": "yoco_it_stanrod(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4107,
+      "propertyPackageOffset": 768972,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 744,
+      "moveName": "Co_IMagicWand",
+      "animation": "yoco_it_magicwand(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4216,
+      "propertyPackageOffset": 770280,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 744,
+      "moveName": "Co_IMagicWand",
+      "animation": "yoco_it_magicwand(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4217,
+      "propertyPackageOffset": 770292,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 744,
+      "moveName": "Co_IMagicWand",
+      "animation": "yoco_it_magicwand(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4218,
+      "propertyPackageOffset": 770304,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 745,
+      "moveName": "Co_IAssaultRifle",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4268,
+      "propertyPackageOffset": 770904,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 745,
+      "moveName": "Co_IAssaultRifle",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4269,
+      "propertyPackageOffset": 770916,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 745,
+      "moveName": "Co_IAssaultRifle",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4270,
+      "propertyPackageOffset": 770928,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 746,
+      "moveName": "Co_ITrombone",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4314,
+      "propertyPackageOffset": 771456,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 746,
+      "moveName": "Co_ITrombone",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4315,
+      "propertyPackageOffset": 771468,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 746,
+      "moveName": "Co_ITrombone",
+      "animation": "yoco_it_assaultrifle(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4316,
+      "propertyPackageOffset": 771480,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 747,
+      "moveName": "Co_IBeamRifle",
+      "animation": "coss_it_beamrifle(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4357,
+      "propertyPackageOffset": 771972,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 747,
+      "moveName": "Co_IBeamRifle",
+      "animation": "coss_it_beamrifle(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4358,
+      "propertyPackageOffset": 771984,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 747,
+      "moveName": "Co_IBeamRifle",
+      "animation": "coss_it_beamrifle(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4359,
+      "propertyPackageOffset": 771996,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 748,
+      "moveName": "Co_ICatGun_P",
+      "animation": "yoco_it_beamrifle(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4403,
+      "propertyPackageOffset": 772524,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 748,
+      "moveName": "Co_ICatGun_P",
+      "animation": "yoco_it_beamrifle(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4404,
+      "propertyPackageOffset": 772536,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 748,
+      "moveName": "Co_ICatGun_P",
+      "animation": "yoco_it_beamrifle(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4405,
+      "propertyPackageOffset": 772548,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 749,
+      "moveName": "Co_ICupid",
+      "animation": "yoco_it_cupid(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4430,
+      "propertyPackageOffset": 772848,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 749,
+      "moveName": "Co_ICupid",
+      "animation": "yoco_it_cupid(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4431,
+      "propertyPackageOffset": 772860,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 749,
+      "moveName": "Co_ICupid",
+      "animation": "yoco_it_cupid(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4432,
+      "propertyPackageOffset": 772872,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 751,
+      "moveName": "Co_IMagical",
+      "animation": "yoco_it_sutekki(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 4489,
+      "propertyPackageOffset": 773556,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 751,
+      "moveName": "Co_IMagical",
+      "animation": "yoco_it_sutekki(DVD)",
+      "rawFrame": 18,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 4490,
+      "propertyPackageOffset": 773568,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 751,
+      "moveName": "Co_IMagical",
+      "animation": "yoco_it_sutekki(DVD)",
+      "rawFrame": 28,
+      "propertyId": 32814,
+      "propertyValue": 18,
+      "propertyRecordIndex": 4491,
+      "propertyPackageOffset": 773580,
+      "effectId": 0,
+      "boneId": 18,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1588,
+      "moveName": "Jz_shoryu24_7CS",
+      "animation": "ygjz_newupper2(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5335,
+      "propertyPackageOffset": 783708,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1589,
+      "moveName": "Jz_dslpS_7CS",
+      "animation": "ozjz_15hitup(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5344,
+      "propertyPackageOffset": 783816,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1628,
+      "moveName": "Jz_lrk_n",
+      "animation": "jzhk_batbreakkick_f(DVD)",
+      "rawFrame": 51,
+      "propertyId": 32814,
+      "propertyValue": 16,
+      "propertyRecordIndex": 5440,
+      "propertyPackageOffset": 784968,
+      "effectId": 0,
+      "boneId": 16,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1779,
+      "moveName": "Jz_dslpS",
+      "animation": "ozjz_15hitup(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5712,
+      "propertyPackageOffset": 788232,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1829,
+      "moveName": "Jz_guard_00",
+      "animation": "kojz_absolute(DVD)",
+      "rawFrame": 8,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 5858,
+      "propertyPackageOffset": 789984,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1829,
+      "moveName": "Jz_guard_00",
+      "animation": "kojz_absolute(DVD)",
+      "rawFrame": 15,
+      "propertyId": 32814,
+      "propertyValue": 11,
+      "propertyRecordIndex": 5859,
+      "propertyPackageOffset": 789996,
+      "effectId": 0,
+      "boneId": 11,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1829,
+      "moveName": "Jz_guard_00",
+      "animation": "kojz_absolute(DVD)",
+      "rawFrame": 20,
+      "propertyId": 32814,
+      "propertyValue": 13,
+      "propertyRecordIndex": 5860,
+      "propertyPackageOffset": 790008,
+      "effectId": 0,
+      "boneId": 13,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1831,
+      "moveName": "Jz_zettai_1",
+      "animation": "kjjz_zettai(DVD)",
+      "rawFrame": 1,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5871,
+      "propertyPackageOffset": 790140,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1831,
+      "moveName": "Jz_zettai_1",
+      "animation": "kjjz_zettai(DVD)",
+      "rawFrame": 5,
+      "propertyId": 32814,
+      "propertyValue": 0,
+      "propertyRecordIndex": 5872,
+      "propertyPackageOffset": 790152,
+      "effectId": 0,
+      "boneId": 0,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1831,
+      "moveName": "Jz_zettai_1",
+      "animation": "kjjz_zettai(DVD)",
+      "rawFrame": 7,
+      "propertyId": 32814,
+      "propertyValue": 8,
+      "propertyRecordIndex": 5873,
+      "propertyPackageOffset": 790164,
+      "effectId": 0,
+      "boneId": 8,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1831,
+      "moveName": "Jz_zettai_1",
+      "animation": "kjjz_zettai(DVD)",
+      "rawFrame": 10,
+      "propertyId": 32814,
+      "propertyValue": 17,
+      "propertyRecordIndex": 5874,
+      "propertyPackageOffset": 790176,
+      "effectId": 0,
+      "boneId": 17,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1831,
+      "moveName": "Jz_zettai_1",
+      "animation": "kjjz_zettai(DVD)",
+      "rawFrame": 14,
+      "propertyId": 32814,
+      "propertyValue": 15,
+      "propertyRecordIndex": 5875,
+      "propertyPackageOffset": 790188,
+      "effectId": 0,
+      "boneId": 15,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1840,
+      "moveName": "Jz_shoryu24",
+      "animation": "ygjz_newupper2(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5892,
+      "propertyPackageOffset": 790392,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1843,
+      "moveName": "Jz_shoryu_EX",
+      "animation": "ygjz_newupper2(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5913,
+      "propertyPackageOffset": 790644,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1844,
+      "moveName": "Jz_shoryu_EX2",
+      "animation": "jzss_ratk_f2r(DVD)",
+      "rawFrame": 6,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 5929,
+      "propertyPackageOffset": 790836,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 1992,
+      "moveName": "tumuji2_n",
+      "animation": "Qkz_Fnewtum_n(DVD)",
+      "rawFrame": 64,
+      "propertyId": 32814,
+      "propertyValue": 16,
+      "propertyRecordIndex": 6127,
+      "propertyPackageOffset": 793212,
+      "effectId": 0,
+      "boneId": 16,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2123,
+      "moveName": "Jz_SUPER_0",
+      "animation": "K_charge01(DVD)",
+      "rawFrame": 1,
+      "propertyId": 32814,
+      "propertyValue": 19,
+      "propertyRecordIndex": 6941,
+      "propertyPackageOffset": 802980,
+      "effectId": 0,
+      "boneId": 19,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2123,
+      "moveName": "Jz_SUPER_0",
+      "animation": "K_charge01(DVD)",
+      "rawFrame": 10,
+      "propertyId": 32814,
+      "propertyValue": 15,
+      "propertyRecordIndex": 6942,
+      "propertyPackageOffset": 802992,
+      "effectId": 0,
+      "boneId": 15,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2123,
+      "moveName": "Jz_SUPER_0",
+      "animation": "K_charge01(DVD)",
+      "rawFrame": 20,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 6943,
+      "propertyPackageOffset": 803004,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2123,
+      "moveName": "Jz_SUPER_0",
+      "animation": "K_charge01(DVD)",
+      "rawFrame": 30,
+      "propertyId": 32814,
+      "propertyValue": 11,
+      "propertyRecordIndex": 6944,
+      "propertyPackageOffset": 803016,
+      "effectId": 0,
+      "boneId": 11,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2123,
+      "moveName": "Jz_SUPER_0",
+      "animation": "K_charge01(DVD)",
+      "rawFrame": 40,
+      "propertyId": 32814,
+      "propertyValue": 4,
+      "propertyRecordIndex": 6945,
+      "propertyPackageOffset": 803028,
+      "effectId": 0,
+      "boneId": 4,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 160,
+      "propertyId": 32814,
+      "propertyValue": 19,
+      "propertyRecordIndex": 7019,
+      "propertyPackageOffset": 803916,
+      "effectId": 0,
+      "boneId": 19,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 170,
+      "propertyId": 32814,
+      "propertyValue": 17,
+      "propertyRecordIndex": 7020,
+      "propertyPackageOffset": 803928,
+      "effectId": 0,
+      "boneId": 17,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 180,
+      "propertyId": 32814,
+      "propertyValue": 3,
+      "propertyRecordIndex": 7021,
+      "propertyPackageOffset": 803940,
+      "effectId": 0,
+      "boneId": 3,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 190,
+      "propertyId": 32814,
+      "propertyValue": 7,
+      "propertyRecordIndex": 7022,
+      "propertyPackageOffset": 803952,
+      "effectId": 0,
+      "boneId": 7,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 200,
+      "propertyId": 32814,
+      "propertyValue": 9,
+      "propertyRecordIndex": 7023,
+      "propertyPackageOffset": 803964,
+      "effectId": 0,
+      "boneId": 9,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2130,
+      "moveName": "Jz_RageArts_n",
+      "animation": "jzik_ra_finish_f(DVD)",
+      "rawFrame": 246,
+      "propertyId": 32814,
+      "propertyValue": 9,
+      "propertyRecordIndex": 7024,
+      "propertyPackageOffset": 803976,
+      "effectId": 0,
+      "boneId": 9,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2132,
+      "moveName": "Jz_Ieye_n",
+      "animation": "yojz_it_ranbu_f(DVD)",
+      "rawFrame": 153,
+      "propertyId": 32814,
+      "propertyValue": 9,
+      "propertyRecordIndex": 7158,
+      "propertyPackageOffset": 805584,
+      "effectId": 0,
+      "boneId": 9,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    },
+    {
+      "moveId": 2132,
+      "moveName": "Jz_Ieye_n",
+      "animation": "yojz_it_ranbu_f(DVD)",
+      "rawFrame": 173,
+      "propertyId": 32814,
+      "propertyValue": 9,
+      "propertyRecordIndex": 7159,
+      "propertyPackageOffset": 805596,
+      "effectId": 0,
+      "boneId": 9,
+      "owner": "self",
+      "boneOwner": "self",
+      "triggerKind": "original timed property visual pass",
+      "binding": "PS_EF_CHR_JIN_NOMAL"
+    }
+  ],
+  "counts": {
+    "timedEvents": 143,
+    "moves": 51,
+    "boneIds": {
+      "7": 45,
+      "3": 40,
+      "18": 37,
+      "9": 5,
+      "11": 3,
+      "15": 3,
+      "16": 2,
+      "13": 1,
+      "0": 1,
+      "8": 1,
+      "17": 2,
+      "19": 2,
+      "4": 1
+    }
+  },
+  "sourceExecutableSha256": "f46f9ff526fe5d00a0d1ee52126f61628cdc13c402264e2764e4010d3b9c1892",
+  "sourceMovesetSha256": "3b25d3982b6778e105875d50db87413f31c140ca11d3dc56129f70109ee2c60f",
+  "sourceBoneTableSha256": "f889bf9aac5a27006e1a47fc4413228a41dfc0faea3b8fed83dc89ecbecec777",
+  "nativeEvidence": {
+    "propertyInterpreterVA": "0x140717740",
+    "visualPassSwitchTableVA": "0x14071fa10",
+    "caseTargetVA": "0x1407179a4",
+    "caseInstructions": [
+      {
+        "va": "0x1407179a4",
+        "bytes": "f30f1005e419dd02",
+        "op": "movss",
+        "args": "xmm0, dword ptr [rip + 0x2dd19e4]"
+      },
+      {
+        "va": "0x1407179ac",
+        "bytes": "4d8bc6",
+        "op": "mov",
+        "args": "r8, r14"
+      },
+      {
+        "va": "0x1407179af",
+        "bytes": "410fb786be010000",
+        "op": "movzx",
+        "args": "eax, word ptr [r14 + 0x1be]"
+      },
+      {
+        "va": "0x1407179b7",
+        "bytes": "33d2",
+        "op": "xor",
+        "args": "edx, edx"
+      },
+      {
+        "va": "0x1407179b9",
+        "bytes": "f30f100dd319dd02",
+        "op": "movss",
+        "args": "xmm1, dword ptr [rip + 0x2dd19d3]"
+      },
+      {
+        "va": "0x1407179c1",
+        "bytes": "498bce",
+        "op": "mov",
+        "args": "rcx, r14"
+      },
+      {
+        "va": "0x1407179c4",
+        "bytes": "6689442428",
+        "op": "mov",
+        "args": "word ptr [rsp + 0x28], ax"
+      },
+      {
+        "va": "0x1407179c9",
+        "bytes": "488d442470",
+        "op": "lea",
+        "args": "rax, [rsp + 0x70]"
+      },
+      {
+        "va": "0x1407179ce",
+        "bytes": "f30f11442470",
+        "op": "movss",
+        "args": "dword ptr [rsp + 0x70], xmm0"
+      },
+      {
+        "va": "0x1407179d4",
+        "bytes": "f30f1005bc19dd02",
+        "op": "movss",
+        "args": "xmm0, dword ptr [rip + 0x2dd19bc]"
+      },
+      {
+        "va": "0x1407179dc",
+        "bytes": "440fb7cb",
+        "op": "movzx",
+        "args": "r9d, bx"
+      },
+      {
+        "va": "0x1407179e0",
+        "bytes": "f30f11442478",
+        "op": "movss",
+        "args": "dword ptr [rsp + 0x78], xmm0"
+      },
+      {
+        "va": "0x1407179e6",
+        "bytes": "4889442420",
+        "op": "mov",
+        "args": "qword ptr [rsp + 0x20], rax"
+      },
+      {
+        "va": "0x1407179eb",
+        "bytes": "f30f114c2474",
+        "op": "movss",
+        "args": "dword ptr [rsp + 0x74], xmm1"
+      },
+      {
+        "va": "0x1407179f1",
+        "bytes": "e85af9ffff",
+        "op": "call",
+        "args": "0x140717350"
+      }
+    ],
+    "pointLookupVA": "0x140732850",
+    "boneSpawnHelperVA": "0x140717350",
+    "characterEventHelperVA": "0x140717600",
+    "event9BridgeVA": "0x14073F530",
+    "interfaceVtableVA": "0x1427AE530",
+    "interfaceSlot": 80,
+    "nativeBridgeVA": "0x1402D87F0",
+    "spawnBoneWrapperVA": "0x1405743F0",
+    "spawnWorldWrapperVA": "0x140574580",
+    "worldSelection": "native bridge selects SpawnWorld when boneId == -1, SpawnBone otherwise",
+    "managerBehavior": "FindEffectsNative(effectId), SpawnEmitterAtLocation(position, rotation, true); AddParticleSystem(owner,effectId,instance); bone path sets BoneSocketActor, PlayerNumber, BonePlayerNumber, BoneIndex, HistoryNumber.",
+    "onHitBehavior": "Inherited OnHit copies parameters and enters ubergraph VM offset4798, which pops to return. Jin subclass has no function overrides."
+  },
+  "attachmentEvidence": {
+    "class": "PM_CharacterBone",
+    "classRegistration": "0x14056c990",
+    "constructorThunk": "0x14055c1e0",
+    "constructor": "0x1403caf60",
+    "vtable": "0x1427da008",
+    "spawnVtableOffset": "0x1f8",
+    "spawnFunction": "0x1403cb9b0",
+    "updateVtableOffset": "0x200",
+    "updateFunction": "0x1403cbed0",
+    "dynamicSourceFunction": "0x1403cb330",
+    "parametersRead": [
+      "BonePlayerNumber",
+      "BoneIndex"
+    ],
+    "parameterStorage": "float, converted to int by cvttss2si",
+    "boneNameLookup": "0x1402d7310; per-player ID-to-FName cache",
+    "boneIndexOverridesSourceLocations": true,
+    "sourceLocationWrite": "SourceLocations[0] at module+0x40: FName from bone cache, zero XYZ offset; appends a record if empty",
+    "sourceLocationResolution": "both particle spawn and module update call the dynamic source function",
+    "sourceType": "custom constructor forces byte+0x30 to 0 (bone mode); socket mode 1 instead maps IDs 0..16 through a separate native switch",
+    "existingParticleFollowing": {
+      "gate": "update function 0x1403cc027 tests byte[module+0x54] bit0; clear skips existing-particle location update",
+      "baseConstructor": "0x1416226e8 sets only bit1 by OR 2; custom constructor does not set bit0",
+      "jinNomalPackage": "PM_CharacterBone_0 export54, offset40478, contains SourceLocations Neck with zero offset; bUpdatePositionEachFrame is not serialized",
+      "result": "new particles use the current bone position; existing particles are not dragged with that bone under these defaults"
+    },
+    "nativeSpawnTransform": {
+      "property": "0x802e",
+      "effectId": 0,
+      "boneId": "uint16(propertyValue)",
+      "owner": "self",
+      "boneOwner": "self",
+      "pointLookup": "0x140732850(owner,outPoint,boneId)",
+      "facingWordRead": "0x1407179af reads word[owner+0x1be]",
+      "thetaRadians": "int16(facingWord) * 2*pi/65536",
+      "direction": [
+        "sin(theta)",
+        "0",
+        "cos(theta)"
+      ],
+      "ueLocation": [
+        "0.1*sourcePoint.z",
+        "-0.1*sourcePoint.x",
+        "0.1*sourcePoint.y+10"
+      ],
+      "ueRotationDegrees": {
+        "pitch": "atan2(direction.y,sqrt(direction.x^2+direction.z^2))*180/pi",
+        "yaw": "atan2(direction.z,direction.x)*180/pi-90",
+        "roll": 0
+      },
+      "locationConversionBeforeBoneWorldBranch": true,
+      "orientation": "initial world orientation follows owner facing, not animated bone orientation"
+    }
+  },
+  "evidenceFiles": [
+    {
+      "path": "jin-timed-dispatch.json",
+      "sha256": "60ecb8bcaad4f3d879ea3f27bc75bed7f8f00e6513f1384c72ee244c220d109b"
+    },
+    {
+      "path": "bone-id-jin-vbn-map.json",
+      "sha256": "9b293cd7bca7c8e2aaa85e53a4fdcc734e9de3e87e3d759d8d0db74dde8aade5"
+    },
+    {
+      "path": "dispatch-bone-attachment-proof.json",
+      "sha256": "753fdc771beeffb0122751bfb1c93f8a7f782435ff41931550ff6b17d8bb12cf"
+    }
+  ],
+  "limitations": [
+    "This manifest describes static package/executable evidence, not a recorded original-game trace.",
+    "Native bone IDs must be resolved through original bone tables; they are not animation channel or Unity transform indices.",
+    "Source point lookup and facing conversion are native; Unity retargeted bone transforms are an adaptation that needs visual validation.",
+    "Other properties, collision-driven character effects, start/end event tables, flags and override item variants are outside this initial 0x802E manifest.",
+    "An effect registry binding does not establish how FindEffectsNative combines customization overrides.",
+    "Unity uses retargeted rig world points and displayed actor facing; comparison with an original-game capture remains required.",
+    "The native +10 Unreal-unit Z spawn offset is converted to +0.1 metre world up for mesh emitter origins; PM_CharacterBone uses the zero-offset resolved rig bone.",
+    "Versus queues acted-frame events until its actors are posed; multiple simulation ticks retain all events but use the next displayed pose.",
+    "Random atlas selection, custom sockets, omitted material operations and unsupported emitter variants remain listed in conversion-report.json."
+  ]
+}

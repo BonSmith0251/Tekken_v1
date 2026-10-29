@@ -1,0 +1,27 @@
+{
+ "systems": 112,
+ "wanted": 112,
+ "textures": 58,
+ "meshes": 24,
+ "failed": {},
+ "limitations": [
+  "GPU floor collision of KO debris is not reproduced (debris passes the floor)",
+  "dynamic material parameters other than AlphaClip (scroll, distortion) are not reproduced",
+  "large smoke sprites are capped at 60/s",
+  "module AccelerationDragScaleOverLife is not reproduced",
+  "module AccelerationOverLifetime is not reproduced",
+  "module Collision is not reproduced",
+  "module EventGenerator is not reproduced",
+  "module EventReceiverSpawn is not reproduced",
+  "module Lifetime_Seeded is not reproduced",
+  "module LocationEmitter is not reproduced",
+  "module LocationEmitterDirect is not reproduced",
+  "module LocationWorldOffset is not reproduced",
+  "module MeshRotation_Seeded is not reproduced",
+  "module Orbit is not reproduced",
+  "module PivotOffset is not reproduced",
+  "module SpawnPerUnit is not reproduced",
+  "spawn rates above 600/s are capped",
+  "vector fields are approximated: tightness as drag, intensity as noise (field shapes not decoded)"
+ ]
+}

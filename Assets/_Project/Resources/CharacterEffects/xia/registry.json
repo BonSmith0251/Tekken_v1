@@ -1,0 +1,94 @@
+{
+  "schema": "tekken-character-effect-registry/1",
+  "characterCode": "xia",
+  "bindings": [
+    {
+      "effectId": 0,
+      "role": "PS_EF_xia00_ss_nomal",
+      "system": "PS_EF_xia00_ss_nomal",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_nomal.uasset",
+      "sourceSha256": "d52c5f26a0545cd74d822e6426583fa55d29c07b42722438ae31001f1f7fe556",
+      "managerPackage": "TekkenGame/Content/Effect/TK75/Character/xia/BP_XiaEffectManager.uasset",
+      "managerSha256": "59d3b79df5cad028ab40fd0097f2c6cdc1a6dfba43019e1a2384661b259c0b8e",
+      "bindingStatus": "original manager binding; native timed property 0x802E verified in native-dispatch.json"
+    }
+  ],
+  "candidates": [
+    {
+      "role": "PS_EF_ITM_Xia_PatoLight",
+      "system": "PS_EF_ITM_Xia_PatoLight",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_ITM_Xia_PatoLight.uasset",
+      "sourceSha256": "dfa6440abcf317fe743ad2a1004a7e7fb39710bb049b4337e81ca4005cd1422e",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_xia00_ss_nomal",
+      "system": "PS_EF_xia00_ss_nomal",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_nomal.uasset",
+      "sourceSha256": "d52c5f26a0545cd74d822e6426583fa55d29c07b42722438ae31001f1f7fe556",
+      "managerBound": true,
+      "previewOnly": false
+    },
+    {
+      "role": "PS_EF_xia00_ss_unique1",
+      "system": "PS_EF_xia00_ss_unique1",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_unique1.uasset",
+      "sourceSha256": "effa611653c6741c421705d407b1cfe546f8e9b076e0af7cd321fea2d817dd8f",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_xia00_ss_unique2",
+      "system": "PS_EF_xia00_ss_unique2",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_unique2.uasset",
+      "sourceSha256": "16535c0fef063ac5ccfd33338e6a9bb15eda4aabf767103070434775565e4e70",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_xia00_ss_unique3",
+      "system": "PS_EF_xia00_ss_unique3",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_unique3.uasset",
+      "sourceSha256": "905886f5aa189a2862f7650689eb440b6f1c9ebef775788f04709125fd28ed3d",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_xia00_ss_unique4",
+      "system": "PS_EF_xia00_ss_unique4",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_xia00_ss_unique4.uasset",
+      "sourceSha256": "53a8b8b85f22dee376032be6a418eb2e0d0df01499111a32024791b1d2f7bb11",
+      "managerBound": false,
+      "previewOnly": true
+    },
+    {
+      "role": "PS_EF_XIA_bashousen",
+      "system": "PS_EF_XIA_bashousen",
+      "sourcePackage": "TekkenGame/Content/Effect/TK75/Character/xia/Particle/PS_EF_XIA_bashousen.uasset",
+      "sourceSha256": "6b6922fef3d2291fda61a1a6f71f41c438749d4b04518b9b54e4c8373f4474b0",
+      "managerBound": false,
+      "previewOnly": true
+    }
+  ],
+  "nativeTriggerMappings": [
+    {
+      "propertyId": 32814,
+      "effectId": 0,
+      "manifest": "native-dispatch.json",
+      "timedEvents": 134,
+      "moves": 45
+    }
+  ],
+  "limitations": [
+    "Cooked shader expressions/native behavior are not recovered; shared shader brightness, alpha erosion and material selection remain approximations.",
+    "Native move/impact triggers, attachment dispatch and stop rules are not inferred by this export; roles are manual-preview identifiers.",
+    "Original raw properties and hashes remain the authority; runtime JSON is a unit/basis-converted rendering adaptation.",
+    "PM_CharacterBone native rotation, selection and nonzero bone-local offset semantics are unresolved; only exact named-bone spawn placement is supported",
+    "PM_CharacterBone source names/offsets are preserved; original native selection and rotation semantics require runtime validation",
+    "PM_CharacterBone update-each-frame is not implemented; PatoLight's missing Head_Socket is skipped, not replaced by a guessed head bone",
+    "Shared Cascade conversion samples distributions/curves, applies its documented caps and supplies rendering defaults for absent properties; these are adaptations, not original serialized values.",
+    "Unity renders the first stored LOD only; all original LOD/module records remain in conversion-report.json and hashed evidence.",
+    "module Orbit is not reproduced"
+  ]
+}
