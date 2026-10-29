@@ -97,3 +97,43 @@ Round calls, video check (2026-10-27)
   FIGHT 40 after READY (= the READY clip, ReadyFight_mc frames 1-39), FIGHT visible ~44 (its clip), K.O.
   ~114 of its 120-frame clip. VersusGame: ReadyTick 68, FightTick 108 (was 60/105), KoCallSeconds 2.0 (was
   1.8, which cut K.O.'s zoom-out exit). Intro length (150) and control start unchanged; not measurable from video.
+
+ROUND / READY / FIGHT / K.O. ORIGINAL-EFFECT REPAIR (2026-10-28)
+
+Fresh extraction: SW_UI_GameMessage.uasset SHA-256
+752b3522fcd794685c52cf5eb2250d3287a613c59d9ef49b798acd07815a6ed7.
+Workspace Artifacts/AnnouncementEffects holds the freshly decoded movie, ActionScript disassemblies,
+asset-audit.json, original gameplay frames, and before/after Unity renders. All 49 texture PNGs and 22
+mask PNGs match the fresh export byte for byte. Existing placement events and motion curves are unchanged.
+
+Corrections to the earlier player described above:
+- motion_dump now recovers transformationPoint XY and transformationPointZ. Animator3D.setTime3D and
+  getScaleSkewMatrix use these pivots in addition to initialPosition. FIGHT's exit echo has pivot
+  (-13.6,-234.6), scale (1.55051,1.55048), initialPosition (-21.1,-363.75,0): omitting the pivot placed it
+  above the word. K.O.'s pivot (-267.8,-34.05) likewise cancels its initial offset at scale 1.5; it now
+  stays centred. READY and FIGHT also have recovered Z pivots.
+- The original Animator3D.setTargetState captures the placement matrix only when !motionArray.
+  These generated constructors pass arrays to AnimatorFactory3D. GfxClip no longer multiplies the
+  placement into their complete motion transforms a second time.
+- Actual stop/play/goto frame commands replace the class-name/last-frame stop heuristic. ReadyFight
+  frame 1 holds Moji_Fight_mc at its Fight label, frame 41 releases it, and its frame 40 stops it.
+  The round mask stops on frame 1 unless ChangeRound selects another digit mask. New motion spans
+  discard old property overrides so a previous hidden span's alpha does not suppress a visible span.
+- Faint red echoes were too bright in the linear Unity framebuffer. GfxLayer now alpha-weights the
+  source colour in display space before converting it to linear and uses premultiplied blending.
+  This is a rendering adaptation supported by visual comparison, not a recovered original GPU shader.
+  Remaining differences: destination attenuation still occurs in Unity's linear framebuffer; filtered
+  sprites are approximated by per-image blur, not a complete Scaleform offscreen group compositor.
+
+Inspected original capture: TEKKEN 7  2026-10-23 08-04-08.mp4, ROUND 35.9-36.5 s,
+READY 37.05-37.4 s, FIGHT 37.75-38.1 s, K.O. 62.0-63.4 s. Comparison is qualitative;
+it does not establish pixel-identical rendering. Gameplay cue timing and control-start timing unchanged.
+
+Validation: AnnouncementEffectsCapture runs the real BattleHud.DrawCall/GfxLayer renderer in Unity,
+without editing a scene. 54 captures cover the four requested calls, rounds 2/10, FINAL ROUND,
+DOUBLE K.O., TIME UP and DRAW; rewind reproduces identical pixels; continuous READY/FIGHT child
+playheads match the recovered stop/release/stop commands; shader compiles and is supported.
+Flags: Temp/capture-announcements ("before" or "after"), Temp/play-announcements (natural versus
+playback, temporary automatic control; restores the previously open saved scenes and skips dirty ones).
+Results: Validation/Announcements. Workspace Artifacts/AnnouncementEffects/comparison.jpg is the
+before/after contact sheet. Regeneration accepts --out for an isolated export before copying into Unity.

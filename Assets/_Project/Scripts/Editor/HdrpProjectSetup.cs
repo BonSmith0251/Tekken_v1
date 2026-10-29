@@ -23,17 +23,24 @@ namespace Versus.Remaster.Editor
                 File.Delete("Temp/fix-eye-shadow");
                 try { FixEyeShadows(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/hdrp-error.txt", e.ToString()); }
             }
+            if (File.Exists("Temp/fix-lash-brow"))
+            {
+                File.Delete("Temp/fix-lash-brow");
+                try { FixLashesAndBrows(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/hdrp-error.txt", e.ToString()); }
+            }
             if (!File.Exists("Temp/hdrp-migrate")) return;
             File.Delete("Temp/hdrp-migrate");
             try { Apply(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/hdrp-error.txt", e.ToString()); }
         }
 
         public static bool IsEyeShadow(Material material) => material &&
-            (material.name.EndsWith("_eye_shadow", StringComparison.OrdinalIgnoreCase) || material.name.EndsWith("_eye_corner", StringComparison.OrdinalIgnoreCase));
+            (material.name.EndsWith("_eye_shadow", StringComparison.OrdinalIgnoreCase) || material.name.EndsWith("_eye_corner", StringComparison.OrdinalIgnoreCase) ||
+             material.name.IndexOf("_fah_", StringComparison.OrdinalIgnoreCase) >= 0);
 
         // The source eye shadow is black with a soft alpha gradient that darkens the eyeball
         // under the lid. Opaque or alpha-tested, it paints a hard black shape over the eye.
         // Xiaoyu's eye corner is a similar alpha overlay; opaque, its whole quad shows as a pink patch.
+        // Bob's stubble (MI_CH_bob_fah_*) is one too: opaque, it covers his cheeks and jaw in a grey slab.
         public static void MakeEyeShadowTransparent(Material material)
         {
             material.SetFloat("_AlphaCutoffEnable", 0);
@@ -84,6 +91,55 @@ namespace Versus.Remaster.Editor
             HDMaterial.ValidateMaterial(material);
             EditorUtility.SetDirty(material);
             return true;
+        }
+
+        // Eyelashes and eyebrows, by the game's names: eyelash/eyebrow, Katarina's matuge (matsuge) and
+        // the blow2/blow22 brows her face borrows from Xiaoyu. Not cmn_gla_blow: that is the browline
+        // glasses frame, a Lit wardrobe item.
+        public static bool IsLashOrBrow(Material material) => material &&
+            System.Text.RegularExpressions.Regex.IsMatch(material.name, @"^(?!.*_gla_).*(eyelash|eyebrow|matuge|_blow\d*$)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+        // Lashes and brows are thin alpha cards over the face. Lit (opaque or cut out) they show hard
+        // edges and dark fringes; the built-in Unlit/Transparent is not an HDRP shader and renders pink.
+        // HDRP/Unlit with Surface Type Transparent (alpha blend) draws the texture's alpha softly, the
+        // set-up Jin's and Kazuya's costume lashes already had.
+        public static void MakeLashOrBrowUnlit(Material material)
+        {
+            Texture map = null;
+            foreach (var property in new[] { "_UnlitColorMap", "_BaseColorMap", "_MainTex" })
+                if (!map && material.HasProperty(property)) map = material.GetTexture(property);
+            Color color = material.HasProperty("_UnlitColor") && material.shader.name == "HDRP/Unlit" ? material.GetColor("_UnlitColor")
+                : material.HasProperty("_BaseColor") ? material.GetColor("_BaseColor") : material.HasProperty("_Color") ? material.GetColor("_Color") : Color.white;
+            float doubleSided = material.HasProperty("_DoubleSidedEnable") ? material.GetFloat("_DoubleSidedEnable") : 0;
+            material.shader = Shader.Find("HDRP/Unlit");
+            material.SetTexture("_UnlitColorMap", map);
+            material.SetColor("_UnlitColor", color);
+            material.SetFloat("_SurfaceType", 1);
+            material.SetFloat("_BlendMode", 0);
+            material.SetFloat("_AlphaCutoffEnable", 0);
+            material.SetFloat("_DoubleSidedEnable", doubleSided);
+            material.renderQueue = -1;
+            HDMaterial.ValidateMaterial(material);
+            EditorUtility.SetDirty(material);
+        }
+
+        [MenuItem("Remaster/Rendering/Make eyelashes and eyebrows unlit transparent")]
+        public static void FixLashesAndBrows()
+        {
+            var paths = new List<string>();
+            foreach (string guid in AssetDatabase.FindAssets("t:Material", new[] { "Assets/_Project/Characters" }))
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+                if (!IsLashOrBrow(material)) continue;
+                MakeLashOrBrowUnlit(material); paths.Add(path);
+            }
+            AssetDatabase.SaveAssets();
+            Directory.CreateDirectory("Validation/HDRP");
+            var checks = paths.Select(p => AssetDatabase.LoadAssetAtPath<Material>(p)).Select(m => "{\"material\":\"" + AssetDatabase.GetAssetPath(m) + "\",\"shader\":\"" + m.shader.name +
+                "\",\"surface\":" + m.GetFloat("_SurfaceType") + ",\"map\":" + (m.GetTexture("_UnlitColorMap") ? "true" : "false") + "}");
+            File.WriteAllText("Validation/HDRP/lash-brow.json", "{\"passed\":" + (paths.Count > 0 ? "true" : "false") + ",\"materials\":[" + string.Join(",", checks) + "]}");
+            Debug.Log("Eyelashes and eyebrows set to HDRP/Unlit transparent: " + paths.Count);
         }
 
         // A uniformly tinted alpha-blended surface; the base color map is dropped because its alpha is not opacity.

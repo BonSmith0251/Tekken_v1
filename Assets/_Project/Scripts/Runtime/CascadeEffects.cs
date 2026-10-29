@@ -13,9 +13,13 @@ namespace Versus.Remaster
     [Serializable] public sealed class CascadeEmitterData
     {
         public string name, kind, align, texture, mesh, blend, axisLock, shape;
+        public string subImageInterpolation;
+        public int[] subImages;
+        public string[] boneNames;
+        public float[] subImageIndex, boneOffsets, boneLocationOffset;
         public float intensity = 1, duration = 1, delay, rate, cameraOffset, shapeRadius, shapeHeight, shapeVelocityScale, alphaClip;
         public int loops = 1;
-        public bool distortion, mask, floor, bones, gpu, shapeVelocity, shapeSurface, hasLight;
+        public bool distortion, mask, floor, bones, gpu, shapeVelocity, shapeSurface, hasLight, simulationLocal;
         public float[] scroll, tiling, life, bursts, sizeMin, sizeMax, sizeLife, colorMin, colorMax, colorLife, colorScale,
             velocityMin, velocityMax, radial, coneAngle, coneSpeed, coneDir, velocityLife, accel, drag, shapeOffset,
             locationMin, locationMax, rotation, rotationRate, meshRotationMin, meshRotationMax, meshRotationRateMin,
@@ -38,7 +42,9 @@ namespace Versus.Remaster
         public const string Hit = "HitFX", Counter = "CriticalHit3FX", Guard = "GuardFX", Pierce = "PierceFX",
             Blast = "BlastFX", Smoke = "SmokeFX", Rage = "RageFX", RageAura = "RageAuraFX",
             PunishHigh = "PracticePunishNoticeHiFX", PunishMid = "PracticePunishNoticeMidFX", PunishLow = "PracticePunishNoticeLoFX",
-            KO = "KOFX";
+            KO = "KOFX",
+            // Power crush: BP_CommonEffectManager's Armor0FX (PS_EF_cmnpowerclash00), its OnArmorSucceeded effect.
+            Armour = "Armor0FX";
         // Not recovered: how strongly the original glare power fed its bloom. Tuned by eye.
         public float glareGain = 1;
         readonly Dictionary<string, CascadeSystemData> roles = new Dictionary<string, CascadeSystemData>();
@@ -48,11 +54,16 @@ namespace Versus.Remaster
         Shader shader;
         static readonly int ExposureId = Shader.PropertyToID("_CascadeExposure");
 
-        public static CascadeEffects Create(Transform parent)
+        // Resources folder of the effect library: "HitEffects" (battle roles) or "StageEffects"
+        // (stage particle systems from Tools/StageEffects, one role per system).
+        string folder = "HitEffects";
+
+        public static CascadeEffects Create(Transform parent, string folder = "HitEffects", string name = "Battle effects")
         {
-            var go = new GameObject("Battle effects");
+            var go = new GameObject(name);
             if (parent) go.transform.SetParent(parent, false);
             var effects = go.AddComponent<CascadeEffects>();
+            effects.folder = folder;
             effects.Load();
             return effects;
         }
@@ -60,8 +71,8 @@ namespace Versus.Remaster
         void Load()
         {
             shader = Resources.Load<Shader>("HitEffects/CascadeParticle");
-            var asset = Resources.Load<TextAsset>("HitEffects/effects");
-            if (!shader || !asset) { Debug.LogWarning("Battle effects are missing; run Tools/HitEffects/export_hit_effects.py."); return; }
+            var asset = Resources.Load<TextAsset>(folder + "/effects");
+            if (!shader || !asset) { Debug.LogWarning(folder + " effects are missing; run its exporter (Tools/HitEffects or Tools/StageEffects)."); return; }
             var data = JsonUtility.FromJson<CascadeLibraryData>(asset.text);
             var systems = new Dictionary<string, CascadeSystemData>();
             foreach (var s in data.systems) systems[s.name] = s;
@@ -70,17 +81,31 @@ namespace Versus.Remaster
 
         public bool Has(string role) => roles.ContainsKey(role);
 
+        /// <summary>True when the role's system has an emitter that loops forever (EmitterLoops 0):
+        /// ambient effects. One-shot systems are event effects (a stage's break bursts).</summary>
+        public bool Loops(string role) => roles.TryGetValue(role, out var s) && Array.Exists(s.emitters, e => e.loops == 0 && !e.distortion);
+
         /// <summary>Plays a role at a world position. Local +z of the rotation is the source's
         /// effect X axis (the hit direction). Bones, when given, seed character-bone emitters.</summary>
-        public CascadeInstance Play(string role, Vector3 position, Quaternion rotation, float scale = 1, Transform[] bones = null)
+        public CascadeInstance Play(string role, Vector3 position, Quaternion rotation, float scale = 1, Transform[] bones = null, Transform sourceBoneOverride = null)
         {
             if (!roles.TryGetValue(role, out var system)) return null;
             var go = new GameObject(role);
             go.transform.SetParent(transform, false);
             go.transform.SetPositionAndRotation(position, rotation);
             var instance = go.AddComponent<CascadeInstance>();
-            instance.Begin(this, system, scale, bones);
+            instance.Begin(this, system, scale, bones, sourceBoneOverride);
             return instance;
+        }
+
+        /// <summary>Removes every instance this library has played (finite and looping), e.g. on round reset.</summary>
+        public void Clear()
+        {
+            foreach (var instance in GetComponentsInChildren<CascadeInstance>(true))
+            {
+                instance.gameObject.SetActive(false);
+                if (Application.isPlaying) Destroy(instance.gameObject); else DestroyImmediate(instance.gameObject);
+            }
         }
 
         void LateUpdate()
@@ -96,20 +121,33 @@ namespace Versus.Remaster
 
         internal Material MaterialFor(CascadeEmitterData e, float peak)
         {
-            // The original materials multiply by a glare power (1..100) and let bloom and the tonemap
-            // whiten the core. Without bloom here, the shader whitens hot colour itself; the square
-            // root keeps a glare of 20 at about 4.5x (the reference video's sparks read white-yellow).
-            float intensity = peak * Mathf.Sqrt(Mathf.Max(1, e.intensity)) * glareGain;
+            // The original materials multiply by a glare power (1..100) and the game's exposure and
+            // tonemap bring the result back into range; the square root keeps a glare of 20 at about
+            // 4.5x (the reference video's sparks read white-yellow). Colour peaks above 4 are compressed
+            // the same way: the counter rings' (60, 20, 5) taken literally clip to white, while the
+            // reference shows them yellow-orange (median (226, 177, 110), core (247, 222, 157)), which
+            // a peak of about 8 through the shader's shoulder reproduces.
+            float colourPeak = peak <= 4 ? peak : 4 * Mathf.Pow(peak / 4, .25f);
+            float intensity = colourPeak * Mathf.Sqrt(Mathf.Max(1, e.intensity)) * glareGain;
             string key = e.texture + "|" + e.blend + "|" + e.mask + "|" + intensity.ToString("0.###") + "|" + e.cameraOffset + "|" +
-                         Vec(e.scroll) + "|" + Vec(e.tiling) + "|" + e.alphaClip + "|" + Vec(e.tint);
+                         Vec(e.scroll) + "|" + Vec(e.tiling) + "|" + e.alphaClip + "|" + Vec(e.tint) + "|" +
+                         (HasSubUV(e) ? string.Join(",", e.subImages) + e.subImageInterpolation : "");
             if (materials.TryGetValue(key, out var m)) return m;
             m = new Material(shader) { name = e.name, renderQueue = (int)RenderQueue.Transparent };
             if (!string.IsNullOrEmpty(e.texture)) m.mainTexture = TextureFor(e.texture);
             m.SetFloat("_Intensity", intensity);
-            if (e.tint != null && e.tint.Length == 3) m.SetColor("_Tint", new Color(e.tint[0], e.tint[1], e.tint[2]));
+            // Source colours are linear; Unity decodes Color properties and particle colours as sRGB in
+            // this linear-space project, so they are handed over gamma-encoded (see Linear()).
+            if (e.tint != null && e.tint.Length == 3) m.SetColor("_Tint", Linear(new Color(e.tint[0], e.tint[1], e.tint[2])));
             m.SetFloat("_MaskFromRed", e.mask ? 1 : 0);
+            // Character libraries also hold alpha-less colour textures (T_EF_COL_*: Alisa's swirl, Kazuya's
+            // lightning); there the brightest channel is coverage and the hue is kept. Identical for grey
+            // masks; common and stage libraries keep the red-channel rule.
+            m.SetFloat("_MaskKeepsColour", e.mask && folder.StartsWith("CharacterEffects/") ? 1 : 0);
             m.SetFloat("_CameraOffset", e.cameraOffset);
             m.SetFloat("_AlphaClip", e.alphaClip);
+            if (HasSubUV(e)) m.SetVector("_SubUVGrid", new Vector4(e.subImages[0], e.subImages[1],
+                e.subImageInterpolation == "PSUVIM_Linear_Blend" ? 1 : 0, 1));
             if (e.scroll != null && e.scroll.Length >= 2) m.SetVector("_Scroll", new Vector4(e.scroll[0], e.scroll[1]));
             if (e.tiling != null && e.tiling.Length >= 2) m.SetVector("_Tiling", new Vector4(e.tiling[0], e.tiling[1]));
             m.SetFloat("_SrcBlend", (float)BlendMode.One);
@@ -119,11 +157,21 @@ namespace Versus.Remaster
         }
 
         static string Vec(float[] v) => v == null ? "" : string.Join(",", v);
+        // Older common/stage exports included grids without the interpolation/index contract.
+        // Keep their existing UV behavior until those libraries are separately re-exported.
+        internal static bool HasSubUV(CascadeEmitterData e) => !string.IsNullOrEmpty(e.subImageInterpolation)
+            && e.subImages != null && e.subImages.Length == 2
+            && e.subImages[0] > 0 && e.subImages[1] > 0 && e.subImages[0] * e.subImages[1] > 1;
+
+        /// <summary>A linear source colour (0..1) encoded so that Unity's sRGB decode of particle,
+        /// gradient, light and material colours gives it back. Without this every exported hue came out
+        /// over-saturated: the counter rings' (1, .33, .08) drew as (1, .09, .01), red instead of orange.</summary>
+        internal static Color Linear(Color c) => QualitySettings.activeColorSpace == ColorSpace.Linear ? c.gamma : c;
 
         Texture2D TextureFor(string name)
         {
             if (textures.TryGetValue(name, out var t)) return t;
-            t = Resources.Load<Texture2D>("HitEffects/Textures/" + name);
+            t = Resources.Load<Texture2D>(folder + "/Textures/" + name);
             textures[name] = t;
             return t;
         }
@@ -132,7 +180,7 @@ namespace Versus.Remaster
         {
             if (string.IsNullOrEmpty(name)) return null;
             if (meshes.TryGetValue(name, out var mesh)) return mesh;
-            var asset = Resources.Load<TextAsset>("HitEffects/Meshes/" + name);
+            var asset = Resources.Load<TextAsset>(folder + "/Meshes/" + name);
             if (asset)
             {
                 var d = JsonUtility.FromJson<CascadeMeshData>(asset.text);
@@ -166,6 +214,7 @@ namespace Versus.Remaster
             public Gradient gradient;
             public Color startScale = Color.white;
             public bool colorFromLife;
+            public Transform[] sourceBones;
         }
         readonly List<Emitter> emitters = new List<Emitter>();
         float time, scale = 1;
@@ -176,13 +225,36 @@ namespace Versus.Remaster
 
         public bool Finished { get; private set; }
 
-        internal void Begin(CascadeEffects effects, CascadeSystemData system, float effectScale, Transform[] boneList)
+        internal void Begin(CascadeEffects effects, CascadeSystemData system, float effectScale, Transform[] boneList, Transform sourceBoneOverride)
         {
             owner = effects; scale = effectScale; bones = boneList;
             foreach (var e in system.emitters)
             {
                 if (e.distortion) continue;
+                if (CascadeEffects.HasSubUV(e) && e.subImageInterpolation != "PSUVIM_Linear"
+                    && e.subImageInterpolation != "PSUVIM_Linear_Blend")
+                {
+                    Debug.LogWarning("Character effect " + system.name + "/" + e.name + " omitted: original atlas mode "
+                        + e.subImageInterpolation + " is not implemented.", this);
+                    continue;
+                }
                 var emitter = new Emitter { data = e };
+                // PM_CharacterBone's native BoneIndex parameter replaces SourceLocations[0].
+                // Manual previews keep the cooked named source; verified bone dispatch supplies it.
+                if (e.bones && sourceBoneOverride)
+                    emitter.sourceBones = new[] { sourceBoneOverride };
+                else if (e.bones && e.boneNames != null && e.boneNames.Length > 0)
+                {
+                    emitter.sourceBones = new Transform[e.boneNames.Length];
+                    for (int i = 0; i < e.boneNames.Length; i++)
+                    {
+                        if (bones != null) foreach (var bone in bones)
+                            if (bone && string.Equals(bone.name, e.boneNames[i], StringComparison.OrdinalIgnoreCase))
+                            { emitter.sourceBones[i] = bone; break; }
+                        if (!emitter.sourceBones[i]) Debug.LogWarning("Character effect " + e.name +
+                            " could not resolve original source bone " + e.boneNames[i] + "; that source will not emit.", this);
+                    }
+                }
                 if (e.kind != "light" && !(string.IsNullOrEmpty(e.texture) && e.hasLight)) emitter.system = Build(e, emitter);
                 if (emitter.system || e.hasLight) emitters.Add(emitter);
             }
@@ -244,7 +316,7 @@ namespace Versus.Remaster
             ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             var main = ps.main;
             main.playOnAwake = false; main.loop = false; main.duration = 1;
-            main.simulationSpace = ParticleSystemSimulationSpace.World;
+            main.simulationSpace = d.simulationLocal ? ParticleSystemSimulationSpace.Local : ParticleSystemSimulationSpace.World;
             main.startSize3D = true; main.startRotation3D = d.kind == "mesh";
             main.maxParticles = 1000;
             main.gravityModifier = 0;
@@ -316,21 +388,49 @@ namespace Versus.Remaster
                 renderer.lengthScale = 1; renderer.velocityScale = 0;
             }
             else renderer.renderMode = d.axisLock == "EPAL_Z" ? ParticleSystemRenderMode.HorizontalBillboard : ParticleSystemRenderMode.Billboard;
-            if (d.alphaClipLife != null && d.alphaClipLife.Length >= 4)
+            bool alphaCurve = d.alphaClipLife != null && d.alphaClipLife.Length >= 4;
+            bool subUV = CascadeEffects.HasSubUV(d);
+            if (alphaCurve || subUV)
             {
                 // The source's AlphaClip dynamic parameter over each particle's life, read by the shader
-                // from TEXCOORD0.z (Custom1.x packed after the UVs).
+                // from TEXCOORD0.z. Atlas frame indices use TEXCOORD0.w (Custom2.x), in source tile units.
                 var custom = ps.customData; custom.enabled = true;
                 custom.SetMode(ParticleSystemCustomData.Custom1, ParticleSystemCustomDataMode.Vector);
                 custom.SetVectorComponentCount(ParticleSystemCustomData.Custom1, 1);
-                custom.SetVector(ParticleSystemCustomData.Custom1, 0, new ParticleSystem.MinMaxCurve(1, Curve(d.alphaClipLife, 2, 1)));
-                renderer.SetActiveVertexStreams(new List<ParticleSystemVertexStream> {
+                custom.SetVector(ParticleSystemCustomData.Custom1, 0, alphaCurve
+                    ? new ParticleSystem.MinMaxCurve(1, Curve(d.alphaClipLife, 2, 1)) : new ParticleSystem.MinMaxCurve(0));
+                var streams = new List<ParticleSystemVertexStream> {
                     ParticleSystemVertexStream.Position, ParticleSystemVertexStream.Normal, ParticleSystemVertexStream.Color,
-                    ParticleSystemVertexStream.UV, ParticleSystemVertexStream.Custom1X });
+                    ParticleSystemVertexStream.UV, ParticleSystemVertexStream.Custom1X };
+                if (subUV)
+                {
+                    custom.SetMode(ParticleSystemCustomData.Custom2, ParticleSystemCustomDataMode.Vector);
+                    custom.SetVectorComponentCount(ParticleSystemCustomData.Custom2, 1);
+                    custom.SetVector(ParticleSystemCustomData.Custom2, 0,
+                        new ParticleSystem.MinMaxCurve(1, LinearCurve(d.subImageIndex)));
+                    streams.Add(ParticleSystemVertexStream.Custom2X);
+                }
+                renderer.SetActiveVertexStreams(streams);
             }
             // In edit mode (captures) a never-simulated system drops emitted particles; prime it instead.
             if (Application.isPlaying) ps.Play(); else ps.Simulate(0, false, true, false);
             return ps;
+        }
+
+        // Baked SubImageIndex samples interpolate linearly; smoothed tangents can overshoot a tile.
+        static AnimationCurve LinearCurve(float[] rows)
+        {
+            if (rows == null || rows.Length < 2) return AnimationCurve.Constant(0, 1, 0);
+            var keys = new Keyframe[rows.Length / 2];
+            for (int i = 0; i < keys.Length; i++)
+            {
+                float left = i > 0 && rows[2 * i] > rows[2 * i - 2]
+                    ? (rows[2 * i + 1] - rows[2 * i - 1]) / (rows[2 * i] - rows[2 * i - 2]) : 0;
+                float right = i + 1 < keys.Length && rows[2 * i + 2] > rows[2 * i]
+                    ? (rows[2 * i + 3] - rows[2 * i + 1]) / (rows[2 * i + 2] - rows[2 * i]) : 0;
+                keys[i] = new Keyframe(rows[2 * i], rows[2 * i + 1], left, right);
+            }
+            return new AnimationCurve(keys);
         }
 
         static AnimationCurve Curve(float[] rows, int stride, int column)
@@ -367,7 +467,7 @@ namespace Versus.Remaster
             {
                 int i = Mathf.RoundToInt(k * (rgb.Length - 1) / (float)Mathf.Max(1, colorKeys.Length - 1));
                 var c = rgb[i];
-                colorKeys[k] = new GradientColorKey(new Color(c.r / peak, c.g / peak, c.b / peak), times[i]);
+                colorKeys[k] = new GradientColorKey(CascadeEffects.Linear(new Color(c.r / peak, c.g / peak, c.b / peak)), times[i]);
                 alphaKeys[k] = new GradientAlphaKey(Mathf.Clamp01(c.a), times[i]);
             }
             var g = new Gradient(); g.SetKeys(colorKeys, alphaKeys);
@@ -432,14 +532,25 @@ namespace Versus.Remaster
                     velocity += spin * tilt * axis.normalized * Range(d.coneSpeed);
                 }
                 Vector3 world;
-                if (d.bones && bones != null && bones.Length > 0)
+                if (d.bones && e.sourceBones != null)
+                {
+                    int source = Random.Next(e.sourceBones.Length);
+                    var bone = e.sourceBones[source];
+                    if (!bone) continue;
+                    Vector3 sourceOffset = d.boneOffsets != null && d.boneOffsets.Length >= source * 3 + 3
+                        ? new Vector3(d.boneOffsets[source * 3], d.boneOffsets[source * 3 + 1], d.boneOffsets[source * 3 + 2]) : Vector3.zero;
+                    world = bone.position + bone.rotation * (sourceOffset * scale)
+                        + root.rotation * ((local + V(d.boneLocationOffset)) * scale);
+                }
+                else if (d.bones && bones != null && bones.Length > 0)
                 {
                     var bone = bones[Random.Next(bones.Length)];
                     world = (bone ? bone.position : origin) + root.rotation * (offset * scale);
                 }
                 else world = origin + root.rotation * (emitterRotation * local * scale);
-                p.position = world;
-                p.velocity = root.rotation * (emitterRotation * velocity * scale);
+                p.position = d.simulationLocal ? e.system.transform.InverseTransformPoint(world) : world;
+                var worldVelocity = root.rotation * (emitterRotation * velocity * scale);
+                p.velocity = d.simulationLocal ? e.system.transform.InverseTransformDirection(worldVelocity) : worldVelocity;
                 p.startLifetime = Mathf.Max(.02f, Range(d.life));
                 float s = Unit();
                 Vector3 size = d.sizeMin != null ? Lerp(d.sizeMin, d.sizeMax, s) : Vector3.one * .1f;
@@ -452,12 +563,13 @@ namespace Versus.Remaster
                                       Mathf.Lerp(d.colorMin[2], d.colorMax[2], c), Mathf.Lerp(d.colorMin[3], d.colorMax[3], c));
                     start = new Color(start.r * e.startScale.r, start.g * e.startScale.g, start.b * e.startScale.b, Mathf.Clamp01(start.a));
                 }
-                p.startColor = start;
+                p.startColor = CascadeEffects.Linear(start);
                 if (d.kind == "mesh")
                 {
                     var turns = d.meshRotationMin != null ? Lerp(d.meshRotationMin, d.meshRotationMax) : Vector3.zero;
                     // Cascade mesh rotation (roll X, pitch Y, yaw Z in turns) about Unity z, x, y.
                     var q = root.rotation * emitterRotation * Quaternion.Euler(turns.y * 360, turns.z * 360, turns.x * 360);
+                    if (d.simulationLocal) q = Quaternion.Inverse(e.system.transform.rotation) * q;
                     p.rotation3D = q.eulerAngles;
                     if (d.meshRotationRateMin != null)
                     {
@@ -486,7 +598,7 @@ namespace Versus.Remaster
             light.type = LightType.Point; light.shadows = LightShadows.None;
             var color = d.lightColor != null && d.lightColor.Length >= 3 ? new Color(d.lightColor[0], d.lightColor[1], d.lightColor[2]) : Color.white;
             float max = Mathf.Max(color.r, color.g, color.b, 1e-4f);
-            light.color = color / max;
+            light.color = CascadeEffects.Linear(color / max);
             float halfSize = d.sizeMax != null && d.sizeMax.Length > 0 ? d.sizeMax[0] * .5f : .25f;
             light.range = Mathf.Max(.5f, d.lightRadiusScale * halfSize * .25f) * scale;
             var hd = go.AddComponent<HDAdditionalLightData>();

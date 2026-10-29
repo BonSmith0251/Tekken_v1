@@ -120,9 +120,30 @@ namespace Versus.Remaster
                     distances[index]=Mathf.Max(distances[index],(reach+spread)*weight*weight);
                 }
             }
+            // Forearms, hands and fingers never drape: a glove sharing a shirt's cloth section (Bob's
+            // Default 1P, its wrist cords on forearm spring helpers) otherwise picked up the short-garment
+            // freedom and Cloth's skinning.
+            var weights=mesh.boneWeights;
+            for(int i=0;i<distances.Length;i++)
+            {
+                var bone=renderer.bones[weights[i].boneIndex0];
+                if(bone && System.Text.RegularExpressions.Regex.IsMatch(bone.name,@"ForeArm|Hand|Thumb|Index|Middle|Ring|Pinky|FingerBase"))distances[i]=0;
+            }
             if(!distances.Any(d=>d>.001f))return;
+            // Only triangles that can move go to the cloth renderer; fully pinned ones keep the rig's
+            // own skinning. Bob's gloves and wrist cords share his shirt's cloth section, and Unity
+            // Cloth's skinning (no non-uniformly scaled helpers) stretched them into spikes.
+            var moving=clothSections.ToDictionary(section=>section,section=>mesh.GetTriangles(section));
+            foreach(int section in clothSections)
+            {
+                var all=moving[section];var free=new List<int>();
+                for(int t=0;t<all.Length;t+=3)
+                    if(distances[all[t]]>.001f || distances[all[t+1]]>.001f || distances[all[t+2]]>.001f)free.AddRange(new[]{all[t],all[t+1],all[t+2]});
+                moving[section]=free.ToArray();
+            }
+            clothSections=clothSections.Where(section=>moving[section].Length>0).ToList();
             var cleanup=renderer.gameObject.AddComponent<XiaoyuGarmentMeshLifetime>();
-            renderer=SeparateGarment(renderer,clothSections,cleanup);
+            renderer=SeparateGarment(renderer,clothSections,moving,cleanup);
             var cloth=renderer.gameObject.AddComponent<Cloth>();
             pending.Add((cloth,vertices,distances));ApplyFreedom();
             cloth.useGravity=true;cloth.useTethers=true;
@@ -157,26 +178,34 @@ namespace Versus.Remaster
 
         // Unity Cloth skins every vertex of its renderer itself and does not support the rig's
         // non-uniformly scaled helper bones, so only the simulated sections move to their own renderer.
-        static SkinnedMeshRenderer SeparateGarment(SkinnedMeshRenderer renderer,List<int> clothSections,XiaoyuGarmentMeshLifetime cleanup)
+        static SkinnedMeshRenderer SeparateGarment(SkinnedMeshRenderer renderer,List<int> clothSections,Dictionary<int,int[]> moving,XiaoyuGarmentMeshLifetime cleanup)
         {
             var source=renderer.sharedMesh;var materials=renderer.sharedMaterials;
-            var kept=Enumerable.Range(0,source.subMeshCount).Where(i=>!clothSections.Contains(i)).ToList();
+            // What each section leaves on the body: everything for plain sections, the pinned rest for cloth ones.
+            var remaining=Enumerable.Range(0,source.subMeshCount).ToDictionary(i=>i,i=>
+            {
+                var all=source.GetTriangles(i);if(!clothSections.Contains(i))return all;
+                var free=new HashSet<(int,int,int)>();var m=moving[i];for(int t=0;t<m.Length;t+=3)free.Add((m[t],m[t+1],m[t+2]));
+                var rest=new List<int>();for(int t=0;t<all.Length;t+=3)if(!free.Contains((all[t],all[t+1],all[t+2])))rest.AddRange(new[]{all[t],all[t+1],all[t+2]});
+                return rest.ToArray();
+            });
+            var kept=Enumerable.Range(0,source.subMeshCount).Where(i=>remaining[i].Length>0).ToList();
             if(kept.Count==0)return renderer;
-            Mesh Subset(List<int> sections,string suffix)
+            Mesh Subset(List<int> sections,Func<int,int[]> triangles,string suffix)
             {
                 var subset=UnityEngine.Object.Instantiate(source);subset.name=source.name+suffix;
-                var triangles=sections.Select(source.GetTriangles).ToArray();
+                var lists=sections.Select(triangles).ToArray();
                 subset.subMeshCount=sections.Count;
-                for(int i=0;i<sections.Count;i++)subset.SetTriangles(triangles[i],i);
+                for(int i=0;i<sections.Count;i++)subset.SetTriangles(lists[i],i);
                 cleanup.meshes.Add(subset);return subset;
             }
             var node=new GameObject(renderer.name+" garment");node.transform.SetParent(renderer.transform.parent,false);
             node.transform.SetLocalPositionAndRotation(renderer.transform.localPosition,renderer.transform.localRotation);node.transform.localScale=renderer.transform.localScale;
             var garment=node.AddComponent<SkinnedMeshRenderer>();
-            garment.sharedMesh=Subset(clothSections," cloth");garment.bones=renderer.bones;garment.rootBone=renderer.rootBone;
+            garment.sharedMesh=Subset(clothSections,i=>moving[i]," cloth");garment.bones=renderer.bones;garment.rootBone=renderer.rootBone;
             garment.sharedMaterials=clothSections.Select(i=>materials[i]).ToArray();
             garment.updateWhenOffscreen=renderer.updateWhenOffscreen;garment.quality=renderer.quality;
-            renderer.sharedMesh=Subset(kept," body");renderer.sharedMaterials=kept.Select(i=>materials[i]).ToArray();
+            renderer.sharedMesh=Subset(kept,i=>remaining[i]," body");renderer.sharedMaterials=kept.Select(i=>materials[i]).ToArray();
             return garment;
         }
 

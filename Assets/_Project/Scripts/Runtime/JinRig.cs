@@ -51,12 +51,17 @@ namespace Versus.Remaster
             materials = allMaterials.ToArray(); baseColors = new Color[materials.Length];
             for (int i = 0; i < materials.Length; i++) baseColors[i] = materials[i].color;
         }
+        int shownCuts;
+
         Vector3 ShownDirection(FighterState f)
         {
             var target = new Vector3(f.dirX, 0, f.dirZ);
             var at = new Vector3(f.x, 0, f.z);
             // A new round or a staged cut places the fighter afresh: show its heading at once.
-            if (!hasShownDir || (at - shownAt).sqrMagnitude > .25f || target.sqrMagnitude < 1e-6f) shownDir = target;
+            // A heading cut (a body on the floor turned so its new pose continues the old) shows at once too.
+            bool cut = hasShownDir && f.headingCuts != shownCuts;
+            shownCuts = f.headingCuts;
+            if (!hasShownDir || cut || (at - shownAt).sqrMagnitude > .25f || target.sqrMagnitude < 1e-6f) shownDir = target;
             else
             {
                 // Ease the yaw about up only (a half turn must not tip the body through the vertical).
@@ -75,8 +80,12 @@ namespace Versus.Remaster
             transform.position = new Vector3(f.x, 0, f.z);
             // Command battles face the opponent in 3D; the prototype faces along x.
             // The carried turn (backturned stance) rotates the body about up, positive to its right.
+            int cutsBefore = shownCuts;
+            var before = transform.rotation;
             transform.rotation = f.move >= 0 ? Quaternion.LookRotation(ShownDirection(f)) * Quaternion.Euler(0, f.turn, 0)
                                              : Quaternion.Euler(0, f.facing > 0 ? 90 : -90, 0);
+            // The pose crossfading out of the old move keeps its place in the world across the cut.
+            if (actionMotion && f.move >= 0 && shownCuts != cutsBefore) actionMotion.HoldFadeAcrossTurn(before, transform.rotation);
             float action = 0;
             if (f.attack >= 0)
             {

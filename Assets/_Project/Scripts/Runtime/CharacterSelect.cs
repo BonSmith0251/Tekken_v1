@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Versus.Remaster
@@ -14,7 +15,8 @@ namespace Versus.Remaster
         // The imported, versus-ready fighters in slot order; null is the random (?) slot.
         static readonly (VersusGame.Fighter fighter, string code)?[] Roster = {
             (VersusGame.Fighter.Jin, "JIN"), (VersusGame.Fighter.Kazuya, "KAZ"), (VersusGame.Fighter.Xiaoyu, "XIA"), null,
-            (VersusGame.Fighter.Alisa, "ASA"), (VersusGame.Fighter.Katarina, "LTN") };
+            (VersusGame.Fighter.Alisa, "ASA"), (VersusGame.Fighter.Katarina, "LTN"), (VersusGame.Fighter.Lidia, "NSD"),
+            (VersusGame.Fighter.Bob, "BOB"), (VersusGame.Fighter.Leo, "LEO") };
 
         public static bool Chosen { get; private set; }
         public static VersusGame.Fighter PlayerOne { get; private set; }
@@ -66,8 +68,18 @@ namespace Versus.Remaster
 
         static Texture2D Load(string name) => Resources.Load<Texture2D>("CharacterSelect/" + name);
 
+        // Original sounds: the CharaSelect music track, the announcer naming each pick (syvo_name_*), and the
+        // common menu tones. Which tone the original plays for cursor / confirm / back, and SE_VS1 for the VS
+        // screen, are remaster choices (the SoundHolder preloads SE_ChrSel1/2 and SE_VS1-3; their use is native).
+        BattleSound sound;
+        static readonly Dictionary<string, string> SoundCodes = new Dictionary<string, string>
+            { { "JIN", "jin" }, { "KAZ", "kaz" }, { "XIA", "xia" }, { "ASA", "asa" }, { "LTN", "ltn" }, { "NSD", "nsd" }, { "BOB", "bob" }, { "LEO", "leo" } };
+
         void Awake()
         {
+            sound = BattleSound.Create(transform);
+            if (SoundSettings.Active.musicChoice != SoundSettings.MusicChoice.Off) BattleMusic.Instance.PlayTrack(BattleMusic.SelectTrack);
+            else BattleMusic.Instance.Stop();
             light = Load("Light"); flashLight = Load("FlashLight"); flareRed = Load("FlareRed"); flareBlue = Load("FlareBlue");
             randomNormal = Load("Random"); tag1 = Load("Tag1"); tag2 = Load("Tag2");
             slotNormal = Load("SlotNormal"); slotRed = Load("SlotRed"); slotBlue = Load("SlotBlue"); slotPurple = Load("SlotPurple");
@@ -94,6 +106,7 @@ namespace Versus.Remaster
                     Chosen = true;
                     // The VS screen covers the reload and the fighters' setup.
                     VersusLoadingScreen.Show(Roster[picked[0]].Value.code, Roster[picked[1]].Value.code);
+                    BattleMusic.Instance.Sting(sound.Clip("SE_VS1"), SoundSettings.Active.Effects);
                     ReloadScene();
                     enabled = false;
                 }
@@ -103,17 +116,19 @@ namespace Versus.Remaster
             {
                 if (locked[p])
                 {
-                    if (Pressed(Back[p])) locked[p] = false;
+                    if (Pressed(Back[p])) { locked[p] = false; sound.Play("SE_Cancel"); }
                     continue;
                 }
-                if (Pressed(Left[p])) cursor[p] = (cursor[p] + Roster.Length - 1) % Roster.Length;
-                if (Pressed(Right[p])) cursor[p] = (cursor[p] + 1) % Roster.Length;
+                if (Pressed(Left[p])) { cursor[p] = (cursor[p] + Roster.Length - 1) % Roster.Length; sound.Play("SE_Select", .7f); }
+                if (Pressed(Right[p])) { cursor[p] = (cursor[p] + 1) % Roster.Length; sound.Play("SE_Select", .7f); }
                 if (Pressed(Confirm[p]))
                 {
                     // The random slot resolves to a fighter on confirm.
                     int pick = cursor[p];
                     while (Roster[pick] == null) pick = random.Next(Roster.Length);
                     picked[p] = pick; locked[p] = true; lockTime[p] = time;
+                    sound.Play("SE_Decide");
+                    if (SoundCodes.TryGetValue(Roster[pick].Value.code, out var code)) sound.Announce(sound.NameCall(code));
                 }
             }
             if (locked[0] && locked[1]) doneTime = time;

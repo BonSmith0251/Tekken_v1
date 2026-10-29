@@ -59,6 +59,16 @@ namespace Versus.Remaster.Editor
             new WardrobeCharacter {code="ltn",costumeSource="Assets/_Project/Characters/Katarina/Source/Base",costumeMaterials="Assets/_Project/Characters/Katarina/Costumes/Materials",face="ltn_face.json",
                 wardrobeSource="Assets/_Project/Characters/Katarina/Source/Wardrobe",output="Assets/_Project/Characters/Katarina/Wardrobe",asset="Assets/_Project/Wardrobe/KatarinaWardrobe.asset",museum="Assets/_Project/Museum/Katarina.asset",
                 weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash"}},
+                    // Lidia (DLC); her importer welds triangle soup like Katarina's.
+            new WardrobeCharacter {code="nsd",costumeSource="Assets/_Project/Characters/Lidia/Source/Base",costumeMaterials="Assets/_Project/Characters/Lidia/Costumes/Materials",face="nsd_fac.json",
+                wardrobeSource="Assets/_Project/Characters/Lidia/Source/Wardrobe",output="Assets/_Project/Characters/Lidia/Wardrobe",asset="Assets/_Project/Wardrobe/LidiaWardrobe.asset",museum="Assets/_Project/Museum/Lidia.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash"}},
+                    new WardrobeCharacter {code="bob",costumeSource="Assets/_Project/Characters/Bob/Source/Base",costumeMaterials="Assets/_Project/Characters/Bob/Costumes/Materials",face="bob_fac.json",
+                wardrobeSource="Assets/_Project/Characters/Bob/Source/Wardrobe",output="Assets/_Project/Characters/Bob/Wardrobe",asset="Assets/_Project/Wardrobe/BobWardrobe.asset",museum="Assets/_Project/Museum/Bob.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash"}},
+            new WardrobeCharacter {code="leo",costumeSource="Assets/_Project/Characters/Leo/Source/Base",costumeMaterials="Assets/_Project/Characters/Leo/Costumes/Materials",face="leo_fac.json",
+                wardrobeSource="Assets/_Project/Characters/Leo/Source/Wardrobe",output="Assets/_Project/Characters/Leo/Wardrobe",asset="Assets/_Project/Wardrobe/LeoWardrobe.asset",museum="Assets/_Project/Museum/Leo.asset",
+                weldTriangleSoup=true,localAnonymousBones=true,doubleSided=new[]{"har_","cloth","eyelash"}},
         };
         [Serializable] class Bone { public string name; public int parent; public Vector3 position,scale; public Quaternion rotation; }
         [Serializable] class Section { public string material; public int[] triangles; }
@@ -72,7 +82,7 @@ namespace Versus.Remaster.Editor
         [Serializable] class Part { public Bone[] bones; public Vector3[] vertices; public Vector2[] uv; public Weight[] weights; public Section[] submeshes; }
         [Serializable] class UnityMaps { public string albedo,normal,surface,occlusion; public bool specular,cutout; public TintEntry tint; }
         // Written by prepare_jin_costume_materials.py for customizable materials; colors are flat linear RGB x4.
-        [Serializable] class TintEntry { public string @base,mask; public float[] colors; public bool[] slots; public bool baked,hair; }
+        [Serializable] class TintEntry { public string @base,mask; public float[] colors; public bool[] slots; public bool baked,hair,layered; }
         [Serializable] class MaterialEntry { public string name; public UnityMaps unity; }
         [Serializable] class PieceEntry { public string name,path; public string[] materials,cloth; }
         [Serializable] class CostumeEntry { public string name; public string[] pieces; }
@@ -112,7 +122,7 @@ namespace Versus.Remaster.Editor
             var ao=Texture(entry.unity.occlusion);if(ao){mat.SetTexture("_OcclusionMap",ao);mat.SetFloat("_OcclusionStrength",1);}
             if(entry.unity.cutout)
             {mat.SetFloat("_Mode",1);mat.SetFloat("_Cutoff",.25f);mat.EnableKeyword("_ALPHATEST_ON");mat.SetOverrideTag("RenderType","TransparentCutout");mat.renderQueue=(int)RenderQueue.AlphaTest;}
-            HdrpProjectSetup.ConvertMaterial(mat);if(HdrpProjectSetup.IsEyeShadow(mat))HdrpProjectSetup.MakeEyeShadowTransparent(mat);EditorUtility.SetDirty(mat);return mat;
+            HdrpProjectSetup.ConvertMaterial(mat);if(HdrpProjectSetup.IsEyeShadow(mat))HdrpProjectSetup.MakeEyeShadowTransparent(mat);if(HdrpProjectSetup.IsLashOrBrow(mat))HdrpProjectSetup.MakeLashOrBrowUnlit(mat);EditorUtility.SetDirty(mat);return mat;
         }
         // localPrefix: when set, anonymous DCC helpers (transformN) stay local to this piece under
         // that prefix, because two pieces can share a helper name with different parents.
@@ -199,6 +209,9 @@ namespace Versus.Remaster.Editor
         [MenuItem("Remaster/Rebuild Xiaoyu wardrobe")]static void ImportXiaoyuWardrobe()=>ImportWardrobe(Wardrobes[2]);
         [MenuItem("Remaster/Rebuild Alisa wardrobe")]static void ImportAlisaWardrobe()=>ImportWardrobe(Wardrobes[3]);
         [MenuItem("Remaster/Rebuild Katarina wardrobe")]static void ImportKatarinaWardrobe()=>ImportWardrobe(Wardrobes[4]);
+        [MenuItem("Remaster/Rebuild Lidia wardrobe")]static void ImportLidiaWardrobe()=>ImportWardrobe(Wardrobes[5]);
+        [MenuItem("Remaster/Rebuild Bob wardrobe")]static void ImportBobWardrobe()=>ImportWardrobe(Wardrobes[6]);
+        [MenuItem("Remaster/Rebuild Leo wardrobe")]static void ImportLeoWardrobe()=>ImportWardrobe(Wardrobes[7]);
         // One prefab per wearable piece; the wardrobe scene dresses the skeleton with them by bone name.
         public static void ImportWardrobe(WardrobeCharacter character)
         {
@@ -271,7 +284,7 @@ namespace Versus.Remaster.Editor
         }
         static CharacterWardrobe.Tint[] Tints(PieceEntry piece,Dictionary<string,MaterialEntry> materials)=>
             (piece.materials??new string[0]).Where(materials.ContainsKey).Select(name=>{var t=materials[name].unity.tint;return new CharacterWardrobe.Tint {
-                material=name,baseMap=TintTexture(t.@base,true),maskMap=string.IsNullOrEmpty(t.mask)?null:TintTexture(t.mask,false),slots=t.slots,baked=t.baked,hair=t.hair,
+                material=name,baseMap=TintTexture(t.@base,true),maskMap=string.IsNullOrEmpty(t.mask)?null:TintTexture(t.mask,false),slots=t.slots,baked=t.baked,hair=t.hair,layered=t.layered,
                 colors=Enumerable.Range(0,4).Select(i=>new Color(t.colors[i*3],t.colors[i*3+1],t.colors[i*3+2],1)).ToArray()};}).ToArray();
 
         // Refreshes only the recoloring data of an imported wardrobe (no mesh, material or prefab rebuild).

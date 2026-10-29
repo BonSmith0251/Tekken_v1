@@ -10,15 +10,10 @@ namespace Versus.Remaster.Editor
 {
     public static class ProjectSetup
     {
-        const string ScenePath = "Assets/_Project/Scenes/LocalVersus.unity";
-        [MenuItem("Remaster/Open local versus scene")]
+        // LocalVersus2 is the only versus scene; the first LocalVersus scene was retired on 2026-10-27.
+        const string ScenePath = "Assets/_Project/Scenes/LocalVersus2.unity";
+        [MenuItem("Remaster/Open LocalVersus2 scene")]
         public static void OpenScene() { if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) EditorSceneManager.OpenScene(ScenePath); }
-        [MenuItem("Remaster/Open LocalVersus2 entrance scene")]
-        public static void OpenLocalVersus2()
-        {
-            if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
-                EditorSceneManager.OpenScene("Assets/_Project/Scenes/LocalVersus2.unity");
-        }
         [MenuItem("Remaster/Set up project")]
         public static void Setup()
         {
@@ -141,13 +136,15 @@ namespace Versus.Remaster.Editor
             File.WriteAllText("Validation/build-result.json", "{\"succeeded\":true,\"errors\":" + report.summary.totalErrors + ",\"bytes\":" + report.summary.totalSize + "}");
         }
         [MenuItem("Remaster/Build LocalVersus2 Windows player")]
-        public static void BuildLocalVersus2()
+        public static void BuildLocalVersus2() => BuildLocalVersus2(null);
+        public static void BuildLocalVersus2(string folder)
         {
             const string entranceScene = "Assets/_Project/Scenes/LocalVersus2.unity";
             if (!File.Exists(entranceScene)) throw new FileNotFoundException("LocalVersus2 scene missing", entranceScene);
-            Directory.CreateDirectory("Builds/LocalVersus2");
+            folder = string.IsNullOrEmpty(folder) ? "Builds/LocalVersus2" : folder;
+            Directory.CreateDirectory(folder);
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
-                scenes = new[] { entranceScene }, locationPathName = "Builds/LocalVersus2/LocalVersus2.exe",
+                scenes = new[] { entranceScene }, locationPathName = Path.Combine(folder, "LocalVersus2.exe"),
                 target = BuildTarget.StandaloneWindows64, options = BuildOptions.None });
             if (report.summary.result != BuildResult.Succeeded)
                 throw new Exception("LocalVersus2 build failed: " + report.summary.result);

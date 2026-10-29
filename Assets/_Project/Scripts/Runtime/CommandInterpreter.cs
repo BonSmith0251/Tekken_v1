@@ -219,12 +219,47 @@ namespace Versus.Remaster
             // turned away; facing front again (or no hold) re-faces the opponent.
             if (carryTurn)
             {
+                move = OrientLying(move);
                 float body = BodyYaw;
                 if (holdFacing && Math.Abs(body) > BackturnedYaw) turn = body;
                 else { turn = 0; holdFacing = false; }
             }
             if (AuthoredBackturned(ClipYaws(Active, move))) turn = 0;
             Move = move; Frame = 0; hasPending = false; EnteredByInput = byInput;
+        }
+
+        // Lying states come in face-up / face-down twins (alias slots 4/8, 6/9, 7/10: dwDWN_00U /
+        // dwDWN_00D ...). A fall names one of them (sDm_ASI10LD ends face down but goes to dwDWN_00U),
+        // and the body takes the twin that lies the way it landed, instead of turning end over end.
+        static readonly int[][] LyingTwins = { new[] { 4, 8 }, new[] { 6, 9 }, new[] { 7, 10 } };
+        const int LyingLine = 60;   // cm of head-to-feet length along the facing that counts as lying
+
+        int OrientLying(int target)
+        {
+            var aliases = Active.aliases;
+            if (aliases == null) return target;
+            int slot = Array.IndexOf(aliases, target);
+            foreach (var twin in LyingTwins)
+            {
+                int other = slot == twin[0] ? twin[1] : slot == twin[1] ? twin[0] : -1;
+                if (other < 0 || other >= aliases.Length || aliases[other] < 0) continue;
+                int now = BodyLine(Active, Move, Frame), wanted = BodyLine(Active, target, 1), swapped = BodyLine(Active, aliases[other], 1);
+                if (Math.Abs(now) < LyingLine || Math.Abs(wanted) < LyingLine) return target;
+                return (now > 0) != (wanted > 0) && (now > 0) == (swapped > 0) ? aliases[other] : target;
+            }
+            return target;
+        }
+
+        /// <summary>Head minus feet along the facing (cm) on a frame of the move's clip, 0 without a body track.</summary>
+        static int BodyLine(CommandGraph g, int move, int frame)
+        {
+            if (move < 0 || move >= g.moves.Length) return 0;
+            int clip = g.moves[move].clip;
+            if (clip < 0 || clip >= g.clips.Length || g.bodyFields < 6) return 0;
+            var body = g.clips[clip].body;
+            if (body == null || body.Length < g.bodyFields) return 0;
+            int k = Math.Min(Math.Max(frame - 1, 0) / Math.Max(1, g.bodyStep), body.Length / g.bodyFields - 1) * g.bodyFields;
+            return body[k + 2] - body[k + 4];
         }
 
         int DirectionAt(int age) => historyDirection[(historyHead - age + HistoryLength) % HistoryLength];

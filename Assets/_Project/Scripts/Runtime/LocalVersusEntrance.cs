@@ -48,6 +48,9 @@ namespace Versus.Remaster
         readonly Transform[] twoShotBones;
         public int TwoStagingMove => twoStaging.moveId;
         public int OneStagingMove => oneStaging.moveId;
+        /// <summary>The entrance take's animation (e.g. jz_s00(DVD)), which names its voice line.</summary>
+        public string TwoStagingAnimation => twoStaging?.animation;
+        public string OneStagingAnimation => oneStaging?.animation;
         // Names kept for the editor flow validation written for Kazuya (P1) versus Jin (P2).
         public int JinStagingMove => TwoStagingMove;
         public int KazuyaStagingMove => OneStagingMove;

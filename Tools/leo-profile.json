@@ -1,0 +1,62 @@
+{
+  "characterCode": "leo",
+  "displayName": "Leo Kliesen",
+  "characterId": 17,
+  "characterIdNote": "Roster order.",
+  "animationPrefix": "un",
+  "moveNamePrefix": "Un_",
+  "stanceMoveId": 1436,
+  "stanceAnimation": "kmun_kamae(DVD)",
+  "introMoveId": 2171,
+  "moveset": "decrypted/tkdata/mothead/bin/leomot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/leorotsm.arc",
+  "archiveSha256": "0f96c8f855f9dae3af6b8be73cdaacd5467746831b97a87f00fb104b8d7a1cc1",
+  "targetRig": "Assets/_Project/Characters/Leo/Source/Base/target-rig.json",
+  "targetRigSha256": "0314cdd95d7e92ac93e2f1a94d833e8314b92aa80816d2702c82bce122b537cb",
+  "bodyBoneCount": 19,
+  "bindOrientationDeltaDegreesFromReference": 0.0,
+  "meshPositionBasis": "UE centimeters (x,y,z) -> Unity meters (-x,z,y)",
+  "facePiece": "leo_fac",
+  "costumes": [
+    "Default 1P",
+    "Classic",
+    "Musket",
+    "Nehru Suits",
+    "Special Forces",
+    "Uniform"
+  ],
+  "moveRecords": 2258,
+  "uniqueBodyClips": 1379,
+  "cancelBranches": 8407,
+  "entranceMoves": [
+    2250,
+    2251,
+    2252,
+    2253,
+    2254
+  ],
+  "victoryMoves": [
+    2255,
+    2256,
+    2257
+  ],
+  "commandGraph": {
+    "file": "Assets/_Project/Resources/CommandGraph/leo.json",
+    "tracesMatchingReference": "101/101",
+    "plainDemos": "72/75",
+    "failing": [
+      "Two \"During Jin Ji Du Li\" stance strings (the stance needs a setup)",
+      "One \"While rising\" move"
+    ]
+  },
+  "rageArtCameras": [
+    "leo_98",
+    "leo_99"
+  ],
+  "notes": [
+    "Select and VS art use the shared 7FR_DEF VS_ART set.",
+    "Special Forces: the offline seam check flagged the bdu|bdl waist (up to 1.6 cm); Unity renders show no gap, the belt covers it."
+  ],
+  "bakeNote": "Motion bake needs max_workers=1 when commit memory is short.",
+  "originalGameVisualComparison": false
+}

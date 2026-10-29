@@ -18,13 +18,14 @@ namespace Versus.Remaster.Editor
             try { Run(); } catch (Exception e) { Debug.LogException(e); File.WriteAllText("Temp/capture-eyes-error.txt", e.ToString()); }
         }
 
-        [MenuItem("Remaster/Rendering/Capture Jin eye close-ups")]
+        [MenuItem("Remaster/Rendering/Capture eye close-ups")]
         public static void Run()
         {
             Directory.CreateDirectory("Validation/Eyes");
             Capture("Assets/_Project/Characters/Jin/Costumes/Prefabs/Default_1P.prefab", "jin-museum");
             Capture("Assets/_Project/Resources/JinPlayable.prefab", "jin-versus");
             Capture("Assets/_Project/Characters/Xiaoyu/Costumes/Prefabs/Default_1P.prefab", "xia-default");
+            Capture("Assets/_Project/Characters/Lidia/Costumes/Prefabs/Default_1P.prefab", "lidia-default");
             Debug.Log("Eye close-ups written to Validation/Eyes");
         }
 

@@ -69,7 +69,7 @@ for ch,folder,rigpath in [('jin','jin_motion','Jin/Source/Base/SK_CH_jin_fac.jso
         (PROJECT/f'Assets/_Project/Resources/SecondaryMotion/{resource}.bytes').write_bytes(payload)
         entries.append(dict(character=ch,moveId=mid,animation=anim,kind=kind,frames=frames,camera=camera,secondary=resource,landingStitch=ch=='kaz' and mid==2326))
 # Xiaoyu's and Alisa's tracks are baked by their own prepare scripts; keep their catalog entries.
-for code,folder in [('xia','Xiaoyu'),('asa','Alisa'),('ltn','Katarina')]:
+for code,folder in [('xia','Xiaoyu'),('asa','Alisa'),('ltn','Katarina'),('nsd','Lidia'),('bob','Bob'),('leo','Leo')]:
     for e in json.loads((PROJECT/f'Assets/_Project/Characters/{folder}/Source/Base/staging.json').read_text())['entries']:
         entries.append(dict(character=code,moveId=e['moveId'],animation=e['animation'],kind=e['kind'],frames=e['frames'],camera=e['camera'],secondary=e['secondary'],landingStitch=False))
 output=PROJECT/'Assets/_Project/Resources/StagingCatalog.json';output.write_text(json.dumps(dict(entries=entries),indent=2)+'\n')

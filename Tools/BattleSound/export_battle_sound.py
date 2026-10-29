@@ -268,13 +268,21 @@ def main():
     # index 0x2000 + NN.
     wanted = {n for n in common if n in SHARED or n.startswith(SHARED_PREFIXES) or re.search(r"_item\d+$", n)}
     wanted |= {NAME_CALLS.get(c, "syvo_name_" + c) for c in FIGHTERS} | {FOOTSTEPS} | set(TONES) | used_system
-    voices = {}
+    voices, lines = {}, {}
     for code in FIGHTERS:
         listed = voice_list(src / CHARACTER.format(code))
         voices[code] = {r: [e for _, e in listed if role(e) == r] for r in ("attack", "damage", "death")}
         _, _, imports = package(src / CHARACTER.format(code))
         wanted |= set(imports)      # voices, entrance (xx_s##) and victory (xx_w##) lines; non-events match no hash
-        voices[code]["lines"] = sorted(n for n in set(imports) if LINE.match(n))
+        # Entrance / victory lines: the manager's Streams, plus the subtitle keys (Lidia's manager still names
+        # hers pl_s##, while her bank and subtitles use nd_s##).
+        said = subtitles(code, args.subtitles) if args.subtitles else {}
+        lines.update(said)
+        named = {n for n in imports if LINE.match(n)} | set(said)
+        # Every take number for those prefixes too (nd_s00 exists without a subtitle); unexported ones drop out.
+        named |= {"%s_%s%02d" % (n[:2], kind, k) for n in named for kind in "sw" for k in range(10)}
+        wanted |= named
+        voices[code]["lines"] = sorted(named)
 
     by_hash = {fnv1(n): n for n in wanted}
     banks = ["AkBankBattle", "AkBankFoot"] + ["AkBankVoice" + b for b in FIGHTERS.values()]
@@ -305,10 +313,6 @@ def main():
             voices[code][r] = [e for e in voices[code][r] if e in events]
         call = NAME_CALLS.get(code, "syvo_name_" + code)
         voices[code]["name"] = call if call in events else ""
-    lines = {}
-    if args.subtitles:
-        for code in FIGHTERS:
-            lines.update(subtitles(code, args.subtitles))
     # Arrays, for Unity's JsonUtility: events [{name, files}], voices [{code, attack, damage, death}],
     # tones / systemTones [event name or "" by index], lines [{name, text}].
     table = {"events": [{"name": n, "files": f} for n, f in sorted(events.items())],

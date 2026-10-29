@@ -11,7 +11,7 @@ namespace Versus.Remaster.Editor
         public static void Build()
         {
             AssetDatabase.Refresh();
-            var scene=EditorSceneManager.OpenScene("Assets/_Project/Scenes/LocalVersus.unity");
+            var scene=EditorSceneManager.OpenScene("Assets/_Project/Scenes/LocalVersus2.unity");
             var game=UnityEngine.Object.FindFirstObjectByType<VersusGame>();
             game.jinRetargetedStance=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Resources/JinRetargeted/Combat/idle.bytes");
             if(!game.jinRetargetedStance)throw new Exception("Missing runtime stance");

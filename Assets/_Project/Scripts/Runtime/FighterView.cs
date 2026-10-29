@@ -36,7 +36,9 @@ namespace Versus.Remaster
         {
             var go = GameObject.CreatePrimitive(type); go.name = name; go.transform.SetParent(parent, false);
             go.transform.localPosition = pos; go.transform.localScale = scale;
-            var collider = go.GetComponent<Collider>(); if (collider) Object.Destroy(collider);
+            var collider = go.GetComponent<Collider>();
+            // Edit-mode callers (env_scene captures) cannot use Destroy.
+            if (collider) { if (Application.isPlaying) Object.Destroy(collider); else Object.DestroyImmediate(collider); }
             go.GetComponent<Renderer>().sharedMaterial = material; return go.transform;
         }
         Transform Limb(string name, Vector3 position, float length, float width)

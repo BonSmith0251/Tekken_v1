@@ -52,10 +52,14 @@
   },
   "fallbacks": [
     "exp_* robot parts (chainsaws, wings, back boosters, beam chainsaw) are not imported; the game shows them during specific moves through ATH_* attachment bones.",
-    "Rage Art cameras use position/Euler tracks (descriptors 11,7,15,21,21,21) that FightCameraTrack does not play; her Rage Art uses the fight camera.",
     "No wardrobe yet: versus and staging dress her in the Default 1P preset and her hair has no springs.",
     "Combat clips apply body channels only; no per-attack finger/facial tracks and no combat hand resource.",
     "Eye_ADD and tear layers are dropped, as for the other fighters."
   ],
-  "originalGameVisualComparison": false
+  "originalGameVisualComparison": false,
+  "rageArtCameras": [
+    "asa_m0",
+    "asa_m1"
+  ],
+  "rageArtCameraNote": "Aa_RageArts01 requests look-at tracks 0/1 from the MOTA bank inside asamot.bin (2026-10-29); the position/Euler tracks found first belong to story moves."
 }

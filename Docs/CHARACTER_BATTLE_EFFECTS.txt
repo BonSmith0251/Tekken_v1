@@ -1,0 +1,74 @@
+CHARACTER BATTLE EFFECTS (LocalVersus / LocalVersus2): all five fighters
+
+Each fighter's own wired effect plays in versus alongside the common hit/guard/KO set (on in
+LocalVersus2, see BATTLE_EFFECTS.txt). Every fighter uses the same recovered native path: move property
+0x802E plays manager effect ID 0 on the acting fighter's own bone (VBN bone ID = property value),
+on that move frame, hit or whiff. Jin: JIN_BATTLE_EFFECTS.txt. Katarina: KATARINA_BATTLE_EFFECTS.txt.
+
+  Fighter   Effect ID 0 system        Rows / moves  Look (preview captures)
+  Jin       PS_EF_CHR_JIN_NOMAL       143 / 51      blue electric spark, atlas on the bone
+  Kazuya    PS_EF_CHR_KAZ_nomal       235 / 68      small purple-white lightning crackle (0.04 s meshes + 0.5 s atlas on the bone)
+  Xiaoyu    PS_EF_xia00_ss_nomal      134 / 45      orange-gold lens-flare burst
+  Alisa     PS_EF_CHR_ASA_nomal       153 / 54      pink/green swirl discs, ray, pink and green rings
+  Katarina  PS_EF_CHR_LTN_nomal       123 / 41      green-white flash, green-cyan circle lines
+
+  38 moves per fighter are the shared item moves (Co_I*, Wi_IFire) that need customization items.
+  Reachable rows by movelist command (from the demo traces):
+    Kazuya  EWGF f,n,d,d/f+2 (6: R_Arm); Lightning (Screw) Uppercut b+1+4 / B+1+4 (8 Hip, 15 L_Arm, 20 L_Hand;
+            the screw version also 28/35/40); Demon Slayer 1,2,2 (19 R_Hand, 25 R_Arm); 10 Hit Combos;
+            Devil Transformation in Rage u/b+1+2 (1/10/20/30/40)
+    Xiaoyu  Thunder Strike, Hypnotist 2+3 (28 R_ForeArm, 43 R_Hand, 58 L_Hand)
+    Alisa   Rocket Punch d/b 1,2; Double Rocket Punch b,B+1+4 and Wire Clipper (Boot 1+2) (1 R_Arm, 10 R_UpLeg,
+            20 R_Foot); Hang-Up b+2+3 (1 L_Foot, 15 R_Leg, 30 R_UpLeg, 45 R_Arm)
+  Other managers' IDs (Kazuya beam/devil change 2/80/81/100/114, Alisa thrusters/shock cones/bomb/punch
+  10/103-113/120) are bound in the packages but started by a native path not recovered; not wired.
+
+Regenerate one fighter (<code> kaz|xia|asa|ltn, <Name> Kazuya|Xiaoyu|Alisa|Katarina; workspace root, then project):
+  python %USERPROFILE%/.codex/skills/tekken-character-battle-effects/scripts/inspect_character_effects.py --workspace . --character <code> --out Artifacts/BattleEffects/<Name>Skill/v1 --extract --include-unbound
+  python Tools/CharacterEffects/export_character_effects.py --evidence ../../Artifacts/BattleEffects/<Name>Skill/v1 --t7extract ../../t7extract --out Assets/_Project/Resources/CharacterEffects/<code>
+  python Tools/CharacterEffects/dispatch_character_manifest.py --workspace ../.. --character <code> --manager-evidence ../../Artifacts/BattleEffects/<Name>Skill/v1 --out ../../Artifacts/BattleEffects/<Name>UnityUpdate
+  python Tools/CharacterEffects/dispatch_bone_attachment.py --workspace ../.. --out ../../Artifacts/BattleEffects/<Name>UnityUpdate/dispatch-bone-attachment-proof.json
+  python Tools/CharacterEffects/install_native_dispatch.py --character <code> --evidence ../../Artifacts/BattleEffects/<Name>UnityUpdate --project .
+  Re-exporting resets registry.json; always run the installer after it.
+
+Exporter changes for these fighters: manager bindings outside the character folder (Kazuya's
+story-mode beam ground hit, Alisa's Common bomb and punch) are listed in registry.json
+unconvertedBindings instead of stopping the export; a package name found twice in the closure
+(Alisa's PS_EF_asa_punch_korea, in her folder and in Common) is left out of the short-name index
+and still fails if anything references it.
+
+Rendering adaptation: alpha-less colour textures (T_EF_COL_*) in character libraries take coverage
+from their brightest channel and keep their hue (CascadeParticle _MaskKeepsColour, set by
+CascadeEffects for CharacterEffects/ folders). Grey masks render exactly as before; the common and
+stage libraries are unchanged. Before this, Alisa's swirl drew as white discs and Kazuya's
+lightning as faint white specks. The original material's opacity rule is not recovered.
+
+Checks:
+  run.sh CharacterEffects with CHARACTER_EFFECTS_CODE=<code>: every manifest row forced in both slots.
+    Xiaoyu 268/268, Alisa 306/306, Katarina 246/246, Jin 286/286, Kazuya 460/470: Kz_Transform2,
+    forced out of context, cancels into Kz_sKAM00_ on frame 1, so its rows 10-40 are never reached
+    there (graph behaviour, not a dispatch fault).
+    CPU vs Xiaoyu, 3 matches: Kazuya 12 rows, Alisa 8, Katarina 4, Jin 18, Xiaoyu (mirror) 0.
+  Temp/capture-character-action-effects (menu Remaster > Rendering > Capture Kazuya, Xiaoyu, Alisa
+    and Katarina action effects): Validation/<Name>Effects, both facings, 2 and 6 frames after each
+    trigger; fails if the dispatch count differs from the original rows. Kazuya.asset and Jin.asset
+    store no character code, so the capture passes it (CharacterEffectsShowcase.characterCode).
+
+Not established: comparison with original-game captures of these moves; the unique1..4 and item
+systems have no recovered trigger; hit-driven character effects are not wired.
+
+Showcase scene (renamed 27 Oct 2026 from JinEffectsShowcase.unity, same asset GUID):
+  Assets/_Project/Scenes/CharacterEffectsShowcase.unity, component CharacterEffectsShowcase (was JinEffectsShowcase),
+  editor CharacterEffectsShowcaseSetup. Menu Remaster > Rendering > Play character effects showcase
+  (flags Temp/setup-, open-, play-character-effects-showcase). Its fighters list holds all five with
+  their effect code and original effect actions as buttons:
+    Jin       Jz_shoryu24, Jz_dslpS
+    Kazuya    Kz_shoryu_S, Kz_kazup00, Kz_rprp01E
+    Xiaoyu    Fu_torp00sp
+    Alisa     Aa_steWP, Aa_atamasuper
+    Katarina  Ln_1lrk, Jn_SUPER_0, Ln_Lnage_n
+  Left/Right or the fighter buttons switch fighter; Up/Down browse the fighter's extracted systems.
+  "Create character effects showcase" refills the list on an existing scene. Check: Temp/check-character-effects-showcase
+  (Remaster > Validation > Character effects showcase switching) switches through all five twice in one
+  showcase, requires each to dispatch its first action's original rows and leave one dispatcher, and
+  renders Validation/CharacterEffectsShowcase/<code>-<move>.png.

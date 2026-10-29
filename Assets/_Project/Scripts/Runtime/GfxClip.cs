@@ -6,11 +6,11 @@ namespace Versus.Remaster
 {
     // Replays timelines decoded from a Scaleform movie (Resources/BattleHud/GameMessage.json, written by
     // Tools/BattleHud/export_game_message.py) with IMGUI, as Flash plays them: nested sprites, per-frame
-    // matrices, colour transforms, visibility, blend modes, blur and letter-shaped masks; named clips hold on
-    // their last frame (their frame scripts call stop()), the rest loop, keeping instances that persist.
+    // matrices, colour transforms, visibility, blend modes, blur, letter masks and recovered playback scripts.
+    // Clips stop/play/goto at the original script frames; looping keeps instances that persist.
     // The fly-ins are Flash IDE motion tweens exported as ActionScript (fl.motion MotionBase +
     // AnimatorFactory3D): each named target gets Animator3D.setTime3D's transform per frame,
-    // Initial * T(initialPosition) * T(x,y,z) * Rz * Ry * Rx * ScaleSkew, projected with the movie's
+    // T(initialPosition) * T(x,y,z) * Rz * Ry * Rx * pivot/scale/skew, projected with the movie's
     // perspective (60 degree field of view, centre 960,540). Layers draw through GfxLayer.shader.
     public sealed class GfxClip
     {
@@ -18,7 +18,9 @@ namespace Versus.Remaster
         [Serializable] class Entry { public string name; public int sprite; }
         [Serializable] class Image { public int id, w, h; public string name; }
         [Serializable] class Label { public string name; public int frame; }
-        [Serializable] class Sprite { public int id, frames; public bool stops; public Label[] labels; public Frame[] frameEvents; }
+        [Serializable] class Sprite { public int id, frames; public Label[] labels; public Frame[] frameEvents; public FrameScript[] scripts; }
+        [Serializable] class FrameScript { public int frame; public PlaybackAction[] actions; }
+        [Serializable] class PlaybackAction { public string target, command, label; }
         [Serializable] class Frame { public int frame; public Event[] events; }
         [Serializable] class Event
         {
@@ -33,7 +35,7 @@ namespace Versus.Remaster
         {
             public int spanStart, duration;
             public bool is3D, hasInitialPosition, hasMatrix3D;
-            public float[] initialPosition, matrix3D;
+            public float[] initialPosition, matrix3D, pivot;
             public Prop[] props;
             [NonSerialized] public Dictionary<string, float[]> byName;
         }
@@ -50,8 +52,6 @@ namespace Versus.Remaster
             // PlaceObject3 HasVisible: most layers are placed invisible and revealed on their frame.
             public bool timelineHidden;
             public Matrix4x4 matrix = Matrix4x4.identity;
-            // The placement when the instance appeared: Animator3D's _initialMatrixOfTarget.
-            public Matrix4x4? initial;
             public Vector4 mul = Vector4.one, add = Vector4.zero;
             // Set by a motion tween each frame; they override the timeline's values.
             public Matrix4x4? motion;
@@ -63,6 +63,9 @@ namespace Versus.Remaster
         }
 
         const int AdditiveBlend = 8;
+#if UNITY_EDITOR
+        public static Action<string> TraceLayer;
+#endif
         static Data data;
         static readonly Dictionary<int, Sprite> sprites = new Dictionary<int, Sprite>();
         static readonly Dictionary<int, Image> images = new Dictionary<int, Image>();
@@ -140,6 +143,7 @@ namespace Versus.Remaster
             {
                 state = new Instance { sprite = root, matrix = Matrix4x4.Translate(new Vector3(data.stageWidth / 2, data.stageHeight / 2, 0)) };
                 Rebuild(state, startFrame); ticks = 0;
+                state.held = false; // the native call is gotoAndPlay(startLabel)
                 foreach (var command in script) command(state);
             }
             for (; ticks < target; ticks++) Step(state, true);
@@ -184,9 +188,33 @@ namespace Versus.Remaster
         static void Rebuild(Instance i, int frame)
         {
             i.children.Clear();
-            for (int f = 0; f <= frame; f++) Apply(i, f);
+            i.held = false;
+            Apply(i, 0);
+            i.frame = 0; Animate(i); RunFrameScript(i);
+            for (int f = 1; f <= frame; f++) Apply(i, f);
             i.frame = frame;
             Animate(i);
+            if (frame != 0) RunFrameScript(i);
+        }
+
+        static void RunFrameScript(Instance i)
+        {
+            foreach (var scriptFrame in i.sprite.scripts ?? Array.Empty<FrameScript>())
+            {
+                if (scriptFrame.frame != i.frame) continue;
+                foreach (var action in scriptFrame.actions)
+                {
+                    var target = string.IsNullOrEmpty(action.target) ? i : Find(i, action.target);
+                    if (target?.sprite == null) throw new InvalidOperationException("Missing announcement script target: " + action.target);
+                    if (action.command == "gotoAndPlay" || action.command == "gotoAndStop")
+                    {
+                        var label = Array.Find(target.sprite.labels, l => l.name == action.label);
+                        if (label == null) throw new InvalidOperationException("Missing announcement label: " + action.label);
+                        Rebuild(target, label.frame);
+                    }
+                    target.held = action.command == "stop" || action.command == "gotoAndStop";
+                }
+            }
         }
 
         // Flash looping back to frame 1 keeps instances still at the same depth with the same symbol (their
@@ -208,6 +236,7 @@ namespace Versus.Remaster
             }
             i.frame = 0;
             Animate(i);
+            RunFrameScript(i);
         }
 
         void Step(Instance i, bool isRoot)
@@ -218,12 +247,13 @@ namespace Versus.Remaster
             int next = i.frame + 1;
             if (isRoot ? next > stopFrame : next >= i.sprite.frames)
             {
-                if (isRoot || i.sprite.stops) return; // holds on its last frame
+                if (isRoot) return;
                 Loop(i); return;
             }
             i.frame = next;
             Apply(i, next);
             Animate(i);
+            RunFrameScript(i);
         }
 
         static void Apply(Instance i, int frame)
@@ -238,7 +268,7 @@ namespace Versus.Remaster
                     var created = new Instance { character = e.character >= 0 ? e.character : child?.character ?? -1, name = !string.IsNullOrEmpty(e.name) ? e.name : child?.name };
                     if (child != null && e.move)
                     {
-                        created.matrix = child.matrix; created.initial = child.initial; created.mul = child.mul; created.add = child.add;
+                        created.matrix = child.matrix; created.mul = child.mul; created.add = child.add;
                         created.blend = child.blend; created.clipDepth = child.clipDepth; created.blur = child.blur; created.timelineHidden = child.timelineHidden;
                     }
                     sprites.TryGetValue(created.character, out created.sprite);
@@ -251,7 +281,6 @@ namespace Versus.Remaster
                     mat.m00 = m[0]; mat.m10 = m[1]; mat.m01 = m[2]; mat.m11 = m[3];
                     mat.m03 = child.scriptX ?? m[4]; mat.m13 = child.scriptY ?? m[5];
                     child.matrix = mat;
-                    if (!child.initial.HasValue) child.initial = mat;
                 }
                 if (!string.IsNullOrEmpty(e.name)) child.name = e.name;
                 if (e.hasColor) { child.mul = new Vector4(e.mul[0], e.mul[1], e.mul[2], e.mul[3]); child.add = new Vector4(e.add[0], e.add[1], e.add[2], e.add[3]) / 255f; }
@@ -271,6 +300,10 @@ namespace Versus.Remaster
                 Instance target = null;
                 foreach (var child in i.children.Values) if (child.name == motion.target) { target = child; break; }
                 if (target == null) continue;
+                // A new span can omit colour/filter properties and use its timeline placement.
+                // Do not carry the preceding hidden span's alpha=0 into READY/FIGHT/ROUND.
+                target.motion = null; target.motionHidden = null; target.motionBlend = null;
+                target.motionMul = null; target.motionAdd = null; target.motionBlur = null;
                 Segment segment = null;
                 foreach (var s in motion.segments) if (i.frame >= s.spanStart && i.frame < s.spanStart + s.duration) { segment = s; break; }
                 if (segment == null) continue;
@@ -289,7 +322,11 @@ namespace Versus.Remaster
                 }
                 if (Has("blurX") || Has("blurY")) target.motionBlur = new Vector2(Value("blurX", 0), Value("blurY", 0));
 
-                var initial = target.initial ?? target.matrix;
+                // These constructors pass a motion ARRAY to AnimatorFactory3D. The original
+                // Animator3D.setTargetState only captures the placement when !motionArray;
+                // array matrices/initialPosition already contain the complete local transform.
+                // Multiplying the placement again displaced the red shadows and exit copies.
+                var initial = Matrix4x4.identity;
                 if (segment.hasMatrix3D)
                 {
                     // A segment holding a Matrix3D keyframe: matrix3D.clone().append(initial). rawData is column-major.
@@ -308,7 +345,12 @@ namespace Versus.Remaster
                     var scaleSkew = Matrix4x4.identity;
                     scaleSkew.m00 = sx * Mathf.Cos(ky); scaleSkew.m10 = sx * Mathf.Sin(ky);
                     scaleSkew.m01 = -sy * Mathf.Sin(kx); scaleSkew.m11 = sy * Mathf.Cos(kx);
-                    target.motion = initial * m * scaleSkew;
+                    var pivot = segment.pivot;
+                    var p = pivot != null && pivot.Length == 3 ? new Vector3(pivot[0], pivot[1], pivot[2]) : Vector3.zero;
+                    // setTime3D subtracts the rotation pivot; getScaleSkewMatrix scales about
+                    // its XY pivot. Their adjacent XY translations cancel, leaving this form.
+                    target.motion = initial * m * Matrix4x4.Translate(new Vector3(0, 0, -p.z)) * scaleSkew *
+                        Matrix4x4.Translate(new Vector3(-p.x, -p.y, 0));
                 }
                 else target.motion = null;
             }
@@ -367,10 +409,10 @@ namespace Versus.Remaster
                 var shader = Resources.Load<Shader>("BattleHud/GfxLayer");
                 if (!shader) return null;
                 normalLayer = new Material(shader) { hideFlags = HideFlags.HideAndDontSave };
-                normalLayer.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                normalLayer.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.One);
                 normalLayer.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
                 additiveLayer = new Material(shader) { hideFlags = HideFlags.HideAndDontSave };
-                additiveLayer.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                additiveLayer.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.One);
                 additiveLayer.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.One);
             }
             return additive ? additiveLayer : normalLayer;
@@ -410,6 +452,9 @@ namespace Versus.Remaster
                 if (!texture) continue;
                 var material = Layer(add8);
                 var full = baseMatrix * world;
+#if UNITY_EDITOR
+                TraceLayer?.Invoke(image.name + " " + full.ToString("F3") + " color " + cm + " add " + ca + " blur " + b);
+#endif
                 if (!material)
                 {
                     if (!full.ValidTRS()) continue; // GUI.matrix rejects the 3D tween's perspective

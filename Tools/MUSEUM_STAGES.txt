@@ -1,18 +1,103 @@
-Museum stages
+Original stages and env_scene
 
-Use the STAGE buttons above the playback controls to cycle through the gallery
-and 34 layouts extracted from the installed game's geometry maps. Layouts retain
-their native stg identifiers, including substage variants. Character, costume,
-action, playback speed and scrub position stay selected when changing stages.
+34 layouts are extracted from the installed game's geometry maps (stgNN_geom.umap)
+plus their _reload and _demo sublevels, which hold breakable floors, fences and
+fixed pieces such as stg08a's ring. Destructible and skeletal meshes are drawn in
+their rest pose. Layouts keep their native stg identifiers, including substage variants. Each mesh keeps
+its normals, tangents, UVs and material sections. Every original material instance
+becomes an HDRP/Lit material (Assets/_Project/Stages/Materials) with its base colour,
+normal and emissive maps exported as PNG to Assets/_Project/Stages/Textures.
+Components' OverrideMaterials are applied. Each stage is placed on the original's
+GAME_START marker (first floor) and turned so the marker's direction looks along +Z,
+the versus camera's view; the floor under the marker (glass and water included) is
+put at the fighters' feet. Stage prefabs are in
+Assets/_Project/Resources/MuseumStages.
 
-This is an original geometry preview with neutral materials. Original textures,
-animated scenery, particles, crowds, stage lighting and breakable-stage gameplay
-are not included in this pass. Four unresolved/unsupported mesh references are
-listed in Assets/_Project/Stages/Source/report.json.
+Stage particle systems (brazier fires, falling sand, dust, mist...) play on loop from
+Resources/StageEffects through CascadeEffects: StageEffectMarker objects in the prefab
+mark where each sits, and StageEnvironment starts the looping ones in Play (one-shot
+systems are break bursts the remaster doesn't trigger). Light shafts (BP_LightBeam god
+rays) are rebuilt as crossed additive quads (Resources/StageEffects/LightShaft.shader)
+from their dynamic material's width, length, brightness, fade distance and mask. Meshes attached to capsule or billboard
+components (stg02/26 rocks and waterfalls, god rays) are placed under those parents.
 
-Regenerate source geometry:
-  C:\Python311\python.exe Tools/import_museum_stages.py
-Then run Versus.Remaster.Editor.CharacterMuseumSetup.Build in Unity.
+Original stage lighting: the exporter also reads _light/_lightstatic and records each
+light (type, intensity, colour, radius, cone, falloff, channel, mobility), the sky light
+(its cubemap, saved as Stages/Lighting/<name>.t7sky), the height fog, the stage's
+unbound post-process volume and its WindDirectionalSource. Blueprint lights take their
+values from the blueprint template. The importer puts real HDRP lights on the light
+nodes (LC_CHARA_BOTH lights only light fighters) and builds Stages/Lighting/<stg>_Lighting
+.asset (fixed exposure EV 0, ACES, HDRI or gradient sky, height fog, bloom, saturation,
+vignette, AO, indirect intensity). StageLighting on the prefab turns that on and the
+scene's Render Settings rig off while the stage is shown (StageEnvironment.Spawn/Despawn).
 
-Run CharacterMuseum.exe --museum-stage-smoke to visit every layout and save
-StageValidation/stages.json and a screenshot per stage beside the executable.
+Foliage wind: StageWind sways ivy, vines, palms, leaves and plants from the stage's
+wind source (hanging ivy most at its free ends, plants at their tips, plus a small
+flutter), on the CPU within a 120k-vertex budget nearest the fighters. 16 stages have
+foliage; Temp/verify-stage-wind writes Validation/Stages/wind.json (offsets in metres).
+
+Lighting approximations (set by eye): baked-only (static) lights stand in as shadowless
+realtime lights (nearest 96, lumens x0.25 capped at 2000, and together at most 6 lux at the
+fighters: stg18 packs 666 bake lights, ~52 lux; stg13 ~180; stg90 ~77; Validation/Stages/
+baked-lights.json); suns above 20 lux are outliers and get a typical 8 lux (stg18's is 200); sky-light intensity is capped at 1.5; sky reflections at 35% because
+the original's reflection captures aren't converted; wind strength is capped at 0.5.
+Not converted: lightmaps, reflection captures, light functions, flicker/pulse animation.
+
+Approximations: soft particles (depth fade) are drawn at 30% opacity, the flame shape
+mask's orientation is assumed (tip up), and light shafts use 40% of their brightness
+against this scene's dimmer lighting. By request, stg02/stg26's jungle mist
+(PS_EF_STG02_Mist, HDR red-orange in the data) is tinted pale green-white
+(TINT_OVERRIDES in Tools/StageEffects/export_stage_effects.py).
+
+Not converted: shader graphs (layer blends, vertex-colour mixes, water, panners),
+baked lightmaps, reflection captures, animated scenery, crowds, particle modules
+the decoder lists under "limitations" in Resources/StageEffects/report.json, and
+breakable-stage gameplay. Materials that still have no texture are listed, with the
+reason, under "untexturedMaterials" in Assets/_Project/Stages/Source/report.json.
+
+Stage scenes (editing and lightmap baking): Assets/_Project/Scenes/Stages/<stg>.unity, one per
+stage, built by StageSceneSetup. Each holds a linked instance of the stage prefab (re-imports
+update it) placed on its match start, the stage's sky/fog/post volume (<stg>/Volume.asset) with
+its static lighting sky, every light the original only baked switched to Unity Baked mode (suns
+Mixed), a 676-probe light-probe grid and a baked reflection probe over the fight area, a camera
+on the match start and LightingSettings (<stg>/Lighting.lighting: GPU progressive, 2 texels/m,
+2048 maps, non-directional, AO; bounce tuned: indirect x2.5, albedo boost 1.5, 4 bounces, suns'
+indirect x2, 4x texel density within 30 m of the match start). A tuned stg01 bake took 9 minutes
+and 280 MB. Opaque and cut-out surfaces contribute to the bake; transparent
+cards, helper surfaces and sky domes don't; foliage, small props and meshes without a lightmap
+UV take light probes. Lightmap UVs are Unreal's own (channel 1) where valid, else unwrapped.
+Fly navigation: each stage scene has a "Fly Navigator" (StageNavigator). Press Play and fly the
+scene camera anywhere, through walls and over the roof (no collision): WASD move, Q/E down/up,
+Shift faster, Ctrl slower, right-drag look, scroll changes speed, R back to the start view,
+H hide help.
+To bake: open one stage scene on its own (File > Open Scene) and use Remaster > Stages > Bake
+open stage scene (or Lighting > Generate Lighting); it refuses while other scenes are open.
+The scenes are not in Build Settings; versus and env_scene still use the prefabs, so baked
+lighting doesn't reach them yet. Lightmaps take disk space (D: had 13 GB free on 2026-10-26).
+
+Choosing environments: open Assets/_Project/Scenes/env_scene.unity and press Play.
+Alisa and Jin stand on the previewed stage. Click a name to preview it, tick the ones
+versus may use, then Save selection (Ctrl+S). The choice is stored in
+Assets/_Project/Resources/EnvironmentSelection.asset (in a player build, in
+persistentDataPath/environment-selection.json). LocalVersus and LocalVersus2 play
+each match on a random ticked environment; with none ticked, or only "Remaster arena",
+they use the generated arena. The museum no longer has a STAGE control.
+
+Regenerate (the editor can stay open):
+  python Tools/import_museum_stages.py            (all stages; or list stg names)
+  python Tools/StageEffects/export_stage_effects.py   (particle systems the stages use)
+  create Temp/import-stages                       (MuseumStageImporter.Import)
+  create Temp/create-env-scene                    (rebuild env_scene)
+  create Temp/verify-stage-wind                  (foliage sway offsets; stage names per line)
+  create Temp/create-stage-scenes                (Scenes/Stages/<stg>.unity; stage names per
+                                                   line, "force" rebuilds existing scenes)
+  create Temp/fix-lightmap-uvs                    (unwrap meshes missing lightmap UVs)
+  create Temp/bake-stage-scene                    (bake the one open stage scene)
+  create Temp/add-stage-navigator                 (add/rename the fly navigator in existing scenes)
+  create Temp/retune-open-stage                   (apply the bounce/texel tuning to the open scene)
+  create Temp/capture-open-stage                  (render the open stage scene; lines
+                                                   "label yaw pitch dist [baked-only]")
+  create Temp/capture-stages                      (renders to Validation/Stages; one
+                                                   stage name per line, or a default set;
+                                                   "stg01 view <yaw> <pitch> <dist> <label>"
+                                                   adds one stage-only view)

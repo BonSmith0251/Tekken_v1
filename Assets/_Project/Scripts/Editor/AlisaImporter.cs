@@ -55,6 +55,7 @@ namespace Versus.Remaster.Editor
             // The lip is an alpha overlay on the face skin like Xiaoyu's (prepare_alisa_materials.py
             // gives it her lip opacity mask); opaque, it covered Alisa's lips with a flat pink patch.
             if(HdrpProjectSetup.IsEyeShadow(material) || entry.name.EndsWith("_lip"))HdrpProjectSetup.MakeEyeShadowTransparent(material);
+            if(HdrpProjectSetup.IsLashOrBrow(material))HdrpProjectSetup.MakeLashOrBrowUnlit(material);
             EditorUtility.SetDirty(material);return material;
         }
         // Same rule as Xiaoyu's importer: share corners only in sections stored as unshared

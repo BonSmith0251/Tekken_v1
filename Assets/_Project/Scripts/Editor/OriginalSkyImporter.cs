@@ -16,8 +16,9 @@ namespace Versus.Remaster.Editor
             using var reader = new BinaryReader(gzip);
             if (new string(reader.ReadChars(4)) != "T7SK") throw new InvalidDataException("Invalid original sky header");
             int size = reader.ReadInt32();
-            if (size != 1024) throw new InvalidDataException("Unexpected sky resolution");
-            var cube = new Cubemap(size, TextureFormat.RGBAHalf, true) { name = "Original stg29 HDR sky" };
+            // stg29's full sky is 1024; stage sky-light cubemaps (Tools/import_museum_stages.py) are 128.
+            if (size < 8 || size > 4096 || (size & (size - 1)) != 0) throw new InvalidDataException("Unexpected sky resolution");
+            var cube = new Cubemap(size, TextureFormat.RGBAHalf, true) { name = System.IO.Path.GetFileNameWithoutExtension(context.assetPath) };
             for (int face = 0; face < 6; face++)
             {
                 byte[] pixels = reader.ReadBytes(size * size * 8);

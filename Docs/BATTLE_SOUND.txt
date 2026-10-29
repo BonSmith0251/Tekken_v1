@@ -9,6 +9,17 @@ sounds.json, moves_<code>.json); Tools/BattleSound/export_battle_music.py -> Res
 Players: Scripts/Runtime/BattleSound.cs (sounds, per scene), BattleMusic.cs (music, survives scene reloads).
 Validation: Temp/validate-battle-sound (Scripts/Editor/BattleSoundValidation.cs) -> Validation/BattleSound/validation.json.
 
+Settings scene: Assets/_Project/Scenes/sound_settings.unity (Remaster > Sound > Open sound_settings scene; rebuilt by
+Temp/create-sound-settings-scene, Scripts/Editor/SoundSettingsSetup.cs). Press Play to:
+- set Master / Music / Effects / Voices / Announcer volumes (heard at once);
+- choose the match music: each stage's own track (original), one track for every match (USE in the list), or off;
+- switch the final-round arrangement and the line subtitles on or off;
+- play every music track (Normal / Final) and every sound: announcer, battle table, system tones, menu tones,
+  and each fighter's name call, shouts, cries and entrance / victory lines with their subtitles.
+SAVE writes Resources/SoundSettings.asset (Scripts/Runtime/SoundSettings.cs; a player build keeps
+persistentDataPath/sound-settings.json); REVERT drops unsaved changes; DEFAULTS restores the defaults (not saved).
+BattleSound (effects / voices / announcer channels) and BattleMusic read SoundSettings.Active.
+
 Regenerate (from the workspace root; <src>, <wav>, <bgm>, <ogg> = scratch folders; P = this project):
   cd t7extract
   python -m t7extract unpack ../TEKKEN.7 "*/WwiseAudio/Windows/AkBankBattle.bnk" "*/WwiseAudio/Windows/AkBankFoot.bnk"
@@ -49,6 +60,8 @@ What comes from the original data
   games' T1..TT2 jukebox) and then on FinalRound (Normal / Final). Each stage plays its own track and changes to the
   Final arrangement with the final-round call; the select screen plays CharaSelect. stg21/stg22 have one arrangement.
 - Select screen: the announcer names each pick (syvo_name_*).
+- Entrance / victory line names: the manager's Streams plus the subtitle keys and their take numbers (Lidia's manager
+  still names hers pl_s##; Alisa's aa_s02 and Bob's fa_s02/fa_w02 are only found this way).
 
 Remaster choices (the original decides these in native code)
 - Clean hits whose attack lists no impact: RES_BANK_PCH_WK02 / MD01 / SG01 (punch) or KCK_WK01 / LT01 / SG01 (kick)

@@ -17,6 +17,8 @@ namespace Versus.Remaster
         StagingAction selected;
         float frame;
         public bool Active => selected!=null;
+        /// <summary>The selected take's animation (e.g. jz_w00_n(DVD)), which names its voice line.</summary>
+        public string Animation => selected?.animation;
         public bool Complete => Active && frame>=selected.frames-1;
         public VictoryStaging(Transform actor,FighterActionMotion motion,MuseumCharacter character,string key)
         {
@@ -32,6 +34,26 @@ namespace Versus.Remaster
             }
         }
         public void Begin(Func<StagingAction,bool> allowed=null,int preferred=-1){selected=StagingCatalog.Select(key,character,"victory",allowed,preferred);frame=0;}
+        // The take's root travel per frame as (forward, left) metres in the body frame, the same
+        // remap FighterActionMotion applies to presentation root motion (clip -x forward, +y left).
+        public Vector2[] Travel()
+        {
+            if(!Active)return new Vector2[0];
+            var action=character.actions.FirstOrDefault(a=>a.moveId==selected.moveId);
+            byte[] data=action?.motion?action.motion.bytes:null;
+            if(data==null || data.Length<16 || System.Text.Encoding.ASCII.GetString(data,0,4)!="JRT1")return new Vector2[0];
+            int frames=BitConverter.ToInt32(data,4),count=BitConverter.ToInt32(data,8);
+            int stride=(3+count*4)*4;
+            if(data.Length<16L+frames*(long)stride)return new Vector2[0];
+            float x0=BitConverter.ToSingle(data,16),y0=BitConverter.ToSingle(data,20);
+            var travel=new Vector2[frames];
+            for(int f=0;f<frames;f++)
+            {
+                int o=16+f*stride;
+                travel[f]=new Vector2(-(BitConverter.ToSingle(data,o)-x0),BitConverter.ToSingle(data,o+4)-y0);
+            }
+            return travel;
+        }
         public void Advance(float delta){if(Active)frame=Mathf.Min(frame+Mathf.Clamp(delta,0,1f/15f)*60,selected.frames-1);}
         public void Prepare()
         {

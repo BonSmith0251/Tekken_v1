@@ -44,58 +44,14 @@ namespace Versus.Remaster
         EntranceCameraLens actionLens;
         bool useOriginalCamera;
         Vector3 headFaceAxis=Vector3.forward;
-        GameObject galleryFloor,galleryPedestal,stageModel;
+        GameObject galleryFloor,galleryPedestal;
         StagingRenderSettings renderSettings;
-        string[] stageNames;
-        int stageIndex;
-        void SelectStage(int index)
-        {
-            stageIndex=index;
-            if(stageModel){stageModel.SetActive(false);Destroy(stageModel);}
-            galleryFloor.SetActive(index==0);galleryPedestal.SetActive(index==0);
-            if(index>0)
-            {
-                stageModel=Instantiate(Resources.Load<GameObject>("MuseumStages/"+stageNames[index-1]),transform);
-                float closest=20,floorHeight=0;
-                // Original maps use different world elevations. Align the nearest
-                // walkable surface at the fight origin with the character's feet.
-                foreach(var filter in stageModel.GetComponentsInChildren<MeshFilter>())
-                {
-                    var bounds=filter.GetComponent<Renderer>().bounds;
-                    if(bounds.min.x>0 || bounds.max.x<0 || bounds.min.z>0 || bounds.max.z<0)continue;
-                    var collider=filter.gameObject.AddComponent<MeshCollider>();collider.sharedMesh=filter.sharedMesh;
-                    Physics.SyncTransforms();
-                    if(collider.Raycast(new Ray(new Vector3(0,20,0),Vector3.down),out var hit,40) && hit.normal.y>.4f && Mathf.Abs(hit.point.y)<closest)
-                    {closest=Mathf.Abs(hit.point.y);floorHeight=hit.point.y;}
-                    Destroy(collider);
-                }
-                stageModel.transform.position-=Vector3.up*floorHeight;
-                cameraRig.farClipPlane=2000;
-            }
-            else cameraRig.farClipPlane=100;
-            Resources.UnloadUnusedAssets();
-        }
         void Start()
         {
             try { CreateGallery();SelectCharacter(0); }
             catch(Exception ex){error=ex.Message;Debug.LogException(ex);}
             if(Array.IndexOf(Environment.GetCommandLineArgs(),"--museum-smoke")>=0)
             {Application.runInBackground=true;Invoke(nameof(Smoke),2);}
-            if(Array.IndexOf(Environment.GetCommandLineArgs(),"--museum-stage-smoke")>=0)
-            {Application.runInBackground=true;StartCoroutine(StageSmoke());}
-        }
-        System.Collections.IEnumerator StageSmoke()
-        {
-            yield return null;
-            string dir=Path.GetFullPath(Path.Combine(Application.dataPath,"..","StageValidation"));Directory.CreateDirectory(dir);
-            for(int i=1;i<=stageNames.Length;i++)
-            {
-                SelectStage(i);yield return null;
-                if(!stageModel || stageModel.GetComponentsInChildren<MeshRenderer>().Length==0){Application.Quit(1);yield break;}
-                LateUpdate();yield return new WaitForEndOfFrame();Capture(Path.Combine(dir,stageNames[i-1]+".png"),800,600);
-                yield return Resources.UnloadUnusedAssets();
-            }
-            SelectStage(0);File.WriteAllText(Path.Combine(dir,"stages.json"),"{\"passed\":true,\"stages\":"+stageNames.Length+"}");Application.Quit(0);
         }
         void CreateGallery()
         {
@@ -108,8 +64,6 @@ namespace Versus.Remaster
             platform.GetComponent<Renderer>().material=mat;
             var floor=GameObject.CreatePrimitive(PrimitiveType.Plane);floor.transform.SetParent(transform);floor.transform.position=Vector3.down*.21f;floor.GetComponent<Renderer>().material=mat;
             galleryFloor=floor;
-            var stageList=Resources.Load<TextAsset>("MuseumStages/StageNames");
-            stageNames=stageList?stageList.text.Split(new[]{'\n','\r'},StringSplitOptions.RemoveEmptyEntries).OrderBy(x=>x).ToArray():new string[0];
             var clarity=new GameObject("Museum preview clarity").AddComponent<UnityEngine.Rendering.Volume>();clarity.transform.SetParent(transform);
             clarity.isGlobal=true;clarity.priority=100;clarity.sharedProfile=ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
             clarity.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.MotionBlur>().intensity.Override(0);
@@ -312,12 +266,6 @@ namespace Versus.Remaster
                 GUILayout.EndScrollView();GUILayout.EndArea();
             }
             GUI.Label(new Rect(345,553,850,25),"Right-drag to orbit  •  Scroll to zoom");
-            if(stageNames!=null && stageNames.Length>0)
-            {
-                if(GUI.Button(new Rect(345,505,40,30),"<"))SelectStage((stageIndex+stageNames.Length)%(stageNames.Length+1));
-                if(GUI.Button(new Rect(390,505,400,30),"STAGE: "+(stageIndex==0?"Museum gallery":stageNames[stageIndex-1])+"  >"))SelectStage((stageIndex+1)%(stageNames.Length+1));
-                if(stageIndex>0)GUI.Label(new Rect(345,535,850,20),"Original stage geometry preview — materials and effects pending");
-            }
             if(GUI.Button(new Rect(345,600,100,30),Playing?"Pause":"Play"))Playing=!Playing;
             if(GUI.Button(new Rect(455,600,75,30),"Restart"))SetFrame(0);
             if(GUI.Button(new Rect(540,600,45,30),"<")){Playing=false;SetFrame(Mathf.Floor(Frame)-1);}

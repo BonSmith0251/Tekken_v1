@@ -41,11 +41,21 @@ namespace Versus.Remaster
                 int hair=selected.FindIndex(p=>string.Equals(p.piece,head.dependencyBase,StringComparison.OrdinalIgnoreCase));
                 if(hair>=0)prefabs[hair]=head.dependency;
             }
-            var names=new HashSet<string>(wardrobe.slots.SelectMany(s=>s.pieces).SelectMany(p=>new[]{p.piece,p.dependency?p.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name:null}.Concat(p.replaces??new string[0])).Where(n=>n!=null),StringComparer.OrdinalIgnoreCase);
+            var names=new HashSet<string>(wardrobe.slots.SelectMany(s=>s.pieces).SelectMany(p=>new[]{p.piece,p.dependency?p.dependency.GetComponentInChildren<SkinnedMeshRenderer>(true).name:p.dependencyRenderer}.Concat(p.replaces??new string[0])).Where(n=>!string.IsNullOrEmpty(n)),StringComparer.OrdinalIgnoreCase);
+            // A player build packages only saved pieces. A piece without a prefab that the model
+            // already wears (a required slot with nothing saved) stays on the model as it is.
+            var worn=new HashSet<string>(model.GetComponentsInChildren<SkinnedMeshRenderer>(true).Select(r=>PieceName(r.name)),StringComparer.OrdinalIgnoreCase);
+            for(int i=0;i<prefabs.Count;i++)
+            {
+                if(prefabs[i])continue;
+                if(!worn.Contains(selected[i].piece))throw new InvalidOperationException("Wardrobe piece "+selected[i].name+" was not packaged into this build.");
+                names.Remove(selected[i].piece);
+                foreach(var replaced in selected[i].replaces??new string[0])names.Remove(replaced);
+            }
             foreach(var renderer in model.GetComponentsInChildren<SkinnedMeshRenderer>(true))
                 if(names.Contains(PieceName(renderer.name))){renderer.gameObject.SetActive(false);Discard(renderer.gameObject);}
             var animated=new HashSet<string>(wardrobe.character.boneNames??new string[0],StringComparer.OrdinalIgnoreCase);
-            foreach(var prefab in prefabs)Attach(model,prefab,animated);
+            foreach(var prefab in prefabs.Where(p=>p))Attach(model,prefab,animated);
         }
 
         // Rest poses are per mesh in the source: a helper bone shared by name can rest differently in

@@ -22,7 +22,6 @@ namespace Versus.Remaster.Editor
             ("Assets/_Project/Scenes/staging_test.unity", 0),
             ("Assets/_Project/Scenes/CharacterMuseum.unity", 0),
             ("Assets/_Project/Scenes/Wardrobe.unity", 0),
-            ("Assets/_Project/Scenes/LocalVersus.unity", StagingRenderSettings.VersusYaw),
             ("Assets/_Project/Scenes/LocalVersus2.unity", StagingRenderSettings.VersusYaw),
         };
 

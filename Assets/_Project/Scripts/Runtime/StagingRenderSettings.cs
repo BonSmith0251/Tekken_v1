@@ -15,6 +15,16 @@ namespace Versus.Remaster
         public Color background = new Color(.025f, .035f, .055f);
         public Color floor = new Color(.12f, .16f, .21f);
 
+        [Header("Antialiasing")]
+        [Tooltip("SMAA is the established default. TAA is smoother on hair and thin edges but can ghost on fast motion and camera cuts.")]
+        public HDAdditionalCameraData.AntialiasingMode antialiasing = HDAdditionalCameraData.AntialiasingMode.SubpixelMorphologicalAntiAliasing;
+        public HDAdditionalCameraData.SMAAQualityLevel smaaQuality = HDAdditionalCameraData.SMAAQualityLevel.High;
+        public HDAdditionalCameraData.TAAQualityLevel taaQuality = HDAdditionalCameraData.TAAQualityLevel.Medium;
+        [Range(0, 2)] public float taaSharpen = .5f;
+        [Tooltip("Higher reduces shimmer on specular highlights at the cost of more blur.")]
+        [Range(0, 1)] public float taaAntiFlicker = .5f;
+        [Range(0, 1)] public float taaHistorySharpening = .35f;
+
         // Versus cameras look along +Z, the staging and museum cameras along -Z; turning the rig
         // keeps the key and fill on the same sides of the frame.
         public const float VersusYaw = 180;
@@ -73,7 +83,14 @@ namespace Versus.Remaster
         {
             RenderSettings.ambientLight = ambientLight;
             camera.backgroundColor = background;
-            if (camera.TryGetComponent<HDAdditionalCameraData>(out var cameraData)) cameraData.backgroundColorHDR = background;
+            if (!camera.TryGetComponent<HDAdditionalCameraData>(out var cameraData)) cameraData = camera.gameObject.AddComponent<HDAdditionalCameraData>();
+            cameraData.backgroundColorHDR = background;
+            cameraData.antialiasing = antialiasing;
+            cameraData.SMAAQuality = smaaQuality;
+            cameraData.TAAQuality = taaQuality;
+            cameraData.taaSharpenStrength = taaSharpen;
+            cameraData.taaAntiFlicker = taaAntiFlicker;
+            cameraData.taaHistorySharpening = taaHistorySharpening;
             if (floorRenderer) floorRenderer.sharedMaterial.color = floor;
         }
     }

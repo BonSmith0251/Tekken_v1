@@ -1,0 +1,45 @@
+KATARINA BATTLE EFFECTS (LocalVersus / LocalVersus2)
+
+Katarina (ltn) uses the same recovered native path as Jin (see JIN_BATTLE_EFFECTS.txt):
+move property 0x802E plays character effect ID 0 on the acting fighter's own bone, the
+bone ID being the property value. BP_LtnEffectManager binds ID 0 to PS_EF_CHR_LTN_nomal.
+The native case reads no character code, so nothing new had to be inferred; her moveset,
+VBN bone table and manager binding were read from the original files.
+
+What plays:
+  123 original rows in 41 moves (ltnmot.bin, verified row by row against the command graph).
+  38 of those moves are the shared item moves Co_I* (and Wi_IFire), each R_Arm/Hip/L_Leg
+  at frames 8/18/28 (Co_IStunRod: R_Hand/L_Arm/R_Leg). They need customization items, so a
+  normal versus match never reaches them. The rows a match can reach:
+    Ln_1lrk     frames 10/20/30/40  L_Hand, Spine1, L_Leg, L_Foot
+    Jn_SUPER_0  frames 1/14/27/40   L_Foot, R_Leg, Hip, L_Hand
+    Ln_Lnage_n  frame 90            L_Foot   (throw follow-up, reached from ThrmvLB2_00 etc.)
+  Rows play on whiffs too; the effect is move-timed, not hit-timed.
+
+  PS_EF_CHR_LTN_nomal: 8 world-space emitters (impact circle, centre flashes, circle-line mesh,
+  glows, core line); no PM_CharacterBone module and no atlas, so it spawns at the bone point
+  (+0.1 m up) facing the actor, and stays where it spawned.
+
+Regenerate (game workspace root, then project root; stop Play first):
+  python %USERPROFILE%/.codex/skills/tekken-character-battle-effects/scripts/inspect_character_effects.py --workspace . --character ltn --out Artifacts/BattleEffects/KatarinaSkill/v1 --extract --include-unbound
+  python Tools/CharacterEffects/export_character_effects.py --evidence ../../Artifacts/BattleEffects/KatarinaSkill/v1 --t7extract ../../t7extract --out Assets/_Project/Resources/CharacterEffects/ltn
+  python Tools/CharacterEffects/dispatch_character_manifest.py --workspace ../.. --character ltn --manager-evidence ../../Artifacts/BattleEffects/KatarinaSkill/v1 --out ../../Artifacts/BattleEffects/KatarinaUnityUpdate
+  python Tools/CharacterEffects/dispatch_bone_attachment.py --workspace ../.. --out ../../Artifacts/BattleEffects/KatarinaUnityUpdate/dispatch-bone-attachment-proof.json
+  python Tools/CharacterEffects/install_native_dispatch.py --character ltn --evidence ../../Artifacts/BattleEffects/KatarinaUnityUpdate --project .
+dispatch_character_manifest.py is the general form of dispatch_jin_manifest.py: it also reads
+the moveset and VBN from tkdata.bin (checking the decrypted copies) and writes the VBN bone map.
+install_native_dispatch.py takes --character (default jin; Jin's output is unchanged).
+
+Checks:
+  Headless: ~/.claude/skills/tekken-versus-battle/harness/run.sh CharacterEffects
+    forces every manifest move in both player slots: 246/246 rows raised once on their frame
+    and bone; CPU vs Xiaoyu, 3 matches: 4 rows (all Ln_1lrk).
+  Editor: Temp/capture-katarina-action-effects (menu Remaster > Rendering > Capture Katarina
+    original action effects) renders Ln_1lrk, Jn_SUPER_0 and Ln_Lnage_n 2 and 6 frames after
+    each trigger, both facings, into Validation/KatarinaEffects, and fails if the dispatch
+    count differs from the original rows.
+  The showcase scene (CharacterEffectsShowcase) includes Katarina; see CHARACTER_BATTLE_EFFECTS.txt.
+
+Not established: comparison with an original-game capture of these moves; the other 7 folder
+systems (unique1..4, Bazooka*, PatoLight) have no recovered trigger and are preview-only;
+collision-driven character effects are not wired (as for Jin).

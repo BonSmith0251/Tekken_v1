@@ -19,8 +19,22 @@ namespace Versus.Remaster
         // Original getups from the lying loops: stand in place (up), roll forward/back, or a getup kick.
         static readonly int[,] Getups = { { 8, 0 }, { 8, 0 }, { 6, 0 }, { 4, 0 }, { 5, 8 }, { 5, 4 } };
 
-        public CpuPlayer(CommandGraph graph, int seed) { this.graph = graph; random = new Random(seed); }
-        public void Clear() { steps = null; pause = 0; guardedMove = -1; guarding = false; }
+        // The movelist's Rage Art demo (CommandGraph.rageArt): its original input, replayed on request.
+        readonly CommandGraph.Demo rageArt;
+        bool rageArtRequested;
+        /// <summary>True while a requested Rage Art waits for range, and while its input is replayed.</summary>
+        public bool RageArtPending => rageArtRequested;
+        public bool RageArtReplaying { get; private set; }
+        public bool CanRageArt => rageArt != null;
+
+        public CpuPlayer(CommandGraph graph, int seed)
+        {
+            this.graph = graph; random = new Random(seed);
+            if (graph.rageArt != null && graph.rageArt.steps != null && graph.rageArt.steps.Length >= 3) rageArt = graph.rageArt;
+        }
+        public void Clear() { steps = null; pause = 0; guardedMove = -1; guarding = false; rageArtRequested = false; RageArtReplaying = false; }
+        /// <summary>Walk into range, then replay the original Rage Art input (needs Rage in the model).</summary>
+        public void RequestRageArt() { if (rageArt != null) rageArtRequested = true; }
 
         public PlayerCommand Next(FighterState self, FighterState foe)
         {
@@ -46,11 +60,22 @@ namespace Versus.Remaster
                 int relative = steps[step * 3], buttons = steps[step * 3 + 1];
                 command.stick = ToScreen(relative, self.facing); command.buttons = buttons;
                 if (++stepFrame >= steps[step * 3 + 2]) { step++; stepFrame = 0; }
-                if (step >= stepCount) { steps = null; pause = 20 + random.Next(40); }
+                if (step >= stepCount) { steps = null; pause = 20 + random.Next(40); RageArtReplaying = false; }
                 return command;
             }
             if (pause > 0) pause--;
             float gap = Math.Abs(foe.x - self.x);
+            if (rageArtRequested)
+            {
+                // Close in (no guarding meanwhile), then start the Rage Art input once recovered.
+                if (gap > 1.3f) { command.stick = ToScreen(forward, self.facing); return command; }
+                if (self.stun == 0 && !self.attacking && !self.reacting && !self.downed)
+                {
+                    Start(rageArt);
+                    rageArtRequested = false; RageArtReplaying = true;
+                }
+                return command;
+            }
             // Decide once per incoming attack whether to hold back (or down-back against lows) through it.
             if (!foe.attacking) guardedMove = -1;
             else if (foe.move != guardedMove) { guardedMove = foe.move; guarding = gap < 2f && random.Next(5) < 2; }
@@ -61,17 +86,62 @@ namespace Versus.Remaster
             else if (pause == 0 && graph.demos != null && graph.demos.Length > 0 && self.stun == 0)
             {
                 var demo = graph.demos[random.Next(graph.demos.Length)];
-                if (demo.steps != null && demo.steps.Length >= 3)
-                {
-                    // Skip the demo's trailing neutral recording time; the fight continues meanwhile.
-                    stepCount = demo.steps.Length / 3;
-                    while (stepCount > 1 && demo.steps[(stepCount - 1) * 3] == 5 && demo.steps[(stepCount - 1) * 3 + 1] == 0) stepCount--;
-                    steps = demo.steps; step = stepFrame = 0;
-                }
+                if (demo.steps != null && demo.steps.Length >= 3) Start(demo);
             }
             return command;
         }
 
+        void Start(CommandGraph.Demo demo)
+        {
+            // Skip the demo's trailing neutral recording time; the fight continues meanwhile.
+            stepCount = demo.steps.Length / 3;
+            while (stepCount > 1 && demo.steps[(stepCount - 1) * 3] == 5 && demo.steps[(stepCount - 1) * 3 + 1] == 0) stepCount--;
+            steps = demo.steps; step = stepFrame = 0;
+        }
+
         static int ToScreen(int relative, int facing) => BattleModel.Relative(relative, facing);
+    }
+
+    /// <summary>
+    /// One press of the Rage Art button for one auto player (VersusGame). Grants Rage in the model while
+    /// the CPU closes in and replays its original Rage Art input, retries the input if no Rage Art move
+    /// came out (hit or still recovering when it played), and releases the grant once a Rage Art move
+    /// has started and ended, the round leaves Fight, or 10 s pass. A demonstration aid, not original.
+    /// </summary>
+    public sealed class RageArtTrigger
+    {
+        const int RetryTicks = 30, TimeoutTicks = 600;
+        int ticks = -1, idle;
+        bool seen;
+        public bool Active => ticks >= 0;
+        /// <summary>Set when a Rage Art move started for this press (for reports and tests).</summary>
+        public bool SawRageArt => seen;
+
+        public void Press(BattleModel battle, int player, CpuPlayer cpu)
+        {
+            if (Active || !cpu.CanRageArt || battle.phase != MatchPhase.Fight) return;
+            ticks = 0; idle = 0; seen = false;
+            battle.rageGranted[player] = true;
+            cpu.RequestRageArt();
+        }
+
+        /// <summary>Call after each battle tick.</summary>
+        public void Tick(BattleModel battle, int player, CpuPlayer cpu)
+        {
+            if (!Active) return;
+            ticks++;
+            var it = battle.interpreters[player];
+            bool inRageArt = it != null && it.ActedGraph != null && it.ActedGraph.moves[it.ActedMove].name.Contains("RageArts");
+            if (inRageArt) seen = true;
+            bool waiting = cpu.RageArtPending || cpu.RageArtReplaying;
+            if (battle.phase != MatchPhase.Fight || ticks > TimeoutTicks || (seen && !inRageArt && !waiting)) { Release(battle, player); return; }
+            if (!seen && !waiting && !inRageArt && ++idle > RetryTicks) { idle = 0; cpu.RequestRageArt(); }
+        }
+
+        public void Release(BattleModel battle, int player)
+        {
+            ticks = -1; idle = 0;
+            if (battle != null) battle.rageGranted[player] = false;
+        }
     }
 }

@@ -26,9 +26,42 @@ namespace Versus.Remaster.Editor
             Directory.CreateDirectory("Validation/HitEffects");
             foreach (var role in new[] { CascadeEffects.Hit, CascadeEffects.Counter, CascadeEffects.Guard, CascadeEffects.Pierce,
                                          CascadeEffects.Blast, CascadeEffects.Smoke, CascadeEffects.Rage, CascadeEffects.RageAura,
-                                         CascadeEffects.PunishMid, CascadeEffects.KO })
+                                         CascadeEffects.PunishMid, CascadeEffects.KO, CascadeEffects.Armour })
                 Capture(role);
+            CaptureRageRim();
             Debug.Log("Battle effect captures written to Validation/HitEffects");
+        }
+
+        // The Rage rim glow on Jin, facing the camera three-quarters and side-on: RageRim-front/side.png.
+        static void CaptureRageRim()
+        {
+            var preview = new PreviewRenderUtility();
+            try
+            {
+                var jin = preview.InstantiatePrefabInScene(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/_Project/Resources/JinPlayable.prefab"));
+                var rim = RageRim.Create(jin);
+                rim.On = true;
+                foreach (var t in jin.GetComponentsInChildren<Transform>(true)) t.gameObject.layer = jin.layer;
+                Shader.SetGlobalFloat("_CascadeExposure", 1 / 1.2f);
+                foreach (var (name, yaw) in new[] { ("front", 150f), ("side", 90f) })
+                {
+                    jin.transform.SetPositionAndRotation(Vector3.zero, Quaternion.Euler(0, yaw, 0));
+                    var cam = preview.camera;
+                    cam.transform.position = new Vector3(0, 1.1f, -3.2f);
+                    cam.transform.LookAt(new Vector3(0, .95f, 0));
+                    cam.fieldOfView = 40; cam.nearClipPlane = .05f; cam.farClipPlane = 20;
+                    cam.clearFlags = CameraClearFlags.SolidColor; cam.backgroundColor = new Color(.24f, .3f, .34f);
+                    preview.lights[0].intensity = 1.1f; preview.lights[0].transform.rotation = Quaternion.Euler(35, 30, 0);
+                    preview.lights[1].intensity = .5f;
+                    preview.ambientColor = new Color(.3f, .3f, .32f);
+                    preview.BeginStaticPreview(new Rect(0, 0, 640, 480));
+                    preview.Render(true);
+                    var image = preview.EndStaticPreview();
+                    File.WriteAllBytes("Validation/HitEffects/RageRim-" + name + ".png", image.EncodeToPNG());
+                    UnityEngine.Object.DestroyImmediate(image);
+                }
+            }
+            finally { preview.Cleanup(); }
         }
 
         static void Capture(string role)

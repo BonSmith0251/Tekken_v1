@@ -48,7 +48,7 @@ namespace Versus.Remaster.Editor
             Directory.CreateDirectory("Validation/CommandGraph");
             var lines = new List<string>();
             bool passed = true;
-            foreach (var code in new[] { "jin", "kaz", "xia", "asa", "ltn" })
+            foreach (var code in new[] { "jin", "kaz", "xia", "asa", "ltn", "nsd", "bob", "leo" })
             {
                 var graph = CommandGraph.Load(code);
                 var reference = JsonUtility.FromJson<Reference>(File.ReadAllText("Validation/CommandGraph/" + code + "-reference.json"));
@@ -78,7 +78,9 @@ namespace Versus.Remaster.Editor
                 // Xiaoyu's three "Back towards enemy" entries need the backturned state, not yet tracked.
                 // Alisa's Quick Slider and 10 Hit Combo demos press buttons the reference does not consume yet.
                 // Katarina's 10 Hit Combo has the same gap.
-                int knownGaps = code == "asa" ? 2 : code == "ltn" ? 1 : 0;
+                // Lidia's Law of the Land starts after a successful parry, which is not simulated.
+                // Bob's Quick Langouste (b,B+2+3) starts no move in the reference yet.
+                int knownGaps = code == "asa" ? 2 : code == "ltn" ? 1 : code == "nsd" ? 1 : code == "bob" ? 1 : code == "leo" ? 3 : 0;  // Leo: two "During Jin Ji Du Li" stance strings and one "While rising" move need setups
                 passed &= same == reference.demos.Length && plainPassed >= plain - knownGaps;
                 lines.Add("{\"character\":\"" + code + "\",\"demos\":" + reference.demos.Length + ",\"tracesMatchingReference\":" + same +
                           ",\"plainCommandsPassed\":" + plainPassed + ",\"plainCommands\":" + plain +

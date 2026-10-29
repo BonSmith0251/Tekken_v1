@@ -69,7 +69,8 @@ namespace Versus.Remaster.Editor
                         int nullBones=worn.Sum(r=>r.bones.Count(b=>!b));
                         var bounds=worn.Length>0?worn[0].bounds:new Bounds();foreach(var r in worn)bounds.Encapsulate(r.bounds);
                         string problem=worn.Length!=expected.Count?"expected "+expected.Count+" renderers, found "+worn.Length:nullBones>0?nullBones+" unbound bones":worn.Any(r=>r.sharedMaterials.Any(m=>!m))?"missing material":
-                            bounds.size.y<.01f || bounds.size.y>2.6f?"implausible bounds "+bounds.size:"";
+                            // A bald "hair" (bob_har_bald) is the game's own 3-vertex stub that shows nothing; only real meshes get the bounds check.
+                            worn.All(r=>r.sharedMesh && r.sharedMesh.vertexCount<4)?"":bounds.size.y<.01f || bounds.size.y>2.6f?"implausible bounds "+bounds.size:"";
                         if(problem=="")problem=clothProblem;
                         if(problem!="")failures.Add(slot.name+"/"+piece.piece+": "+problem);
                         report.Add("{\"slot\":\""+slot.name+"\",\"piece\":\""+piece.piece+"\",\"name\":\""+piece.name+"\",\"common\":"+(piece.common?"true":"false")+

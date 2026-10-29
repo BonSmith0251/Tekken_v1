@@ -163,9 +163,11 @@ MonoBehaviour:
   katarinaPrefab: {fileID: 4781185715656478641, guid: 2fad7c5d810b7524f98bc10f63468a19, type: 3}
   playerOneFighter: 3
   playerTwoFighter: 4
+  characterSelect: 1
   sceneCamera: {fileID: 1000000022}
-  automaticFight: 0
+  automaticFight: 1
   playEntrance: 1
+  commonBattleEffects: 1
 --- !u!4 &243418943
 Transform:
   m_ObjectHideFlags: 0
@@ -231,6 +233,12 @@ MonoBehaviour:
   ambientLight: {r: 0.46, g: 0.48, b: 0.54, a: 1}
   background: {r: 0.025, g: 0.035, b: 0.055, a: 1}
   floor: {r: 0.12, g: 0.16, b: 0.21, a: 1}
+  antialiasing: 3
+  smaaQuality: 2
+  taaQuality: 1
+  taaSharpen: 0.5
+  taaAntiFlicker: 0.5
+  taaHistorySharpening: 0.35
 --- !u!4 &252382262
 Transform:
   m_ObjectHideFlags: 0

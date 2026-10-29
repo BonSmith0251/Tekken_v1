@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -404,6 +404,12 @@ MonoBehaviour:
   ambientLight: {r: 0.46, g: 0.48, b: 0.54, a: 1}
   background: {r: 0.025, g: 0.035, b: 0.055, a: 1}
   floor: {r: 0.12, g: 0.16, b: 0.21, a: 1}
+  antialiasing: 3
+  smaaQuality: 2
+  taaQuality: 1
+  taaSharpen: 0.5
+  taaAntiFlicker: 0.5
+  taaHistorySharpening: 0.35
 --- !u!4 &1482518206
 Transform:
   m_ObjectHideFlags: 0
@@ -690,6 +696,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c7e163375e4612f44b7def0f74daa312, type: 2}
   - {fileID: 11400000, guid: 1d71d5c691611eb4d84858058b4e9d99, type: 2}
   - {fileID: 11400000, guid: ed433a0bafe60924cac8c903f07c8113, type: 2}
+  - {fileID: 11400000, guid: e8067feda778fb340be6d3b378b73fcd, type: 2}
+  - {fileID: 11400000, guid: f608db2cf0f27f4419049a71ecc6fcc1, type: 2}
+  - {fileID: 11400000, guid: 883345683ca85df42b6dd0547f8729b9, type: 2}
+  - {fileID: 11400000, guid: 5a8c4fc990f80374f9f4dd0462043e25, type: 2}
   repeat: 1
   gapSeconds: 0.75
   renderSettings: {fileID: 0}

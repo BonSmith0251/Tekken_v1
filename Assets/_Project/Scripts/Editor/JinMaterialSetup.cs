@@ -42,7 +42,7 @@ namespace Versus.Remaster.Editor
                 }
                 if(!string.IsNullOrEmpty(e.occlusion)){m.SetTexture("_OcclusionMap",Texture(e.occlusion));m.SetFloat("_OcclusionStrength",1);occlusions++;}
                 if(!string.IsNullOrEmpty(e.albedo)){m.mainTexture=Texture(e.albedo,false,true);m.color=Color.white;albedos++;}
-                HdrpProjectSetup.ConvertMaterial(m);if(HdrpProjectSetup.IsEyeShadow(m))HdrpProjectSetup.MakeEyeShadowTransparent(m);EditorUtility.SetDirty(m);
+                HdrpProjectSetup.ConvertMaterial(m);if(HdrpProjectSetup.IsEyeShadow(m))HdrpProjectSetup.MakeEyeShadowTransparent(m);if(HdrpProjectSetup.IsLashOrBrow(m))HdrpProjectSetup.MakeLashOrBrowUnlit(m);EditorUtility.SetDirty(m);
             }
             AssetDatabase.SaveAssets();
             var prefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/_Project/Resources/JinPlayable.prefab");
@@ -70,9 +70,9 @@ namespace Versus.Remaster.Editor
         public static void Build()
         {
             Capture("before");Apply();Capture("after");
-            foreach(string scene in new[]{"LocalVersus","CharacterMuseum"})
+            foreach(string scene in new[]{"LocalVersus2","CharacterMuseum"})
             {
-                string output=scene=="LocalVersus"?"Builds/Windows/VersusRemaster.exe":"Builds/Museum/CharacterMuseum.exe";
+                string output=scene=="LocalVersus2"?"Builds/Windows/VersusRemaster.exe":"Builds/Museum/CharacterMuseum.exe";
                 var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{"Assets/_Project/Scenes/"+scene+".unity"},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
                 if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Build failed: "+scene);
             }

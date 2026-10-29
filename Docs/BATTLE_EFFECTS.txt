@@ -1,27 +1,54 @@
 BATTLE EFFECTS (LocalVersus / LocalVersus2)
 
+ON IN LOCALVERSUS2 (27 Oct 2026, user request): the common set below plays alongside each fighter's
+own wired effects (CHARACTER_BATTLE_EFFECTS.txt). It was off earlier that day. The switch is
+VersusGame > Common Battle Effects (C# default off; LocalVersus2 stores it on; ticking or unticking it
+during Play takes effect at once; round restarts clear common effects still playing). Flag
+Temp/localversus2-common-effects ("on"/"off") saves it in the scene. The trigger rules below (Pierce
+threshold, impact point, Rage) are remaster choices, not recovered native dispatch.
+
 The fight plays Tekken 7's own common battle effects. The original keeps them in
 Effect/TK75/Common; BP_CommonEffectManager names the particle system for each role (BP_EF_KO the
 knockout one), and the game's native code decides when each plays. The remaster triggers them from
-its own events, matched against the reference captures (Videos/Captures, TEKKEN 7 2026-10-23):
+its own events, matched against the reference captures (Videos/Captures/tk7, TEKKEN 7 2026-10-23):
 
-  Clean hit                 HitFX           PS_EF_cmnhit00_ts       small orange glow and sparks
+  Clean hit                 HitFX           PS_EF_cmnhit00_ts       orange glow and spark spray
   Counter hit               CriticalHit3FX  PS_EF_cmncritical00_ts  orange rings, spark burst, lines
-  Punish (hit in recovery)  PunishNotice    PS_EF_PunishNotice_*    blue-white reticle, by hit level (**)
-  Guarded hit               GuardFX         PS_EF_cmnguard01_ts     guard flash, lines, smoke puff
-  Clean hit, 20+ damage     PierceFX        PS_EF_cmnhit_line00     directional speed lines (*)
-  Knockout blow             KOFX            PS_EF_SpecialKO         radial flash lines, powder, floor ring, dust
-  Body lands from the air   BlastFX         PS_EF_cmndown00_ts      floor rings and wind circle
-  Any fall to the floor     SmokeFX         PS_EF_cmnsmoke00        dust
-  Rage begins (25% health)  RageFX          PS_EF_cmnragestart00_ss rings and ribbons around the body
-  While in Rage             RageAuraFX      PS_EF_cmnrageaura_ts    looping red aura on the body bones
+  Guarded hit               GuardFX         PS_EF_cmnguard01_ts     white flash and spark spray
+  Rage begins (25% health)  RageFX          PS_EF_cmnragestart00_ss red rings and ribbons around the body
+  While in Rage             red rim glow    RageRim.shader          + RageAuraFX's sparse red wisps (***)
+  Power crush absorbs hit   Armor0FX        PS_EF_cmnpowerclash00   white aura flash (bloom), in place of the hit spark
 
-(*) The original chooses PierceFX in native code; using it for heavy hits is this project's choice.
-(**) The reference matches show the practice-mode punish reticle in normal play, on hits that land
-while the opponent recovers from an attack. Tekken 7 counts a hit during the opponent's startup or
-active frames as a counter hit and a hit in the recovery as a normal hit (the punish); the battle
-model follows that (BattleModel.CommandContact). Its colour follows the reference video (light
-blue); the data tints the mid variant yellow-white, which the stripped material may have changed.
+  Not played in versus (exported, previews only; audit of 27 Oct 2026, see below):
+  Punish (hit in recovery)  PunishNotice    PS_EF_PunishNotice_*    practice-mode crosshair (**)
+  Clean hit, 20+ damage     PierceFX        PS_EF_cmnhit_line00     the >= 20 damage trigger was a guess
+  Knockout blow             KOFX            PS_EF_SpecialKO         none of 9 reference KOs shows it
+  Body lands from the air   BlastFX         PS_EF_cmndown00_ts      no floor ring on solid-floor landings
+  Any fall to the floor     SmokeFX         PS_EF_cmnsmoke00        no dust on solid-floor knockdowns
+
+Audit (27 Oct 2026, user: "find the wrong effects like the punish"). Each effect was compared
+with frame sequences of TEKKEN 7 2026-10-23 08-04-08.mp4: hits 46/49.6/57.0 s and Kazumi/Heihachi
+320/431/628 s (the orange fire spray is the common hit, on every attacker); counter 54.9 s;
+guard 135.7 s; Rage start 57.2 s and 233.6 s; Rage 58-62 s; KOs 62, 83, 146, 178, 237, 264, 320,
+374, 431, 456 s (hit/counter effect under slow motion only); air landing 236 s and knockdown 218 s
+on a solid floor (no ring, no dust; the first round's water stage splashes on its own). The
+blue ring with lens-flare needles at 54.9 s is Hwoarang's character effect, not a common one.
+Still weaker than the original: the clean hit's spray is smaller and shorter-lived than the
+original's ~0.5 m fire spray that drifts for ~0.4 s (vector fields are approximated).
+
+(***) Rage in the original outlines the fighter with a saturated red rim (Devil Jin 58-62 s: rim
+pixels median sRGB (192, 0, 16)). RageRim.cs draws a copy of each skinned mesh with the additive
+fresnel RageRim shader (power 3.5, intensity 2.2, pushed 4 mm out) while Rage lasts; fitted, the
+original's Rage material is not recovered. Capture: Validation/HitEffects/RageRim-front/side.png.
+(**) No punish marker in versus (27 Oct 2026, user report "doesn't look like the original"). The blue
+ring with spinning lens-flare needles in TEKKEN 7 2026-10-23 08-04-08.mp4 (54.9-55.5 s) is
+Hwoarang's own character effect PS_EF_CHR_HWO_nomal (effect ID 0, textures T_EF_COL_hwo_light00_thk
+and T_EF_COL_hwo_line01_tss plus the SM_EF_hwo_ring_00 orbit ring, 0.5 s), dispatched by 0x802E on his
+kicks (hwomot.bin: 134 rows in 49 moves, e.g. Hw_spkA frame 25 on L_Foot). It was mistaken for
+PS_EF_PunishNotice_*, which is the practice-mode crosshair (dashed arcs, triangles, centre dot).
+VersusGame no longer plays PracticePunishNotice*; HitEvent.punish stays in the battle model.
+Tekken 7 counts a hit during the opponent's startup or active frames as a counter hit and a hit in
+the recovery as a normal hit; the battle model follows that (BattleModel.CommandContact).
 The model does not spend Rage (no Rage Art consumption), so the aura stays while health is at a
 quarter or less, and ends with the round. Both Rage effects travel with the fighter's spine.
 
@@ -39,18 +66,27 @@ punish reticle is about half a metre in the reference video. Size axes the edito
 as zeros and follow X.
 
 Approximated (not recovered):
-- Brightness: the original multiplies effect colour by a glare power (1..100) and lets bloom and the
-  tonemap whiten the core. The versus scene has neither, so the material intensity is the colour
-  peak times the square root of the glare, and the particle shader whitens hot colour itself
-  (85% toward white by 9x). CascadeEffects.glareGain scales it.
+- Colour space: the exported colours are linear (UE), and Unity decodes particle, gradient, light
+  and material colours as sRGB in this linear project, so CascadeEffects.Linear() gamma-encodes
+  them first. Before 2026-10-26 every hue came out over-saturated: the counter rings'
+  (1, .33, .08) drew as (1, .09, .01), red.
+- Brightness: the original multiplies effect colour by a glare power (1..100) and brings the result
+  back with its exposure and tonemap. Here the material intensity is the colour peak (peaks above 4
+  compressed to 4 * (peak/4)^0.25, so the rings' 60 becomes ~7.9) times the square root of the glare,
+  and the particle shader applies a per-channel shoulder (linear to .35, then exponential to 1):
+  hot orange turns yellow instead of clipping to white, and the output stays within 1, so the
+  default HDRP bloom (threshold 0) cannot blow it out. Fitted to TEKKEN 7 2026-10-23 08-04-08.mp4:
+  counter-ring pixels median (226, 177, 110) there, (234, 162, 89) in the capture.
+  CascadeEffects.glareGain scales it. The same shader and MaterialFor serve StageEffects.
 - GPU vector fields: their tightness becomes drag and their strength becomes noise, which keeps
   sparks compact around the impact; the field shapes themselves are not decoded.
 - AlphaClip: the cooked effect materials keep only parameter names, not their maths. The spark
-  material's static "Alpha Clip" sharpens coverage to its core, saturate(a * (1 + c) - c); the
+  material's static "Alpha Clip" sharpens coverage to its core, saturate(a * (1 + c) - c), eased off
+  for sprites under ~6 pixels across (none at 3; the 1-1.5 cm hit sparks vanished otherwise); the
   distortion material's per-particle AlphaClip curve erodes it, a ^ max(1, c). Both were fitted
   against the captures.
-- The punish reticle: the stripped crosshair material assembles it from quarter textures, so the
-  complete glyph in its glare texture is drawn instead, tinted the light blue of the reference video.
+- The practice punish crosshair (preview only): the stripped crosshair material assembles it from
+  quarter textures, so the capture draws the complete glyph in its glare texture.
 - KO flash lines are widened from 4 mm to about 3 cm; KO dust is capped at 600 fragments/s and 60
   smoke sprites/s (the original spawns 3,000 and 1,500).
 Not reproduced: texture scroll/distortion dynamic parameters, refraction-only emitters, GPU floor

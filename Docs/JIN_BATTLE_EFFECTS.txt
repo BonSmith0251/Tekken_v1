@@ -1,0 +1,90 @@
+JIN BATTLE EFFECTS (LocalVersus / LocalVersus2 / CharacterEffectsShowcase)
+
+Jin now dispatches his original timed character effect from move property 0x802E:
+143 events across 51 moves, verified against the original jinmot.bin. The native
+code selects character effect ID 0, which BP_jinEffectManager binds to
+PS_EF_CHR_JIN_NOMAL. The property value supplies the bone ID; both the effect owner
+and bone owner are Jin. This is a move-frame effect, including on a whiff.
+
+BattleModel publishes the acted move and source frame, including the outgoing
+frame of a transition. VersusGame queues the events until the actors are posed;
+CharacterBattleEffects resolves Jin's own registry and native bone map. Round
+reset clears the effect instances. The same dispatcher serves the action preview.
+
+The original Jin VBN table has 177 entries: ID 7 is R_Arm, not R_Hand (ID 9).
+Native PM_CharacterBone reads BonePlayerNumber and BoneIndex, then replaces its
+stored SourceLocations[0]. Thus NOMAL's packaged Neck entry is overridden for
+these timed events. The native constructor and update gate show that new particles
+use the current bone, while existing particles do not follow it. Unity supplies
+the resolved source-bone override and world-space simulation accordingly.
+
+See it:
+  Remaster > Rendering > Play character effects showcase (Jin is the first of five fighters)
+  Scene: Assets/_Project/Scenes/CharacterEffectsShowcase.unity (was JinEffectsShowcase.unity)
+  Action 1779 (Jz_dslpS) and Action 1840 (Jz_shoryu24) replay imported actions;
+  both dispatch ID 0 at original source frame 6, bone 7 / R_Arm.
+  Space: play/pause. R: restart. F: reverse facing. Drag the time slider to scrub.
+  Scrubbing pauses playback and reconstructs particles from the start.
+  The list contains all 18 extracted systems for manual preview; Up/Down selects.
+  Selecting a catalog system switches to manual placement/playback. Its filename
+  does not establish a move binding. Move Jin is an attachment-preview control.
+  The action preview does not simulate opponent collision or move transitions.
+
+Source-backed data and Unity adaptations:
+  Original packages, native code and moveset records establish the binding,
+  event frames, owner, bone IDs and dynamic bone selection. Source atlas grids,
+  frame-index curves and linear/linear-blend interpolation are retained and used
+  by the renderer; NOMAL's atlas is no longer displayed as an entire texture sheet.
+  Raw properties, module/LOD records and hashes remain in the conversion report.
+
+  Rendering still uses the shared Cascade-to-Unity adaptation: first stored LOD,
+  sampled distributions, particle caps, shader/material selection, brightness
+  and alpha handling. Native spawn rotation derives from actor facing; Unity uses
+  the displayed actor rotation. The native point conversion includes +10 Unreal
+  units vertically; the installed manifest uses +0.1 m for the instance origin.
+  Its equivalence to the retargeted rig's origin still needs an original capture
+  comparison. The PM_CharacterBone sprite uses its resolved rig bone directly,
+  with zero offset. Multiple simulation ticks retain their events but use the
+  next displayed pose. These choices do not establish visual parity.
+
+Still unresolved:
+  Collision-driven character effects and their native conditions are not wired
+  by this work. Inherited Blueprint OnHit is empty; that does not mean the native
+  game has no collision effects. Existing common impact effects are a separate
+  system (see BATTLE_EFFECTS.txt), not evidence for Jin-specific hit dispatch.
+  The other 17 catalog systems have no verified move bindings here, including
+  unique1..4 and item variants. Random atlas modes, custom socket cases such as
+  PatoLight's Head_Socket, update-each-frame variants, nonzero bone-local offsets,
+  native mesh rotation details, refraction and omitted shader operations remain
+  limited or unsupported. Missing sockets are not replaced with guessed bones.
+
+Regenerate from the existing extracted evidence (project root; stop Play first):
+  python Tools/CharacterEffects/export_character_effects.py --evidence ../../Artifacts/BattleEffects/JinSkillValidation/v3 --t7extract ../../t7extract --out Assets/_Project/Resources/CharacterEffects/jin
+  python Tools/CharacterEffects/install_native_dispatch.py --evidence ../../Artifacts/BattleEffects/JinUnityUpdate --project .
+Run the installer after export: export creates the rendering catalog and package
+registry; installation checks the original hashes, current move graph, event list
+and attachment evidence before restoring the verified combat dispatch manifest.
+
+Native audit tools in Tools/CharacterEffects:
+  dispatch_bytecode.py        Bounded original Blueprint function decoding.
+  dispatch_native.py          Original PE instruction/string/call references.
+  dispatch_jin_manifest.py    Original moveset/event and native-case verification.
+  dispatch_bone_attachment.py PM_CharacterBone class, override and transform proof.
+  test_property_events.py     Acted-frame dispatch regression harness.
+
+Evidence (relative to the game workspace):
+  Artifacts/BattleEffects/JinSkillValidation/v3: original packages and hashes.
+  Artifacts/BattleEffects/JinUnityUpdate/dispatch-character-manager.json
+  Artifacts/BattleEffects/JinUnityUpdate/jin-timed-dispatch.json
+  Artifacts/BattleEffects/JinUnityUpdate/dispatch-bone-attachment-proof.json
+  Artifacts/BattleEffects/JinUnityUpdate/bone-id-jin-vbn-map.json
+  Artifacts/BattleEffects/JinUnityUpdate/bone-id-native-particle-cache-init.json
+  Artifacts/BattleEffects/JinUnityUpdate/bone-id-native-vbn-pointer-writes.json
+Installed resources: Assets/_Project/Resources/CharacterEffects/jin, including
+registry.json, native-dispatch.json, effects.json and conversion-report.json.
+
+Validation/JinEffects contains the runtime check and captures of both actions in
+both directions, before and after frame 6. The runtime report checks atlas use,
+R_Arm placement, stationary emitted particles and cleanup. Action/capture reports
+and the PropertyEvents harness record their results. These are integration and
+rendering checks, not an original-game visual comparison or user approval.

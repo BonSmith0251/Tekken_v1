@@ -27,7 +27,9 @@ OUT = ROOT / "Assets/_Project/Resources/HitEffects"
 MANAGER = "TekkenGame/Content/Effect/TK75/Common/BP_CommonEffectManager.uasset"
 # Roles the remaster drives; the manager holds the system for each.
 ROLES = ["HitFX", "CriticalHit3FX", "GuardFX", "PierceFX", "BlastFX", "SmokeFX", "RageFX", "RageAuraFX",
-         "PracticePunishNoticeHiFX", "PracticePunishNoticeMidFX", "PracticePunishNoticeMidSpFX", "PracticePunishNoticeLoFX"]
+         "PracticePunishNoticeHiFX", "PracticePunishNoticeMidFX", "PracticePunishNoticeMidSpFX", "PracticePunishNoticeLoFX",
+         # Power crush: the manager's Armor0FX (PS_EF_cmnpowerclash00) answers OnArmorSucceeded.
+         "Armor0FX"]
 # Systems the native code or other blueprints spawn directly, not through the manager's roles:
 # BP_EF_KO plays PS_EF_SpecialKO on the knockout blow.
 EXTRA_ROLES = {"KOFX": "PS_EF_SpecialKO"}
@@ -305,6 +307,20 @@ def export_mesh(name, index, t7, written):
     written[name] = len(mesh["positions"])
 
 
+def multiply_curves(a, b):
+    """Product of two [t, r, g, b, a] curves, sampled at the union of their keys."""
+    def at(curve, t):
+        if t <= curve[0][0]:
+            return curve[0][1:]
+        for p, q in zip(curve, curve[1:]):
+            if t <= q[0]:
+                f = (t - p[0]) / ((q[0] - p[0]) or 1)
+                return [x + (y - x) * f for x, y in zip(p[1:], q[1:])]
+        return curve[-1][1:]
+    times = sorted({row[0] for row in a} | {row[0] for row in b})
+    return [[t] + [x * y for x, y in zip(at(a, t), at(b, t))] for t in times]
+
+
 # ---------------------------------------------------------------- emitters
 def emitter(objects, ename, index, t7, materials, notes):
     cls, e = objects[ename]
@@ -364,7 +380,10 @@ def emitter(objects, ename, index, t7, materials, notes):
             out["colorLife"] = [r + [x[1]] for r, x in zip(rgb, a)]
         elif t == "ColorScaleOverLife":
             rgb = sampled(m.get("ColorScaleOverLife"), objects, 3); a = sampled(m.get("AlphaScaleOverLife"), objects, 1)
-            out["colorScale"] = [r + [x[1]] for r, x in zip(rgb, a)]
+            curve_ = [r + [x[1]] for r, x in zip(rgb, a)]
+            # Cascade multiplies stacked scale modules (stage sand: a 0.25 alpha scale, then an
+            # instance-parameter scale that defaults to 1); the last one must not replace the first.
+            out["colorScale"] = multiply_curves(out["colorScale"], curve_) if "colorScale" in out else curve_
         elif t in ("Velocity", "Velocity_Seeded"):
             lo, hi = evaluate(m.get("StartVelocity"), objects, 0, 3)
             rlo, rhi = evaluate(m.get("StartVelocityRadial"), objects, 0, 1)

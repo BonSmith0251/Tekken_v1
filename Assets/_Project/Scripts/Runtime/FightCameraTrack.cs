@@ -15,18 +15,31 @@ namespace Versus.Remaster
         readonly float[] horizontalFov, blend;
         public int Frames => targets.Length;
 
-        public FightCameraTrack(string resource)
+        public FightCameraTrack(string resource) : this(Load(resource), resource) { }
+
+        static byte[] Load(string resource)
         {
             var asset = Resources.Load<TextAsset>("FightCameras/" + resource);
             if (!asset) throw new InvalidOperationException("Missing fight camera: " + resource);
-            byte[] data = asset.bytes;
-            if (data.Length < 12 || System.Text.Encoding.ASCII.GetString(data, 0, 4) != "T7CF")
+            return asset.bytes;
+        }
+
+        public FightCameraTrack(byte[] data, string resource = "camera bytes")
+        {
+            if (data == null || data.Length < 32 || System.Text.Encoding.ASCII.GetString(data, 0, 4) != "T7CF")
                 throw new InvalidOperationException("Invalid fight camera: " + resource);
             int frames = BitConverter.ToInt32(data, 4), channels = BitConverter.ToInt32(data, 8);
-            if (channels != 5 || BitConverter.ToInt32(data, 12) != 11 || BitConverter.ToInt32(data, 16) != 11 ||
+            if (frames < 1 || channels != 5 || BitConverter.ToInt32(data, 12) != 11 || BitConverter.ToInt32(data, 16) != 11 ||
                 BitConverter.ToInt32(data, 20) != 15 || BitConverter.ToInt32(data, 24) != 3 ||
+                BitConverter.ToInt32(data, 28) != 21 ||
                 data.Length != 12 + channels * 4 + frames * channels * 12L)
                 throw new InvalidOperationException("Unsupported fight camera layout: " + resource);
+            for (int offset = 32; offset < data.Length; offset += 4)
+            {
+                float value = BitConverter.ToSingle(data, offset);
+                if (float.IsNaN(value) || float.IsInfinity(value))
+                    throw new InvalidOperationException("Nonfinite fight camera sample: " + resource);
+            }
             targets = new Vector3[frames]; positions = new Vector3[frames];
             horizontalFov = new float[frames]; blend = new float[frames];
             int start = 12 + channels * 4;

@@ -42,7 +42,8 @@ namespace Versus.Remaster
                     data = camera.gameObject.AddComponent<HDAdditionalCameraData>();
                 data.clearColorMode = original ? HDAdditionalCameraData.ClearColorMode.Sky : HDAdditionalCameraData.ClearColorMode.Color;
                 data.backgroundColorHDR = camera.backgroundColor;
-                data.antialiasing = HDAdditionalCameraData.AntialiasingMode.SubpixelMorphologicalAntiAliasing;
+                // Scenes with a Render Settings object choose their own antialiasing.
+                if (!customLook) data.antialiasing = HDAdditionalCameraData.AntialiasingMode.SubpixelMorphologicalAntiAliasing;
                 // Camera transform, physical lens, viewport and entrance cuts remain authored.
             }
             foreach (var light in FindObjectsByType<Light>(FindObjectsSortMode.None))

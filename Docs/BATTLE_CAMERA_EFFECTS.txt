@@ -1,0 +1,249 @@
+VERSUS CAMERA EFFECTS
+
+Open Assets/_Project/Scenes/BattleCameraShowcase.unity and press Play, or use
+Remaster > Camera Effects > Play demonstration.
+
+12 original look-at camera tracks cover Jin, Kazuya, Xiaoyu and Katarina.
+Alisa was inspected too; her different channel layouts remain unconverted here.
+Select a track, pause with Space, scrub the timeline, restart with R, flip with F,
+or use left/right to change tracks. The wide reference view compares shot scale.
+The scene uses an original imported action as the subject where available; it is
+not a complete two-character Rage Art reenactment.
+
+Original source: tkdata.bin movesets and mask/<code>rotsm.arc camera banks.
+1,494 selected event records are inventoried, including shared/item/mode-specific
+records. Source bytes, offsets and hashes are retained in
+Artifacts/CameraEffects/OriginalExport (workspace root) and the installed
+Resources/CameraEffects/source-manifest.json. There are additional camera layouts
+outside this look-at family; these are not exported as T7CF by this tool.
+
+Native executable dispatch confirms two event families selecting shake presets
+3 through 6. BattleCameraEffects shares these bindings with VersusGame and the
+demo. Shake amplitude/waveform remain the existing remaster interpretation.
+The demo's timed repeated shakes are explicitly labeled comparisons.
+
+FightCameraTrack now validates the entire channel layout, positive frame counts,
+payload length and finite samples. The refreshed original camera tracks are used
+by the existing versus cinematic path. No new guessed automatic camera trigger
+has been added. KO/airborne zoom and original side/timing/attachment semantics
+remain subject to further original-game comparison. Visual parity is not claimed.
+
+Regenerate into a NEW folder from workspace root:
+python UnityRemaster/TekkenVersusRemaster/Tools/CameraEffects/export_camera_effects.py --workspace . --out <new-folder>
+
+Review the manifest and supported tracks before copying FightCameras into
+Assets/_Project/Resources/FightCameras. CameraEffects/catalog.json contains the
+supported track rows and the native shake mapping used by the shared runtime.
+Source extraction does not automatically overwrite Unity resources.
+
+Validation/captures: Remaster > Camera Effects > Validate original tracks and
+Capture demonstration. Results are under Validation/CameraEffects.
+Installed Codex skill: tekken-versus-camera-effects.
+
+LocalVersus2 check (27 Oct 2026). Harness ~/.claude/skills/tekken-versus-battle/harness/run.sh
+RageCamera forces each fighter's Rage Art at close range in Rage, in both player slots, and reports
+the 0x8439/0x843A events VersusGame acts on:
+  Jin L96/R97, Kazuya L96/R97, Xiaoyu L98/R99, Katarina L96/R97 (raw frame 0x8001): the cinematic
+  starts on the side matching the actor's facing, and the track file exists. Shake presets come from
+  BattleCameraEffects (0x8001-0x8004 / 0x8006-0x8009).
+  Alisa: Aa_RageArts01 raises 0x8439 value 0 and 0x843A value 1 at frame 8, with no 0x4000 bank flag.
+  Bank 0 of asarotsm.arc and the moveset's embedded MOTA banks hold body animation (type 0x64), not
+  camera tracks, and mask/common.arc uses another container format; 0x842E/0x842F (0x4100/0x4101,
+  0x4104/0x4105) select body animations. Her Rage Art camera is therefore unresolved and versus keeps
+  the gameplay camera for it. No camera was substituted.
+
+CAMERA SHAKE, RECOVERED FROM THE EXECUTABLE (27 Oct 2026)
+The shake is no longer a remaster guess. Tools/CameraEffects/export_shake_presets.py reads the
+inspected executable (SHA-256 f46f9ff5...) and writes the ten original presets into
+Resources/CameraEffects/catalog.json (shakePresets, shakeUnitRadians, shakeEvidence):
+  setter 0x1406FF050 stores the preset in three camera objects and resets their frame;
+  camB update 0x1406EDCE0 (vtable 0x1428BBFA0 slot 1) calls the evaluator each 60 Hz battle tick,
+  advances the frame, and clears the preset when the evaluator returns -1;
+  evaluator 0x140701FD0 picks (table, length) by preset (jump table 0x1407024C0) and, for frame
+  f < length-1, adds values[f] * 2*pi/65536 rad to the eye->target PITCH (positive looks up).
+  No lateral or positional motion.
+  Presets (frames, peak): 1 (24, 0.70 deg)  2 (6, 0.70)  3 (12, 0.70)  4 (18, 1.05)  5 (24, 1.05)
+  6 (42, 2.11)  7 (42, 3.16)  8 (24, 0.18)  9 (24, 0.13)  10 (6, 0.35); all decaying 6-frame (10 Hz) nods.
+Dispatch from move data: 0x8001-0x8004 and 0x8006-0x8009 -> presets 3-6; 0x8005 and 0x800A pass
+the property value (min(value, 9); 0 stops the shake). These sit on landing (dwup_*, aDw_tataki,
+Fall_*), bound, screw, wall-hit (wDm_*) and Rage Art finish moves, not on ordinary hits.
+Versus: VersusGame.OnMoveProperty starts the preset (a new one replaces the running one at frame 0),
+AfterTick advances it per battle tick (so KO slow motion slows it), and the camera pitches about its
+right axis by BattleCameraEffects.OriginalShakePitch (Rage Art camera included). Removed as having
+no basis in the data: the per-hit shake (shake = .4 / .12 on guard) and the extra KO Impact(.06).
+The camera demo shows the original tables. CPU matches (harness ShakeEvents): 0-3 shakes per round.
+Not wired (callers found, event identity unverified): native requests for preset 6 (0x1406DEF4B,
+after a camera mode 7 setup), preset 4 (0x140711298, after common effects 0 and 7) and preset 3
+(0x140714B78; 0x1407911C2 after common effect 14). The reference video's large KO nod has the same
+6-frame cycle and a size close to preset 7; which native path plays it at a KO is not established.
+
+WHY THE CAMERA RARELY SHAKES (investigated 27 Oct 2026, after "not at all")
+Ordinary knockdowns carry no shake property in the original data: sDw_UP_01_, sDw_AIR00_,
+sDm_ROL00*, sDw_KAO00_, sDm_PNG00_ and the dwDWN_*/dwKAM_* loops after them have none. Only spins,
+screws, bounds, wall hits and Rage Art finishes do, so CPU matches see 0-3 property shakes a round
+(harness ShakeReach / ShakeEvents). The four native requests, traced in the executable:
+  0x140714B78 in 0x140713DD0: on an event that flags BOTH fighters (+0xD7D, +0x754 |= 0x100) and
+    starts a slowdown (0x140740A30 with globals 10 / 24), shake preset = 2 + level, level a static
+    global (0x1434DF5DC = 3 -> preset 5; the other three globals 0x1434DF5D0/D4/D8 = 10/24/17,
+    written only by the static initializer 0x140701A65). A both-fighter slow-motion event, not
+    ordinary hits.
+  0x140711298 (preset 4), called from the same function, after common effect IDs 0 and 7. The
+    manager's fields are contiguous from +0x380 in declaration order (HitFX +0x380, SeizeFX +0x3B8,
+    SparkFX +0x3F0, from the reflection registration at 0x14059A...), which suggests ID 7 = SeizeFX
+    (a throw); the ID -> field consumer is not located, so this stays unproven.
+  0x1407911C2 (preset 3) after common effect ID 14 (by the same layout, SparkFX).
+  0x1406DEF4B (preset 6): on entering battle state 4 (state machine 0x1406E2530, jump table
+    0x1406E2788), after choosing camera mode 7 or 8 at random. State 4's handler counts a timer down
+    each tick; whether it is the fight or the knockout state is not settled.
+None of the native paths runs on ordinary hits.
+
+LABELED HIT SHAKE (remaster choice, 27 Oct 2026, user request)
+VersusGame > Hit Shake (on by default): a clean hit plays original preset 3 (12 frames, 0.70 deg
+pitch nod) and a counter hit preset 4 (18 frames, 1.05 deg). Not original behaviour: the original
+never shakes on ordinary hits. A move-data shake always takes precedence (a hit never replaces a
+running data shake; a data shake replaces a hit shake). Blocked hits do not shake. Untick to get the
+faithful camera.
+
+0x84CC IS A FOLLOW-RATE REQUEST, NOT A LAUNCH ZOOM (recovered 28 Oct 2026)
+The remaster used to pull the camera in to 84% for 0.45 s on every 0x84CC ("preset zoom on airborne
+reactions"). That was a guess and is removed. Tools/CameraEffects/export_follow_rates.py reads the
+inspected executable and writes catalog.json "followRate":
+  interpreter case 0x140719875 (small jump table 0x71FC70, cases 0x84C3-0x84CC) stores the value's low
+    16 bits as the fighter's camera request (+0x36C). It stays until the next 0x84CC or a throw
+    camera (0x140722320, from the moveset's throw_cameras block) replaces it, and is cleared only at
+    round start (fighter init 0x14074AFD0).
+  fight camera view update 0x1406EE020 (vtable 0x1428BBF50 slot 0) looks both requests up in a
+    7-entry table and takes the largest rate: 18, 19 -> x1; 11 -> x3; 12 -> x2; 13 -> x1.5;
+    14 -> x0.5; 15 -> x0.25 of the base rate 0.1 (settings defaults 0x140740700). No match -> base.
+    The view's rate steps toward that by +0.003 / -0.002 per frame, and each frame the camera moves
+    that fraction of the way to its framing goal (0x1406E7300). Nothing zooms.
+  Data: walks and sidesteps set 18, air reactions (sDw_AIR00_, aDw_*) 0, stomps 16, throw escapes
+    0x8FD, item moves 3; Kazuya's Kz_Rider 11, Jin's Jz_shoryu24 / Jz_rplp01 12, Xiaoyu's rolls and
+    throw moves 13.
+Versus: OnMoveProperty keeps each fighter's request; AfterTick steps the rate once per battle tick;
+the camera's three smoothing times (yaw .38, distance .32, target .2 s, the remaster's tuning at the
+base rate) are divided by rate / base. CPU matches (harness FollowRate): the old zoom fired 0-3 times
+a round; the original rate leaves its base after Jz_rplp01 (x2) or Fu_RrollA (x1.5) and stays there
+until a walk, sidestep or air reaction replaces the request, or the round ends.
+Not wired: throw cameras' requests; requests 1-6 and 25-41, which also start a special camera
+(0x1406E7B00) in battle states 4/21/22; keeping 0x8FD while fighter +0x314 is set. The remaster's
+spring smoothing is not the original's per-frame lerp; only the rate changes are original.
+
+KO CAMERA AND KO SLOW-DOWN, RECOVERED FROM THE EXECUTABLE (28 Oct 2026)
+The remaster's KO used to be a guess: 30% slow motion for 1.2 s (x1.6 on the final round), the rig pulled in to
+72% and re-centred on the loser. Removed. Tools/CameraEffects/export_ko_camera.py reads the inspected executable
+and writes catalog.json "koCamera". The fight state (0x1406DE720, state 4 of 0x1406E2530), on a KO:
+  slow table entry 2 = {speed 1, 90 frames} (0x140740A30; 150 frames when the winner's Rage Drive is active). The
+    table is ticked once per frame (0x140741F20) and each fighter's advance is multiplied by speed / 100
+    (0x140758790): a near freeze for 1.5 s. The reference match agrees: at 146.0 s (TEKKEN 7 2026-10-23
+    08-04-08.mp4) the action stands almost still under the K.O. call until 147.47 s, then the fall plays at speed.
+  camera mode 7 (0x140700B50, update 0x1406EF580): a copy of the view shown at the KO with its FOV replaced by 35,
+    weighted over the live view: frame/5 for 5 frames, 1 until frame 95, then back over 20 frames (frame 115).
+    The FOV is horizontal degrees: a read-only capture of the running game saw 65 normally and 35 in 8 of 120
+    samples (Tools/EntranceCamera/gameplay-camera-capture.json). The view does not follow anyone; it is held.
+  shake preset 6 (0x1406DEF4B; 42 frames, 2.11 deg). This settles the earlier open question of which native path
+    plays a large nod at a KO. The held KO view covers it while the hold lasts.
+  Rage Drive: move property 0x801B (Jin's Jz_shoryu_EX*, Kazuya's Kz_dslp_EX / Kz_dsrp00n_EX, Xiaoyu's Fu_R_clk*_EX,
+    Alisa's Aa_66RP*_EX, Katarina's Ln_6rkrp_*) sets fighter +0xC02 (0x140719CBA); a KO while the winner has it sets
+    game +0x260 (0x1406EA292), which picks the 150-frame slow-down and camera mode 8 instead of mode 7.
+Versus: AfterTick starts it when the round ends by KO (not time-up): Time.timeScale = 0.01, shake preset 6, and
+the last shown view (without shake) becomes the KO view. Camera effects now step once per 60 Hz frame of real
+time (VersusGame.AdvanceCameraFrames), as the original camera keeps updating through the freeze: the KO camera
+and its 115 frames, the near-freeze's 90/150 frames, and also every shake and the follow rate (both used to step
+per battle tick). The KO view is blended over the live view (position lerp, rotation slerp, FOV lerp) by the
+mode 7 weights. The match winner's victory take now starts 1.2 s of full speed after the freeze (2.7 s after the
+KO; was 2.4 s), so the death fall still plays first.
+Harness KoCamera (CPU matches, 6 pairings): 13 KOs, none by Rage Drive (the CPU never starts one).
+Not wired: no KO camera after a throw KO (winner +0x314 set, unless Rage Drive) or when either fighter has +0x490 & 2; the
+battle model has no throw state. The KO's alternative mode 7 call when game +0x22C is set (FOV 39, no hold).
+
+RAGE DRIVE KO SHOT (camera mode 8, recovered 28 Oct 2026)
+A KO while the winner's Rage Drive (0x801B) is active plays camera mode 8 instead of the mode 7 close-up, with the
+150-frame near-freeze. export_ko_camera.py writes it as koCamera.rageDrive. The fight state picks variant 0 or 1 at
+random (LCG 0x1406E3720) and calls 0x1407008A0 -> 0x140700580; the update is 0x1406EF2C0 -> 0x1406F3BF0:
+  no blend: the shot replaces the live view for 150 frames, then the camera cuts back.
+  centre fighter C: P1, or on the match-deciding KO the match winner (game +0x268, written by 0x1406EBCE4 from the
+    rounds won); variant 1 centres on C's opponent instead (fighter +0x1548).
+  each frame, s = sin(80 deg * t) / sin(80 deg), t = frame / 150: FOV 20 -> 35 (horizontal), angle -30 -> -60 deg
+    (variant 0) or -60 -> -45 deg (variant 1), times the side sign (-1 when C's +0x14D4 is 1). The camera sits on
+    the floor line from C to its opponent, rotated by that angle about the vertical, (|C->opponent| + 4000 mm) from
+    C and 100 mm above C's base, looking at the live fight camera's target (view 1 +0x10); roll = sign * 15 deg.
+    Units are millimetres with y up (the fight camera's own distances are ~3400 mm).
+Versus: VersusGame picks the variant and centre at the KO and BattleCameraEffects.RageDriveKoShot poses the camera
+from the shown fighters, the live view's position and the spring rig's target. Interpretation, not yet compared with
+footage: the original's right-handed rotation with the side sign is taken to put the camera on the viewer's side of
+the fight line, so the swing goes toward the live camera; the roll direction follows the same side sign but its
+handedness is unverified. Framing check (scratch replica, fighters 1.2-2.5 m apart): a low telephoto, about 5-6 m
+from the target, framing both fighters from the waist up and widening as the FOV opens. The CPU never starts a Rage
+Drive, so try it in manual play (Jin's Jz_shoryu_EX, Kazuya's Kz_dslp_EX, Xiaoyu's Fu_R_clk00_EX in Rage).
+
+TRADE SLOW-DOWN ("close call"), RECOVERED FROM THE EXECUTABLE (28 Oct 2026)
+The both-fighter event in hit resolution 0x140713DD0 (noted above under the native shake requests) is a trade: on
+a frame where each fighter took a hit (+0x7CC, the damage taken, > 0, struck flag +0x754 & 0x20; or both fighters
++0x754 & 0x220; a fighter in a throw, +0x314 < 0, cancels it) and either took at least 17 damage, the game sets
+slow table entry 2 = {10%, 24 frames} (0x140714A12), shake preset 2 + level 3 = 5 (0x140714B78), and camera mode 7
+holding the shown view at FOV 35, 4 frames in, 20 held, 30 out (0x140714BE1). Settings 0x1434DF5D0..0x1434DF5EC,
+from the same static initializer. The KO later in the frame writes the same slow entry and mode 7, so a trade that
+ends the round plays as a KO. export_ko_camera.py writes it as catalog.json "tradeCamera".
+Versus: OnHit records the damage of each clean hit per tick; AfterTick starts the slow-down when both fighters took
+one on the same tick (battle still in Fight) and the larger is >= 17, through the same StartHold path as the KO
+(VersusGame.holdFrame / slowPercent / HoldWeight). Interpretation: the struck flag is taken as "clean, not
+blocked"; the throw cancel is not wired (the model has no throw state). Harness Trade (30 CPU matches, 70 rounds):
+13 trades, 9 slow-downs (e.g. Jz_shoryu24 25 dmg vs Fu_lk00F, Kz_tukirpsp 25 vs Ln_lp00) - about one per 8 rounds.
+Not checked against footage.
+
+TRADE TIMING, REMASTER TUNING (user request 28 Oct 2026, not original)
+VersusGame > Trade Length (default 2.5, 1 = original) stretches the trade's slow-down and close-up, and Smooth
+Trade (default on) eases them: game speed glides from 100% to 10% over the close-up's blend-in (doubled when smooth)
+and back over its blend-out, and the close-up weight follows a SmoothStep. Defaults: 10% held to frame 60, speed back
+by frame 135; close-up 20 frames in, held to frame 70, out by frame 145 (about 2.4 s in all). The original switches
+speed at once after 24 frames and blends linearly over 4 / 20 / 30 frames: Trade Length 1 with Smooth Trade off. The
+TRADE EFFECT button (F5) uses the same settings. The KO keeps the original timing.
+Centre Trade (default on, user request): the close-up stays at the held position but turns each frame to the centre
+of both fighters' framing bones (head, hands, feet, hips) and widens past FOV 35 only as far as needed to fit them
+inside the same margins as the fight camera (VersusGame.CentreOnFighters). The original holds a fixed view.
+
+BATTLE EFFECT TUNING SCENE (user request 28 Oct 2026)
+Every remaster choice on top of the original effect data now lives in one asset,
+Assets/_Project/Resources/BattleEffectTuning.asset (Scripts/Runtime/BattleEffectTuning.cs), read live by every
+VersusGame: common effects on/off, hit effect size and glare, the hit shake (on/off, presets, strength of all
+shakes), follow-rate influence and the camera's three smoothing times, the trade (threshold, speed, length,
+FOV, ease, centring) and the KO (speed, length, FOV, ease, centring, Rage Drive shot). The per-scene VersusGame
+fields it replaces (commonBattleEffects, hitShake, tradeLength, smoothTrade, centreTrade) are gone;
+Temp/localversus2-common-effects now writes the asset.
+Scene Assets/_Project/Scenes/BattleEffectTuning.unity (Remaster > Battle Effects > Create tuning scene, or flag
+Temp/create-effect-tuning-scene; Scripts/Editor/BattleEffectTuningSetup.cs) is a copy of the saved LocalVersus2
+that skips character select, auto-fights and shows the tuning panel (VersusGame.effectTuningPanel; F6 toggles the
+panel in any battle). The panel (Scripts/Runtime/VersusGameTuningPanel.cs) has sliders for every value, buttons
+that play each effect on demand without changing the fight (HIT / COUNTER / GUARD at the struck point, the three
+shakes, TRADE, KO, RAGE DRIVE KO), SAVE (writes the asset; in a player build, a JSON next to the save data),
+ORIGINAL (the inspected executable's behaviour: no hit shake, original timing, fixed views) and DEFAULTS (the
+remaster's first tuning). Values change live; only SAVE keeps them for other battles and across Play sessions.
+Exchanges (user request, same day): in the tuning scene the fighters stand idle (VersusGame.effectDemosOnly, a
+panel toggle) and the HIT / COUNTER / GUARD / TRADE / KO / RAGE DRIVE KO buttons make them act the exchange out
+(Scripts/Runtime/BattleEffectDemo.cs): both are placed on the fight line at a measured distance, then P1 presses the
+button whose move lands fastest (a jab); for COUNTER P2 starts its slowest landing press first so the jab lands in
+its startup; for GUARD P2 holds back (the distance is the one its guard was measured at, since holding back walks
+it away); for TRADE both press their heaviest landing move, the slower first, so both land on one tick; KO puts P2
+at 1 health; RAGE DRIVE KO also grants P1 Rage and forces its 0x801B move (the movelist demos carry no Rage Drive
+input). Which press is which move, its startup, reach and whether a standing guard blocks it are measured on a
+scratch BattleModel with the same movesets each time, so new fighters need no table. Press again to replay; a KO
+replays after the round restarts. Harness EffectDemo: 30 of 30 exchanges (5 pairings) produce their event. The
+presentation-only buttons (HIT FX, shakes, the three cameras) remain below them.
+
+THE LOSER'S KO ACTION STARTS AT ONCE (user request 28 Oct 2026, remaster choice)
+Measured (harness KoAction, 55 CPU KOs at full speed): a KO'ing blow on a standing fighter played its whole stagger
+(sDm_tohtai 37 ticks, sDm_dm_spin_r 43), returned the fighter to its stance for a tick, and only then did the
+stance's "on death" cancel (condition 135) start fatal_s, the 80-tick standing collapse: death move at tick 31
+(26-44), lying at 111. Launched KOs were already falling within 2 ticks. On top of that the KO near-freeze held
+everyone still for 1.5 s.
+Now (BattleEffectTuning, both on by default; ORIGINAL turns them off):
+  Standing loser collapses at once (koCollapseAtOnce -> BattleModel.immediateKoCollapse): a KO'ing, unblocked blow
+    whose reaction keeps the body on its feet (never airborne, not downed) forces the loser's fatal_s on the blow's
+    tick. KoAction: 29 of 55 KOs, death move at tick 0, lying at 80. Launched KOs unchanged.
+  Slow-down holds only the winner (koFreezeWinnerOnly): the KO's 1% slow-down is applied to the winner in the model
+    (BattleModel.SlowFighter, the 0x828C mechanism) instead of Time.timeScale, so the loser's KO action plays at
+    full speed under the KO camera.
+Whether the original skips the stagger is not established from the executable: the move data's route is the
+stagger -> stance -> fatal_s one. Baselines after the change: KoStand 1 of 116 (the known sDw_JACKup case),
+KoOverlap slide median 1.26 m (was 1.45), bodies close 0.3% of ticks (unchanged), Jitter 0.9 reversals.

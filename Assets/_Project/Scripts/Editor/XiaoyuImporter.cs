@@ -47,7 +47,7 @@ namespace Versus.Remaster.Editor
             var surface=Texture(entry.unity.surface);if(surface){material.SetTexture(entry.unity.specular?"_SpecGlossMap":"_MetallicGlossMap",surface);material.EnableKeyword(entry.unity.specular?"_SPECGLOSSMAP":"_METALLICGLOSSMAP");}
             var occlusion=Texture(entry.unity.occlusion);if(occlusion)material.SetTexture("_OcclusionMap",occlusion);
             if(entry.unity.cutout){material.SetFloat("_Mode",1);material.SetFloat("_Cutoff",.25f);material.EnableKeyword("_ALPHATEST_ON");material.SetOverrideTag("RenderType","TransparentCutout");material.renderQueue=(int)RenderQueue.AlphaTest;}
-            HdrpProjectSetup.ConvertMaterial(material);if(HdrpProjectSetup.IsEyeShadow(material))HdrpProjectSetup.MakeEyeShadowTransparent(material);EditorUtility.SetDirty(material);return material;
+            HdrpProjectSetup.ConvertMaterial(material);if(HdrpProjectSetup.IsEyeShadow(material))HdrpProjectSetup.MakeEyeShadowTransparent(material);if(HdrpProjectSetup.IsLashOrBrow(material))HdrpProjectSetup.MakeLashOrBrowUnlit(material);EditorUtility.SetDirty(material);return material;
         }
         // xia_bdu_1p stores some sections as unshared triangles, so RecalculateNormals shades
         // every face flat. Share corners with identical position, UV and skin weights in those

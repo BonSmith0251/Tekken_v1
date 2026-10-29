@@ -1,4 +1,4 @@
-WARDROBE (JIN, KAZUYA, XIAOYU, ALISA, KATARINA)
+WARDROBE (JIN, KAZUYA, XIAOYU, ALISA, KATARINA, LIDIA)
 
 Open Assets/_Project/Scenes/Wardrobe.unity and press Play. The bar at the top
 switches character. OUTFITS loads one of the character's complete outfit sets.
@@ -45,10 +45,21 @@ HAIR slot with nothing saved keeps the model's item and logs a warning, since a
 character cannot go without one. The console logs each outfit chosen.
 Selections are saved by item name (so they survive rebuilds) to
 Assets/_Project/Resources/FightWardrobe/<code>.json: jin.json, kazuya.json,
-xia.json, asa.json, ltn.json. A player build saves its own changes under persistentDataPath. The
-wardrobe assets are found through the editor asset database, so player builds
-need them placed under Resources/Wardrobe first. Cloth physics runs only in the
-Wardrobe scene; Xiaoyu's museum keeps her own hair and skirt dynamics.
+xia.json, asa.json, ltn.json, nsd.json. A player build saves its own changes under persistentDataPath.
+Cloth physics runs only in the Wardrobe scene; Xiaoyu's museum keeps her own hair and skirt dynamics.
+
+PLAYER BUILDS PACKAGE ONLY SAVED ITEMS
+Before every player build, WardrobeBuildPackager copies each wardrobe into
+Assets/_Project/Resources/Wardrobe and strips the prefabs, hat-hair variants and
+tint textures of every item that is not saved. Item names stay, so dressing still
+hides them. After the build the copies are deleted again; a failed build's copies
+are deleted on the next editor load. The editor ignores that folder. So save the
+items you want in the Wardrobe scene before building; unsaved items are not in
+the player. A required slot with nothing saved keeps the item the model already
+wears (without its game-default tint). Report what would be packaged:
+Remaster > Wardrobe > Report saved items packaged for builds (or Temp/package-wardrobe),
+written to Validation/Wardrobe/build-package.json. Sizes there count only what the
+wardrobe adds beyond the character asset (model, preset outfits, motions).
 
 Cloth & hair physics (on by default) simulates what the character wears: Unity
 Cloth on the sections the game itself simulates as APEX cloth, and springs on the
@@ -59,14 +70,17 @@ feathers, Classic, Formal and School Uniform skirts and shirt, and Panda shirt.
 The toggle shows the live cloth and spring counts.
 
 Inventory: each character's customization table,
-Character/Item/CharacterItem/<JIN|KAZ|XIA|ASA|LTN>. Every CharacterItem (CI_*) whose
+Character/Item/CharacterItem/<JIN|KAZ|XIA|ASA|LTN|NSD|BOB|LEO>. Every CharacterItem (CI_*) whose
 ItemPosition is one of the five slots and that names a mesh:
   Jin     22 upper, 19 lower, 18 hair, 23 head, 33 glasses
   Kazuya  20 upper, 19 lower, 18 hair, 24 head, 32 glasses
   Xiaoyu  16 upper, 18 lower, 21 hair, 31 head, 31 glasses
   Alisa   16 upper, 18 lower, 20 hair, 32 head, 31 glasses
   Katarina 16 upper, 17 lower, 22 hair, 29 head, 34 glasses
-Skipped: entries without a mesh (CI_*_bdu_t_yamasa_y, CI_kaz_hed_volcano,
+  Lidia    13 upper, 16 lower, 21 hair, 28 head, 31 glasses
+  Bob      16 upper, 15 lower, 17 hair, 26 head, 32 glasses
+  Leo      18 upper, 18 lower, 19 hair, 32 head, 32 glasses
+Skipped: entries without a mesh (CI_*_bdu_t_yamasa_y, Bob's and Leo's included, CI_kaz_hed_volcano,
 CI_xia_har_1Ptest), Kazuya's six developer cloth-test sheets, and Xiaoyu's
 CI_xia_har_1p_old, which uses the same mesh as her Default 1P hair; Alisa's CI_asa_hed_off
 and a second CI for her battle-bunny head.
@@ -81,7 +95,8 @@ glasses use her own skeleton asset (asa_base/Meshes/SKT_CH_asa); with the base
 skeleton's Head_Socket they landed beside her head, turned 90 degrees.
 Katarina's default glasses (CI_ltn_gla_1p) are a Blueprint item: the export reads the
 mesh from the Blueprint's StaticMeshComponent (SM_CH_ltn_gla_1p_A). Her glasses use the
-base skeleton's socket.
+base skeleton's socket. Lidia's CI_nsd_hed_1p has no mesh, only a hair dependency;
+it is skipped, and an empty head slot keeps her default hair.
 Common items (Item/Meshes/cmn, fitted per character) are marked *. Head items
 with a DependencyMesh swap the default hair for the trimmed variant the game uses
 under that item; other hairs are left as is. Glasses are shared static meshes on
@@ -98,12 +113,12 @@ from the Xiaoyu museum setup; the game's own APEX cloth assets and physics asset
 (max distances, constraints, collision bodies) are not decoded, so cloth freedom
 is estimated from each garment's height below the waist.
 
-Rebuild one character (code jin, kaz, xia, asa or ltn; folder Jin, Kazuya, Xiaoyu, Alisa or Katarina):
+Rebuild one character (code jin, kaz, xia, asa, ltn, nsd, bob or leo; folder Jin, Kazuya, Xiaoyu, Alisa, Katarina, Lidia, Bob or Leo):
   UnityRemaster/export_wardrobe.py --character <code>
   resolve_material_colors.py --source Assets/_Project/Characters/<Name>/Source/Wardrobe
   prepare_jin_costume_materials.py --source Assets/_Project/Characters/<Name>/Source/Wardrobe --out Assets/_Project/Characters/<Name>/Wardrobe/Textures
   (outfit sets: resolve_material_colors.py, then prepare ... --tint-only, adding
-  --baked-when-complete for Jin/Source/Costumes, Xiaoyu/Source/Base, Alisa/Source/Base and Katarina/Source/Base;
+  --baked-when-complete for Jin/Source/Costumes, Xiaoyu/Source/Base, Alisa/Source/Base, Katarina/Source/Base, Lidia/Source/Base, Bob/Source/Base and Leo/Source/Base;
   images untouched; UnityRemaster/run_colors.sh runs all of it)
 Colors only: Remaster > Rebuild <Name> wardrobe, or the Temp/tints-<code>-wardrobe flag.
 then Remaster > Rebuild <Name> wardrobe (writes Assets/_Project/Wardrobe/<Folder>Wardrobe.asset)

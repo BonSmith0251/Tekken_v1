@@ -75,7 +75,7 @@ namespace Versus.Remaster
             if(!blit)blit=new Material(Resources.Load<Shader>("CostumeTint")){hideFlags=HideFlags.HideAndDontSave};
             // Hair has no mask: Color01 covers the whole texture.
             if(!fullMask){fullMask=new Texture2D(1,1,TextureFormat.RGBA32,false,true){hideFlags=HideFlags.HideAndDontSave};fullMask.SetPixel(0,0,new Color(1,0,0,1));fullMask.Apply();}
-            blit.SetTexture("_MaskTex",tint.maskMap?tint.maskMap:fullMask);
+            blit.SetTexture("_MaskTex",tint.maskMap?tint.maskMap:fullMask);blit.SetFloat("_Layered",tint.layered?1:0);
             for(int s=0;s<Slots;s++)
             {
                 // Saved colors are what the user picked (sRGB); the shader mixes in linear space.

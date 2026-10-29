@@ -1,0 +1,55 @@
+{
+  "characterCode": "nsd",
+  "displayName": "Lidia Sobieska",
+  "characterId": 56,
+  "characterIdNote": "Roster order; her moves never test her own id.",
+  "dlc": true,
+  "dlcNote": "Her staging bodies and their hand/face/camera tracks, and her Rage Art cameras, live in the MOTA banks inside nsdmot.bin (property values without the 0x4000 kind bit: banks 0 body, 1 hands, 2 face, 4 camera).",
+  "animationPrefix": "nd",
+  "moveNamePrefix": "Nd_",
+  "stanceMoveId": 1422,
+  "stanceAnimation": "ndto_kamae",
+  "introMoveId": 2187,
+  "moveset": "decrypted/tkdata/mothead/bin/nsdmot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/nsdrotsm.arc",
+  "archiveSha256": "5a8c0f0871a17b0571ae68d3d23d2f07e778703b2649610a8f8f96eceb819800",
+  "targetRig": "Assets/_Project/Characters/Lidia/Source/Base/target-rig.json",
+  "targetRigSha256": "e85b292a024dd58eba7db9c3c5048295a9811d18896906d70e0b32110937502a",
+  "bindOrientationDeltaDegreesFromReference": 0.00010585416209144744,
+  "costumes": [
+    "Default 1P",
+    "Chic",
+    "VIP"
+  ],
+  "eyes": "T_CH_jul_eye_S (Julia's binary iris mask); prepare_lidia_materials.py uses the iris weight directly.",
+  "moveRecords": 2272,
+  "uniqueBodyClips": 1415,
+  "cancelBranches": 7942,
+  "entranceMoves": [
+    2265,
+    2266,
+    2267
+  ],
+  "victoryMoves": [
+    2268,
+    2269,
+    2270,
+    2271
+  ],
+  "pairedVictoryWithoutCamera": 2270,
+  "stagingFingerCheck": "nd_s00 (2265) flicks index and middle fingers back 13-14 deg for ~75 frames; her baker allows 15 deg.",
+  "commandGraph": {
+    "file": "Assets/_Project/Resources/CommandGraph/nsd.json",
+    "plainDemos": "91/92",
+    "setupDemos": "21/25",
+    "failing": [
+      "101 Law of the Land (after a successful parry)"
+    ]
+  },
+  "rageArtCameras": [
+    "nsd_m0",
+    "nsd_m1"
+  ],
+  "bakeNote": "Motion bake needs max_workers=1 when commit memory is short.",
+  "originalGameVisualComparison": false
+}

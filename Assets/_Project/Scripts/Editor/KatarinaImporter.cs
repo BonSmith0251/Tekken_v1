@@ -52,6 +52,7 @@ namespace Versus.Remaster.Editor
             HdrpProjectSetup.ConvertMaterial(material);
             // The lip is an alpha overlay on the face skin, as for Xiaoyu and Alisa.
             if(HdrpProjectSetup.IsEyeShadow(material) || entry.name.EndsWith("_lip"))HdrpProjectSetup.MakeEyeShadowTransparent(material);
+            if(HdrpProjectSetup.IsLashOrBrow(material))HdrpProjectSetup.MakeLashOrBrowUnlit(material);
             EditorUtility.SetDirty(material);return material;
         }
         // Same rule as Xiaoyu's importer: share corners only in sections stored as unshared

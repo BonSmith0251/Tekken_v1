@@ -1,0 +1,60 @@
+{
+  "characterCode": "bob",
+  "displayName": "Bob",
+  "characterId": 31,
+  "characterIdNote": "Roster order.",
+  "animationPrefix": "fa",
+  "moveNamePrefix": "Ft_",
+  "stanceMoveId": 1443,
+  "stanceAnimation": "ikfa_kamae(DVD)",
+  "introMoveId": 2237,
+  "moveset": "decrypted/tkdata/mothead/bin/bobmot.bin",
+  "archive": "decrypted/tkdata/mothead/mask/bobrotsm.arc",
+  "archiveSha256": "fcf4ea216fe306c646b211d28808d54e9e4d75eaaf8eb5e27565baf881240e95",
+  "targetRig": "Assets/_Project/Characters/Bob/Source/Base/target-rig.json",
+  "targetRigSha256": "52ce32e4d1df9046f395078ea25aa4291e3f91391ef9be1253ea80855c29504d",
+  "bodyBoneCount": 19,
+  "bindOrientationDeltaDegreesFromReference": 0.076330285117014,
+  "bindOrientationNote": "R_Foot bind differs 0.076 deg from the reference basis; prepare_bob_moveset.py allows 0.1.",
+  "meshPositionBasis": "UE centimeters (x,y,z) -> Unity meters (-x,z,y)",
+  "facePiece": "bob_fac",
+  "costumes": [
+    "Default 1P",
+    "Classic",
+    "Humpty",
+    "Stripe Vest"
+  ],
+  "moveRecords": 2325,
+  "uniqueBodyClips": 1394,
+  "cancelBranches": 8503,
+  "entranceMoves": [
+    2318,
+    2319,
+    2320,
+    2321
+  ],
+  "victoryMoves": [
+    2322,
+    2323,
+    2324
+  ],
+  "commandGraph": {
+    "file": "Assets/_Project/Resources/CommandGraph/bob.json",
+    "tracesMatchingReference": "113/113",
+    "plainDemos": "89/90",
+    "failing": [
+      "Quick Langouste (b,B+2+3) starts no move in the reference yet"
+    ]
+  },
+  "rageArtCameras": [
+    "bob_96",
+    "bob_97"
+  ],
+  "notes": [
+    "Staging bodies bend further than the others; prepare_bob_staging.py allows a knee bend down to -0.58.",
+    "Select and VS art use the shared 7FR_DEF VS_ART set.",
+    "Humpty: the offline seam check flagged the fac|bdu collar (up to 1.9 cm); Unity renders show no gap, the high collar covers it. Stubble (MI_CH_bob_fah_*) is an alpha overlay; HdrpProjectSetup.IsEyeShadow now makes it transparent (it rendered as a grey slab)."
+  ],
+  "bakeNote": "Motion bake needs max_workers=1 when commit memory is short.",
+  "originalGameVisualComparison": false
+}

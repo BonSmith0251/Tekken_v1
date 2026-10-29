@@ -31,6 +31,17 @@ namespace Versus.Remaster
         public int CurrentAction => current;
         public bool Ready => catalog != null && bones != null;
 
+        Quaternion fadeTurnFrom = Quaternion.identity, fadeTurnTo = Quaternion.identity;
+        bool fadeTurnPending;
+
+        /// <summary>The fighter's transform turned at once from <paramref name="from"/> to <paramref name="to"/>
+        /// (a heading cut): the pose fading out of the previous move is counter-rotated so it stays where
+        /// it was in the world while the new move blends in.</summary>
+        public void HoldFadeAcrossTurn(Quaternion from, Quaternion to)
+        {
+            fadeTurnFrom = from; fadeTurnTo = to; fadeTurnPending = true;
+        }
+
         public void SetPresentation(int action, float frame, bool loop, bool rootMotion = false, Func<int, int> frameMap = null)
         {
             presentationAction = action;
@@ -165,6 +176,18 @@ namespace Versus.Remaster
                 // converted walk and victory clips: planted-foot slide drops from metres to centimetres).
                 float dx = root.x - positions[0].x, dy = root.y - positions[0].y;
                 root.x = positions[0].x - dy; root.y = positions[0].y - dx;
+            }
+            if (fadeTurnPending)
+            {
+                fadeTurnPending = false;
+                if (fadeClock >= 0 && fadeFrom != null && bones[0].parent)
+                {
+                    // BASE's parent turns with the transform: P_old = T_old * T_new^-1 * P_new.
+                    var parentNow = bones[0].parent.rotation;
+                    var parentBefore = fadeTurnFrom * Quaternion.Inverse(fadeTurnTo) * parentNow;
+                    var hold = Quaternion.Inverse(parentNow) * parentBefore;
+                    fadeFrom[0] = hold * fadeFrom[0]; fadeRoot = hold * fadeRoot;
+                }
             }
             float fade = fadeClock < 0 ? 1 : Mathf.SmoothStep(0, 1, (clock - fadeClock) * 60 / CrossfadeFrames);
             if (fade >= 1) fadeClock = -1;

@@ -16,6 +16,8 @@ namespace Versus.Remaster
     public static class FightWardrobe
     {
         public const string None="none";
+        // Player builds load wardrobes from Resources/Wardrobe, holding only the saved pieces.
+        public const string PackagedFolder="Assets/_Project/Resources/Wardrobe";
         [Serializable] class SlotData { public string slot; public string[] pieces; }
         // A picked item color: piece, color slot (0-3 for Color01..04) and sRGB hex.
         [Serializable] class ColorData { public string piece; public int slot; public string color; }
@@ -35,7 +37,10 @@ namespace Versus.Remaster
 #if UNITY_EDITOR
             foreach(string guid in UnityEditor.AssetDatabase.FindAssets("t:CharacterWardrobe"))
             {
-                var wardrobe=UnityEditor.AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(UnityEditor.AssetDatabase.GUIDToAssetPath(guid));
+                string path=UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+                // Skip the stripped copies a player build packages (WardrobeBuildPackager).
+                if(path.StartsWith(PackagedFolder+"/",StringComparison.OrdinalIgnoreCase))continue;
+                var wardrobe=UnityEditor.AssetDatabase.LoadAssetAtPath<CharacterWardrobe>(path);
                 if(wardrobe && wardrobe.character==character)return wardrobe;
             }
             return null;

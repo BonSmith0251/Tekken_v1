@@ -22,6 +22,8 @@ namespace Versus.Remaster
             // Head items can replace one hair (dependencyBase) with a trimmed variant while worn.
             public string dependencyBase;
             public GameObject dependency;
+            // The dependency's renderer name, kept when a build strips the dependency prefab.
+            public string dependencyRenderer;
             // Material sections the game simulates as cloth (APEX) on this piece.
             public string[] cloth;
             // Model renderers this piece also replaces (Alisa's upper items include her forearms).
@@ -40,6 +42,9 @@ namespace Versus.Remaster
             public bool baked;
             // Hair: no mask, one color (Color01) over the whole texture.
             public bool hair;
+            // The game's layered mask (Color02 base, then R Color01, G Color03, B Color04) instead of
+            // the weighted mix; CostumeTint.shader and the bakes follow it per character (Bob so far).
+            public bool layered;
         }
     }
 }
