@@ -153,4 +153,4 @@ Check the renderer split first. Codex's `UnityRemaster/CategoryBuild` copy still
 - **Skirts distort even with cloth off.** Hem vertices weighted to thigh and hip helpers flare sideways. On a runtime mesh copy, blend those weights toward a "Skirt suspension" bone that follows the pelvis position and the `Base` rotation.
 - **Pin waistband panels by geometry.** Panels that share the skirt material are pinned when their minimum y is above about 1 m.
 - **Check at 60 fps.** Test after settling, during attacks and across timeline seeks. Reset on seek, not on loop wrap.
-- **Feathers need cutout** like hair and eyelashes; opaque feather cards showed jagged dark patches.
+- **Feathers need cutout** like hair (eyelashes and eyebrows end as HDRP/Unlit transparent, see project-and-rendering.md); opaque feather cards showed jagged dark patches.

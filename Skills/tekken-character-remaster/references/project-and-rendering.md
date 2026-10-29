@@ -95,18 +95,31 @@ All importers convert legacy Standard materials through `HdrpProjectSetup.Conver
   - The fix: `prepare_alisa_materials.py` borrows Xiaoyu's lip alpha whenever a lip diffuse has none, which works because the lip mesh and UV layout match, and keeps Alisa's own colour. `AlisaImporter` then makes `*_lip` transparent with `MakeEyeShadowTransparent`.
   - `IsEyeShadow` does not match `_lip`, so other importers need the same special case.
   - Check whether each cooked overlay diffuse kept its alpha. Once it's lost, the original mask can't be recovered from that texture; the borrowed shape is an approximation, so disclose it.
-- **Lips, eyebrows and eyelashes are never opaque.** Opaque, all three "look strange" (the user's words, fixing Alisa), and the user set the current state as the reference (2026-10-25):
+- **Lips, eyebrows and eyelashes are never opaque.** Opaque, all three "look strange" (the user's words, fixing Alisa). The user set the lip state on 2026-10-25 and asked on 2026-10-29 for every eyebrow and eyelash to be "unlit -> transparent":
 
-  | Materials | Surface |
+  | Materials | Shader and surface |
   |---|---|
-  | `*_lip` | transparent alpha blend, queue 3000 |
-  | `*_eyebrow`, `*_eyelash` (Alisa, Xiaoyu, Jin's versus model) | alpha cutout at 0.25, queue 2475 |
-  | `*_eyebrow`, `*_eyelash` (Jin's museum costumes, Kazuya) | transparent alpha blend |
+  | `*_lip` | HDRP/Lit, transparent alpha blend, queue 3000 |
+  | `*_eyebrow`, `*_eyelash`, Katarina's `*_matuge` and the `MI_CH_xia_blow2`/`blow22` brows she borrows | **HDRP/Unlit**, Surface Type Transparent, Blend Mode Alpha, no alpha clipping; diffuse in `_UnlitColorMap`, tint in `_UnlitColor` |
 
-  Both brow and lash conventions render acceptably; match the fighter's existing convention rather than flipping one to the other.
-  - Make the importer produce the state, so a re-import keeps it. The prepare script's `cutout` list must contain `eyebrow` and `eyelash` alongside hair and feathers, and the importer must send `*_lip` through `MakeEyeShadowTransparent`.
-  - After any import, list these materials' `_SurfaceType`, `_AlphaCutoffEnable` and render queue, and flag any that are opaque with no cutout.
+  - `HdrpProjectSetup.IsLashOrBrow` matches these names, excluding `_gla_`. `MI_CH_cmn_gla_blow` is the browline glasses frame, a Lit wardrobe item. A first pass without the exclusion converted it in all six wardrobes, and it had to be restored.
+  - `HdrpProjectSetup.MakeLashOrBrowUnlit` does the conversion. It keeps the diffuse map, the colour and the double-sided flag.
+  - Every importer (`Jin`/`JinCostume`/`JinMaterialSetup`, `Kazuya`, `Xiaoyu`, `Alisa`, `Katarina`, `Lidia`) calls it right after `ConvertMaterial`, so a re-import keeps the state. Do the same in a new fighter's importer.
+  - To fix existing materials, use the menu item *Remaster/Rendering/Make eyelashes and eyebrows unlit transparent*, or `touch Temp/fix-lash-brow`. It converts every match under `Characters/` and writes `Validation/HDRP/lash-brow.json`, which lists each material's shader, surface and map; check it.
+  - Before 2026-10-29 the project mixed alpha-cut HDRP/Lit (Jin/Base, Lidia), HDRP/Unlit transparent (Jin's costumes, Kazuya) and the built-in `Unlit/Transparent` (Alisa, Xiaoyu, Katarina, set by hand). The built-in one is not an HDRP shader, so never use it.
+  - Unlit ignores scene lights. Under a stage with much higher exposure than the museum's fixed EV 0, check the brows don't go black.
+  - The prepare script's `cutout` list still needs `eyebrow` and `eyelash`, so the Standard → Lit step keeps their alpha before the Unlit switch. The importer must still send `*_lip` through `MakeEyeShadowTransparent`.
+  - After any import, check `lash-brow.json` and list the lips' `_SurfaceType`; flag anything opaque.
 - **Two-tone eye shader.** The eye material's specular slot holds `T_CH_eye_S`, which separates the white iris from the black pupil against a flat grey sclera. `Color01` tints the iris and `Color02` the sclera. Multiplying the whole eyeball by Color01 turned Xiaoyu's sclera red. `prepare_xiaoyu_materials.py` uses `iris = |S - S[0,0]| / min(S[0,0], 1 - S[0,0])`, `tint = iris*C1 + (1-iris)*C2` and `albedo = linear(diffuse.r) * tint`. `prepare_jin_materials.py` uses a different Color01–04 path; check each prepare script.
+- **Second eye shader, `M_CH_Eye_IN_02`.** Lidia's `MI_CH_nsd_Eyes` has this parent (shared with Master Raven, `mrz`), not the common `M_CH_Eye_IN`. Its parameters:
+  - `Diffuse` (`T_CH_nsd_eye_D`) is a full-colour eyeball. Use its sclera as authored.
+  - `Iris` (`T_CH_nsd_eye_iris_D`) is a close-up iris with its pupil. The exporters' `choose()` dropped it, because it isn't a diffuse, normal, mask or specular slot.
+  - `Height_Spec_Rough` (Julia's `T_CH_jul_eye_S`): R is the binary iris disc, G is iris detail and height, and B is the outside and an inner ring. B is not the pupil (its r is 0.148, while the real pupil's is 0.077).
+  - `Color01` tints the iris. `Color02` (0.56, 0.53, 0.93) is strongly blue. Run through the two-tone sclera path, it turned her eyeballs lavender, and the user reported "Lidia's eyes look a little blue" (2026-10-29). It's left unapplied; its real role in the shader graph wasn't decoded.
+  - The fix is `prepare_lidia_materials.py`. It keeps the diffuse eyeball, and scales the iris texture so its pupil (luminance < 0.18) matches the diffuse's pupil (< 0.1). It centres the iris on the R disc, blends it in with a slightly blurred R mask, and tints it with linear Color01.
+  - `export_lidia.py` now records `iris` in the manifest and exports the texture. On older exports, copy `T_CH_nsd_eye_iris_D.png` into `Source/Base/Textures` by hand.
+  - Before preparing any new fighter's eyes, print the eye material's parent chain and parameters (`Diffuse`/`Iris`/`Height_Spec_Rough` versus `T_CH_eye_D`/`T_CH_eye_S`).
+  - Check eyes with *Remaster/Rendering/Capture eye close-ups* (`touch Temp/capture-eyes`, writes `Validation/Eyes/*`). It covers Jin, Xiaoyu and Lidia; add new fighters to `EyeCloseupCapture.Run`. Character face captures framed from the side (`LidiaCapture`'s `face-front`) are too far to judge eye colour.
 - **Eyeball gloss.** Smoothness 0.45 was an importer fallback, not a source value, and gave a broad milky reflection. `*_Eyes` use about 0.25, stored in the mask map's alpha by the prepare script; the `.mat` file's `_Smoothness: 0.45` is unused when a mask map is assigned. The real cornea highlight is the separate `Eye_ADD` layer (Ref_Intensity 0.3, cubemap, `T_CH_eye_ref_small`, `T_CH_Eye_outer_N`), which every importer still drops along with `MI_CH_tear`. Disclose it as an open gap.
 - **Masks are not regenerated by prepare scripts.** `*_MaskMap.png` is built only inside `ConvertMaterial`. After re-running a prepare script, reconvert the material or copy the changed channel into the mask.
 - **Material prep conventions.**

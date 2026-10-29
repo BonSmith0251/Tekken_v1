@@ -53,8 +53,8 @@ The JSON output identifies candidates and unresolved references, not semantic pr
   - no all-zero `*_MaskMap.png`;
   - no SpecularColor material ID without a specular map;
   - every alpha face overlay transparent (`*_eye_shadow`, `*_eye_corner`, `*_lip`), with its cooked diffuse still carrying alpha (Alisa's lip lost it);
-  - eyebrows and eyelashes alpha-cut (0.25) or transparent, never opaque;
-  - eyes tinted two-tone (iris versus sclera) with smoothness around 0.25;
+  - eyebrows and eyelashes on `HDRP/Unlit`, Surface Type Transparent (alpha blend), never Lit and never the built-in `Unlit/Transparent` (not an HDRP shader: it renders pink); `HdrpProjectSetup.MakeLashOrBrowUnlit`;
+  - eyes tinted two-tone (iris versus sclera) with smoothness around 0.25, after checking the eye material's parent: `M_CH_Eye_IN` (Color02 tints the sclera) or `M_CH_Eye_IN_02` (own coloured eyeball plus an `Iris` texture; Color02 is not a sclera tint, and applying it turned Lidia's eyes blue);
   - roughly 0.55–0.8 vertices per triangle (3.00 means triangle soup and flat shading);
   - re-imported meshes really updated (the `CopySerialized` trap);
   - every `ATH_*_Btop` detach bone parented to the limb whose skin it drives, with limbs measured under a bent pose (Alisa's upper arm bowed with each elbow bend).
