@@ -1,101 +1,57 @@
 TEKKEN VERSUS REMASTER - UNITY WORKSPACE
 
 PROJECT LAYOUT
-Assets/_Project/Characters/<Name>/  one folder per fighter (Jin, Kazuya, Xiaoyu, Alisa)
+Assets/_Project/Characters/<Name>/  one folder per fighter
+    (Jin, Kazuya, Xiaoyu, Alisa, Katarina, Lidia, Bob, Leo)
     Source/     extracted inputs the importers read (Base, Costumes, Wardrobe, Motion)
     Costumes/   imported outfits (materials, meshes, prefabs, textures)
-    Wardrobe/   imported wearable items; Base/ is Jin's original versus import
-    Motion/, References/   Jin's decoded and retargeted motion libraries
+    Wardrobe/   imported wearable items; Jin's Base/ is his original versus import
+    Jin/Motion, Jin/References   Jin's decoded and retargeted motion libraries
 Assets/_Project/Shared/Textures/    textures used by more than one fighter
-Assets/_Project/Stages/Source/      extracted stage geometry
+Assets/_Project/Stages/Source/      extracted stage geometry (stg00-stg32 and variants)
 Assets/_Project/Scripts/Runtime, Scripts/Editor
 Assets/_Project/Scenes, Resources, Museum, Wardrobe, Rendering, Settings
-Docs/  feature notes (museum, staging, wardrobe, battle effects, HDRP...)
+Docs/  feature notes (battle, HUD, effects, sound, museum, staging, wardrobe, HDRP...)
 Tools/, References/, Validation/, Skills/  pipeline tools, extracted references, checks
 
 Open with Unity 2023.2.22f1. Double-click Open in Unity.cmd.
-Open Assets/_Project/Scenes/LocalVersus.unity and press Play, then Enter.
-The Windows build is Builds/Windows/VersusRemaster.exe when built successfully.
-Double-click Play Jin Prototype.cmd to launch the Windows build.
 
-DECODED ORIGINAL MOTION SOURCES
-Open Remaster > Original Jin motions to search 1,710 decoded clips by animation
-or move name. Select a result and scrub its original frame samples in the Inspector.
-These source assets are under Assets/_Project/Characters/Jin/Motion/Original; move names,
-damage and active-frame references are under References/OriginalJinMotion.
-The source samples have been decoded. Remaster > Jin retarget preview plays 194
-compatible C8 clips with corrected v2 axes and exports Unity AnimationClips.
-The original compressed fighting motions still require a correct bone mapping.
-LocalVersus now uses the retargeted Jin inter-round clip common/0462 as its
-prototype idle stance, blended with the procedural actions described below.
-Use Remaster > Build Jin prototype to validate the motion imports and rebuild.
+WHAT TO OPEN
+LocalVersus2.unity   the versus match: character select, VS screen, original HUD and
+                     round calls, the fighters' own movesets and command lists, impact
+                     effects, camera, sound and music. Press Play. Controls and what is
+                     original are in Docs/ORIGINAL_COMMANDS.txt; F1 shows the command list.
+CharacterMuseum.unity   browse every fighter's outfits, moves and entrances (Docs/CHARACTER_MUSEUM.txt)
+Wardrobe.unity       try on items, change colours, choose the items every other scene uses
+                     (Docs/WARDROBE.txt)
+staging_test.unity   plays each fighter's entrances and victories with the original
+                     cameras (Docs/STAGING_TEST.txt)
+env_scene.unity      choose which original stage versus uses
+BattleEffectTuning.unity, BattleCameraShowcase.unity, CharacterEffectsShowcase.unity
+                     tuning and showcase scenes for effects and cameras
+The first LocalVersus scene was retired on 2026-10-27; use LocalVersus2.
 
-WHAT IS PLAYABLE
-Local two-player fighting prototype: movement and sidestep, four attacks,
-standing/crouching guard, hitstun, health, 60-second rounds, first to two,
-draw handling, pause, rematch, shared keyboard and two joystick slots.
-Player 1 is Jin Kazama, using the extracted model, bind skeleton, skin weights,
-UVs and 13 textures. Player 2 remains the Cobalt procedural stand-in.
-Jin has a retargeted idle stance and newly authored procedural walking, punches,
-kicks, guard, crouching and hit/KO reactions. The stance is an original
-inter-round pose repurposed for this prototype, not his recovered combat idle.
-The arena is new procedural geometry. Material tints are approximations.
-The combat rules are new prototype rules, not reconstructed Tekken frame data.
+BUILDS
+Builds/ is empty at the moment. To build the player, create the file Temp/build-localversus2
+in the project while Unity is open (its content is the output folder; empty means
+Builds/LocalVersus2). A build is about 7 GB, so check free space on D: first. Play LocalVersus2.cmd
+starts Builds/LocalVersus2/LocalVersus2.exe; Open Character Museum.cmd starts a museum
+build if you make one in Builds/Museum.
 
-CONTROLS
-P1: WASD movement; F/G/H/J jab/cross/sweep/kick; R guard; T crouch.
-P2: arrows movement; numpad 1/2/4/5 attacks (or comma/period/slash/semicolon);
-    Right Shift guard; Right Ctrl crouch.
-Gamepads: slots 1 and 2, left stick movement, buttons 0-3 attacks,
-    button 4 guard and button 5 crouch. Mapping varies by device; edit the
-    Input Manager and VersusGame.ReadInput if your controller differs.
-Enter start/rematch, Esc pause, F1 controls. Focus loss pauses the match.
-Keyboard ghosting/rollover depends on hardware; gamepads are optional.
-
-EDITING
-Assets/_Project/Settings/LocalVersus.asset: health, timer, rounds, movement,
-    four moves' startup/active/recovery frames, reach, damage, height and stun.
-Assets/_Project/Scripts/Runtime/BattleModel.cs: 60 Hz combat simulation.
-Assets/_Project/Scripts/Runtime/FighterView.cs: replaceable procedural presentation.
-Assets/_Project/Scripts/Runtime/JinRig.cs: procedural two-bone IK on Jin's original rig.
-Assets/_Project/Scripts/Runtime/JinRetargetMotion.cs: retargeted idle playback and blending.
-Assets/_Project/Resources/JinRetargeted/Stance.bytes: corrected common/0462 samples.
-Assets/_Project/Resources/JinPlayable.prefab: the playable four-part skinned Jin.
-Assets/_Project/Characters/Jin/Base: imported native Unity meshes, textures and materials.
-Assets/_Project/Scripts/Runtime/VersusGame.cs: local input, arena, HUD, camera and sound.
-Remaster menu: open scene, validate combat, build Windows, browse references.
+CHECKS
+Validation/ holds the results of the automated checks (command graph, sound, effects,
+wardrobe captures, HDRP, stages). The Claude skills in ~/.claude/skills (tekken-versus-battle,
+tekken-versus-ui, tekken-stage-environments, tekken-sound, tekken-costume-wardrobe) describe
+how to re-run each one; tekken-versus-battle has a compile check and headless battle harnesses.
 
 EXTRACTED DATA
-References/ExtractedVersus contains the 8,094 extracted Unreal function
-bytecodes, metadata and indices. These are references, NOT Unity C# scripts.
-The complete native Tekken combat implementation has not been recovered.
+References/ExtractedVersus contains the 8,094 extracted Unreal function bytecodes,
+metadata and indices. These are references, NOT Unity C# scripts. The native Tekken
+combat implementation has not been recovered; the remaster runs the game's own move data
+instead (References/CommandGraph, Assets/_Project/Resources/CommandGraph).
 Cooked .uasset/.umap copies remain at the path in Tools/source-paths.json.
 Do not drag those cooked packages into Unity expecting them to run.
-
-Assets/_Project/Characters/Jin/References contains converted static reference-pose
-OBJ geometry: face, hair, upper and lower costume. These older samples have no rig,
-skin weights, UVs, textures, or animation. Use JinPlayable.prefab for the fighter.
-Use Remaster > Create Jin reference scene to inspect the assembled samples.
-Each OBJ has a .source.json provenance and SHA256 record.
-
-Export another supported static/reference-pose mesh from PowerShell:
-  python Tools/export_mesh.py "TekkenGame/Content/.../Mesh.uasset" "Assets/_Project/References/MyMesh.obj"
-The exporter requires the existing Asset Workshop and Python dependencies.
 Edit Tools/source-paths.json if you move the original game or tool.
 
-NEXT REMASTER WORK
-Jin's skeleton, skinning and UV conversion is implemented in Characters/Jin/Source/Base
-and Scripts/Editor/JinImporter.cs. The importer preserves up to four influences per vertex.
-Convert the original animation clips, material shaders and additional characters.
-Retarget animation to Unity; replace FighterView with an Animator-driven view.
-Rebuild authentic movement, throws, juggling, movesets and collision timing.
-Add character/stage selection and the final versus HUD/presentation.
-Other modes and networking are outside this project's local-versus scope.
-
-VALIDATION
-Validation/combat-checks.json records the actual Unity combat check result.
-Validation/build-result.json records the Windows build result if completed.
 Unity command line reference:
 https://docs.unity3d.com/2023.2/Documentation/Manual/EditorCommandLineArguments.html
-Legacy input reference:
-https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Input.html

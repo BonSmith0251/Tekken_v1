@@ -1,11 +1,12 @@
-ORIGINAL COMMANDS - KAZUYA, JIN AND XIAOYU
+ORIGINAL COMMANDS - JIN, KAZUYA, XIAOYU, ALISA, KATARINA, LIDIA, BOB AND LEO
 
-Choose the fighters on the VersusGame component (Player One / Player Two Fighter:
-Kazuya, Jin or Xiaoyu; LocalVersus2 defaults to Jin versus Xiaoyu). Each fighter
-plays its own entrance and victory takes, moveset and Rage Art camera.
+Choose the fighters on the VersusGame component (Player One / Player Two Fighter;
+LocalVersus2 defaults to Jin versus Xiaoyu). Each fighter plays its own entrance
+and victory takes, moveset and Rage Art camera.
 
-LocalVersus and LocalVersus2 now run the installed game's own movesets. Every
-input goes through the fighter's original command graph (kazmot.bin/jinmot.bin):
+LocalVersus2 runs the installed game's own movesets (the first LocalVersus scene
+was retired on 2026-10-27). Every input goes through the fighter's original
+command graph (<chr>mot.bin, for example jinmot.bin):
 cancel lists, group cancels, input sequences, frame windows, starting frames,
 requirements and move transitions. Press F1 in a match for each fighter's
 command list, taken from the game's movelist.
@@ -16,7 +17,17 @@ CONTROLS (Tekken 7 PC defaults; directions are relative to facing)
                              (no number pad: O = 1  P = 2  L = 3  ; = 4)
   Pads Left stick; X = 1, Y = 2, A = 3, B = 4 (original pad layout)
   Hold back to guard high/mid, down-back to guard low. f,f dash; b,b backdash;
-  tap up/down to sidestep; hold down to crouch. F2 toggles CPU auto-fight.
+  tap up/down to sidestep; hold down to crouch. F2 toggles CPU auto-fight (on by default in LocalVersus2).
+  In auto-fight, the RAGE ART P1 / P2 buttons (or F3 / F4) make that CPU walk in and do its
+  original Rage Art: Rage is granted for the attempt only (the model never spends Rage), the input
+  is the movelist's Rage Art demo (CommandGraph rageArt, Tools/CommandGraph/add_rage_art_demo.py),
+  and the Rage Art camera plays for all eight fighters (Alisa and Lidia use the camera bank inside
+  their moveset files, tracks asa_m0/1 and nsd_m0/1; the RageCamera harness checks all 16 cases).
+  The TRADE EFFECT button (or F5), in either mode, plays the trade slow-down at once (10% speed, shake 5,
+  held close-up at FOV 35) without changing the fight: a demonstration aid. F6 shows the effect tuning panel
+  (sliders for Resources/BattleEffectTuning.asset, which every battle reads, buttons that make the fighters act out
+  each exchange, and presentation-only buttons); the BattleEffectTuning scene opens with it on and its fighters
+  idle between exchanges. See Docs/BATTLE_CAMERA_EFFECTS.txt.
 
 WHAT IS ORIGINAL
   - Which move every input produces, strings and their windows, motion inputs
@@ -96,6 +107,11 @@ REGENERATE
     cd Tools/CommandGraph && python test_movelist_demos.py --graph ../../Assets/_Project/Resources/CommandGraph/jin.json
         --movelist ../../References/CommandGraph/jin-movelist.json --opponent 9
         --report ../../Validation/CommandGraph/jin-reference.json
+  Knockback (hit pushbacks) is part of the export; to add it to an existing graph:
+    python Tools/CommandGraph/pushbacks.py --moveset <tkdata>/mothead/bin/<chr>mot.bin --graph <graph json>
+  Body collision (hip, head and feet tracks) is added after export (FK, a few minutes per fighter):
+    python Tools/CommandGraph/body_points.py --graph <graph json> --catalog Assets/_Project/Museum/<Full>/catalog.json
+        --skeleton Assets/_Project/Characters/<Name>/Source/Base/<code>_bdl_1P.json --asset Assets/_Project/Museum/<Name>.asset
   Rage Art cameras: python Tools/CommandGraph/export_fight_cameras.py --graph <graph json>
         --archive <tkdata>/mothead/mask/<chr>rotsm.arc --code <chr> --out Assets/_Project/Resources/FightCameras
   Requirement condition names follow the TKMovesets Tekken 7 editor labels
