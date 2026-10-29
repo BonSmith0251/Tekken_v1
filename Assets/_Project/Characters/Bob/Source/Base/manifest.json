@@ -1,0 +1,5573 @@
+{
+  "schema": "bob/1",
+  "characterCode": "bob",
+  "costumes": [
+    {
+      "name": "Default 1P",
+      "pieces": [
+        "bob_fac",
+        "bob_fah_1p",
+        "bob_har_1p",
+        "bob_bdu_1p",
+        "bob_bdl_1p"
+      ]
+    },
+    {
+      "name": "Classic",
+      "pieces": [
+        "bob_fac",
+        "bob_fah_1p_old",
+        "bob_har_1p",
+        "bob_bdu_1p_old",
+        "bob_bdl_1p_old"
+      ]
+    },
+    {
+      "name": "Humpty",
+      "pieces": [
+        "bob_fac",
+        "bob_fah_1p",
+        "bob_har_1p",
+        "bob_bdu_humpty",
+        "bob_bdl_humpty"
+      ]
+    },
+    {
+      "name": "Stripe Vest",
+      "pieces": [
+        "bob_fac",
+        "bob_fah_1p",
+        "bob_har_1p",
+        "bob_bdu_stripe_vest",
+        "bob_bdl_stripe_vest"
+      ]
+    }
+  ],
+  "pieces": {
+    "bob_fac": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fac.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Meshes/SK_CH_bob_fac.uasset",
+      "sha256": "4abf9d6452d1ebf52dde9bf37b481c5494ea9da897ce226c893fa12f02e7e8b9",
+      "materials": [
+        "MI_CH_bob_Eye_ADD",
+        "MI_CH_bob_Eyes",
+        "MI_CH_bob_eye_shadow",
+        "MI_CH_bob_eyebrow",
+        "MI_CH_bob_eyelash",
+        "MI_CH_bob_skin_face",
+        "MI_CH_hwo_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    "bob_fah_1p": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fah_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p/Meshes/SK_CH_bob_fah_1p.uasset",
+      "sha256": "441e6b69b4785995f729e647f24c11a449e73f59705ba2392eae04a146ebdda9",
+      "materials": [
+        "MI_CH_bob_fah_1p"
+      ]
+    },
+    "bob_har_1p": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Meshes/SK_CH_bob_har_1p.uasset",
+      "sha256": "ba5b92e45cede34932a19ef8972d8ade13b656f1ace1f5246960276cb3f961d1",
+      "materials": [
+        "MI_CH_bob_hair",
+        "MI_CH_bob_hair_U"
+      ]
+    },
+    "bob_bdu_1p": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Meshes/SK_CH_bob_bdu_1p.uasset",
+      "sha256": "5c6d71309ae8344c0ab77d3360604edb0b969d95706d0170fecea17a7a6cba0d",
+      "materials": [
+        "MI_CH_bob_bdu_1p_jacket",
+        "MI_CH_bob_bdu_1p_necklace",
+        "MI_CH_bob_bdu_1p_shirt_glove_bracelet",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    "bob_bdl_1p": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Meshes/SK_CH_bob_bdl_1p.uasset",
+      "sha256": "365fc02c499765f1dfa363aeedc3410d095633da87f49a06cb1eaadca3928f5e",
+      "materials": [
+        "MI_CH_bob_bdl_1p_boot_belt",
+        "MI_CH_bob_bdl_1p_trousers",
+        "MI_CH_bob_skin_leg"
+      ]
+    },
+    "bob_fah_1p_old": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fah_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p_old/Meshes/SK_CH_bob_fah_1p_old.uasset",
+      "sha256": "4f01b0ab7b302b4c61136411d42f8e69384f0afd5d7d32fa6baf60ddaebad823",
+      "materials": [
+        "MI_CH_bob_fah_1p_old"
+      ]
+    },
+    "bob_bdu_1p_old": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Meshes/SK_CH_bob_bdu_1p_old.uasset",
+      "sha256": "64c9876c0dce673ddb6a85e55f32e5e94a359c7e3b65ffa0510e1992be7261dc",
+      "materials": [
+        "MI_CH_bob_bdu_1p_old_bottun_cloth",
+        "MI_CH_bob_bdu_1p_old_glove",
+        "MI_CH_bob_bdu_1p_old_glovebottun",
+        "MI_CH_bob_bdu_1p_old_glovehimo",
+        "MI_CH_bob_bdu_1p_old_gloveyubi",
+        "MI_CH_bob_bdu_1p_old_mark",
+        "MI_CH_bob_bdu_1p_old_partsbelt",
+        "MI_CH_bob_bdu_1p_old_sas",
+        "MI_CH_bob_bdu_1p_old_sas_joint",
+        "MI_CH_bob_bdu_1p_old_sas_joint_glove",
+        "MI_CH_bob_bdu_1p_old_shirts",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    "bob_bdl_1p_old": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Meshes/SK_CH_bob_bdl_1p_old.uasset",
+      "sha256": "4745641c08a0aae4224fb4448ada34ba06b02b6329692527c9b2033b6ddaa0ed",
+      "materials": [
+        "MI_CH_bob_bdl_1p_old_boots",
+        "MI_CH_bob_bdl_1p_old_bottun_cloth",
+        "MI_CH_bob_bdl_1p_old_pants",
+        "MI_CH_bob_bdl_1p_old_partsbelt"
+      ]
+    },
+    "bob_bdu_humpty": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_humpty.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_humpty/Meshes/SK_CH_bob_bdu_humpty.uasset",
+      "sha256": "ff7e329923e17126033c1c12d676e3506ea340727cbceb65d0be9aad19b58a7c",
+      "materials": [
+        "MI_CH_bob_bdu_humpty",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_hand",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    "bob_bdl_humpty": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_humpty.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Meshes/SK_CH_bob_bdl_humpty.uasset",
+      "sha256": "30b065b2ff0aa360a65fd2c6759aab9b0debd8a09633d6d808dbd02f99d0c433",
+      "materials": [
+        "MI_CH_bob_bdl_humpty_shoes",
+        "MI_CH_bob_bdl_humpty_trousers"
+      ]
+    },
+    "bob_bdu_stripe_vest": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_stripe_vest.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_stripe_vest/Meshes/SK_CH_bob_bdu_stripe_vest.uasset",
+      "sha256": "a412a4bc6f1815ed186331359f8319673a388793f3d11f7c39d07126d10fd7b8",
+      "materials": [
+        "MI_CH_bob_bdu_stripe_vest_shirt",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_hand",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    "bob_bdl_stripe_vest": {
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_stripe_vest.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Meshes/SK_CH_bob_bdl_stripe_vest.uasset",
+      "sha256": "74cbc4b9e783004d230c71a3fdbf9d4986522df0ee6192813c67903b14746209",
+      "materials": [
+        "MI_CH_bob_bdl_stripe_vest_boot",
+        "MI_CH_bob_bdl_stripe_vest_trousers"
+      ]
+    }
+  },
+  "materials": {
+    "MI_CH_bob_Eye_ADD": {
+      "diffuse": "",
+      "normal": "T_CH_Eye_outer_N",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.10000000149011612,
+        "REF_Tex_Scale": 0.44113320112228394,
+        "Ref_TexU": 1.37037193775177,
+        "Ref_TexV": 0.4336283206939697,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eye_ADD_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eye_ADD_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_Eyes": {
+      "diffuse": "T_CH_eye_D",
+      "normal": "",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.019999999552965164,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_eye_D",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.8849999904632568,
+          0.8138139843940735,
+          0.792074978351593,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eyes_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_bdl_1p_boot_belt": {
+      "diffuse": "T_CH_bob_bdl_1P_boot_belt_D",
+      "normal": "T_CH_bob_bdl_1P_boot_belt_N",
+      "mask": "T_CH_bob_bdl_1P_boot_belt_M",
+      "specular": "T_CH_bob_bdl_1P_boot_belt_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_1P_boot_belt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1P_boot_belt_D",
+        "MaskMap": "T_CH_bob_bdl_1P_boot_belt_M",
+        "Normal": "T_CH_bob_bdl_1P_boot_belt_N",
+        "Color01": [
+          0.054999999701976776,
+          0.0433179996907711,
+          0.032349999994039536,
+          1.0
+        ],
+        "Color02": [
+          0.23499999940395355,
+          0.1433500051498413,
+          0.14617200195789337,
+          1.0
+        ],
+        "Color03": [
+          0.2199999988079071,
+          0.09332499653100967,
+          0.04865400120615959,
+          1.0
+        ],
+        "Color04": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Material/MI_CH_bob_bdl_1p_boot_belt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_boot_belt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_boot_belt_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.0433179996907711,
+            0.032349999994039536,
+            0.23499999940395355,
+            0.1433500051498413,
+            0.14617200195789337,
+            0.2199999988079071,
+            0.09332499653100967,
+            0.04865400120615959,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdl_1p_old_boots": {
+      "diffuse": "T_CH_bob_bdl_1p_old_boots_D",
+      "normal": "T_CH_bob_bdl_1p_old_boots_N",
+      "mask": "T_CH_bob_bdl_1p_old_boots_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_boots_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_boots_M",
+        "Normal": "T_CH_bob_bdl_1p_old_boots_N",
+        "Color01": [
+          0.01766500063240528,
+          0.011823000386357307,
+          0.03500000014901161,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_boots.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_boots_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_boots_M.png",
+          "colors": [
+            0.01766500063240528,
+            0.011823000386357307,
+            0.03500000014901161,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdl_1p_old_bottun_cloth": {
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_bottun_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdl_1p_old_pants": {
+      "diffuse": "T_CH_bob_bdl_1p_old_pants_D",
+      "normal": "T_CH_bob_bdl_1p_old_pants_N",
+      "mask": "T_CH_bob_bdl_1p_old_pants_M",
+      "specular": "T_CH_bob_bdl_1p_old_pants_D",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "specluar": "T_CH_bob_bdl_1p_old_pants_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_pants_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_pants_M",
+        "Normal": "T_CH_bob_bdl_1p_old_pants_N",
+        "Color01": [
+          0.12704099714756012,
+          0.25533199310302734,
+          0.4300000071525574,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_pants.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_pants_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_pants_M.png",
+          "colors": [
+            0.12704099714756012,
+            0.25533199310302734,
+            0.4300000071525574,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdl_1p_old_partsbelt": {
+      "diffuse": "T_CH_bob_bdl_1p_old_partsbelt_D",
+      "normal": "T_CH_bob_bdl_1p_old_partsbelt_N",
+      "mask": "T_CH_bob_bdl_1p_old_partsbelt_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_partsbelt_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_partsbelt_M",
+        "Normal": "T_CH_bob_bdl_1p_old_partsbelt_N",
+        "Color01": [
+          0.02905000001192093,
+          0.03182300180196762,
+          0.03500000014901161,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_partsbelt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_partsbelt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_partsbelt_M.png",
+          "colors": [
+            0.02905000001192093,
+            0.03182300180196762,
+            0.03500000014901161,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdl_1p_trousers": {
+      "diffuse": "T_CH_bob_bdl_1P_trousers_D",
+      "normal": "T_CH_bob_bdl_1P_trousers_N",
+      "mask": "T_CH_bob_bdl_1P_trousers_M",
+      "specular": "T_CH_bob_bdl_1P_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_1P_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_1P_trousers_M",
+        "Normal": "T_CH_bob_bdl_1P_trousers_N",
+        "Color01": [
+          0.05842500180006027,
+          0.07252500206232071,
+          0.0949999988079071,
+          1.0
+        ],
+        "Color02": [
+          0.054999999701976776,
+          0.05225000157952309,
+          0.05225000157952309,
+          1.0
+        ],
+        "Color03": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Material/MI_CH_bob_bdl_1p_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_trousers_M.png",
+          "colors": [
+            0.05842500180006027,
+            0.07252500206232071,
+            0.0949999988079071,
+            0.054999999701976776,
+            0.05225000157952309,
+            0.05225000157952309,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdl_humpty_shoes": {
+      "diffuse": "T_CH_bob_bdl_humpty_shoes_D",
+      "normal": "T_CH_bob_bdl_humpty_shoes_N",
+      "mask": "T_CH_bob_bdl_humpty_shoes_M",
+      "specular": "T_CH_bob_bdl_humpty_shoes_D",
+      "params": {
+        "Metallic": 0.30000001192092896,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.3499999940395355,
+        "specluar": "T_CH_bob_bdl_humpty_shoes_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_humpty_shoes_D",
+        "MaskMap": "T_CH_bob_bdl_humpty_shoes_M",
+        "Normal": "T_CH_bob_bdl_humpty_shoes_N",
+        "Color01": [
+          0.29499998688697815,
+          0.005900000222027302,
+          0.016720000654459,
+          1.0
+        ],
+        "Color02": [
+          0.014999999664723873,
+          0.014999999664723873,
+          0.014999999664723873,
+          1.0
+        ],
+        "Color03": [
+          0.7850000262260437,
+          0.30612099170684814,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          0.023250000551342964,
+          0.04023699834942818,
+          0.4650000035762787,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Material/MI_CH_bob_bdl_humpty_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_shoes_M.png",
+          "colors": [
+            0.29499998688697815,
+            0.005900000222027302,
+            0.016720000654459,
+            0.014999999664723873,
+            0.014999999664723873,
+            0.014999999664723873,
+            0.7850000262260437,
+            0.30612099170684814,
+            0.0,
+            0.023250000551342964,
+            0.04023699834942818,
+            0.4650000035762787
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdl_humpty_trousers": {
+      "diffuse": "T_CH_bob_bdl_humpty_trousers_D",
+      "normal": "T_CH_bob_bdl_humpty_trousers_N",
+      "mask": "T_CH_bob_bdl_humpty_trousers_M",
+      "specular": "T_CH_bob_bdl_humpty_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.25999999046325684,
+        "specluar": "T_CH_bob_bdl_humpty_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_humpty_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_humpty_trousers_M",
+        "Normal": "T_CH_bob_bdl_humpty_trousers_N",
+        "Color01": [
+          0.8650000095367432,
+          0.8152559995651245,
+          0.6444249749183655,
+          1.0
+        ],
+        "Color02": [
+          0.5099999904632568,
+          0.010200000368058681,
+          0.028906000778079033,
+          1.0
+        ],
+        "Color03": [
+          0.48500001430511475,
+          0.2187190055847168,
+          0.048500001430511475,
+          1.0
+        ],
+        "Color04": [
+          0.014386000111699104,
+          0.014999999664723873,
+          0.008755999617278576,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Material/MI_CH_bob_bdl_humpty_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_trousers_M.png",
+          "colors": [
+            0.8650000095367432,
+            0.8152559995651245,
+            0.6444249749183655,
+            0.5099999904632568,
+            0.010200000368058681,
+            0.028906000778079033,
+            0.48500001430511475,
+            0.2187190055847168,
+            0.048500001430511475,
+            0.014386000111699104,
+            0.014999999664723873,
+            0.008755999617278576
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdl_stripe_vest_boot": {
+      "diffuse": "T_CH_bob_bdl_stripe_vest_boot_D",
+      "normal": "T_CH_bob_bdl_stripe_vest_boot_N",
+      "mask": "T_CH_bob_bdl_stripe_vest_boot_M",
+      "specular": "T_CH_bob_bdl_stripe_vest_boot_D",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdl_stripe_vest_boot_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_stripe_vest_boot_D",
+        "MaskMap": "T_CH_bob_bdl_stripe_vest_boot_M",
+        "Normal": "T_CH_bob_bdl_stripe_vest_boot_N",
+        "Color01": [
+          0.041554998606443405,
+          0.05999999865889549,
+          0.034678999334573746,
+          1.0
+        ],
+        "Color02": [
+          0.019999999552965164,
+          0.016699999570846558,
+          0.016699999570846558,
+          1.0
+        ],
+        "Color03": [
+          0.02500000037252903,
+          0.02131900005042553,
+          0.015698999166488647,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Material/MI_CH_bob_bdl_stripe_vest_boot.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_boot_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_boot_M.png",
+          "colors": [
+            0.041554998606443405,
+            0.05999999865889549,
+            0.034678999334573746,
+            0.019999999552965164,
+            0.016699999570846558,
+            0.016699999570846558,
+            0.02500000037252903,
+            0.02131900005042553,
+            0.015698999166488647,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdl_stripe_vest_trousers": {
+      "diffuse": "T_CH_bob_bdl_stripe_vest_trousers_D",
+      "normal": "T_CH_bob_bdl_stripe_vest_trousers_N",
+      "mask": "T_CH_bob_bdl_stripe_vest_trousers_M",
+      "specular": "T_CH_bob_bdl_stripe_vest_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_stripe_vest_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_stripe_vest_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_stripe_vest_trousers_M",
+        "Normal": "T_CH_bob_bdl_stripe_vest_trousers_N",
+        "Color01": [
+          0.29499998688697815,
+          0.12079299986362457,
+          0.055105000734329224,
+          1.0
+        ],
+        "Color02": [
+          0.054999999701976776,
+          0.05225000157952309,
+          0.05225000157952309,
+          1.0
+        ],
+        "Color03": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Material/MI_CH_bob_bdl_stripe_vest_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_trousers_M.png",
+          "colors": [
+            0.29499998688697815,
+            0.12079299986362457,
+            0.055105000734329224,
+            0.054999999701976776,
+            0.05225000157952309,
+            0.05225000157952309,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_jacket": {
+      "diffuse": "T_CH_bob_bdu_1P_jacket_D",
+      "normal": "T_CH_bob_bdu_1P_jacket_N",
+      "mask": "T_CH_bob_bdu_1P_jacket_M",
+      "specular": "T_CH_bob_bdu_1P_jacket_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1P_jacket_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_jacket_D",
+        "MaskMap": "T_CH_bob_bdu_1P_jacket_M",
+        "Normal": "T_CH_bob_bdu_1P_jacket_N",
+        "Color01": [
+          0.012325000017881393,
+          0.036240000277757645,
+          0.14499999582767487,
+          1.0
+        ],
+        "Color02": [
+          0.09690000116825104,
+          0.21971100568771362,
+          0.2549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.46000000834465027,
+          0.0,
+          0.02555900067090988,
+          1.0
+        ],
+        "Color04": [
+          0.11969999969005585,
+          0.2849999964237213,
+          0.12353000044822693,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_jacket_M.png",
+          "colors": [
+            0.012325000017881393,
+            0.036240000277757645,
+            0.14499999582767487,
+            0.09690000116825104,
+            0.21971100568771362,
+            0.2549999952316284,
+            0.46000000834465027,
+            0.0,
+            0.02555900067090988,
+            0.11969999969005585,
+            0.2849999964237213,
+            0.12353000044822693
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdu_1p_necklace": {
+      "diffuse": "T_CH_bob_bdu_1P_necklace_D",
+      "normal": "T_CH_bob_bdu_1P_necklace_N",
+      "mask": "T_CH_bob_bdu_1P_necklace_M",
+      "specular": "T_CH_bob_bdu_1P_necklace_D",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_1P_necklace_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_necklace_D",
+        "MaskMap": "T_CH_bob_bdu_1P_necklace_M",
+        "Normal": "T_CH_bob_bdu_1P_necklace_N",
+        "Color01": [
+          0.7950000166893005,
+          0.6288440227508545,
+          0.3537749946117401,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_necklace.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_necklace_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_necklace_M.png",
+          "colors": [
+            0.7950000166893005,
+            0.6288440227508545,
+            0.3537749946117401,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_bottun_cloth": {
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_bottun_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_glove": {
+      "diffuse": "T_CH_bob_bdu_1p_old_glove_D",
+      "normal": "T_CH_bob_bdu_1p_old_glove_N",
+      "mask": "T_CH_bob_bdu_1p_old_glove_M",
+      "specular": "T_CH_bob_bdu_1p_old_glove_D",
+      "params": {
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 6.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_glove_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_glove_M",
+        "Normal": "T_CH_bob_bdu_1p_old_glove_N",
+        "specluar": "T_CH_bob_bdu_1p_old_glove_D",
+        "Color01": [
+          0.15134599804878235,
+          0.11400000005960464,
+          0.20000000298023224,
+          1.0
+        ],
+        "Color02": [
+          0.08724699914455414,
+          0.07964999973773956,
+          0.09000000357627869,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glove.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glove_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glove_M.png",
+          "colors": [
+            0.15134599804878235,
+            0.11400000005960464,
+            0.20000000298023224,
+            0.08724699914455414,
+            0.07964999973773956,
+            0.09000000357627869,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_glovebottun": {
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glovebottun.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdu_1p_old_glovehimo": {
+      "diffuse": "T_CH_bob_bdu_1p_old_glovehimo_D",
+      "normal": "T_CH_bob_bdu_1p_old_glovehimo_N",
+      "mask": "T_CH_bob_bdu_1p_old_glovehimo_M",
+      "specular": "",
+      "params": {
+        "detail_normal_pow": 3.0,
+        "Detail_Normal_Scale": 1.0,
+        "detail_roughness_pow": 7.0,
+        "Metallic": 0.5,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_glovehimo_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_glovehimo_M",
+        "Normal": "T_CH_bob_bdu_1p_old_glovehimo_N",
+        "Color01": [
+          0.019999999552965164,
+          0.019999999552965164,
+          0.019999999552965164,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glovehimo.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glovehimo_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glovehimo_M.png",
+          "colors": [
+            0.019999999552965164,
+            0.019999999552965164,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_gloveyubi": {
+      "diffuse": "T_CH_bob_bdu_1p_old_gloveyubi_D",
+      "normal": "T_CH_bob_bdu_1p_old_gloveyubi_N",
+      "mask": "T_CH_bob_bdu_1p_old_gloveyubi_M",
+      "specular": "",
+      "params": {
+        "Detail_Normal_Scale": 1.5,
+        "detail_roughness_pow": 7.0,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_gloveyubi_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_gloveyubi_M",
+        "Normal": "T_CH_bob_bdu_1p_old_gloveyubi_N",
+        "Color01": [
+          0.18089500069618225,
+          0.15854999423027039,
+          0.20999999344348907,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_gloveyubi.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_gloveyubi_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_gloveyubi_M.png",
+          "colors": [
+            0.18089500069618225,
+            0.15854999423027039,
+            0.20999999344348907,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_mark": {
+      "diffuse": "T_CH_bob_bdu_1p_old_mark_D",
+      "normal": "T_CH_bob_bdu_1p_old_mark_N",
+      "mask": "T_CH_bob_bdu_1p_old_mark_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_mark_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_mark_M",
+        "Normal": "T_CH_bob_bdu_1p_old_mark_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_mark.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_mark_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_mark_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_partsbelt": {
+      "diffuse": "T_CH_bob_bdu_1p_old_partsbelt_D",
+      "normal": "T_CH_bob_bdu_1p_old_partsbelt_N",
+      "mask": "T_CH_bob_bdu_1p_old_partsbelt_M",
+      "specular": "",
+      "params": {
+        "Detail_Normal_Scale": 1.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_partsbelt_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_partsbelt_M",
+        "Normal": "T_CH_bob_bdu_1p_old_partsbelt_N",
+        "Color01": [
+          0.04500000178813934,
+          0.04500000178813934,
+          0.04500000178813934,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_partsbelt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_partsbelt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_partsbelt_M.png",
+          "colors": [
+            0.04500000178813934,
+            0.04500000178813934,
+            0.04500000178813934,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_sas": {
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_M",
+      "specular": "T_CH_bob_bdu_1p_old_sas_D",
+      "params": {
+        "Detail_Normal_Scale": 1.5,
+        "detail_roughness_pow": 5.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_N",
+        "specluar": "T_CH_bob_bdu_1p_old_sas_D",
+        "Color01": [
+          0.9200000166893005,
+          0.21391500532627106,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_M.png",
+          "colors": [
+            0.9200000166893005,
+            0.21391500532627106,
+            0.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_sas_joint": {
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_joint_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_joint_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_joint_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_joint_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+        "Color01": [
+          1.0,
+          0.5080549716949463,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas_joint.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_M.png",
+          "colors": [
+            1.0,
+            0.5080549716949463,
+            0.125,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_old_sas_joint_glove": {
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_joint_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_joint_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_joint_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_joint_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+        "Color01": [
+          1.0,
+          0.5080549716949463,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas_joint_glove.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_M.png",
+          "colors": [
+            1.0,
+            0.5080549716949463,
+            0.125,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdu_1p_old_shirts": {
+      "diffuse": "T_CH_bob_bdu_1p_old_shirt_D",
+      "normal": "T_CH_bob_bdu_1p_old_shirt_N",
+      "mask": "T_CH_bob_bdu_1p_old_shirt_M",
+      "specular": "T_CH_bob_bdu_1p_old_shirt_D",
+      "params": {
+        "Anisotropic": 0.30000001192092896,
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1p_old_shirt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_shirt_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_shirt_M",
+        "Normal": "T_CH_bob_bdu_1p_old_shirt_N",
+        "Color01": [
+          0.9259999990463257,
+          0.03799999877810478,
+          0.009349999949336052,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_shirts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_shirt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_shirt_M.png",
+          "colors": [
+            0.9259999990463257,
+            0.03799999877810478,
+            0.009349999949336052,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    "MI_CH_bob_bdu_1p_shirt_glove_bracelet": {
+      "diffuse": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+      "normal": "T_CH_bob_bdu_1P_shirt_glove_bracelet_N",
+      "mask": "T_CH_bob_bdu_1P_shirt_glove_bracelet_M",
+      "specular": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+        "MaskMap": "T_CH_bob_bdu_1P_shirt_glove_bracelet_M",
+        "Normal": "T_CH_bob_bdu_1P_shirt_glove_bracelet_N",
+        "Color01": [
+          0.75,
+          0.6000000238418579,
+          0.6000000238418579,
+          1.0
+        ],
+        "Color02": [
+          0.42500001192092896,
+          0.3463749885559082,
+          0.3985370099544525,
+          1.0
+        ],
+        "Color03": [
+          0.06453300267457962,
+          0.07000000029802322,
+          0.06637299805879593,
+          1.0
+        ],
+        "Color04": [
+          0.14499999582767487,
+          0.10377400368452072,
+          0.03552500158548355,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_shirt_glove_bracelet.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_shirt_glove_bracelet_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_shirt_glove_bracelet_M.png",
+          "colors": [
+            0.75,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.42500001192092896,
+            0.3463749885559082,
+            0.3985370099544525,
+            0.06453300267457962,
+            0.07000000029802322,
+            0.06637299805879593,
+            0.14499999582767487,
+            0.10377400368452072,
+            0.03552500158548355
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdu_humpty": {
+      "diffuse": "T_CH_bob_bdu_humpty_jacket_D",
+      "normal": "T_CH_bob_bdu_humpty_jacket_N",
+      "mask": "T_CH_bob_bdu_humpty_jacket_M",
+      "specular": "T_CH_bob_bdu_humpty_jacket_S",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_humpty_jacket_S",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_humpty_jacket_D",
+        "MaskMap": "T_CH_bob_bdu_humpty_jacket_M",
+        "Normal": "T_CH_bob_bdu_humpty_jacket_N",
+        "Color01": [
+          0.061250001192092896,
+          0.09254200011491776,
+          0.875,
+          1.0
+        ],
+        "Color02": [
+          0.7350000143051147,
+          0.7350000143051147,
+          0.7350000143051147,
+          1.0
+        ],
+        "Color03": [
+          0.7850000262260437,
+          0.30612099170684814,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          0.5099999904632568,
+          0.010200000368058681,
+          0.028906000778079033,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_humpty/Material/MI_CH_bob_bdu_humpty.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_humpty_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_humpty_jacket_M.png",
+          "colors": [
+            0.061250001192092896,
+            0.09254200011491776,
+            0.875,
+            0.7350000143051147,
+            0.7350000143051147,
+            0.7350000143051147,
+            0.7850000262260437,
+            0.30612099170684814,
+            0.0,
+            0.5099999904632568,
+            0.010200000368058681,
+            0.028906000778079033
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_bdu_stripe_vest_shirt": {
+      "diffuse": "T_CH_bob_bdu_stripe_vest_shirt_D",
+      "normal": "T_CH_bob_bdu_stripe_vest_shirt_N",
+      "mask": "T_CH_bob_bdu_stripe_vest_shirt_M",
+      "specular": "T_CH_bob_bdu_stripe_vest_shirt_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_stripe_vest_shirt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_stripe_vest_shirt_D",
+        "MaskMap": "T_CH_bob_bdu_stripe_vest_shirt_M",
+        "Normal": "T_CH_bob_bdu_stripe_vest_shirt_N",
+        "Color01": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.02981499955058098,
+          0.028853999450802803,
+          0.2549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.4350000023841858,
+          0.0,
+          0.024170000106096268,
+          1.0
+        ],
+        "Color04": [
+          0.6499999761581421,
+          0.6499999761581421,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_stripe_vest/Material/MI_CH_bob_bdu_stripe_vest_shirt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_stripe_vest_shirt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_stripe_vest_shirt_M.png",
+          "colors": [
+            0.0,
+            0.0,
+            0.0,
+            0.02981499955058098,
+            0.028853999450802803,
+            0.2549999952316284,
+            0.4350000023841858,
+            0.0,
+            0.024170000106096268,
+            0.6499999761581421,
+            0.6499999761581421,
+            0.6499999761581421
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_eye_shadow": {
+      "diffuse": "T_CH_bob_eyeshadow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyeshadow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eye_shadow.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eye_shadow_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eye_shadow_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_eyebrow": {
+      "diffuse": "T_CH_bob_eyebrow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyebrow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eyebrow.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyebrow_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyebrow_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    "MI_CH_bob_eyelash": {
+      "diffuse": "T_CH_bob_eyelush_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyelush_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eyelash.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyelash_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyelash_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    "MI_CH_bob_fah_1p": {
+      "diffuse": "T_CH_bob_fah_1p",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_fah_1p",
+        "Color01": [
+          0.8199999928474426,
+          0.517907977104187,
+          0.24017299711704254,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p/Material/MI_CH_bob_fah_1p.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_fah_1p_old": {
+      "diffuse": "T_CH_bob_fah_1p_old_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_fah_1p_old_D",
+        "Color01": [
+          0.6800000071525574,
+          0.5502359867095947,
+          0.42106398940086365,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p_old/Material/MI_CH_bob_fah_1p_old.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_old_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_old_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_hair": {
+      "diffuse": "T_CH_bob_har_1p_D",
+      "normal": "T_CH_bob_har_1p_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_bob_har_1p_S",
+      "params": {
+        "BaseLowerContrast": 0.10000000149011612,
+        "BaseUpperContrast": 0.30000001192092896,
+        "AlphaThreshold": 0.6000000238418579,
+        "Anisotropic": 0.25,
+        "Metallic": 0.30000001192092896,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_bob_har_1p_D",
+        "Normal": "T_CH_bob_har_1p_N",
+        "SpecularTexture": "T_CH_bob_har_1p_S",
+        "Color01": [
+          0.699999988079071,
+          0.431768000125885,
+          0.17499999701976776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Material/MI_CH_bob_hair.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_hair_U": {
+      "diffuse": "T_CH_bob_har_1p_D",
+      "normal": "T_CH_bob_har_1p_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_bob_har_1p_S",
+      "params": {
+        "BaseLowerContrast": 0.20000000298023224,
+        "BaseUpperContrast": 0.25,
+        "AlphaThreshold": 0.6000000238418579,
+        "Anisotropic": 0.009999999776482582,
+        "Metallic": 0.30000001192092896,
+        "Normalize": 0.30000001192092896,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_bob_har_1p_D",
+        "Normal": "T_CH_bob_har_1p_N",
+        "SpecularTexture": "T_CH_bob_har_1p_S",
+        "Color01": [
+          0.699999988079071,
+          0.431768000125885,
+          0.17499999701976776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Material/MI_CH_bob_hair_U.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "MI_CH_bob_skin_arm": {
+      "diffuse": "T_CH_bob_arm_D",
+      "normal": "T_CH_bob_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_arm_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_arm_D",
+        "Normal": "T_CH_bob_arm_N",
+        "Specular": "T_CH_male_arm_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_arm.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_skin_body": {
+      "diffuse": "T_CH_bob_body_D",
+      "normal": "T_CH_bob_body_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_body_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_body_D",
+        "Normal": "T_CH_bob_body_N",
+        "Specular": "T_CH_male_body_S",
+        "WetDiffuse": "T_CH_male_body_wet_D",
+        "WetNormal": "T_CH_male_body_wet_N",
+        "wetSpec": "T_CH_male_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_body.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_skin_face": {
+      "diffuse": "T_CH_bob_face_D",
+      "normal": "T_CH_bob_face_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_bob_face_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_face_D",
+        "Normal": "T_CH_bob_face_N",
+        "Specular": "T_CH_bob_face_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_head_wet_N",
+        "wetSpec": "T_CH_male_head_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_face.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_skin_hand": {
+      "diffuse": "T_CH_male_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_hand_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_male_hand_D",
+        "Normal": "T_CH_male_hand_N",
+        "Specular": "T_CH_male_hand_S",
+        "WetDiffuse": "T_CH_male_hand_wet_D",
+        "WetNormal": "T_CH_male_hand_wet_N",
+        "wetSpec": "T_CH_male_hand_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_hand.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_skin_leg": {
+      "diffuse": "T_CH_bob_leg_D",
+      "normal": "T_CH_bob_leg_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_leg_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_leg_D",
+        "Normal": "T_CH_bob_leg_N",
+        "Specular": "T_CH_male_leg_S",
+        "WetDiffuse": "T_CH_male_leg_wet_D",
+        "WetNormal": "T_CH_male_leg_wet_N",
+        "wetSpec": "T_CH_male_leg_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_bob_skin_neck": {
+      "diffuse": "T_CH_bob_neck_D",
+      "normal": "T_CH_bob_neck_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_neck_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_neck_D",
+        "Normal": "T_CH_bob_neck_N",
+        "Specular": "T_CH_male_neck_S",
+        "WetDiffuse": "T_CH_male_neck_wet_D",
+        "WetNormal": "T_CH_male_neck_wet_N",
+        "wetSpec": "T_CH_male_neck_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_neck.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    "MI_CH_hwo_teeth": {
+      "diffuse": "T_CH_hwo_teeth_d",
+      "normal": "T_CH_lar_teeth_N",
+      "mask": "",
+      "specular": "T_CH_lar_teeth_R",
+      "params": {
+        "DiffuseValue": 0.5,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_hwo_teeth_d",
+        "Normal": "T_CH_lar_teeth_N",
+        "Roughness": "T_CH_lar_teeth_R",
+        "SubSurfaceScatterColor": [
+          0.05000000074505806,
+          0.007499999832361937,
+          0.007499999832361937,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/hwo/Face/hwo_fac/Material/MI_CH_hwo_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_mouth": {
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {
+        "DiffuseValue": 1.0,
+        "Metallic": 0.30000001192092896,
+        "Roughness": "T_CH_mouth_inner_R",
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_mouth_inner_D",
+        "Normal": "T_CH_mouth_inner_N",
+        "SubSurfaceScatterColor": [
+          0.2750000059604645,
+          0.04399999976158142,
+          0.04399999976158142,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/face/MI_CH_mouth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    "MI_CH_tear": {
+      "diffuse": "T_CH_tear_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameterCube_0": "eye_cubemap"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/face/MI_CH_tear.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_tear_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_tear_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    }
+  },
+  "gaps": [],
+  "pieceEntries": [
+    {
+      "name": "bob_fac",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fac.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Meshes/SK_CH_bob_fac.uasset",
+      "sha256": "4abf9d6452d1ebf52dde9bf37b481c5494ea9da897ce226c893fa12f02e7e8b9",
+      "materials": [
+        "MI_CH_bob_Eye_ADD",
+        "MI_CH_bob_Eyes",
+        "MI_CH_bob_eye_shadow",
+        "MI_CH_bob_eyebrow",
+        "MI_CH_bob_eyelash",
+        "MI_CH_bob_skin_face",
+        "MI_CH_hwo_teeth",
+        "MI_CH_mouth",
+        "MI_CH_tear"
+      ]
+    },
+    {
+      "name": "bob_fah_1p",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fah_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p/Meshes/SK_CH_bob_fah_1p.uasset",
+      "sha256": "441e6b69b4785995f729e647f24c11a449e73f59705ba2392eae04a146ebdda9",
+      "materials": [
+        "MI_CH_bob_fah_1p"
+      ]
+    },
+    {
+      "name": "bob_har_1p",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_har_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Meshes/SK_CH_bob_har_1p.uasset",
+      "sha256": "ba5b92e45cede34932a19ef8972d8ade13b656f1ace1f5246960276cb3f961d1",
+      "materials": [
+        "MI_CH_bob_hair",
+        "MI_CH_bob_hair_U"
+      ]
+    },
+    {
+      "name": "bob_bdu_1p",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Meshes/SK_CH_bob_bdu_1p.uasset",
+      "sha256": "5c6d71309ae8344c0ab77d3360604edb0b969d95706d0170fecea17a7a6cba0d",
+      "materials": [
+        "MI_CH_bob_bdu_1p_jacket",
+        "MI_CH_bob_bdu_1p_necklace",
+        "MI_CH_bob_bdu_1p_shirt_glove_bracelet",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    {
+      "name": "bob_bdl_1p",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_1p.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Meshes/SK_CH_bob_bdl_1p.uasset",
+      "sha256": "365fc02c499765f1dfa363aeedc3410d095633da87f49a06cb1eaadca3928f5e",
+      "materials": [
+        "MI_CH_bob_bdl_1p_boot_belt",
+        "MI_CH_bob_bdl_1p_trousers",
+        "MI_CH_bob_skin_leg"
+      ]
+    },
+    {
+      "name": "bob_fah_1p_old",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_fah_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p_old/Meshes/SK_CH_bob_fah_1p_old.uasset",
+      "sha256": "4f01b0ab7b302b4c61136411d42f8e69384f0afd5d7d32fa6baf60ddaebad823",
+      "materials": [
+        "MI_CH_bob_fah_1p_old"
+      ]
+    },
+    {
+      "name": "bob_bdu_1p_old",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Meshes/SK_CH_bob_bdu_1p_old.uasset",
+      "sha256": "64c9876c0dce673ddb6a85e55f32e5e94a359c7e3b65ffa0510e1992be7261dc",
+      "materials": [
+        "MI_CH_bob_bdu_1p_old_bottun_cloth",
+        "MI_CH_bob_bdu_1p_old_glove",
+        "MI_CH_bob_bdu_1p_old_glovebottun",
+        "MI_CH_bob_bdu_1p_old_glovehimo",
+        "MI_CH_bob_bdu_1p_old_gloveyubi",
+        "MI_CH_bob_bdu_1p_old_mark",
+        "MI_CH_bob_bdu_1p_old_partsbelt",
+        "MI_CH_bob_bdu_1p_old_sas",
+        "MI_CH_bob_bdu_1p_old_sas_joint",
+        "MI_CH_bob_bdu_1p_old_sas_joint_glove",
+        "MI_CH_bob_bdu_1p_old_shirts",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    {
+      "name": "bob_bdl_1p_old",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_1p_old.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Meshes/SK_CH_bob_bdl_1p_old.uasset",
+      "sha256": "4745641c08a0aae4224fb4448ada34ba06b02b6329692527c9b2033b6ddaa0ed",
+      "materials": [
+        "MI_CH_bob_bdl_1p_old_boots",
+        "MI_CH_bob_bdl_1p_old_bottun_cloth",
+        "MI_CH_bob_bdl_1p_old_pants",
+        "MI_CH_bob_bdl_1p_old_partsbelt"
+      ]
+    },
+    {
+      "name": "bob_bdu_humpty",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_humpty.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_humpty/Meshes/SK_CH_bob_bdu_humpty.uasset",
+      "sha256": "ff7e329923e17126033c1c12d676e3506ea340727cbceb65d0be9aad19b58a7c",
+      "materials": [
+        "MI_CH_bob_bdu_humpty",
+        "MI_CH_bob_skin_body",
+        "MI_CH_bob_skin_hand",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    {
+      "name": "bob_bdl_humpty",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_humpty.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Meshes/SK_CH_bob_bdl_humpty.uasset",
+      "sha256": "30b065b2ff0aa360a65fd2c6759aab9b0debd8a09633d6d808dbd02f99d0c433",
+      "materials": [
+        "MI_CH_bob_bdl_humpty_shoes",
+        "MI_CH_bob_bdl_humpty_trousers"
+      ]
+    },
+    {
+      "name": "bob_bdu_stripe_vest",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdu_stripe_vest.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_stripe_vest/Meshes/SK_CH_bob_bdu_stripe_vest.uasset",
+      "sha256": "a412a4bc6f1815ed186331359f8319673a388793f3d11f7c39d07126d10fd7b8",
+      "materials": [
+        "MI_CH_bob_bdu_stripe_vest_shirt",
+        "MI_CH_bob_skin_arm",
+        "MI_CH_bob_skin_hand",
+        "MI_CH_bob_skin_neck"
+      ]
+    },
+    {
+      "name": "bob_bdl_stripe_vest",
+      "path": "Assets/_Project/Characters/Bob/Source/Base/bob_bdl_stripe_vest.json",
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Meshes/SK_CH_bob_bdl_stripe_vest.uasset",
+      "sha256": "74cbc4b9e783004d230c71a3fdbf9d4986522df0ee6192813c67903b14746209",
+      "materials": [
+        "MI_CH_bob_bdl_stripe_vest_boot",
+        "MI_CH_bob_bdl_stripe_vest_trousers"
+      ]
+    }
+  ],
+  "materialEntries": [
+    {
+      "name": "MI_CH_bob_Eye_ADD",
+      "diffuse": "",
+      "normal": "T_CH_Eye_outer_N",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "Ref_Intensity": 0.10000000149011612,
+        "REF_Tex_Scale": 0.44113320112228394,
+        "Ref_TexU": 1.37037193775177,
+        "Ref_TexV": 0.4336283206939697,
+        "Refraction_Max": 1.0,
+        "Refraction_Min": 1.0,
+        "RefractionDepthBias": 0.0,
+        "Cubemap": "TC5_Charch_Cube",
+        "Eyes_Light": "T_CH_eye_ref_small",
+        "Fresnel_Color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_Eye_ADD.uasset",
+      "unity": {
+        "albedo": "",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eye_ADD_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eye_ADD_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_Eyes",
+      "diffuse": "T_CH_eye_D",
+      "normal": "",
+      "mask": "",
+      "specular": "T_CH_eye_S",
+      "params": {
+        "HeightRatio": -0.019999999552965164,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_eye_D",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.8849999904632568,
+          0.8138139843940735,
+          0.792074978351593,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_Eyes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eyes_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_Eyes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_boot_belt",
+      "diffuse": "T_CH_bob_bdl_1P_boot_belt_D",
+      "normal": "T_CH_bob_bdl_1P_boot_belt_N",
+      "mask": "T_CH_bob_bdl_1P_boot_belt_M",
+      "specular": "T_CH_bob_bdl_1P_boot_belt_D",
+      "params": {
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_1P_boot_belt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1P_boot_belt_D",
+        "MaskMap": "T_CH_bob_bdl_1P_boot_belt_M",
+        "Normal": "T_CH_bob_bdl_1P_boot_belt_N",
+        "Color01": [
+          0.054999999701976776,
+          0.0433179996907711,
+          0.032349999994039536,
+          1.0
+        ],
+        "Color02": [
+          0.23499999940395355,
+          0.1433500051498413,
+          0.14617200195789337,
+          1.0
+        ],
+        "Color03": [
+          0.2199999988079071,
+          0.09332499653100967,
+          0.04865400120615959,
+          1.0
+        ],
+        "Color04": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Material/MI_CH_bob_bdl_1p_boot_belt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_boot_belt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_boot_belt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_boot_belt_M.png",
+          "colors": [
+            0.054999999701976776,
+            0.0433179996907711,
+            0.032349999994039536,
+            0.23499999940395355,
+            0.1433500051498413,
+            0.14617200195789337,
+            0.2199999988079071,
+            0.09332499653100967,
+            0.04865400120615959,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_old_boots",
+      "diffuse": "T_CH_bob_bdl_1p_old_boots_D",
+      "normal": "T_CH_bob_bdl_1p_old_boots_N",
+      "mask": "T_CH_bob_bdl_1p_old_boots_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_boots_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_boots_M",
+        "Normal": "T_CH_bob_bdl_1p_old_boots_N",
+        "Color01": [
+          0.01766500063240528,
+          0.011823000386357307,
+          0.03500000014901161,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_boots.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_boots_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_boots_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_boots_M.png",
+          "colors": [
+            0.01766500063240528,
+            0.011823000386357307,
+            0.03500000014901161,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_old_bottun_cloth",
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_bottun_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_bottun_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_old_pants",
+      "diffuse": "T_CH_bob_bdl_1p_old_pants_D",
+      "normal": "T_CH_bob_bdl_1p_old_pants_N",
+      "mask": "T_CH_bob_bdl_1p_old_pants_M",
+      "specular": "T_CH_bob_bdl_1p_old_pants_D",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.5,
+        "specluar": "T_CH_bob_bdl_1p_old_pants_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_pants_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_pants_M",
+        "Normal": "T_CH_bob_bdl_1p_old_pants_N",
+        "Color01": [
+          0.12704099714756012,
+          0.25533199310302734,
+          0.4300000071525574,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_pants.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_pants_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_pants_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_pants_M.png",
+          "colors": [
+            0.12704099714756012,
+            0.25533199310302734,
+            0.4300000071525574,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_old_partsbelt",
+      "diffuse": "T_CH_bob_bdl_1p_old_partsbelt_D",
+      "normal": "T_CH_bob_bdl_1p_old_partsbelt_N",
+      "mask": "T_CH_bob_bdl_1p_old_partsbelt_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1p_old_partsbelt_D",
+        "MaskMap": "T_CH_bob_bdl_1p_old_partsbelt_M",
+        "Normal": "T_CH_bob_bdl_1p_old_partsbelt_N",
+        "Color01": [
+          0.02905000001192093,
+          0.03182300180196762,
+          0.03500000014901161,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p_old/Material/MI_CH_bob_bdl_1p_old_partsbelt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_old_partsbelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_partsbelt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1p_old_partsbelt_M.png",
+          "colors": [
+            0.02905000001192093,
+            0.03182300180196762,
+            0.03500000014901161,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdl_1p_trousers",
+      "diffuse": "T_CH_bob_bdl_1P_trousers_D",
+      "normal": "T_CH_bob_bdl_1P_trousers_N",
+      "mask": "T_CH_bob_bdl_1P_trousers_M",
+      "specular": "T_CH_bob_bdl_1P_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_1P_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_1P_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_1P_trousers_M",
+        "Normal": "T_CH_bob_bdl_1P_trousers_N",
+        "Color01": [
+          0.05842500180006027,
+          0.07252500206232071,
+          0.0949999988079071,
+          1.0
+        ],
+        "Color02": [
+          0.054999999701976776,
+          0.05225000157952309,
+          0.05225000157952309,
+          1.0
+        ],
+        "Color03": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_1p/Material/MI_CH_bob_bdl_1p_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_1p_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_1P_trousers_M.png",
+          "colors": [
+            0.05842500180006027,
+            0.07252500206232071,
+            0.0949999988079071,
+            0.054999999701976776,
+            0.05225000157952309,
+            0.05225000157952309,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdl_humpty_shoes",
+      "diffuse": "T_CH_bob_bdl_humpty_shoes_D",
+      "normal": "T_CH_bob_bdl_humpty_shoes_N",
+      "mask": "T_CH_bob_bdl_humpty_shoes_M",
+      "specular": "T_CH_bob_bdl_humpty_shoes_D",
+      "params": {
+        "Metallic": 0.30000001192092896,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.3499999940395355,
+        "specluar": "T_CH_bob_bdl_humpty_shoes_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_humpty_shoes_D",
+        "MaskMap": "T_CH_bob_bdl_humpty_shoes_M",
+        "Normal": "T_CH_bob_bdl_humpty_shoes_N",
+        "Color01": [
+          0.29499998688697815,
+          0.005900000222027302,
+          0.016720000654459,
+          1.0
+        ],
+        "Color02": [
+          0.014999999664723873,
+          0.014999999664723873,
+          0.014999999664723873,
+          1.0
+        ],
+        "Color03": [
+          0.7850000262260437,
+          0.30612099170684814,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          0.023250000551342964,
+          0.04023699834942818,
+          0.4650000035762787,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Material/MI_CH_bob_bdl_humpty_shoes.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_shoes_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_shoes_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_shoes_M.png",
+          "colors": [
+            0.29499998688697815,
+            0.005900000222027302,
+            0.016720000654459,
+            0.014999999664723873,
+            0.014999999664723873,
+            0.014999999664723873,
+            0.7850000262260437,
+            0.30612099170684814,
+            0.0,
+            0.023250000551342964,
+            0.04023699834942818,
+            0.4650000035762787
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdl_humpty_trousers",
+      "diffuse": "T_CH_bob_bdl_humpty_trousers_D",
+      "normal": "T_CH_bob_bdl_humpty_trousers_N",
+      "mask": "T_CH_bob_bdl_humpty_trousers_M",
+      "specular": "T_CH_bob_bdl_humpty_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.25999999046325684,
+        "specluar": "T_CH_bob_bdl_humpty_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_humpty_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_humpty_trousers_M",
+        "Normal": "T_CH_bob_bdl_humpty_trousers_N",
+        "Color01": [
+          0.8650000095367432,
+          0.8152559995651245,
+          0.6444249749183655,
+          1.0
+        ],
+        "Color02": [
+          0.5099999904632568,
+          0.010200000368058681,
+          0.028906000778079033,
+          1.0
+        ],
+        "Color03": [
+          0.48500001430511475,
+          0.2187190055847168,
+          0.048500001430511475,
+          1.0
+        ],
+        "Color04": [
+          0.014386000111699104,
+          0.014999999664723873,
+          0.008755999617278576,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_humpty/Material/MI_CH_bob_bdl_humpty_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_humpty_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_humpty_trousers_M.png",
+          "colors": [
+            0.8650000095367432,
+            0.8152559995651245,
+            0.6444249749183655,
+            0.5099999904632568,
+            0.010200000368058681,
+            0.028906000778079033,
+            0.48500001430511475,
+            0.2187190055847168,
+            0.048500001430511475,
+            0.014386000111699104,
+            0.014999999664723873,
+            0.008755999617278576
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdl_stripe_vest_boot",
+      "diffuse": "T_CH_bob_bdl_stripe_vest_boot_D",
+      "normal": "T_CH_bob_bdl_stripe_vest_boot_N",
+      "mask": "T_CH_bob_bdl_stripe_vest_boot_M",
+      "specular": "T_CH_bob_bdl_stripe_vest_boot_D",
+      "params": {
+        "Metallic": 0.5,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdl_stripe_vest_boot_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_stripe_vest_boot_D",
+        "MaskMap": "T_CH_bob_bdl_stripe_vest_boot_M",
+        "Normal": "T_CH_bob_bdl_stripe_vest_boot_N",
+        "Color01": [
+          0.041554998606443405,
+          0.05999999865889549,
+          0.034678999334573746,
+          1.0
+        ],
+        "Color02": [
+          0.019999999552965164,
+          0.016699999570846558,
+          0.016699999570846558,
+          1.0
+        ],
+        "Color03": [
+          0.02500000037252903,
+          0.02131900005042553,
+          0.015698999166488647,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Material/MI_CH_bob_bdl_stripe_vest_boot.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_boot_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_boot_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_boot_M.png",
+          "colors": [
+            0.041554998606443405,
+            0.05999999865889549,
+            0.034678999334573746,
+            0.019999999552965164,
+            0.016699999570846558,
+            0.016699999570846558,
+            0.02500000037252903,
+            0.02131900005042553,
+            0.015698999166488647,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdl_stripe_vest_trousers",
+      "diffuse": "T_CH_bob_bdl_stripe_vest_trousers_D",
+      "normal": "T_CH_bob_bdl_stripe_vest_trousers_N",
+      "mask": "T_CH_bob_bdl_stripe_vest_trousers_M",
+      "specular": "T_CH_bob_bdl_stripe_vest_trousers_D",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdl_stripe_vest_trousers_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdl_stripe_vest_trousers_D",
+        "MaskMap": "T_CH_bob_bdl_stripe_vest_trousers_M",
+        "Normal": "T_CH_bob_bdl_stripe_vest_trousers_N",
+        "Color01": [
+          0.29499998688697815,
+          0.12079299986362457,
+          0.055105000734329224,
+          1.0
+        ],
+        "Color02": [
+          0.054999999701976776,
+          0.05225000157952309,
+          0.05225000157952309,
+          1.0
+        ],
+        "Color03": [
+          0.20499999821186066,
+          0.15675100684165955,
+          0.0768750011920929,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Lower/bob_bdl_stripe_vest/Material/MI_CH_bob_bdl_stripe_vest_trousers.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdl_stripe_vest_trousers_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_trousers_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdl_stripe_vest_trousers_M.png",
+          "colors": [
+            0.29499998688697815,
+            0.12079299986362457,
+            0.055105000734329224,
+            0.054999999701976776,
+            0.05225000157952309,
+            0.05225000157952309,
+            0.20499999821186066,
+            0.15675100684165955,
+            0.0768750011920929,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_jacket",
+      "diffuse": "T_CH_bob_bdu_1P_jacket_D",
+      "normal": "T_CH_bob_bdu_1P_jacket_N",
+      "mask": "T_CH_bob_bdu_1P_jacket_M",
+      "specular": "T_CH_bob_bdu_1P_jacket_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1P_jacket_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_jacket_D",
+        "MaskMap": "T_CH_bob_bdu_1P_jacket_M",
+        "Normal": "T_CH_bob_bdu_1P_jacket_N",
+        "Color01": [
+          0.012325000017881393,
+          0.036240000277757645,
+          0.14499999582767487,
+          1.0
+        ],
+        "Color02": [
+          0.09690000116825104,
+          0.21971100568771362,
+          0.2549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.46000000834465027,
+          0.0,
+          0.02555900067090988,
+          1.0
+        ],
+        "Color04": [
+          0.11969999969005585,
+          0.2849999964237213,
+          0.12353000044822693,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_jacket.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_jacket_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_jacket_M.png",
+          "colors": [
+            0.012325000017881393,
+            0.036240000277757645,
+            0.14499999582767487,
+            0.09690000116825104,
+            0.21971100568771362,
+            0.2549999952316284,
+            0.46000000834465027,
+            0.0,
+            0.02555900067090988,
+            0.11969999969005585,
+            0.2849999964237213,
+            0.12353000044822693
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_necklace",
+      "diffuse": "T_CH_bob_bdu_1P_necklace_D",
+      "normal": "T_CH_bob_bdu_1P_necklace_N",
+      "mask": "T_CH_bob_bdu_1P_necklace_M",
+      "specular": "T_CH_bob_bdu_1P_necklace_D",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_1P_necklace_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_necklace_D",
+        "MaskMap": "T_CH_bob_bdu_1P_necklace_M",
+        "Normal": "T_CH_bob_bdu_1P_necklace_N",
+        "Color01": [
+          0.7950000166893005,
+          0.6288440227508545,
+          0.3537749946117401,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_necklace.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_necklace_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_necklace_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_necklace_M.png",
+          "colors": [
+            0.7950000166893005,
+            0.6288440227508545,
+            0.3537749946117401,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_bottun_cloth",
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_bottun_cloth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_bottun_cloth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_glove",
+      "diffuse": "T_CH_bob_bdu_1p_old_glove_D",
+      "normal": "T_CH_bob_bdu_1p_old_glove_N",
+      "mask": "T_CH_bob_bdu_1p_old_glove_M",
+      "specular": "T_CH_bob_bdu_1p_old_glove_D",
+      "params": {
+        "Detail_Normal_Scale": 2.0,
+        "detail_roughness_pow": 6.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_glove_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_glove_M",
+        "Normal": "T_CH_bob_bdu_1p_old_glove_N",
+        "specluar": "T_CH_bob_bdu_1p_old_glove_D",
+        "Color01": [
+          0.15134599804878235,
+          0.11400000005960464,
+          0.20000000298023224,
+          1.0
+        ],
+        "Color02": [
+          0.08724699914455414,
+          0.07964999973773956,
+          0.09000000357627869,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glove.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glove_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glove_M.png",
+          "colors": [
+            0.15134599804878235,
+            0.11400000005960464,
+            0.20000000298023224,
+            0.08724699914455414,
+            0.07964999973773956,
+            0.09000000357627869,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_glovebottun",
+      "diffuse": "T_CH_bob_bdu_1p_old_bottun_D",
+      "normal": "T_CH_bob_bdu_1p_old_bottun_N",
+      "mask": "T_CH_bob_bdu_1p_old_bottun_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.30000001192092896,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_bottun_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_bottun_M",
+        "Normal": "T_CH_bob_bdu_1p_old_bottun_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glovebottun.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovebottun_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_bottun_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_glovehimo",
+      "diffuse": "T_CH_bob_bdu_1p_old_glovehimo_D",
+      "normal": "T_CH_bob_bdu_1p_old_glovehimo_N",
+      "mask": "T_CH_bob_bdu_1p_old_glovehimo_M",
+      "specular": "",
+      "params": {
+        "detail_normal_pow": 3.0,
+        "Detail_Normal_Scale": 1.0,
+        "detail_roughness_pow": 7.0,
+        "Metallic": 0.5,
+        "RoughnessMax": 0.4000000059604645,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_glovehimo_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_glovehimo_M",
+        "Normal": "T_CH_bob_bdu_1p_old_glovehimo_N",
+        "Color01": [
+          0.019999999552965164,
+          0.019999999552965164,
+          0.019999999552965164,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_glovehimo.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_glovehimo_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glovehimo_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_glovehimo_M.png",
+          "colors": [
+            0.019999999552965164,
+            0.019999999552965164,
+            0.019999999552965164,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_gloveyubi",
+      "diffuse": "T_CH_bob_bdu_1p_old_gloveyubi_D",
+      "normal": "T_CH_bob_bdu_1p_old_gloveyubi_N",
+      "mask": "T_CH_bob_bdu_1p_old_gloveyubi_M",
+      "specular": "",
+      "params": {
+        "Detail_Normal_Scale": 1.5,
+        "detail_roughness_pow": 7.0,
+        "Metallic": 0.800000011920929,
+        "RoughnessMax": 0.6000000238418579,
+        "RoughnessMin": 0.10000000149011612,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_gloveyubi_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_gloveyubi_M",
+        "Normal": "T_CH_bob_bdu_1p_old_gloveyubi_N",
+        "Color01": [
+          0.18089500069618225,
+          0.15854999423027039,
+          0.20999999344348907,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_gloveyubi.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_gloveyubi_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_gloveyubi_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_gloveyubi_M.png",
+          "colors": [
+            0.18089500069618225,
+            0.15854999423027039,
+            0.20999999344348907,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_mark",
+      "diffuse": "T_CH_bob_bdu_1p_old_mark_D",
+      "normal": "T_CH_bob_bdu_1p_old_mark_N",
+      "mask": "T_CH_bob_bdu_1p_old_mark_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_mark_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_mark_M",
+        "Normal": "T_CH_bob_bdu_1p_old_mark_N",
+        "Color01": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          0.9293490052223206,
+          1.0,
+          0.28824201226234436,
+          1.0
+        ],
+        "Color04": [
+          0.013845999725162983,
+          0.021497000008821487,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_mark.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_mark_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_mark_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_mark_M.png",
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            0.9293490052223206,
+            1.0,
+            0.28824201226234436,
+            0.013845999725162983,
+            0.021497000008821487,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color01",
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_partsbelt",
+      "diffuse": "T_CH_bob_bdu_1p_old_partsbelt_D",
+      "normal": "T_CH_bob_bdu_1p_old_partsbelt_N",
+      "mask": "T_CH_bob_bdu_1p_old_partsbelt_M",
+      "specular": "",
+      "params": {
+        "Detail_Normal_Scale": 1.0,
+        "detail_roughness_pow": 2.0,
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.0,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather01_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_partsbelt_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_partsbelt_M",
+        "Normal": "T_CH_bob_bdu_1p_old_partsbelt_N",
+        "Color01": [
+          0.04500000178813934,
+          0.04500000178813934,
+          0.04500000178813934,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_partsbelt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_partsbelt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_partsbelt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_partsbelt_M.png",
+          "colors": [
+            0.04500000178813934,
+            0.04500000178813934,
+            0.04500000178813934,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_sas",
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_M",
+      "specular": "T_CH_bob_bdu_1p_old_sas_D",
+      "params": {
+        "Detail_Normal_Scale": 1.5,
+        "detail_roughness_pow": 5.0,
+        "Metallic": 0.6000000238418579,
+        "RoughnessMax": 0.699999988079071,
+        "RoughnessMin": 0.20000000298023224,
+        "RefractionDepthBias": 0.0,
+        "DetalDiffuse": "T_CH_leather02_D",
+        "DetalNormal": "T_CH_leather01_N",
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_N",
+        "specluar": "T_CH_bob_bdu_1p_old_sas_D",
+        "Color01": [
+          0.9200000166893005,
+          0.21391500532627106,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_M.png",
+          "colors": [
+            0.9200000166893005,
+            0.21391500532627106,
+            0.0,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_sas_joint",
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_joint_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_joint_M",
+      "specular": "",
+      "params": {
+        "Metallic": 1.0,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_joint_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_joint_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+        "Color01": [
+          1.0,
+          0.5080549716949463,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas_joint.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_M.png",
+          "colors": [
+            1.0,
+            0.5080549716949463,
+            0.125,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color02",
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_sas_joint_glove",
+      "diffuse": "T_CH_bob_bdu_1p_old_sas_joint_D",
+      "normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+      "mask": "T_CH_bob_bdu_1p_old_sas_joint_M",
+      "specular": "",
+      "params": {
+        "Metallic": 0.8999999761581421,
+        "RoughnessMax": 0.5,
+        "RoughnessMin": 0.20000000298023224,
+        "specluar": 1.0,
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_sas_joint_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_sas_joint_M",
+        "Normal": "T_CH_bob_bdu_1p_old_sas_joint_N",
+        "Color01": [
+          1.0,
+          0.5080549716949463,
+          0.125,
+          1.0
+        ],
+        "Color02": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_sas_joint_glove.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_sas_joint_glove_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_sas_joint_M.png",
+          "colors": [
+            1.0,
+            0.5080549716949463,
+            0.125,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_old_shirts",
+      "diffuse": "T_CH_bob_bdu_1p_old_shirt_D",
+      "normal": "T_CH_bob_bdu_1p_old_shirt_N",
+      "mask": "T_CH_bob_bdu_1p_old_shirt_M",
+      "specular": "T_CH_bob_bdu_1p_old_shirt_D",
+      "params": {
+        "Anisotropic": 0.30000001192092896,
+        "Metallic": 0.699999988079071,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1p_old_shirt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1p_old_shirt_D",
+        "MaskMap": "T_CH_bob_bdu_1p_old_shirt_M",
+        "Normal": "T_CH_bob_bdu_1p_old_shirt_N",
+        "Color01": [
+          0.9259999990463257,
+          0.03799999877810478,
+          0.009349999949336052,
+          1.0
+        ],
+        "Color02": [
+          0.5298939943313599,
+          1.0,
+          0.7015699744224548,
+          1.0
+        ],
+        "Color03": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Color04": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p_old/Material/MI_CH_bob_bdu_1p_old_shirts.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_old_shirts_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_shirt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1p_old_shirt_M.png",
+          "colors": [
+            0.9259999990463257,
+            0.03799999877810478,
+            0.009349999949336052,
+            0.5298939943313599,
+            1.0,
+            0.7015699744224548,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "baked": false,
+          "layered": true,
+          "slots": [
+            true,
+            false,
+            true,
+            true
+          ]
+        }
+      },
+      "inheritedColors": [
+        "Color03",
+        "Color04"
+      ]
+    },
+    {
+      "name": "MI_CH_bob_bdu_1p_shirt_glove_bracelet",
+      "diffuse": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+      "normal": "T_CH_bob_bdu_1P_shirt_glove_bracelet_N",
+      "mask": "T_CH_bob_bdu_1P_shirt_glove_bracelet_M",
+      "specular": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 1.0,
+        "RoughnessMin": 0.30000001192092896,
+        "specluar": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_1P_shirt_glove_bracelet_D",
+        "MaskMap": "T_CH_bob_bdu_1P_shirt_glove_bracelet_M",
+        "Normal": "T_CH_bob_bdu_1P_shirt_glove_bracelet_N",
+        "Color01": [
+          0.75,
+          0.6000000238418579,
+          0.6000000238418579,
+          1.0
+        ],
+        "Color02": [
+          0.42500001192092896,
+          0.3463749885559082,
+          0.3985370099544525,
+          1.0
+        ],
+        "Color03": [
+          0.06453300267457962,
+          0.07000000029802322,
+          0.06637299805879593,
+          1.0
+        ],
+        "Color04": [
+          0.14499999582767487,
+          0.10377400368452072,
+          0.03552500158548355,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_1p/Material/MI_CH_bob_bdu_1p_shirt_glove_bracelet.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_1p_shirt_glove_bracelet_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_shirt_glove_bracelet_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_1P_shirt_glove_bracelet_M.png",
+          "colors": [
+            0.75,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.42500001192092896,
+            0.3463749885559082,
+            0.3985370099544525,
+            0.06453300267457962,
+            0.07000000029802322,
+            0.06637299805879593,
+            0.14499999582767487,
+            0.10377400368452072,
+            0.03552500158548355
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdu_humpty",
+      "diffuse": "T_CH_bob_bdu_humpty_jacket_D",
+      "normal": "T_CH_bob_bdu_humpty_jacket_N",
+      "mask": "T_CH_bob_bdu_humpty_jacket_M",
+      "specular": "T_CH_bob_bdu_humpty_jacket_S",
+      "params": {
+        "Metallic": 0.3499999940395355,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_humpty_jacket_S",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_humpty_jacket_D",
+        "MaskMap": "T_CH_bob_bdu_humpty_jacket_M",
+        "Normal": "T_CH_bob_bdu_humpty_jacket_N",
+        "Color01": [
+          0.061250001192092896,
+          0.09254200011491776,
+          0.875,
+          1.0
+        ],
+        "Color02": [
+          0.7350000143051147,
+          0.7350000143051147,
+          0.7350000143051147,
+          1.0
+        ],
+        "Color03": [
+          0.7850000262260437,
+          0.30612099170684814,
+          0.0,
+          1.0
+        ],
+        "Color04": [
+          0.5099999904632568,
+          0.010200000368058681,
+          0.028906000778079033,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_humpty/Material/MI_CH_bob_bdu_humpty.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_humpty_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_humpty_jacket_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_humpty_jacket_M.png",
+          "colors": [
+            0.061250001192092896,
+            0.09254200011491776,
+            0.875,
+            0.7350000143051147,
+            0.7350000143051147,
+            0.7350000143051147,
+            0.7850000262260437,
+            0.30612099170684814,
+            0.0,
+            0.5099999904632568,
+            0.010200000368058681,
+            0.028906000778079033
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_bdu_stripe_vest_shirt",
+      "diffuse": "T_CH_bob_bdu_stripe_vest_shirt_D",
+      "normal": "T_CH_bob_bdu_stripe_vest_shirt_N",
+      "mask": "T_CH_bob_bdu_stripe_vest_shirt_M",
+      "specular": "T_CH_bob_bdu_stripe_vest_shirt_D",
+      "params": {
+        "Metallic": 0.10000000149011612,
+        "RoughnessMax": 0.8999999761581421,
+        "RoughnessMin": 0.4000000059604645,
+        "specluar": "T_CH_bob_bdu_stripe_vest_shirt_D",
+        "RefractionDepthBias": 0.0,
+        "DiffuseMap": "T_CH_bob_bdu_stripe_vest_shirt_D",
+        "MaskMap": "T_CH_bob_bdu_stripe_vest_shirt_M",
+        "Normal": "T_CH_bob_bdu_stripe_vest_shirt_N",
+        "Color01": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "Color02": [
+          0.02981499955058098,
+          0.028853999450802803,
+          0.2549999952316284,
+          1.0
+        ],
+        "Color03": [
+          0.4350000023841858,
+          0.0,
+          0.024170000106096268,
+          1.0
+        ],
+        "Color04": [
+          0.6499999761581421,
+          0.6499999761581421,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Upper/bob_bdu_stripe_vest/Material/MI_CH_bob_bdu_stripe_vest_shirt.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_bdu_stripe_vest_shirt_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_stripe_vest_shirt_D.png",
+          "mask": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_bdu_stripe_vest_shirt_M.png",
+          "colors": [
+            0.0,
+            0.0,
+            0.0,
+            0.02981499955058098,
+            0.028853999450802803,
+            0.2549999952316284,
+            0.4350000023841858,
+            0.0,
+            0.024170000106096268,
+            0.6499999761581421,
+            0.6499999761581421,
+            0.6499999761581421
+          ],
+          "baked": true,
+          "layered": true,
+          "slots": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_eye_shadow",
+      "diffuse": "T_CH_bob_eyeshadow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyeshadow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eye_shadow.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eye_shadow_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eye_shadow_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_eyebrow",
+      "diffuse": "T_CH_bob_eyebrow_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyebrow_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eyebrow.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyebrow_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyebrow_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    {
+      "name": "MI_CH_bob_eyelash",
+      "diffuse": "T_CH_bob_eyelush_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_eyelush_D"
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face/bob_fac/Material/MI_CH_bob_eyelash.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyelash_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_eyelash_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true
+      }
+    },
+    {
+      "name": "MI_CH_bob_fah_1p",
+      "diffuse": "T_CH_bob_fah_1p",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_fah_1p",
+        "Color01": [
+          0.8199999928474426,
+          0.517907977104187,
+          0.24017299711704254,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p/Material/MI_CH_bob_fah_1p.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_fah_1p_old",
+      "diffuse": "T_CH_bob_fah_1p_old_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_fah_1p_old_D",
+        "Color01": [
+          0.6800000071525574,
+          0.5502359867095947,
+          0.42106398940086365,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Face_Hair/bob_fah_1p_old/Material/MI_CH_bob_fah_1p_old.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_old_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_fah_1p_old_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_hair",
+      "diffuse": "T_CH_bob_har_1p_D",
+      "normal": "T_CH_bob_har_1p_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_bob_har_1p_S",
+      "params": {
+        "BaseLowerContrast": 0.10000000149011612,
+        "BaseUpperContrast": 0.30000001192092896,
+        "AlphaThreshold": 0.6000000238418579,
+        "Anisotropic": 0.25,
+        "Metallic": 0.30000001192092896,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_bob_har_1p_D",
+        "Normal": "T_CH_bob_har_1p_N",
+        "SpecularTexture": "T_CH_bob_har_1p_S",
+        "Color01": [
+          0.699999988079071,
+          0.431768000125885,
+          0.17499999701976776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Material/MI_CH_bob_hair.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_hair_U",
+      "diffuse": "T_CH_bob_har_1p_D",
+      "normal": "T_CH_bob_har_1p_N",
+      "mask": "T_CH_MIBase_M",
+      "specular": "T_CH_bob_har_1p_S",
+      "params": {
+        "BaseLowerContrast": 0.20000000298023224,
+        "BaseUpperContrast": 0.25,
+        "AlphaThreshold": 0.6000000238418579,
+        "Anisotropic": 0.009999999776482582,
+        "Metallic": 0.30000001192092896,
+        "Normalize": 0.30000001192092896,
+        "Roughness": 0.6000000238418579,
+        "RefractionDepthBias": 0.0,
+        "ColorTexture": "T_CH_bob_har_1p_D",
+        "Normal": "T_CH_bob_har_1p_N",
+        "SpecularTexture": "T_CH_bob_har_1p_S",
+        "Color01": [
+          0.699999988079071,
+          0.431768000125885,
+          0.17499999701976776,
+          1.0
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/bob/Hair/bob_har_1p/Material/MI_CH_bob_hair_U.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_hair_U_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": true,
+        "tint": {
+          "base": "Assets/_Project/Characters/Bob/Source/Base/Textures/T_CH_bob_har_1p_D.png",
+          "mask": "",
+          "hair": true,
+          "baked": false,
+          "colors": [
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011,
+            0.011
+          ],
+          "slots": [
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_arm",
+      "diffuse": "T_CH_bob_arm_D",
+      "normal": "T_CH_bob_arm_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_arm_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_arm_D",
+        "Normal": "T_CH_bob_arm_N",
+        "Specular": "T_CH_male_arm_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_arm_wet_N",
+        "wetSpec": "T_CH_male_arm_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_arm.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_arm_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_body",
+      "diffuse": "T_CH_bob_body_D",
+      "normal": "T_CH_bob_body_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_body_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_body_D",
+        "Normal": "T_CH_bob_body_N",
+        "Specular": "T_CH_male_body_S",
+        "WetDiffuse": "T_CH_male_body_wet_D",
+        "WetNormal": "T_CH_male_body_wet_N",
+        "wetSpec": "T_CH_male_body_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_body.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_body_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_face",
+      "diffuse": "T_CH_bob_face_D",
+      "normal": "T_CH_bob_face_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_bob_face_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_face_D",
+        "Normal": "T_CH_bob_face_N",
+        "Specular": "T_CH_bob_face_S",
+        "WetDiffuse": "T_CH_male_head_wet_D",
+        "WetNormal": "T_CH_male_head_wet_N",
+        "wetSpec": "T_CH_male_head_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_face.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_face_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_hand",
+      "diffuse": "T_CH_male_hand_D",
+      "normal": "T_CH_male_hand_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_hand_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_male_hand_D",
+        "Normal": "T_CH_male_hand_N",
+        "Specular": "T_CH_male_hand_S",
+        "WetDiffuse": "T_CH_male_hand_wet_D",
+        "WetNormal": "T_CH_male_hand_wet_N",
+        "wetSpec": "T_CH_male_hand_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_hand.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_hand_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_leg",
+      "diffuse": "T_CH_bob_leg_D",
+      "normal": "T_CH_bob_leg_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_leg_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_leg_D",
+        "Normal": "T_CH_bob_leg_N",
+        "Specular": "T_CH_male_leg_S",
+        "WetDiffuse": "T_CH_male_leg_wet_D",
+        "WetNormal": "T_CH_male_leg_wet_N",
+        "wetSpec": "T_CH_male_leg_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_leg.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_leg_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_bob_skin_neck",
+      "diffuse": "T_CH_bob_neck_D",
+      "normal": "T_CH_bob_neck_N",
+      "mask": "T_CH_ita_face_M",
+      "specular": "T_CH_male_neck_S",
+      "params": {
+        "After Desaturation": -0.30000001192092896,
+        "After Hue": 0.9850000143051147,
+        "After Multiply": 0.5,
+        "Desaturation": 0.10000000149011612,
+        "detail_normal_pow": 0.5,
+        "Detail_Normal_Scale": 40.0,
+        "Hue": -0.019999999552965164,
+        "Multiply": 0.800000011920929,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_bob_neck_D",
+        "Normal": "T_CH_bob_neck_N",
+        "Specular": "T_CH_male_neck_S",
+        "WetDiffuse": "T_CH_male_neck_wet_D",
+        "WetNormal": "T_CH_male_neck_wet_N",
+        "wetSpec": "T_CH_male_neck_wet_S"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/skin/bob/MI_CH_bob_skin_neck.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Surface.png",
+        "occlusion": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_bob_skin_neck_Occlusion.png",
+        "specular": true,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_hwo_teeth",
+      "diffuse": "T_CH_hwo_teeth_d",
+      "normal": "T_CH_lar_teeth_N",
+      "mask": "",
+      "specular": "T_CH_lar_teeth_R",
+      "params": {
+        "DiffuseValue": 0.5,
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_hwo_teeth_d",
+        "Normal": "T_CH_lar_teeth_N",
+        "Roughness": "T_CH_lar_teeth_R",
+        "SubSurfaceScatterColor": [
+          0.05000000074505806,
+          0.007499999832361937,
+          0.007499999832361937,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Item/Meshes/hwo/Face/hwo_fac/Material/MI_CH_hwo_teeth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_hwo_teeth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_mouth",
+      "diffuse": "T_CH_mouth_inner_D",
+      "normal": "T_CH_mouth_inner_N",
+      "mask": "",
+      "specular": "T_CH_mouth_inner_R",
+      "params": {
+        "DiffuseValue": 1.0,
+        "Metallic": 0.30000001192092896,
+        "Roughness": "T_CH_mouth_inner_R",
+        "RefractionDepthBias": 0.0,
+        "Diffuse": "T_CH_mouth_inner_D",
+        "Normal": "T_CH_mouth_inner_N",
+        "SubSurfaceScatterColor": [
+          0.2750000059604645,
+          0.04399999976158142,
+          0.04399999976158142,
+          0.5
+        ]
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/face/MI_CH_mouth.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Albedo.png",
+        "normal": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Normal.png",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_mouth_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    },
+    {
+      "name": "MI_CH_tear",
+      "diffuse": "T_CH_tear_D",
+      "normal": "",
+      "mask": "",
+      "specular": "",
+      "params": {
+        "RefractionDepthBias": 0.0,
+        "MaterialExpressionTextureSampleParameterCube_0": "eye_cubemap"
+      },
+      "source": "TekkenGame/Content/Character/Common/shader/MaterialInstance/face/MI_CH_tear.uasset",
+      "unity": {
+        "albedo": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_tear_Albedo.png",
+        "normal": "",
+        "surface": "Assets/_Project/Characters/Bob/Costumes/Textures/MI_CH_tear_Surface.png",
+        "occlusion": "",
+        "specular": false,
+        "cutout": false
+      }
+    }
+  ]
+}
