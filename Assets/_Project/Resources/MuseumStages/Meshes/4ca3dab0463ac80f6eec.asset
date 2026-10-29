@@ -32,10 +32,10 @@ Mesh:
     m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
-  m_KeepVertices: 0
-  m_KeepIndices: 0
-  m_IndexFormat: 1
-  m_IndexBuffer: 000000000100000002000000010000000000000003000000040000000300000000000000030000000400000005000000060000000500000004000000060000000400000007000000
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000002000100010003000000040000000300030005000400060004000500060007000400
   m_VertexData:
     serializedVersion: 3
     m_VertexCount: 8
@@ -49,9 +49,21 @@ Mesh:
       format: 0
       dimension: 3
     - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
       offset: 0
       format: 0
       dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 48
+      format: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -84,20 +96,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 192
-    _typelessdata: 39de9944af0cc6c214058b426a2d7f3f6438b4bbd1a8a33db0c0934403ca4643982fd14370597d3f113cb2bb9ade123ec98b93447cd6c6c22e3cd14371597d3f5c3ab2bb8ede123e21139a44ee2e4743bbd28a422ffa7f3f6a86b5bb8981463c2c769744ad0cc6c2c91c7ec3dc327c3f39d4b4bb42b82fbe14ab9744ee2e4743f6357ec3dc327c3f21d4b4bb43b82fbe8b888c4405ca4643b11f0ac4cc4a753f6f2ab1bbf58092bea3538c4478d6c6c265190ac4cb4a753fa02ab1bbf68092be
+    m_DataSize: 448
+    _typelessdata: 39de9944af0cc6c214058b42b8d67fbfc86b803b407910bd419d113d566f81bb10d67fbf000080bf00e0c33e0000000000a0583b00e0233fb0c0934403ca4643982fd14340957dbf834b803b97520cbe626b0d3e3c4c81bb7e8b7dbf000080bf0020fdbe0000803f00207f3fe0767f3fc98b93447cd6c6c22e3cd14340957dbf834b803b97520cbe626b0d3e3c4c81bb7e8b7dbf000080bf0020fdbe000000000080023b807d7f3f21139a44ee2e4743bbd28a42b8d67fbfc86b803b407910bd419d113d566f81bb10d67fbf000080bf00e0c33e0000803f00607f3f00e0233f2c769744ad0cc6c2c91c7ec3d30a7cbfea077f3b9151333effb334beff7f80bbfefa7bbf000080bf0040a13f0000000000a0583b00c09d3e14ab9744ee2e4743f6357ec3d30a7cbfea077f3b9151333effb334beff7f80bbfefa7bbf000080bf0040a13f0000803f00607f3f00c09d3e8b888c4405ca4643b11f0ac4cb5675bf582d803bb833923e5c4e93be232581bb812c75bf000080bf00c008400000803f00207f3f0000203ba3538c4478d6c6c265190ac4cb5675bf582d803bb833923e5c4e93be232581bb812c75bf000080bf00c00840000000000080023b0000203b
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
