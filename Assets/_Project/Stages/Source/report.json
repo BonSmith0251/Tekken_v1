@@ -1,27 +1,168 @@
 {
-  "stages": 34,
-  "uniqueMeshes": 2977,
-  "failures": [
-    {
-      "stage": "stg01",
-      "mesh": "TekkenGame/Content/Stage/stg01/Mesh/T7_SM_ENV_s1wallshadow.uasset",
-      "error": "Unsupported or invalid StaticMesh layout: Unsupported static mesh vertex count: 324219"
-    },
-    {
-      "stage": "stg10",
-      "mesh": "/Engine/BasicShapes/Cube.uasset",
-      "error": "'/engine/basicshapes/cube.uasset'"
-    },
-    {
-      "stage": "stg10",
-      "mesh": "TekkenGame/Content/Stage/stg10/Mesh/T7_SM_ENV_s10Altar.uasset",
-      "error": "Unsupported or invalid StaticMesh layout: Unsupported static mesh vertex count: 204565"
-    },
-    {
-      "stage": "stg12",
-      "mesh": "/Engine/BasicShapes/Cylinder.uasset",
-      "error": "'/engine/basicshapes/cylinder.uasset'"
-    }
-  ],
-  "materials": "neutral geometry preview; original materials and effects not imported"
+ "stages": 34,
+ "uniqueMeshes": 4109,
+ "failures": [
+  {
+   "stage": "stg10",
+   "mesh": "/Engine/BasicShapes/Cube.uasset",
+   "error": "'/engine/basicshapes/cube.uasset'"
+  },
+  {
+   "stage": "stg12",
+   "mesh": "/Engine/BasicShapes/Cylinder.uasset",
+   "error": "'/engine/basicshapes/cylinder.uasset'"
+  }
+ ],
+ "materials": 3007,
+ "texturedMaterials": 2983,
+ "textures": 4005,
+ "textureFailures": [
+  "T7_T_ENV_s11MovieTest: not a 2D texture",
+  "violet_01_fix: not a 2D texture",
+  "violet_02_fix: not a 2D texture",
+  "violet_03_fix: not a 2D texture"
+ ],
+ "untexturedMaterials": [
+  {
+   "material": "/Game/Developers/ppeel/Moon/MI_MOON_GLOW",
+   "stages": [
+    "stg00"
+   ],
+   "reason": "no recognisable base-colour texture among: GLOWMASK"
+  },
+  {
+   "material": "/Engine/EngineMaterials/WorldGridMaterial",
+   "stages": [
+    "stg04",
+    "stg08a",
+    "stg09",
+    "stg11",
+    "stg16",
+    "stg23",
+    "stg27",
+    "stg31"
+   ],
+   "reason": "no recognisable base-colour texture among: T_Default_Material_Grid_M, T_Default_Material_Grid_N"
+  },
+  {
+   "material": "/Game/Developers/ppeel/Stg00staticmesh/STG006_BAZARRLIGHTS",
+   "stages": [
+    "stg06"
+   ],
+   "reason": "no texture parameters or samplers (shader-constant colour)"
+  },
+  {
+   "material": "/Game/Stage/stg07/Shader/Material_Instance/T7_MI_ENV_s7HeatHaze",
+   "stages": [
+    "stg07"
+   ],
+   "reason": "no recognisable base-colour texture among: T_ENV_HeatHaze_N"
+  },
+  {
+   "material": "/Game/Stage/stg08/Shader/T7_MI_ENV_s0atc03_FLICKER",
+   "stages": [
+    "stg08a"
+   ],
+   "reason": "no recognisable base-colour texture among: T7_T_ENV_s8GlowMaskA_M"
+  },
+  {
+   "material": "/Game/Stage/stg08/Shader/T7_MI_ENV_s0atc03_FLICKER2",
+   "stages": [
+    "stg08a"
+   ],
+   "reason": "no recognisable base-colour texture among: T7_T_ENV_s8GlowMaskA_M"
+  },
+  {
+   "material": "/Game/Stage/stg08/Shader/T7_MI_ENV_s0atc03_FLICKER3",
+   "stages": [
+    "stg08a"
+   ],
+   "reason": "no recognisable base-colour texture among: T7_T_ENV_s8GlowMaskA_M"
+  },
+  {
+   "material": "/Game/Environment/Blueprints/FogSheet/Assets/M_FogSheet_Master_test",
+   "stages": [
+    "stg09"
+   ],
+   "reason": "no recognisable base-colour texture among: TilingNoise03"
+  },
+  {
+   "material": "/Game/Stage/stg11/Shader/Material_Instance/T7_MI_ENV_s11Screen",
+   "stages": [
+    "stg11"
+   ],
+   "reason": "no recognisable base-colour texture among: SceneColorRenderTarget, T7_T_ENV_s11RingFloorDisplay_M, T7_T_ENV_s11RingFloorDisplay_N, T_ENV_MasterTexture_M, T_ENV_MasterTexture_N"
+  },
+  {
+   "material": "/Game/Developers/ppeel/Moon/MI_MOON_GLOW2stg000A",
+   "stages": [
+    "stg13"
+   ],
+   "reason": "no recognisable base-colour texture among: GLOWMASK"
+  },
+  {
+   "material": "/Game/Developers/ppeel/Material/T7_MI_ENV_s0atc03_FLICKER",
+   "stages": [
+    "stg13"
+   ],
+   "reason": "no texture parameters or samplers (shader-constant colour)"
+  },
+  {
+   "material": "/Game/Stage/stg16/shader/material/test_emissiveSTG16_Inst",
+   "stages": [
+    "stg16"
+   ],
+   "reason": "no texture parameters or samplers (shader-constant colour)"
+  },
+  {
+   "material": "/Game/Stage/stg16/shader/material/test_metal",
+   "stages": [
+    "stg16"
+   ],
+   "reason": "no texture parameters or samplers (shader-constant colour)"
+  },
+  {
+   "material": "/Game/Developers/ppeel/Stg00staticmesh/Stg13_hanginglightplanestg16blue",
+   "stages": [
+    "stg16"
+   ],
+   "reason": "no texture parameters or samplers (shader-constant colour)"
+  },
+  {
+   "material": "/Game/Stage/stg18/Shader/Material/M_Infil1_Underground_Tunnel_Wires_Twisted",
+   "stages": [
+    "stg18"
+   ],
+   "reason": "no recognisable base-colour texture among: T_Infil1_Underground_Tunnel_Wire_M"
+  },
+  {
+   "material": "/Game/Stage/stg28/Shader/Material_Instance/T7_MI_ENV_s28MoonGlow",
+   "stages": [
+    "stg28"
+   ],
+   "reason": "no recognisable base-colour texture among: GLOWMASK"
+  },
+  {
+   "material": "/Game/Stage/stg80/Shader/Material_Instance/T7_MI_ENV_s80MoonGlow",
+   "stages": [
+    "stg29"
+   ],
+   "reason": "no recognisable base-colour texture among: GLOWMASK"
+  },
+  {
+   "material": "/Game/Stage/stg31/Mesh/SM_Sky/MI_MoonLight",
+   "stages": [
+    "stg31"
+   ],
+   "reason": "no recognisable base-colour texture among: GLOWMASK"
+  },
+  {
+   "material": "/Game/Stage/stg90/Shader/Material_Instance/T7_MI_ENV_WorldHeightColor",
+   "stages": [
+    "stg90"
+   ],
+   "reason": "no recognisable base-colour texture among: T7_T_ENV_s90gutter_lamp_B_E"
+  }
+ ],
+ "notes": "Base colour, normal and emissive maps from each MaterialInstance chain become HDRP/Lit maps. Shader graphs (layer blends, vertex-colour mixes, water, baked lightmaps) are not converted."
 }
