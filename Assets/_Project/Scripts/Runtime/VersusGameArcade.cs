@@ -18,6 +18,8 @@ namespace Versus.Remaster
         public bool ArcadeVictoryComplete => ArcadeResult != null &&
             (ArcadeResult.Winner < 0 || victory != null && victory.Complete);
         public event Action<ArcadeMatchResult> ArcadeMatchCompleted;
+        // Set by the arcade director while a full-screen arcade page covers the match.
+        public bool ArcadeCallsHidden { get; set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetArcadeRequests() { pendingArcade = null; ArcadeCurrent = null; }

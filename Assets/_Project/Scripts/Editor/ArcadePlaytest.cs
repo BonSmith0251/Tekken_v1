@@ -16,7 +16,8 @@ namespace Versus.Remaster.Editor
         static float startX;
         static long firstSession;
         static string firstOpponent, firstStage;
-        static bool moved, continued, gameOver;
+        static bool moved, continued, gameOver, versusCaptured, titleCaptured;
+        static int titleFrames, versusFrames;
         [Serializable] sealed class Report
         {
             public bool passed, movementObserved, continueObserved, gameOverObserved;
@@ -87,7 +88,7 @@ namespace Versus.Remaster.Editor
                 File.Copy("Tools/ArcadeHarness/Fixtures/ledger-before-operator.json", Path.Combine(data, "arcade-ledger.json"));
             }
             SessionState.SetFloat("ArcadePlayCheckStart", (float)EditorApplication.timeSinceStartup);
-            phase = 0; moved = continued = gameOver = false;
+            phase = 0; moved = continued = gameOver = versusCaptured = titleCaptured = false; titleFrames = versusFrames = 0;
             EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(ArcadeDirector.BootScene);
             EditorApplication.isPlaying = true;
         }
@@ -120,12 +121,19 @@ namespace Versus.Remaster.Editor
                 {
                     case 0:
                         if (flow.State != ArcadeFlowState.Attract) return;
+                        // Let the title draw, capture it while the blinking message is lit, then insert the coin.
+                        titleFrames++;
+                        if (titleFrames == 30 || titleFrames > 30 && titleFrames < 200 && !titleCaptured && Mathf.Repeat(Time.unscaledTime, 1.2f) < .6f)
+                        { if (titleFrames > 30) { ScreenCapture.CaptureScreenshot(Output + "/arcade-title.png"); titleCaptured = true; } return; }
+                        if (titleFrames < 40 + (titleCaptured ? 0 : 160)) return;
                         director.TestControls = ArcadeControls.Coin1 | ArcadeControls.Start1; phase = 1; break;
                     case 1:
                         if (flow.State != ArcadeFlowState.Select) return;
                         director.TestControls = 0; firstSession = flow.SessionId;
                         ScreenCapture.CaptureScreenshot(Output + "/arcade-select.png"); phase = 2; break;
                     case 2:
+                        if (!versusCaptured && VersusLoadingScreen.Showing && VersusLoadingScreen.Holding && versusFrames++ > 90)
+                        { ScreenCapture.CaptureScreenshot(Output + "/arcade-versus.png"); versusCaptured = true; }
                         if (flow.State != ArcadeFlowState.Fight || !game || game.battle.phase != MatchPhase.Fight) return;
                         if (game.ArcadeRequest.State != ArcadeRequestState.Ready || director.Ledger.VisibleCredits(0) != 0) throw new Exception("Ready/debit contract failed.");
                         firstOpponent = flow.Match.PlayerTwo; firstStage = game.StageName;
@@ -150,7 +158,7 @@ namespace Versus.Remaster.Editor
                         continued = flow.SessionId != firstSession && flow.Match.PlayerTwo == firstOpponent && game.StageName == firstStage && director.Ledger.Snapshot.continues == 1;
                         if (!continued) throw new Exception("Paid continue changed the stage/opponent or reused the debit.");
                         game.battle.fighters[0].health = 0; phase = 7; break;
-                    case 7: if (flow.State == ArcadeFlowState.Continue) { ScreenCapture.CaptureScreenshot(Output + "/arcade-continue.png"); phase = 8; } break;
+                    case 7: if (flow.State == ArcadeFlowState.Continue && Mathf.Repeat(Time.unscaledTime, 1.2f) < .6f) { ScreenCapture.CaptureScreenshot(Output + "/arcade-continue.png"); phase = 8; } break;
                     case 8: if (flow.State == ArcadeFlowState.GameOver) { gameOver = true; phase = 9; } break;
                     case 9: if (flow.State == ArcadeFlowState.Attract) Finish(null, director); break;
                 }

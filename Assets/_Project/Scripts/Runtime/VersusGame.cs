@@ -1393,6 +1393,7 @@ namespace Versus.Remaster
             // The gauges leave the screen while the match winner's victory take plays.
             bool victoryTake = battle.phase == MatchPhase.MatchOver && victory != null && victory.Active;
             if (!victoryTake) hud.DrawGauges(battle, Time.unscaledTime);
+            if (ArcadeActive && ArcadeCallsHidden) return;
             bool finalRound = battle.round > 1 && battle.fighters[0].wins == battle.rules.roundsToWin - 1 && battle.fighters[1].wins == battle.rules.roundsToWin - 1;
             if (entrance != null && entrance.Active && entrance.ShowsBattleHud)
             {

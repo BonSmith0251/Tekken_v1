@@ -34,6 +34,11 @@ namespace Versus.Remaster
             current.art[1] = Load("VsArt_R_" + playerTwoCode);
         }
 
+        public static bool Showing => current;
+
+        // The arcade director closes it if the match it covers is abandoned (load failure, operator).
+        public static void Hide() { if (current) Destroy(current.gameObject); current = null; }
+
         // Called by VersusGame once the fighters are built.
         public static void MatchReady()
         {

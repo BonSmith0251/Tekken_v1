@@ -36,7 +36,6 @@ namespace Versus.Remaster.Arcade
         ArcadeControls previous;
         ArcadeFlowState previousState;
         readonly Queue<ArcadeInputEvent> unacknowledged = new Queue<ArcadeInputEvent>();
-        readonly Dictionary<string, Texture2D> art = new Dictionary<string, Texture2D>();
         string fatalError;
         bool oldCursorVisible, continueArmed;
         CursorLockMode oldCursorLock;
@@ -154,15 +153,24 @@ namespace Versus.Remaster.Arcade
                 if (OperatorOpen && menuWasOpen) UpdateOperator(controls, rising, now);
                 previous = controls; RememberRawKeys(); Flow.Advance(now);
                 if (Flow.State != previousState)
-                { CabinetInput.ResetGameplayForTransition(); previousState = Flow.State; }
+                {
+                    CabinetInput.ResetGameplayForTransition(); previousState = Flow.State;
+                    // BeginLoad opens the original VS screen; close it if the match it covers is abandoned.
+                    if (Flow.State != ArcadeFlowState.Loading && Flow.State != ArcadeFlowState.LoadingDemo &&
+                        Flow.State != ArcadeFlowState.Fight && Flow.State != ArcadeFlowState.Demo) VersusLoadingScreen.Hide();
+                }
                 var game = VersusGame.ArcadeCurrent;
                 if (game && game.ArcadeRequest.State == ArcadeRequestState.Ready)
                 {
                     bool playing = !OperatorOpen && Flow.Match != null && game.ArcadeRequest.Setup.MatchId == Flow.Match.MatchId &&
                         (Flow.State == ArcadeFlowState.Fight || Flow.State == ArcadeFlowState.Victory || Flow.State == ArcadeFlowState.Demo);
                     game.SuspendArcadeMatch(!playing);
+                    // Continue, game over and the other full-screen arcade pages draw over a dimmed fight:
+                    // its K.O./PERFECT calls and their announcer lines must not show or play through them.
+                    game.ArcadeCallsHidden = !playing;
                 }
                 if (!OperatorOpen && Flow.Match != null && sceneLoad == null && (request == null || request.Setup.MatchId != Flow.Match.MatchId)) BeginLoad(Flow.Match);
+                StartPendingLoad();
                 if (Flow.State == ArcadeFlowState.Fault && fatalError == null) Fault(new InvalidOperationException(Flow.Error));
             }
             catch (Exception error) { Fault(error); }
@@ -191,6 +199,18 @@ namespace Versus.Remaster.Arcade
             request = VersusGame.PrepareArcadeMatch(setup, CabinetInput, MatchScene);
             bootCamera.enabled = false; bootListener.enabled = false;
             VersusLoadingScreen.Show(Code(setup.PlayerOne), Code(setup.PlayerTwo));
+            // Activating the match scene stalls rendering for seconds. Start it once the VS screen has
+            // finished its intro, so the stall holds a complete VS frame, not its dim first frame.
+            loadAt = Time.unscaledTime + VersusIntroSeconds;
+        }
+
+        const float VersusIntroSeconds = .6f; // VersusLoadingScreen: panels fade 0.5 s, VS pops by 0.5 s
+        float loadAt = -1;
+
+        void StartPendingLoad()
+        {
+            if (loadAt < 0 || Time.unscaledTime < loadAt) return;
+            loadAt = -1;
 #if UNITY_EDITOR
             sceneLoad = UnityEditor.SceneManagement.EditorSceneManager.LoadSceneAsyncInPlayMode(MatchScene, new LoadSceneParameters(LoadSceneMode.Single));
 #else
@@ -255,86 +275,38 @@ namespace Versus.Remaster.Arcade
             try
             {
                 var state = Flow?.State ?? ArcadeFlowState.Fault;
-                bool full = state != ArcadeFlowState.Fight && state != ArcadeFlowState.Demo && state != ArcadeFlowState.Victory;
+                // The original VS screen (VersusLoadingScreen, opened by BeginLoad) covers a match while it loads.
+                bool versusScreen = (state == ArcadeFlowState.Loading || state == ArcadeFlowState.LoadingDemo) && VersusLoadingScreen.Showing;
+                bool full = state != ArcadeFlowState.Fight && state != ArcadeFlowState.Demo && state != ArcadeFlowState.Victory && !versusScreen;
                 if (full) Fill(new Rect(0, 0, 1280, 720), new Color(.018f, .023f, .04f, state == ArcadeFlowState.Continue ? .85f : 1));
+                if (full && state != ArcadeFlowState.Continue && state != ArcadeFlowState.Fault && !OperatorOpen) DrawBackdrop();
                 if (fatalError != null || state == ArcadeFlowState.Fault)
                 { Text(150, "ARCADE STOPPED", title); Text(270, fatalError ?? Flow?.Error, detail, 140); Text(520, "Stop Play, then check the arcade error report before restarting.", detail); return; }
                 if (OperatorOpen) { DrawOperator(); return; }
                 int remaining = double.IsInfinity(Flow.Deadline) ? 0 : Math.Max(0, (int)Math.Ceiling(Flow.Deadline - Now));
                 switch (state)
                 {
-                    case ArcadeFlowState.Attract:
-                        Text(120, "TEKKEN", new GUIStyle(title) { fontSize = 110 }); Text(250, "ARCADE", body);
-                        Text(380, settings.freePlay || Ledger.VisibleCredits(0) > 0 ? "PRESS START" : "INSERT COIN", title);
-                        Text(510, "1 OR 2 PLAYERS  |  CPU LADDER  |  " + settings.ladderStages + " STAGES", detail); break;
+                    case ArcadeFlowState.Attract: DrawTitle(); break;
                     case ArcadeFlowState.Challenger:
-                        Text(200, "A NEW CHALLENGER", title); Text(320, "GET READY FOR THE NEXT BATTLE", body); break;
-                    case ArcadeFlowState.Select: DrawSelection(remaining); break;
+                        Shadowed(new Rect(0, 230, 1280, 90), "A NEW CHALLENGER", 64); Shadowed(new Rect(0, 330, 1280, 50), "GET READY FOR THE NEXT BATTLE", 27); break;
+                    case ArcadeFlowState.Select: DrawArcadeSelection(remaining); break;
                     case ArcadeFlowState.Loading: case ArcadeFlowState.LoadingDemo:
-                        Text(180, "GET READY", title); Text(300, Flow.Match.PlayerOne.ToUpperInvariant() + "   VS   " + Flow.Match.PlayerTwo.ToUpperInvariant(), body);
-                        Text(420, "Loading the match...", detail); break;
-                    case ArcadeFlowState.Demo: Text(10, "DEMONSTRATION  |  INSERT COIN / PRESS START", detail); break;
-                    case ArcadeFlowState.Continue:
-                        Text(160, "CONTINUE?", title); Text(270, remaining.ToString(), new GUIStyle(title) { fontSize = 130 }, 160);
-                        Text(470, "PRESS " + bindings.Label(Flow.ContinueSide == 0 ? ArcadeControls.Start1 : ArcadeControls.Start2) + " TO CONTINUE", body); break;
+                        if (!versusScreen) Shadowed(new Rect(0, 300, 1280, 90), "GET READY", 64); break;
+                    case ArcadeFlowState.Demo: DrawMessage(OperationMessage(), 610); break;
+                    case ArcadeFlowState.Continue: DrawContinue(remaining); break;
                     case ArcadeFlowState.NameEntry: DrawNameEntry(remaining); break;
-                    case ArcadeFlowState.Ranking: DrawRankings(); break;
-                    case ArcadeFlowState.GameOver: Text(250, "GAME OVER", title); break;
-                    case ArcadeFlowState.Ending: Text(220, "CONGRATULATIONS", title); Text(330, "YOU CLEARED THE ARCADE LADDER", body); break;
+                    case ArcadeFlowState.Ranking: DrawRankings(); DrawMessage(OperationMessage(), 655, .6f); break;
+                    case ArcadeFlowState.GameOver: Shadowed(new Rect(0, 280, 1280, 90), "GAME OVER", 72); break;
+                    case ArcadeFlowState.Ending:
+                        { var logo = ArcadeArt("Logo"); if (logo) Centred(logo, new Vector2(640, 170), 1); }
+                        Shadowed(new Rect(0, 300, 1280, 90), "CONGRATULATIONS", 64); Shadowed(new Rect(0, 395, 1280, 50), "YOU CLEARED THE ARCADE LADDER", 27); break;
                 }
                 if (!Rankings.Available) Text(615, "RANKINGS UNAVAILABLE - SEE OPERATOR DIAGNOSTICS", detail, 35);
-                Fill(new Rect(0, 657, 1280, 63), new Color(0, 0, 0, .8f));
-                string credits = settings.freePlay ? "FREE PLAY" : settings.sharedCredits ? "CREDIT " + Ledger.VisibleCredits(0) :
-                    "P1 CREDIT " + Ledger.VisibleCredits(0) + "   /   P2 CREDIT " + Ledger.VisibleCredits(1);
-                GUI.Label(new Rect(24, 661, 1220, 25), credits + "   |   COIN " + bindings.Label(ArcadeControls.Coin1) + " / " + bindings.Label(ArcadeControls.Coin2) + "   |   START " + bindings.Label(ArcadeControls.Start1) + " / " + bindings.Label(ArcadeControls.Start2), detail);
-                GUI.Label(new Rect(24, 688, 1220, 24), state == ArcadeFlowState.Fight || state == ArcadeFlowState.Victory ?
-                    (Flow.TwoPlayers ? "PLAYER VS PLAYER" : "STAGE " + (Flow.StageIndex + 1) + " / " + Flow.StageCount) + "   |   F2 OPERATOR MENU / CONTROLS" :
-                    "F2 OPERATOR MENU   |   SERVICE " + bindings.Label(ArcadeControls.Service) + "   |   STOP PLAY TO EXIT", detail);
+                if (!versusScreen) DrawCreditBar(state);
             }
             finally { GUI.matrix = matrix; GUI.color = color; GUI.depth = depth; }
         }
 
-        void DrawSelection(int remaining)
-        {
-            Text(35, "CHOOSE YOUR FIGHTER", new GUIStyle(title) { fontSize = 45 });
-            if (Flow.TwoPlayers) { DrawTwoPlayerSelection(remaining); return; }
-            Text(105, "PLAYER " + (Flow.HumanSide + 1) + "   |   " + remaining + " SECONDS", detail);
-            var selected = Portrait(Flow.SelectedFighter);
-            if (selected) GUI.DrawTexture(new Rect(400, 150, 480, 300), selected, ScaleMode.ScaleToFit, true);
-            Text(430, Flow.SelectedFighter.ToUpperInvariant(), body);
-            for (int i = 0; i < Fighters.Length; i++)
-            {
-                Rect rect = new Rect(60 + i * 146, 495, 138, 100);
-                Fill(rect, i == Flow.Cursor ? new Color(.65f, .12f, .12f) : new Color(.08f, .12f, .19f));
-                var portrait = Portrait(Fighters[i]); if (portrait) GUI.DrawTexture(new Rect(rect.x, rect.y, rect.width, 72), portrait, ScaleMode.ScaleToFit, true);
-                GUI.Label(new Rect(rect.x, rect.y + 72, rect.width, 28), Fighters[i], card);
-            }
-            Text(610, SelectionHelp(Flow.HumanSide), detail, 35);
-        }
-        void DrawTwoPlayerSelection(int remaining)
-        {
-            Text(105, remaining + " SECONDS", detail);
-            for (int side = 0; side < 2; side++)
-            {
-                float x = 40 + side * 640;
-                GUI.Label(new Rect(x, 145, 560, 45), "PLAYER " + (side + 1) + (Flow.SelectionConfirmed(side) ? "  READY" : "  SELECT"), body);
-                var portrait = Portrait(Flow.Fighter(side));
-                if (portrait) GUI.DrawTexture(new Rect(x + 60, 195, 440, 220), portrait, ScaleMode.ScaleToFit, true);
-                GUI.Label(new Rect(x, 412, 560, 40), Flow.Fighter(side).ToUpperInvariant(), body);
-                for (int i = 0; i < Fighters.Length; i++)
-                {
-                    var rect = new Rect(x + (i % 4) * 140, 463 + (i / 4) * 58, 134, 52);
-                    Fill(rect, i == Flow.SelectionCursor(side) ? (side == 0 ? new Color(.65f, .12f, .12f) : new Color(.12f, .3f, .7f)) : new Color(.08f, .12f, .19f));
-                    GUI.Label(rect, Fighters[i], card);
-                }
-                GUI.Label(new Rect(x, 592, 560, 50), SelectionHelp(side), detail);
-            }
-        }
-        Texture2D Portrait(string fighter)
-        {
-            if (!art.TryGetValue(fighter, out var value)) art[fighter] = value = Resources.Load<Texture2D>("CharacterSelect/Art_L_" + Code(fighter));
-            return value;
-        }
         static void Fill(Rect rect, Color color) { var old = GUI.color; GUI.color = color; GUI.DrawTexture(rect, Texture2D.whiteTexture); GUI.color = old; }
         static void Text(float y, string value, GUIStyle style, float height = 90) => GUI.Label(new Rect(40, y, 1200, height), value, style);
     }
