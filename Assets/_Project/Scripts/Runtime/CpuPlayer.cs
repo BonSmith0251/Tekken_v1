@@ -11,6 +11,10 @@ namespace Versus.Remaster
     {
         readonly CommandGraph graph;
         readonly Random random;
+        // 0 keeps the desktop/demo policy and RNG sequence unchanged. 1..10 are authored arcade
+        // policies affecting decisions and delays only; the original movelist inputs stay intact.
+        public int Difficulty { get; }
+        int guardReaction;
         int[] steps;
         int step, stepCount, stepFrame, pause;
         int guardedMove = -1;
@@ -27,12 +31,16 @@ namespace Versus.Remaster
         public bool RageArtReplaying { get; private set; }
         public bool CanRageArt => rageArt != null;
 
-        public CpuPlayer(CommandGraph graph, int seed)
+        public CpuPlayer(CommandGraph graph, int seed) : this(graph, seed, 0) { }
+        public CpuPlayer(CommandGraph graph, int seed, int difficulty)
         {
+            if (difficulty < 0 || difficulty > 10) throw new ArgumentOutOfRangeException(nameof(difficulty));
+            Difficulty = difficulty;
             this.graph = graph; random = new Random(seed);
             if (graph.rageArt != null && graph.rageArt.steps != null && graph.rageArt.steps.Length >= 3) rageArt = graph.rageArt;
         }
-        public void Clear() { steps = null; pause = 0; guardedMove = -1; guarding = false; rageArtRequested = false; RageArtReplaying = false; }
+        public void Clear() { steps = null; pause = 0; guardedMove = -1; guarding = false; rageArtRequested = false; RageArtReplaying = false;
+            if (Difficulty > 0) { guardReaction = 0; getupDelay = -1; } }
         /// <summary>Walk into range, then replay the original Rage Art input (needs Rage in the model).</summary>
         public void RequestRageArt() { if (rageArt != null) rageArtRequested = true; }
 
@@ -46,7 +54,7 @@ namespace Versus.Remaster
                 steps = null;
                 if (getupDelay < 0)
                 {
-                    getupDelay = 6 + random.Next(30);
+                    getupDelay = Difficulty == 0 ? 6 + random.Next(30) : Math.Max(2, 26 - Difficulty * 2) + random.Next(Math.Max(4, 28 - Difficulty * 2));
                     int pick = random.Next(Getups.GetLength(0));
                     getupStick = Getups[pick, 0]; getupButtons = Getups[pick, 1];
                 }
@@ -60,7 +68,7 @@ namespace Versus.Remaster
                 int relative = steps[step * 3], buttons = steps[step * 3 + 1];
                 command.stick = ToScreen(relative, self.facing); command.buttons = buttons;
                 if (++stepFrame >= steps[step * 3 + 2]) { step++; stepFrame = 0; }
-                if (step >= stepCount) { steps = null; pause = 20 + random.Next(40); RageArtReplaying = false; }
+                if (step >= stepCount) { steps = null; pause = Difficulty == 0 ? 20 + random.Next(40) : (11 - Difficulty) * 5 + random.Next(10 + (11 - Difficulty) * 2); RageArtReplaying = false; }
                 return command;
             }
             if (pause > 0) pause--;
@@ -78,8 +86,13 @@ namespace Versus.Remaster
             }
             // Decide once per incoming attack whether to hold back (or down-back against lows) through it.
             if (!foe.attacking) guardedMove = -1;
-            else if (foe.move != guardedMove) { guardedMove = foe.move; guarding = gap < 2f && random.Next(5) < 2; }
-            if (foe.attacking && guarding)
+            else if (foe.move != guardedMove)
+            {
+                guardedMove = foe.move;
+                guarding = gap < 2f && (Difficulty == 0 ? random.Next(5) < 2 : random.Next(100) < 15 + Difficulty * 7);
+                guardReaction = Difficulty == 0 ? 0 : 14 - Difficulty;
+            }
+            if (foe.attacking && guarding && (Difficulty == 0 || guardReaction-- <= 0))
                 command.stick = ToScreen(foe.lowAttack ? 1 : back, self.facing);
             else if (gap > 1.6f)
                 command.stick = ToScreen(forward, self.facing);

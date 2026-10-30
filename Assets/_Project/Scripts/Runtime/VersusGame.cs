@@ -176,11 +176,11 @@ namespace Versus.Remaster
         static readonly Color Ink = new Color(.025f, .035f, .055f, .96f);
         static readonly Color Muted = new Color(.58f, .66f, .75f);
         static readonly Color Accent = new Color(.95f, .78f, .35f);
-        void Awake()
+        void InitializeMatch()
         {
-            diagnostic = Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0 ||
-                         Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0;
-            if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0) automaticFight = true;
+            diagnostic = !ArcadeActive && (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0 ||
+                         Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0);
+            if (!ArcadeActive && Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0) automaticFight = true;
             // The original character select comes first; it reloads the scene with both picks.
             if (characterSelect && !diagnostic && !CharacterSelect.Chosen)
             {
@@ -188,7 +188,7 @@ namespace Versus.Remaster
                 gameObject.AddComponent<CharacterSelect>();
                 return;
             }
-            if (CharacterSelect.Chosen) { playerOneFighter = CharacterSelect.PlayerOne; playerTwoFighter = CharacterSelect.PlayerTwo; }
+            if (!ArcadeActive && CharacterSelect.Chosen) { playerOneFighter = CharacterSelect.PlayerOne; playerTwoFighter = CharacterSelect.PlayerTwo; }
             if (!config) config = ScriptableObject.CreateInstance<RemasterConfig>();
             var setups = new[] { Setup(playerOneFighter), Setup(playerTwoFighter) };
             codes = new[] { setups[0].code, setups[1].code };
@@ -203,9 +203,11 @@ namespace Versus.Remaster
             var rules = new MatchRules { seconds = config.rules.seconds, roundsToWin = config.rules.roundsToWin,
                 arenaHalfWidth = config.rules.arenaHalfWidth, arenaHalfDepth = config.rules.arenaHalfDepth,
                 health = TekkenHealth };
+            if (ArcadeActive) { rules = arcadeRequest.Setup.BuildRules(rules, TekkenHealth); config.rules = rules; }
             battle = new BattleModel(rules, graphs); battle.Hit += OnHit; battle.MoveProperty += OnMoveProperty;
             battle.ActedMoveProperty += OnActedMoveProperty;
-            for (int i = 0; i < 2; i++) cpu[i] = new CpuPlayer(graphs[i], 31 + i * 17);
+            for (int i = 0; i < 2; i++) cpu[i] = new CpuPlayer(graphs[i], 31 + i * 17, ArcadeActive ? arcadeRequest.Setup.CpuLevel(i) : 0);
+            if (ArcadeActive) arcadeController = new Arcade.ArcadeMatchController(arcadeRequest.Setup, arcadeRequest.Input, cpu, IdleGetupTicks);
             effectDemo = new BattleEffectDemo(battle, graphs, cpu);
             battle.immediateKoCollapse = Tuning.koCollapseAtOnce;
             Time.fixedDeltaTime = 1f / 60;
@@ -270,10 +272,10 @@ namespace Versus.Remaster
             BattleMusic.Instance.PlayStage(StageName);
             impactMaterial = FighterView.Surface(new Color(1, .7f, .25f));
             blockMaterial = FighterView.Surface(Color.cyan);
-            if (Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0)
+            if (!ArcadeActive && Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke-test") >= 0)
             { menu = false; float introTime = entrance != null ? entrance.DurationSeconds : 0;
                 Invoke(nameof(SmokeCapture), introTime + 8); Invoke(nameof(SmokeExit), introTime + 10); }
-            if (Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
+            if (!ArcadeActive && Array.IndexOf(Environment.GetCommandLineArgs(), "--capture-preview") >= 0)
             { menu = false; Invoke(nameof(PreviewCapture), 4); }
             VersusLoadingScreen.MatchReady();
         }
@@ -431,7 +433,8 @@ namespace Versus.Remaster
         GameObject stageModel;
         void BuildArena()
         {
-            StageName = EnvironmentSelection.Load().PickForMatch(new System.Random());
+            StageName = ArcadeActive && !string.IsNullOrEmpty(arcadeRequest.Setup.Stage) ? arcadeRequest.Setup.Stage :
+                EnvironmentSelection.Load().PickForMatch(new System.Random());
             if (StageName != EnvironmentSelection.Arena)
             {
                 try { stageModel = StageEnvironment.Spawn(StageName, transform); }
@@ -491,6 +494,7 @@ namespace Versus.Remaster
         }
         void Update()
         {
+            if (arcadeController != null && arcadeController.Suspended) return;
             // Nothing starts behind the VS screen; LateUpdate still poses the fighters for the first shot.
             if (VersusLoadingScreen.Holding) return;
             float realDelta = Time.unscaledDeltaTime;
@@ -501,11 +505,12 @@ namespace Versus.Remaster
             if (entrance != null && entrance.Active)
             {
                 visualTime += Time.unscaledDeltaTime;
-                entrance.Advance(Time.unscaledDeltaTime, !diagnostic && Input.GetKeyDown(KeyCode.Return));
+                entrance.Advance(Time.unscaledDeltaTime, !ArcadeActive && !diagnostic && Input.GetKeyDown(KeyCode.Return));
                 VoiceEntrance();
                 return;
             }
             UpdateWinnerCall(realDelta);
+            if (ArcadeActive) { visualTime += Time.deltaTime; hitLabelTime -= Time.deltaTime; return; }
             if (Input.GetKeyDown(KeyCode.F1)) help = !help;
             if (Input.GetKeyDown(KeyCode.F2)) { automaticFight = !automaticFight; ClearInputs(); }
             if (automaticFight && Input.GetKeyDown(KeyCode.F3)) TriggerRageArt(0);
@@ -524,9 +529,11 @@ namespace Versus.Remaster
         }
         void FixedUpdate()
         {
+            if (arcadeController != null && arcadeController.Suspended) return;
             if (VersusLoadingScreen.Holding) return;
             if (entrance != null && entrance.Active) return;
             if (menu || paused) return;
+            if (ArcadeActive) { TickArcadeMatch(); return; }
             if (automaticFight)
             {
                 if (battle.phase == MatchPhase.MatchOver)
@@ -625,7 +632,7 @@ namespace Versus.Remaster
                 // played by the winner); a button held at the end picks its take, as in the original.
                 var winnerGraph = graphs[battle.winner];
                 var reachable = VictoryTargets(winnerGraph);
-                int held = automaticFight || diagnostic ? 0 : ReadInput(battle.winner).buttons;
+                int held = ArcadeActive ? arcadeController.VictoryButtons(battle.winner) : automaticFight || diagnostic ? 0 : ReadInput(battle.winner).buttons;
                 victory.Begin(e => reachable.ContainsKey(e.moveId), PreferredVictory(reachable, held, codes[battle.winner]));
                 SayTake(battle.winner, victory.Animation);
                 victoryPlayer = battle.winner;
@@ -1037,7 +1044,8 @@ namespace Versus.Remaster
         // The match keeps running when the window loses focus; only held keys are dropped, since
         // their release would never arrive.
         void OnApplicationFocus(bool focus) { if (!focus) ClearInputs(); }
-        void ClearInputs() { for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pressedSinceTick[i] = 0; cpu[i]?.Clear(); } }
+        void ClearInputs() { if (ArcadeActive) arcadeRequest.Input.ResetGameplayForTransition();
+            for (int i = 0; i < 2; i++) { commands[i] = PlayerCommand.Neutral; pressedSinceTick[i] = 0; cpu[i]?.Clear(); } }
         void ClearVictory() { if (victory != null) victory.Clear(); victory = null; victoryPlayer = -1; victoryAnchor = null; }
 
         // Victory takes keep their source root travel (Jin's jz_w00_n walks 5.8 m, Alisa's aa_w01 6.7 m
@@ -1088,7 +1096,7 @@ namespace Versus.Remaster
                                     Shift(minZ, maxZ, config.rules.arenaHalfDepth - FloorMargin * .5f));
             if (shift.sqrMagnitude > 1e-8f) fighterObjects[i].transform.position += shift;
         }
-        void StartMatch() { menu = false; paused = false; ClearVictory(); ClearInputs(); ResetImpactEffects(); battle.Restart(); lastPhase = battle.phase; announced = null; winnerCallAt = -1; if (sound) sound.StopAll(); }
+        void StartMatch() { if (ArcadeActive) return; menu = false; paused = false; ClearVictory(); ClearInputs(); ResetImpactEffects(); battle.Restart(); lastPhase = battle.phase; announced = null; winnerCallAt = -1; if (sound) sound.StopAll(); }
         void OnHit(HitEvent hit)
         {
             hitsResolved++;
@@ -1375,13 +1383,13 @@ namespace Versus.Remaster
             Panel(new Rect(viewport.xMax, top, Screen.width - viewport.xMax, viewport.height), Color.black);
             GUI.matrix = Matrix4x4.TRS(new Vector3(viewport.x, top, 0), Quaternion.identity,
                 new Vector3(viewport.width / 1280f, viewport.height / 720f, 1));
-            try { DrawGameplayGUI(); if (entrance != null && entrance.Active) entrance.Draw(); if (effectTuningPanel && !menu) DrawTuningPanel(); }
+            try { DrawGameplayGUI(); if (entrance != null && entrance.Active) entrance.Draw(); if (!ArcadeActive && effectTuningPanel && !menu) DrawTuningPanel(); }
             finally { GUI.matrix = previousMatrix; }
             DrawSubtitle();
         }
         void DrawGameplayGUI()
         {
-            if (menu) { DrawMenu(); return; }
+            if (!ArcadeActive && menu) { DrawMenu(); return; }
             // The gauges leave the screen while the match winner's victory take plays.
             bool victoryTake = battle.phase == MatchPhase.MatchOver && victory != null && victory.Active;
             if (!victoryTake) hud.DrawGauges(battle, Time.unscaledTime);
@@ -1407,7 +1415,7 @@ namespace Versus.Remaster
                 float fightAge = (150 - FightTick + battle.rules.seconds * 60 - battle.ticksLeft) / 60f;
                 if (fightAge < hud.FightCallSeconds) hud.DrawCall(BattleHud.Call.Fight, battle.round, finalRound, fightAge);
             }
-            if (automaticFight)
+            if (!ArcadeActive && automaticFight)
             {
                 Label(new Rect(24, 684, 300, 24), "AUTO FIGHT   /   F2", small);
                 // Rage Art buttons: each auto player performs its original Rage Art (F3 / F4).
@@ -1421,9 +1429,12 @@ namespace Versus.Remaster
                 }
                 GUI.enabled = true;
             }
-            GUI.enabled = CanForceTrade;
-            if (GUI.Button(new Rect(24 + 2 * 214, 638, 204, 40), "TRADE EFFECT  (F5)", button)) ForceTradeEffect();
-            GUI.enabled = true;
+            if (!ArcadeActive)
+            {
+                GUI.enabled = CanForceTrade;
+                if (GUI.Button(new Rect(24 + 2 * 214, 638, 204, 40), "TRADE EFFECT  (F5)", button)) ForceTradeEffect();
+                GUI.enabled = true;
+            }
             if ((battle.phase == MatchPhase.RoundOver || battle.phase == MatchPhase.MatchOver) && battle.UsesCommandGraphs && roundEndClock < KoCallSeconds)
             {
                 // The round call over the slow-motion fall; PERFECT follows when the winner took no damage.
@@ -1448,7 +1459,7 @@ namespace Versus.Remaster
                 Announce(BattleHud.Call.Draw, battle.round, false, roundEndClock - KoCallSeconds);
                 hud.DrawCall(BattleHud.Call.Draw, battle.round, false, roundEndClock - KoCallSeconds);
             }
-            else if (battle.phase == MatchPhase.MatchOver)
+            else if (!ArcadeActive && battle.phase == MatchPhase.MatchOver)
             {
                 // After the victory take: the match result and the rematch prompt.
                 Panel(new Rect(260, 250, 760, 200), Ink);
@@ -1457,8 +1468,8 @@ namespace Versus.Remaster
                 if (GUI.Button(new Rect(300, 365, 330, 52), "REMATCH   /   ENTER", button)) StartMatch();
                 if (GUI.Button(new Rect(650, 365, 330, 52), "CHARACTER SELECT", button)) CharacterSelect.Return();
             }
-            if (help) DrawHelp();
-            if (paused)
+            if (!ArcadeActive && help) DrawHelp();
+            if (!ArcadeActive && paused)
             {
                 Panel(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .65f));
                 Panel(new Rect(440, 160, 400, 400), Ink); Label(new Rect(440, 175, 400, 80), "PAUSED", title);
