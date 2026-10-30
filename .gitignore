@@ -10,3 +10,12 @@
 *.user
 __pycache__/
 *.pyc
+# Arcade harness outputs and test saves (rebuilt by Tools/ArcadeHarness; the reports and captures stay tracked)
+Validation/Arcade/*.dll
+Validation/Arcade/*.pdb
+Validation/Arcade/*.runtimeconfig.json
+Validation/Arcade/tekken-versus-compile/
+Validation/Arcade/KeyboardTest/
+Validation/Arcade/PlayChecks/
+Validation/Arcade/*ChecksData/
+*.json.lock
