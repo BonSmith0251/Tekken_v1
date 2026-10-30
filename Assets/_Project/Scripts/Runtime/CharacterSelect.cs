@@ -77,6 +77,9 @@ namespace Versus.Remaster
 
         void Awake()
         {
+            // VersusGame builds its camera (and the scene's only AudioListener) after the select screen, so without
+            // this the select music and sounds play to no listener. The reloaded match scene brings its own.
+            if (!FindFirstObjectByType<AudioListener>()) gameObject.AddComponent<AudioListener>();
             sound = BattleSound.Create(transform);
             if (SoundSettings.Active.musicChoice != SoundSettings.MusicChoice.Off) BattleMusic.Instance.PlayTrack(BattleMusic.SelectTrack);
             else BattleMusic.Instance.Stop();
