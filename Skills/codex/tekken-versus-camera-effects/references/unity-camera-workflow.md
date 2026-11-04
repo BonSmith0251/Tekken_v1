@@ -1,0 +1,19 @@
+# Unity camera workflow
+
+Paths are relative to `UnityRemaster/TekkenVersusRemaster`.
+
+`FightCameraTrack.cs` loads `Resources/FightCameras/<code>_<track>.bytes`. It validates T7CF, positive frames, all five descriptors, complete payload and finite samples. It samples position/look-at in millimetres converted to metres, interprets horizontal FOV radians, and exposes a gameplay blend. Unity basis is actor-forward, actor-left and world-up. Other retained source channels are not all interpreted; source-byte preservation is not full camera fidelity.
+
+`BattleCameraEffects.cs` loads `Resources/CameraEffects/catalog.json`. Native shake event→preset mappings come from the extraction manifest. `RemasterShakeAmplitude` and `RemasterShake` intentionally retain the preexisting Unity magnitudes and Perlin waveform; their names mark the distinction. `VersusGame.OnMoveProperty` uses this shared preset mapping, and its camera uses the shared shake sampler. Do not describe those visual constants as native.
+
+Versus already plays 0x8439/0x843A look-at tracks through StartCinematic. Its camera clamps shot height, anchors at action start, blends to the gameplay rig and adds shake. The spring smoothing times are presentation adaptations, while KO framing is now native (catalog `koCamera`: 1% speed for 90 frames, mode 7 at FOV 35, weights 5/90/20); the original follow rate from 0x84CC requests scales those times (the old .84 airborne zoom was removed on 2026-10-28). Do not change them globally while only repairing a source decoder. If changing dispatch, inspect BattleModel/CommandInterpreter ordering and final-frame/cancel behavior; the acted-move event exists for provenance-sensitive presentation.
+
+The demonstration is `Assets/_Project/Scenes/BattleCameraShowcase.unity` with `BattleCameraShowcase.cs`. It shares FightCameraTrack and the shake comparison functions, uses each fighter's museum model, and samples an imported original action when available. Body playback is a reference subject: no synchronized opponent reaction, action transitions, face animation or recovered dynamic hands are claimed. The runtime displays an explicit stance fallback if an action body is unavailable.
+
+Controls: Space pauses; R restarts; F flips the actor frame; left/right select tracks; timeline scrubs; wide reference view compares framing; shake Off/3/4/5/6 selects the labeled remaster comparison. Shake comparison repeats every 1.2 seconds with a .4-second envelope for visibility; those values are demo settings, not original data. Flipping the actor frame does not automatically select the opposite original side track: select that track separately.
+
+Editor menu: **Remaster > Camera Effects > Create demonstration scene / Play demonstration / Validate original tracks / Capture demonstration**. Equivalent edit-mode flags are `Temp/setup-battle-camera-showcase`, `Temp/play-battle-camera-showcase`, `Temp/check-battle-camera-showcase` and `Temp/capture-battle-camera-showcase`. Output is `Validation/CameraEffects`. Errors are written beside the flag with `-error.txt`.
+
+Creation uses an additive scene and does not overwrite an existing demo. Play refuses to discard dirty scenes. The Win32 Play menu can be unchecked during Play; confirm the actual toolbar/state before toggling. Do not interact with another Unity project's editor.
+
+The validator samples all exported tracks in both facing directions and rejects malformed headers/descriptors/nonfinite samples. Captures bake the current skinned meshes to avoid cached first-pose matrices in synchronous renders. Inspect images, not merely file existence. Runtime scene interaction is needed to verify actual camera motion and UI controls. For original parity, compare original footage at matching action/source frame and settings and record discrepancies in position, orientation, lens, timing and blending.
